@@ -46,7 +46,7 @@ const App = () => {
 
       <Route path="/" element={<AllHomeComp/>}/>
       <Route path="/getTickets/:id" element={<GetTickets/>}/>
-        <Route path='/' 
+        <Route path='/user' 
         element={user?<Navigate to='/profile'></Navigate>:<Login/>}>
         </Route>
         <Route path='/login' element={<Login/>}></Route>
