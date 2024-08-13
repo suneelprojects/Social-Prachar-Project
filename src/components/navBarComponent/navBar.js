@@ -308,7 +308,7 @@ Navigate('/login')
               </li>
               <li class="nav-item">
                 
-                <NavLink to={""} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Dashboard</NavLink>
+                <NavLink to={"/user"} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Dashboard</NavLink>
 
               </li>
               <li class="nav-item">
