@@ -1,0 +1,83 @@
+.TopCategoryCenterText{
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.topCategory  .topCategoryBox{
+    padding: 20px;
+    background-color:whitesmoke;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .topCategory  .topCategoryBox:hover{
+    border: #553cdf 1px solid;
+  }
+  
+  .topCategoryBox img{
+  
+    width: 70px;
+    height: 70px ;
+    border-radius: 5px;
+    
+  }
+  .topCategoryBoxText text{
+    text-align: center;
+    display: block;
+  }
+  .topCategoryBoxText .teachersFirstText{
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  .topCategoryBoxText .teachersSecondText{
+    color: #777777;
+  }
+
+
+/*   
+.topCategory .objectOne{
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    z-index: 500;
+   }
+   .topCategory .objectTwo{
+    width: 50px;
+    position: absolute;
+    top: -50%;
+    left: 30%;
+    z-index: 500;
+   }
+   .topCategory .objectThree{
+    width: 50px;
+    position: absolute;
+    top: -50%;
+    right: 0px;
+    z-index: 500;
+   }
+  
+
+   
+@media (max-width:320px){
+     .topCategory .objectTwo{
+      left: 0px;
+     }
+     .topCategory .objectThree{
+      display: none;
+    
+     }
+}
+
+
+@media (min-width:600.6px) and  (max-width:768px){    
+     .topCategory .objectTwo{
+        display: none;
+    }
+    .topCategory .objectThree{
+        display: none;    
+    }
+} */

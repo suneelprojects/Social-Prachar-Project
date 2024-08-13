@@ -1,0 +1,170 @@
+.footerCertificate{
+    background-color: #553cdf;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.footerCertificate div text{
+    font-size: 48px;
+    line-height: 58px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 530;
+
+
+}
+.footerCertificate div button{
+    width: 226px;
+    height: 55px;
+    color: #553cdf;
+}
+.footerCertificate div button:hover{
+    background-color: #553cdf;
+    color: white;
+    border: solid 2px white;
+}
+
+
+/* fotterList code starts */
+
+.fotterList{
+    padding: 72px 0px 72px 0px;
+}
+.fotterList .Explore,.useFullLink {
+    line-height: 35px;
+    font-weight: 500;
+    color: gray;
+}
+.fotterList b{
+    line-height: 42px;
+    font-size: 18px;
+    color: #221859;
+}
+.fotterList p{
+    margin: 13px 0px 13px 0px;
+    line-height: 26px;
+    font-weight: 400;
+    color: gray;
+}
+.fotterList .subscribe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    border-radius: 5px;
+    border: 2px solid #221859;
+    margin-bottom: 10px;
+}
+.fotterList .subscribe input{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 100%;
+    border: none;
+    width: 100%;
+    padding-left: 15px;
+    white-space: nowrap;
+    outline: none;
+    color: gray;
+}
+
+.mediaIcon .bi{
+    color: #221859;
+}
+.fotterList .useFullLink:hover ,.fotterList .Explore:hover ,.mediaIcon .bi:hover{
+    color: #553cdf;
+}
+
+.fotterList .subscribe button{
+    color: white;
+    background-color: #553cdf;
+}
+.fotterList input[type=checkbox]{
+    border-color: #553cdf;
+    margin-right: 10px;
+}
+.fotterList input[type=checkbox] ~text{
+    font-size: 14px;
+    color: gray;
+}
+/* fotterList code ends */
+
+
+/* copyRight code starts */
+
+.copyRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid black;
+    height: 66px;
+}
+
+/* copyRight code ends */
+
+@media (max-width:575.5px){
+    
+    .footerCertificate div{
+        display: flex!important;
+        justify-content: center!important;
+        padding-top: 30px;
+    } 
+    .footerCertificate #certificateText{
+        order: 1;
+    }
+    .footerCertificate #certificateText text{
+        text-align: center;
+    }
+    .footerCertificate #certificateBtn{
+        order: 2;
+    }
+    .footerCertificate #certificateImg{
+        order: 3;
+    }
+}
+@media (min-width: 576px) and (max-width: 1199.98px){
+    
+    .footerCertificate {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        padding-top: 30px;
+    }
+    .footerCertificate .certificateImg{
+        grid-row: 1/3;
+        grid-column: 1/2;
+    }
+    
+
+}
+@media (min-width:1200px){
+    .footerCertificate div{
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+    }
+    
+}
+
+
+
+@media(max-width:464px){
+ 
+    .copyRight{
+      margin: 16px -15px 0px -15px!important;
+    }
+}
+  
+    @media (max-width:768px){
+     
+      .copyRight{
+        margin: 16px -25px 0px -25px!important;
+      }
+  
+      
+    }
+    @media (min-width:769px){
+      
+      .copyRight{
+        margin: 16px -55px 0px -55px!important;
+      }
+    }

@@ -1,0 +1,66 @@
+
+.trustedBy{
+    font-size: 24px;
+  }
+  .trustedByImg{
+    display: flex;
+    justify-content: space-around;
+  }
+  @media (max-width:576px){
+    
+    .trustedByImg .tBUImgTwo{
+      display: none;
+    }
+    .trustedByImg .tBUImgThree{
+      display: none;
+    }
+    .trustedByImg .tBUImgFour{
+      display: none;
+    }
+    .trustedByImg .tBUImgFive{
+      display: none;
+    }
+    .trustedByImg .tBUImgSix{
+      display: none;
+    }
+  }
+  
+  @media (min-width:576px) and (max-width:768px){
+    .trustedByImg .tBUImgThree{
+      display: none;
+    }
+    .trustedByImg .tBUImgFour{
+      display: none;
+    }
+    .trustedByImg .tBUImgFive{
+      display: none;
+    }
+    .trustedByImg .tBUImgSix{
+      display: none;
+    }
+  }
+  
+  @media (min-width:768px) and (max-width:992px){
+    
+    .trustedByImg .tBUImgFour{
+      display: none;
+    }
+    .trustedByImg .tBUImgFive{
+      display: none;
+    }
+    .trustedByImg .tBUImgSix{
+      display: none;
+    }
+  }
+  
+  @media (min-width:992px) and (max-width:1200px){
+    
+    .trustedByImg .tBUImgFive{
+      display: none;
+    }
+    .trustedByImg .tBUImgSix{
+      display: none;
+    }
+  }
+  
+  

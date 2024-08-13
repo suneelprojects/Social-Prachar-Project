@@ -1,0 +1,84 @@
+
+.teachersBulbAndBtn{
+    margin-bottom: 40px;
+  }
+  .teachersContainer{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .teachersBulbAndBtn button{
+    background-color: #553cdf;
+    color: white;
+    height: 55px;
+    width: 233px;
+    margin-top: 40px;
+  }
+  .teachersBulbAndBtn button:hover{
+    background-color: white;
+    border: #553cdf 1px solid;
+  }
+.teachersImageAndIcon img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+.teachersImageAndIcon p{
+    text-align: center;
+    display: block;
+  }
+.teachersFirstText{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+.teachersSecondText{
+    color: #777777;
+  }
+  
+  
+  .teachersIcons{
+    margin-left: -50px;
+    margin-top: 17px;
+    width: 34px;
+    height: 34px;
+  }
+  .teachersIcons span{
+    height: 34px;
+    width: 34px;
+    background: white;
+    color: #553cdf;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: all 9ms;
+  }
+  .teachersIcons .teachersIconsHover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .teachersIcons span:hover{
+    color: white;
+    background-color: #553cdf!important;
+  }
+  .teachersIcons .teachersIconsHoverDown{
+    display: none;
+  }
+  .teachersIcons:hover{
+    height: auto;
+  }
+  .teachersIcons:hover .teachersIconsHoverDown{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (min-width:768px){
+    .teachersBulbAndBtn{
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+    }
+  }

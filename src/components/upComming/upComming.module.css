@@ -1,0 +1,62 @@
+
+.upCommingCenterText{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .upcommingCard{
+    background-color: whitesmoke;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-left: white 5px solid;
+    border-radius: 5px;
+    padding: 15px 15px 15px 10;
+  }
+  .upcommingCard:hover{
+    
+    border-left: #553cdf 5px solid;
+    transition: 1s ease all;
+  }
+  .upcommingCardFirstText p{
+    font-size: 16px;
+    color: gray;
+    margin-right: 15px;
+    display: inline;
+    font-weight: 500;
+  }
+  .upcommingCardFirstText p i{
+    margin-right: 10px;
+  }
+  
+  .upcommingCardSecondText{
+    display: block;
+    font-size: 24px;
+    line-height: 44px;
+    font-weight: 500;
+  }
+  .upcommingCardSecondText p:hover{
+    color: #553cdf;
+  }
+
+
+  @media (max-width:992px){
+    .upcommingCard img{
+      width: 100%;
+      height: auto;
+    }
+  .upcommingCard .upcommingCardFirstText text{
+  display: block;
+  }
+  }
+  @media (min-width:992px){
+    
+    .upcommingCard .colUpcommingCard{
+    display: flex;
+    }
+    .upcommingCard .colUpcommingCard .rowUpcommingCard{
+      place-content: center;
+      width: 100%;
+    }
+    
+  }
