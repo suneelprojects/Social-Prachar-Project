@@ -24,6 +24,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import NavBar from './components/navBarComponent/navBar';
 import AllHomeComp from './components/allHomeComp';
 import GetTickets from './components/getTickets/getTickets';
+import MenuBar from './Dashboard/SideNavComponent/MenuBar.js';
 
 const App = () => {
   const [user,setUser]=useState();
