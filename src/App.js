@@ -38,9 +38,12 @@ const App = () => {
   }, []);
   return (
     <div>
+      //hreekkk
       <BrowserRouter>
       <NavBar/>
       <Routes>
+      <Route path='/courses' element={ <Course/>}/>
+
       <Route path="/" element={<AllHomeComp/>}/>
       <Route path="/getTickets/:id" element={<GetTickets/>}/>
         <Route path='/' 
@@ -73,7 +76,7 @@ const App = () => {
             </Route>
           </Routes>
       </BrowserRouter> 
-      <Course/>
+     
  </div>
   );
 };
