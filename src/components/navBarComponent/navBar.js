@@ -5,18 +5,20 @@ import navBarStyle from './navbar.module.css'
 // import "./navbar.css";
 import picSvg from '../../assets/svg01.png'
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
-
+const Navigate = useNavigate()
   
 const [expanded,setExpand]=useState(false)
 const Showtoggle=()=>{
   setExpand(!expanded)
 }
-
+const handleLogin = () => {
+Navigate('/login')
+}
 
 
   return (
@@ -172,7 +174,7 @@ const Showtoggle=()=>{
                  <li>
                  <a href="#" className="d-flex" >
                   <img src={picSvg}/>
-                  <div>
+                  <div >
                   <text >Development</text><br/>
                   <text className={`${navBarStyle.textTwo}`}>3+ courses</text>
                   </div>
@@ -301,7 +303,7 @@ const Showtoggle=()=>{
               </li>
               <li class="nav-item">
                 
-                <NavLink to={""} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Courses</NavLink>
+                <NavLink to={"/courses"} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Courses</NavLink>
 
               </li>
               <li class="nav-item">
@@ -371,7 +373,7 @@ const Showtoggle=()=>{
               </ul>
             </div>
             <div className={`${navBarStyle.hiddenMobileLg}`} >
-              <button className={`${navBarStyle.login} ms-4 me-2 `} >
+              <button className={`${navBarStyle.login} ms-4 me-2 `} onClick={handleLogin} >
                 Login
               </button>
               <button className={`${navBarStyle.register}`} >Register</button>
