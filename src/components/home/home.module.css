@@ -130,7 +130,6 @@ greyText availile at index.css
 
 @media (max-width:1430px){
     .homeRightSide  .flowtingLeftBtn{
-        /* z-index: 10; */
         position: relative;
         top: -100px;
         left: -400px;
@@ -139,7 +138,6 @@ greyText availile at index.css
 }
 @media (max-width:1250px){
     .homeRightSide  .flowtingLeftBtn{
-        /* z-index: 10; */
         position: relative;
         top: -100px;
         left: -280px;
@@ -148,13 +146,11 @@ greyText availile at index.css
 }
 @media (max-width:1030px){
     .homeRightSide  .flowtingLeftBtn{
-        /* z-index: 10; */
         position: relative;
         top: -80px;
         left: -200px;
     }
     .homeRightSide .flowtingRightBtn{
-        /* z-index: 10; */
         margin-bottom: -30px;
     }
 }

@@ -27,11 +27,11 @@ const Home = () => {
   ];
   return (
     <>
-    <div className="main-container" id="forFooterBtn">
+    <div className="main-container container-fluid" id="forFooterBtn">
     <ParallaxEffect images={images} />
       <div className= {`row containerFluidForPadding bg-body-tertiary forHoverEffect`}>
         {/* content side of home code starts */}
-        <div className={`col-md-6 col-lg-6 col-xl-6 ${homeStyle.homeLeftSide}`} id="homeLeftSide">
+        <div className={`col-md-6 col-lg-6 col-xl-6 ${homeStyle.homeLeftSide}`} >
           <div>
             <span className='bulbSpan'>
               <img src={bulb} />
@@ -71,7 +71,7 @@ const Home = () => {
         </div>
         {/* content side of home code ends */}
         
-        <div className={`${homeStyle.homeRightSide} col-md-6 col-lg-6 col-xl-6 `} id="homeRightSide">
+        <div className={`${homeStyle.homeRightSide} col-md-6 col-lg-6 col-xl-6 `} >
           
           <div className={`${homeStyle.forFlowingBtn}`}>
 
@@ -105,7 +105,6 @@ const Home = () => {
         
 
         </div>
-        {/* <FollowCursor/> */}
         
       </div>
       

@@ -6,8 +6,10 @@
     justify-content: center;
     border-right: 1px solid rgb(183, 183, 183);
   }
-  .fourStep text{
-    display: block;
+  .fourStep p
+  {
+    font-weight: 600;
+    font-size: 19px;
     color: white;
   }
   .fourStep .fourStepTextOne{
