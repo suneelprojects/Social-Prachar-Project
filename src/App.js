@@ -38,7 +38,6 @@ const App = () => {
   }, []);
   return (
     <div>
-      //hreekkk
       <BrowserRouter>
       <NavBar/>
       <Routes>
