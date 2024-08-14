@@ -165,20 +165,20 @@ const GetTickets = () => {
               </p>
 
               <div className="row">
-                <div className={`${getTicketsStyles.iconsOfBox}`}>
+                <div className={`${getTicketsStyles.iconsOfBox} col col-2`}>
                   <i className="bi bi-currency-rupee"></i>
                 </div>
-                <div className="d-flex align-items-center justify-content-between col">
+                <div className="d-flex  align-items-center justify-content-between col col-10">
                   <p className={`${getTicketsStyles.textOFTheHeader}`}>Cost:</p>
                   <p className={`${getTicketsStyles.headerOfEvent}`}>$ 70.00</p>
                 </div>
               </div>
               <hr />
               <div className="row">
-                <div className={`${getTicketsStyles.iconsOfBox}`}>
+                <div className={`${getTicketsStyles.iconsOfBox} col col-2`}>
                   <i className="bi bi-calendar-month"></i>
                 </div>
-                <div className="d-flex align-items-center justify-content-between col">
+                <div className="d-flex lign-items-center justify-content-between col">
                   <p className={`${getTicketsStyles.textOFTheHeader}`}>Date:</p>
                   <p className={`${getTicketsStyles.textOFTheHeader}`}>
                     July 24,2023
@@ -189,7 +189,7 @@ const GetTickets = () => {
               <hr />
 
               <div className="row">
-                <div className={`${getTicketsStyles.iconsOfBox}`}>
+                <div className={`${getTicketsStyles.iconsOfBox} col col-2`}>
                   <i className="bi bi-people-fill"></i>
                 </div>
                 <div className="d-flex align-items-center justify-content-between col">
@@ -203,7 +203,7 @@ const GetTickets = () => {
               <hr />
 
               <div className="row">
-                <div className={`${getTicketsStyles.iconsOfBox}`}>
+                <div className={`${getTicketsStyles.iconsOfBox} col col-2`}>
                   <i className="bi bi-lock"></i>
                 </div>
                 <div className="d-flex align-items-center justify-content-between col">

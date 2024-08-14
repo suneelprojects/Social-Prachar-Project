@@ -32,7 +32,7 @@ const CircleAnimation = () => {
 
   return (
     <>
-    <div className={`${circleAnimationStyle.circleAnimationContainer }`} id="circleAnimationHover">
+    <div className={`${circleAnimationStyle.circleAnimationContainer } container-fluid`} id="circleAnimationHover">
     <ParallaxEffect images={images} />
 
       <div className="row   containerFluidForPadding ">

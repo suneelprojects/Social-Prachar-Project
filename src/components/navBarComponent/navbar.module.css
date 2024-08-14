@@ -16,8 +16,8 @@
     border: none!important;
 }
 .containerfluidForNav{
-    padding-left: 55px;
-    padding-right: 55px;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 
 /* first nav css start */
@@ -51,41 +51,46 @@
     background-color: white;
 }
 
+
 .category{
     font-size: 17px;
     color: #553cdf;
     border: #553cdf solid 2px;
     border-radius: 5px;
-    width: 164px;
+    /* width: 164px; */
     height: 39px;
     background-color: #fbfaff;
 }
 
 .login{
     color: #553cdf;
-    border: #553cdf solid 2px;
+    border: #553cdf solid 1px;
     border-radius: 5px;
     width: 83px;
     height: 39px;
     background-color: white;
+    display: flex;
+    justify-content: center;
 }
 .login:hover{
     background-color: #553cdf;
 
-    border: #553cdf solid 2px;
+    border: #553cdf solid 1px;
     color: white;
 }
 .register{
     background-color: #553cdf;
-    border: none;
+    border: #553cdf solid 1px;
     border-radius: 5px;
     width: 103px;
     height: 39px;
+    display: flex;
+    justify-content: center;
     color: white;
 }
 .register:hover{
     background-color: white;
-    border: #553cdf solid 2px;
+    border: #553cdf solid 1px;
     color: #553cdf;
 }
 
@@ -195,7 +200,7 @@ text{
 
 @media (max-width:992px){
     .hiddenMobileSmSearch{
-        display: none;
+        display: none!important;
     }
     .navbarTogglerBar{
         /* margin-top: -10px; */
@@ -219,7 +224,7 @@ text{
 }
 @media (max-width:1200px) {
     .hiddenMobileLg{
-        display: none;
+        display: none!important;
     }
 }
 

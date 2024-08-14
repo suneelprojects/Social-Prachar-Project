@@ -22,7 +22,7 @@ Navigate('/login')
 
 
   return (
-    <div className={`${navBarStyle.navBarSticky}`}>
+    <div className={`${navBarStyle.navBarSticky}`} >
       {/* first nav bar starts */}
       <nav className={`${navBarStyle.hiddenMobileSm} ${navBarStyle.firstNav}`} >
         <div className={`${navBarStyle.containerfluidForNav } container-fluid d-flex justify-content-between  py-2`}>
@@ -51,7 +51,7 @@ Navigate('/login')
 
 
       <nav class={`navbar navbar-expand-lg ${navBarStyle.secondNav}`} >
-        <div class={`${navBarStyle.containerfluidForNav } container-fluid py-3 `}>
+        <div class={`${navBarStyle.containerfluidForNav } container-fluid  py-3 `}>
 
           {/* brand name and category code start */}
           <div className="d-flex ">
@@ -163,7 +163,7 @@ Navigate('/login')
 
             <div className={`${navBarStyle.hiddenMobileLg} ms-4 ${navBarStyle.categorySection}`} >
               <button className={`${navBarStyle.category}`}>
-                <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; Category &nbsp;
+                <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp;Category&nbsp;
                 <i class="bi bi-chevron-compact-down"></i>
               </button>
               
@@ -308,7 +308,7 @@ Navigate('/login')
               </li>
               <li class="nav-item">
                 
-                <NavLink to={""} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Dashboard</NavLink>
+                <NavLink to={"/user"} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Dashboard</NavLink>
 
               </li>
               <li class="nav-item">
@@ -372,7 +372,7 @@ Navigate('/login')
                 </li>
               </ul>
             </div>
-            <div className={`${navBarStyle.hiddenMobileLg}`} >
+            <div className={`${navBarStyle.hiddenMobileLg} d-flex`}  >
               <button className={`${navBarStyle.login} ms-4 me-2 `} onClick={handleLogin} >
                 Login
               </button>

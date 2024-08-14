@@ -61,15 +61,15 @@ const FourSteps = () => {
 
   return (
     <>
-      <div className='fourStepsHover' id=''>
+      <div className='fourStepsHover container-fluid' id=''>
         <ParallaxEffect images={images} />
-        <div className={`containerFluidForPadding row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 ${fourStepsStyle.fourStepContainer} py-5 `}>
+        <div className={` row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 ${fourStepsStyle.fourStepContainer} py-5 `}>
           {fourStepsArray.map((fourStepEle, i) => (
             <div className={`col py-3 ${fourStepsStyle.fourStep}`} key={i}>
               <div>
                 <img src={fourStepEle.fourImg} alt='Step' />
-                <text className={`${fourStepsStyle.fourStepTextOne}`}>{currentNumbers[i]}</text>
-                <text>{fourStepEle.fourSecondText}</text>
+                <p className={`${fourStepsStyle.fourStepTextOne}`}>{currentNumbers[i]}</p>
+                <p>{fourStepEle.fourSecondText}</p>
               </div>
             </div>
           ))}
