@@ -28,16 +28,16 @@ Navigate('/login')
         <div className={`${navBarStyle.containerfluidForNav } container-fluid d-flex justify-content-between  py-2`}>
           <div className="d-flex">
             <a href="" className="nav-link me-4 ">
-              <i class="bi bi-envelope-fill"></i> info@studyhub.com
+              <i className="bi bi-envelope-fill"></i> info@studyhub.com
             </a>
             <a href="" className="nav-link">
-              <i class="bi bi-telephone"></i> +61 012 012 445
+              <i className="bi bi-telephone"></i> +61 012 012 445
             </a>
           </div>
 
           <div>
             <a href="" className={`${navBarStyle.hiddenMobilemd} nav-link `} >
-              <i class="bi bi-geo-alt-fill"></i> 684 West College St. Sun City,
+              <i className="bi bi-geo-alt-fill"></i> 684 West College St. Sun City,
               USA
             </a>
           </div>
@@ -50,12 +50,12 @@ Navigate('/login')
 
 
 
-      <nav class={`navbar navbar-expand-lg ${navBarStyle.secondNav}`} >
-        <div class={`${navBarStyle.containerfluidForNav } container-fluid  py-3 `}>
+      <nav className={`navbar navbar-expand-lg ${navBarStyle.secondNav}`} >
+        <div className={`${navBarStyle.containerfluidForNav } container-fluid  py-3 `}>
 
           {/* brand name and category code start */}
           <div className="d-flex ">
-            <a class="navbar-brand" href="#">
+            <a className="navbar-brand" href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="144"
@@ -163,8 +163,8 @@ Navigate('/login')
 
             <div className={`${navBarStyle.hiddenMobileLg} ms-4 ${navBarStyle.categorySection}`} >
               <button className={`${navBarStyle.category}`}>
-                <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp;Category&nbsp;
-                <i class="bi bi-chevron-compact-down"></i>
+                <i className="bi bi-grid-3x3-gap-fill"></i> &nbsp;Category&nbsp;
+                <i className="bi bi-chevron-compact-down"></i>
               </button>
               
               <div className={`${navBarStyle.categoryMenu}`}>
@@ -274,44 +274,44 @@ Navigate('/login')
 
           {/* togglet code starts  */}
             <button
-              class={`navbar-toggler ${navBarStyle.navbarTogglerBar }`}
+              className={`navbar-toggler ${navBarStyle.navbarTogglerBar }`}
               type="button"
                onClick={Showtoggle}  
             >
-              <span class="navbar-toggler-icon "></span>
+              <span className="navbar-toggler-icon "></span>
             </button>
           {/* togglet code ends  */}
           
 
           {/* navigation code starts */}
 
-          <div class={`${navBarStyle.navBarList}`} >
+          <div className={`${navBarStyle.navBarList}`} >
             <div className={`collapse navbar-collapse offcanvas offcanvas-end ${navBarStyle.offCanvasContaniner}  ${!!expanded && 'show'}`} >
             <div className={`offcanvas-header  ${navBarStyle.offCanvasContaninerHeader}`} >
    
-    <button type="button" class="btn-close btn-close-white" style={{position:'absolute',left:0}}  onClick={Showtoggle} data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" className="btn-close btn-close-white" style={{position:'absolute',left:0}}  onClick={Showtoggle} data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
 
-            <ul class= "navbar-nav me-auto mb-2 mb-lg-0 gap-4 " >
-              <li class="nav-item d-flex">
+            <ul className= "navbar-nav me-auto mb-2 mb-lg-0 gap-4 " >
+              <li className="nav-item d-flex">
                 
                 <NavLink to={"/"} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Home</NavLink>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 
                 <NavLink to={""} className={`nav-link ${navBarStyle.NavLinkForHover}`}>About Us</NavLink>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 
                 <NavLink to={"/courses"} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Courses</NavLink>
 
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 
                 <NavLink to={"/user"} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Dashboard</NavLink>
 
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
               
                 <NavLink to={""} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Blog</NavLink>
 
@@ -331,14 +331,14 @@ Navigate('/login')
           <div className="d-flex">
             <div className="d-flex ">
               <ul className={`navbar-nav ${navBarStyle.hiddenMobileSmSearch}`} >
-                <li class="nav-item">
+                <li className="nav-item">
                   <a className="nav-link" href="#">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
                       height="20"
                       fill="#553cdf"
-                      class="bi bi-search"
+                      className="bi bi-search"
                       viewBox="0 0 16 16"
                     >
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
@@ -346,20 +346,20 @@ Navigate('/login')
                   </a>
                 </li>
 
-                <li class="nav-item">
+                <li className="nav-item">
                   <span className="nav-link">
                     <div className={`${navBarStyle.line}`}></div>
                   </span>
                 </li>
 
-                <li class="nav-item">
+                <li className="nav-item">
                   <a className="nav-link" href="#">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="22"
                       height="22"
                       fill="#553cdf"
-                      class="bi bi-cart3"
+                      className="bi bi-cart3"
                       viewBox="0 0 16 16"
                     >
                       <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />

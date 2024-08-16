@@ -60,17 +60,17 @@ const NewsFullStory = () => {
                 
 
                 <div className={`${newsCompStyle.newsFirstText}`} >
-                  <text>
-                    <i class="bi bi-calendar2-date"></i>
+                  <p>
+                    <i className="bi bi-calendar2-date"></i>
                     {teacher.smallTextOne}
-                  </text>
-                  <text>
-                    <i class="bi bi-person"></i>
+                    </p>
+                  <p>
+                    <i className="bi bi-person"></i>
                     {teacher.smallTextTwo}
-                  </text>
+                    </p>
                 </div>
                 <div className={`${newsCompStyle.newsSecondText}`} >
-                  <text>{teacher.BigText}</text>
+                  <p>{teacher.BigText}</p>
 
                   <div className=" ArrowBtn">
                     <ArrowButton ArrowText="Read More" />

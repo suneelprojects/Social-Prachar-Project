@@ -7,33 +7,15 @@ import BulbText from "../extraComponents/bulbText";
 
 import upcommingEventsArray from '../extraComponents/upcommingEventsArray'
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const UpComming = () => {
 
-    // var upcommingEventsArray=[
-    //     {
-    //         upcommingImgOne:upcommingImg,
-    //         smallTextOne:'July 24, 2023',
-    //         smallTextTwo:'10:45 AM-01:30 PM',
-    //         smallTextThree:'Yarra Park, Melbourne',
-    //         BigText:'Edu Fest 2023: Igniting Minds Off On Transforming Lives'
-    //     },
-    //     {
-    //         upcommingImgOne:upcommingImg,
-    //         smallTextOne:'July 24, 2023',
-    //         smallTextTwo:'10:45 AM-01:30 PM',
-    //         smallTextThree:'Yarra Park, Melbourne',
-    //         BigText:'Mind Masters Workshop: Unlock Your Cognitive Potential'
-    //     }
-    //     ,{
-    //         upcommingImgOne:upcommingImg,
-    //         smallTextOne:'July 24, 2023',
-    //         smallTextTwo:'10:45 AM-01:30 PM',
-    //         smallTextThree:'Yarra Park, Melbourne',
-    //         BigText:'Tech Talks 2023: Navigating the Digital Frontier'
-    //     }
-    // ]
+  const Navigate=useNavigate();
+
+  const handleClick=(i)=>{
+    Navigate(`/getTickets/${i}`)
+  }
 
   return (
     <>
@@ -63,12 +45,12 @@ const UpComming = () => {
                 <div>
                 <div className={`${upCommingStyle.upcommingCardFirstText}`}>
                   <p>
-                  <i class="bi bi-calendar2-date"></i>
+                  <i className="bi bi-calendar2-date"></i>
                   {upCommingEvent.smallTextOne}</p>
-                  <p><i class="bi bi-stopwatch"></i>
+                  <p><i className="bi bi-stopwatch"></i>
                   {upCommingEvent.smallTextTwo}</p>
                   <p>
-                  <i class="bi bi-geo-alt-fill"></i>
+                  <i className="bi bi-geo-alt-fill"></i>
                   {upCommingEvent.smallTextThree}</p>
                 </div>
                 <div className={`${upCommingStyle.upcommingCardSecondText}`} >
@@ -80,9 +62,8 @@ const UpComming = () => {
                 </div>
 
                 <div className="col-lg-3 col-md-4 ArrowBtn">
-              <Link to={`/getTickets/${i}`}>
-              <ArrowButton ArrowText='Get Ticket' />
-              </Link>
+              
+              <ArrowButton ArrowText='Get Ticket' handleClick={(e)=>{handleClick(i)}}/>
                     
                 </div>
               </div>
