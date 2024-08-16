@@ -39,7 +39,6 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-      // hello
       <NavBar/>
       <Routes>
       <Route path='/courses' element={ <Course/>}/>

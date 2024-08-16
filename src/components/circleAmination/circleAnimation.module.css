@@ -26,7 +26,7 @@
     width: 32px;
     height: 34px;
   }
-  .circleAnimationDiv text{
+  .circleAnimationDiv p{
     display: block;
     width: 83px;
     color: white;
@@ -60,7 +60,7 @@
     grid-area: 1/1;
   }
   
-  .rightSideOfCircleAni text{
+  .rightSideOfCircleAni p{
     color: white!important;
   }
   .leftSideOfCircleAni .circleImg{

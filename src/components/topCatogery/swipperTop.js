@@ -102,11 +102,11 @@ const SwipperTop = () => {
         <div className='slider-controler'>
           <div className='swiper-button-prev slider-arrow'>
             {/* <ion-icon name="arrow-back-outline"></ion-icon> */}
-            <i class="bi bi-chevron-left"></i>
+            <i className="bi bi-chevron-left"></i>
           </div>
           <div className='swiper-button-next slider-arrow'>
             {/* <ion-icon name="arrow-forward-outline"></ion-icon> */}
-            <i class="bi bi-chevron-right"></i>
+            <i className="bi bi-chevron-right"></i>
           </div>
           <div className='swiper-pagination'></div>
         </div>

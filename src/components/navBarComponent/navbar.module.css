@@ -16,8 +16,8 @@
     border: none!important;
 }
 .containerfluidForNav{
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 45px;
+    padding-right: 45px;
 }
 
 /* first nav css start */
@@ -57,7 +57,6 @@
     color: #553cdf;
     border: #553cdf solid 2px;
     border-radius: 5px;
-    /* width: 164px; */
     height: 39px;
     background-color: #fbfaff;
 }
@@ -163,7 +162,7 @@
     background-color: #dedee3ea;
 
 }
-text{
+.categoryMenu text{
     color: black;
     font-weight: 500;
 }

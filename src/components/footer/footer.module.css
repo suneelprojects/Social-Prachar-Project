@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.footerCertificate div text{
+.footerCertificate div p{
     font-size: 48px;
     line-height: 58px;
     color: white;
@@ -43,7 +43,7 @@
 .fotterList p{
     margin: 13px 0px 13px 0px;
     line-height: 26px;
-    font-weight: 400;
+    font-weight: 500;
     color: gray;
 }
 .fotterList .subscribe{
@@ -67,10 +67,10 @@
     color: gray;
 }
 
-.mediaIcon .bi{
+.mediaIcon i{
     color: #221859;
 }
-.fotterList .useFullLink:hover ,.fotterList .Explore:hover ,.mediaIcon .bi:hover{
+.fotterList .useFullLink:hover ,.fotterList .Explore:hover ,.mediaIcon i:hover{
     color: #553cdf;
 }
 
@@ -82,9 +82,11 @@
     border-color: #553cdf;
     margin-right: 10px;
 }
-.fotterList input[type=checkbox] ~text{
+.fotterList input[type=checkbox] ~p{
     font-size: 14px;
     color: gray;
+    display: inline;
+    font-weight: 600;
 }
 /* fotterList code ends */
 
@@ -111,7 +113,7 @@
     .footerCertificate #certificateText{
         order: 1;
     }
-    .footerCertificate #certificateText text{
+    .footerCertificate #certificateText p{
         text-align: center;
     }
     .footerCertificate #certificateBtn{
@@ -142,9 +144,14 @@
         justify-content: center;
         padding-top: 30px;
     }
-    
 }
 
+@media (min-width:992px){
+    .fotterListMediaQuery{
+        display: flex;
+        justify-content: center;
+    }
+}
 
 
 @media(max-width:464px){
