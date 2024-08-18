@@ -50,7 +50,7 @@ const Home = () => {
             </text>
 
             <div className="row mt-4 ">
-              <div className="col-12 col-sm-12 col-xl-4">
+              <div className="col-12 col-sm-12 col-xl-5">
                 <ArrowButton ArrowText='View All Button'/>
               </div>
               <div className="col-12 col-sm-12 col-xl-6 d-flex justify-content-around">

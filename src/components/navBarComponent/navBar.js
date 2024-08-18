@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import navBarStyle from './navbar.module.css'
 
@@ -10,16 +10,83 @@ import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
+
+  const categoryArraryOne=[
+    {courseImg:picSvg,
+      courseName:'Development',
+      NoOFCourses:'3+ courses'
+    },
+     {courseImg:picSvg,
+      courseName:'Academics',
+      NoOFCourses:'0 courses'
+    },
+    {courseImg:picSvg,
+      courseName:'Business',
+      NoOFCourses:'2+ courses'
+    },
+    {courseImg:picSvg,
+      courseName:'Design & Art',
+      NoOFCourses:'2+ courses'
+    },
+
+  ]
+  const categoryArraryTwo=[
+    {courseImg:picSvg,
+      courseName:'Marketing',
+      NoOFCourses:'1+ courses'
+    },
+     {courseImg:picSvg,
+      courseName:'Music',
+      NoOFCourses:'1+ courses'
+    },
+    {courseImg:picSvg,
+      courseName:'Photography',
+      NoOFCourses:'0 courses'
+    },
+    {courseImg:picSvg,
+      courseName:'Accounting',
+      NoOFCourses:'2+ courses'
+    },
+
+  ]
+
 const Navigate = useNavigate()
+
+const handleCategoryClick = (category) => {
+  // Navigate to the detail page and pass the category as state
+  Navigate('/categoryCourses', { state: { category } });
+};
   
 const [expanded,setExpand]=useState(false)
 const Showtoggle=()=>{
   setExpand(!expanded)
 }
+
+const [open,setOpen]=useState(false);
+const openToggle=()=>{
+  setOpen(!open)
+}
+console.log(open)
 const handleLogin = () => {
 Navigate('/login')
 }
 
+useEffect(()=>{
+
+},[handleCategoryClick])
+
+
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // Handle input change
+  const handleInputChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  // Handle search button click
+  const handleSearchClick = () => {
+    console.log('Search term:', searchTerm);
+  };
 
   return (
     <div className={`${navBarStyle.navBarSticky}`} >
@@ -161,9 +228,8 @@ Navigate('/login')
               </svg>
             </a>
 
-            <div className={`${navBarStyle.hiddenMobileLg} ms-4 ${navBarStyle.categorySection}`} >
-              <button className={`${navBarStyle.category}`}>
-                <i className="bi bi-grid-3x3-gap-fill"></i> &nbsp;Category&nbsp;
+            <div className={`${navBarStyle.hiddenMobileLg} ms-4 ${navBarStyle.categorySection} `} >
+              <button className={`${navBarStyle.category}`}><i className="bi bi-grid-3x3-gap-fill"></i>Category
                 <i className="bi bi-chevron-compact-down"></i>
               </button>
               
@@ -171,96 +237,38 @@ Navigate('/login')
                 <div className='d-flex'>
 
               <ul >
-                 <li>
-                 <a href="#" className="d-flex" >
-                  <img src={picSvg}/>
-                  <div >
-                  <text >Development</text><br/>
-                  <text className={`${navBarStyle.textTwo}`}>3+ courses</text>
-                  </div>
-          
-                  </a>
-                 </li>
 
-                 <li>
-                 <a href="#" className="d-flex" >
-                  <img src={picSvg}/>
-                  <div>
-                  <text>Academics</text><br/>
-                  <text className={`${navBarStyle.textTwo}`}>0+ courses</text>
-                  </div>
-          
-                  </a>
-                 </li>
+                {
+                  categoryArraryOne.map((category,i)=>(<li key={i} onClick={() => handleCategoryClick(category.courseName)}>
+                    <a href="#" className="d-flex" >
+                     <img src={category.courseImg}/>
+                     <div >
+                     <text >{category.courseName}</text><br/>
+                     <text className={`${navBarStyle.textTwo}`}>{category.NoOFCourses}</text>
+                     </div>
+             
+                     </a>
+                    </li>))
+                }
+                 
 
-                 <li>
-                 <a href="#" className="d-flex" >
-                  <img src={picSvg}/>
-                  <div>
-                  <text>Bussiness</text><br/>
-                  <text className={`${navBarStyle.textTwo}`}>2+ courses</text>
-                  </div>
-          
-                  </a>
-                 </li>
-
-                 <li>
-                 <a href="#" className="d-flex" >
-                  <img src={picSvg}/>
-                  <div>
-                  <text>Design & Art</text><br/>
-                  <text className={`${navBarStyle.textTwo}`}>2+ courses</text>
-                  </div>
-          
-                  </a>
-                 </li>
+                
 
                 </ul>
 
                 <ul >
-                <li>
-                 <a href="#" className="d-flex" >
-                  <img src={picSvg}/>
-                  <div>
-                  <text>Marketing</text><br/>
-                  <text className={`${navBarStyle.textTwo}`}>2+ courses</text>
-                  </div>
-          
-                  </a>
-                 </li>
-
-                 <li>
-                 <a href="#" className="d-flex" >
-                  <img src={picSvg}/>
-                  <div>
-                  <text>Music</text><br/>
-                  <text className={`${navBarStyle.textTwo}`}>0+ courses</text>
-                  </div>
-          
-                  </a>
-                 </li>
-
-                 <li>
-                 <a href="#" className="d-flex" >
-                  <img src={picSvg}/>
-                  <div>
-                  <text>Photography</text><br/>
-                  <text className={`${navBarStyle.textTwo}`}>3+ courses</text>
-                  </div>
-          
-                  </a>
-                 </li>
-
-                 <li>
-                 <a href="#" className="d-flex" >
-                  <img src={picSvg}/>
-                  <div>
-                  <text>Accounting</text><br/>
-                  <text className={`${navBarStyle.textTwo}`}>3+ courses</text>
-                  </div>
-          
-                  </a>
-                 </li>
+                {
+                  categoryArraryTwo.map((category,i)=>(<li key={i}>
+                    <a href="#" className="d-flex" onClick={() => handleCategoryClick(category.courseName)}>
+                     <img src={category.courseImg}/>
+                     <div >
+                     <text >{category.courseName}</text><br/>
+                     <text className={`${navBarStyle.textTwo}`}>{category.NoOFCourses}</text>
+                     </div>
+             
+                     </a>
+                    </li>))
+                }
 
                 </ul>
                 </div>
@@ -327,12 +335,14 @@ Navigate('/login')
 
 
           {/* search icon and login button code starts */}
+          
 
           <div className="d-flex">
             <div className="d-flex ">
               <ul className={`navbar-nav ${navBarStyle.hiddenMobileSmSearch}`} >
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
+                <li className="nav-item" >
+                  
+                  <a className="nav-link" href="#" >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -340,6 +350,7 @@ Navigate('/login')
                       fill="#553cdf"
                       className="bi bi-search"
                       viewBox="0 0 16 16"
+                      onClick={openToggle} 
                     >
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg>
@@ -372,11 +383,13 @@ Navigate('/login')
                 </li>
               </ul>
             </div>
-            <div className={`${navBarStyle.hiddenMobileLg} d-flex`}  >
+            <div className={`${navBarStyle.hiddenMobileLg}`}  >
+              <div className='d-flex'>
               <button className={`${navBarStyle.login} ms-4 me-2 `} onClick={handleLogin} >
                 Login
               </button>
               <button className={`${navBarStyle.register}`} >Register</button>
+              </div>
             </div>
           </div>
 
@@ -386,7 +399,24 @@ Navigate('/login')
       </nav>
 
       {/* second nav bar ends */}
-
+      <div className={` ${!!open  ?  `${navBarStyle.open}`:"d-none"} container-fluid `}  >
+                  <button className={navBarStyle.openBtn} onClick={openToggle} ><i class="bi bi-x-lg"></i></button>
+                    <div className="" style={{borderBottom:'1px solid grey'}}>
+                      <input type='search' placeholder='Searching...'
+                       value={searchTerm}
+                       onChange={handleInputChange} /><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      fill="gray"
+                      className="bi bi-search"
+                      viewBox="0 0 16 16"
+                      onClick={handleSearchClick}
+                    >
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                      </div>
+           </div>
     </div>
   );
 };
