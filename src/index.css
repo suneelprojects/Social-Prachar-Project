@@ -59,13 +59,12 @@ copy right  ,sticky navbar , moving on hovers  */
   .containerFluidForPadding{
     padding-left: 10px!important;
     padding-right: 10px!important;
-    /* background-color: violet; */
   }
   
 
 } 
 
-@media(max-width:464px){
+@media(min-width:325px) and (max-width:464px){
   .containerFluidForPadding{
     padding-left: 15px!important;
     padding-right: 15px!important;
@@ -74,7 +73,7 @@ copy right  ,sticky navbar , moving on hovers  */
 
   }
 
-  @media (max-width:768px){
+  @media(min-width:464px) and (max-width:768px){
     .containerFluidForPadding{
       padding-left: 25px!important;
       padding-right: 25px!important;

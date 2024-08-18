@@ -69,6 +69,7 @@
 
 .mediaIcon i{
     color: #221859;
+    font-size: 17px!important;
 }
 .fotterList .useFullLink:hover ,.fotterList .Explore:hover ,.mediaIcon i:hover{
     color: #553cdf;
