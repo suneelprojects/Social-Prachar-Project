@@ -42,8 +42,7 @@ const App = () => {
       <NavBar/>
       <Routes>
       <Route path='/courses' element={ <Course/>}/>
-
-      <Route path="/" element={<AllHomeComp/>}/>
+        <Route path="/" element={<AllHomeComp/>}/>
       <Route path="/getTickets/:id" element={<GetTickets/>}/>
         <Route path='/user' 
         element={user?<Navigate to='/profile'></Navigate>:<Login/>}>

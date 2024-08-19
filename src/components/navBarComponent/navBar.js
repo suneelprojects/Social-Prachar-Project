@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import navBarStyle from './navbar.module.css'
 
@@ -7,6 +7,9 @@ import picSvg from '../../assets/svg01.png'
 
 import { Link, useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { auth } from '../../firebase';
+import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+
 
 
 const NavBar = () => {
@@ -18,6 +21,33 @@ const Showtoggle=()=>{
 }
 const handleLogin = () => {
 Navigate('/login')
+}
+const handleDashoard=()=>{
+Navigate("/user")
+}
+const handleRegister=()=>{
+  Navigate('/signup')
+  }
+const [user, setUser] = useState(null);
+ 
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  async function handleLogout(){
+    try{
+        await auth.signOut();
+        Navigate('/login')
+        console.log("user Logging out Successfully")
+    }
+   catch(error){
+    console.log("Error logging out: " ,error.message)
+   }
 }
 
 
@@ -373,11 +403,17 @@ Navigate('/login')
               </ul>
             </div>
             <div className={`${navBarStyle.hiddenMobileLg} d-flex`}  >
-              <button className={`${navBarStyle.login} ms-4 me-2 `} onClick={handleLogin} >
-                Login
-              </button>
-              <button className={`${navBarStyle.register}`} >Register</button>
+              {user?(
+                <>
+              <button className={`${navBarStyle.login} ms-4 me-2 `} onClick={handleLogout} >Logout</button>
+              <button className={`${navBarStyle.register}`} onClick={handleDashoard}>Dashboard</button>
+              </>):(     <>
+              <button className={`${navBarStyle.login} ms-4 me-2 `} onClick={handleLogin} >Login</button>
+              <button className={`${navBarStyle.register}`}  onClick={handleRegister} >Register</button>
+              </>)
+}
             </div>
+
           </div>
 
           {/* search icon and login button code ends */}
