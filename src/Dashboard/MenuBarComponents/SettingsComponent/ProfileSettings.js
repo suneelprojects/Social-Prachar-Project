@@ -80,11 +80,14 @@ fetchUserData();
     if (type === 'profile') {
       const profileImageUrl = await handleImageUpload(input.profileImg, 'profile-images');
       setProfileImageUrl(profileImageUrl);
+      const userRef = doc(db, 'Users', user.uid);
+      await updateDoc(userRef, { profileImageUrl });
     } else if (type === 'cover') {
       const coverImageUrl = await handleImageUpload(input.coverImg, 'cover-images');
       setCoverImageUrl(coverImageUrl);
+      const userRef = doc(db, 'Users', user.uid);
+      await updateDoc(userRef, { coverImageUrl });
     }
-
     setShowProfileMenu(false);
     setShowCoverMenu(false);
   };
@@ -92,13 +95,13 @@ fetchUserData();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let newProfileImageUrl = input.profileImg
-      ? await handleImageUpload(input.profileImg, 'profile-images')
-      :userDetails.profileImageUrl;
+    // let newProfileImageUrl = input.profileImg
+    //   ? await handleImageUpload(input.profileImg, 'profile-images')
+    //   :userDetails.profileImageUrl;
 
-    let newCoverImageUrl = input.coverImg
-      ? await handleImageUpload(input.coverImg, 'cover-images')
-      : userDetails.coverImageUrl;
+    // let newCoverImageUrl = input.coverImg
+    //   ? await handleImageUpload(input.coverImg, 'cover-images')
+    //   : userDetails.coverImageUrl;
 
 
 
@@ -115,19 +118,10 @@ fetchUserData();
         skill: input.skill,
         bio: JSON.stringify(bioRawContentState),
       };
-      if (newProfileImageUrl) {
-        userData.profileImageUrl = newProfileImageUrl;
-      }
-  
-      if (newCoverImageUrl) {
-        userData.coverImageUrl = newCoverImageUrl;
-      }
       delete userData.profileImg;
       delete userData.coverImg;
 
       await setDoc(userRef, userData, { merge: true });
-      setProfileImageUrl(newProfileImageUrl);
-      setCoverImageUrl(newCoverImageUrl);
       toast.success('profile updated successfully')
       console.log('Profile updated successfully');
     } catch (error) {
@@ -177,7 +171,6 @@ fetchUserData();
     }
 
     await deleteObject(storageRef);
-
     if (type === 'profile') {
       await setProfileImageUrl(null);
     } else if (type === 'cover') {
@@ -190,7 +183,8 @@ fetchUserData();
 
     if (type === 'profile') {
       updatedData.profileImageUrl = null;
-    } else if (type === 'cover') {
+    }
+     else if (type === 'cover') {
       updatedData.coverImageUrl = null;
     }
 
@@ -200,6 +194,8 @@ fetchUserData();
   } catch (error) {
     console.error('Error deleting image:', error);
   }
+  setShowProfileMenu(false);
+  setShowCoverMenu(false);
 };
 
 
