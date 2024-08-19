@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { data } from '../Cards/CardData';
 import cardsCSS from './Cards.module.css';
-import GridSymbol from '../Assets/menu (1).png';
-import calendar from '../Assets/calendar-lines-pen.png';
-import user from '../Assets/usergroup.png';
+import GridSymbol from '../../assets/menu (1).png';
+import calendar from '../../assets/calendar-lines-pen.png';
+import user from '../../assets/usergroup.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faList, faStar } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
