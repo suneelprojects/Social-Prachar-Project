@@ -1,6 +1,6 @@
 import React from 'react'
 import searchStyle from '../searchComp/search.module.css'
-import img from '../Assets/01-5.jpg';
+import img from '../../assets/01-5.jpg';
 
 const SearchBar = () => {
   return (

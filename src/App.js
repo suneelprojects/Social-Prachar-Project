@@ -26,6 +26,7 @@ import AllHomeComp from './components/allHomeComp';
 import GetTickets from './components/getTickets/getTickets';
 import MenuBar from './Dashboard/SideNavComponent/MenuBar.js';
 import NavCourses from './components/navBarComponent/navCourses.js';
+import ScrollToTop from './components/extraComponents/ScrollToTop.js';
 
 const App = () => {
   const [user,setUser]=useState();
@@ -40,6 +41,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
+        <ScrollToTop/>
       <NavBar/>
       <Routes>
       <Route path='/courses' element={ <Course/>}/>

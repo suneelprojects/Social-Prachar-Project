@@ -60,7 +60,7 @@
     grid-area: 1/1;
   }
   
-  .rightSideOfCircleAni p{
+  .rightSideOfCircleAni text{
     color: white!important;
   }
   .leftSideOfCircleAni .circleImg{

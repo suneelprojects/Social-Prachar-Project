@@ -86,6 +86,16 @@ useEffect(()=>{
   // Handle search button click
   const handleSearchClick = () => {
     console.log('Search term:', searchTerm);
+    openToggle();    
+    setSearchTerm("");
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSearchClick();  
+      openToggle();    
+      setSearchTerm("");
+    }
   };
 
   return (
@@ -399,12 +409,14 @@ useEffect(()=>{
       </nav>
 
       {/* second nav bar ends */}
+
+      {/* search bar */}
       <div className={` ${!!open  ?  `${navBarStyle.open}`:"d-none"} container-fluid `}  >
                   <button className={navBarStyle.openBtn} onClick={openToggle} ><i class="bi bi-x-lg"></i></button>
                     <div className="" style={{borderBottom:'1px solid grey'}}>
                       <input type='search' placeholder='Searching...'
                        value={searchTerm}
-                       onChange={handleInputChange} /><svg
+                       onChange={handleInputChange} onKeyDown={handleKeyDown} /><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="30"
                       height="30"
@@ -412,6 +424,7 @@ useEffect(()=>{
                       className="bi bi-search"
                       viewBox="0 0 16 16"
                       onClick={handleSearchClick}
+                      
                     >
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg>

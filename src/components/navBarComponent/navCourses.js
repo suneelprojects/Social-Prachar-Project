@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import courseCSS from '../Courses_category/Course.module.css';
-import img from '../Assets/01-5.jpg';
+import img from '../../assets/01-5.jpg';
 import Cards from '../Cards/Cards';
 import ToggleBar from '../Togglebar/ToggleBar'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
