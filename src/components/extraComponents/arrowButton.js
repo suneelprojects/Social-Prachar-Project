@@ -3,14 +3,14 @@ import React from "react";
 const ArrowButton = (props) => {
   return (
     <>
-      <button className="btn btn-light ">
+      <button className="btn btn-light " onClick={props.handleClick}>
         {props.ArrowText} {" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="28"
           height="28"
           fill="currentColor"
-          class="bi bi-arrow-right-short"
+          className="bi bi-arrow-right-short"
           viewBox="0 0 16 16"
         >
           <path

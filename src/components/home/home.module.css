@@ -243,3 +243,9 @@ greyText availile at index.css
 
     }
 }
+@media (min-width:1022px) and (max-width:1071.5px){
+    .yellowLine{
+    margin-left: 20%;
+
+    }
+}

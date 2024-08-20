@@ -1,0 +1,13 @@
+.homeCoursesBtn{
+    background-color: #ebe9e9;
+    font-size: 14px;
+    margin-right: 8px;
+    font-weight: 500;
+    color: #553cdf;
+    border-radius: 3px;
+    border: none;
+}
+.homeCoursesBtnactive{
+    background-color: #553cdf;
+    color: #ebe9e9;
+}

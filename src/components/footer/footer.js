@@ -42,9 +42,9 @@ const Footer = () => {
             </div>
 
             <div className={`col-xl-4 ${footerStyle.certificateText}`} id={`${footerStyle.certificateText}`}>
-            <text className={`${footerStyle.gateWaytitle}`}>
+            <p className={`${footerStyle.gateWaytitle}`}>
             Skills Certificate From<br/> the Studyhub
-            </text>
+            </p>
             </div>
 
             <div className={`col-xl-4 ${footerStyle.certificateBtn}`} id={`${footerStyle.certificateBtn}`}>
@@ -90,7 +90,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="col-12 col-sm-12  col-md-6 col-lg-3 d-flex justify-content-center">
+            <div className={`col-12 col-sm-12  col-md-6 col-lg-3 ${footerStyle.fotterListMediaQuery}`}>
                 <div>
                     {
                         useFullLinks.map((LinksList,i)=>(
@@ -103,7 +103,7 @@ const Footer = () => {
 
             {/* second list starts */}
 
-            <div className="col-12 col-sm-12  col-md-6 col-lg-3 d-flex justify-content-center">
+            <div className={`col-12 col-sm-12  col-md-6 col-lg-3 ${footerStyle.fotterListMediaQuery}`}>
                 <div>
                     {
                         useFullLinks.map((LinksList,i)=>(
@@ -117,7 +117,7 @@ const Footer = () => {
 
             {/* fouth list starts */}
 
-            <div className="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div className="col-12 col-sm-12 col-md-6 col-lg-3 ">
                 <div>
                     <div>
                     <b>Newsletter</b>
@@ -132,7 +132,7 @@ const Footer = () => {
                 </div>
                     </div>
                     <div>
-                    <input type="checkbox"/><text>I agree to the terms of use and privacy policy.</text>
+                    <input type="checkbox"/><p>I agree to the terms of use and privacy policy.</p>
                     </div>
                 </div>
                 
@@ -148,10 +148,9 @@ const Footer = () => {
 
         {/* footer certificate ends */}
         <div className={`${footerStyle.copyRight}`}>
-            {/* <div><i className="bi bi-chevron-double-up"></i></div> */}
-            <text>
+            <p>
             Copyright © 2024 All Rights Reserved by Social Tech
-            </text>
+            </p>
         </div>
 
     </div>

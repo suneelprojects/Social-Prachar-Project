@@ -13,14 +13,35 @@ import CircleAnimation from './circleAmination/circleAnimation';
 import NewsFullStory from './newComponent/NewsFullStory';
 import Home from './home/home';
 
+import Cards from './Cards/Cards'
+
+import Course from './Courses_category/Course'
+import HomeCards from './HomeCardComp/HomeCard';
+import HomeCourse from './HomeCardComp/HomeCourses';
+import SearchBar from './searchComp/searchBar';
+
 const AllHomeComp = () => {
+
   return (
     <div>
       <Home/>
       <TrustedBy/>
       <GateWay/>
       <TopCatogery/>
+      {/* <Cards
+                        filters={{
+                          checkedCategories: checked,
+                          checkedTags,
+                          checkedLevel,
+                          checkedPrice
+                        }} /> */}
+
+      {/* <HomeCards/> */}
+      {/* <HomeCourse/>   */}
+      <HomeCourse/>
       <CircleAnimation/>
+      {/* <Course/> */}
+      {/* <SearchBar/> */}
       <UpComming/>
       <FourSteps/>
       <Teacher/>
