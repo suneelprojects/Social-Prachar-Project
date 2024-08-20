@@ -103,8 +103,6 @@ fetchUserData();
     //   ? await handleImageUpload(input.coverImg, 'cover-images')
     //   : userDetails.coverImageUrl;
 
-
-
     try {
       const userRef = doc(db, 'Users', user.uid);
       const bioRawContentState = convertToRaw(editorState.getCurrentContent());
