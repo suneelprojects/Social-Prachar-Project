@@ -52,6 +52,10 @@
     margin-bottom: 5px;
     transition: all 9ms;
   }
+  .teachersIcons span i{
+   font-size: 17px!important;
+   margin-left: 10px;
+  }
   .teachersIcons .teachersIconsHover{
     display: flex;
     justify-content: center;

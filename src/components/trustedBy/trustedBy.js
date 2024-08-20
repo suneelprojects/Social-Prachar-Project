@@ -11,9 +11,9 @@ const TrustedBy = () => {
 
     <div className='row py-5'>
         <div className='col col-sm-6 col-md-3 col-xl-2 d-flex justify-content-center align-items-center'>
-            <text className={`${trustedByStyle.trustedBy}`}>
+            <p className={`${trustedByStyle.trustedBy}`}>
             Trusted by:
-            </text>
+            </p>
         </div>
         <div className={`col col-sm-6 col-md-9 col-xl-10 ${trustedByStyle.trustedByImg}`}>
 

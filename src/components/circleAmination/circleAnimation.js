@@ -66,14 +66,14 @@ const CircleAnimation = () => {
           <div className="row row-cols-auto py-4 row-gap-4 column-gap-5 ">
             
             {
-              circleAnimationArray.map((circleAnimationDivItem)=>(
-                <div className={`${circleAnimationStyle.circleAnimationDiv}  col`} >
+              circleAnimationArray.map((circleAnimationDivItem,i)=>(
+                <div className={`${circleAnimationStyle.circleAnimationDiv}  col`} key={i}>
                 <img src={flowtingBtn} />
                     
                         
-                        <text>
+                        <p>
                         {circleAnimationDivItem}
-                        </text>
+                        </p>
                    
               </div>
               ))

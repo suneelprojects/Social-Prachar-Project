@@ -86,12 +86,12 @@ var carouselData=[{
                       {carouselItem.carouselStars.map((iconItem)=>(iconItem))}
                     </span>
 
-                    <text className= {`${carouselDotStyle.FeedBackFirstText}`}>
+                    <p className= {`${carouselDotStyle.FeedBackFirstText}`}>
                       {carouselItem.carouselFirstText}
-                    </text>
+                    </p>
 
-                    <text className={`${carouselDotStyle.FeedBackSecondText}`} >
-                      {carouselItem.carouelSecondText}</text>
+                    <p className={`${carouselDotStyle.FeedBackSecondText}`} >
+                      {carouselItem.carouelSecondText}</p>
 
 
                   </div>

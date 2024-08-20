@@ -10,8 +10,8 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { Pagination, Navigation } from 'swiper/modules';
-
+import { Pagination, Navigation  } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom';
 import sliderImg from '../../assets/svg01.png';
 import sliderImg1 from '../../assets/svg01.png';
 import sliderImg2 from '../../assets/svg01.png';
@@ -27,6 +27,13 @@ const images = [
 const repeatedImages = [...images, ...images];
 
 const SwipperTop = () => {
+
+  const Navigate = useNavigate()
+
+const handleCategoryClick = (category) => {
+  // Navigate to the detail page and pass the category as state
+  Navigate('/categoryCourses', { state: { category } });
+};
   return (
     <div className='swipperContainer'>
       <Swiper
@@ -83,7 +90,7 @@ const SwipperTop = () => {
       >
         {repeatedImages.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className={`${topCatogeryStyle.topCategoryBox}`}>
+            <div className={`${topCatogeryStyle.topCategoryBox}`}  onClick={() => handleCategoryClick(item.category)}>
               <div>
 
                 <div className='d-flex justify-content-center'>
@@ -102,11 +109,11 @@ const SwipperTop = () => {
         <div className='slider-controler'>
           <div className='swiper-button-prev slider-arrow'>
             {/* <ion-icon name="arrow-back-outline"></ion-icon> */}
-            <i class="bi bi-chevron-left"></i>
+            <i className="bi bi-chevron-left"></i>
           </div>
           <div className='swiper-button-next slider-arrow'>
             {/* <ion-icon name="arrow-forward-outline"></ion-icon> */}
-            <i class="bi bi-chevron-right"></i>
+            <i className="bi bi-chevron-right"></i>
           </div>
           <div className='swiper-pagination'></div>
         </div>

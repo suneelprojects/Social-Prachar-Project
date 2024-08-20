@@ -16,8 +16,8 @@
     border: none!important;
 }
 .containerfluidForNav{
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 45px!important;
+    padding-right: 45px!important;
 }
 
 /* first nav css start */
@@ -25,7 +25,9 @@
     background-color: #553cdf;
     color: white;
 }
-
+.firstNav a i{
+    font-size: 14px!important;
+}
 /* first nav css ends */
 /* second nav css start */
 
@@ -57,9 +59,12 @@
     color: #553cdf;
     border: #553cdf solid 2px;
     border-radius: 5px;
-    /* width: 164px; */
     height: 39px;
     background-color: #fbfaff;
+}
+
+.category i{
+    font-size: 16px !important;
 }
 
 .login{
@@ -163,7 +168,7 @@
     background-color: #dedee3ea;
 
 }
-text{
+.categoryMenu text{
     color: black;
     font-weight: 500;
 }
@@ -228,3 +233,80 @@ text{
     }
 }
 
+
+@media (max-width:325px) {
+  
+    .navbarTogglerBar{
+        position: absolute;
+        right: 2px;
+    }
+    .containerfluidForNav{
+      padding-left: 10px!important;
+      padding-right: 5px!important;
+    }
+  } 
+  
+  @media(min-width:325px) and (max-width:464px){
+    .navbarTogglerBar{
+        position: absolute;
+        right: 10px;
+    }
+    .containerfluidForNav{
+      padding-left: 19px!important;
+      padding-right: 15px!important;
+
+    }
+    }
+  
+    @media(min-width:464px) and (max-width:768px){
+        .navbarTogglerBar{
+            position: absolute;
+            right: 10px;
+        }
+      .containerfluidForNav{
+        padding-left: 25px!important;
+        padding-right: 25px!important;
+      }
+      
+    }  
+
+    .open{
+        height: 350px!important;
+        width: 100%!important;
+        background-color: white!important;
+        position: absolute!important;
+        top: 0!important;
+    }
+    .open input{
+        margin-top: 210px;
+        width: 95%;
+        height: 60px;
+        border: none;
+        outline: none;
+        font-size: 36px;
+        margin-bottom: 15px;
+        margin-left: 2%;
+    }
+    .open svg{
+        margin-bottom: 15px;
+    }
+    .openBtn{
+        position: absolute;
+        right: 10px;
+        top: 50px;
+        border: none;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+        -webkit-appearance: none; /* Hide the clear (X) button in Chrome */
+        appearance: none; /* Hide the clear (X) button in other browsers */
+      }
+      input[type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none; /* Remove the decoration (magnifying glass icon) */
+        appearance: none;
+      }
+      
+      input[type="search"]::-ms-clear {
+        display: none; /* Hide the clear (X) button in Internet Explorer and Edge */
+        width: 0; 
+        height: 0;
+      }

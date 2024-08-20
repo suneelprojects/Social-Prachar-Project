@@ -46,9 +46,9 @@ ParallaxEffect.propTypes = {
     })
   ).isRequired,
 };
-ParallaxEffect.defaultProps = {
-  images: [],
-};
+// ParallaxEffect.defaultProps = {
+//   images: [],
+// };
 
 
 export default ParallaxEffect;
