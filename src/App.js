@@ -27,6 +27,7 @@ import GetTickets from './components/getTickets/getTickets';
 import MenuBar from './Dashboard/SideNavComponent/MenuBar.js';
 import NavCourses from './components/navBarComponent/navCourses.js';
 import ScrollToTop from './components/extraComponents/ScrollToTop.js';
+import DetailsPage from './components/courseDetailsPage/DetailsPage.js'
 
 const App = () => {
   const [user,setUser]=useState();
@@ -45,6 +46,7 @@ const App = () => {
       <NavBar/>
       <Routes>
       <Route path='/courses' element={ <Course/>}/>
+      <Route path="/details/:cardId" element={<DetailsPage />} />
         <Route path="/" element={<AllHomeComp/>}/>
       <Route path="/getTickets/:id" element={<GetTickets/>}/>
       <Route path='/categoryCourses' element={<NavCourses/>}/>
