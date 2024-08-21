@@ -1,0 +1,56 @@
+.taskgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* adjust the number of columns as needed */
+    grid-gap: 20px;
+  }
+.tasklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .taskitem {
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cardbody {
+    padding: 20px;
+  }
+  
+  .cardtitle {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .cardtext {
+    margin-bottom: 20px;
+  }
+  
+  .cardtext a {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  .cardtext a:hover {
+    color: #23527c;
+  }
+  
+  .btndanger {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btndanger:hover {
+    background-color: #c9302c;
+  }

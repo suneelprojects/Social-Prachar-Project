@@ -25,7 +25,9 @@ const SignUp = () => {
     twitter:'',
     linkedin:'',
     website:'',
-    github:''
+    github:'',
+    fileName:'',
+    file:'',
   });
   const navigate=useNavigate();
 
@@ -60,7 +62,8 @@ const SignUp = () => {
         twitter:input.twitter,
         linkedin:input.linkedin,
         website:input.website,
-        github:input.github
+        github:input.github,
+        fileName:input.fileName,
       };
       await setDoc(doc(db, "Users", user.uid), userData);
     
@@ -130,6 +133,10 @@ const SignUp = () => {
           <input className='form-control' type='hidden' name='linkedin'></input>
 
           <input className='form-control' type='hidden' name='github'></input>
+
+          <input className='form-control' type='hidden' name='fileName'></input>
+
+
          <div className='text-center'>
         <button className='mb-2 px-5 btn' type='submit' style={{backgroundColor:'#6031f6',color:'white'}}>Register</button>
         </div>

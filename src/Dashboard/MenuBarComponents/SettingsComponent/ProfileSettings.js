@@ -95,14 +95,6 @@ fetchUserData();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // let newProfileImageUrl = input.profileImg
-    //   ? await handleImageUpload(input.profileImg, 'profile-images')
-    //   :userDetails.profileImageUrl;
-
-    // let newCoverImageUrl = input.coverImg
-    //   ? await handleImageUpload(input.coverImg, 'cover-images')
-    //   : userDetails.coverImageUrl;
-
     try {
       const userRef = doc(db, 'Users', user.uid);
       const bioRawContentState = convertToRaw(editorState.getCurrentContent());
