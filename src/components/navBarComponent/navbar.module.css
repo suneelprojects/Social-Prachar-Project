@@ -6,6 +6,9 @@
     font-size: 16px;
     line-height: 26px;
     z-index: 999;
+    font-family: "Hind", sans-serif;
+    /* font-weight: 400; */
+    font-style: normal;
 }
 .navbarTogglerBar {
     border: none!important;
@@ -24,6 +27,7 @@
 .firstNav{
     background-color: #553cdf;
     color: white;
+    font-weight: 400;
 }
 .firstNav a i{
     font-size: 14px!important;
@@ -51,11 +55,16 @@
 }
 .secondNav{
     background-color: white;
+    font-weight: 600;
 }
-
+.spLogo{
+    height: auto;
+    width: 154px;
+}
 
 .category{
     font-size: 17px;
+    font-weight: 300;
     color: #553cdf;
     border: #553cdf solid 2px;
     border-radius: 5px;
@@ -66,6 +75,7 @@
 .category i{
     font-size: 16px !important;
 }
+
 
 .login{
     color: #553cdf;
@@ -146,41 +156,50 @@
 
 
 .categorySection .categoryMenu ul{
-    padding: 20px;
+    padding:  20px 20px 0px 20px;
 }
 
-.categorySection .categoryMenu li a{
+.categorySection .categoryMenu li button{
     text-decoration: none;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     line-height: 17.6px;
     width: 167px;
     height: 72px;
+    border: none;
     border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.categorySection .categoryMenu li a div{
+.categorySection .categoryMenu li button div{
     width: 90px!important;
+    text-align: left;
 }
-.categorySection .categoryMenu li a:hover{
-    
+.categorySection .categoryMenu li button:hover{
     background-color: #dedee3ea;
-
 }
-.categoryMenu text{
-    color: black;
+.categoryMenu p{
+    display: inline;
+    color: #1f1f25;
     font-weight: 500;
 }
 .textTwo{
-    color: #1f1f25;
-    font-weight: 400;
-    line-height: 14.4px;
+    color: #1f1f25!important;
+    font-weight: 400!important;
+    line-height: 14.4px!important;
 }
 .categorySection .categoryMenu img{
-    width: 50px;
-    height: 54px;
+    width: 45px;
+    height: 48px;
     border-radius: 5px;
+}
+.selectDropDown{
+    border-radius: 5px;
+    border: #553cdf 1px solid;
+    color: #553cdf;
+    max-width: 90px;
+    outline: none;
+    
 }
 
 /* categoryMenu code ends */
@@ -224,6 +243,16 @@
 
 @media (max-width:1024px) {
     .hiddenMobilemd{
+        display: none;
+    }
+}
+@media (min-width:450px) {
+    .selectDropDown{
+        margin-left:40px;
+    }
+}
+@media (min-width:767px) {
+    .selectDropDown{
         display: none;
     }
 }
