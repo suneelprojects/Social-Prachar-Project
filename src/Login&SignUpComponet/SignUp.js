@@ -26,8 +26,6 @@ const SignUp = () => {
     linkedin:'',
     website:'',
     github:'',
-    fileName:'',
-    file:'',
   });
   const navigate=useNavigate();
 
@@ -63,7 +61,6 @@ const SignUp = () => {
         linkedin:input.linkedin,
         website:input.website,
         github:input.github,
-        fileName:input.fileName,
       };
       await setDoc(doc(db, "Users", user.uid), userData);
     
@@ -133,8 +130,6 @@ const SignUp = () => {
           <input className='form-control' type='hidden' name='linkedin'></input>
 
           <input className='form-control' type='hidden' name='github'></input>
-
-          <input className='form-control' type='hidden' name='fileName'></input>
 
 
          <div className='text-center'>
