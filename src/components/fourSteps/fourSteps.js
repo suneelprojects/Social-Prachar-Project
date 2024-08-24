@@ -11,23 +11,23 @@ const FourSteps = () => {
   const fourStepsArray = [
     {
       fourImg: fourImageOne,
-      fourFirstText: 65972,
-      fourSecondText: 'Completed Course'
+      fourFirstText: 155000,
+      fourSecondText: `Hours Classes Delivered`
     },
     {
       fourImg: fourImageOne,
-      fourFirstText: 53710,
-      fourSecondText: 'Completed Course'
+      fourFirstText: 530,
+      fourSecondText: 'Batches Completed'
     },
     {
       fourImg: fourImageOne,
-      fourFirstText: 48982,
-      fourSecondText: 'Completed Course'
+      fourFirstText: 16000,
+      fourSecondText: 'Students Trained'
     },
     {
       fourImg: fourImageOne,
-      fourFirstText: 500,
-      fourSecondText: 'Completed Course'
+      fourFirstText: 9,
+      fourSecondText: `Prestigious EdTech \n Award Received`
     }
   ];
 
@@ -53,7 +53,7 @@ const FourSteps = () => {
           }
           return newNumbers;
         });
-      }, 10); 
+      }, 1); 
     });
 
     return () => intervals.forEach(interval => clearInterval(interval));
@@ -68,8 +68,8 @@ const FourSteps = () => {
             <div className={`col py-3 ${fourStepsStyle.fourStep}`} key={i}>
               <div>
                 <img src={fourStepEle.fourImg} alt='Step' />
-                <p className={`${fourStepsStyle.fourStepTextOne}`}>{currentNumbers[i]}</p>
-                <p>{fourStepEle.fourSecondText}</p>
+                <p className={`${fourStepsStyle.fourStepTextOne}`}>{currentNumbers[i]}<span style={{fontSize:'30px'}}>+</span></p>
+                <p style={{ whiteSpace: 'pre-wrap' }}>{fourStepEle.fourSecondText}</p>
               </div>
             </div>
           ))}

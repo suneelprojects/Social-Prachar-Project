@@ -2,6 +2,8 @@
 .containerFluidForPadding{
   padding-left: 55px;
   padding-right: 55px;
+  font-family: "Hind", sans-serif;
+  font-style: normal;
 }
 ul li{
   list-style: none;
@@ -12,11 +14,13 @@ ul li{
 /* the below is also applied applied for home.js code STARTS  */
 
 .bulbSpan img{
-  width: 25px;
+  width: 22px;
   margin-right: 10px;
 }
 .blueText{
   color: #553cdf;
+  font-weight: 500;
+  line-height: 26px;
 }
 .gateWaytitle{
   font-size: 40px!important;
@@ -26,6 +30,7 @@ ul li{
 
 .greyText{
   color: gray;
+  font-weight: 500;
   font-size: 16px;
 }
 /* the above is also applied applied for home.js code ends  */

@@ -55,7 +55,7 @@ const NavBar = () => {
 
   ]
 
-  const dropDownValues=['Development','Business','Design & Art','Marketing','Accounting']
+  const dropDownValues=['Full Stack','Data Science','Generative AI','AWS DevOps','Digital Marketing ','HR Specialisation']
 
 const Navigate = useNavigate()
 
@@ -187,7 +187,7 @@ useEffect(()=>{
       </select>
 
             <div className={`${navBarStyle.hiddenMobileSm} ms-4 ${navBarStyle.categorySection} `} >
-              <button className={`${navBarStyle.category}`}><i className="bi bi-grid-3x3-gap-fill"></i>Category
+              <button className={`${navBarStyle.category}`}><i className="bi bi-grid-3x3-gap-fill"></i>Courses
                 <i className="bi bi-chevron-compact-down"></i>
               </button>
               
@@ -208,9 +208,6 @@ useEffect(()=>{
                      </button>
                     </li>))
                 }
-                 
-
-                
 
                 </ul>
 

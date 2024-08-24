@@ -1,4 +1,8 @@
-
+.gateWayContainer p{
+  font-family: "Hind", sans-serif!important;
+  font-style: normal!important;
+  display: inline;
+}
 .leftSideOfVideoGif{
     display: grid;
     grid-template-columns: auto auto;
@@ -43,13 +47,13 @@
     border-radius: 5px;
   }
   
-  .rightSideOfVideoGif #imgIcons img{
+  /* .rightSideOfVideoGif #imgIcons img{
     padding: 3px;
     background-color: white;
     border-radius: 50%;
     border: #221859 1px solid;
   }
-  
+   */
 
   
 .rightSideOfVideoGif .gateWayRowDiv{
@@ -57,11 +61,13 @@
     justify-content: space-around;
   }
   .rightSideOfVideoGif .gateWayRowDivTextOne{
+    font-weight: 600;
     font-size: 20px;
     line-height: 34px;
     color: #221859;
   }
   .rightSideOfVideoGif .gateWayRowDivTextTwo{
+    font-weight: 500;
     font-size: 15px;
     color: gray;
   }

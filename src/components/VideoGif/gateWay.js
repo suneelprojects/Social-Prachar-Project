@@ -18,9 +18,9 @@ const GateWay = () => {
           <div className={`${videoGifStyle.leftSideOfVideoGif}`}>
             <div className={`${videoGifStyle.reviewBtn}`}>
               <div>
-                <text className={`${videoGifStyle.gateWayBigText}`}>4.5K</text>
+                <p className={`${videoGifStyle.gateWayBigText}`}>4.8K</p>
                 <br />
-                <text className={`${videoGifStyle.gateWaySmallText}`}>Positive Reviews</text>
+                <p className={`${videoGifStyle.gateWaySmallText}`}>Positive Reviews</p>
               </div>
 
               <img src={flowtingBtn} />
@@ -37,23 +37,22 @@ const GateWay = () => {
         {/* left side box code end */}
         {/* right side box code start */}
 
-        <div className={`mt-5 col-12 col-sm-12 col-md-12  col-lg-12 col-xl-6 ${videoGifStyle.rightSideOfVideoGif}`}>
+        <div className={`mt-5  col-12 col-sm-12 col-md-12  col-lg-12 col-xl-6 ${videoGifStyle.rightSideOfVideoGif}`}>
           
           <BulbText BulbText='Gateway to Lifelong Learning'
-          bulbTitle='Know Studyhub Empowering Learners Worldwide'
-          GreyText='We are passionate about education and dedicated to providing high-
-            quality learning resources for learners of all backgrounds.' />
+          bulbTitle='Know Social Prachar Empowering Learners Worldwide'
+          GreyText={`We are passionate about education and dedicated to providing \n high-quality learning resources for learners of all backgrounds.`} />
 
-          <div className="row py-4">
-            <div className={`${videoGifStyle.gateWayRowDiv} col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6`}>
+          <div className="row py-5 ">
+            <div className={`${videoGifStyle.gateWayRowDiv} col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 `}>
             
                 <img src={flowtingBtn} />
                 <div>
-                <text className={`${videoGifStyle.gateWayRowDivTextOne}`}>Learn With Expert</text>
+                <p className={`${videoGifStyle.gateWayRowDivTextOne}`}>Learn With Expert</p>
                 <br />
-                <text className={`${videoGifStyle.gateWayRowDivTextTwo}`} >
+                <p className={`${videoGifStyle.gateWayRowDivTextTwo}`} >
                   We are passionate education
-                </text>
+                </p>
                 </div>
               
             </div>
@@ -62,18 +61,18 @@ const GateWay = () => {
              
                 <img src={flowtingBtn} />
                 <div>
-                <text className={`${videoGifStyle.gateWayRowDivTextOne}`} >Expert Instructors</text>
+                <p className={`${videoGifStyle.gateWayRowDivTextOne}`} >Expert Instructors</p>
                 <br />
-                <text className={`${videoGifStyle.gateWayRowDivTextTwo}`} >
+                <p className={`${videoGifStyle.gateWayRowDivTextTwo}`} >
                   We are passionate education
-                </text>
+                </p>
                 </div>
                 
              
             </div>
           </div>
 
-          <hr />
+          {/* <hr />
 
           <div className="row py-4">
             <div className={`${videoGifStyle.gateWayRowDiv } col-9 col-sm-9 col-md-9 col-lg-9 col-xl-6`} id={`${videoGifStyle.imgIcons}`}>
@@ -91,7 +90,7 @@ const GateWay = () => {
             <div className="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-6">
               <button className="btn">About Us</button>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* right side box code end */}
     </div>

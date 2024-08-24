@@ -1,5 +1,4 @@
 import React from "react";
-import upcommingImg from "../../assets/upcomming.jpg";
 
 import upCommingStyle from '../upComming/upComming.module.css'
 import ArrowButton from "../extraComponents/arrowButton";
@@ -7,16 +6,15 @@ import BulbText from "../extraComponents/bulbText";
 
 import upcommingEventsArray from '../extraComponents/upcommingEventsArray'
 
-import { Link, useNavigate } from "react-router-dom";
 
 const UpComming = () => {
 
-  const Navigate=useNavigate();
 
-  const handleClick=(i)=>{
-    Navigate(`/getTickets/${i}`)
+  const handleClick=(ZoomLink)=>{
+    window.location.href =ZoomLink
   }
 
+  const Courses=['Full Stack','Data Science','AWS DevOps']
   return (
     <>
       <div className="containerFluidForPadding py-5">
@@ -24,8 +22,8 @@ const UpComming = () => {
           <div className={`${upCommingStyle.upCommingCenterText}`} >
 
           <BulbText
-          BulbText="Our Event"
-          bulbTitle="Upcoming Events"
+          BulbText="Our Webinars"
+          bulbTitle="Upcoming Free Webinars"
           GreyText="You ll find something to spark your curiosity and enhance"
         />
           </div>
@@ -44,14 +42,12 @@ const UpComming = () => {
 
                 <div>
                 <div className={`${upCommingStyle.upcommingCardFirstText}`}>
-                  <p>
-                  <i className="bi bi-calendar2-date"></i>
-                  {upCommingEvent.smallTextOne}</p>
+                  
                   <p><i className="bi bi-stopwatch"></i>
-                  {upCommingEvent.smallTextTwo}</p>
+                  90 Minutes</p>
                   <p>
-                  <i className="bi bi-geo-alt-fill"></i>
-                  {upCommingEvent.smallTextThree}</p>
+                  <i class="bi bi-camera-video"></i>
+                  Zoom Webinar</p>
                 </div>
                 <div className={`${upCommingStyle.upcommingCardSecondText}`} >
                   <p>
@@ -63,7 +59,7 @@ const UpComming = () => {
 
                 <div className="col-lg-3 col-md-4 ArrowBtn">
               
-              <ArrowButton ArrowText='Get Ticket' handleClick={(e)=>{handleClick(i)}}/>
+              <ArrowButton ArrowText='Get Ticket' handleClick={()=>{handleClick(upCommingEvent.ZoomLink)}}/>
                     
                 </div>
               </div>

@@ -10,6 +10,7 @@ import TopCatogery from './topCatogery/topCatogery';
 import FooterBtn from './footerButton/footerBtn';
 import Footer from './footer/footer';
 import CircleAnimation from './circleAmination/circleAnimation';
+import Partner from './clients/partners';
 import NewsFullStory from './newComponent/NewsFullStory';
 import Home from './home/home';
 
@@ -25,28 +26,18 @@ const AllHomeComp = () => {
   return (
     <div>
       <Home/>
+      <FourSteps/>
       <TrustedBy/>
       <GateWay/>
       <TopCatogery/>
-      {/* <Cards
-                        filters={{
-                          checkedCategories: checked,
-                          checkedTags,
-                          checkedLevel,
-                          checkedPrice
-                        }} /> */}
-
-      {/* <HomeCards/> */}
-      {/* <HomeCourse/>   */}
+      
       <HomeCourse/>
       <CircleAnimation/>
-      {/* <Course/> */}
-      {/* <SearchBar/> */}
       <UpComming/>
-      <FourSteps/>
-      <Teacher/>
-      <CarouselDot/>
-      <NewsFullStory/>
+      <Partner/>
+      {/* <Teacher/> */}
+      {/* <CarouselDot/> */}
+      {/* <NewsFullStory/> */}
       <FooterBtn/>
       <Footer/>
     </div>

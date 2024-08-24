@@ -33,7 +33,7 @@ const TopCatogery = () => {
 
           <BulbText
           BulbText="Top Category"
-          bulbTitle="Explore 2000+ Free Online Courses"
+          bulbTitle="Explore 20+ Job Ready Courses"
           GreyText="You'll find something to spark your curiosity and enhance"
         />
           </div>

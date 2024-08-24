@@ -4,18 +4,17 @@ import bulb from '../../assets/bulb.png'
 
 const BulbText = (props) => {
   return (
-    <div>
+    <div style={{whiteSpace:'pre-wrap'}} >
       
        <span className="bulbSpan">
             <img src={bulb} />
           </span>
-          <text className="blueText ">{props.BulbText}</text>
+          <p className="blueText d-inline">{props.BulbText}</p>
           <br />
-          <text className="gateWaytitle">{props.bulbTitle}
-          </text>
-          <br />
-          <text className="greyText">{props.GreyText}
-          </text>
+          <p className="gateWaytitle">{props.bulbTitle}
+          </p>
+          <p className="greyText d-block my-3" >{props.GreyText}
+          </p>
     </div>
   )
 }

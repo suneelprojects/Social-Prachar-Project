@@ -11,35 +11,29 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { Pagination, Navigation  } from 'swiper/modules';
-import { useNavigate } from 'react-router-dom';
 import sliderImg from '../../assets/svg01.png';
 import sliderImg1 from '../../assets/svg01.png';
 import sliderImg2 from '../../assets/svg01.png';
 import sliderImg3 from '../../assets/svg01.png';
 
-const images = [
-  { img: sliderImg, category: 'Development', courses: '03 Courses' },
-  { img: sliderImg1, category: 'Marketing', courses: '01 Courses' },
-  { img: sliderImg2, category: 'Accounting', courses: '02 Courses' },
-  { img: sliderImg3, category: 'Business', courses: '02 Courses' }
+const repeatedImages = [
+  { img: sliderImg, category: 'Full Stack', courses: '03 Courses' },
+  { img: sliderImg1, category: 'Data Science', courses: '01 Courses' },
+  { img: sliderImg2, category: 'Generative AI', courses: '02 Courses' },
+  { img: sliderImg3, category: 'AWS DevOps', courses: '02 Courses' },
+  { img: sliderImg2, category: 'Digital Marketing', courses: '02 Courses' },
+  { img: sliderImg3, category: 'HR Specialisation', courses: '02 Courses' }
 ];
 
-const repeatedImages = [...images, ...images];
 
 const SwipperTop = () => {
 
-  const Navigate = useNavigate()
-
-const handleCategoryClick = (category) => {
-  // Navigate to the detail page and pass the category as state
-  Navigate('/categoryCourses', { state: { category } });
-};
   return (
     <div className='swipperContainer'>
       <Swiper
         effect={'slide'}
         grabCursor={true}
-        loop={true} 
+        loop={false} 
         slidesPerView={6} 
         spaceBetween={60}
         breakpoints={{
@@ -74,7 +68,7 @@ const handleCategoryClick = (category) => {
           clickable: true,
 
           renderBullet: (index, className) => {
-            if (index<4) {
+            if (index<6) {
               return `<span class="${className}"></span>`;
             }
             return '';
@@ -90,7 +84,7 @@ const handleCategoryClick = (category) => {
       >
         {repeatedImages.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className={`${topCatogeryStyle.topCategoryBox}`}  onClick={() => handleCategoryClick(item.category)}>
+            <div className={`${topCatogeryStyle.topCategoryBox}`}  >
               <div>
 
                 <div className='d-flex justify-content-center'>

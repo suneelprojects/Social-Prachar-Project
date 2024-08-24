@@ -3,7 +3,6 @@ import flowtingBtn from "../../assets/flowtingBtn.png";
 import leftImg from "../../assets/circleimgleft.jpg";
 import rightImg from "../../assets/circleimgRight.png";
 import ArrowButton from "../extraComponents/arrowButton";
-import Circle from "./circle";
 import BulbText from "../extraComponents/bulbText";
 
 import circleAnimationStyle from '../circleAmination/circleAnimation.module.css'
@@ -32,10 +31,10 @@ const CircleAnimation = () => {
 
   return (
     <>
-    <div className={`${circleAnimationStyle.circleAnimationContainer } container-fluid`} id="circleAnimationHover">
+    <div className={`${circleAnimationStyle.circleAnimationContainer } container-fluid `} id="circleAnimationHover">
     <ParallaxEffect images={images} />
 
-      <div className="row   containerFluidForPadding ">
+      <div className="row    containerFluidForPadding ">
         {/* left side box code start */}
         <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <div className={`${circleAnimationStyle.leftSideOfCircleAni}`} >
@@ -44,9 +43,7 @@ const CircleAnimation = () => {
             <div className={`${circleAnimationStyle.leftImg}`} >
               <img src={leftImg} />
             </div>
-            <div className={`${circleAnimationStyle.circleImg}`} >
-            <Circle text="Custom text for the circle" />
-            </div>
+            
             <div className={`${circleAnimationStyle.rightImg}`} >
               <img src={rightImg} />
             </div>
@@ -58,12 +55,10 @@ const CircleAnimation = () => {
         <div className={`col-12 col-sm-12 col-md-12  col-lg-6 col-xl-6  mt-5 ${circleAnimationStyle.rightSideOfCircleAni} `} >
           
           <BulbText BulbText='Why Choose Us'
-          bulbTitle='Studyhub Your Path to
-          Excellence & Success'
-          GreyText='We are passionate about education and dedicated to 
-            providing high-quality learning resources for learners of all backgrounds.'/>
+          bulbTitle={`Social Prachar Your Path to\nExcellence & Success`}
+          GreyText={`We are passionate about education and dedicated to \n providing high-quality learning resources for learners of all backgrounds.`}/>
 
-          <div className="row row-cols-auto py-4 row-gap-4 column-gap-5 ">
+          <div className={`row row-cols-2 row-col-sm-2 row-cols-lg-4 row-cols-xl-3 py-4 row-gap-4 ${circleAnimationStyle.circleAnimationRowDiv}`}>
             
             {
               circleAnimationArray.map((circleAnimationDivItem,i)=>(
