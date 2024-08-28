@@ -29,6 +29,7 @@ import NavCourses from './components/navBarComponent/navCourses.js';
 import ScrollToTop from './components/extraComponents/ScrollToTop.js';
 import DetailsPage from './components/courseDetailsPage/DetailsPage.js'
 import MyWork from './Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js';
+import {data} from './components/Cards/CardData.js'
 
 const App = () => {
   const [user,setUser]=useState();
@@ -46,9 +47,16 @@ const App = () => {
         <ScrollToTop/>
       <NavBar/>
       <Routes>
+      <Route path="/" element={<AllHomeComp/>}/>
       <Route path='/courses' element={ <Course/>}/>
-      <Route path="/details/:cardId" element={<DetailsPage />} />
-        <Route path="/" element={<AllHomeComp/>}/>
+      {/* <Route path="/details/:cardId" element={<DetailsPage data={data}/>} /> */}
+      {data.map((card) => (
+                    <Route
+                        key={card.id}
+                        path={`/details/${card.id}`}
+                        element={<DetailsPage card={card} />}
+                    />
+                ))}
       <Route path="/getTickets/:id" element={<GetTickets/>}/>
       <Route path='/categoryCourses' element={<NavCourses/>}/>
         <Route path='/user' 

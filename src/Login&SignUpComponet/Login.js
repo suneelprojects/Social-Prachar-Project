@@ -40,7 +40,7 @@ const Login = () => {
     };
     return (
         <div className={style.loginContainer}>
-            <form className={`${style.loginForm} p-5`} onSubmit={handleSubmit}>
+            <form className={`${style.loginForm} p-5 mt-5`} onSubmit={handleSubmit}>
                 <h2>Hi, Welcome back</h2>
                 <input
                     className='form-control p-2 mb-2'

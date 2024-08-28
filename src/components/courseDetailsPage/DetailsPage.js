@@ -151,4 +151,4 @@ const DetailsPage = () => {
     );
 };
 
-export default DetailsPage;
+export default DetailsPage;

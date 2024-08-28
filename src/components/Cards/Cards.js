@@ -9,8 +9,9 @@ import { faChevronDown, faList, faStar } from '@fortawesome/free-solid-svg-icons
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import SignInForm from '../SignInForm/SignInform';
+import { useNavigate } from 'react-router-dom';
 
-const Cards = ({ filters }) => {
+const Cards = ({ filters}) => {
 
     const { checkedCategories, checkedTags, checkedLevel, checkedPrice } = filters;
     // Replace this with your actual filtering logic
@@ -89,8 +90,13 @@ const Cards = ({ filters }) => {
     const handleCloseForm = () => {
         setShowSignInForm(false);
     };
+    const Navigate = useNavigate();
 
-
+    const handleNavigation = (e,cardId) => {
+        e.preventDefault();
+        console.log(e.target.textContent); 
+        Navigate(`/details/${cardId}`);
+    };
     return (
         <div className={cardsCSS.cardsSection}>
             
@@ -173,8 +179,9 @@ const Cards = ({ filters }) => {
                                             <p className={cardsCSS.students}>{card.students}</p>
                                         </div>
                                     </div>
-                                    <h5 className={cardsCSS.course_title}>{card.text}</h5>
-                                    <p className={cardsCSS.faculty_name}>{card.name}</p>
+                                    <h5 className={cardsCSS.course_title} onClick={(e) => handleNavigation(e,card.id)}>{card.text}</h5>
+                            <p className={cardsCSS.faculty_name}>{card.name}</p>
+
                                     <div className={cardsCSS.starPrice}>
                                         <div className={cardsCSS.rating}>
                                             {Array.from({ length: 5 }, (_, starIndex) => (
