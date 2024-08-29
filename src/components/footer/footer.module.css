@@ -3,17 +3,37 @@
     border-radius: 8px;
     align-items: center;
 }
-
+.certificateText{
+    display: flex;
+    justify-content: center;
+}
+.certificateText h4{
+    color: white;
+    display: flex;
+    align-items: end;
+}
 .footerCertificate div p{
-    font-size: 48px;
+    font-size: 40px;
     line-height: 58px;
     color: white;
     font-family: sans-serif;
-    font-weight: 530;
-
-
+    font-weight: 600;
 }
-.footerCertificate div button{
+.StoreBtns {
+    display: flex;
+    justify-content: start!important;
+}
+
+.StoreBtns img{
+    width: 135px;
+    height: 40px;
+    border-radius: 5px;
+}
+.spLogo img{
+    height: auto;
+    width: 250px;
+}
+/* .footerCertificate div button{
     width: 226px;
     height: 55px;
     color: #553cdf;
@@ -22,7 +42,7 @@
     background-color: #553cdf;
     color: white;
     border: solid 2px white;
-}
+} */
 
 
 /* fotterList code starts */
@@ -46,26 +66,10 @@
     font-weight: 500;
     color: gray;
 }
-.fotterList .subscribe{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 54px;
-    border-radius: 5px;
-    border: 2px solid #221859;
-    margin-bottom: 10px;
+.certificateImg img{
+   max-width: 280px;
 }
-.fotterList .subscribe input{
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    height: 100%;
-    border: none;
-    width: 100%;
-    padding-left: 15px;
-    white-space: nowrap;
-    outline: none;
-    color: gray;
-}
+
 
 .mediaIcon i{
     color: #221859;
@@ -74,22 +78,6 @@
 .fotterList .useFullLink:hover ,.fotterList .Explore:hover ,.mediaIcon i:hover{
     color: #553cdf;
 }
-
-.fotterList .subscribe button{
-    color: white;
-    background-color: #553cdf;
-}
-.fotterList input[type=checkbox]{
-    border-color: #553cdf;
-    margin-right: 10px;
-}
-.fotterList input[type=checkbox] ~p{
-    font-size: 14px;
-    color: gray;
-    display: inline;
-    font-weight: 600;
-}
-/* fotterList code ends */
 
 
 /* copyRight code starts */
@@ -104,7 +92,7 @@
 
 /* copyRight code ends */
 
-@media (max-width:575.5px){
+/* @media (max-width:575.5px){
     
     .footerCertificate div{
         display: flex!important;
@@ -138,7 +126,7 @@
     }
     
 
-}
+} */
 @media (min-width:1200px){
     .footerCertificate div{
         display: flex;
@@ -154,25 +142,19 @@
     }
 }
 
-
-@media(max-width:464px){
- 
-    .copyRight{
-      margin: 16px -15px 0px -15px!important;
-    }
-}
-  
-    @media (max-width:768px){
-     
-      .copyRight{
-        margin: 16px -25px 0px -25px!important;
+    
+    @media (min-width:1300px) {
+        .containerXl{
+          max-width: 1200px;
+        }
       }
-  
-      
-    }
-    @media (min-width:769px){
-      
-      .copyRight{
-        margin: 16px -55px 0px -55px!important;
+      @media (min-width:1400px) {
+        .containerXl{
+          max-width: 1300px;
+        }
       }
-    }
+      @media (min-width:1500px) {
+        .containerXl{
+          max-width: 1420px;
+        }
+      }

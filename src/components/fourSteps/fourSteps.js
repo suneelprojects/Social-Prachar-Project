@@ -63,9 +63,9 @@ const FourSteps = () => {
     <>
       <div className='fourStepsHover container-fluid' id=''>
         <ParallaxEffect images={images} />
-        <div className={` row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 ${fourStepsStyle.fourStepContainer} py-5 `}>
+        <div className={` row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 ${fourStepsStyle.fourStepContainer} py-4 `}>
           {fourStepsArray.map((fourStepEle, i) => (
-            <div className={`col py-3 ${fourStepsStyle.fourStep}`} key={i}>
+            <div className={`col  ${fourStepsStyle.fourStep}`} key={i}>
               <div>
                 <img src={fourStepEle.fourImg} alt='Step' />
                 <p className={`${fourStepsStyle.fourStepTextOne}`}>{currentNumbers[i]}<span style={{fontSize:'30px'}}>+</span></p>

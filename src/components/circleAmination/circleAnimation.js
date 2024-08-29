@@ -4,13 +4,13 @@ import leftImg from "../../assets/circleimgleft.jpg";
 import rightImg from "../../assets/circleimgRight.png";
 import ArrowButton from "../extraComponents/arrowButton";
 import BulbText from "../extraComponents/bulbText";
-
+import whiteBulb from '../../assets/whiteBulb.png'
 import circleAnimationStyle from '../circleAmination/circleAnimation.module.css'
 
 import wavesPic from '../../assets/waves.png'
 import BookSvg from '../../assets/book.png'
 import ParallaxEffect from "../extraComponents/ParallaxEffect";
-
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -28,6 +28,12 @@ const CircleAnimation = () => {
     var circleAnimationArray=['Expert Instructors','Interactive Learning'
       ,'Affordable Learning','Career Advance' ,'Course Selection','Support Community'
     ];
+
+    const Navigate =useNavigate();
+
+    const handleClick= ()=>{
+      Navigate('/courses');
+    }
 
   return (
     <>
@@ -54,8 +60,9 @@ const CircleAnimation = () => {
 
         <div className={`col-12 col-sm-12 col-md-12  col-lg-6 col-xl-6  mt-5 ${circleAnimationStyle.rightSideOfCircleAni} `} >
           
-          <BulbText BulbText='Why Choose Us'
-          bulbTitle={`Social Prachar Your Path to\nExcellence & Success`}
+          <BulbText whiteBulb={whiteBulb}
+          BulbText='Why Choose Us'
+          bulbTitle={`SocialPrachar Your Path to\nExcellence & Success`}
           GreyText={`We are passionate about education and dedicated to \n providing high-quality learning resources for learners of all backgrounds.`}/>
 
           <div className={`row row-cols-2 row-col-sm-2 row-cols-lg-4 row-cols-xl-3 py-4 row-gap-4 ${circleAnimationStyle.circleAnimationRowDiv}`}>
@@ -81,7 +88,7 @@ const CircleAnimation = () => {
 
           <div className={`${circleAnimationStyle.whiteBtn}`} >
           
-          <ArrowButton ArrowText='View All Button'/>
+          <ArrowButton ArrowText='View All Courses' handleClick={handleClick} />
 
           </div>
         </div>

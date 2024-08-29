@@ -48,7 +48,7 @@ const Home = () => {
             <p className="blueText">Gateway to Lifelong Learning</p>
             </div>
             <p className={`${homeStyle.title}`}>
-              Unlock Your Potential with Social Prachar
+              Unlock Your Potential with SocialPrachar
 
             </p>
     <img src={yellowLine} alt="yellowLine" className={`${homeStyle.yellowLine} `}/>

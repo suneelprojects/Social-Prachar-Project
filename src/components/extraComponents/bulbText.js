@@ -7,7 +7,7 @@ const BulbText = (props) => {
     <div style={{whiteSpace:'pre-wrap'}} >
       
        <span className="bulbSpan">
-            <img src={bulb} />
+            <img src={props.whiteBulb?props.whiteBulb:bulb} />
           </span>
           <p className="blueText d-inline">{props.BulbText}</p>
           <br />

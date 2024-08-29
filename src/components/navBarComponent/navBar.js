@@ -60,7 +60,6 @@ const NavBar = () => {
 const Navigate = useNavigate()
 
 const handleCategoryClick = (category) => {
-  // Navigate to the detail page and pass the category as state
   Navigate('/categoryCourses', { state: { category } });
 };
 
@@ -77,10 +76,6 @@ const Showtoggle=()=>{
   setExpand(!expanded)
 }
 
-const [open,setOpen]=useState(false);
-const openToggle=()=>{
-  setOpen(!open)
-}
 const handleLogin = () => {
 Navigate('/login')
 }
@@ -90,6 +85,10 @@ Navigate("/user")
 const handleRegister=()=>{
   Navigate('/signup')
   }
+
+ const handleClickOnIcon=()=>{
+  Navigate('/user')
+ } 
 const [user, setUser] = useState(null);
  
 
@@ -117,52 +116,12 @@ useEffect(()=>{
 },[handleCategoryClick])
 
 
-  const [searchTerm, setSearchTerm] = useState('');
 
-  // Handle input change
-  const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
 
-  // Handle search button click
-  const handleSearchClick = () => {
-    console.log('Search term:', searchTerm);
-    openToggle();    
-    setSearchTerm("");
-  };
-
-  const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
-      handleSearchClick();  
-      openToggle();    
-      setSearchTerm("");
-    }
-  };
 
   return (
     <div className={`${navBarStyle.navBarSticky}`} >
-      {/* first nav bar starts */}
-      <nav className={`${navBarStyle.hiddenMobileSm} ${navBarStyle.firstNav}`} >
-        <div className={`${navBarStyle.containerfluidForNav } container-fluid d-flex justify-content-between  py-2`}>
-          <div className="d-flex">
-            <a href="" className="nav-link me-4 ">
-              <i className="bi bi-envelope-fill"></i> info@studyhub.com
-            </a>
-            <a href="" className="nav-link">
-              <i className="bi bi-telephone"></i> +61 012 012 445
-            </a>
-          </div>
-
-          <div>
-            <a href="" className={`${navBarStyle.hiddenMobilemd} nav-link `} >
-              <i className="bi bi-geo-alt-fill"></i> 684 West College St. Sun City,
-              USA
-            </a>
-          </div>
-        </div>
-      </nav>
-      {/* first nav bar ends */}
-
+      
       {/* second nav bar starts */}
 
 
@@ -178,7 +137,7 @@ useEffect(()=>{
             </a>
 
             <select className={`${navBarStyle.selectDropDown}`} value={selectedValue} onChange={handleCategoryDropDown}>
-      <option value="">Courses</option>
+      <option>Courses</option>
       {
         dropDownValues.map((course,i)=>(
           <option value={`${course}`} key={i}>{course}</option>
@@ -293,50 +252,9 @@ useEffect(()=>{
           
 
           <div className="d-flex">
-            <div className="d-flex ">
-              <ul className={`navbar-nav ${navBarStyle.hiddenMobileSmSearch}`} >
-                <li className="nav-item" >
-                  
-                  <a className="nav-link" href="#" >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="#553cdf"
-                      className="bi bi-search"
-                      viewBox="0 0 16 16"
-                      onClick={openToggle} 
-                    >
-                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                    </svg>
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <span className="nav-link">
-                    <div className={`${navBarStyle.line}`}></div>
-                  </span>
-                </li>
-
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="22"
-                      fill="#553cdf"
-                      className="bi bi-cart3"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-                    </svg>
-                    <div className={`${navBarStyle.cartDotNumber}`} >
-                      {0}
-
-                    </div>
-                  </a>
-                </li>
-              </ul>
+            
+            <div className={`${navBarStyle.hiddenMobileLgMin}`}>
+              <span onClick={handleClickOnIcon}><i className="bi bi-person-fill"></i></span>
             </div>
             <div className={`${navBarStyle.hiddenMobileLg} `}  >
               {user?(
@@ -365,26 +283,6 @@ useEffect(()=>{
 
       {/* second nav bar ends */}
 
-      {/* search bar */}
-      <div className={` ${!!open  ?  `${navBarStyle.open}`:"d-none"} container-fluid `}  >
-                  <button className={navBarStyle.openBtn} onClick={openToggle} ><i class="bi bi-x-lg"></i></button>
-                    <div className="" style={{borderBottom:'1px solid grey'}}>
-                      <input type='search' placeholder='Searching...'
-                       value={searchTerm}
-                       onChange={handleInputChange} onKeyDown={handleKeyDown} /><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="30"
-                      height="30"
-                      fill="gray"
-                      className="bi bi-search"
-                      viewBox="0 0 16 16"
-                      onClick={handleSearchClick}
-                      
-                    >
-                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                    </svg>
-                      </div>
-           </div>
     </div>
   );
 };

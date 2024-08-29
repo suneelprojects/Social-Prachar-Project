@@ -14,10 +14,9 @@ const UpComming = () => {
     window.location.href =ZoomLink
   }
 
-  const Courses=['Full Stack','Data Science','AWS DevOps']
   return (
     <>
-      <div className="containerFluidForPadding py-5">
+      <div className={`container py-5 ${upCommingStyle.containerXl}`}>
         <div className="d-flex justify-content-center">
           <div className={`${upCommingStyle.upCommingCenterText}`} >
 
@@ -34,11 +33,13 @@ const UpComming = () => {
             upcommingEventsArray.map((upCommingEvent,i)=>(
 
           <div className={`${upCommingStyle.upcommingCard} row py-2`} key={i}>
-            <div className={`col ${upCommingStyle.colUpcommingCard} `} >
+            <div className={`col-12  col-sm-12 col-md-12 col-lg-3 col-xl-3 ${upCommingStyle.colUpcommingCard} `} >
               <img src={upCommingEvent.upcommingImgOne} />
-
+  
+            </div>
+            <div className={`col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9  ${upCommingStyle.colUpcommingCard}`}>
               <div className={`row ${upCommingStyle.rowUpcommingCard} ps-3`}>
-                <div className="col-lg-9 col-md-8">
+                <div className="col-lg-9 col-md-8 d-flex justify-content-center">
 
                 <div>
                 <div className={`${upCommingStyle.upcommingCardFirstText}`}>
@@ -53,18 +54,24 @@ const UpComming = () => {
                   <p>
                   {upCommingEvent.BigText}
                   </p>
+                  <p>
+                  What is Full Stack Web Development
+                  </p>
+                  <p>
+                  How to Crack Your First Job as a {upCommingEvent.BigText} with 3 to 12 LPA
+                  </p>
+                 
                 </div>
               </div>
                 </div>
 
                 <div className="col-lg-3 col-md-4 ArrowBtn">
               
-              <ArrowButton ArrowText='Get Ticket' handleClick={()=>{handleClick(upCommingEvent.ZoomLink)}}/>
+              <ArrowButton ArrowText='Enroll Now' handleClick={()=>{handleClick(upCommingEvent.ZoomLink)}}/>
                     
                 </div>
               </div>
 
-              
             </div>
           </div>
             ))

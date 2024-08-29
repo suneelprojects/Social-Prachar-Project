@@ -40,7 +40,7 @@ const GateWay = () => {
         <div className={`mt-5  col-12 col-sm-12 col-md-12  col-lg-12 col-xl-6 ${videoGifStyle.rightSideOfVideoGif}`}>
           
           <BulbText BulbText='Gateway to Lifelong Learning'
-          bulbTitle='Know Social Prachar Empowering Learners Worldwide'
+          bulbTitle='Know SocialPrachar Empowering Learners Worldwide'
           GreyText={`We are passionate about education and dedicated to providing \n high-quality learning resources for learners of all backgrounds.`} />
 
           <div className="row py-5 ">

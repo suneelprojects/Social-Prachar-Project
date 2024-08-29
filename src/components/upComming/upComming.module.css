@@ -4,14 +4,19 @@
     margin-top: 25px;
     margin-bottom: 25px;
   }
-  
+  .upcommingCard .colUpcommingCard img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
   .upcommingCard{
-    background-color: whitesmoke;
+    background-color: white;
     margin-top: 20px;
     margin-bottom: 20px;
     border-left: white 5px solid;
     border-radius: 5px;
     padding: 15px 15px 15px 10;
+    box-shadow:  0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 0px 0 rgba(0, 0, 0, 0.19);
   }
   .upcommingCard:hover{
     
@@ -24,9 +29,6 @@
     margin-right: 15px;
     display: inline;
     font-weight: 500;
-  }
-  .upcommingCardFirstText p i{
-    /* margin-right: 10px; */
   }
   
   .upcommingCardSecondText{
@@ -41,10 +43,7 @@
 
 
   @media (max-width:992px){
-    .upcommingCard img{
-      width: 100%;
-      height: auto;
-    }
+   
   .upcommingCard .upcommingCardFirstText text{
   display: block;
   }
@@ -59,4 +58,19 @@
       width: 100%;
     }
     
+  }
+  @media (min-width:1300px) and (max-width:1399.5px){
+    .containerXl{
+      max-width: 1200px!important;
+    }
+  }
+  @media (min-width:1400px) and (max-width:1499.5px) {
+    .containerXl{
+      max-width: 1300px!important;
+    }
+  }
+  @media (min-width:1500px){
+    .containerXl{
+      max-width: 1400px!important;
+    }
   }

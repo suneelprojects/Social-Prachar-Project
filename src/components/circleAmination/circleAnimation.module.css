@@ -58,7 +58,9 @@
   .rightSideOfCircleAni p{
     color: white!important;
   }
-  
+  .rightSideOfCircleAni span img{
+    width: 35px!important;
+  }
   
   @media (max-width:400px){
    
