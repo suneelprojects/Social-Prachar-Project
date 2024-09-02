@@ -24,7 +24,7 @@ const TopCatogery = () => {
   return (
 
     <>
-    <div className='topCategoryForHover'>
+    <div className='topCategoryForHover '>
 
    
     <div className='containerFluidForPadding'>

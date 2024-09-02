@@ -4,8 +4,8 @@ import footerImg from "../../assets/footer2_cta_image.png";
 import spLogo from '../../assets/SP_Logo.png'
 
 import ParallaxEffect from '../extraComponents/ParallaxEffect'
-import googlePlay from '../../assets/google.png'
-import AppleStore from '../../assets/AppleStore.png'
+import googlePlay from '../../assets/google_play.svg'
+import AppleStore from '../../assets/app_store.svg'
 
 import wavesPic from '../../assets/waves.png'
 import BookSvg from '../../assets/book.png'
@@ -32,7 +32,7 @@ const Footer = () => {
     iconLink:`https://www.linkedin.com/company/6635034/admin/dashboard/`}
     ,{icon:<i className="bi bi-youtube"></i>,
     iconLink:`https://youtube.com/@socialprachar?si=jPmucrBrLin2Ppu6`},
-    {icon:<i class="bi bi-twitter-x"></i>,
+    {icon:<i className="bi bi-twitter-x"></i>,
     iconLink:`https://x.com/i/flow/login?redirect_after_login=%2Fsocial_prachar`}
     ];
     const OfficeDetails=[<b>Head Office : </b>,'#508, 5th Floor,',
@@ -72,7 +72,7 @@ const Footer = () => {
             
             <div className={`col ${footerStyle.certificateText}`}>
                 <div className="d-block">
-                <span className="d-flex">
+                <span className={`d-flex ${footerStyle.whiteBulb}`}>
                     <img src={whiteBulb}/>
                     <h4>Learn On The Go</h4>
                 </span>

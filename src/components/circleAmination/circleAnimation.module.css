@@ -10,7 +10,7 @@
     background-color: #553cdf!important;
     display: flex;
     align-items: center;
-    border: rgb(125, 121, 121) 1px solid;
+    border: rgb(172, 170, 170) 1px solid;
   }
   .circleAnimationRowDiv{
     column-gap: 25px!important;
@@ -26,7 +26,9 @@
     margin-top: 15px;
     margin-left: 10px;
   }
-  
+  .whiteBulb img{
+    padding: 5px;
+}
   
   .whiteBtn button{
     width: 226px;

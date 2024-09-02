@@ -2,8 +2,14 @@ import React, { useEffect, useState } from 'react'
 
 import navBarStyle from './navbar.module.css'
 
-import picSvg from '../../assets/svg01.png'
+import course2 from '../../assets/02.svg'
+import course3 from '../../assets/04.svg'
+import course5 from '../../assets/06.svg'
+import course6 from '../../assets/01.svg'
+import course7 from '../../assets/course7.png'
+import course8 from '../../assets/course8.jpg'
 import spLogo from '../../assets/SP_Logo.png'
+import spLogoIcon from '../../assets/SP_Logo-icon.png'
 
 import { Link, useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
@@ -17,45 +23,45 @@ const NavBar = () => {
   const [selectedValue, setSelectedValue] = useState('');
 
   const categoryArraryOne=[
-    {courseImg:picSvg,
-      courseName:'Development',
-      NoOFCourses:'3+ courses'
+    {courseImg:course6,
+      courseName:'WebDevelopment',
+      NoOFCourses:'5+ courses'
     },
-     {courseImg:picSvg,
-      courseName:'Academics',
-      NoOFCourses:'0 courses'
+    //  {courseImg:course3,
+    //   courseName:'Academics',
+    //   NoOFCourses:'0 courses'
+    // },
+    {courseImg:course2,
+      courseName:'Analytics ',
+      NoOFCourses:'4+ courses'
     },
-    {courseImg:picSvg,
-      courseName:'Business',
-      NoOFCourses:'2+ courses'
-    },
-    {courseImg:picSvg,
-      courseName:'Design & Art',
+    {courseImg:course7,
+      courseName:'HR Analytics',
       NoOFCourses:'2+ courses'
     },
 
   ]
   const categoryArraryTwo=[
-    {courseImg:picSvg,
+    {courseImg:course3,
       courseName:'Marketing',
-      NoOFCourses:'1+ courses'
+      NoOFCourses:'3+ courses'
     },
-     {courseImg:picSvg,
-      courseName:'Music',
-      NoOFCourses:'1+ courses'
-    },
-    {courseImg:picSvg,
-      courseName:'Photography',
-      NoOFCourses:'0 courses'
-    },
-    {courseImg:picSvg,
+     {courseImg:course5,
       courseName:'Accounting',
+      NoOFCourses:'3+ courses'
+    },
+    // {courseImg:course4,
+    //   courseName:'Photography',
+    //   NoOFCourses:'0 courses'
+    // },
+    {courseImg:course8,
+      courseName:'Finance',
       NoOFCourses:'2+ courses'
     },
 
   ]
 
-  const dropDownValues=['Full Stack','Data Science','Generative AI','AWS DevOps','Digital Marketing ','HR Specialisation']
+  const dropDownValues=['Web Development','Analytics','Marketing','Accounting','Finance','HR Analytics']
 
 const Navigate = useNavigate()
 
@@ -74,6 +80,9 @@ const handleCategoryDropDown = (event) => {
 const [expanded,setExpand]=useState(false)
 const Showtoggle=()=>{
   setExpand(!expanded)
+}
+const closeToggle=()=>{
+  setExpand(false)
 }
 
 const handleLogin = () => {
@@ -128,12 +137,13 @@ useEffect(()=>{
 
 
       <nav className={`navbar navbar-expand-lg ${navBarStyle.secondNav}`} >
-        <div className={`${navBarStyle.containerfluidForNav } container-fluid  py-3 `}>
+        <div className={`${navBarStyle.containerfluidForNav } container-fluid  `}>
 
           {/* brand name and category code start */}
           <div className="d-flex ">
             <a className="navbar-brand" href="#">
               <img src={spLogo} className={`${navBarStyle.spLogo}`}/>
+              <img src={spLogoIcon} className={`${navBarStyle.spLogoIcon}`}/>
             </a>
 
             <select className={`${navBarStyle.selectDropDown}`} value={selectedValue} onChange={handleCategoryDropDown}>
@@ -214,30 +224,21 @@ useEffect(()=>{
     <button type="button" className="btn-close btn-close-white" style={{position:'absolute',left:0}}  onClick={Showtoggle} data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
 
-            <ul className= "navbar-nav me-auto mb-2 mb-lg-0 gap-4 " >
+            <ul className= "navbar-nav me-auto mb-lg-0 gap-4 " >
               <li className="nav-item d-flex">
                 
-                <NavLink to={"/"} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Home</NavLink>
+                <NavLink to={"/"} className={`nav-link ${navBarStyle.NavLinkForHover}`} onClick={closeToggle}>Home</NavLink>
               </li>
               <li className="nav-item">
                 
-                <NavLink to={""} className={`nav-link ${navBarStyle.NavLinkForHover}`}>About Us</NavLink>
-              </li>
-              <li className="nav-item">
-                
-                <NavLink to={"/courses"} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Courses</NavLink>
+                <NavLink to={"/courses"} className={`nav-link ${navBarStyle.NavLinkForHover}`} onClick={closeToggle}>Courses</NavLink>
 
               </li>
               <li className="nav-item">
                 
-                <NavLink to={"/user"} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Dashboard</NavLink>
-
+                <NavLink to={"/aboutUs"} className={`nav-link ${navBarStyle.NavLinkForHover}`} onClick={closeToggle}>About Us</NavLink>
               </li>
-              <li className="nav-item">
-              
-                <NavLink to={""} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Blog</NavLink>
-
-              </li>
+             
             </ul>
 
           </div>

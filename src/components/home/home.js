@@ -11,6 +11,7 @@ import ParallaxEffect from '../extraComponents/ParallaxEffect'
 import SvgBulb from '../../assets/bulbSvg.png'
 import dumbelSvg from '../../assets/dumbel.png'
 import BookSvg from '../../assets/book.png'
+import flowtingBtn2 from '../../assets/noOfCourses.png'
 
 import yellowLine from '../../assets/yellowLine.png'
 import { useNavigate } from "react-router-dom";
@@ -87,18 +88,18 @@ const Home = () => {
           <div className={`${homeStyle.flowtingLeftBtn}`}>
             <img src={flowtingBtn}/>
             <div >
-            <text className={`${homeStyle.flowtingBtnFirst}`}>4.8</text><br/>
-            <text className={`${homeStyle.flowtingBtnGreyText}`}>{"("}4.8k reviews{")"}</text>
+            <span className={`${homeStyle.flowtingBtnFirst}`}>4.8</span><br/>
+            <span className={`${homeStyle.flowtingBtnGreyText}`}>{"("}4.8k reviews{")"}</span>
             </div>
           </div>
 
 
           <div className={`${homeStyle.flowtingRightBtn}`}>
             
-            <img src={flowtingBtn}/>
+            <img src={flowtingBtn2}/>
             <div >
-            <text className={`${homeStyle.flowtingBtnFirst}`}>20+</text><br/>
-            <text className={`${homeStyle.flowtingBtnGreyText}`}>{"("}job ready Courses{")"}</text>
+            <span className={`${homeStyle.flowtingBtnFirst}`}>20+</span><br/>
+            <span className={`${homeStyle.flowtingBtnGreyText}`}>{"("}job ready Courses{")"}</span>
             </div>
             </div>
 

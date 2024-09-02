@@ -28,7 +28,7 @@ const Dashboard = () => {
     <div className="col-12 col-md-4 mb-3">
       <div className={`card ${style.dashboardCard} text-center py-5`}>
         <div className="card-body">
-      <i class={`bi bi-mortarboard-fill ${style.dashboardMenuBi}`}></i>
+      <i className={`bi bi-mortarboard-fill ${style.dashboardMenuBi}`}></i>
            {/* <!-- Add respective icon className here --> */}
           <h5 className="card-title p-4">Active Courses</h5>
           <h5 className="card-text">0</h5>
@@ -38,7 +38,7 @@ const Dashboard = () => {
     <div className="col-12 col-md-4 mb-3">
       <div className={`card ${style.dashboardCard} text-center py-5`}>
         <div className="card-body">
-        <i class={`bi bi-trophy-fill ${style.dashboardMenuBi}`}></i>
+        <i className={`bi bi-trophy-fill ${style.dashboardMenuBi}`}></i>
            {/* <!-- Add respective icon className here --> */}
           <h5 className="card-title p-4">Enrolled Courses</h5>
           <p className="card-text">0</p>

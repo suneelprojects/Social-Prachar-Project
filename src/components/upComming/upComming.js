@@ -47,7 +47,7 @@ const UpComming = () => {
                   <p><i className="bi bi-stopwatch"></i>
                   90 Minutes</p>
                   <p>
-                  <i class="bi bi-camera-video"></i>
+                  <i className="bi bi-camera-video"></i>
                   Zoom Webinar</p>
                 </div>
                 <div className={`${upCommingStyle.upcommingCardSecondText}`} >
@@ -55,7 +55,7 @@ const UpComming = () => {
                   {upCommingEvent.BigText}
                   </p>
                   <p>
-                  What is Full Stack Web Development
+                  What is {upCommingEvent.BigText}
                   </p>
                   <p>
                   How to Crack Your First Job as a {upCommingEvent.BigText} with 3 to 12 LPA

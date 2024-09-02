@@ -32,9 +32,9 @@ const MenuBar = () => {
 
 <>
 <div className={`container-fluid ${style.menuBar}`}>
-<div class="container-fluid">
-        <div class="row">
-            <div class={`col-12 ${style.sideNavbar} col-md-3 col-lg-3 d-md-block collapse`}>
+<div className="container-fluid">
+        <div className="row">
+            <div className={`col-12 ${style.sideNavbar} col-md-3 col-lg-3 d-md-block collapse`}>
                 <nav style={{border:'1px solid  #cbc0f3',borderRadius:'10px'}}>
                     <ul className='nav flex-column'>
                         <li className="nav-item"><Link className="nav-link" to='/profile'><i
@@ -110,7 +110,7 @@ const MenuBar = () => {
         </Link>
       </div>
       <div className={`nav-item ${style.bottomNavItem}`}>
-      <i class="bi bi-list"></i>
+      <i className="bi bi-list"></i>
         <Link
           className={`${style.bottomNavLink} 
             ${activeLink === 'Menu' ? style.active:''} `}

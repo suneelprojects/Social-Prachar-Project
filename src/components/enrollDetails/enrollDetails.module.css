@@ -1,0 +1,30 @@
+.infoAboutUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #553cdf;
+    color: white;
+    border-radius: 5px;
+}
+.infoAboutUser p{
+    font-size: 24px;
+}
+.inputDivs{
+    margin-bottom: 20px;
+}
+.submitBtn{
+    background-color: #553cdf;
+    border-radius: 5px;
+    color: white;
+    margin-left: 10px;
+}
+.submitBtn:hover{
+    border:#553cdf solid 1px;
+    background-color: white;
+    color: #553cdf;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

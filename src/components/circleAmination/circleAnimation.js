@@ -1,5 +1,10 @@
 import React from "react";
-import flowtingBtn from "../../assets/flowtingBtn.png";
+import circleColImg1 from '../../assets/circleAniImg1.png'
+import circleColImg2 from '../../assets/circleAniImg2.png'
+import circleColImg3 from '../../assets/circleAniImg3.png'
+import circleColImg4 from '../../assets/circleAniImg4.png'
+import circleColImg5 from '../../assets/circleAniImg5.png'
+import circleColImg6 from '../../assets/circleAniImg6.png'
 import leftImg from "../../assets/circleimgleft.jpg";
 import rightImg from "../../assets/circleimgRight.png";
 import ArrowButton from "../extraComponents/arrowButton";
@@ -25,9 +30,20 @@ const CircleAnimation = () => {
       dataValue: '5', alt: 'Image 2' }
   ];
 
-    var circleAnimationArray=['Expert Instructors','Interactive Learning'
-      ,'Affordable Learning','Career Advance' ,'Course Selection','Support Community'
-    ];
+    var circleAnimationArray=[
+      {circleImg:circleColImg1,
+      circleText:'Expert Instructors'
+    },{circleImg:circleColImg2,
+      circleText:'Interactive Learning'
+    },{circleImg:circleColImg3,
+      circleText:'Affordable Learning'
+    },{circleImg:circleColImg4,
+      circleText:'Career Advance'
+    },{circleImg:circleColImg5,
+      circleText:'Course Selection'
+    },{circleImg:circleColImg6,
+      circleText:'Support Community'
+    }];
 
     const Navigate =useNavigate();
 
@@ -59,22 +75,25 @@ const CircleAnimation = () => {
         {/* right side box code start */}
 
         <div className={`col-12 col-sm-12 col-md-12  col-lg-6 col-xl-6  mt-5 ${circleAnimationStyle.rightSideOfCircleAni} `} >
-          
+          <span className={circleAnimationStyle.whiteBulb}>
+
           <BulbText whiteBulb={whiteBulb}
           BulbText='Why Choose Us'
           bulbTitle={`SocialPrachar Your Path to\nExcellence & Success`}
           GreyText={`We are passionate about education and dedicated to \n providing high-quality learning resources for learners of all backgrounds.`}/>
+          
+          </span>
 
           <div className={`row row-cols-2 row-col-sm-2 row-cols-lg-4 row-cols-xl-3 py-4 row-gap-4 ${circleAnimationStyle.circleAnimationRowDiv}`}>
             
             {
               circleAnimationArray.map((circleAnimationDivItem,i)=>(
                 <div className={`${circleAnimationStyle.circleAnimationDiv}  col`} key={i}>
-                <img src={flowtingBtn} />
+                <img src={circleAnimationDivItem.circleImg} />
                     
                         
                         <p>
-                        {circleAnimationDivItem}
+                        {circleAnimationDivItem.circleText}
                         </p>
                    
               </div>

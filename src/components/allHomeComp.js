@@ -9,7 +9,7 @@ import Footer from './footer/footer';
 import CircleAnimation from './circleAmination/circleAnimation';
 import Partner from './clients/partners';
 import Home from './home/home';
-
+import EnrollDetails from './enrollDetails/enrollDetails';
 import HomeCourse from './HomeCardComp/HomeCourses';
 import Comments from './comments/comments';
 import NewsOnUs from './newsArticles/newsOnUs';
@@ -22,6 +22,7 @@ const AllHomeComp = () => {
       <FourSteps/>
       <Partner/>
       <GateWay/>
+      <EnrollDetails/>
       <TopCatogery/>
       <HomeCourse/>
       <CircleAnimation/>
