@@ -49,14 +49,7 @@ const App = () => {
       <Routes>
       <Route path="/" element={<AllHomeComp/>}/>
       <Route path='/courses' element={ <Course/>}/>
-      {/* <Route path="/details/:cardId" element={<DetailsPage data={data}/>} /> */}
-      {data.map((card) => (
-                    <Route
-                        key={card.id}
-                        path={`/details/${card.id}`}
-                        element={<DetailsPage card={card} />}
-                    />
-                ))}
+      <Route path="/details/:cardId" element={<DetailsPage/>} />
       <Route path="/getTickets/:id" element={<GetTickets/>}/>
       <Route path='/categoryCourses' element={<NavCourses/>}/>
         <Route path='/user' 

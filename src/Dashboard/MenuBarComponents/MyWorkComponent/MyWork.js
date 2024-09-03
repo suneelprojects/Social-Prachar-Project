@@ -146,23 +146,23 @@ function App(props) {
       </div>
       <div className='row'>
 <div className='col-12 col-md-12 col-sm-12'>
-<label htmlFor='object'>Objective of the project</label>
+<label htmlFor='object'>Objective</label>
       <textarea 
         type="text" 
         placeholder="Enter the Objective of the project"
-        className='form-control'
+        className='form-control p-2'
         rows="2"
         maxLength="150"
         required
         value={projectObjective}  // added this line
         onChange={handleProjectObjectiveChange} 
       />
-<label htmlFor='description'>Description about Project</label>
+<label htmlFor='description' className='mt-2'>Description</label>
        <textarea 
         type="text" 
         placeholder="Enter Description"
-        className='form-control'
-        rows="2"
+        className='form-control p-3'
+        rows="3"
         maxLength="150"
         required
         value={projectDescription}  // added this line

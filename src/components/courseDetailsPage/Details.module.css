@@ -2,7 +2,6 @@
 .DetailsHeader {
     width: 100%;
     height: 70vh;
-    margin-top: 150px;
     background: #ececec;
     display: flex;
     flex-direction: column;
@@ -192,29 +191,27 @@
   .iconSize:hover{
     color: #553cdf;
   }
+
   
   .scrollButton {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      background-color:#553cdf;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: transform 0.3s ease-in-out;
+    position: fixed;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    background: #553cdf;
+    cursor: pointer;
   }
-  
   .scrollButton:hover {
     background-color: #543cdfa7;
   }
   .scrollButton span {
     display: inline-block;
-    font-size:15px;
+    font-size: 20px;
     transform: rotate(-90deg);
   }
+
   
   /* media queries */
   @media (max-width:376px){

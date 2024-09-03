@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faEnvelope, faGraduationCap, faList, faPen } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
+
 const DetailsPage = () => {
     const { cardId } = useParams();
     const [card, setCard] = useState(null);

@@ -7,7 +7,7 @@ import UpComming from './upComming/upComming';
 import Teacher from './teachers/teacher';
 import CarouselDot from './studentFeedBack/carouselDot';
 import TopCatogery from './topCatogery/topCatogery';
-import FooterBtn from './footerButton/footerBtn';
+import FooterBtn from './footerButton/FooterBtn';
 import Footer from './footer/footer';
 import CircleAnimation from './circleAmination/circleAnimation';
 import NewsFullStory from './newComponent/NewsFullStory';
@@ -28,20 +28,9 @@ const AllHomeComp = () => {
       <TrustedBy/>
       <GateWay/>
       <TopCatogery/>
-      {/* <Cards
-                        filters={{
-                          checkedCategories: checked,
-                          checkedTags,
-                          checkedLevel,
-                          checkedPrice
-                        }} /> */}
-
-      {/* <HomeCards/> */}
-      {/* <HomeCourse/>   */}
+    
       <HomeCourse/>
       <CircleAnimation/>
-      {/* <Course/> */}
-      {/* <SearchBar/> */}
       <UpComming/>
       <FourSteps/>
       <Teacher/>
@@ -53,5 +42,5 @@ const AllHomeComp = () => {
   )
 }
 
-export default AllHomeComp
+export default AllHomeComp;
 

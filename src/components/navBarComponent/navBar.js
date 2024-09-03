@@ -127,6 +127,10 @@ useEffect(()=>{
       setSearchTerm("");
     }
   };
+  const navigate=useNavigate();
+  const handleCourse=()=>{
+    navigate('/courses')
+  }
 
   return (
     <div className={`${navBarStyle.navBarSticky}`} >
@@ -351,7 +355,7 @@ useEffect(()=>{
               </li>
               <li className="nav-item">
                 
-                <NavLink to={"/courses"} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Courses</NavLink>
+                <NavLink to={"/courses"} onClick={handleCourse} className={`nav-link ${navBarStyle.NavLinkForHover}`}>Courses</NavLink>
 
               </li>
               <li className="nav-item">
