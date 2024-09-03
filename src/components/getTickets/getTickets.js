@@ -19,7 +19,7 @@ import TeacherContainer from "../teachers/teacherContainer";
 import upCommingStyle from '../upComming/upComming.module.css'
 import { Link } from "react-router-dom";
 import ArrowButton from "../extraComponents/arrowButton";
-import FooterBtn from '../footerButton/FooterBtn';
+import FooterBtn from '../footerButton/footerBtn';
 import Footer from '../footer/footer';
 
 

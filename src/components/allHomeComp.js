@@ -7,7 +7,7 @@ import UpComming from './upComming/upComming';
 import Teacher from './teachers/teacher';
 import CarouselDot from './studentFeedBack/carouselDot';
 import TopCatogery from './topCatogery/topCatogery';
-import FooterBtn from './footerButton/FooterBtn';
+import FooterBtn from './footerButton/footerBtn';
 import Footer from './footer/footer';
 import CircleAnimation from './circleAmination/circleAnimation';
 import NewsFullStory from './newComponent/NewsFullStory';

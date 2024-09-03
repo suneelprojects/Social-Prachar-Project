@@ -210,9 +210,11 @@ function App(props) {
               <p>
                 {modalTask ? modalTask.projectDescription : ''}
               </p>
+              <p className={style.cardtext}>
               <a href={modalTask ? modalTask.fileUrl : ''} target="_blank" rel="noopener noreferrer">
                 View File
               </a>
+              </p>
             </Modal.Body>
             <Modal.Footer>
               <Button onClick={() => setModalShow(false)}>Close</Button>

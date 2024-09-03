@@ -30,7 +30,9 @@ useEffect(() => {
     <div>
        {showButton && (
                     <button className={FooterBtnCSS.scrollButton} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                        <span>&#10095;&#10095;</span>
+                        <span>
+                          &#10095;&#10095;
+                        </span>
                     </button>
                 )}
     </div>
