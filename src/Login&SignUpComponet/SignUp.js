@@ -25,13 +25,14 @@ const SignUp = () => {
     twitter:'',
     linkedin:'',
     website:'',
-    github:''
+    github:'',
   });
   const navigate=useNavigate();
 
   const changeHandler = (e) => {
     setInput({...input, [e.target.name]: e.target.value });
   };
+ 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,7 +61,7 @@ const SignUp = () => {
         twitter:input.twitter,
         linkedin:input.linkedin,
         website:input.website,
-        github:input.github
+        github:input.github,
       };
       await setDoc(doc(db, "Users", user.uid), userData);
     
@@ -86,17 +87,17 @@ const SignUp = () => {
 
   return (
     <div className={style.signupContainer}>
-      <form className={`${style.signupForm} p-5`} onSubmit={handleSubmit} autoComplete='off'>
+      <form className={`${style.signupForm} p-5 mt-3`} onSubmit={handleSubmit} autoComplete='off'>
     
-          <input className='form-control p-2 mb-2' type='text' placeholder='fname' onChange={changeHandler} name='firstName' required/>
+          <input className='form-control p-2 mb-2' type='text' placeholder='First Name' onChange={changeHandler} name='firstName' required/>
   
-          <input className='form-control p-2 mb-2' type='text' placeholder='Lname' onChange={changeHandler} name='lastName' required/>
+          <input className='form-control p-2 mb-2' type='text' placeholder='Last Name' onChange={changeHandler} name='lastName' required/>
         
-          <input className='form-control p-2 mb-2' type='text' placeholder='Uname' onChange={changeHandler} name='userName' required/>
+          <input className='form-control p-2 mb-2' type='text' placeholder='User Name' onChange={changeHandler} name='userName' required/>
   
-          <input className='form-control p-2 mb-2' type='email' placeholder='email' onChange={changeHandler} name='email' required/>
+          <input className='form-control p-2 mb-2' type='email' placeholder='Email' onChange={changeHandler} name='email' required/>
     
-          <input className='form-control p-2 mb-2' type='phone' placeholder='mobile' onChange={changeHandler} name='mobileNumber' required/>
+          <input className='form-control p-2 mb-2' type='phone' placeholder='Mobile' onChange={changeHandler} name='mobileNumber' required/>
       
       <div style={{ position: 'relative', width: '100%' }}>
           <input className='form-control p-2 mb-2'  type={passwordVisible ? 'text' : 'password'} placeholder='password' onChange={changeHandler} name='password' required/>
@@ -130,8 +131,19 @@ const SignUp = () => {
           <input className='form-control' type='hidden' name='linkedin'></input>
 
           <input className='form-control' type='hidden' name='github'></input>
+
+          <input className='form-control' type='hidden' name='file'></input>
+
+          <input className='form-control' type='hidden' name='fileName'></input>
+
+          <input className='form-control' type='hidden' name='projectObjective'></input>
+
+          <input className='form-control' type='hidden' name='projectDescription'></input>
+
+        
          <div className='text-center'>
-        <button className='mb-2 px-5 btn' type='submit' style={{backgroundColor:'#6031f6',color:'white'}}>Register</button>
+        <button className='mb-2 px-5 btn' type='submit' style={{backgroundColor:'#6031f6',color:'white'}}  
+        >Register</button>
         </div>
         <p>Already Registered <Link to='/login'>Login</Link></p>
       </form>

@@ -17,9 +17,16 @@ const MyProfile = () => {
         if (docSnap.exists()) {
           const userData = docSnap.data();
           setUserDetails(userData); // Update userDetails state
-          const bioRawContentState = JSON.parse(userData.bio);
-          const bioEditorState = EditorState.createWithContent(convertFromRaw(bioRawContentState));
-          setEditorState(bioEditorState);
+          // const bioRawContentState = JSON.parse(userData.bio);
+          if (userData.bio) {
+            const bioRawContentState = JSON.parse(userData.bio);
+            const bioEditorState = EditorState.createWithContent(convertFromRaw(bioRawContentState));
+            setEditorState(bioEditorState);
+          } else {
+            setEditorState(EditorState.createEmpty()); // Set an empty editor state if bio is empty or null
+          }
+          // const bioEditorState = EditorState.createWithContent(convertFromRaw(bioRawContentState));
+          // setEditorState(bioEditorState);
         } else {
           console.log("User document not found");
         }

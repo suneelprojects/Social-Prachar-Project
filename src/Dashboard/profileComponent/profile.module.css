@@ -26,13 +26,22 @@ height: 200px;
     .profileText{
         display: none;
     }
-    .profileImg{
+    /* .profileImg{
         position: relative;
-        top: 75%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 100%; /* Adjust the size as needed */
+        width: 100%;
         max-width: 200px;
+    } */
+    .profileImg {
+        position: absolute;
+        top: 100%; /* Adjusted for better centering */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%; /* Ensures the image scales with the screen size */
+        max-width: 200px; /* Limits the maximum width */
+        height: auto; /* Maintains the aspect ratio */
     }
     .profileInfo{
         display: grid; 
@@ -42,5 +51,36 @@ height: 200px;
         height: 30vh;
         text-align: center; 
         
+    }
+}
+/* iPad Pro Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .profileText {
+        display: none;
+    }
+    .profileImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+}
+
+/* iPad Pro Landscape */
+@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .profileText {
+        display: none;
+    }
+    .profileImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 200px;
+        height: auto;
     }
 }

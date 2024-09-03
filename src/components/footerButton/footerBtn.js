@@ -1,48 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import FooterBtnCSS from './footerBtn.module.css';
 
-import footerBtnStyle from './footerBtn.module.css'
 
-const FooterBtn = () => {
-  const [showButton, setShowButton] = useState(false);
+function FooterBtn() {
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const homeSection = document.getElementById('forFooterBtn');
-      if (homeSection) {
-        const homeBottom = homeSection.offsetTop + homeSection.offsetHeight;
-        const currentScroll = window.scrollY + window.innerHeight;
-        setShowButton(currentScroll > homeBottom);
-      }
-    };
+const [showButton, setShowButton] = useState(false);
 
-    window.addEventListener('scroll', handleScroll);
+const handleScroll = () => {
+    const viewportHeight = window.innerHeight;
+    const scrollTop = window.scrollY;
 
-    return () => {
+    if (scrollTop > viewportHeight / 2) {
+        setShowButton(true);
+    } else {
+        setShowButton(false);
+    }
+};
+
+useEffect(() => {
+  handleScroll();
+  window.addEventListener('scroll', handleScroll);
+  return () => {
       window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const handleClick = () => {
-    window.scrollTo({
-      top: 0,
-      
-      behavior: 'smooth' 
-    });
   };
+}, [handleScroll]);
+
 
   return (
-    <div
-     className={`${footerBtnStyle.footerBtnContainer} ` }  onClick={handleClick}
-    >
-      {showButton && (
-        <div 
-         style={{ position: 'fixed', bottom: '40px', right: '60px' ,zIndex:'1000'}}>
-        <div className={` ${footerBtnStyle.sticky}`} ><i className="bi bi-chevron-double-up"></i></div>
-
-        </div>
-      )}
+    <div>
+       {showButton && (
+                    <button className={FooterBtnCSS.scrollButton} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                        <span>
+                          &#10095;&#10095;
+                        </span>
+                    </button>
+                )}
     </div>
-  );
-};
+  )
+}
 
 export default FooterBtn;

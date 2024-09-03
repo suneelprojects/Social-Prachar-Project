@@ -28,20 +28,9 @@ const AllHomeComp = () => {
       <TrustedBy/>
       <GateWay/>
       <TopCatogery/>
-      {/* <Cards
-                        filters={{
-                          checkedCategories: checked,
-                          checkedTags,
-                          checkedLevel,
-                          checkedPrice
-                        }} /> */}
-
-      {/* <HomeCards/> */}
-      {/* <HomeCourse/>   */}
+    
       <HomeCourse/>
       <CircleAnimation/>
-      {/* <Course/> */}
-      {/* <SearchBar/> */}
       <UpComming/>
       <FourSteps/>
       <Teacher/>
@@ -53,5 +42,5 @@ const AllHomeComp = () => {
   )
 }
 
-export default AllHomeComp
+export default AllHomeComp;
 

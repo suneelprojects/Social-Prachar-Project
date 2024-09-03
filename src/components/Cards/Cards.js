@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { data } from '../Cards/CardData';
 import cardsCSS from './Cards.module.css';
 import GridSymbol from '../../assets/menu (1).png';
@@ -10,18 +11,23 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import SignInForm from '../SignInForm/SignInform';
 
+
+
 const Cards = ({ filters }) => {
 
+    const navigate = useNavigate();
+
     const { checkedCategories, checkedTags, checkedLevel, checkedPrice } = filters;
-    // Replace this with your actual filtering logic
+
+    // Filtering logic
     const matchesFilters = (card) => {
         const categoryMatch = checkedCategories[card.categoryIndex] || !checkedCategories.some(Boolean);
         const tagMatch = checkedTags[card.tagIndex] || !checkedTags.some(Boolean);
         const levelMatch = checkedLevel[card.levelIndex] || !checkedLevel.some(Boolean);
         const priceMatch = checkedPrice[card.priceIndex] || !checkedPrice.some(Boolean);
-
         return categoryMatch && tagMatch && levelMatch && priceMatch;
     };
+
     const filteredCards = data.filter(matchesFilters);
 
     // DropDown menu
@@ -77,37 +83,41 @@ const Cards = ({ filters }) => {
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
+
     const isFirstPage = currentPage === 1;
     const isLastPage = currentPage === totalPages;
     const showPagination = totalPages > 1;
 
-    // Constant Sign In form
+    // Sign In form state
     const [showSignInForm, setShowSignInForm] = useState(false);
+
     const handleSaveIconClick = () => {
         setShowSignInForm(true);
     };
+
     const handleCloseForm = () => {
         setShowSignInForm(false);
     };
 
+    const handleCardTitleClick = (id) => {
+        navigate(`/details/${id}`);
+    };
 
     return (
         <div className={cardsCSS.cardsSection}>
-            
+
             {showSignInForm && <div className={`${cardsCSS.overlay} ${showSignInForm ? cardsCSS.show : ''}`} />}
             {showSignInForm && <SignInForm onClose={handleCloseForm} />}
 
             <div className={cardsCSS.cardfilter}>
                 <div className={cardsCSS.dropdownSection}>
-                    <h4>Short By</h4>
+                    <h4>Sort By</h4>
                     <div className={cardsCSS.dropdown} ref={dropdownRef}>
                         <div className={cardsCSS.selectedOption} onClick={() => setIsOpen(!isOpen)}>
                             {selectedOption}<FontAwesomeIcon icon={faChevronDown} />
                         </div>
                         <div className={`${cardsCSS.dropdownMenu} ${isOpen ? cardsCSS.show : ''}`}>
-                            <FontAwesomeIcon icon={faSearch}
-                                className={cardsCSS.searchIcon}
-                            />
+                            <FontAwesomeIcon icon={faSearch} className={cardsCSS.searchIcon} />
                             <input
                                 type="text"
                                 placeholder="Search..."
@@ -151,8 +161,8 @@ const Cards = ({ filters }) => {
 
             <div className={cardsCSS.cards}>
                 <div className={`row ${selectedButton === 'list' ? cardsCSS.listview : cardsCSS.gridView}`}>
-                    {currentCards.map((card, index) => (
-                        <div key={index} className={`col-md-4 mt-4 ${selectedButton === 'list' ? cardsCSS.listItem : ''}`}>
+                    {currentCards.map((card) => (
+                        <div key={card.id} className={`col-md-4 mt-4 ${selectedButton === 'list' ? cardsCSS.listItem : ''}`}>
                             <div className={`card ${cardsCSS.card}`}>
                                 <div className={cardsCSS.cardImgContainer}>
                                     <img src={card.imageSrc} className={cardsCSS.cardImgTop} alt={card.title} />
@@ -173,7 +183,7 @@ const Cards = ({ filters }) => {
                                             <p className={cardsCSS.students}>{card.students}</p>
                                         </div>
                                     </div>
-                                    <h5 className={cardsCSS.course_title}>{card.text}</h5>
+                                    <h5 className={cardsCSS.course_title} onClick={() => handleCardTitleClick(card.id)}>{card.text}</h5>
                                     <p className={cardsCSS.faculty_name}>{card.name}</p>
                                     <div className={cardsCSS.starPrice}>
                                         <div className={cardsCSS.rating}>
@@ -228,4 +238,3 @@ const Cards = ({ filters }) => {
 };
 
 export default Cards;
-

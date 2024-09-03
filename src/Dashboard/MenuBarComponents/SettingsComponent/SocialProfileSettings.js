@@ -120,6 +120,3 @@ const SocialProfileSettings = () => {
 
 export default SocialProfileSettings;
 
-
-
-

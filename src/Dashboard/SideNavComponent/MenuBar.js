@@ -41,6 +41,8 @@ const MenuBar = () => {
                                 className='bi bi-speedometer2'></i>Dashboard</Link></li>
                         <li className="nav-item"><Link className="nav-link" to='myprofile'><i
                                 className='bi bi-person-fill'></i> My Profile</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to='mywork'><i
+                                className='bi bi-list-task'></i> My Work</Link></li>     
                         <li className="nav-item"><Link className="nav-link" to='enrolled-courses'><i
                                 className='bi bi-mortarboard-fill'></i> Enrolled Courses</Link></li>
                         <li className="nav-item"><Link className="nav-link" to='wishlist'><i
@@ -65,6 +67,7 @@ const MenuBar = () => {
       <ul className='nav flex-column'>
         <li className="nav-item"><Link className="nav-link" to='/profile'><i className="bi bi-speedometer2"></i>Dashboard</Link></li>
         <li className="nav-item"><Link className="nav-link" to='myprofile'><i className="bi bi-person-fill"></i> My Profile</Link></li>
+        <li className="nav-item"><Link className="nav-link" to='mywork'><i className="bi bi-list-task"></i> My Work</Link></li>
         <li className="nav-item"><Link className="nav-link" to='enrolled-courses'><i  className="bi bi-mortarboard-fill"></i> Enrolled Courses</Link></li>
         <li className="nav-item"><Link className="nav-link" to='wishlist'><i  className="bi bi-bookmark-fill"></i> Wishlist</Link></li>
         <li className="nav-item"><Link className="nav-link" to='reviews'><i className="bi bi-star-fill"></i> Reviews</Link></li>
