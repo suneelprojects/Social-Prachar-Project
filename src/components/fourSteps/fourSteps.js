@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import fourImageOne from '../../assets/flowtingBtn.png';
+import fourImageOne from '../../assets/fourStep (1).png';
+import fourImageTwo from '../../assets/fourStep (2).png';
+import fourImageThree from '../../assets/fourStep (3).png';
+import fourImageFour from '../../assets/fourStep (4).png';
 import circleSvg from '../../assets/circleSvg.png';
 import wavesPic from '../../assets/waves.png';
 import ParallaxEffect from "../extraComponents/ParallaxEffect";
@@ -15,17 +18,17 @@ const FourSteps = () => {
       fourSecondText: `Hours Classes Delivered`
     },
     {
-      fourImg: fourImageOne,
+      fourImg: fourImageTwo,
       fourFirstText: 530,
       fourSecondText: 'Batches Completed'
     },
     {
-      fourImg: fourImageOne,
+      fourImg: fourImageThree,
       fourFirstText: 16000,
       fourSecondText: 'Students Trained'
     },
     {
-      fourImg: fourImageOne,
+      fourImg: fourImageFour,
       fourFirstText: 9,
       fourSecondText: `Prestigious EdTech \n Award Received`
     }

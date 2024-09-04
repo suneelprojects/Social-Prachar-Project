@@ -51,7 +51,9 @@ ul li{
   color: #553cdf;
   border:1px solid #553cdf;
 }
-
+.ArrowBtn button:active{
+  color: #553cdf;
+}
 
 
 

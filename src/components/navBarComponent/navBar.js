@@ -143,7 +143,6 @@ useEffect(()=>{
           <div className="d-flex ">
             <a className="navbar-brand" href="#">
               <img src={spLogo} className={`${navBarStyle.spLogo}`}/>
-              <img src={spLogoIcon} className={`${navBarStyle.spLogoIcon}`}/>
             </a>
 
             <select className={`${navBarStyle.selectDropDown}`} value={selectedValue} onChange={handleCategoryDropDown}>

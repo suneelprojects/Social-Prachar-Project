@@ -73,12 +73,14 @@ const EnrollDetails = () => {
     console.log(submit)
   }
   return (
-    <div className='container'>
-    <div className=' row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2'>
+    <div className={`container mb-5`}>
+    <div className=' row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2'> 
         <div className={`col ${EnrollDetailsStyle.infoAboutUser}`}>
           <p>Please Provide Some Information About You</p>
         </div>
-      <form className='col'>
+        <div className={` ${EnrollDetailsStyle.detailsContainer}`}>
+
+      <form className='col ms-2'>
         <div className={EnrollDetailsStyle.inputDivs}>
         <label htmlFor="inputForText" className="form-label">Name :</label>
         <input type='text' className='form-control' onChange={handleName} placeholder='john'/>
@@ -138,6 +140,7 @@ const EnrollDetails = () => {
         )
       }
       </form>
+      </div>
     </div>
     </div>
   )

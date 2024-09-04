@@ -11,7 +11,7 @@ const UpComming = () => {
 
 
   const handleClick=(ZoomLink)=>{
-    window.location.href =ZoomLink
+    window.open(ZoomLink,"_blank");
   }
 
   return (
@@ -28,55 +28,58 @@ const UpComming = () => {
           </div>
         </div>
 
+        <div className={` row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 `}>
+
         {
             
             upcommingEventsArray.map((upCommingEvent,i)=>(
 
-          <div className={`${upCommingStyle.upcommingCard} row py-2`} key={i}>
-            <div className={`col-12  col-sm-12 col-md-12 col-lg-3 col-xl-3 ${upCommingStyle.colUpcommingCard} `} >
+            <div className={`col `}   key={i} 
+            >
+              <div className={`${upCommingStyle.upcommingCard}`} >
+
               <img src={upCommingEvent.upcommingImgOne} />
-  
-            </div>
-            <div className={`col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9  ${upCommingStyle.colUpcommingCard}`}>
-              <div className={`row ${upCommingStyle.rowUpcommingCard} ps-3`}>
-                <div className="col-lg-9 col-md-8 d-flex justify-content-center">
+
+              <div className={` ${upCommingStyle.rowUpcommingCard} `}>
+               
 
                 <div>
-                <div className={`${upCommingStyle.upcommingCardFirstText}`}>
-                  
+                <div className={`${upCommingStyle.upcommingCardFirstText} mt-3`}>
                   <p><i className="bi bi-stopwatch"></i>
                   90 Minutes</p>
                   <p>
                   <i className="bi bi-camera-video"></i>
                   Zoom Webinar</p>
+                  
                 </div>
                 <div className={`${upCommingStyle.upcommingCardSecondText}`} >
-                  <p>
+                <p> Join Our Career Orientation Class On &nbsp;
                   {upCommingEvent.BigText}
                   </p>
-                  <p>
-                  What is {upCommingEvent.BigText}
-                  </p>
-                  <p>
-                  How to Crack Your First Job as a {upCommingEvent.BigText} with 3 to 12 LPA
-                  </p>
-                 
+                  
                 </div>
               </div>
-                </div>
+                
 
-                <div className="col-lg-3 col-md-4 ArrowBtn">
-              
+                <div className=" ArrowBtn d-flex justify-content-end">
+                {/* <div className={`${upCommingStyle.upcommingCardFirstText}`}>
+                <p>
+                  {upCommingEvent.smallTextThree}</p>
+                  </div> */}
               <ArrowButton ArrowText='Enroll Now' handleClick={()=>{handleClick(upCommingEvent.ZoomLink)}}/>
-                    
+
                 </div>
               </div>
 
+              </div>
+
+              
             </div>
-          </div>
             ))
 
         }
+          </div>
+
       </div>
     </>
   );

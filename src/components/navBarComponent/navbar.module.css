@@ -2,7 +2,7 @@
 .navBarSticky{
     position: sticky;
     top: 0;
-    white-space: nowrap;
+    white-space: nowrap!important;
     font-size: 16px;
     line-height: 26px;
     z-index: 999;
@@ -53,9 +53,9 @@
     height: auto;
     width: 200px;
 }
-.spLogoIcon{
+/* .spLogoIcon{
     display: none;
-}
+} */
 
 .category{
     font-size: 17px;
@@ -228,7 +228,7 @@
     }
 }
 
-@media (max-width:325px) {
+@media (max-width:340px) {
   
     .containerfluidForNav{
       padding-left: 1px!important;
@@ -237,17 +237,19 @@
    
    
 } 
+@media (max-width:318px){
+    .spLogo{
+        height: auto;
+        width: 140px;
+    }
+}
 @media (max-width:340px){
     .spLogo{
-        display: none;
-    }
-    .spLogoIcon{
-        display: block;
         height: auto;
-        width: 60px; 
+        width: 145px;
     }
     .selectDropDown{
-        margin-top: 15px;
+        max-width: 80px;
     }
 }
 
@@ -255,19 +257,13 @@
     .spLogo{
         height: auto;
         width: 150px;
-        /* display: none; */
-    }
-    .spLogoIcon{
-        display: none;
-        height: auto;
-        width: 60px; 
     }
     .selectDropDown{
         margin-top: 5px;
     }
 }
 
-  @media(min-width:325px) and (max-width:464px){
+  @media(min-width:330px) and (max-width:464px){
   
     .containerfluidForNav{
       padding-left: 9px!important;

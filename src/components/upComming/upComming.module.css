@@ -4,24 +4,18 @@
     margin-top: 25px;
     margin-bottom: 25px;
   }
-  .upcommingCard .colUpcommingCard img{
+  .upcommingCard  img{
     width: 100%;
-    height: auto;
+    height: 280px;
     border-radius: 5px;
   }
   .upcommingCard{
     background-color: white;
     margin-top: 20px;
     margin-bottom: 20px;
-    border-left: white 5px solid;
     border-radius: 5px;
-    padding: 15px 15px 15px 10;
+    padding: 20px;
     box-shadow:  0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 0px 0 rgba(0, 0, 0, 0.19);
-  }
-  .upcommingCard:hover{
-    
-    border-left: #553cdf 5px solid;
-    transition: 1s ease all;
   }
   .upcommingCardFirstText p{
     font-size: 16px;
@@ -47,6 +41,9 @@
   .upcommingCard .upcommingCardFirstText text{
   display: block;
   }
+  .upcommingCard  img{
+    width: 100%;
+    height: auto;}
   }
   @media (min-width:992px){
     

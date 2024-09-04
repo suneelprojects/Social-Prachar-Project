@@ -39,7 +39,7 @@
   .whiteBtn button:hover{
     background-color: #553cdf;
     color: white;
-    border: solid 2px white;
+    border: solid 1px white;
   }
   .leftSideOfCircleAni{
     display: grid;
