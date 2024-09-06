@@ -13,7 +13,7 @@ const SPVideo = () => {
       </div>
       <div className="modal-body">
         <video controls >
-        <source src={`${process.env.PUBLIC_URL}/spVideo.mp4`} type="video/mp4" />
+        {/* <source src={`${process.env.PUBLIC_URL}/spVideo.mp4`} type="video/mp4" /> */}
         Your browser does not support the video tag.
       </video>
       </div>
