@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import EnrollDetailsStyle from './enrollDetails.module.css';
 import axios from 'axios';
+import enrollStyle from '../../assets/enrollDetails.jpeg'
 
 
 const EnrollDetails = () => {
@@ -72,12 +73,15 @@ const EnrollDetails = () => {
   
   return (
     <div className={`container mb-5`}>
+          <p className={EnrollDetailsStyle.para}>Please Provide Some Information About You</p>
+
       <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2">
         <div className={`col ${EnrollDetailsStyle.infoAboutUser}`}>
-          <p>Please Provide Some Information About You</p>
+          <img src={enrollStyle} />
         </div>
         <div className={`${EnrollDetailsStyle.detailsContainer}`}>
           <form className="col ms-2" onSubmit={handleSubmit}>
+          
             <div className={EnrollDetailsStyle.inputDivs}>
               <label htmlFor="inputForText" className="form-label">
                 Name :

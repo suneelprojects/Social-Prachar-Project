@@ -149,7 +149,13 @@
     }
     .gifVideo img{
       width: 100%;
-      height: 100%;
+      height: auto!important;
     }
   
+  }
+  @media (min-width:1400px){
+    .gifVideo img{
+      width: 400px;
+      height: auto!important;
+    }
   }
