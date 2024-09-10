@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import fourImageOne from '../../assets/flowtingBtn.png';
+import fourImageOne from '../../assets/fourStep (1).png';
+import fourImageTwo from '../../assets/fourStep (2).png';
+import fourImageThree from '../../assets/fourStep (3).png';
+import fourImageFour from '../../assets/fourStep (4).png';
 import circleSvg from '../../assets/circleSvg.png';
 import wavesPic from '../../assets/waves.png';
 import ParallaxEffect from "../extraComponents/ParallaxEffect";
@@ -11,23 +14,23 @@ const FourSteps = () => {
   const fourStepsArray = [
     {
       fourImg: fourImageOne,
-      fourFirstText: 65972,
-      fourSecondText: 'Completed Course'
+      fourFirstText: 155000,
+      fourSecondText: `Hours Classes Delivered`
     },
     {
-      fourImg: fourImageOne,
-      fourFirstText: 53710,
-      fourSecondText: 'Completed Course'
+      fourImg: fourImageTwo,
+      fourFirstText: 530,
+      fourSecondText: 'Batches Completed'
     },
     {
-      fourImg: fourImageOne,
-      fourFirstText: 48982,
-      fourSecondText: 'Completed Course'
+      fourImg: fourImageThree,
+      fourFirstText: 16000,
+      fourSecondText: 'Students Trained'
     },
     {
-      fourImg: fourImageOne,
-      fourFirstText: 500,
-      fourSecondText: 'Completed Course'
+      fourImg: fourImageFour,
+      fourFirstText: 9,
+      fourSecondText: `Prestigious EdTech \n Award Received`
     }
   ];
 
@@ -53,7 +56,7 @@ const FourSteps = () => {
           }
           return newNumbers;
         });
-      }, 10); 
+      }, 1); 
     });
 
     return () => intervals.forEach(interval => clearInterval(interval));
@@ -61,15 +64,15 @@ const FourSteps = () => {
 
   return (
     <>
-      <div className='fourStepsHover container-fluid' id=''>
+      <div className='fourStepsHover container-fluid mt-5'>
         <ParallaxEffect images={images} />
-        <div className={` row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 ${fourStepsStyle.fourStepContainer} py-5 `}>
+        <div className={` row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 ${fourStepsStyle.fourStepContainer} py-4 `}>
           {fourStepsArray.map((fourStepEle, i) => (
-            <div className={`col py-3 ${fourStepsStyle.fourStep}`} key={i}>
+            <div className={`col  ${fourStepsStyle.fourStep}`} key={i}>
               <div>
                 <img src={fourStepEle.fourImg} alt='Step' />
-                <p className={`${fourStepsStyle.fourStepTextOne}`}>{currentNumbers[i]}</p>
-                <p>{fourStepEle.fourSecondText}</p>
+                <p className={`${fourStepsStyle.fourStepTextOne}`}>{currentNumbers[i]}<span style={{fontSize:'30px'}}>+</span></p>
+                <p style={{ whiteSpace: 'pre-wrap' }}>{fourStepEle.fourSecondText}</p>
               </div>
             </div>
           ))}

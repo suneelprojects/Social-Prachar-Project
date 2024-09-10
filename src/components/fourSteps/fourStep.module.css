@@ -6,6 +6,10 @@
     justify-content: center;
     border-right: 1px solid rgb(183, 183, 183);
   }
+  .fourStep img{
+    width: 45px;
+    margin-bottom: 10px;
+  }
   .fourStep p
   {
     font-weight: 600;

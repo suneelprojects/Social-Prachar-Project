@@ -23,13 +23,13 @@ import Course from './components/Courses_category/Course.js'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import NavBar from './components/navBarComponent/navBar';
 import AllHomeComp from './components/allHomeComp';
-import GetTickets from './components/getTickets/getTickets';
 import MenuBar from './Dashboard/SideNavComponent/MenuBar.js';
 import NavCourses from './components/navBarComponent/navCourses.js';
 import ScrollToTop from './components/extraComponents/ScrollToTop.js';
 import DetailsPage from './components/courseDetailsPage/DetailsPage.js'
 import MyWork from './Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js';
 import {data} from './components/Cards/CardData.js'
+import Aboutus from './components/aboutus/aboutus.js';
 
 const App = () => {
   const [user,setUser]=useState();
@@ -50,7 +50,11 @@ const App = () => {
       <Route path="/" element={<AllHomeComp/>}/>
       <Route path='/courses' element={ <Course/>}/>
       <Route path="/details/:cardId" element={<DetailsPage/>} />
-      <Route path="/getTickets/:id" element={<GetTickets/>}/>
+      <Route path='/courses' element={ <Course/>}/>
+      <Route path="/details/:cardId" element={<DetailsPage />} />
+        <Route path="/" element={<AllHomeComp/>}/>
+        
+      <Route path='/aboutUs' element={<Aboutus/>}/>
       <Route path='/categoryCourses' element={<NavCourses/>}/>
         <Route path='/user' 
         element={user?<Navigate to='/profile'></Navigate>:<Login/>}>

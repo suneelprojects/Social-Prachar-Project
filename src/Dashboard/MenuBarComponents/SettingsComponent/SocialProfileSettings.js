@@ -72,7 +72,7 @@ const SocialProfileSettings = () => {
       <form className='update-profile-form p-2' onSubmit={handleSubmit} autoComplete='off'>
       <div className='row'>
              <div className='col-12 col-lg-3 col-sm-12 text-secondary'>
-        <h6><i class="bi bi-facebook"></i>Facebook</h6>
+        <h6><i className="bi bi-facebook"></i>Facebook</h6>
              </div>
              <div className='col-12 col-lg-9 col-sm-12'>
         <input className='form-control mb-2' type='url' placeholder='https://facebook.com/username' onChange={changeHandler} name='facebook' value={input.facebook} />
@@ -80,7 +80,7 @@ const SocialProfileSettings = () => {
             </div>
             <div className='row'>
              <div className='col-12 col-lg-3 col-sm-12 text-secondary'>
-        <h6><i class="bi bi-twitter"></i>Twitter</h6>
+        <h6><i className="bi bi-twitter"></i>Twitter</h6>
              </div>
              <div className='col-12 col-lg-9 col-sm-12'>
         <input className='form-control p-2 mb-2' type='url' placeholder='https://twitter.com/username' onChange={changeHandler} name='twitter' value={input.twitter} />
@@ -88,7 +88,7 @@ const SocialProfileSettings = () => {
         </div>
         <div className='row'>
              <div className='col-12 col-lg-3 col-sm-12 text-secondary'>
-        <h6><i class="bi bi-linkedin"></i> Linkedin</h6>
+        <h6><i className="bi bi-linkedin"></i> Linkedin</h6>
              </div>
              <div className='col-12 col-lg-9 col-sm-12'>
         
@@ -97,7 +97,7 @@ const SocialProfileSettings = () => {
         </div>
         <div className='row'>
              <div className='col-12 col-lg-3 col-sm-12 text-secondary'>
-        <h6><i class="bi bi-globe-americas"></i> Website</h6>
+        <h6><i className="bi bi-globe-americas"></i> Website</h6>
              </div>
              <div className='col-12 col-lg-9 col-sm-12'>
         <input className='form-control p-2 mb-2' type='urle' placeholder='https://example.com/' onChange={changeHandler} name='website' value={input.website} />
@@ -105,7 +105,7 @@ const SocialProfileSettings = () => {
         </div>
         <div className='row'>
              <div className='col-12 col-lg-3 col-sm-12 text-secondary'>
-        <h6><i class="bi bi-github"></i> GitHub</h6>
+        <h6><i className="bi bi-github"></i> GitHub</h6>
              </div>
              <div className='col-12 col-lg-9 col-sm-12'>
         <input className='form-control p-2 mb-2' type='url' placeholder='https://github.com/username' onChange={changeHandler} name='github' value={input.github} />

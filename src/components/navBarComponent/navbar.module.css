@@ -2,14 +2,18 @@
 .navBarSticky{
     position: sticky;
     top: 0;
-    white-space: nowrap;
+    white-space: nowrap!important;
     font-size: 16px;
     line-height: 26px;
     z-index: 999;
+    font-family: "Hind", sans-serif;
+    font-style: normal;
 }
 .navbarTogglerBar {
     border: none!important;
     outline: none!important;
+    position: absolute;
+    right: 0px!important;
 }
 .navbarTogglerBar:focus{
     outline: none!important;
@@ -20,15 +24,6 @@
     padding-right: 45px!important;
 }
 
-/* first nav css start */
-.firstNav{
-    background-color: #553cdf;
-    color: white;
-}
-.firstNav a i{
-    font-size: 14px!important;
-}
-/* first nav css ends */
 /* second nav css start */
 
 @media (max-width:992px){
@@ -51,11 +46,20 @@
 }
 .secondNav{
     background-color: white;
+    font-weight: 600;
 }
+.spLogo{
+    height: auto;
+    width: 200px;
+}
+/* .spLogoIcon{
+    display: none;
+} */
 
 
 .category{
     font-size: 17px;
+    font-weight: 300;
     color: #553cdf;
     border: #553cdf solid 2px;
     border-radius: 5px;
@@ -100,36 +104,11 @@
 }
 
 
-
-.line{
-    width: 1.2px;
-    height: 20px;
-    background-color: blue;
-    margin-top: 5px;
-    margin-left: 3px;
-    margin-right: 3px;
-}
-.cartDotNumber{
-    font-size: 10px;
-    width: 18px;
-    height: 18px;
-    margin-left: 12px;
-    margin-top:-30px ;
-    border-radius: 50%;
-    background-color: #553cdf;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-
 /* categoryMenu code starts */
 
 .categorySection .categoryMenu {
     position: absolute;
     background-color: white;
-    /* box-shadow: 0 2px 50px black; */
     margin-top: 20px;
     z-index: 999;
     opacity: 0;
@@ -146,41 +125,51 @@
 
 
 .categorySection .categoryMenu ul{
-    padding: 20px;
+    padding:  20px 20px 0px 20px;
 }
 
-.categorySection .categoryMenu li a{
+.categorySection .categoryMenu li button{
     text-decoration: none;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     line-height: 17.6px;
     width: 167px;
     height: 72px;
+    border: none;
     border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.categorySection .categoryMenu li a div{
+.categorySection .categoryMenu li button div{
     width: 90px!important;
+    text-align: left;
 }
-.categorySection .categoryMenu li a:hover{
-    
+.categorySection .categoryMenu li button:hover{
     background-color: #dedee3ea;
-
 }
-.categoryMenu text{
-    color: black;
+.categoryMenu p{
+    display: inline;
+    color: #1f1f25;
     font-weight: 500;
 }
 .textTwo{
-    color: #1f1f25;
-    font-weight: 400;
-    line-height: 14.4px;
+    color: #1f1f25!important;
+    font-weight: 400!important;
+    line-height: 14.4px!important;
 }
 .categorySection .categoryMenu img{
-    width: 50px;
-    height: 54px;
+    width: 45px;
+    height: 48px;
     border-radius: 5px;
+}
+.selectDropDown{
+    border-radius: 5px;
+    border: #553cdf 1px solid;
+    color: #553cdf;
+    max-width: 90px;
+    max-height: 35px;
+    outline: none;
+    
 }
 
 /* categoryMenu code ends */
@@ -203,110 +192,106 @@
     }
 }
 
-@media (max-width:992px){
-    .hiddenMobileSmSearch{
-        display: none!important;
-    }
-    .navbarTogglerBar{
-        /* margin-top: -10px; */
-        position: absolute;
-        right: 30px;
-    }
-}
-
-@media (min-width:992.3px){
-    .navbarTogglerBar{
-        /* margin-top: -10px; */
-        position: absolute;
-        right: 240px;
-    }
-}
 
 @media (max-width:1024px) {
     .hiddenMobilemd{
         display: none;
     }
 }
+@media (min-width:450px) {
+    .selectDropDown{
+        margin-left:40px;
+    }
+}
+@media (min-width:767px) {
+    .selectDropDown{
+        display: none;
+    }
+}
+
 @media (max-width:1200px) {
     .hiddenMobileLg{
         display: none!important;
     }
+    .hiddenMobileLgMin{
+        display: flex;
+        margin-right: 40px;
+    }
+    .hiddenMobileLgMin i{
+        color: #553cdf;
+    }
+}
+@media (min-width:1200.5px) {
+    .hiddenMobileLgMin{
+        display: none!important;
+    }
 }
 
-
-@media (max-width:325px) {
+@media (max-width:340px) {
   
-    .navbarTogglerBar{
-        position: absolute;
-        right: 2px;
-    }
     .containerfluidForNav{
-      padding-left: 10px!important;
+      padding-left: 1px!important;
+      padding-right: 1px!important;
+    }
+   
+   
+} 
+@media (max-width:318px){
+    .spLogo{
+        height: auto;
+        width: 140px;
+    }
+}
+@media (max-width:340px){
+    .spLogo{
+        height: auto;
+        width: 145px;
+    }
+    .selectDropDown{
+        max-width: 80px;
+    }
+}
+
+@media (min-width:340.6px) and (max-width:464px){
+    .spLogo{
+        height: auto;
+        width: 150px;
+    }
+    .selectDropDown{
+        margin-top: 5px;
+    }
+}
+
+  @media(min-width:330px) and (max-width:464px){
+  
+    .containerfluidForNav{
+      padding-left: 9px!important;
       padding-right: 5px!important;
-    }
-  } 
-  
-  @media(min-width:325px) and (max-width:464px){
-    .navbarTogglerBar{
-        position: absolute;
-        right: 10px;
-    }
-    .containerfluidForNav{
-      padding-left: 19px!important;
-      padding-right: 15px!important;
 
     }
+    
     }
   
     @media(min-width:464px) and (max-width:768px){
-        .navbarTogglerBar{
-            position: absolute;
-            right: 10px;
-        }
       .containerfluidForNav{
-        padding-left: 25px!important;
-        padding-right: 25px!important;
+        padding-left: 15px!important;
+        padding-right: 15px!important;
       }
-      
+      .spLogo{
+        height: auto;
+        width: 180px;
+    }
+    .selectDropDown{
+        margin-top: 10px;
+    }
     }  
+    @media (min-width:768px){
+        .categorySection{
+            margin-top: 10px;
+        }
+        .navBarSticky{
+            padding: 8px 0px 8px 0px;
+        }
+    }
 
-    .open{
-        height: 350px!important;
-        width: 100%!important;
-        background-color: white!important;
-        position: absolute!important;
-        top: 0!important;
-    }
-    .open input{
-        margin-top: 210px;
-        width: 95%;
-        height: 60px;
-        border: none;
-        outline: none;
-        font-size: 36px;
-        margin-bottom: 15px;
-        margin-left: 2%;
-    }
-    .open svg{
-        margin-bottom: 15px;
-    }
-    .openBtn{
-        position: absolute;
-        right: 10px;
-        top: 50px;
-        border: none;
-    }
-    input[type="search"]::-webkit-search-cancel-button {
-        -webkit-appearance: none; /* Hide the clear (X) button in Chrome */
-        appearance: none; /* Hide the clear (X) button in other browsers */
-      }
-      input[type="search"]::-webkit-search-decoration {
-        -webkit-appearance: none; /* Remove the decoration (magnifying glass icon) */
-        appearance: none;
-      }
-      
-      input[type="search"]::-ms-clear {
-        display: none; /* Hide the clear (X) button in Internet Explorer and Edge */
-        width: 0; 
-        height: 0;
-      }
+    

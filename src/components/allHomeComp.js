@@ -1,41 +1,35 @@
 import React from 'react'
 
-import TrustedBy from './trustedBy/trustedBy';
 import GateWay from './VideoGif/gateWay';
 import FourSteps from './fourSteps/fourSteps';
 import UpComming from './upComming/upComming';
-import Teacher from './teachers/teacher';
-import CarouselDot from './studentFeedBack/carouselDot';
 import TopCatogery from './topCatogery/topCatogery';
 import FooterBtn from './footerButton/footerBtn';
 import Footer from './footer/footer';
 import CircleAnimation from './circleAmination/circleAnimation';
-import NewsFullStory from './newComponent/NewsFullStory';
+import Partner from './clients/partners';
 import Home from './home/home';
-
-import Cards from './Cards/Cards'
-
-import Course from './Courses_category/Course'
-import HomeCards from './HomeCardComp/HomeCard';
+import EnrollDetails from './enrollDetails/enrollDetails';
 import HomeCourse from './HomeCardComp/HomeCourses';
-import SearchBar from './searchComp/searchBar';
+import Comments from './comments/comments';
+import NewsOnUs from './newsArticles/newsOnUs';
+
 
 const AllHomeComp = () => {
 
   return (
     <div>
       <Home/>
-      <TrustedBy/>
+      <FourSteps/>
+      <Partner/>
       <GateWay/>
+      <EnrollDetails/>
       <TopCatogery/>
-    
       <HomeCourse/>
       <CircleAnimation/>
       <UpComming/>
-      <FourSteps/>
-      <Teacher/>
-      <CarouselDot/>
-      <NewsFullStory/>
+      <NewsOnUs/>
+      <Comments/>
       <FooterBtn/>
       <Footer/>
     </div>

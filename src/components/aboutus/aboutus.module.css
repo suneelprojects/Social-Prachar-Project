@@ -1,0 +1,15 @@
+.containerXl {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.containerXl div{
+    background-color: #553cdf;
+    border-radius: 5px;
+    padding: 30px;
+}
+.containerXl p{
+    color: white;
+    font-size: 32px;
+    text-align: justify;
+}

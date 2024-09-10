@@ -2,6 +2,7 @@
 .DetailsHeader {
     width: 100%;
     height: 70vh;
+    margin-top: 150px;
     background: #ececec;
     display: flex;
     flex-direction: column;
@@ -208,10 +209,9 @@
   }
   .scrollButton span {
     display: inline-block;
-    font-size: 20px;
+    font-size:15px;
     transform: rotate(-90deg);
   }
-
   
   /* media queries */
   @media (max-width:376px){

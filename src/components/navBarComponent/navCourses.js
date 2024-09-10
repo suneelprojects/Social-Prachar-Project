@@ -16,10 +16,7 @@ const NavCourses = () => {
     const Level = ['All Levels', 'Beginner', 'Intermediate', 'Expert'];
     const Price = ['Free', 'Paid'];
 
-    const initialCategoryIndex = category ? items.indexOf(category) : -1;
-    const [checked, setChecked] = useState(
-        items.map((_, index) => index === initialCategoryIndex)
-    );
+    const [checked, setChecked] = useState(new Array(items.length).fill(false));
     const [showUncheckedShadow, setShowUncheckedShadow] = useState(new Array(items.length).fill(false));
 
     const [checkedTags, setCheckedTags] = useState(new Array(Tag.length).fill(false));
@@ -71,6 +68,24 @@ const NavCourses = () => {
     };
 
     useEffect(() => {
+        if (category) {
+            const categoryIndex = items.indexOf(category);
+            if (categoryIndex !== -1) {
+                const updatedChecked = items.map((_, index) => index === categoryIndex);
+                setChecked(prevChecked => {
+                    // Only update if the state is actually different to avoid re-renders
+                    if (JSON.stringify(prevChecked) !== JSON.stringify(updatedChecked)) {
+                        console.log("hiii",category)
+                        return updatedChecked;
+                    }
+                    return prevChecked;
+                });
+            }
+        }
+    }, [category]);
+    
+
+    useEffect(() => {
         handleScroll();
         document.addEventListener('mousedown', handleClickOutside);
         window.addEventListener('scroll', handleScroll);
@@ -80,12 +95,11 @@ const NavCourses = () => {
         };
     }, []);
 
-    
     return (
         <div className={courseCSS.categorypage}>
             <div className={courseCSS.cover_img}>
                 <img src={img} className={courseCSS.thumbnail} alt="" />
-                <h1>Courses</h1>
+                <h1>{category ? `Courses for ${category}` : `No Data Availible ${category}`}</h1>
             </div>
 
             <ToggleBar

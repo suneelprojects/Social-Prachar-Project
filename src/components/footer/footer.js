@@ -1,13 +1,15 @@
 import React from "react";
 import footerStyle from "./footer.module.css";
-import women from "../../assets/women-1.png";
-import studyHub from '../../assets/Studyhub.png'
+import footerImg from "../../assets/footer2_cta_image.png";
+import spLogo from '../../assets/SP_Logo.png'
+
 import ParallaxEffect from '../extraComponents/ParallaxEffect'
+import googlePlay from '../../assets/google_play.svg'
+import AppleStore from '../../assets/app_store.svg'
 
 import wavesPic from '../../assets/waves.png'
 import BookSvg from '../../assets/book.png'
-
-import { Link } from "react-router-dom";
+import whiteBulb from '../../assets/whiteBulb.png'
 
 const Footer = () => {
 
@@ -21,38 +23,74 @@ const Footer = () => {
       ];
 
 
-    var iconsArray=[<i className="bi bi-facebook"></i>,<i className="bi bi-instagram"></i>,<i className="bi bi-linkedin"></i>
-        ,<i className="bi bi-youtube"></i>,<i className="bi bi-instagram"></i>
+    var iconsArray=[{icon:<i className="bi bi-facebook"></i>,
+        iconLink:`https://www.facebook.com/socialprachar/`
+    },
+    {icon:<i className="bi bi-instagram"></i>,
+    iconLink:`https://www.instagram.com/socialprachar_institute/`},
+    {icon:<i className="bi bi-linkedin"></i>,
+    iconLink:`https://www.linkedin.com/company/6635034/admin/dashboard/`}
+    ,{icon:<i className="bi bi-youtube"></i>,
+    iconLink:`https://youtube.com/@socialprachar?si=jPmucrBrLin2Ppu6`},
+    {icon:<i className="bi bi-twitter-x"></i>,
+    iconLink:`https://x.com/i/flow/login?redirect_after_login=%2Fsocial_prachar`}
     ];
-    var useFullLinks=[<b>Usefull Links</b>,'Course',
-        'Mission & Vision',
-        'Join a Carrer',
-        'Zoom Meeting',
-        'Pricing Plan']
+    const OfficeDetails=[<b>Head Office : </b>,'#508, 5th Floor,',
+        'Manjeera Majestic Commercial,',
+        'JNTU - HiTech City Road,',
+        'KPHB, Hyderabad - 500072',
+        'Contact: +91-8019 479 419']
+    const TrainingCenter=[<b>Training Center</b>,'#301, 4th Floor,',
+            'Sathyabhama Commercial Complex, ',
+            'BhagyaNagar Colony,',
+            'KPHB, Hyderabad – 500072',
+            'Contact: +91-8019 479 419']    
+    const QuickLinks=[<b>Quick Links</b>,'Full Stack Web Development',
+        'AWS + DevOps',
+        'Data Science + AI',
+        'Digital Marketing',
+        'Private Policy']
+        
+    const NavToAppleStore=()=>{
+        window.open(`https://apps.apple.com/us/app/classplus/id1324522260`, "_blank");
+    }
+    const NavToPlayStore=()=>{
+        window.open(`https://play.google.com/store/apps/details?id=co.diy7.vjaau&hl=en_IN`, "_blank");
+    }
+    const NavToSocialPrachar=(iconLink)=>{
+        window.open(iconLink, "_blank");
+    }
 
   return (
+    <>
     <div className="containerFluidForPadding footerHover ">
         {/* footer certificate starts */}
         <ParallaxEffect images={images}/>
       <div className="">
-        <div className={`row ${footerStyle.footerCertificate}`}>
-            <div className={`col-xl-4 ${footerStyle.certificateImg}`} id={`${footerStyle.certificateImg}`} >
-            <img src={women} />
-
+        <div className={`row row-cols-sm-12 row-gap-5 py-3 ${footerStyle.footerCertificate}`}>
+           
+            
+            <div className={`col ${footerStyle.certificateText}`}>
+                <div className="d-block">
+                <span className={`d-flex ${footerStyle.whiteBulb}`}>
+                    <img src={whiteBulb}/>
+                    <h4>Learn On The Go</h4>
+                </span>
+                <p>
+                Build your Skills Certificate From<br/> the SocailPrachar Online course
+                </p>
+                <div className={` ${footerStyle.StoreBtns}`} >
+                    
+               <img src={AppleStore} className="me-3" onClick={NavToAppleStore}/>
+                <img src={googlePlay} onClick={NavToPlayStore}/>
+                </div>
+                </div>
+                
             </div>
 
-            <div className={`col-xl-4 ${footerStyle.certificateText}`} id={`${footerStyle.certificateText}`}>
-            <p className={`${footerStyle.gateWaytitle}`}>
-            Skills Certificate From<br/> the Studyhub
-            </p>
+            <div className={`col  ${footerStyle.certificateImg}`} id={`${footerStyle.certificateImg}`}>
+            <img src={footerImg} />
             </div>
-
-            <div className={`col-xl-4 ${footerStyle.certificateBtn}`} id={`${footerStyle.certificateBtn}`}>
-            <button className="btn btn-light">view All Button <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
-</svg></button>
-            </div>
-
         
 
         </div>
@@ -65,8 +103,9 @@ const Footer = () => {
             <div className={`col-12 col-sm-12 col-md-6 col-lg-3`}>
                 <div>
 
-                <div>
-                <img src={studyHub}/>
+                <div className={footerStyle.spLogo}>
+                
+                <img src={spLogo}/>
                 </div>
                 
                     <p>
@@ -79,10 +118,10 @@ const Footer = () => {
                 
                 <div className="d-flex gap-4">
                     {
-                        iconsArray.map((icon,i)=>(
+                        iconsArray.map((iconItem,i)=>(
                             <div className={`${footerStyle.mediaIcon}`} key={i}>
                     
-                    {icon}
+                    {<span onClick={()=>NavToSocialPrachar(iconItem.iconLink)}>{iconItem.icon}</span>}
                     </div>
                         ))
                     }
@@ -93,7 +132,7 @@ const Footer = () => {
             <div className={`col-12 col-sm-12  col-md-6 col-lg-3 ${footerStyle.fotterListMediaQuery}`}>
                 <div>
                     {
-                        useFullLinks.map((LinksList,i)=>(
+                        OfficeDetails.map((LinksList,i)=>(
                             <div className={`${footerStyle.useFullLink}`} key={i}>{LinksList}</div>
                             
                         ))
@@ -106,7 +145,7 @@ const Footer = () => {
             <div className={`col-12 col-sm-12  col-md-6 col-lg-3 ${footerStyle.fotterListMediaQuery}`}>
                 <div>
                     {
-                        useFullLinks.map((LinksList,i)=>(
+                        TrainingCenter.map((LinksList,i)=>(
                             <div className={`${footerStyle.Explore}`} key={i}>{LinksList}</div>
                         ))
                     }
@@ -119,21 +158,11 @@ const Footer = () => {
 
             <div className="col-12 col-sm-12 col-md-6 col-lg-3 ">
                 <div>
-                    <div>
-                    <b>Newsletter</b>
-                    </div>
-                   
-                    <p>Subscribe Our newsletter get update our new course</p>
-                   
-                    <div>
-                    <div className={`${footerStyle.subscribe}`}>
-                <input type="email" placeholder="Enter your Email" />
-                <button className="btn">Subscribe</button>
-                </div>
-                    </div>
-                    <div>
-                    <input type="checkbox"/><p>I agree to the terms of use and privacy policy.</p>
-                    </div>
+                {
+                        QuickLinks.map((LinksList,i)=>(
+                            <div className={`${footerStyle.Explore}`} key={i}>{LinksList}</div>
+                        ))
+                    }
                 </div>
                 
             </div>
@@ -147,13 +176,14 @@ const Footer = () => {
       </div>
 
         {/* footer certificate ends */}
-        <div className={`${footerStyle.copyRight}`}>
-            <p>
-            Copyright © 2024 All Rights Reserved by Social Tech
-            </p>
-        </div>
 
     </div>
+        <div className={`${footerStyle.copyRight}`}>
+            <p>
+            Copyright © 2024 All Rights Reserved by SocailPrachar
+            </p>
+        </div>
+    </>
   );
 };
 

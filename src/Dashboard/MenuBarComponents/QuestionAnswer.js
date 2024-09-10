@@ -10,7 +10,7 @@ const QuestionAnswer = () => {
            <label htmlFor='sortby'>sort by:</label>
            </div>
            <div className='col-12 col-lg-6 col-sm-12'>
-    <select class="form-select" aria-label="Default select example">
+    <select className="form-select" aria-label="Default select example">
   <option value="1">All(0)</option>
   <option value="2">Read(0)</option>
   <option value="3">Unread(0)</option>

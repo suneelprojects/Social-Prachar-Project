@@ -1,26 +1,22 @@
-import upcommingImg from "../../assets/upcomming.jpg";
+import fullstackdev from "../../assets/fullstackdev.png";
+import dataScience from "../../assets/dataScience.jpg";
+import awsDevops from "../../assets/awsDevops.png";
 
 const upcommingEventsArray = [
     {
-        upcommingImgOne: upcommingImg,
-        smallTextOne: 'July 24, 2023',
-        smallTextTwo: '10:45 AM - 01:30 PM',
-        smallTextThree: 'Yarra Park, Melbourne',
-        BigText: 'Edu Fest 2023: Igniting Minds, Transforming Lives'
+        upcommingImgOne: fullstackdev,
+        BigText: 'Full Stack',
+        ZoomLink:'https://us06web.zoom.us/meeting/register/tZYrf-GvrjorHtTuvQSeCHNkbs25lVyW9SLF#/registration'
     },
     {
-        upcommingImgOne: upcommingImg,
-        smallTextOne: 'July 24, 2023',
-        smallTextTwo: '10:45 AM - 01:30 PM',
-        smallTextThree: 'Yarra Park, Melbourne',
-        BigText: 'Mind Masters Workshop: Unlock Your Cognitive Potential'
+        upcommingImgOne: dataScience,
+        BigText: 'Data Science',
+        ZoomLink:'https://us06web.zoom.us/meeting/register/tZ0tce6trD0pH9D6CuD2VviHefkLnBqdFcp0#/registration'
     },
     {
-        upcommingImgOne: upcommingImg,
-        smallTextOne: 'July 24, 2023',
-        smallTextTwo: '10:45 AM - 01:30 PM',
-        smallTextThree: 'Yarra Park, Melbourne',
-        BigText: 'Tech Talks 2023: Navigating the Digital Frontier'
+        upcommingImgOne: awsDevops,
+        BigText: 'AWS DevOps',
+        ZoomLink:'https://us06web.zoom.us/meeting/register/tZItcuChqzIqEtTaVcLBuKkAao5s_hM3WBYJ#/registration'
     }
 ];
 

@@ -95,6 +95,14 @@ fetchUserData();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // let newProfileImageUrl = input.profileImg
+    //   ? await handleImageUpload(input.profileImg, 'profile-images')
+    //   :userDetails.profileImageUrl;
+
+    // let newCoverImageUrl = input.coverImg
+    //   ? await handleImageUpload(input.coverImg, 'cover-images')
+    //   : userDetails.coverImageUrl;
+
     try {
       const userRef = doc(db, 'Users', user.uid);
       const bioRawContentState = convertToRaw(editorState.getCurrentContent());
@@ -200,10 +208,10 @@ fetchUserData();
           ) : (
             <img src={defaultProfileImg} alt="Profile" />
           )}
-        <i class={`bi bi-camera ${style.ProfileBi}`} onClick={handleProfileImageClick}></i>
+        <i className={`bi bi-camera ${style.ProfileBi}`} onClick={handleProfileImageClick}></i>
         </div>
     <div >
-         <i class={`bi bi-camera ${style.coverBi} `} onClick={handleCoverImageClick}></i>
+         <i className={`bi bi-camera ${style.coverBi} `} onClick={handleCoverImageClick}></i>
     </div>
      
      
@@ -338,7 +346,7 @@ fetchUserData();
 <div className='col-12 col-lg-6 col-sm-6'>
         <label htmlFor='display'>Display name publicly as</label>
         
-    {userDetails? (    <select class="form-select mb-2 p-3" aria-label="Default select example" onChange={changeHandler}  
+    {userDetails? (    <select className="form-select mb-2 p-3" aria-label="Default select example" onChange={changeHandler}  
     name="userName"
     value={input.userName}
         >

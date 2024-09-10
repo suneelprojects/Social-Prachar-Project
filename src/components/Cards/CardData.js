@@ -8,7 +8,6 @@ import img7 from '../../assets/img7.jpg';
 import img8 from '../../assets/img8.jpg';
 import authorPhoto from '../../assets/authorphoto.jpg';
 
-
 export const data = [
     {
         id: 1,

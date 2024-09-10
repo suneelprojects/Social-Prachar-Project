@@ -13,8 +13,17 @@
   background-color: #543cdfa7;
 }
 
-.scrollButton span {
-  display: inline-block;
-  font-size: 20px;
-  transform: rotate(-90deg);
+.sticky{
+    width: 40px;
+    height: 40px;
+    background-color:  #553cdf;
+    display: flex;
+    justify-content: center!important;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+  }
+
+.sticky i{
+  margin-left: 8px;
 }

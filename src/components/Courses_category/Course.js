@@ -5,14 +5,12 @@ import Cards from '../Cards/Cards';
 import ToggleBar from '../Togglebar/ToggleBar'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
 export const items = ['Accounting', 'Finance', 'Development', 'Design & Art', 'Business', 'Marketing', 'HR'];
 export const Tag = ['App', 'Book', 'Business', 'Course', 'Data', 'Design', 'Education', 'LMS', 'Web Development'];
 export const Level = ['All Levels', 'Beginner', 'Intermediate', 'Expert'];
 export const Price = ['Free', 'Paid'];
-
-
 const Course = () => {
+
 
     const [checked, setChecked] = useState(new Array(items.length).fill(false));
     const [showUncheckedShadow, setShowUncheckedShadow] = useState(new Array(items.length).fill(false));

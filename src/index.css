@@ -2,6 +2,8 @@
 .containerFluidForPadding{
   padding-left: 55px;
   padding-right: 55px;
+  font-family: "Hind", sans-serif;
+  font-style: normal;
 }
 ul li{
   list-style: none;
@@ -12,11 +14,13 @@ ul li{
 /* the below is also applied applied for home.js code STARTS  */
 
 .bulbSpan img{
-  width: 25px;
+  width: 22px;
   margin-right: 10px;
 }
 .blueText{
   color: #553cdf;
+  font-weight: 500;
+  line-height: 26px;
 }
 .gateWaytitle{
   font-size: 40px!important;
@@ -26,6 +30,7 @@ ul li{
 
 .greyText{
   color: gray;
+  font-weight: 500;
   font-size: 16px;
 }
 /* the above is also applied applied for home.js code ends  */
@@ -39,15 +44,16 @@ ul li{
   background-color: #553cdf;
   color: white;
   height: 45px;
-  width: 168px;
-  
+  max-width: 168px;
 }
 .ArrowBtn button:hover{
   background-color: white;
   color: #553cdf;
   border:1px solid #553cdf;
 }
-
+.ArrowBtn button:active{
+  color: #553cdf;
+}
 
 
 
@@ -63,17 +69,14 @@ copy right  ,sticky navbar , moving on hovers  */
   
 
 } 
-
-@media(min-width:325px) and (max-width:464px){
+@media(max-width:325px){
   .containerFluidForPadding{
-    padding-left: 15px!important;
-    padding-right: 15px!important;
+    padding-left: 30px!important;
+    padding-right: 30px!important;
   }
-  
+}
 
-  }
-
-  @media(min-width:464px) and (max-width:768px){
+  @media(min-width:325px) and (max-width:768px){
     .containerFluidForPadding{
       padding-left: 25px!important;
       padding-right: 25px!important;

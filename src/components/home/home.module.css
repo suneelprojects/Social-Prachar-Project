@@ -1,7 +1,10 @@
+.homeLeftSide ,.homeRightSide{
+  font-family: "Hind", sans-serif!important;
+  font-style: normal!important;
+}
 .homeLeftSide{
     display: flex;
     align-items: center;
-    font-family: sans-serif;
 }
 /* css of bulbSpan
 buleText
@@ -13,7 +16,7 @@ greyText availile at index.css
     font-weight: 600;
     color: #221859;
     line-height: 64px;
-    
+    /* max-height: 132px; */
   }
 .homeLeftSide .imgIcons img{
     height: 45px;
@@ -50,6 +53,9 @@ greyText availile at index.css
     border-radius: 50%;
 }
 .homeLeftSide .studentNoText{
+    display: inline;
+    font-weight: 600;
+    line-height: 24px;
     font-size: 24px;
     color: #221859;
 }
@@ -80,6 +86,7 @@ greyText availile at index.css
     z-index: 40;
 }
 .homeRightSide  .flowtingBtnFirst {
+    font-weight: 500;
     font-size: 24px;
     color: #221859;
 }
@@ -93,7 +100,11 @@ greyText availile at index.css
     animation: bouncing 10s ease-in-out infinite;
     
 }
-
+.forFlowingBtn img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
 @keyframes bouncing{
     0%{
         transform: translate(0px,20px);
@@ -226,11 +237,10 @@ greyText availile at index.css
 }
 
 .yellowLine{
-    /* float: right; */
+    margin-top: -50px!important;
     height: auto;
     width: auto;
-    margin-bottom: 50px;
-    margin-left: 50%;
+    margin-left: 42%;
 }
 @media (max-width:768px){
     .yellowLine{

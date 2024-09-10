@@ -2,16 +2,19 @@ import React from "react";
 import homeStyle from  "./home.module.css";
 import bulb from "../../assets/bulb.png";
 import homepic01 from "../../assets/01.png";
-import iconMan from "../../assets/iconMan.png";
+import iconPicOne from "../../assets/smallPicOne.png";
+import iconPicTwo from "../../assets/smallPicTwo.png";
+import iconPicThree from "../../assets/smallPicThree.png";
 import flowtingBtn from '../../assets/flowtingBtn.png'
 import ArrowButton from "../extraComponents/arrowButton";
 import ParallaxEffect from '../extraComponents/ParallaxEffect'
 import SvgBulb from '../../assets/bulbSvg.png'
 import dumbelSvg from '../../assets/dumbel.png'
 import BookSvg from '../../assets/book.png'
+import flowtingBtn2 from '../../assets/noOfCourses.png'
 
 import yellowLine from '../../assets/yellowLine.png'
-
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const images = [
@@ -25,6 +28,12 @@ const Home = () => {
       className:'objectThree',
        dataValue: '5', alt: 'Image 3' },
   ];
+  const Navigate =useNavigate();
+
+  const handleClick=()=>{
+    Navigate('/courses');
+  }
+
   return (
     <>
     <div className="main-container container-fluid" id="forFooterBtn">
@@ -33,38 +42,39 @@ const Home = () => {
         {/* content side of home code starts */}
         <div className={`col-md-6 col-lg-6 col-xl-6 ${homeStyle.homeLeftSide}`} >
           <div>
+            <div className="d-flex">
             <span className='bulbSpan'>
               <img src={bulb} />
             </span>
-            <text className="blueText">Gateway to Lifelong Learning</text>
-            <br />
-            <text className={`${homeStyle.title}`}>
-              Unlock Your Potential with Online Learning
-    <img src={yellowLine} alt="yellowLine" className={`${homeStyle.yellowLine}`}/>
+            <p className="blueText">Gateway to Lifelong Learning</p>
+            </div>
+            <p className={`${homeStyle.title}`}>
+              Unlock Your Potential with SocialPrachar
 
-            </text>
+            </p>
+    <img src={yellowLine} alt="yellowLine" className={`${homeStyle.yellowLine} `}/>
             <br />
-            <text className="greyText">
-              Discover a world of knowledge and opportunities with our online
-              education platform pursue a new career.
-            </text>
+            <p className="greyText ">
+            Discover a world of knowledge and opportunities with our Mentorly job-ready courses.
+            </p>
 
             <div className="row mt-4 ">
               <div className="col-12 col-sm-12 col-xl-5">
-                <ArrowButton ArrowText='View All Button'/>
+                <ArrowButton ArrowText='View All Courses' handleClick={handleClick}/>
               </div>
               <div className="col-12 col-sm-12 col-xl-6 d-flex justify-content-around">
                 <div className={`${homeStyle.imgIcons } d-flex`}>
-                  <img src={iconMan} />
-                  <img src={iconMan} className={`${homeStyle.secondIconImg}`} />
-                  <img src={iconMan} className={`${homeStyle.thirdIconImg}`} />
+                  <img src={iconPicOne} />
+                  <img src={iconPicTwo} className={`${homeStyle.secondIconImg}`} />
+                  <img src={iconPicThree} className={`${homeStyle.thirdIconImg}`} />
                   <div className={`${homeStyle.plusIcon}`}>+</div>
                 </div>
-                <text className="greyText">
-                  <span className={`${homeStyle.studentNoText}`}>2k students</span>
-                  <br />
-                  Joint our online Class
-                </text>
+                <div>
+                  <p className={`${homeStyle.studentNoText}`}>16k students</p>
+                <p className="greyText">
+                  Strong Alumni
+                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -78,18 +88,18 @@ const Home = () => {
           <div className={`${homeStyle.flowtingLeftBtn}`}>
             <img src={flowtingBtn}/>
             <div >
-            <text className={`${homeStyle.flowtingBtnFirst}`}>4.5</text><br/>
-            <text className={`${homeStyle.flowtingBtnGreyText}`}>{"("}2.4k reviews{")"}</text>
+            <span className={`${homeStyle.flowtingBtnFirst}`}>4.8</span><br/>
+            <span className={`${homeStyle.flowtingBtnGreyText}`}>{"("}4.8k reviews{")"}</span>
             </div>
           </div>
 
 
           <div className={`${homeStyle.flowtingRightBtn}`}>
             
-            <img src={flowtingBtn}/>
+            <img src={flowtingBtn2}/>
             <div >
-            <text className={`${homeStyle.flowtingBtnFirst}`}>100+</text><br/>
-            <text className={`${homeStyle.flowtingBtnGreyText}`}>{"("}Online Courses{")"}</text>
+            <span className={`${homeStyle.flowtingBtnFirst}`}>20+</span><br/>
+            <span className={`${homeStyle.flowtingBtnGreyText}`}>{"("}job ready Courses{")"}</span>
             </div>
             </div>
 
