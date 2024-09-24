@@ -1,0 +1,57 @@
+/** @format */
+
+.popupCard {
+  position: relative;
+  top: -50%;
+  left: 70%;
+  transform: translate(-50%, -20%);
+  width: 420px;
+  padding: 30px;
+  background-color: #553cdf;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.popupContent {
+  font-family: Arial, sans-serif;
+}
+
+.popupContent h1 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  color: white;
+}
+
+.popupContent h3 {
+  color: red;
+}
+
+.popupContent p {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.CancelButton {
+  position: relative;
+  top: -10%;
+  left: 95%;
+  font-size: 25px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  width: 40px; /* Set the desired width */
+  height: 40px; /* Set the height equal to width */
+  border-radius: 50%;
+  color:black; /* Optional: text color for better visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.CancelButton:hover {
+  /* background-color: darkblue;*/
+  box-shadow: 0 4px 8px rgb(0, 0, 0.90); 
+  transition: all 0.3s ease; /* Smooth transition for the effect */
+}

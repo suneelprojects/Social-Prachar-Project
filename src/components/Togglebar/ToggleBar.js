@@ -75,7 +75,7 @@ const ToggleBar = ({
                 className={`${ToggleBarCSS.toggleContent} ${isOpen ? ToggleBarCSS.show : ''}`}
             >
                 <div className={`${ToggleBarCSS.TogglebtnContent} ${isOpen ? ToggleBarCSS.show : ''}`}>
-                    
+
                     <div className={ToggleBarCSS.category}>
                         <button className={ToggleBarCSS.Closebtn} onClick={() => setIsOpen(false)}>&#x2715;</button>
                         <div className={ToggleBarCSS.checkbox}>
@@ -83,10 +83,10 @@ const ToggleBar = ({
                                 <p>Search</p>
                                 <div className={courseCSS.searchBar}>
                                     <input type="text" placeholder='search' />
-                                    {/* <button><FontAwesomeIcon icon={faSearch} /></button> */}
                                 </div>
                             </div>
                             <hr />
+
                             {/* Category part */}
                             <div className={courseCSS.categories}>
                                 <h5>Category</h5>
@@ -104,6 +104,7 @@ const ToggleBar = ({
                                 ))}
                             </div>
                             <hr />
+
                             {/* Tag part */}
                             <div className={courseCSS.categories}>
                                 <h5>Tags</h5>
@@ -121,6 +122,7 @@ const ToggleBar = ({
                                 ))}
                             </div>
                             <hr />
+
                             {/* Level part */}
                             <div className={courseCSS.categories}>
                                 <h5>Level</h5>

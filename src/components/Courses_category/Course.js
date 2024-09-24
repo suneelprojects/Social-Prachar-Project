@@ -1,16 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import courseCSS from './Course.module.css';
 import img from '../../assets/01-5.jpg';
+import { data } from '../Cards/CardData';
 import Cards from '../Cards/Cards';
-import ToggleBar from '../Togglebar/ToggleBar'; 
+import ToggleBar from '../Togglebar/ToggleBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-export const items = ['Accounting', 'Finance', 'Development', 'Design & Art', 'Business', 'Marketing', 'HR'];
-export const Tag = ['App', 'Book', 'Business', 'Course', 'Data', 'Design', 'Education', 'LMS', 'Web Development'];
+
+export const items = ['Web Development', 'Analytics', 'Marketing', 'Accounting', 'Finance', 'HR Analytics'];
+export const Tag = ['App', 'Business', 'Course', 'Data', 'Design', 'Education','Web Development'];
 export const Level = ['All Levels', 'Beginner', 'Intermediate', 'Expert'];
 export const Price = ['Free', 'Paid'];
-
 
 const Course = () => {
 
@@ -27,6 +28,8 @@ const Course = () => {
     const [showUncheckedShadowPrice, setShowUncheckedShadowPrice] = useState(new Array(Price.length).fill(false));
 
     const [showButton, setShowButton] = useState(false);
+    const [refreshCards, setRefreshCards] = useState([]);
+    const [filteredCards, setFilteredCards] = useState([]);
 
     const containerRef = useRef(null);
 
@@ -35,6 +38,7 @@ const Course = () => {
         setCheckedTags(new Array(Tag.length).fill(false));
         setCheckedLevel(new Array(Level.length).fill(false));
         setCheckedPrice(new Array(Price.length).fill(false));
+        setRefreshCards(true);
     };
 
     const handleClick = () => {
@@ -65,8 +69,18 @@ const Course = () => {
     const handleCheckboxClick = (index) => {
         const updatedChecked = checked.map((item, i) => i === index ? !item : item);
         setChecked(updatedChecked);
-        const updatedShowUncheckedShadow = updatedChecked.map((item, i) => i === index && !item);
-        setShowUncheckedShadow(updatedShowUncheckedShadow);
+        const selectedCategories = items.filter((item, i) => updatedChecked[i]);
+        const filteredCardsTemp = data.filter((card) => selectedCategories.includes(card.category));
+        setFilteredCards(filteredCardsTemp.length > 0 ? filteredCardsTemp : data);
+
+        if (!updatedChecked[index]) {
+            setRefreshCards(false);
+        } else {
+            setRefreshCards(true);
+        }
+
+        // Update the Cards component with the filtered cards
+        <Cards filters={{ checkedCategories: updatedChecked, checkedTags, checkedLevel, checkedPrice }} cards={filteredCards} />;
     };
 
     const handleTagCheckboxClick = (index) => {
@@ -102,9 +116,6 @@ const Course = () => {
 
     return (
         <div className={courseCSS.categorypage}>
-            <div className={courseCSS.navbar}>
-                <navbar />
-            </div>
             <div className={courseCSS.cover_img}>
                 <img src={img} className={courseCSS.thumbnail} alt="" />
                 <h1>Courses</h1>
