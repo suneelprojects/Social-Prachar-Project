@@ -147,6 +147,7 @@
 .scrollButton {
   position: fixed;
   right: 20px;
+  bottom: 20px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -154,9 +155,11 @@
   background: #553cdf;
   cursor: pointer;
 }
+
 .scrollButton:hover {
   background-color: #543cdfa7;
 }
+
 .scrollButton span {
   display: inline-block;
   font-size: 20px;

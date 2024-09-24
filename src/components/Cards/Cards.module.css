@@ -168,7 +168,7 @@ button:focus {
 .listItem .starPrice {
   cursor: pointer;
   position: relative;
-  top: -15px;
+  top: 15px;
 }
 .listItem .course_title:hover {
   color: #553cdf;
@@ -247,7 +247,7 @@ button:focus {
 /* inner card styling */
 .course_title:hover {
   color: #553cdf;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .CardTitle {
@@ -285,7 +285,14 @@ button:focus {
   width: 20px;
   height: 20px;
 }
-
+.users {
+  position: relative;
+  top: -3px;
+}
+.students {
+  position: relative;
+  top: 3px;
+}
 .faculty_name {
   color: #737477;
   font-size: 14px;
@@ -293,6 +300,7 @@ button:focus {
 .starPrice {
   display: flex;
   justify-content: space-between;
+  padding-top: 20px;
 }
 .starPrice p {
   position: relative;
@@ -381,7 +389,8 @@ button:focus {
     height: 238px;
   }
 }
-@media (max-width: 365px) {
+
+@media (max-width: 376px) {
   .cardImgContainer {
     margin-bottom: -50px;
   }
