@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faEnvelope, faGraduationCap, faList, faPen } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import CountDownSide from '../countDown/CountDownSide';
+import { auth } from '../../firebase';
 
 const DetailsPage = () => {
     const { cardId } = useParams();
@@ -17,10 +18,24 @@ const DetailsPage = () => {
     const [showButton, setShowButton] = useState(false);
     const [showMore, setShowMore] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
+    const [user,setUser]=useState();
+
+
+    useEffect(() => {
+      const unsubscribe = auth.onAuthStateChanged((user) => {
+        setUser(user);
+      });
+      return () => unsubscribe();
+    }, []);
 
     const navigate = useNavigate();
     const handleStartLearning = () => {
+        if(user){
+            navigate("profile/enrolled-courses")
+        }
+        else{
         navigate('/login');
+        }
     };
 
     const handleClickShow = () => {
