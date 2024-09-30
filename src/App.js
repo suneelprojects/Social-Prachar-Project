@@ -69,6 +69,7 @@ const App = () => {
             <Route path='enrolled-courses' element={<EnrolledCourses/>}>
             <Route index element={<Enrolled/>} />
             <Route path='enrolled' element={<Enrolled/>}/>
+            <Route path=':cardId' element={<Enrolled/>} />
             <Route path='active-courses' element={<ActiveCourses/>} />
             <Route path='completed-courses' element={<CompletedCourses/>} />
             </Route>

@@ -31,7 +31,9 @@ const DetailsPage = () => {
     const navigate = useNavigate();
     const handleStartLearning = () => {
         if(user){
-            navigate("profile/enrolled-courses")
+            navigate(`/profile/enrolled/${card.cardId}`, {
+                state: { cardId: card.cardId },
+              });
         }
         else{
         navigate('/login');
