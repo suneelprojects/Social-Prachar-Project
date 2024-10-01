@@ -24,7 +24,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import NavBar from './components/navBarComponent/navBar';
 import AllHomeComp from './components/allHomeComp';
 import MenuBar from './Dashboard/SideNavComponent/MenuBar.js';
-import NavCourses from './components/navBarComponent/navCourses.js';
 import ScrollToTop from './components/extraComponents/ScrollToTop.js';
 import DetailsPage from './components/courseDetailsPage/DetailsPage.js'
 import MyWork from './Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js';
@@ -55,7 +54,6 @@ const App = () => {
         <Route path="/" element={<AllHomeComp/>}/>
         
       <Route path='/aboutUs' element={<Aboutus/>}/>
-      <Route path='/categoryCourses' element={<NavCourses/>}/>
         <Route path='/user' 
         element={user?<Navigate to='/profile'></Navigate>:<Login/>}>
         </Route>
