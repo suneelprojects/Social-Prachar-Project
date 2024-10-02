@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-height: 200px;
   }
   .topCategory  .topCategoryBox:hover{
     border: #553cdf 1px solid;

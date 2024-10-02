@@ -12,7 +12,7 @@ const EnrollDetails = () => {
   const [Email, setEmail] = useState('');
   const [Number, setNumber] = useState('');
 
-  const mainOptions = {
+   const mainOptions = {
     'Web Development': [
       'Full Stack Java',
       'Full Stack Python',
@@ -112,7 +112,7 @@ const EnrollDetails = () => {
               </div>
             )}
 
-            {Email.includes('@') && (
+            {((Email.includes('@'))&&(Name.length > 2)) && (
               <div className={EnrollDetailsStyle.inputDivs}>
                 <label htmlFor="inputForNumber" className="form-label">
                   Mobile No :
@@ -128,7 +128,7 @@ const EnrollDetails = () => {
               </div>
             )}
 
-            {Number.length > 9 && (
+            { ((Email.includes('@'))&&(Name.length > 2)&&Number.length > 9) && (
               <div className={EnrollDetailsStyle.inputDivs}>
                 <label htmlFor="inputForCategory" className="form-label">
                   Select your course :
@@ -145,6 +145,7 @@ const EnrollDetails = () => {
                   <option value="Marketing">Marketing</option>
                   <option value="Accounting">Accounting</option>
                   <option value="Finance">Finance</option>
+                  <option value="HR Analytics">HR Analytics</option>
                 </select>
               </div>
             )}

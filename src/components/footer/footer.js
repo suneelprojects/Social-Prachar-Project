@@ -72,7 +72,7 @@ const Footer = () => {
             
             <div className={`col ${footerStyle.certificateText}`}>
                 <div className="d-block">
-                <span className={`d-flex ${footerStyle.whiteBulb}`}>
+                <span className={`d-flex ms-1 ${footerStyle.whiteBulb}`}>
                     <img src={whiteBulb}/>
                     <h4>Learn On The Go</h4>
                 </span>
@@ -81,7 +81,7 @@ const Footer = () => {
                 </p>
                 <div className={` ${footerStyle.StoreBtns}`} >
                     
-               <img src={AppleStore} className="me-3" onClick={NavToAppleStore}/>
+               <img src={AppleStore} className={footerStyle.AppleStore} onClick={NavToAppleStore}/>
                 <img src={googlePlay} onClick={NavToPlayStore}/>
                 </div>
                 </div>

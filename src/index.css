@@ -81,13 +81,13 @@ copy right  ,sticky navbar , moving on hovers  */
       padding-left: 25px!important;
       padding-right: 25px!important;
     }
-    
 
+  }
+  @media (max-width:768px) {
     .gateWaytitle{
       font-size: 24px!important;
     }
   }
-  
 
   /* home container hover starts */
   .main-container , #topCategoryParallex{
