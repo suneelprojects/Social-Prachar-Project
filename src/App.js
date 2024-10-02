@@ -23,11 +23,9 @@ import Course from './components/Courses_category/Course.js'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import NavBar from './components/navBarComponent/navBar';
 import AllHomeComp from './components/allHomeComp';
-import MenuBar from './Dashboard/SideNavComponent/MenuBar.js';
 import ScrollToTop from './components/extraComponents/ScrollToTop.js';
 import DetailsPage from './components/courseDetailsPage/DetailsPage.js'
 import MyWork from './Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js';
-import {data} from './components/Cards/CardData.js'
 import Aboutus from './components/aboutus/aboutus.js';
 import { WishlistProvider } from './Dashboard/MenuBarComponents/WishListContext.js';
 
