@@ -4,7 +4,6 @@ import girl from "../../assets/girl.jpg";
 import videoGifStyle from './videoGif.module.css'
 import videoConImg1 from '../../assets/videoConImg1.png'
 import videoConImg2 from '../../assets/videoConImg2.png'
-// import Video from '../../assets/'
 import gifPic from "../../assets/gifPic.png";
 import BulbText from "../extraComponents/bulbText";
 import SPVideo from "./SPVideo";

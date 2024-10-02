@@ -24,11 +24,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import NavBar from './components/navBarComponent/navBar';
 import AllHomeComp from './components/allHomeComp';
 import MenuBar from './Dashboard/SideNavComponent/MenuBar.js';
-import NavCourses from './components/navBarComponent/navCourses.js';
 import ScrollToTop from './components/extraComponents/ScrollToTop.js';
 import DetailsPage from './components/courseDetailsPage/DetailsPage.js'
 import MyWork from './Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js';
-import { data } from './components/Cards/CardData.js'
+import {data} from './components/Cards/CardData.js'
 import Aboutus from './components/aboutus/aboutus.js';
 import { WishlistProvider } from './Dashboard/MenuBarComponents/WishListContext.js';
 
@@ -47,30 +46,32 @@ const App = () => {
       <WishlistProvider>
       <BrowserRouter>
         <ScrollToTop/>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<AllHomeComp />} />
-          <Route path='/courses' element={<Course />} />
-          <Route path="/details/:cardId" element={<DetailsPage />} />
-
-          <Route path='/aboutUs' element={<Aboutus />} />
-          <Route path='/categoryCourses' element={<NavCourses />} />
-          <Route path='/user'
-            element={user ? <Navigate to='/profile'></Navigate> : <Login />}>
-          </Route>
-          <Route path='/login' element={<Login />}></Route>
-          <Route path='/dashboard' element={<Dashboard />}></Route>
-          <Route path='/signup' element={<SignUp />}></Route>
-          <Route path='/profile' element={<Profile />}>
-            <Route index element={<Dashboard />} />
-            <Route path='myprofile' element={<MyProfile />} />
-            <Route path='mywork' element={<MyWork />} />
-            <Route path='enrolled-courses' element={<EnrolledCourses />}>
-              <Route index element={<Enrolled />} />
-              <Route path='enrolled' element={<Enrolled />} />
-              <Route path=':cardId' element={<Enrolled />} />
-              <Route path='active-courses' element={<ActiveCourses />} />
-              <Route path='completed-courses' element={<CompletedCourses />} />
+      <NavBar/>
+      <Routes>
+      <Route path="/" element={<AllHomeComp/>}/>
+      <Route path='/courses' element={ <Course/>}/>
+      <Route path="/details/:cardId" element={<DetailsPage/>} />
+      <Route path='/courses' element={ <Course/>}/>
+      <Route path="/details/:cardId" element={<DetailsPage />} />
+        <Route path="/" element={<AllHomeComp/>}/>
+        
+      <Route path='/aboutUs' element={<Aboutus/>}/>
+        <Route path='/user' 
+        element={user?<Navigate to='/profile'></Navigate>:<Login/>}>
+        </Route>
+        <Route path='/login' element={<Login/>}></Route>
+       <Route path='/dashboard' element={<Dashboard/>}></Route>
+        <Route path='/signup' element={<SignUp/>}></Route>
+        <Route path='/profile' element={<Profile/>}>
+            <Route index element={<Dashboard/>}/>
+            <Route path='myprofile' element={<MyProfile/>} />
+            <Route path='mywork' element={<MyWork/>} />
+            <Route path='enrolled-courses' element={<EnrolledCourses/>}>
+            <Route index element={<Enrolled/>} />
+            <Route path='enrolled' element={<Enrolled/>}/>
+            <Route path=':cardId' element={<Enrolled/>} />
+            <Route path='active-courses' element={<ActiveCourses/>} />
+            <Route path='completed-courses' element={<CompletedCourses/>} />
             </Route>
            
               <Route path='wishlist' element={<Wishlist />} />

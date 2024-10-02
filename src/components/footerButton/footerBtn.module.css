@@ -1,29 +1,72 @@
+/* .button {
+  display: flex;
+  justify-content: center;
+}
 .scrollButton {
   position: fixed;
-  /* right: 20px;
-  width: 50px;
-  height: 50px; */
-  border-radius: 50%;
+  bottom: 40px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 20px;
+  background-color: #553cdf;
   color: white;
-  background: #553cdf;
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
 }
 
 .scrollButton:hover {
   background-color: #543cdfa7;
 }
 
-.sticky{
-    width: 40px;
-    height: 40px;
-    background-color:  #553cdf;
-    display: flex;
-    justify-content: center!important;
-    align-items: center;
-    border-radius: 50%;
-    color: white;
-  }
+.scrollButton span {
+  display: inline-block;
+  font-size: 20px;
+  transform: rotate(-90deg);
+} */
 
-.sticky i{
-  margin-left: 8px;
+.button {
+  display: flex;
+  justify-content: center;
+}
+/* .btn {
+  background-color: white;
+  color: #553cdf;
+  border: 0.5px solid #553cdf;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #553cdf;
+  color: white;
+} */
+
+.scrollButton {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  background: #553cdf;
+  border: #553cdf 1px solid;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.scrollButton:hover {
+  background-color: #543cdfa7;
+  border: #543cdfa7 1px solid;
+}
+
+.scrollButton span {
+  display: inline-block;
+  font-size: 20px;
+  transform: rotate(-90deg);
 }

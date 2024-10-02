@@ -25,7 +25,7 @@ const partners = () => {
       <BulbText
           BulbText="Our Top Clients"
           bulbTitle="Our Hiring Partners"
-          GreyText="You ll find something to spark your curiosity and enhance"
+          GreyText="You'll find something to spark your curiosity and enhance"
         />
       </div>
 

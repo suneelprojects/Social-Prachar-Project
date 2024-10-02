@@ -6,6 +6,7 @@ import Cards from '../Cards/Cards';
 import ToggleBar from '../Togglebar/ToggleBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { useLocation } from 'react-router-dom';
 
 
 export const items = ['Web Development', 'Analytics', 'Marketing', 'Accounting', 'Finance', 'HR Analytics'];
@@ -14,7 +15,8 @@ export const Level = ['All Levels', 'Beginner', 'Intermediate', 'Expert'];
 export const Price = ['Free', 'Paid'];
 
 const Course = () => {
-
+    const location = useLocation();
+    const { category } = location.state || {};
 
     const [checked, setChecked] = useState(new Array(items.length).fill(false));
     const [showUncheckedShadow, setShowUncheckedShadow] = useState(new Array(items.length).fill(false));
@@ -83,7 +85,23 @@ const Course = () => {
         // Update the Cards component with the filtered cards
         <Cards filters={{ checkedCategories: updatedChecked, checkedTags, checkedLevel, checkedPrice }} cards={filteredCards} />;
     };
-
+    useEffect(() => {
+        if (category) {
+            const categoryIndex = items.indexOf(category);
+            if (categoryIndex !== -1) {
+                const updatedChecked = items.map((_, index) => index === categoryIndex);
+                setChecked(prevChecked => {
+                    // Only update if the state is actually different to avoid re-renders
+                    if (JSON.stringify(prevChecked) !== JSON.stringify(updatedChecked)) {
+                        console.log("hiii",category)
+                        return updatedChecked;
+                    }
+                    return prevChecked;
+                });
+            }
+        }
+    }, [category]);
+    
     const handleTagCheckboxClick = (index) => {
         const updatedCheckedTags = checkedTags.map((item, i) => i === index ? !item : item);
         setCheckedTags(updatedCheckedTags);
