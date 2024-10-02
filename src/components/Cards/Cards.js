@@ -12,6 +12,7 @@ import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import SignInForm from '../SignInForm/SignInform';
 import OneCard from './OneCard';
 import { useWishlist } from '../../Dashboard/MenuBarComponents/WishListContext';
+import { auth } from '../../firebase';
 
 
 const Cards = ({ filters }) => {
@@ -89,14 +90,23 @@ const Cards = ({ filters }) => {
 
     // Add to wish list
     const [wishlist, setWishlist] = useState([]);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const {addToWishlist} = useWishlist();
+    const [user, setUser] = useState();
+    
+
+    useEffect(() => {
+      const unsubscribe = auth.onAuthStateChanged((user) => {
+        setUser(user);
+      });
+      return () => unsubscribe();
+    }, []);
 
     // Constant Sign In form
     const [showSignInForm, setShowSignInForm] = useState(false);
     const handleSaveIconClick = (card) => {
-        if (isLoggedIn) {
+        if (user) {
             addToWishlist(card);
+            navigate('/profile/wishlist')
         } else {
             setShowSignInForm(true);
         }

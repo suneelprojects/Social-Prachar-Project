@@ -5,6 +5,9 @@ import style from './Dashboard.module.css'
 
 const Dashboard = () => {
   const navigate=useNavigate();
+  const handleSettings=()=>{
+    navigate('settings')
+  }
     return (
         // <!-- Main Content -->
    <>
@@ -13,7 +16,7 @@ const Dashboard = () => {
       {/* <!-- Cards Section --> */}
    <div className='container-fluid'>
   <h2>Dashboard</h2>
-  <button className="btn mb-3" style={{backgroundColor:' #7c56f6',border:'none',color:'white'}} onClick={navigate('settings')}>Set Your Profile Photo Click Here</button>
+  <button className="btn mb-3" style={{backgroundColor:' #7c56f6',border:'none',color:'white'}} onClick={handleSettings}>Set Your Profile Photo Click Here</button>
   <div className="row">
     <div className="col-12 col-md-4 mb-3">
       <div className={`card ${style.dashboardCard} text-center py-5`}>
