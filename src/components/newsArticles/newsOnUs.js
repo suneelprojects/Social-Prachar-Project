@@ -24,7 +24,7 @@ const NewsOnUs = () => {
         <BulbText 
           BulbText="top News Channels"
           bulbTitle="We Got Featured In"
-          GreyText="You ll find something to spark your curiosity and enhance"/>
+          GreyText="You'll find something to spark your curiosity and enhance"/>
       </div>
       <div className={newsStyle.ImagesSize}>
         <MarqueeComp MarqueeArray={newsArticle}/>

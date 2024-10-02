@@ -23,7 +23,7 @@ const UpComming = () => {
           <BulbText
           BulbText="Our Webinars"
           bulbTitle="Upcoming Free Webinars"
-          GreyText="You ll find something to spark your curiosity and enhance"
+          GreyText="You'll find something to spark your curiosity and enhance"
         />
           </div>
         </div>
@@ -62,10 +62,7 @@ const UpComming = () => {
                 
 
                 <div className=" ArrowBtn d-flex justify-content-end">
-                {/* <div className={`${upCommingStyle.upcommingCardFirstText}`}>
-                <p>
-                  {upCommingEvent.smallTextThree}</p>
-                  </div> */}
+             
               <ArrowButton ArrowText='Enroll Now' handleClick={()=>{handleClick(upCommingEvent.ZoomLink)}}/>
 
                 </div>

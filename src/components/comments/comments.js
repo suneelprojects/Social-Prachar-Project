@@ -21,7 +21,7 @@ const Comments = () => {
       <div className={commentsStyle.BulbTextStyle}>
         <BulbText BulbText="Our Top Comments"
           bulbTitle="Our Alumine Comments"
-          GreyText="You ll find something to spark your curiosity and enhance"/>
+          GreyText="You'll find something to spark your curiosity and enhance"/>
       </div>
       <div >
         <MarqueeComp MarqueeArray={CommentsArray}/>
