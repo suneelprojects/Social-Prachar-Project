@@ -3,11 +3,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import DetailsCSS from './Details.module.css';
 import { data } from '../Cards/CardData';
 import tickmark from '../../assets/tickmark.png';
-import user from '../../assets/usergroup.png';
-import calendar from '../../assets/calendar-lines-pen.png';
 import { items, Level } from './../Courses_category/Course';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faEnvelope, faGraduationCap, faList, faPen } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faEnvelope, faGraduationCap, faList, faPen, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import CountDownSide from '../countDown/CountDownSide';
 import { auth } from '../../firebase';
@@ -18,25 +16,25 @@ const DetailsPage = () => {
     const [showButton, setShowButton] = useState(false);
     const [showMore, setShowMore] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
-    const [user,setUser]=useState();
+    const [user, setUser] = useState();
 
 
     useEffect(() => {
-      const unsubscribe = auth.onAuthStateChanged((user) => {
-        setUser(user);
-      });
-      return () => unsubscribe();
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+            setUser(user);
+        });
+        return () => unsubscribe();
     }, []);
 
     const navigate = useNavigate();
     const handleStartLearning = () => {
-        if(user){
+        if (user) {
             navigate(`/profile/enrolled/${card.cardId}`, {
                 state: { cardId: card.cardId },
-              });
+            });
         }
-        else{
-        navigate('/login');
+        else {
+            navigate('/login');
         }
     };
 
@@ -96,10 +94,9 @@ const DetailsPage = () => {
                                     ★
                                 </span>
                             ))}
-                            <span className={DetailsCSS.Rating}>{card.rating}.00<span className={DetailsCSS.no_of_ratings}>({card.no_of_ratings} Rating)</span></span>
                         </div>
                         <div className={DetailsCSS.Updated}>
-                            <img src={user} alt="" />
+                            <span><FontAwesomeIcon icon={faUsers} className={DetailsCSS.userIcon} /></span>
                             <span className={DetailsCSS.students}>{card.students} Students</span>
                         </div>
                         <div className={DetailsCSS.Updated}>
@@ -115,7 +112,7 @@ const DetailsPage = () => {
                     </div>
                     <CountDownSide />
                 </div>
-                
+
                 <div className={DetailsCSS.wholeContent}>
                     <div className={DetailsCSS.classDetails}>
                         <div className={DetailsCSS.classVideo}>
@@ -129,18 +126,17 @@ const DetailsPage = () => {
                                         </span>
                                     )}
                                 </p> */}
-
                                 <p>
                                     {showMore ? card.About : card.About.slice(0, previewLength) + (card.About.length > previewLength ? '...' : '')}
                                 </p>
-
-                                <button className={DetailsCSS.aboutCourseButton} onClick={handleClickShow} style={{ fontSize: '16px', padding: '10px 20px' }}>
+                                <button className={DetailsCSS.aboutCourseButton} onClick={handleClickShow}>
                                     <span style={{ fontSize: '24px', marginRight: '8px', fontWeight: '700' }}>
                                         {showMore ? '−' : '+'}
                                     </span>
                                     {showMore ? "show Less" : "show More"}
                                 </button>
                             </div>
+                            
 
                             <div className={DetailsCSS.whatWillyouLearn}>
                                 <h4>What will you Learn?</h4>
@@ -158,7 +154,6 @@ const DetailsPage = () => {
                                     </div>
                                 </div>
                             </div>
-
 
                             {/* <div className={DetailsCSS.accordian}>
                                 <h3>Course Content</h3>

@@ -33,15 +33,22 @@ const CountDownSide = () => {
     };
 
     if (!showPopup) return null;
+
+
+    const handleCancelClick = () => {
+        setShowPopup(false);
+    };
+
     return (
-            <div className={CountDownCSS.popupCard}>
-                <button className={CountDownCSS.CancelButton}>X</button>
-                <div className={CountDownCSS.popupContent}>
-                    <h1>OFFER</h1>
-                    <p>Get Exclusive 5000 OFF, Only For YOU !!</p>
-                    <h3>Time Left: {formatTime(timeLeft)}</h3>
-                </div>
+        <div className={CountDownCSS.popupCard}>
+            <button className={CountDownCSS.CancelButton} onClick={handleCancelClick}>X</button>
+            <div className={CountDownCSS.popupContent}>
+                <span className={CountDownCSS.icon}>🔔</span>
+                <h1>OFFER</h1>
+                <p>Get Exclusive 5000 OFF, Only For YOU !!</p>
+                <h3>Time Left: {formatTime(timeLeft)}</h3>
             </div>
+        </div>
     );
 };
 

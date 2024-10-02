@@ -10,11 +10,13 @@ import { faChevronDown, faList, faStar } from '@fortawesome/free-solid-svg-icons
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import SignInForm from '../SignInForm/SignInform';
+import OneCard from './OneCard';
+import { useWishlist } from '../../Dashboard/MenuBarComponents/WishListContext';
 
 
 const Cards = ({ filters }) => {
 
-    
+
 
     const { checkedCategories, checkedTags, checkedLevel, checkedPrice } = filters;
     // Replace this with your actual filtering logic
@@ -85,20 +87,32 @@ const Cards = ({ filters }) => {
     const isLastPage = currentPage === totalPages;
     const showPagination = totalPages > 1;
 
+    // Add to wish list
+    const [wishlist, setWishlist] = useState([]);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const {addToWishlist} = useWishlist();
+
     // Constant Sign In form
     const [showSignInForm, setShowSignInForm] = useState(false);
-    const handleSaveIconClick = () => {
-        setShowSignInForm(true);
+    const handleSaveIconClick = (card) => {
+        if (isLoggedIn) {
+            addToWishlist(card);
+        } else {
+            setShowSignInForm(true);
+        }
     };
+
     const handleCloseForm = () => {
         setShowSignInForm(false);
     };
+
 
     const navigate = useNavigate();
     const handleCardTitleClick = (courseID) => {
         const selectedCard = data.find(card => card.courseID === courseID);
         navigate(`/details/${courseID}`, { state: { cardDetails: selectedCard } });
     };
+
 
     return (
         <div className={cardsCSS.cardsSection}>
@@ -117,6 +131,7 @@ const Cards = ({ filters }) => {
                             <FontAwesomeIcon icon={faSearch}
                                 className={cardsCSS.searchIcon}
                             />
+
                             <input
                                 type="text"
                                 placeholder="Search..."
@@ -136,6 +151,7 @@ const Cards = ({ filters }) => {
                         </div>
                     </div>
                 </div>
+
                 <div className={cardsCSS.Form_buttons}>
                     <button
                         className={`${selectedButton === 'grid' ? cardsCSS.selected : ''}`}
@@ -158,46 +174,17 @@ const Cards = ({ filters }) => {
                 </div>
             </div>
 
+
             <div className={cardsCSS.cards}>
                 <div className={`row ${selectedButton === 'list' ? cardsCSS.listview : cardsCSS.gridView}`}>
                     {currentCards.map((card, index) => (
-                        <div key={index} className={`col-md-4 mt-4 ${selectedButton === 'list' ? cardsCSS.listItem : ''}`}>
-                            <div className={`card ${cardsCSS.card}`}>
-                                <div className={cardsCSS.cardImgContainer}>
-                                    <img src={card.imageSrc} className={cardsCSS.cardImgTop} alt={card.title} />
-                                    <FontAwesomeIcon icon={faBookmark}
-                                        className={cardsCSS.saveIcon}
-                                        onClick={handleSaveIconClick}
-                                    />
-                                </div>
-                                <div className={cardsCSS.card_body}>
-                                    <p className={cardsCSS.CardTitle}>{card.title}</p>
-                                    <div className={cardsCSS.lessons}>
-                                        <div className={cardsCSS.calendar_pen}>
-                                            <img src={calendar} alt="" />
-                                            <p className={cardsCSS.lesson}>{card.no_of_lessons}</p>
-                                        </div>
-                                        <div className={cardsCSS.users}>
-                                            <img src={user} alt="" />
-                                            <p className={cardsCSS.students}>{card.students}</p>
-                                        </div>
-                                    </div>
-                                    <h5 className={cardsCSS.course_title} onClick={() => handleCardTitleClick(card.courseID)}>{card.text}</h5>
-                                    <div className={cardsCSS.starPrice}>
-                                        <div className={cardsCSS.rating}>
-                                            {Array.from({ length: 5 }, (_, starIndex) => (
-                                                <FontAwesomeIcon
-                                                    key={starIndex}
-                                                    icon={faStar}
-                                                    className={starIndex < card.rating ? cardsCSS.filledStar : cardsCSS.emptyStar}
-                                                />
-                                            ))}
-                                        </div>
-                                        <p className={cardsCSS.price}>{card.price}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <OneCard
+                            key={index}
+                            card={card}
+                            selectedButton={selectedButton}
+                            handleCardTitleClick={handleCardTitleClick}
+                            handleSaveIconClick={handleSaveIconClick}
+                        />
                     ))}
                 </div>
             </div>
@@ -234,4 +221,4 @@ const Cards = ({ filters }) => {
         </div>
     );
 };
-export default Cards;
+export default Cards; 

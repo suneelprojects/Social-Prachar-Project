@@ -33,11 +33,13 @@ const Login = () => {
             toast.error(error.message);
         }
     };
+
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     const togglePasswordVisibility = () => {
       setPasswordVisible(!passwordVisible);
     };
+    
     return (
         <div className={style.loginContainer}>
             <form className={`${style.loginForm} p-5 mt-5`} onSubmit={handleSubmit}>
