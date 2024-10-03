@@ -11,7 +11,7 @@ import Footer from '../footer/footer';
 
 
 export const items = ['Web Development', 'Analytics', 'Marketing', 'Accounting', 'Finance', 'HR Analytics'];
-export const Tag = ['App', 'Business', 'Course', 'Data', 'Design', 'Education','Web Development'];
+export const Tag = ['App', 'Business', 'Course', 'Data', 'Design', 'Education', 'Web Development'];
 export const Level = ['All Levels', 'Beginner', 'Intermediate', 'Expert'];
 export const Price = ['Free', 'Paid'];
 
@@ -94,7 +94,7 @@ const Course = () => {
                 setChecked(prevChecked => {
                     // Only update if the state is actually different to avoid re-renders
                     if (JSON.stringify(prevChecked) !== JSON.stringify(updatedChecked)) {
-                        console.log("hiii",category)
+                        console.log("hiii", category)
                         return updatedChecked;
                     }
                     return prevChecked;
@@ -102,7 +102,7 @@ const Course = () => {
             }
         }
     }, [category]);
-    
+
     const handleTagCheckboxClick = (index) => {
         const updatedCheckedTags = checkedTags.map((item, i) => i === index ? !item : item);
         setCheckedTags(updatedCheckedTags);
@@ -265,6 +265,8 @@ const Course = () => {
                     </button>
                 )}
             </div>
+            <Footer />
+
         </div>
         <Footer/>
         </>
