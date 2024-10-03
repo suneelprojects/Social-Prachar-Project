@@ -6,6 +6,7 @@ const EnrolledCourses = () => {
   const [activeLink, setActiveLink] = useState('EnrolledCourses');
   const enrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses')) || [];
 
+
   const handleClick = (link) => {
     setActiveLink(link);
   };

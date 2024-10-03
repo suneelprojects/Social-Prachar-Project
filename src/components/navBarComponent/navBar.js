@@ -37,7 +37,7 @@ const NavBar = () => {
     {
       courseImg: course7,
       courseName: "HR Analytics",
-      NoOFCourses: "2+ courses",
+      NoOFCourses: "1+ courses",
     },
   ];
   const categoryArraryTwo = [

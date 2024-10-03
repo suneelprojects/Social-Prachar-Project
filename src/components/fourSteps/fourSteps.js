@@ -15,7 +15,7 @@ const FourSteps = () => {
     {
       fourImg: fourImageOne,
       fourFirstText: 155000,
-      fourSecondText: `Hours Classes Delivered`
+      fourSecondText: `Hours Classes \n Delivered`
     },
     {
       fourImg: fourImageTwo,

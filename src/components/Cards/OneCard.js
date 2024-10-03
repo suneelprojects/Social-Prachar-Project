@@ -8,6 +8,7 @@ import { useWishlist } from '../../Dashboard/MenuBarComponents/WishListContext';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase';
 
+
 const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCancelEnrollment }) => {
     const { wishlist, toggleWishlist } = useWishlist();
     const navigate = useNavigate();
@@ -47,13 +48,19 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
                         onClick={handleSaveIconClick}
                         style={{ color: isSaved ? '#553cdf' : 'white' }}
                     />
+                    <FontAwesomeIcon
+                        icon={faBookmark}
+                        className={`${cardsCSS.saveIcon} ${isSaved ? cardsCSS.saved : ''}`}
+                        onClick={handleSaveIconClick}
+                        style={{ color: isSaved ? '#553cdf' : 'white' }}
+                    />
                 </div>
                 <div className={cardsCSS.card_body}>
                     <p className={cardsCSS.CardTitle}>{card.title}</p>
                     <div className={cardsCSS.lessons}>
                         <div className={cardsCSS.calendar_pen}>
                             <img src={calendar} alt="Calendar Icon" />
-                            <p className={cardsCSS.lesson}>{card.no_of_lessons}</p>
+                            <p className={cardsCSS.lesson}>{card.no_of_lessons}</ p>
                         </div>
                         <div className={cardsCSS.users}>
                             <img src={user} alt="User  Icon" />

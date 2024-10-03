@@ -1,4 +1,8 @@
-
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll bar */
+}
 .containerFluidForPadding{
   padding-left: 55px;
   padding-right: 55px;
@@ -81,13 +85,13 @@ copy right  ,sticky navbar , moving on hovers  */
       padding-left: 25px!important;
       padding-right: 25px!important;
     }
-    
 
+  }
+  @media (max-width:768px) {
     .gateWaytitle{
       font-size: 24px!important;
     }
   }
-  
 
   /* home container hover starts */
   .main-container , #topCategoryParallex{

@@ -7,7 +7,7 @@ import ToggleBar from '../Togglebar/ToggleBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
-import Footer from "../footer/footer";
+import Footer from '../footer/footer';
 
 
 export const items = ['Web Development', 'Analytics', 'Marketing', 'Accounting', 'Finance', 'HR Analytics'];
@@ -95,6 +95,7 @@ const Course = () => {
                     // Only update if the state is actually different to avoid re-renders
                     if (JSON.stringify(prevChecked) !== JSON.stringify(updatedChecked)) {
                         console.log("hiii", category)
+                        console.log("hiii", category)
                         return updatedChecked;
                     }
                     return prevChecked;
@@ -102,6 +103,7 @@ const Course = () => {
             }
         }
     }, [category]);
+
 
     const handleTagCheckboxClick = (index) => {
         const updatedCheckedTags = checkedTags.map((item, i) => i === index ? !item : item);
@@ -135,6 +137,7 @@ const Course = () => {
     }, [handleScroll]);
 
     return (
+        <>
         <div className={courseCSS.categorypage}>
             <div className={courseCSS.cover_img}>
                 <img src={img} className={courseCSS.thumbnail} alt="" />
@@ -264,9 +267,12 @@ const Course = () => {
                     </button>
                 )}
             </div>
-            <Footer />
+
 
         </div>
+        <Footer />
+
+        </>
 
     );
 };

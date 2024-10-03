@@ -4,6 +4,7 @@ import emptystate from '../../assets/emptystate.svg';
 import OneCard from '../../components/Cards/OneCard';
 import { useNavigate } from 'react-router-dom';
 
+
 const Wishlist = () => {
     const { wishlist, toggleWishlist } = useWishlist();
     const navigate = useNavigate();

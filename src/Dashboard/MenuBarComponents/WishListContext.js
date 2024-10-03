@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import { auth } from '../../firebase';
 
+
 const WishListContext = createContext();
 
 const WishListProvider = ({ children }) => {
