@@ -7,6 +7,7 @@ import ToggleBar from '../Togglebar/ToggleBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
+import Footer from '../footer/footer';
 
 
 export const items = ['Web Development', 'Analytics', 'Marketing', 'Accounting', 'Finance', 'HR Analytics'];
@@ -134,6 +135,7 @@ const Course = () => {
     }, [handleScroll]);
 
     return (
+        <>
         <div className={courseCSS.categorypage}>
             <div className={courseCSS.cover_img}>
                 <img src={img} className={courseCSS.thumbnail} alt="" />
@@ -264,6 +266,8 @@ const Course = () => {
                 )}
             </div>
         </div>
+        <Footer/>
+        </>
     );
 };
 

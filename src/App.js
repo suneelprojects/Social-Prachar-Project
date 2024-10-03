@@ -1,33 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import SignUp from './Login&SignUpComponet/SignUp.js';
+import React, { Suspense, useEffect, useState, lazy } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import Login from './Login&SignUpComponet/Login.js';
 import { auth } from './firebase';
-import Profile from './Dashboard/profileComponent/Profile.js';
-import Dashboard from './Dashboard/MenuBarComponents/DashboardComponent/Dashboard.js';
-import MyProfile from './Dashboard/MenuBarComponents/MyProfile.js';
-import EnrolledCourses from './Dashboard/MenuBarComponents/EnrolledCoursesComponent/EnrolledCourses.js';
-import Wishlist from './Dashboard/MenuBarComponents/Wishlist.js';
-import Reviews from './Dashboard/MenuBarComponents/Reviews.js';
-import QuizAttempts from './Dashboard/MenuBarComponents/QuizAttempts.js';
-import OrderHistory from './Dashboard/MenuBarComponents/orderHistoryComponent/OrderHistory.js';
-import QuestionAnswer from './Dashboard/MenuBarComponents/QuestionAnswer.js';
-import Settings from './Dashboard/MenuBarComponents/SettingsComponent/Settings.js';
-import ProfileSettings from './Dashboard/MenuBarComponents/SettingsComponent/ProfileSettings.js';
-import PasswordSettings from './Dashboard/MenuBarComponents/SettingsComponent/PasswordSettings.js';
-import SocialProfileSettings from './Dashboard/MenuBarComponents/SettingsComponent/SocialProfileSettings.js';
-import Enrolled from './Dashboard/MenuBarComponents/EnrolledCoursesComponent/Enrolled.js';
-import ActiveCourses from './Dashboard/MenuBarComponents/EnrolledCoursesComponent/ActiveCourses.js';
-import CompletedCourses from './Dashboard/MenuBarComponents/EnrolledCoursesComponent/CompletedCourses.js';
-import Course from './components/Courses_category/Course.js'
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import NavBar from './components/navBarComponent/navBar';
-import AllHomeComp from './components/allHomeComp';
 import ScrollToTop from './components/extraComponents/ScrollToTop.js';
-import DetailsPage from './components/courseDetailsPage/DetailsPage.js'
-import MyWork from './Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js';
-import Aboutus from './components/aboutus/aboutus.js';
+import Loading from './components/extraComponents/loading.js';
 import { WishlistProvider } from './Dashboard/MenuBarComponents/WishListContext.js';
+import NavBar from './components/navBarComponent/navBar';
+
+// Lazy-loaded components
+const SignUp = lazy(() => import('./Login&SignUpComponet/SignUp.js'));
+const Login = lazy(() => import('./Login&SignUpComponet/Login.js'));
+const Profile = lazy(() => import('./Dashboard/profileComponent/Profile.js'));
+const Dashboard = lazy(() => import('./Dashboard/MenuBarComponents/DashboardComponent/Dashboard.js'));
+const MyProfile = lazy(() => import('./Dashboard/MenuBarComponents/MyProfile.js'));
+const EnrolledCourses = lazy(() => import('./Dashboard/MenuBarComponents/EnrolledCoursesComponent/EnrolledCourses.js'));
+const Wishlist = lazy(() => import('./Dashboard/MenuBarComponents/Wishlist.js'));
+const Reviews = lazy(() => import('./Dashboard/MenuBarComponents/Reviews.js'));
+const QuizAttempts = lazy(() => import('./Dashboard/MenuBarComponents/QuizAttempts.js'));
+const OrderHistory = lazy(() => import('./Dashboard/MenuBarComponents/orderHistoryComponent/OrderHistory.js'));
+const QuestionAnswer = lazy(() => import('./Dashboard/MenuBarComponents/QuestionAnswer.js'));
+const Settings = lazy(() => import('./Dashboard/MenuBarComponents/SettingsComponent/Settings.js'));
+const ProfileSettings = lazy(() => import('./Dashboard/MenuBarComponents/SettingsComponent/ProfileSettings.js'));
+const PasswordSettings = lazy(() => import('./Dashboard/MenuBarComponents/SettingsComponent/PasswordSettings.js'));
+const SocialProfileSettings = lazy(() => import('./Dashboard/MenuBarComponents/SettingsComponent/SocialProfileSettings.js'));
+const Enrolled = lazy(() => import('./Dashboard/MenuBarComponents/EnrolledCoursesComponent/Enrolled.js'));
+const ActiveCourses = lazy(() => import('./Dashboard/MenuBarComponents/EnrolledCoursesComponent/ActiveCourses.js'));
+const CompletedCourses = lazy(() => import('./Dashboard/MenuBarComponents/EnrolledCoursesComponent/CompletedCourses.js'));
+const Course = lazy(() => import('./components/Courses_category/Course.js'));
+const AllHomeComp = lazy(() => import('./components/allHomeComp'));
+const DetailsPage = lazy(() => import('./components/courseDetailsPage/DetailsPage.js'));
+const MyWork = lazy(() => import('./Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js'));
+const Aboutus = lazy(() => import('./components/aboutus/aboutus.js'));
 
 const App = () => {
   const [user, setUser] = useState();
@@ -38,57 +41,53 @@ const App = () => {
     });
     return () => unsubscribe();
   }, []);
-  
+
   return (
     <div>
       <WishlistProvider>
-      <BrowserRouter>
-        <ScrollToTop/>
-      <NavBar/>
-      <Routes>
-      <Route path="/" element={<AllHomeComp/>}/>
-      <Route path='/courses' element={ <Course/>}/>
-      <Route path="/details/:cardId" element={<DetailsPage/>} />
-        
-      <Route path='/aboutUs' element={<Aboutus/>}/>
-        <Route path='/user' 
-        element={user?<Navigate to='/profile'></Navigate>:<Login/>}>
-        </Route>
-        <Route path='/login' element={<Login/>}></Route>
-       <Route path='/dashboard' element={<Dashboard/>}></Route>
-        <Route path='/signup' element={<SignUp/>}></Route>
-        <Route path='/profile' element={<Profile/>}>
-            <Route index element={<Dashboard/>}/>
-            <Route path='myprofile' element={<MyProfile/>} />
-            <Route path='mywork' element={<MyWork/>} />
-            <Route path='enrolled-courses' element={<EnrolledCourses/>}>
-            <Route index element={<Enrolled/>} />
-            <Route path='enrolled' element={<Enrolled/>}/>
-            <Route path=':cardId' element={<Enrolled/>} />
-            <Route path='active-courses' element={<ActiveCourses/>} />
-            <Route path='completed-courses' element={<CompletedCourses/>} />
-            </Route>
-           
-              <Route path='wishlist' element={<Wishlist />} />
-            
-            <Route path='reviews' element={<Reviews />} />
-            <Route path='quizAttempts' element={<QuizAttempts />} />
-            <Route path='orderHistory' element={<OrderHistory />} />
-            <Route path='question-answer' element={<QuestionAnswer />} />
-            <Route path='dashboard' element={<Dashboard />} />
-            <Route path='settings' element={<Settings />}>
-              <Route index element={<ProfileSettings />} />
-              <Route path='password-settings' element={<PasswordSettings />} />
-              <Route path='socialProfile-settings' element={<SocialProfileSettings />} />
-              <Route path='profile-settings' element={<ProfileSettings />} />
-            </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Suspense fallback={<Loading />}>
+            <ScrollToTop />
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<AllHomeComp />} />
+              <Route path="/courses" element={<Course />} />
+              <Route path="/details/:cardId" element={<DetailsPage />} />
+              <Route path="/aboutUs" element={<Aboutus />} />
+              <Route path="/user" element={user ? <Navigate to="/profile" /> : <Login />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/profile" element={<Profile />}>
+                <Route index element={<Dashboard />} />
+                <Route path="myprofile" element={<MyProfile />} />
+                <Route path="mywork" element={<MyWork />} />
+                <Route path="enrolled-courses" element={<EnrolledCourses />}>
+                  <Route index element={<Enrolled />} />
+                  <Route path="enrolled" element={<Enrolled />} />
+                  <Route path=":cardId" element={<Enrolled />} />
+                  <Route path="active-courses" element={<ActiveCourses />} />
+                  <Route path="completed-courses" element={<CompletedCourses />} />
+                </Route>
+                <Route path="wishlist" element={<Wishlist />} />
+                <Route path="reviews" element={<Reviews />} />
+                <Route path="quizAttempts" element={<QuizAttempts />} />
+                <Route path="orderHistory" element={<OrderHistory />} />
+                <Route path="question-answer" element={<QuestionAnswer />} />
+                <Route path="dashboard" element={<Dashboard />} />
+                <Route path="settings" element={<Settings />}>
+                  <Route index element={<ProfileSettings />} />
+                  <Route path="password-settings" element={<PasswordSettings />} />
+                  <Route path="socialProfile-settings" element={<SocialProfileSettings />} />
+                  <Route path="profile-settings" element={<ProfileSettings />} />
+                </Route>
+              </Route>
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
       </WishlistProvider>
-
     </div>
   );
 };
-export default App;
 
+export default App;
