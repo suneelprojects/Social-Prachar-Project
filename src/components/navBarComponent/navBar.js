@@ -234,6 +234,7 @@ const NavBar = () => {
             <span className="navbar-toggler-icon "></span>
           </button>
           {/* togglet code ends  */}
+          
 
           {/* navigation code starts */}
 

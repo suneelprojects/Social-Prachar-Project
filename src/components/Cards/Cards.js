@@ -17,10 +17,8 @@ import { auth } from '../../firebase';
 
 const Cards = ({ filters }) => {
 
-
-
     const { checkedCategories, checkedTags, checkedLevel, checkedPrice } = filters;
-    // Replace this with your actual filtering logic
+
     const matchesFilters = (card) => {
         const categoryMatch = checkedCategories[card.categoryIndex] || !checkedCategories.some(Boolean);
         const tagMatch = checkedTags[card.tagIndex] || !checkedTags.some(Boolean);

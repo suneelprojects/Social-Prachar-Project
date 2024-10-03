@@ -27,7 +27,7 @@ import ScrollToTop from './components/extraComponents/ScrollToTop.js';
 import DetailsPage from './components/courseDetailsPage/DetailsPage.js'
 import MyWork from './Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js';
 import Aboutus from './components/aboutus/aboutus.js';
-import { WishlistProvider } from './Dashboard/MenuBarComponents/WishListContext.js';
+import { WishListProvider } from './Dashboard/MenuBarComponents/WishListContext.js';
 
 const App = () => {
   const [user, setUser] = useState();
@@ -38,54 +38,52 @@ const App = () => {
     });
     return () => unsubscribe();
   }, []);
-  
+
   return (
     <div>
-      <WishlistProvider>
-      <BrowserRouter>
-        <ScrollToTop/>
-      <NavBar/>
-      <Routes>
-      <Route path="/" element={<AllHomeComp/>}/>
-      <Route path='/courses' element={ <Course/>}/>
-      <Route path="/details/:cardId" element={<DetailsPage/>} />
-        
-      <Route path='/aboutUs' element={<Aboutus/>}/>
-        <Route path='/user' 
-        element={user?<Navigate to='/profile'></Navigate>:<Login/>}>
-        </Route>
-        <Route path='/login' element={<Login/>}></Route>
-       <Route path='/dashboard' element={<Dashboard/>}></Route>
-        <Route path='/signup' element={<SignUp/>}></Route>
-        <Route path='/profile' element={<Profile/>}>
-            <Route index element={<Dashboard/>}/>
-            <Route path='myprofile' element={<MyProfile/>} />
-            <Route path='mywork' element={<MyWork/>} />
-            <Route path='enrolled-courses' element={<EnrolledCourses/>}>
-            <Route index element={<Enrolled/>} />
-            <Route path='enrolled' element={<Enrolled/>}/>
-            <Route path=':cardId' element={<Enrolled/>} />
-            <Route path='active-courses' element={<ActiveCourses/>} />
-            <Route path='completed-courses' element={<CompletedCourses/>} />
+      <WishListProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<AllHomeComp />} />
+            <Route path='/courses' element={<Course />} />
+            <Route path="/details/:cardId" element={<DetailsPage />} />
+
+            <Route path='/aboutUs' element={<Aboutus />} />
+            <Route path='/user'
+              element={user ? <Navigate to='/profile'></Navigate> : <Login />}>
             </Route>
-           
-              <Route path='wishlist' element={<Wishlist />} />
-            
-            <Route path='reviews' element={<Reviews />} />
-            <Route path='quizAttempts' element={<QuizAttempts />} />
-            <Route path='orderHistory' element={<OrderHistory />} />
-            <Route path='question-answer' element={<QuestionAnswer />} />
-            <Route path='dashboard' element={<Dashboard />} />
-            <Route path='settings' element={<Settings />}>
-              <Route index element={<ProfileSettings />} />
-              <Route path='password-settings' element={<PasswordSettings />} />
-              <Route path='socialProfile-settings' element={<SocialProfileSettings />} />
-              <Route path='profile-settings' element={<ProfileSettings />} />
+            <Route path='/login' element={<Login />}></Route>
+            <Route path='/dashboard' element={<Dashboard />}></Route>
+            <Route path='/signup' element={<SignUp />}></Route>
+            <Route path='/profile' element={<Profile />}>
+              <Route index element={<Dashboard />} />
+              <Route path='myprofile' element={<MyProfile />} />
+              <Route path='mywork' element={<MyWork />} />
+              <Route path='enrolled-courses' element={<EnrolledCourses />}>
+                <Route index element={<Enrolled />} />
+                <Route path='/profile/enrolled-courses/enrolled' element={<Enrolled />} />
+                <Route path=':cardId' element={<Enrolled />} />
+                <Route path='active-courses' element={<ActiveCourses />} />
+                <Route path='completed-courses' element={<CompletedCourses />} />
+              </Route>
+              <Route path='/profile/wishlist' element={<Wishlist />} />
+              <Route path='reviews' element={<Reviews />} />
+              <Route path='quizAttempts' element={<QuizAttempts />} />
+              <Route path='orderHistory' element={<OrderHistory />} />
+              <Route path='question-answer' element={<QuestionAnswer />} />
+              <Route path='dashboard' element={<Dashboard />} />
+              <Route path='settings' element={<Settings />}>
+                <Route index element={<ProfileSettings />} />
+                <Route path='password-settings' element={<PasswordSettings />} />
+                <Route path='socialProfile-settings' element={<SocialProfileSettings />} />
+                <Route path='profile-settings' element={<ProfileSettings />} />
+              </Route>
             </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-      </WishlistProvider>
+          </Routes>
+        </BrowserRouter>
+      </WishListProvider>
 
     </div>
   );

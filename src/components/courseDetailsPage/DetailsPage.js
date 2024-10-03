@@ -9,6 +9,8 @@ import { faClock, faEnvelope, faGraduationCap, faList, faPen, faUsers } from '@f
 import { faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import CountDownSide from '../countDown/CountDownSide';
 import { auth } from '../../firebase';
+import Footer from "../footer/footer";
+import FooterBtn from "../footerButton/footerBtn";
 
 const DetailsPage = () => {
     const { cardId } = useParams();
@@ -18,7 +20,6 @@ const DetailsPage = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const [user, setUser] = useState();
 
-
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
             setUser(user);
@@ -27,13 +28,22 @@ const DetailsPage = () => {
     }, []);
 
     const navigate = useNavigate();
+
     const handleStartLearning = () => {
         if (user) {
-            navigate(`/profile/enrolled/${card.cardId}`, {
-                state: { cardId: card.cardId },
-            });
-        }
-        else {
+            // Fetch the enrolled courses from local storage
+            const enrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses')) || [];
+            // Check if the course is already enrolled
+            const isCourseEnrolled = enrolledCourses.some((course) => course.courseId === card.courseId);
+            if (!isCourseEnrolled) {
+                // Add the entire card object to local storage
+                enrolledCourses.push(card);
+                localStorage.setItem('enrolledCourses', JSON.stringify(enrolledCourses));
+            }
+
+            // Navigate to the enrolled courses page
+            navigate('/profile/enrolled-courses/enrolled');
+        } else {
             navigate('/login');
         }
     };
@@ -50,7 +60,6 @@ const DetailsPage = () => {
         const cardDetails = data.find(card => card.courseID === parseInt(cardId));
         setCard(cardDetails);
     }, [cardId]);
-
 
     const handleScroll = () => {
         if (window.scrollY > window.innerHeight / 2) {
@@ -99,10 +108,6 @@ const DetailsPage = () => {
                             <span><FontAwesomeIcon icon={faUsers} className={DetailsCSS.userIcon} /></span>
                             <span className={DetailsCSS.students}>{card.students} Students</span>
                         </div>
-                        <div className={DetailsCSS.Updated}>
-                            {/* <img src={calendar} alt="" /> */}
-                            {/* <span className={DetailsCSS.lastUpdated}>Last Updated: {card.lastUpdated}</span> */}
-                        </div>
                     </div>
                     <div className={DetailsCSS.author}>
                         <p><img src={card.authorImage} alt={card.name} /></p>
@@ -119,13 +124,6 @@ const DetailsPage = () => {
                             <img src={card.bannerImage} alt="" />
                             <div className={DetailsCSS.aboutCourse}>
                                 <h2>About Course</h2>
-                                {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores obcaecati eos ab aperiam praesentium libero,Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, dolorum autem hic reprehenderit illo mollitia accusamus delectus est aliquid pariatur ex deserunt laborum, ad deleniti voluptate atque. Facere, provident voluptatem!
-                                    {showMore && (
-                                        <span>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores obcaecati eos ab aperiam praesentium libero, fugiat nisi distinctio magni alias natus quod maxime molestias, et quibusdam! Dicta, voluptas Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur placeat iste aliquam ratione natus optio debitis beatae, nostrum labore molestiae autem nihil dolores, ullam reiciendis, animi reprehenderit. Minus, debitis fuga!lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit aperiam officiis labore at explicabo debitis hic consequuntur reiciendis, exercitationem sapiente voluptas saepe earum praesentium ratione in. Recusandae temporibus sint vitae?lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt sint perferendis temporibus officiis doloribus quam quisquam quibusdam? Mollitia alias, blanditiis earum culpa cumque excepturi. Sequi reiciendis molestias consequatur praesentium fugiat.
-                                        </span>
-                                    )}
-                                </p> */}
                                 <p>
                                     {showMore ? card.About : card.About.slice(0, previewLength) + (card.About.length > previewLength ? '...' : '')}
                                 </p>
@@ -136,7 +134,6 @@ const DetailsPage = () => {
                                     {showMore ? "show Less" : "show More"}
                                 </button>
                             </div>
-                            
 
                             <div className={DetailsCSS.whatWillyouLearn}>
                                 <h4>What will you Learn?</h4>
@@ -154,35 +151,11 @@ const DetailsPage = () => {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* <div className={DetailsCSS.accordian}>
-                                <h3>Course Content</h3>
-                                {card.lessons.map((lesson, index) => (
-                                    <div key={index} className={DetailsCSS.accordianItem}>
-                                        <button
-                                            className={DetailsCSS.accordianButton}
-                                            onClick={() => toggleAccordion(index)}
-                                        >
-                                            {lesson.courseTopic}
-                                        </button>
-                                        {activeIndex === index && (
-                                            <ul className={DetailsCSS.accordianContent}>
-                                                {lesson.content.map((contentItem, contentIndex) => (
-                                                    <li key={contentIndex} className={DetailsCSS.accordianContentItem}>
-                                                        {contentItem}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </div>
-                                ))}
-                            </div> */}
-
                         </div>
                     </div>
                     <div className={DetailsCSS.RightSide}>
                         <div className={DetailsCSS.courseDetails}>
-                            <button className={DetailsCSS.startLearning} onClick={handleStartLearning}>Start Learning</button>
+                            <button className={DetailsCSS.startLearning} onClick={handleStartLearning}>Enroll Course</button>
                             <p>This course includes:</p>
                             <div className={DetailsCSS.detailsItem}>
                                 <div>
@@ -205,13 +178,6 @@ const DetailsPage = () => {
                                 </div>
                                 <div className={DetailsCSS.value}>{card.Duration}</div>
                             </div>
-                            {/* <div className={DetailsCSS.detailsItem}>
-                                <div>
-                                    <FontAwesomeIcon icon={faPen} className={DetailsCSS.icon} />
-                                    <span className={DetailsCSS.label}>Last Updated</span>
-                                </div>
-                                <span className={DetailsCSS.value}>{card.lastUpdated} Last Updated</span>
-                            </div> */}
                         </div>
 
                         <div className={DetailsCSS.Requirements}>
@@ -246,30 +212,12 @@ const DetailsPage = () => {
                                     <FontAwesomeIcon icon={faEnvelope} className={DetailsCSS.iconSize} />
                                 </a>
                             </div>
-                            <hr />
-                            <div className={DetailsCSS.Audience}>
-                                <p>Audience</p>
-                                <div>
-                                    <span><img src={tickmark} alt="" /></span>Technical People
-                                </div>
-                                <div>
-                                    <span><img src={tickmark} alt="" /></span>Engineering Students
-                                </div>
-                                <div>
-                                    <span><img src={tickmark} alt="" /></span>Programming Level
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            {showButton && (
-                <button className={DetailsCSS.scrollButton} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    <span>&#10095;&#10095;</span>
-                </button>
-            )}
-
+            <Footer />
+            <FooterBtn />
         </div>
     );
 };
