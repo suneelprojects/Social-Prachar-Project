@@ -48,12 +48,7 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
                         onClick={handleSaveIconClick}
                         style={{ color: isSaved ? '#553cdf' : 'white' }}
                     />
-                    <FontAwesomeIcon
-                        icon={faBookmark}
-                        className={`${cardsCSS.saveIcon} ${isSaved ? cardsCSS.saved : ''}`}
-                        onClick={handleSaveIconClick}
-                        style={{ color: isSaved ? '#553cdf' : 'white' }}
-                    />
+                    
                 </div>
                 <div className={cardsCSS.card_body}>
                     <p className={cardsCSS.CardTitle}>{card.title}</p>
