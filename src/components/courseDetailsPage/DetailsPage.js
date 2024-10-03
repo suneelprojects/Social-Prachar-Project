@@ -31,17 +31,12 @@ const DetailsPage = () => {
 
     const handleStartLearning = () => {
         if (user) {
-            // Fetch the enrolled courses from local storage
             const enrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses')) || [];
-            // Check if the course is already enrolled
-            const isCourseEnrolled = enrolledCourses.some((course) => course.courseId === card.courseId);
+            const isCourseEnrolled = enrolledCourses.some(course => course.courseID === card.courseID);
             if (!isCourseEnrolled) {
-                // Add the entire card object to local storage
                 enrolledCourses.push(card);
                 localStorage.setItem('enrolledCourses', JSON.stringify(enrolledCourses));
             }
-
-            // Navigate to the enrolled courses page
             navigate('/profile/enrolled-courses/enrolled');
         } else {
             navigate('/login');

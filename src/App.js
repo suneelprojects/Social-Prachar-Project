@@ -41,8 +41,8 @@ const App = () => {
 
   return (
     <div>
-      <WishListProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <WishListProvider>
           <ScrollToTop />
           <NavBar />
           <Routes>
@@ -82,9 +82,8 @@ const App = () => {
               </Route>
             </Route>
           </Routes>
-        </BrowserRouter>
-      </WishListProvider>
-
+        </WishListProvider>
+      </BrowserRouter>
     </div>
   );
 };

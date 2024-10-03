@@ -5,7 +5,6 @@ import style from './Dashboard.module.css'
 
 const Dashboard = () => {
 
-
   const enrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses')) || [];
   const activeCourses = JSON.parse(localStorage.getItem('activeCourses')) || [];
   const completedCourses = JSON.parse(localStorage.getItem('completedCourses')) || [];

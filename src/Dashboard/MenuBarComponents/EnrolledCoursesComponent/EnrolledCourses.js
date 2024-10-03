@@ -9,6 +9,7 @@ const EnrolledCourses = () => {
   const handleClick = (link) => {
     setActiveLink(link);
   };
+  
   return (
     <div>
       <h3 className='mb-3 p-3'>Enrolled Courses({enrolledCourses.length})</h3>

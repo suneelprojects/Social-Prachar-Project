@@ -5,42 +5,49 @@ const WishListContext = createContext();
 
 const WishListProvider = ({ children }) => {
     const [wishlist, setWishlist] = useState([]);
-    const [localWishlist, setLocalWishlist] = useState([]);
     const user = auth.currentUser;
 
     useEffect(() => {
         const storedWishlist = localStorage.getItem('wishlist');
         if (storedWishlist) {
-            setLocalWishlist(JSON.parse(storedWishlist));
             setWishlist(JSON.parse(storedWishlist));
         }
     }, []);
 
     useEffect(() => {
-        if (wishlist.length > 0) {
-            localStorage.setItem('wishlist', JSON.stringify(wishlist));
-        }
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
     }, [wishlist]);
 
     const addToWishlist = (card) => {
         if (user) {
-            setWishlist([...wishlist, card]);
+            setWishlist((prevWishlist) => [...prevWishlist, card]);
         } else {
-            // Handle the case where the user is not logged in
+            // Handle the case where the user is not logged in (e.g., show a message)
+            alert("Please log in to add items to your wishlist.");
         }
     };
 
     const removeFromWishlist = (courseID) => {
-        setWishlist(wishlist.filter((card) => card.courseID !== courseID));
+        setWishlist((prevWishlist) => prevWishlist.filter((card) => card.courseID !== courseID));
+    };
+
+    const toggleWishlist = (card) => {
+        const isCardInWishlist = wishlist.some((wishlistCard) => wishlistCard.courseID === card.courseID);
+        if (isCardInWishlist) {
+            removeFromWishlist(card.courseID);
+        } else {
+            addToWishlist(card);
+        }
     };
 
     return (
-        <WishListContext.Provider value={{ wishlist, setWishlist, addToWishlist, removeFromWishlist }}>
+        <WishListContext.Provider value={{ wishlist, addToWishlist, removeFromWishlist, toggleWishlist }}>
             {children}
         </WishListContext.Provider>
     );
 };
 
 export { WishListProvider, WishListContext };
+
 // Custom hook to use the wishlist context easily
 export const useWishlist = () => useContext(WishListContext);
