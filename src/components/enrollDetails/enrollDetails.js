@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import EnrollDetailsStyle from './enrollDetails.module.css';
 import axios from 'axios';
 import enrollStyle from '../../assets/enrollDetails.jpeg'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Adjust path as necessary
 
 
 const EnrollDetails = () => {
@@ -50,16 +52,19 @@ const EnrollDetails = () => {
     })
       .then((response) => {
         if (response.data.created === 1) {
-          alert('Form submitted successfully!');
+          toast.success('Form Submitted Successfully');
+          // alert('Form submitted successfully!');
         } else {
-          alert('Form submission failed!');
+          toast.error('Form submission failed!');
+          // alert('Form submission failed!');
         }
         console.log(response)
 
       })
       .catch((error) => {
         console.error('Error:', error);
-        alert('Form submission failed!');
+        toast.error(error.message);
+        // alert('Form submission failed!');
       });
 
       setName('');
@@ -177,6 +182,8 @@ const EnrollDetails = () => {
               </button>
             )}
           </form>
+          <ToastContainer/>
+
         </div>
       </div>
     </div>

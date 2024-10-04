@@ -45,10 +45,10 @@ const UpComming = () => {
 
                 <div>
                 <div className={`${upCommingStyle.upcommingCardFirstText} mt-3`}>
-                  <p><i className="bi bi-stopwatch"></i>
+                  <p><i className="bi bi-stopwatch"></i>&nbsp;
                   90 Minutes</p>
                   <p>
-                  <i className="bi bi-camera-video"></i>
+                  <i className="bi bi-camera-video"></i>&nbsp;
                   Zoom Webinar</p>
                   
                 </div>
