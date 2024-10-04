@@ -6,16 +6,24 @@ const ParallaxEffect = ({ images }) => {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      parallaxRef.current.forEach((move) => {
-        const movingValue = move.getAttribute('data-value');
-        const x = (e.clientX * movingValue) / 250;
-        const y = (e.clientY * movingValue) / 250;
-        move.style.transform = `translateX(${x}px) translateY(${y}px)`;
-      });
+      // Safely check if all elements in the parallaxRef exist
+      if (parallaxRef.current && parallaxRef.current.length > 0) {
+        parallaxRef.current.forEach((move) => {
+          if (move) {  // Make sure the element exists
+            const movingValue = move.getAttribute('data-value');
+            if (movingValue) {  // Ensure movingValue exists
+              const x = (e.clientX * movingValue) / 250;
+              const y = (e.clientY * movingValue) / 250;
+              move.style.transform = `translateX(${x}px) translateY(${y}px)`;
+            }
+          }
+        });
+      }
     };
 
     document.addEventListener('mousemove', handleMouseMove);
 
+    // Clean up the event listener when the component unmounts
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
     };
@@ -46,9 +54,5 @@ ParallaxEffect.propTypes = {
     })
   ).isRequired,
 };
-// ParallaxEffect.defaultProps = {
-//   images: [],
-// };
-
 
 export default ParallaxEffect;
