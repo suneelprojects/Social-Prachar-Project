@@ -135,7 +135,7 @@ const DetailsPage = () => {
                                 <div className={DetailsCSS.learnSkills}>
                                     <div className={DetailsCSS.learnRow}>
                                         {/* Render each topic */}
-                                        {Object.values(card.whatWillYouLearn[0]).map((topic, index) => (
+                                        {card.whatWillYouLearn && Object.values(card.whatWillYouLearn[0]).map((topic, index) => (
                                             <div className={DetailsCSS.learnSkillItem} key={index}>
                                                 <span>
                                                     <span className={DetailsCSS.icon}>✓</span>
