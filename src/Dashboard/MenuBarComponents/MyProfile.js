@@ -3,6 +3,7 @@ import { auth, db } from "../../firebase.js";
 import { doc, getDoc } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { convertFromRaw, EditorState, Editor } from 'draft-js';
+import Loading from '../../components/extraComponents/loading.js';
 
 const MyProfile = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -130,7 +131,8 @@ const MyProfile = () => {
          </div>
               </div>
          ):(
-                 <p>Loading....</p>
+                //  <p>Loading....</p>
+                <Loading/>
              )}
          </div>
 

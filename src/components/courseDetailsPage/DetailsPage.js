@@ -11,6 +11,7 @@ import CountDownSide from '../countDown/CountDownSide';
 import { auth } from '../../firebase';
 import Footer from "../footer/footer";
 import FooterBtn from "../footerButton/footerBtn";
+import Loading from '../extraComponents/loading';
 
 const DetailsPage = () => {
     const { cardId } = useParams();
@@ -72,7 +73,7 @@ const DetailsPage = () => {
     }, []);
 
     if (!card) {
-        return <div>Loading...</div>;
+        return <div><Loading/></div>;
     }
 
     const previewLength = 150;

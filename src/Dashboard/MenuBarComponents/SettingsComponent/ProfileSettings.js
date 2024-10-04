@@ -11,6 +11,7 @@ import { Editor } from 'react-draft-wysiwyg';
 import { EditorState,convertFromRaw,convertToRaw } from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import style from './settings.module.css'
+import Loading from '../../../components/extraComponents/loading';
 
 const ProfileSettings = () => {
   const [input, setInput] = useState({
@@ -355,7 +356,10 @@ fetchUserData();
   <option value={userDetails.lastName}>{userDetails.lastName}</option>
   <option value={userDetails.firstName}>{userDetails.firstName}</option>
 
-</select>)   :(<p>Loading.....</p>)
+</select>)   :(
+  // <p>Loading.....</p>
+  <Loading/>
+)
     }
     <p>The display name is shown in all public fields, such as the author name, instructor name, student name, and name that will be printed on the certificate.</p>
     </div>

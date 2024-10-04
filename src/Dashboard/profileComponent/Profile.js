@@ -5,6 +5,7 @@ import { doc, getDoc } from "firebase/firestore";
 import MenuBar from '../SideNavComponent/MenuBar';
 import style from './profile.module.css'
 import EnrolledCourses from '../MenuBarComponents/EnrolledCoursesComponent/EnrolledCourses';
+import Loading from '../../components/extraComponents/loading';
 
 const Profile = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -57,7 +58,8 @@ const Profile = () => {
           <MenuBar />
         </>
       ) : (
-        <p>Loading....</p>
+        // <p>Loading....</p>
+        <Loading/>
       )}
     </>
   );
