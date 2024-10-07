@@ -45,7 +45,7 @@ const EnrollDetails = () => {
       SubCourse: subCategory,
     };
   
-    const response=axios.post('https://sheetdb.io/api/v1/blejvvkofk6b1', submissionData, {
+    const response=axios.post('https://sheetdb.io/api/v1/vc8477g8j4y6e', submissionData, {
       headers: {
         'Content-Type': 'application/json',
       }
