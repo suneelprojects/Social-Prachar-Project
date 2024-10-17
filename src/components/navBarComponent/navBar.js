@@ -146,7 +146,7 @@ const NavBar = () => {
         >
           {/* brand name and category code start */}
           <div className="d-flex ">
-            <a className="navbar-brand" href="http://socialprachar.in">
+            <a className="navbar-brand" href="#">
               <img src={spLogo} className={`${navBarStyle.spLogo}`} />
             </a>
 
