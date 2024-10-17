@@ -30,7 +30,7 @@ const Login = () => {
             await sendPasswordResetEmail(auth, email);
             toast.success('Password reset email sent');
         } catch (error) {
-            toast.error(error.message);
+            toast.error('Invalid User Details' );
         }
     };
 
