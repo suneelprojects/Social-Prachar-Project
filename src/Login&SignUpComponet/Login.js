@@ -19,7 +19,7 @@ const Login = () => {
             toast.success('Login Successfully');
             navigate('/profile');
         } catch (err) {
-            toast.error(err.message);
+            toast.error('Email or password is not Valid');
         }
         setEmail("");
         setPassword("");
@@ -30,7 +30,7 @@ const Login = () => {
             await sendPasswordResetEmail(auth, email);
             toast.success('Password reset email sent');
         } catch (error) {
-            toast.error(error.message);
+            toast.error("Email is Invalid");
         }
     };
 
