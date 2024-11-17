@@ -41,7 +41,7 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
         <div className={`col-md-4 mt-4 ${cardsCSS.cardItem}`}>
             <div className={`card ${cardsCSS.card}`}>
                 <div className={cardsCSS.cardImgContainer}>
-                    <img src={card.imageSrc} className={cardsCSS.cardImgTop} alt={card.title} />
+                    <img src={card.imageSrc} className={cardsCSS.cardImgTop} alt={card.courseTitle} />
                     <FontAwesomeIcon
                         icon={faBookmark}
                         className={`${cardsCSS.saveIcon} ${isSaved ? cardsCSS.saved : ''}`}
@@ -51,7 +51,7 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
                     
                 </div>
                 <div className={cardsCSS.card_body}>
-                    <p className={cardsCSS.CardTitle}>{card.title}</p>
+                    <p className={cardsCSS.CardTitle}>{card.courseTitle}</p>
                     <div className={cardsCSS.lessons}>
                         <div className={cardsCSS.calendar_pen}>
                             <img src={calendar} alt="Calendar Icon" />

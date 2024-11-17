@@ -126,7 +126,6 @@ button:focus {
 }
 
 /* list view styling */
-/* List View Styling */
 .listview {
   display: flex;
   flex-direction: column;
@@ -137,6 +136,7 @@ button:focus {
   display: flex;
   flex-direction: row;
   width: 315%;
+  height: auto;
   position: relative;
   overflow: hidden;
   border: 1px solid #7374771e;

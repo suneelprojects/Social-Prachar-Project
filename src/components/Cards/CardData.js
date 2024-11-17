@@ -6,33 +6,162 @@ import img5 from '../../assets/img5.jpg';
 import img6 from '../../assets/img6.jpg';
 import img7 from '../../assets/img7.jpg';
 import img8 from '../../assets/img8.jpg';
+import classDemoImage from '../../assets/AssetsOfDetailsPage/masterclass/featured-topmate masteclass image.jpg';
+import DS_Image from '../../assets/AssetsOfDetailsPage/masterclass/header-removebg-preview.png';
 import authorPhoto from '../../assets/authorphoto.jpg';
 import fullStackImage from '../../assets/classplus-banner-fullstack.webp';
 import DataAnalyticsImage from '../../assets/FSD-Banner-1-datascience.webp';
 import MarketingImage from '../../assets/DM-new-Banner-DigitalMarketing.webp';
+import { faFlag, faPaperPlane, faLightbulb } from "@fortawesome/free-regular-svg-icons";
+
 
 export const data = [
-
     {
         id: 1,
-        courseID: 1,
+        courseID: 1,  // Link to the course ID
         Duration: ' 6 months',
         imageSrc: img1,
-        title: 'Development',
+        courseImage: DS_Image,
+        MasterclassImage: classDemoImage,
+        courseTitle: 'Development',
         students: '3200 +',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to Programming', content: ['Basic Of Programming', 'understanding Algorithms', 'problem solving Tactics', 'Introduction to Object-oriented Programming'] },
-        //     { courseTopic2: 'Understanding Java Language', content: ['Basics Of Java,', 'Java Data types And Variables,', 'Java Operators and Expressions,', 'Java Control Flow Statements'] },
-        //     { courseTopic3: 'Java Advanced Topics', content: ['Advanced Object-oriented Programming in java,', 'Java Collections FrameWork,', 'Exception Handling in Java,', 'Multithreading in Java'] },
-        //     { courseTopic4: 'Frontend Technologies', content: ['HTML,', 'CSS,', 'Javascript,', 'FrontEnd Framework (React.js or Angular.js),', 'Bootstrap'] },
-        //     { courseTopic5: 'BackEnd Technologies', content: ['Java Servlets & JSP,', 'Spring Frameworks,', 'Hibernate ORM,', 'Microservices with Spring Boot,', 'RESTful web Services,', 'JWT for Java Application'] },
-        //     { courseTopic6: 'DataBase', content: ['SQL Queries,', 'JDBC,', 'DataBase Transactions,', 'SQL optimisation Techniques,', 'DataBase Connection Pooling'] },
-        //     { courseTopic7: 'SoftSkills', content: ['Teamwork,', 'Communication Skills,', ' Problem Solving Skills,', ' project-Management Skills'] },
-        // ],
-        About: "This Full Stack Java Development course is designed for aspiring developers who wish to gain comprehensive knowledge in both front-end and back-end technologies. Throughout the course, you will explore the Java programming language, along with essential frameworks such as Spring and Hibernate, to build robust web applications. You'll learn how to create dynamic user interfaces using HTML, CSS, and JavaScript, and understand the intricacies of server-side development, database integration, and RESTful APIs. Our hands-on projects will provide you with practical experience in deploying applications on cloud platforms and utilizing version control systems. By the end of the course, you will have the skills necessary to develop, deploy, and maintain full-fledged web applications, making you a valuable asset in today’s technology-driven job market.",
-        text: 'Full Stack Java Development',
-        name: 'Balu',
+        About: "This Full Stack Java Development course is designed for aspiring developers...",
+        text: 'Data Science & AI Development',
+        Header1: 'Learn Data Science AI course & Become a certified Professional in',
+        Header2: 'Learn Data Science AI course & Become Professional in',
+        questions: [
+            "You want to explore career opportunities in Data Science and AI.",
+            "You want to learn the essential skills to master in 150 days.",
+            "You want to excel in office meetings and presentations."
+        ],
+        selfQuestioningPart1: 'Do you feel confused about',
+        selfQuestioningPart2: 'starting your Data Science Career?',
+        Description: 'Data Scientists are in high demand across every industry.Even tech giants such as Google, Amazon, Apple, Facebook, and Microsoft are constantly seeking experts in data extraction, data mining, visualization, and more.The course covers a comprehensive range of topics including Data Analytics(Power BI, Tableau, Excel), Data Science(Machine Learning, Python, SQL, Statistics), AI(Deep Learning, NLP, OpenCV), and Cloud(AWS DevOps).',
+        moduleContent: [
+            {
+                module: "Module 1",
+                title: "Business Understanding & Core Python",
+                details: {
+                    videos: 7,
+                    time: "2 months",
+                    descriptions: [
+                        "Understanding the Business Goal And analyzing the features/variables/columns needed for data analysis",
+                        "Core Python (From Basics, Loops & Functions)",
+                        "Advanced Python (From OOP, Modules to Multi-Threading & Multi-Processing)"
+                    ]
+                }
+            },
+            {
+                module: "Module 2",
+                title: "Functions, OOP & Advanced Python",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "User-defined functions, built-in functions, lambda, map, filter, reduce",
+                        "Object-oriented programming: Class, inheritance, polymorphism, encapsulation, abstraction",
+                        "Working with Python modules, parsing arguments, libraries for data science",
+                        "Handling exceptions, file handling, multi-threading, and multi-processing"
+                    ]
+                }
+            },
+            {
+                module: "Module 3",
+                title: "Data Collection & Validation",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Primary data collection (manual) and secondary data (Kaggle, UCI, web scraping)",
+                        "Working with databases: SQL import/export",
+                        "Validating data, handling missing values, and removing unwanted characters",
+                        "Feature engineering, scaling, encoding (ordinal, one-hot), data leakage prevention"
+                    ]
+                }
+            },
+            {
+                module: "Module 4",
+                title: "Exploratory Data Analysis (EDA) & Statistics",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Uni-variate, bi-variate, and multi-variate analysis",
+                        "Descriptive statistics: mean, median, mode, variance, skewness",
+                        "Visual analysis: Bar plots, boxplots, pie charts, histograms, scatterplots, heatmaps",
+                        "Probability, z-scores, confidence intervals, hypothesis testing (z-test, ANOVA, Chi-square)"
+                    ]
+                }
+            },
+            {
+                module: "Module 5",
+                title: "Predictive Modeling (Machine Learning)",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Supervised learning algorithms: Linear regression, Logistic regression, SVM, KNN, Naïve Bayes, decision tree, random forest",
+                        "Model evaluation: Cross-validation, hyper-parameter tuning",
+                        "Model deployment using Streamlit (local/cloud)"
+                    ]
+                }
+            },
+            {
+                module: "Module 6",
+                title: "Unsupervised Learning & Deep Learning (DL)",
+                details: {
+                    videos: 7,
+                    time: "3 Weeks",
+                    descriptions: [
+                        "Unsupervised learning: Dimensionality reduction (PCA), clustering (K-means, DBSCAN)",
+                        "Deep learning introduction: Neural networks, backpropagation, gradient descent",
+                        "Types of neural networks: ANN, CNN, RNN"
+                    ]
+                }
+            },
+            {
+                module: "Module 7",
+                title: "Deep Learning Applications",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Image classification using CNN, object detection (OpenCV, YOLO, R-CNN)",
+                        "Transfer learning and custom object detection",
+                        "Natural language processing (NLP): Text data collection, validation, cleaning, tokenization, stemming, lemmatization",
+                        "Sentiment analysis, RNN/LSTM applications"
+                    ]
+                }
+            },
+            {
+                module: "Module 8",
+                title: "Databases (SQL & NoSQL)",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Relational databases (SQL): Database management basics, MySQL, SQL queries (DDL, DML, joins, aggregations)",
+                        "Non-relational databases (NoSQL): MongoDB, CRUD operations",
+                        "Case studies on database tables and query optimization"
+                    ]
+                }
+            },
+            {
+                module: "Module 9",
+                title: "Data Visualization & Reporting",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Power BI and Tableau",
+                        "Power BI: Data collection, power queries, creating reports, DAX queries, applying filters",
+                        "Tableau: Data collection, transformation, visual reports, measures, and filters",
+                        "Real-world projects and visualizations using Power BI/Tableau"
+                    ]
+                }
+            }
+        ],
         price: '$20.00',
         rating: 5,
         authorImage: authorPhoto,
@@ -42,18 +171,97 @@ export const data = [
         levelIndex: 0,    // Intermediate
         priceIndex: 0,    // Paid
         bannerImage: fullStackImage,
-        whatWillYouLearn: [
+        certificate: DS_Image,
+        accordionContent: [
             {
-                topic1: 'HTML',
-                topic2: 'CSS',
-                topic3: 'JavaScript',
-                topic4: 'React JS',
-                topic5: 'Bootstrap',
-                topic6: 'Core Java',
-                topic7: 'Advanced Java',
-                topic8: 'SQL',
-                topic9: 'Spring Boot'
+                title: 'What is the duration of the Data Science program at SocialPrachar?',
+                content: 'The program duration varies, with options for short-term intensive courses and longer, in-depth programs to fit different schedules and goals.'
             },
+            {
+                title: 'What topics are covered in the Data Science curriculum?',
+                content: 'Topics include Python programming, statistics, machine learning, deep learning, and data visualization, alongside real-time industry projects.'
+            },
+            {
+                title: 'Are there any internship or job guarantee options?',
+                content: 'Yes, SocialPrachar offers job placement support and industry internships to prepare students for the job market.'
+            },
+            {
+                title: 'What are the class formats available (online or classroom)?',
+                content: 'Both online and classroom training options are available to cater to student preferences.'
+            },
+            {
+                title: 'Is there a certification awarded upon completion?',
+                content: 'Yes, students receive certification upon successfully completing the program, enhancing their professional credentials.'
+            },
+            {
+                title: 'What are the average salary expectations for program graduates?',
+                content: 'Graduates can expect competitive salaries in the data science field, depending on experience and the job role secured.'
+            },
+            {
+                title: 'Who are the trainers, and what qualifications do they have?',
+                content: 'Trainers are industry professionals with significant experience in data science and machine learning, ensuring practical insights and quality education.'
+            },
+            {
+                title: 'How does SocialPrachar support non-IT professionals?',
+                content: 'SocialPrachar offers foundational support for beginners, making it accessible to non-IT professionals through introductory modules.'
+            },
+            {
+                title: 'What kind of projects will I work on during the course?',
+                content: 'Projects are based on real-time industry scenarios to provide hands-on experience in data analysis, machine learning models, and data visualization.'
+            },
+            {
+                title: 'How can I register or get more information about upcoming batches?',
+                content: 'You can register on their website or contact their admissions team for detailed information on batch timings and enrollment procedures.'
+            }
+        ],
+        bannerHeader: 'Learn Data Science Today',
+        bannerStudentsEnrolled: '16k+ Students Enrolled',
+        timeLineHeading:'Data Science',
+        levelcardIndex: [
+            {
+
+                icon: faFlag,
+                title: "Master Data Analytics",
+                description: "Learn data analysis, statistics, and visualization using tools like Excel, SQL, and Power BI. Build a strong foundation for data-driven decision-making"
+            },
+            {
+
+                icon: faPaperPlane,
+                title: "Learn Cloud Deployment",
+                description: "Deploy AI models on cloud platforms like AWS and Azure. Gain practical knowledge of scaling and automation."
+            },
+            {
+
+                icon: faFlag,
+                title: "Explore AI Concepts",
+                description: "Learn AI techniques like deep learning and NLP. Use frameworks like TensorFlow to build intelligent solutions."
+            },
+            {
+
+                icon: faPaperPlane,
+                title: "Weekly Assessments",
+                description: "Test your knowledge weekly to track progress and strengthen your understanding of core topics."
+            },
+            {
+                icon: faPaperPlane,
+                title: "Monthly Evaluations",
+                description: "Take in-depth monthly tests to consolidate your learning and improve problem-solving skills."
+            },
+            {
+                icon: faPaperPlane,
+                title: "Project Work",
+                description: "Complete hands-on projects to apply your learning. Build a portfolio to showcase your skills to employers."
+            },
+            {
+                icon: faPaperPlane,
+                title: "Placement Preparation",
+                description: "Get expert guidance on resumes, LinkedIn profiles, and interviews. Be fully prepared to impress recruiters."
+            },
+            {
+                icon: faPaperPlane,
+                title: "Job Support",
+                description: "Receive unlimited interview opportunities until you secure a job. Achieve your career goals with our placement assistance."
+            }
         ]
     },
 
@@ -62,17 +270,14 @@ export const data = [
         courseID: 2,
         imageSrc: img2,
         Duration: ' 6 months',
-        title: 'Development',
+        courseTitle: 'Development',
         students: '2900 +',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Python Basics', content: ['Python syntax and semantics,', ' Basic python Data Structures, python control flow tools,Modules in python,', ' File Handling, Python Debugging and Exception Handling'] },
-        //     { courseTopic2: 'Python Advanced Concepts', content: ['Advanced Python Data Structures,', 'Python Iterators,Generators,and Decorators,', 'Multithreading and Multiprocessing in Python,', 'python Metaclasses,', 'Context Managers in Python,', 'Advanced File Handling'] },
-        //     { courseTopic3: 'Basic Web Development', content: ['Basics of HTML,', 'Fundamentals of CSS,', 'Introduction to Javascript,', 'Basics of Bootstrap,', 'Learn to use APIs,', 'Understanding of Document Object Model(DOM)'] },
-        //     { courseTopic4: 'Python Web Frameworks', content: ['Introduction to Django,', 'Models in Django,', 'views and Templates in Django', 'Middleware in Django,', 'Django ORM,', 'Django Rest Framework'] },
-        //     { courseTopic5: 'Javascript and Frontend Frameworks', content: ['Javascript Deep Dive,', 'Introduction to ReactJS,', 'components in ReactJS,', 'Redux in ReactJS,'] },
-        //     { courseTopic6: 'Python Testing', content: ['Unit Testing in Python,', 'Python Mock and MagicMock,', 'Integration Testing in Python', 'Test coverage in Python,', 'selenium for python,'] },
-        // ],
+        questions: [
+            "You want to explore career opportunities in Data Science and AI.",
+            "You want to learn the essential skills to master in 150 days.",
+            "You want to excel in office meetings and presentations."
+        ],
         About: "Welcome to the Full Stack Python Development course! This comprehensive program is designed for aspiring developers who want to master both front-end and back-end technologies using Python. Throughout the course, you'll delve into the world of web development, starting with the basics of HTML, CSS, and JavaScript to create dynamic and responsive user interfaces. You'll then transition to server-side development using Python and frameworks like Django and Flask, where you’ll learn to build RESTful APIs, manage databases with SQL and NoSQL, and implement user authentication and authorization.In addition to core programming skills, this course emphasizes best practices in software development, including version control with Git, testing, and deployment strategies.You'll also gain practical experience by working on real-world projects that simulate the entire development lifecycle, from planning to deployment. By the end of this course, you will have a solid understanding of how to create full-stack applications, equipping you with the skills necessary to thrive in the competitive tech industry.",
         text: 'Full Stack Python Development',
         name: 'Balu',
@@ -85,24 +290,31 @@ export const data = [
         levelIndex: 1,
         priceIndex: 1,
         bannerImage: fullStackImage,
-        whatWillYouLearn: [{ topic1: 'HTML', topic2: 'CSS', topic3: 'JavaScript', topic4: 'React JS', topic5: 'Bootstrap', topic6: 'Python', topic8: 'Django' }]
+        whatWillYouLearn: [{ topic1: 'HTML', topic2: 'CSS', topic3: 'JavaScript', topic4: 'React JS', topic5: 'Bootstrap', topic6: 'Python', topic8: 'Django' }],
+        accordionContent: [
+            {
+                title: 'Course Overview',
+                content: 'This Full Stack Java Development course covers both front-end and back-end technologies, preparing you to develop, deploy, and maintain full web applications.'
+            },
+            {
+                title: 'Syllabus Details',
+                content: 'JS and Bootstrap for front-end development</li>'
+            },
+            {
+                title: 'Frequently Asked Questions',
+                content: 'This Full Stack Java Development course covers both front-end and back-end technologies, preparing you to develop, deploy, and maintain full web applications.'
+            }
+        ],
     },
 
     {
         id: 1,
         imageSrc: img3,
         courseID: 3,
-        title: 'Development',
+        courseTitle: 'Development',
         Duration: ' 4 months',
         students: '1500+ ',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to UI & UX Design', content: ['Understanding the Basics ,', ' Design Principles ,', 'User Research ,', 'Wireframing and Prototyping'] },
-        //     { courseTopic2: ' Design Thinking and Problem Solving', content: ['Introduction to Design Thinking ,', 'Ideation Techniques ,', 'Prototyping Workshop ,', 'Usability Testing'] },
-        //     { courseTopic3: 'UI Design and Visual Elements', content: ['Advanced UI Design Principles ,', 'Iconography and Imagery ,', 'Motion Design ,', 'Final Project Kick-of'] },
-        //     { courseTopic4: ' Portfolio Building and Resume Review', content: ['Crading a Strong Portfolio ,', 'Resume Writing Workshop ,', 'Portfolio Review and Feedback'] },
-        //     { courseTopic5: 'Final Project and Presentation', content: ['Project Work ,', 'Presentation Skills ,', 'Final Project Showcase'] },
-        // ],
         About: "Welcome to our UI/ UX Development course, where you will embark on an exciting journey to master the art and science of creating intuitive and user - centered digital experiences.In today’s fast - paced digital landscape, the importance of effective UI / UX design cannot be overstated; it is essential for ensuring that products are not only visually appealing but also functional and easy to navigate.Throughout this course, you will acquire a diverse set of skills, including visual design principles, interaction design strategies, and user research methodologies.Additionally, you'll learn how to create responsive designs that adapt seamlessly across devices and platforms. Emphasizing collaboration, you will work alongside peers to develop a keen understanding of user needs and behavior, preparing you to excel in the dynamic field of UI/UX design.",
         text: 'UI/UX Development',
         name: 'Balu',
@@ -115,21 +327,45 @@ export const data = [
         levelIndex: 1,    // Intermediate
         priceIndex: 1,    // Paid
         bannerImage: fullStackImage,
-        whatWillYouLearn: [{ topic1: 'Introduction to UI & UX Design', topic2: 'Design Thinking and Problem Solving', topic3: 'UI Design and Visual Elements', topic4: 'Portfolio Building and Resume Review', topic5: 'Final Project and Presentation', topic6: 'Python', topic8: 'Django' }]
+        whatWillYouLearn: [{ topic1: 'Introduction to UI & UX Design', topic2: 'Design Thinking and Problem Solving', topic3: 'UI Design and Visual Elements', topic4: 'Portfolio Building and Resume Review', topic5: 'Final Project and Presentation', topic6: 'Python', topic8: 'Django' }],
+        accordionContent: [
+            {
+                title: 'Course Overview',
+                content: 'This Full Stack Java Development course covers both front-end and back-end technologies, preparing you to develop, deploy, and maintain full web applications.'
+            },
+            {
+                title: 'Syllabus Details',
+                content: `
+                <ul>
+                    <li>Introduction to HTML, CSS, JavaScript</li>
+                    <li>React JS and Bootstrap for front-end development</li>
+                    <li>Core and Advanced Java for back-end development</li>
+                    <li>SQL and Spring Boot for database management and server-side integration</li>
+                    <li>Deploying applications on cloud platforms</li>
+                    <li>Version control systems</li>
+                </ul>
+            `
+            },
+            {
+                title: 'Frequently Asked Questions',
+                content: `
+                <p><strong>Q:</strong> Do I need prior programming experience?</p>
+                <p><strong>A:</strong> While prior programming experience is not required, basic knowledge of HTML and programming concepts will help you better understand the course content.</p>
+                
+                <p><strong>Q:</strong> Will I receive a certificate upon completion?</p>
+                <p><strong>A:</strong> Yes, you will receive a certificate upon completing the course and all hands-on projects.</p>
+            `
+            }
+        ],
     },
     {
         id: 1,
         imageSrc: img4,
         courseID: 4,
-        title: 'Development',
+        courseTitle: 'Development',
         Duration: ' 5 months',
         students: '2590 +',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'FrontEnd Technologies', content: ['HTML,', ' CSS,', 'Javascript', ' Bootstrap'] },
-        //     { courseTopic2: 'BackEnd Technologies', content: ['NodeJS,', ' ExpressJS', ' Typescript'] },
-        //     { courseTopic3: 'DataBases', content: ['SQL,', ' MongoDB'] },
-        // ],
         About: "Welcome to our MERN Stack Development course, where you'll embark on an exciting journey to master one of the most popular full-stack JavaScript frameworks in the industry! MERN, which stands for MongoDB, Express.js, React.js, and Node.js, empowers you to build dynamic, scalable web applications from scratch. This course is designed for aspiring developers eager to learn how to create robust user interfaces and seamless back-end services. Throughout the program, you will gain hands-on experience with essential skills such as database management, RESTful API development, front-end design, state management with Redux, and authentication processes. By the end of this course, you'll be equipped with the knowledge and confidence to tackle real-world projects, making you a valuable asset in the tech industry!",
         text: 'MERN Stack',
         name: 'Balu',
@@ -149,15 +385,10 @@ export const data = [
         imageSrc: img5,
         courseID: 5,
         Duration: ' 6 months',
-        title: 'Development',
+        courseTitle: 'Development',
         students: '2760 +',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to Programming', content: ['Core Java, Advanced Java, Spring Boot / Python , Django'] },
-        //     { courseTopic2: 'Front End Technologies', content: ['HTML,', ' CSS,', ' Javascript,', ' Bootstrap,', ' ReactJS'] },
-        //     { courseTopic3: 'DataBase', content: ['SQL,', ' MongoDB'] },
-        //     { courseTopic4: 'Internship', content: '3 months Internship' },
-        // ],
+
         About: "Welcome to our Advanced Full Stack Development course, where you'll dive deep into the world of web applications, mastering both front-end and back-end technologies. This course is designed for those who already have a foundational understanding of web development and are eager to elevate their skills to an advanced level. You will learn to build robust, scalable applications using modern frameworks such as React and Node.js, while also exploring databases, APIs, and cloud services. Through hands-on projects and real-world scenarios, you'll enhance your abilities in responsive design, database management, and application deployment. By the end of the course, you’ll not only be equipped with the technical skills needed for full-stack development but also the confidence to tackle complex projects in a collaborative environment.",
         text: 'Advanced Full Stack',
         name: 'Balu',
@@ -179,14 +410,8 @@ export const data = [
         courseID: 21,
         Duration: ' 3 months',
         students: '1560 +',
-        title: 'Analytics',
+        courseTitle: 'Analytics',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: 'Social Prachar offers the best Data Analytics certification courses in Hyderabad. The training program equips you with an apt understanding of data processing tools like Excel, SQL/NoSQL, and Data Visualization tools like Tableau and PowerBI. While SQL/NoSQL is used to work with the data stored in the Database Management software, Tableau and PowerBI are used in analysing it and presenting visual stories to end-users. Concepts such as Data Preparation, Data Cleansing, and Exploratory Data Analysis are explored in detail. Influential concepts like Data Mining of Structured (RDBMS) and Unstructured (Big Data) data, with real-life examples, are illustrated. Advanced Excel aids in data proficiency Concepts and it will help to reduce reduces working hours',
         students: '2 students',
         text: 'Data Analytics',
@@ -208,14 +433,8 @@ export const data = [
         courseID: 22,
         Duration: ' 7 months',
         students: '1860 +',
-        title: 'Analytics',
+        courseTitle: 'Analytics',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: "Welcome to our Data Science course, where we unlock the power of data to drive informed decision-making and innovation. In this comprehensive program, you will explore the fundamental concepts and advanced techniques of data analysis, machine learning, and statistical modeling. Our curriculum is designed to equip you with essential skills such as data visualization, programming in Python and R, data wrangling, and predictive analytics. Through hands-on projects and real-world case studies, you'll learn how to extract valuable insights from complex datasets, enabling you to tackle real-world challenges across various industries. Join us on this exciting journey to become a proficient data scientist and transform data into actionable intelligence.",
         students: '1300+  students',
         text: 'Data Science',
@@ -236,14 +455,8 @@ export const data = [
         courseID: 23,
         Duration: ' 7 months',
         students: '1560 + students',
-        title: 'Analytics',
+        courseTitle: 'Analytics',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: "Welcome to the Artificial Intelligence course, where we embark on an exciting journey to explore the transformative power of AI technologies in our daily lives and various industries. This course is designed to provide you with a comprehensive understanding of fundamental AI concepts, including machine learning, neural networks, natural language processing, and computer vision. Through hands-on projects and real-world applications, you will develop essential skills such as programming in Python, data analysis, algorithm design, and critical thinking. Join us to unlock the potential of AI and gain the knowledge and tools to create innovative solutions that can shape the future!",
         text: 'Artificial Intelligence',
         name: 'Balu',
@@ -263,14 +476,8 @@ export const data = [
         courseID: 24,
         Duration: ' 7 months',
         students: '1700+ students',
-        title: 'Analytics',
+        courseTitle: 'Analytics',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: "Welcome to the Generative AI course, where creativity meets technology! In this course, you will explore the fascinating world of generative artificial intelligence, learning how to leverage algorithms and data to create innovative solutions across various domains. From generating stunning images and music to crafting compelling text, this course provides you with the tools and techniques to harness the power of AI in your projects. You will gain hands-on experience with popular frameworks and tools, understand the underlying principles of machine learning, and develop a strong foundation in neural networks and deep learning. Join us on this exciting journey to unlock your creative potential and transform the way you approach problem-solving in the digital age!",
         students: '1350+ students',
         text: 'Generative AI',
@@ -291,17 +498,9 @@ export const data = [
         id: 3,
         imageSrc: img2,
         courseID: 31,
-        title: 'Marketing',
+        courseTitle: 'Marketing',
         Duration: ' 6 months',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction', content: ['Online Business Concepts,', 'Basic Business Concepts,', 'Introduction To Websites,', 'Purchading Domain and Hosting'] },
-        //     { courseTopic2: 'Website Designing', content: ['DashBoard Explination,', ' Theme selecting And Installation,', 'Advanced Level of Designing'] },
-        //     { courseTopic3: 'SEO (Search Engine Optimisation)', content: 'SE algorithms, ON-page,Off-Page Optimisation' },
-        //     { courseTopic4: 'SEM(Search Engine Marketing)', content: ['Introduction To paid Concepts,', ' Search ADs,', 'Dsiplay ADs'] },
-        //     { courseTopic5: 'SSM(Social Media Marketing)', content: ['FaceBook ADs,', ' Linkedin ADs,', 'Instagram ADs'] },
-
-        // ],
         About: "In today's fast-paced digital landscape, mastering the art and science of digital marketing is essential for businesses looking to thrive and connect with their audiences. Our Digital Marketing course offers a comprehensive exploration of key strategies and tools that drive online success. From understanding consumer behavior and crafting compelling content to leveraging social media, SEO, and data analytics, this course equips students with the skills needed to create impactful marketing campaigns. Through hands-on projects and real-world case studies, you'll learn to navigate the digital ecosystem and develop innovative marketing solutions that resonate with your target audience. Join us to unlock the potential of digital marketing and elevate your career in this dynamic field!",
         students: '1 students',
         text: 'Digital Marketing',
@@ -320,15 +519,9 @@ export const data = [
         id: 3,
         imageSrc: img3,
         courseID: 32,
-        title: 'Marketing',
+        courseTitle: 'Marketing',
         students: '3 students',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: "Unlock the potential of your online presence with our comprehensive SEO (Search Engine Optimization) course. In today’s digital landscape, understanding SEO is essential for businesses and individuals aiming to enhance their visibility and reach. This course will guide you through the fundamental principles of SEO, including keyword research, on-page optimization, technical SEO, and link-building strategies. You will gain practical skills to analyze website performance, optimize content for search engines, and stay ahead of ever-evolving algorithms. Whether you're a marketer, business owner, or aspiring SEO professional, this course equips you with the tools and knowledge to drive organic traffic, improve search rankings, and achieve sustainable growth for your online projects.",
         text: 'SEO(Search Engine Optimisation)',
         name: 'Balu',
@@ -347,15 +540,9 @@ export const data = [
         id: 3,
         imageSrc: img4,
         courseID: 33,
-        title: 'Marketing',
+        courseTitle: 'Marketing',
         students: '3 students',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: '',
         text: ' ⁠Digital Marketing with AI Tools',
         name: 'Balu',
@@ -374,15 +561,9 @@ export const data = [
         id: 4,
         imageSrc: img5,
         courseID: 41,
-        title: 'Accounting',
+        courseTitle: 'Accounting',
         students: '3 students',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: '',
         text: 'Advanced Tally',
         name: 'Balu',
@@ -399,15 +580,9 @@ export const data = [
         id: 4,
         imageSrc: img6,
         courseID: 42,
-        title: 'Accounting',
+        courseTitle: 'Accounting',
         students: '3 students',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: '',
         text: 'Taxation',
         name: 'Balu',
@@ -424,15 +599,9 @@ export const data = [
         id: 4,
         imageSrc: img7,
         courseID: 43,
-        title: 'Accounting',
+        courseTitle: 'Accounting',
         students: '3 students',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: '',
         text: ' GST Filing',
         name: 'Balu',
@@ -449,15 +618,9 @@ export const data = [
         id: 5,
         imageSrc: img8,
         courseID: 51,
-        title: 'Finance',
+        courseTitle: 'Finance',
         students: '3 students',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: '',
         text: ' Finance Literacy',
         name: 'Balu',
@@ -475,15 +638,9 @@ export const data = [
         id: 5,
         imageSrc: img1,
         courseID: 52,
-        title: 'Finance',
+        courseTitle: 'Finance',
         students: '3 students',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: '',
         text: 'Banking,Capital Market and Investments',
         name: 'Balu',
@@ -500,15 +657,9 @@ export const data = [
         id: 6,
         imageSrc: img2,
         courseID: 61,
-        title: 'HR Analytics',
+        courseTitle: 'HR Analytics',
         students: '1200+ students',
         no_of_lessons: '4 lessons',
-        // lessons: [
-        //     { courseTopic1: 'Introduction to HR Management', content: '4 hours 20 min' },
-        //     { courseTopic2: 'Recruitment and Selection', content: '3 hours 50 min' },
-        //     { courseTopic3: 'Performance Management', content: '5 hours 35 min' },
-        //     { courseTopic4: 'Employee Engagement', content: '6 hours 45 min' },
-        // ],
         About: '',
         text: 'HR Analytics Certification',
         name: 'Balu',

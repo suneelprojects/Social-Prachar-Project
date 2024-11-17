@@ -1,4 +1,6 @@
-.categorypage{
+/** @format */
+
+.categorypage {
   margin-bottom: 120px;
 }
 .thumbnail {
@@ -63,11 +65,14 @@
 
 .searchBar button {
   position: absolute;
-  left: 200px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
   border: none;
   background: none;
   color: #acacac;
+  z-index: 10;
 }
 
 .search p {
@@ -115,7 +120,7 @@
   border: 1px solid #ccc;
   height: 19px;
   cursor: pointer;
-  appearance:none;
+  appearance: none;
 }
 
 .shadow {
@@ -185,7 +190,7 @@
 }
 
 input[type="checkbox"]:checked::after {
- content: "\2713";
+  content: "\2713";
   position: absolute;
   top: 2px;
   left: 50%;
@@ -197,7 +202,14 @@ input[type="checkbox"]:checked::after {
 }
 
 /* media queries */
-@media (max-width: 1250px) {
+
+@media (max-width: 1451px) {
+  .searchBar button {
+    left: 175px;
+  }
+}
+
+@media (max-width: 1251px) {
   .category {
     margin-left: 10px;
     width: 24%;
@@ -212,7 +224,7 @@ input[type="checkbox"]:checked::after {
 
 @media (max-width: 1100px) and (min-width: 990px) {
   .searchBar button {
-    left: 140px;
+    left: 160px;
   }
 }
 

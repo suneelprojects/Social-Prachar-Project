@@ -5,6 +5,10 @@ import NavBar from './components/navBarComponent/navBar';
 import ScrollToTop from './components/extraComponents/ScrollToTop.js';
 import Loading from './components/extraComponents/loading.js';
 import { WishListProvider } from './Dashboard/MenuBarComponents/WishListContext.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Aos from 'aos';
+import CourseAccordion from './components/Pageslices/AccordianQuestions/Accordian.js';
 
 // Lazy load components
 const AllHomeComp = React.lazy(() => import('./components/allHomeComp'));
@@ -28,11 +32,16 @@ const ActiveCourses = React.lazy(() => import('./Dashboard/MenuBarComponents/Enr
 const CompletedCourses = React.lazy(() => import('./Dashboard/MenuBarComponents/EnrolledCoursesComponent/CompletedCourses.js'));
 const Course = React.lazy(() => import('./components/Courses_category/Course.js'));
 const DetailsPage = React.lazy(() => import('./components/courseDetailsPage/DetailsPage.js'));
+const DetailsNewPage = React.lazy(()=> import ('./components/CourseDetailsNewPage/CourseDetails.js'));
 const MyWork = React.lazy(() => import('./Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js'));
 const Aboutus = React.lazy(() => import('./components/aboutus/aboutus.js'));
 
 const App = () => {
   const [user, setUser] = useState();
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -52,11 +61,12 @@ const App = () => {
             <Routes>
               <Route path="/" element={<AllHomeComp />} />
               <Route path='/courses' element={<Course />} />
-              <Route path="/details/:cardId" element={<DetailsPage />} />
-
+              <Route path='/details/:cardId' element={<DetailsNewPage/>}/>
+              <Route path="/course/:courseID" component={<CourseAccordion/>} />
+              {/* <Route path="/details/:cardId" element={<DetailsPage />} /> */}
               <Route path='/aboutUs' element={<Aboutus />} />
               <Route path='/user'
-                element={user ? <Navigate to='/profile' /> : <Login />}>
+                element={user ? <Navigate to='/profile'/> : <Login />}>
               </Route>
               <Route path='/login' element={<Login />} />
               <Route path='/dashboard' element={<Dashboard />} />

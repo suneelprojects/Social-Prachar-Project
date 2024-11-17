@@ -138,139 +138,139 @@ const Course = () => {
 
     return (
         <>
-        <div className={courseCSS.categorypage}>
-            <div className={courseCSS.cover_img}>
-                <img src={img} className={courseCSS.thumbnail} alt="" />
-                <h1>Courses</h1>
-            </div>
+            <div className={courseCSS.categorypage}>
+                <div className={courseCSS.cover_img}>
+                    <img src={img} className={courseCSS.thumbnail} alt="" />
+                    <h1>Courses</h1>
+                </div>
 
-            <ToggleBar
-                items={items}
-                Tag={Tag}
-                Level={Level}
-                Price={Price}
-                checked={checked}
-                setChecked={setChecked}
-                showUncheckedShadow={showUncheckedShadow}
-                setShowUncheckedShadow={setShowUncheckedShadow}
-                checkedTags={checkedTags}
-                setCheckedTags={setCheckedTags}
-                showUncheckedShadowTags={showUncheckedShadowTags}
-                setShowUncheckedShadowTags={setShowUncheckedShadowTags}
-                checkedLevel={checkedLevel}
-                setCheckedLevel={setCheckedLevel}
-                showUncheckedShadowLevel={showUncheckedShadowLevel}
-                setShowUncheckedShadowLevel={setShowUncheckedShadowLevel}
-                checkedPrice={checkedPrice}
-                setCheckedPrice={setCheckedPrice}
-                showUncheckedShadowPrice={showUncheckedShadowPrice}
-                setShowUncheckedShadowPrice={setShowUncheckedShadowPrice}
-                clearFilters={clearFilters}
-            />
+                <ToggleBar
+                    items={items}
+                    Tag={Tag}
+                    Level={Level}
+                    Price={Price}
+                    checked={checked}
+                    setChecked={setChecked}
+                    showUncheckedShadow={showUncheckedShadow}
+                    setShowUncheckedShadow={setShowUncheckedShadow}
+                    checkedTags={checkedTags}
+                    setCheckedTags={setCheckedTags}
+                    showUncheckedShadowTags={showUncheckedShadowTags}
+                    setShowUncheckedShadowTags={setShowUncheckedShadowTags}
+                    checkedLevel={checkedLevel}
+                    setCheckedLevel={setCheckedLevel}
+                    showUncheckedShadowLevel={showUncheckedShadowLevel}
+                    setShowUncheckedShadowLevel={setShowUncheckedShadowLevel}
+                    checkedPrice={checkedPrice}
+                    setCheckedPrice={setCheckedPrice}
+                    showUncheckedShadowPrice={showUncheckedShadowPrice}
+                    setShowUncheckedShadowPrice={setShowUncheckedShadowPrice}
+                    clearFilters={clearFilters}
+                />
 
-            <div className={courseCSS.EntirePage}>
-                <div className={courseCSS.category}>
-                    {/* Duplicate filter section for non-toggle bar view */}
-                    <div className={courseCSS.checkbox}>
-                        <div className={courseCSS.search}>
-                            <p>Search</p>
-                            <div className={courseCSS.searchBar}>
-                                <input type="text" placeholder='search' />
-                                <button><FontAwesomeIcon icon={faSearch} /></button>
+                <div className={courseCSS.EntirePage}>
+                    <div className={courseCSS.category}>
+                        {/* Duplicate filter section for non-toggle bar view */}
+                        <div className={courseCSS.checkbox}>
+                            <div className={courseCSS.search}>
+                                <p>Search</p>
+                                <div className={courseCSS.searchBar}>
+                                    <input type="text" placeholder='search' />
+                                    <button className={courseCSS.searchIcon}><FontAwesomeIcon icon={faSearch} /></button>
+                                </div>
+                            </div>
+                            <hr />
+                            {/* Category part */}
+                            <div className={courseCSS.categories}>
+                                <h5>Category</h5>
+                                {items.map((item, index) => (
+                                    <div key={index} className={courseCSS.categorypart}>
+                                        <input
+                                            type="checkbox"
+                                            id={`acc-${index}`}
+                                            checked={checked[index]}
+                                            onChange={() => handleCheckboxClick(index)}
+                                            className={`${checked[index] ? courseCSS.shadow : showUncheckedShadow[index] ? courseCSS.unchecked_shadow : ''}`}
+                                        />
+                                        <label htmlFor={`acc-${index}`}><p>{item}</p></label>
+                                    </div>
+                                ))}
+                            </div>
+                            <hr />
+                            {/* Tag part */}
+                            <div className={courseCSS.categories}>
+                                <h5>Tags</h5>
+                                {Tag.map((tag, index) => (
+                                    <div key={index} className={courseCSS.categorypart}>
+                                        <input
+                                            type="checkbox"
+                                            id={`tag-${index}`}
+                                            checked={checkedTags[index]}
+                                            onChange={() => handleTagCheckboxClick(index)}
+                                            className={`${checkedTags[index] ? courseCSS.shadow : showUncheckedShadowTags[index] ? courseCSS.unchecked_shadow : ''}`}
+                                        />
+                                        <label htmlFor={`tag-${index}`}><p>{tag}</p></label>
+                                    </div>
+                                ))}
+                            </div>
+                            <hr />
+                            {/* Level part */}
+                            <div className={courseCSS.categories}>
+                                <h5>Level</h5>
+                                {Level.map((level, index) => (
+                                    <div key={index} className={courseCSS.categorypart}>
+                                        <input
+                                            type="checkbox"
+                                            id={`level-${index}`}
+                                            checked={checkedLevel[index]}
+                                            onChange={() => handleLevelCheckboxClick(index)}
+                                            className={`${checkedLevel[index] ? courseCSS.shadow : showUncheckedShadowLevel[index] ? courseCSS.unchecked_shadow : ''}`}
+                                        />
+                                        <label htmlFor={`level-${index}`}><p>{level}</p></label>
+                                    </div>
+                                ))}
+                            </div>
+                            <hr />
+                            {/* Price part */}
+                            <div className={courseCSS.categories}>
+                                <h5>Price</h5>
+                                {Price.map((price, index) => (
+                                    <div key={index} className={courseCSS.categorypart}>
+                                        <input
+                                            type="checkbox"
+                                            id={`price-${index}`}
+                                            checked={checkedPrice[index]}
+                                            onChange={() => handlePriceCheckboxClick(index)}
+                                            className={`${checkedPrice[index] ? courseCSS.shadow : showUncheckedShadowPrice[index] ? courseCSS.unchecked_shadow : ''}`}
+                                        />
+                                        <label htmlFor={`price-${index}`}><p>{price}</p></label>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className={courseCSS.button}>
+                                <button className={courseCSS.btn} onClick={handleClick}>&#x2715;&nbsp;&nbsp;&nbsp;&nbsp;Clear All Filters</button>
                             </div>
                         </div>
-                        <hr />
-                        {/* Category part */}
-                        <div className={courseCSS.categories}>
-                            <h5>Category</h5>
-                            {items.map((item, index) => (
-                                <div key={index} className={courseCSS.categorypart}>
-                                    <input
-                                        type="checkbox"
-                                        id={`acc-${index}`}
-                                        checked={checked[index]}
-                                        onChange={() => handleCheckboxClick(index)}
-                                        className={`${checked[index] ? courseCSS.shadow : showUncheckedShadow[index] ? courseCSS.unchecked_shadow : ''}`}
-                                    />
-                                    <label htmlFor={`acc-${index}`}><p>{item}</p></label>
-                                </div>
-                            ))}
-                        </div>
-                        <hr />
-                        {/* Tag part */}
-                        <div className={courseCSS.categories}>
-                            <h5>Tags</h5>
-                            {Tag.map((tag, index) => (
-                                <div key={index} className={courseCSS.categorypart}>
-                                    <input
-                                        type="checkbox"
-                                        id={`tag-${index}`}
-                                        checked={checkedTags[index]}
-                                        onChange={() => handleTagCheckboxClick(index)}
-                                        className={`${checkedTags[index] ? courseCSS.shadow : showUncheckedShadowTags[index] ? courseCSS.unchecked_shadow : ''}`}
-                                    />
-                                    <label htmlFor={`tag-${index}`}><p>{tag}</p></label>
-                                </div>
-                            ))}
-                        </div>
-                        <hr />
-                        {/* Level part */}
-                        <div className={courseCSS.categories}>
-                            <h5>Level</h5>
-                            {Level.map((level, index) => (
-                                <div key={index} className={courseCSS.categorypart}>
-                                    <input
-                                        type="checkbox"
-                                        id={`level-${index}`}
-                                        checked={checkedLevel[index]}
-                                        onChange={() => handleLevelCheckboxClick(index)}
-                                        className={`${checkedLevel[index] ? courseCSS.shadow : showUncheckedShadowLevel[index] ? courseCSS.unchecked_shadow : ''}`}
-                                    />
-                                    <label htmlFor={`level-${index}`}><p>{level}</p></label>
-                                </div>
-                            ))}
-                        </div>
-                        <hr />
-                        {/* Price part */}
-                        <div className={courseCSS.categories}>
-                            <h5>Price</h5>
-                            {Price.map((price, index) => (
-                                <div key={index} className={courseCSS.categorypart}>
-                                    <input
-                                        type="checkbox"
-                                        id={`price-${index}`}
-                                        checked={checkedPrice[index]}
-                                        onChange={() => handlePriceCheckboxClick(index)}
-                                        className={`${checkedPrice[index] ? courseCSS.shadow : showUncheckedShadowPrice[index] ? courseCSS.unchecked_shadow : ''}`}
-                                    />
-                                    <label htmlFor={`price-${index}`}><p>{price}</p></label>
-                                </div>
-                            ))}
-                        </div>
-                        <div className={courseCSS.button}>
-                            <button className={courseCSS.btn} onClick={handleClick}>&#x2715;&nbsp;&nbsp;&nbsp;&nbsp;Clear All Filters</button>
-                        </div>
                     </div>
+                    <div className={courseCSS.CardsSection}>
+                        <Cards
+                            filters={{
+                                checkedCategories: checked,
+                                checkedTags,
+                                checkedLevel,
+                                checkedPrice
+                            }} />
+                    </div>
+                    {showButton && (
+                        <button className={courseCSS.scrollButton} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                            <span>&#10095;&#10095;</span>
+                        </button>
+                    )}
                 </div>
-                <div className={courseCSS.CardsSection}>
-                    <Cards
-                        filters={{
-                            checkedCategories: checked,
-                            checkedTags,
-                            checkedLevel,
-                            checkedPrice
-                        }} />
-                </div>
-                {showButton && (
-                    <button className={courseCSS.scrollButton} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                        <span>&#10095;&#10095;</span>
-                    </button>
-                )}
+
+
             </div>
-
-
-        </div>
-        <Footer />
+            <Footer />
 
         </>
 
