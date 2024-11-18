@@ -12,7 +12,7 @@ const SignInForm = ({ onClose, courseID }) => {
     });
 
     const [availableCourses, setAvailableCourses] = useState([]);
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwecHWu1HtiDSIQHSoghoBeJoPoV49EiV-VPnXwGaRbbG_0BiAAR7Bo6mWAFcgn4mrrxQ/exec'; // Replace with your Google Apps Script Web App URL
+    const scriptURL = 'https://docs.google.com/spreadsheets/d/19evw9OgcoxbUPDoAyiyeFK0ESyw0iZzScZ29WGt4QUI/edit?usp=sharing'; // Replace with your Google Apps Script Web App URL
 
     useEffect(() => {
         const selectedCourse = data.find(course => course.courseID === courseID);
@@ -23,6 +23,12 @@ const SignInForm = ({ onClose, courseID }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const { fullName, email, phone, course, mode } = formData;
+
+        if (!fullName || !email || !phone || !course || !mode) {
+            alert('Please fill in all required fields.');
+            return; // Stop the form submission if any field is empty
+        }
         try {
             // Create FormData object
             const formPayload = new FormData();

@@ -73,21 +73,21 @@ const Whatwillyoulearn = () => {
                 <section className={styles.roleContainer}>
                     <article className={styles.role}>
                         <img src={student} alt="Student" className={styles.roleImage} />
-                        <div>
+                        <div className={styles.roleContent}>
                             <h3 className={styles.roleTitle}>Fresh Graduates</h3>
                             <p className={styles.roleDescription}>Discover the best career opportunities in Data Science and AI to kickstart your journey into the tech industry.</p>
                         </div>
                     </article>
                     <article className={styles.role}>
                         <img src={professional} alt="Working Professional" className={styles.roleImage} />
-                        <div>
+                        <div className={styles.roleContent}>
                             <h3 className={styles.roleTitle}>Experienced IT Professionals</h3>
                             <p className={styles.roleDescription}>Upskill with the latest Data Science and AI trends to stay ahead in your career.</p>
                         </div>
                     </article>
                     <article className={styles.role}>
                         <img src={business} alt="Business Owner" className={styles.roleImage} />
-                        <div>
+                        <div className={styles.roleContent}>
                             <h3 className={styles.roleTitle}>Entrepreneurs</h3>
                             <p className={styles.roleDescription}>Learn how to leverage AI to launch and scale your startup successfully.</p>
                         </div>

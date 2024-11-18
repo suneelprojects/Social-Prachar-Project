@@ -214,7 +214,7 @@
   );
   border: 1px solid #f0f0f0;
   border-radius: 14px;
-  padding: 50px 35px;
+  padding: 35px 35px;
   margin: 0 15px;
   width: 350px;
   text-align: start;
@@ -440,7 +440,26 @@
     position: absolute;
     top: -10px;
   }
+    .role {
+    width: 95%;
+    /* margin: 15px 0; */
+    padding: 30px 5px;
+    height: auto;
+  }
+  .roleTitle {
+    font-size: 20px;
+  }
+  .roleImage {
+    width: 28px;
+    height: 28px;
+    margin-left: 18px;
+  }
+
+  .roleDescription {
+    font-size: 18px;
+  }
 }
+
 @media (max-width: 1250px) {
   .container {
     width: 100%;
@@ -449,5 +468,23 @@
     width: 100%;
     position: absolute;
     top: -10px;
+  }
+   .role {
+    width: 95%;
+    /* margin: 15px 0; */
+    padding: 30px 5px;
+    height: auto;
+  }
+  .roleTitle {
+    font-size: 20px;
+  }
+  .roleImage {
+    width: 28px;
+    height: 28px;
+    margin-left: 18px;
+  }
+
+  .roleDescription {
+    font-size: 18px;
   }
 }
