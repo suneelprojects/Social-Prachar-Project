@@ -145,7 +145,7 @@ const Headerpart = () => {
                 <div className={style.HeaderPicture}>
                     {card && <img src={card.courseImage} alt="Course" className={style.headerImage} />}
                     <div className={style.EnrollButtonContent}>
-                        {!isMobile && <Enrollbutton label="Enroll Now" className={style.EnrollButton} />}
+                        {card && !isMobile && <Enrollbutton label="Enroll Now" courseID={card.id} className={style.EnrollButton} />}
                         <span><img src={FollowerImg} alt="Follower group" className={style.FollowerImage} /></span>
                         <div className={style.reviewContainer}>
                             <div className={style.FollowerStars}>

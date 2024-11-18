@@ -8,7 +8,7 @@ import Certificate from '../Pageslices/Certificatepart/Certificate';
 import Banner from '../Pageslices/Banner/Banner';
 import CourseAccordion from '../Pageslices/AccordianQuestions/Accordian';
 
-const CourseDetails = ({ courseID }) => {
+const CourseDetails = () => {
     return (
         <div>
             <Headerpart />

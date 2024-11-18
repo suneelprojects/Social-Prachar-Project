@@ -8,6 +8,7 @@ import img7 from '../../assets/img7.jpg';
 import img8 from '../../assets/img8.jpg';
 import classDemoImage from '../../assets/AssetsOfDetailsPage/masterclass/featured-topmate masteclass image.jpg';
 import DS_Image from '../../assets/AssetsOfDetailsPage/masterclass/header-removebg-preview.png';
+import DS_certificate from '../../assets/AssetsOfDetailsPage/masterclass/Datascience certificate.jpg';
 import authorPhoto from '../../assets/authorphoto.jpg';
 import fullStackImage from '../../assets/classplus-banner-fullstack.webp';
 import DataAnalyticsImage from '../../assets/FSD-Banner-1-datascience.webp';
@@ -40,6 +41,7 @@ export const data = [
         Description: 'Data Scientists are in high demand across every industry.Even tech giants such as Google, Amazon, Apple, Facebook, and Microsoft are constantly seeking experts in data extraction, data mining, visualization, and more.The course covers a comprehensive range of topics including Data Analytics(Power BI, Tableau, Excel), Data Science(Machine Learning, Python, SQL, Statistics), AI(Deep Learning, NLP, OpenCV), and Cloud(AWS DevOps).',
         moduleContent: [
             {
+                id: 1,
                 module: "Module 1",
                 title: "Business Understanding & Core Python",
                 details: {
@@ -53,6 +55,7 @@ export const data = [
                 }
             },
             {
+                id: 2,
                 module: "Module 2",
                 title: "Functions, OOP & Advanced Python",
                 details: {
@@ -67,6 +70,7 @@ export const data = [
                 }
             },
             {
+                id: 3,
                 module: "Module 3",
                 title: "Data Collection & Validation",
                 details: {
@@ -81,6 +85,7 @@ export const data = [
                 }
             },
             {
+                id: 4,
                 module: "Module 4",
                 title: "Exploratory Data Analysis (EDA) & Statistics",
                 details: {
@@ -95,6 +100,7 @@ export const data = [
                 }
             },
             {
+                id: 5,
                 module: "Module 5",
                 title: "Predictive Modeling (Machine Learning)",
                 details: {
@@ -108,6 +114,7 @@ export const data = [
                 }
             },
             {
+                id: 6,
                 module: "Module 6",
                 title: "Unsupervised Learning & Deep Learning (DL)",
                 details: {
@@ -121,6 +128,7 @@ export const data = [
                 }
             },
             {
+                id: 7,
                 module: "Module 7",
                 title: "Deep Learning Applications",
                 details: {
@@ -135,6 +143,7 @@ export const data = [
                 }
             },
             {
+                id: 8,
                 module: "Module 8",
                 title: "Databases (SQL & NoSQL)",
                 details: {
@@ -148,6 +157,7 @@ export const data = [
                 }
             },
             {
+                id: 9,
                 module: "Module 9",
                 title: "Data Visualization & Reporting",
                 details: {
@@ -171,7 +181,7 @@ export const data = [
         levelIndex: 0,    // Intermediate
         priceIndex: 0,    // Paid
         bannerImage: fullStackImage,
-        certificate: DS_Image,
+        certificate: DS_certificate,
         accordionContent: [
             {
                 title: 'What is the duration of the Data Science program at SocialPrachar?',
@@ -216,7 +226,7 @@ export const data = [
         ],
         bannerHeader: 'Learn Data Science Today',
         bannerStudentsEnrolled: '16k+ Students Enrolled',
-        timeLineHeading:'Data Science',
+        timeLineHeading: 'Data Science',
         levelcardIndex: [
             {
 
@@ -262,6 +272,12 @@ export const data = [
                 title: "Job Support",
                 description: "Receive unlimited interview opportunities until you secure a job. Achieve your career goals with our placement assistance."
             }
+        ],
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Data Science' },
+            { dropDownid: 1, courseName: 'Data Science + AI' },
+            { dropDownid: 0, courseName: 'Data Analytics' },
+            { dropDownid: 1, courseName: 'Gen AI' },
         ]
     },
 
@@ -413,7 +429,6 @@ export const data = [
         courseTitle: 'Analytics',
         no_of_lessons: '4 lessons',
         About: 'Social Prachar offers the best Data Analytics certification courses in Hyderabad. The training program equips you with an apt understanding of data processing tools like Excel, SQL/NoSQL, and Data Visualization tools like Tableau and PowerBI. While SQL/NoSQL is used to work with the data stored in the Database Management software, Tableau and PowerBI are used in analysing it and presenting visual stories to end-users. Concepts such as Data Preparation, Data Cleansing, and Exploratory Data Analysis are explored in detail. Influential concepts like Data Mining of Structured (RDBMS) and Unstructured (Big Data) data, with real-life examples, are illustrated. Advanced Excel aids in data proficiency Concepts and it will help to reduce reduces working hours',
-        students: '2 students',
         text: 'Data Analytics',
         name: 'Balu',
         price: '$20.00',
@@ -436,7 +451,6 @@ export const data = [
         courseTitle: 'Analytics',
         no_of_lessons: '4 lessons',
         About: "Welcome to our Data Science course, where we unlock the power of data to drive informed decision-making and innovation. In this comprehensive program, you will explore the fundamental concepts and advanced techniques of data analysis, machine learning, and statistical modeling. Our curriculum is designed to equip you with essential skills such as data visualization, programming in Python and R, data wrangling, and predictive analytics. Through hands-on projects and real-world case studies, you'll learn how to extract valuable insights from complex datasets, enabling you to tackle real-world challenges across various industries. Join us on this exciting journey to become a proficient data scientist and transform data into actionable intelligence.",
-        students: '1300+  students',
         text: 'Data Science',
         name: 'Balu',
         price: '$20.00',
@@ -479,7 +493,6 @@ export const data = [
         courseTitle: 'Analytics',
         no_of_lessons: '4 lessons',
         About: "Welcome to the Generative AI course, where creativity meets technology! In this course, you will explore the fascinating world of generative artificial intelligence, learning how to leverage algorithms and data to create innovative solutions across various domains. From generating stunning images and music to crafting compelling text, this course provides you with the tools and techniques to harness the power of AI in your projects. You will gain hands-on experience with popular frameworks and tools, understand the underlying principles of machine learning, and develop a strong foundation in neural networks and deep learning. Join us on this exciting journey to unlock your creative potential and transform the way you approach problem-solving in the digital age!",
-        students: '1350+ students',
         text: 'Generative AI',
         name: 'Balu',
         price: '$20.00',

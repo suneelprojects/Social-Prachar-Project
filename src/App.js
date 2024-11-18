@@ -31,7 +31,6 @@ const Enrolled = React.lazy(() => import('./Dashboard/MenuBarComponents/Enrolled
 const ActiveCourses = React.lazy(() => import('./Dashboard/MenuBarComponents/EnrolledCoursesComponent/ActiveCourses.js'));
 const CompletedCourses = React.lazy(() => import('./Dashboard/MenuBarComponents/EnrolledCoursesComponent/CompletedCourses.js'));
 const Course = React.lazy(() => import('./components/Courses_category/Course.js'));
-const DetailsPage = React.lazy(() => import('./components/courseDetailsPage/DetailsPage.js'));
 const DetailsNewPage = React.lazy(()=> import ('./components/CourseDetailsNewPage/CourseDetails.js'));
 const MyWork = React.lazy(() => import('./Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js'));
 const Aboutus = React.lazy(() => import('./components/aboutus/aboutus.js'));

@@ -21,6 +21,7 @@ const TimelineComponent = () => {
         setCard(cardDetails);
     }, [cardId]);
 
+
     // Update progress line based on visible cards
     const updateProgress = () => {
         if (!cardRefs.current.length) return;
@@ -139,7 +140,7 @@ const TimelineComponent = () => {
                     </div>
                     <div className={certificateStyling.imageContainer}>
                         <img
-                            src={certificate}
+                            src={card && card.certificate ? card.certificate : certificate} 
                             alt="Certificate Preview"
                             className={certificateStyling.certificateImage}
                         />

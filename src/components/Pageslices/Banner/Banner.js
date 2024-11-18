@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import style from './Banner.module.css';
 import { data } from '../../Cards/CardData';
 import { useParams } from 'react-router-dom';
+import SignInForm from '../Enrollbutton/PopupSignInForm';
+import EnrollButton from '../Enrollbutton/Enrollbutton';
 
 const Banner = () => {
     const { cardId } = useParams();
     const [card, setCard] = useState(null);
+    const [showForm, setShowForm] = useState(false);
 
     useEffect(() => {
         const cardDetails = data.find(card => card.courseID === parseInt(cardId));
@@ -13,8 +16,18 @@ const Banner = () => {
     }, [cardId]);
 
     if (!card) {
-        return <div>Loading...</div>; // Handle loading state in case card data is not available yet
+        return <div>Loading...</div>;
     }
+
+    // Function to open the SignInForm
+    const handleEnrollClick = () => {
+        setShowForm(true);
+    };
+
+    // Function to close the SignInForm
+    const handleCloseForm = () => {
+        setShowForm(false);
+    };
 
     return (
         <div className={style.banner}>
@@ -34,8 +47,9 @@ const Banner = () => {
                     <span className={style.originalPrice}>Unlock Exclusive</span>
                     <span className={style.discountedPrice}>OFFERS</span>
                 </div>
-                <button className={style.enrollButton}>Enroll Now</button>
+                <EnrollButton label="Enroll Now" courseID={card.id} className={style.EnrollButton} />
             </div>
+            {showForm && <SignInForm onClose={handleCloseForm} />}
         </div>
     );
 };
