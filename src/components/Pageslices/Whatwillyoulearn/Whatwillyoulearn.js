@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Whatwillyoulearn.module.css';
-import { data } from '../../Cards/CardData';  // Assuming 'data' is exported from the appropriate file.
+import { data } from '../../Cards/CardData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 import backgroundImage from '../../../assets/AssetsOfDetailsPage/background.png';
@@ -21,7 +21,7 @@ const Whatwillyoulearn = () => {
     }, [cardId]);
 
     if (!card) {
-        return <div>Loading...</div>; // In case card data is still being fetched
+        return <div>Loading...</div>;
     }
 
     return (
@@ -32,7 +32,7 @@ const Whatwillyoulearn = () => {
                         What will you <span>Learn</span>?
                     </p>
                     <p className={styles.description}>
-                       {card.Description}
+                        {card.Description}
                     </p>
                 </div>
 
@@ -69,7 +69,7 @@ const Whatwillyoulearn = () => {
 
             <div className={styles.masterclassInfo}>
                 <img src={backgroundImage} alt="Background" className={styles.backgroundImage} />
-                <p className={styles.masterclassQuestion}>Who is this <span>Masterclass</span> for?</p>
+                <p className={styles.masterclassQuestion}>Who is this <span>Course</span> for?</p>
                 <section className={styles.roleContainer}>
                     <article className={styles.role}>
                         <img src={student} alt="Student" className={styles.roleImage} />

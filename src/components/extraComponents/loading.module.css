@@ -4,7 +4,7 @@
     border-top: 6px solid #553cdf;
     width: 60px;
     height: 60px;
-    -webkit-animation: spin 1.4s linear infinite; /* Safari */
+    -webkit-animation: spin 1.4s linear infinite;
     animation: spin 1.4s linear infinite;
   }
   

@@ -6,6 +6,59 @@ import img5 from '../../assets/img5.jpg';
 import img6 from '../../assets/img6.jpg';
 import img7 from '../../assets/img7.jpg';
 import img8 from '../../assets/img8.jpg';
+
+// studentsplaced images 
+import student1 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/compainManager.png';
+import student2 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (2).png';
+import student3 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (3).png';
+import student4 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (4).png';
+import student5 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (5).png';
+import student6 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (6).png';
+import student7 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (7).png';
+import student8 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (8).png';
+import student9 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (9).png';
+import student10 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE.png';
+import student11 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/BA.png';
+import student12 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/BDA.png';
+import student13 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/BrandManager.png';
+import student15 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DA (2).png';
+import student16 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DA (3).png';
+import student17 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DA (4).png';
+import student18 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DA (5).png';
+import student19 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DA (6).png';
+import student21 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DA.png';
+import student22 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DA (7).png';
+import student23 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DE (2).png';
+import student24 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DE.png';
+import student25 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS (2).png';
+import student26 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS (3).png';
+import student27 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS (4).png';
+import student28 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS (5).png';
+import student29 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS (6).png';
+import student30 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS (7).png';
+import student31 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS (8).png';
+import student32 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS (9).png';
+import student33 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS.png';
+import student34 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DevopsE.png';
+import student35 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/FSD.png';
+import student36 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/FSW.png';
+import student37 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (2).png';
+import student38 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (3).png';
+import student39 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (4).png';
+import student40 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (5).png';
+import student41 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (6).png';
+import student42 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (7).png';
+import student43 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML.png';
+import student44 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SD.png';
+import student45 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (3).png';
+import student46 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (2).png';
+import student47 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (5).png';
+import student48 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (4).png';
+import student49 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (6).png';
+import student50 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (7).png';
+import student51 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE.png';
+// students placed images
+import testmonialsCommentImage from '../../assets/AssetsOfDetailsPage/masterclass/commentsDS (1).jpg';
 import classDemoImage from '../../assets/AssetsOfDetailsPage/masterclass/featured-topmate masteclass image.jpg';
 import DS_Image from '../../assets/AssetsOfDetailsPage/masterclass/header-removebg-preview.png';
 import DS_certificate from '../../assets/AssetsOfDetailsPage/masterclass/Datascience certificate.jpg';
@@ -13,24 +66,26 @@ import authorPhoto from '../../assets/authorphoto.jpg';
 import fullStackImage from '../../assets/classplus-banner-fullstack.webp';
 import DataAnalyticsImage from '../../assets/FSD-Banner-1-datascience.webp';
 import MarketingImage from '../../assets/DM-new-Banner-DigitalMarketing.webp';
-import { faFlag, faPaperPlane, faLightbulb } from "@fortawesome/free-regular-svg-icons";
+import { faFlag, faPaperPlane, faLightbulb, faHandshake, faCalendarCheck, faChartBar } from "@fortawesome/free-regular-svg-icons";
+import { faBriefcase, faClipboardList, faCloud, faProjectDiagram, faRobot } from '@fortawesome/free-solid-svg-icons';
 
 
 export const data = [
     {
         id: 1,
-        courseID: 1,  // Link to the course ID
+        courseID: 1,
         Duration: ' 6 months',
         imageSrc: img1,
         courseImage: DS_Image,
         MasterclassImage: classDemoImage,
+        TestmonialsCommentsImage1: testmonialsCommentImage,
         courseTitle: 'Development',
         students: '3200 +',
         no_of_lessons: '4 lessons',
         About: "This Full Stack Java Development course is designed for aspiring developers...",
         text: 'Data Science & AI Development',
-        Header1: 'Learn Data Science AI course & Become a certified Professional in',
-        Header2: 'Learn Data Science AI course & Become Professional in',
+        Header1: 'Learn Data Science AI course & Become a Certified Professional in',
+        Header2: 'Learn Data Science AI course & Become a Certified Professional in',
         questions: [
             "You want to explore career opportunities in Data Science and AI.",
             "You want to learn the essential skills to master in 150 days.",
@@ -229,55 +284,72 @@ export const data = [
         timeLineHeading: 'Data Science',
         levelcardIndex: [
             {
-
-                icon: faFlag,
+                icon: faChartBar,
                 title: "Master Data Analytics",
                 description: "Learn data analysis, statistics, and visualization using tools like Excel, SQL, and Power BI. Build a strong foundation for data-driven decision-making"
             },
             {
-
-                icon: faPaperPlane,
+                icon: faCloud,
                 title: "Learn Cloud Deployment",
                 description: "Deploy AI models on cloud platforms like AWS and Azure. Gain practical knowledge of scaling and automation."
             },
             {
-
-                icon: faFlag,
+                icon: faRobot,
                 title: "Explore AI Concepts",
                 description: "Learn AI techniques like deep learning and NLP. Use frameworks like TensorFlow to build intelligent solutions."
             },
             {
-
-                icon: faPaperPlane,
+                icon: faClipboardList,
                 title: "Weekly Assessments",
                 description: "Test your knowledge weekly to track progress and strengthen your understanding of core topics."
             },
             {
-                icon: faPaperPlane,
+                icon: faCalendarCheck,
                 title: "Monthly Evaluations",
                 description: "Take in-depth monthly tests to consolidate your learning and improve problem-solving skills."
             },
             {
-                icon: faPaperPlane,
+                icon: faProjectDiagram,
                 title: "Project Work",
                 description: "Complete hands-on projects to apply your learning. Build a portfolio to showcase your skills to employers."
             },
             {
-                icon: faPaperPlane,
+                icon: faBriefcase,
                 title: "Placement Preparation",
                 description: "Get expert guidance on resumes, LinkedIn profiles, and interviews. Be fully prepared to impress recruiters."
             },
             {
-                icon: faPaperPlane,
+                icon: faHandshake,
                 title: "Job Support",
                 description: "Receive unlimited interview opportunities until you secure a job. Achieve your career goals with our placement assistance."
             }
         ],
+
         popUpDropDownCourses: [
             { dropDownid: 0, courseName: 'Data Science' },
             { dropDownid: 1, courseName: 'Data Science + AI' },
-            { dropDownid: 0, courseName: 'Data Analytics' },
-            { dropDownid: 1, courseName: 'Gen AI' },
+            { dropDownid: 2, courseName: 'Data Analytics' },
+            { dropDownid: 3, courseName: 'Gen AI' },
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student25 },
+            { id: 2, image: student26 },
+            { id: 3, image: student27 },
+            { id: 4, image: student28 },
+            { id: 5, image: student29 },
+            { id: 6, image: student30 },
+            { id: 7, image: student31 },
+            { id: 8, image: student32 },
+            { id: 9, image: student33 },
+            { id: 11, image: student15 },
+            { id: 12, image: student16 },
+            { id: 13, image: student17 },
+            { id: 14, image: student18 },
+            { id: 15, image: student19 },
+            { id: 17, image: student21 },
+            { id: 18, image: student22 },
+            { id: 19, image: student23 },
+            { id: 20, image: student24 }
         ]
     },
 
@@ -321,6 +393,31 @@ export const data = [
                 content: 'This Full Stack Java Development course covers both front-end and back-end technologies, preparing you to develop, deploy, and maintain full web applications.'
             }
         ],
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'full stack' },
+            { dropDownid: 1, courseName: 'java' },
+            { dropDownid: 2, courseName: 'Data Analytics' },
+            { dropDownid: 3, courseName: 'Gen AI' },
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student45 },
+            { id: 2, image: student46 },
+            { id: 3, image: student47 },
+            { id: 4, image: student48 },
+            { id: 5, image: student49 },
+            { id: 6, image: student50 },
+            { id: 7, image: student51 },
+            { id: 8, image: student1 },
+            { id: 9, image: student2 },
+            { id: 10, image: student3 },
+            { id: 11, image: student4 },
+            { id: 12, image: student5 },
+            { id: 13, image: student6 },
+            { id: 14, image: student7 },
+            { id: 15, image: student8 },
+            { id: 16, image: student9 },
+            { id: 17, image: student10 }
+        ]
     },
 
     {

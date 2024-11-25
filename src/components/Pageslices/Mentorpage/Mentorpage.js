@@ -114,15 +114,6 @@ const Mentorpage = () => {
                         className={styles.profileImage}
                     />
 
-                    {/* Mentor details */}
-                    <div className={styles.mentorDetails}>
-                        <p className={styles.mentorSkill}>
-                            <span><img src={crownImage} alt="" /></span>Expert in Communication Skills
-                        </p>
-                        <p className={styles.mentorName}>Ganeshprasad</p>
-                        <p className={styles.mentorTitle}>Co-founder of Think School</p>
-                    </div>
-
                     {/* Navigation buttons */}
                     <button onClick={() => { prevImage(); }} className={styles.prevButton}>
                         <FontAwesomeIcon icon={faChevronLeft} />
@@ -136,13 +127,13 @@ const Mentorpage = () => {
                     <div className={styles.bioContent}>
                         <h3 className={styles.bioTitle}>Meet your Mentor</h3>
                         <p className={styles.bioText}>
-                            Ganesh is a public speaker and YouTuber who co-founded Think School with Parsh Kothari, an education startup that generated 4+ Billion video impressions in 24 months.
+                            Our certified trainers with 7+ years of industry experience ensure hands-on learning with top faculty and excellent lab infrastructure. Our HR team supports job placements, and you’ll have 24/7 access to an online portal for learning at your convenience.
                         </p>
                         <p className={styles.bioText}>
-                            Ganesh has helped 27,000+ students improve their communication to become effective public speakers, great salespeople, YouTubers, and successful business people. Ganesh’s dedication to education has earned him the title of “Insightful Education Creator of the Year 2023” at the Global Startup Summit 2023.
+                            We help prepare your CV/Resume for interviews and enhance your chances of securing a job. Having trained over 15,000 professionals in fields like Digital Marketing, Data Science, Full Stack Development, AWS + DevOps, and AI, we focus on results.
                         </p>
                         <p className={styles.bioText}>
-                            His vision is to make the Indian youth more employable by helping them learn practical and fundamental skills in life.
+                            Our curriculum balances 30% theory and 70% practical sessions, with mentors available throughout the day for doubt-solving support.
                         </p>
                     </div>
 

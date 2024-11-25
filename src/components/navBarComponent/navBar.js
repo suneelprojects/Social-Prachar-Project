@@ -147,7 +147,7 @@ const NavBar = () => {
           {/* brand name and category code start */}
           <div className="d-flex ">
             <a className="navbar-brand" href="http://socialprachar.in">
-              {/* <img src={spLogo} className={`${navBarStyle.spLogo}`} /> */}
+              <img src={spLogo} className={`${navBarStyle.spLogo}`} />
             </a>
 
             <select
@@ -167,7 +167,7 @@ const NavBar = () => {
               className={`${navBarStyle.hiddenMobileSm} ms-4 ${navBarStyle.categorySection} `}
             >
               <button className={`${navBarStyle.category}`}>
-                <i className="bi bi-grid-3x3-gap-fill"></i>Courses
+                <i className="bi bi-grid-3x2-gap-fill"></i>Courses
                 <i className="bi bi-chevron-compact-down"></i>
               </button>
 
