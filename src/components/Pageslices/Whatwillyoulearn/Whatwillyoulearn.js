@@ -45,7 +45,7 @@ const Whatwillyoulearn = () => {
                         >
                             <div className={styles.moduleHeader}>
                                 <p className={styles.moduleTitle}>{module.module}</p>
-                                <h3 className={styles.moduleSubTitle}>{module.title}</h3>
+                                <p className={styles.moduleSubTitle}>{module.title}</p>
                             </div>
 
                             <div className={styles.detailsContainer}>

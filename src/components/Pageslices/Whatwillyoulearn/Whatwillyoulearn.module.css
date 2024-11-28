@@ -46,7 +46,7 @@
   flex-direction: column;
   position: relative;
   overflow-y: auto;
-  max-height: calc(100vh - 0);
+  height: 85vh;
   scrollbar-width: 100%;
   -ms-overflow-style: none;
 }
@@ -136,7 +136,6 @@
   align-items: center;
   justify-content: center;
   padding: 8px 18px;
-  display: flex;
   gap: 10px;
   margin: 12px 0;
   color: #0b4045;
@@ -247,10 +246,11 @@
   .container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
+    width: 100% !important;
     height: 100vh;
-    padding: 20px;
-    gap: 20px;
+    padding: 10px;
+    gap: 2px;
   }
 
   .header {
@@ -269,7 +269,6 @@
 
   .modules {
     width: 100%;
-    /* max-height: calc(100vh - 20px); */
   }
 
   .moduleContainer {
@@ -277,20 +276,27 @@
     padding: 20px;
     margin-bottom: 15px;
   }
-
-  .moduleSubTitle {
-    font-size: 20px;
-  }
-
   .moduleTitle {
     font-size: 14px;
   }
-
-  .detailItem {
-    padding: 5px 10px;
-    font-size: 14px;
+  .moduleSubTitle {
+    font-size: 20px !important;
   }
-
+  .detailsContainer {
+    position: relative;
+    top: -20px;
+  }
+  .details {
+    gap: 15px;
+  }
+  .detailItem {
+    padding: 3px 8px;
+    font-size: 16px;
+  }
+  .descriptionsContainer {
+    position: relative;
+    top: -40px;
+  }
   .descriptionItem {
     font-size: 14px;
   }
@@ -305,12 +311,14 @@
 
   .masterclassQuestion {
     width: 100%;
-    font-size: 20px;
+    font-size: 26px !important;
   }
 
   .roleContainer {
     flex-direction: column;
     align-items: center;
+    position: relative;
+    top: -35px;
   }
 
   .role {
@@ -362,6 +370,7 @@
 
   .modules {
     width: 100%;
+    height: auto;
   }
 
   .moduleContainer {
@@ -370,20 +379,27 @@
   }
 
   .moduleSubTitle {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .moduleTitle {
     font-size: 16px;
   }
-
+  .detailsContainer {
+    position: relative;
+    top: -20px;
+  }
   .detailItem {
-    padding: 8px 12px;
+    padding: 3px 12px;
     font-size: 16px;
   }
 
   .descriptionItem {
     font-size: 16px;
+  }
+  .descriptionsContainer {
+    position: relative;
+    top: -40px;
   }
 
   .descriptionItem::before {
@@ -429,12 +445,28 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   .container {
     width: 100%;
+    height: auto;
   }
   .header {
     width: 45%;
   }
   .modules {
     width: 60%;
+  }
+  .moduleSubTitle {
+    font-size: 20px !important;
+  }
+  .detailsContainer {
+    position: relative;
+    top: -20px;
+  }
+  .detailItem {
+    padding: 3px 8px;
+    font-size: 16px;
+  }
+  .descriptionsContainer {
+    position: relative;
+    top: -40px;
   }
   .masterclassQuestion {
     width: 100%;
@@ -443,7 +475,6 @@
   }
   .role {
     width: 95%;
-    /* margin: 15px 0; */
     padding: 30px 5px;
     height: auto;
   }
@@ -465,16 +496,15 @@
   .container {
     width: 95%;
     height: 100vh;
-
   }
-  .header{
+  .header {
     width: 90%;
   }
   .modules {
     width: 90%;
     height: 95vh;
   }
-  
+
   .moduleSubTitle {
     font-size: 24px;
   }
@@ -483,8 +513,8 @@
     position: absolute;
     top: -10px;
   }
-  .roleContainer{
-  padding-top: 15px;
+  .roleContainer {
+    padding-top: 15px;
   }
   .role {
     width: 95%;

@@ -1,6 +1,6 @@
 /** @format */
 .content {
-  margin-top: 80px;
+  margin-top: 20px;
 }
 .certificateContainer {
   display: flex;
@@ -9,6 +9,7 @@
   padding: 40px;
   background-color: white;
   border-radius: 12px;
+  width: 100%;
   max-width: 75%;
   height: auto;
   margin: 0 auto;
@@ -21,7 +22,7 @@
 }
 
 .imageContainer {
-  max-width: 100%;
+  max-width: 50%;
 }
 
 .heading {
@@ -45,11 +46,15 @@
   font-size: 20px;
   color: #494949;
 }
+
 .symbol {
   margin-right: 15px;
 }
+
 .btn {
-  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .imageContainer {
@@ -95,6 +100,15 @@
   .symbol {
     font-size: 25px;
   }
+  .certificateImage {
+    height: auto;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 @media (min-width: 377px) and (max-width: 1024px) {
@@ -104,15 +118,14 @@
   .certificateContainer {
     display: flex;
     flex-direction: column-reverse;
-    max-width: 100%;
+    width: 100%;
     padding: 15px;
   }
   .imageContainer {
     width: 100%;
   }
   .certificateImage {
-    width: 100%;
-    height: 80vh;
+    height: auto;
   }
   .textContainer {
     max-width: 100%;
@@ -133,7 +146,10 @@
   .symbol {
     font-size: 25px;
   }
-  .btn {
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
   }
 }

@@ -166,6 +166,9 @@
 }
 /* media queries */
 @media (max-width: 376px) {
+  .background h2{
+    font-size: 26px !important;
+  }
   .smallHeading {
     display: block;
     font-size: 26px;
@@ -196,6 +199,7 @@
   }
   .profileImage {
     width: 85%;
+    height: 68vh;
   }
   .mentorDetails {
     width: 85%;

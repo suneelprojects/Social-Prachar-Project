@@ -69,7 +69,7 @@ const Headerpart = () => {
                     }
                 });
             },
-            { threshold: 0.5 } // Trigger when 50% of the element is visible
+            { threshold: 0.5 } 
         );
 
         if (doughtsPartRef.current) observer.observe(doughtsPartRef.current);
@@ -122,7 +122,7 @@ const Headerpart = () => {
                                 alt="Book symbol"
                                 className={style.symbol}
                             />
-                            <span className={style.symbolText}> lifetime LMS access</span>
+                            <span className={style.symbolText}> Lifetime LMS access</span>
                         </div>
                         <div className={style.symbolItem}>
                             <img

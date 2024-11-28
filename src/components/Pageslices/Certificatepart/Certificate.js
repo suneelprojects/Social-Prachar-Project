@@ -74,7 +74,7 @@ const TimelineComponent = () => {
                     {card ? (
                         <p>Your Journey to becoming a <span style={{ color: "#ff5003" }}>{card.timeLineHeading}</span></p>
                     ) : (
-                        <p>Loading...</p> // You can show a loading message or placeholder
+                        <p>Loading...</p>
                     )}
                 </div>
 

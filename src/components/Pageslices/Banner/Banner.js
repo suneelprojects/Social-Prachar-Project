@@ -44,10 +44,10 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className={style.bannerPrice}>
-                    <span className={style.originalPrice}>Unlock Exclusive</span>
+                    <span className={style.originalPrice}>Unlock Exclusive<p className={style.offerText}>Almost Full Only 5 Slots Left!</p></span>
                     <span className={style.discountedPrice}>OFFERS</span>
                 </div>
-                <EnrollButton label="Enroll Now" courseID={card.id} className={style.EnrollButton} />
+                <EnrollButton label="Enroll" courseID={card.id} className={style.EnrollButton} />
             </div>
             {showForm && <SignInForm onClose={handleCloseForm} />}
         </div>

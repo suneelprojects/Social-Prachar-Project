@@ -58,16 +58,18 @@ import student49 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (6).pn
 import student50 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (7).png';
 import student51 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE.png';
 // students placed images
-import testmonialsCommentImage from '../../assets/AssetsOfDetailsPage/masterclass/commentsDS (1).jpg';
-import classDemoImage from '../../assets/AssetsOfDetailsPage/masterclass/featured-topmate masteclass image.jpg';
+import testmonialsCommentImageDS from '../../assets/AssetsOfDetailsPage/masterclass/commentsDS (1).jpg';
+import testmonialsCommentImageSSDS from '../../assets/AssetsOfDetailsPage/masterclass/commentImageofSSDS.jpg';
+import classDemoImageDS from '../../assets/AssetsOfDetailsPage/masterclass/featured-topmate masteclass image.jpg';
+import classDemoImageFSW from '../../assets/AssetsOfDetailsPage/masterclass/MasterclassFSW.jpg';
 import DS_Image from '../../assets/AssetsOfDetailsPage/masterclass/header-removebg-preview.png';
 import DS_certificate from '../../assets/AssetsOfDetailsPage/masterclass/Datascience certificate.jpg';
 import authorPhoto from '../../assets/authorphoto.jpg';
 import fullStackImage from '../../assets/classplus-banner-fullstack.webp';
 import DataAnalyticsImage from '../../assets/FSD-Banner-1-datascience.webp';
 import MarketingImage from '../../assets/DM-new-Banner-DigitalMarketing.webp';
-import { faFlag, faPaperPlane, faLightbulb, faHandshake, faCalendarCheck, faChartBar } from "@fortawesome/free-regular-svg-icons";
-import { faBriefcase, faClipboardList, faCloud, faProjectDiagram, faRobot } from '@fortawesome/free-solid-svg-icons';
+import { faHandshake, faCalendarCheck, faChartBar } from "@fortawesome/free-regular-svg-icons";
+import { faBriefcase, faClipboardList, faCloud, faCode, faDatabase, faProjectDiagram, faRobot, faServer } from '@fortawesome/free-solid-svg-icons';
 
 
 export const data = [
@@ -77,12 +79,12 @@ export const data = [
         Duration: ' 6 months',
         imageSrc: img1,
         courseImage: DS_Image,
-        MasterclassImage: classDemoImage,
-        TestmonialsCommentsImage1: testmonialsCommentImage,
+        MasterclassImage: classDemoImageDS,
+        TestmonialsCommentsImage1: testmonialsCommentImageDS,
+        TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
         courseTitle: 'Development',
-        students: '3200 +',
-        no_of_lessons: '4 lessons',
-        About: "This Full Stack Java Development course is designed for aspiring developers...",
+        students: '1600 + Students',
+        no_of_lessons: '6 months',
         text: 'Data Science & AI Development',
         Header1: 'Learn Data Science AI course & Become a Certified Professional in',
         Header2: 'Learn Data Science AI course & Become a Certified Professional in',
@@ -235,7 +237,6 @@ export const data = [
         tagIndex: 6,      // Web Development
         levelIndex: 0,    // Intermediate
         priceIndex: 0,    // Paid
-        bannerImage: fullStackImage,
         certificate: DS_certificate,
         accordionContent: [
             {
@@ -324,7 +325,6 @@ export const data = [
                 description: "Receive unlimited interview opportunities until you secure a job. Achieve your career goals with our placement assistance."
             }
         ],
-
         popUpDropDownCourses: [
             { dropDownid: 0, courseName: 'Data Science' },
             { dropDownid: 1, courseName: 'Data Science + AI' },
@@ -350,24 +350,30 @@ export const data = [
             { id: 18, image: student22 },
             { id: 19, image: student23 },
             { id: 20, image: student24 }
-        ]
+        ],
+        masterClassBookSessionLink:'https://topmate.io/mahesh_channa/618092'
     },
 
     {
         id: 1,
         courseID: 2,
         imageSrc: img2,
+        courseImage: DS_Image,
+        MasterclassImage: classDemoImageFSW,
         Duration: ' 6 months',
         courseTitle: 'Development',
-        students: '2900 +',
-        no_of_lessons: '4 lessons',
+        students: '2900+ students',
+        no_of_lessons: '6 months',
+        selfQuestioningPart1: 'Do you feel confused about',
+        selfQuestioningPart2: 'starting your Python Full Stack Career?',
         questions: [
-            "You want to explore career opportunities in Data Science and AI.",
-            "You want to learn the essential skills to master in 150 days.",
+            "You want to explore career opportunities in Python Full Stack Development.",
+            "You want to learn the essential skills to master in 180 days.",
             "You want to excel in office meetings and presentations."
         ],
-        About: "Welcome to the Full Stack Python Development course! This comprehensive program is designed for aspiring developers who want to master both front-end and back-end technologies using Python. Throughout the course, you'll delve into the world of web development, starting with the basics of HTML, CSS, and JavaScript to create dynamic and responsive user interfaces. You'll then transition to server-side development using Python and frameworks like Django and Flask, where you’ll learn to build RESTful APIs, manage databases with SQL and NoSQL, and implement user authentication and authorization.In addition to core programming skills, this course emphasizes best practices in software development, including version control with Git, testing, and deployment strategies.You'll also gain practical experience by working on real-world projects that simulate the entire development lifecycle, from planning to deployment. By the end of this course, you will have a solid understanding of how to create full-stack applications, equipping you with the skills necessary to thrive in the competitive tech industry.",
         text: 'Full Stack Python Development',
+        Header1: 'Learn Python Full Stack Development & Become a Certified Professional in',
+        Header2: 'Learn Python Full Stack Development & Become a Certified Professional in',
         name: 'Balu',
         price: '$20.00',
         rating: 5,
@@ -377,27 +383,208 @@ export const data = [
         tagIndex: 6,
         levelIndex: 1,
         priceIndex: 1,
-        bannerImage: fullStackImage,
-        whatWillYouLearn: [{ topic1: 'HTML', topic2: 'CSS', topic3: 'JavaScript', topic4: 'React JS', topic5: 'Bootstrap', topic6: 'Python', topic8: 'Django' }],
-        accordionContent: [
+        Description: 'Full Stack Python Developers are in high demand across various industries, from startups to tech giants like Google, Amazon, Microsoft, and Facebook. As businesses increasingly rely on web applications, the need for skilled developers who can build and maintain both the frontend and backend has skyrocketed. This comprehensive course covers essential technologies for Full Stack Development, including Frontend Development (HTML, CSS, JavaScript, React.js), Backend Development (Python, Flask, Django, REST APIs), Databases (MySQL, PostgreSQL, MongoDB), Version Control (Git, GitHub), Cloud Deployment (Heroku, AWS), and Testing & Debugging (PyTest, Selenium). By mastering these skills, you will be equipped to develop, deploy, and manage robust, scalable web applications, making you a sought- after professional in the tech industry.',
+        moduleContent: [
             {
-                title: 'Course Overview',
-                content: 'This Full Stack Java Development course covers both front-end and back-end technologies, preparing you to develop, deploy, and maintain full web applications.'
+                id: 1,
+                module: "Module 1",
+                title: "Introduction to Full Stack Development & Core Python",
+                details: {
+                    videos: 7,
+                    time: "2 months",
+                    descriptions: [
+                        "What is Full Stack Development?",
+                        "What is Frontend and Backend?",
+                        "Technologies used for Full Stack Development",
+                        "What is a Webpage and Website?",
+                        "Static vs Dynamic Websites",
+                        "Understanding Servers and Types of Servers",
+                        "Introduction to Core Python (Basics, Data Types, Loops, Functions)",
+                        "Advanced Python Concepts (OOPs, Modules, File Handling, Error Handling)"
+                    ]
+                }
             },
             {
-                title: 'Syllabus Details',
-                content: 'JS and Bootstrap for front-end development</li>'
+                id: 2,
+                module: "Module 2",
+                title: "Python for Web Development (Backend)",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Web Development with Python",
+                        "Backend Frameworks: Django and Flask",
+                        "Database Integration with SQLAlchemy and Django ORM",
+                        "Building RESTful APIs",
+                        "User Authentication and Authorization in Python",
+                        "Deploying Python Applications to Cloud Platforms"
+                    ]
+                }
             },
             {
-                title: 'Frequently Asked Questions',
-                content: 'This Full Stack Java Development course covers both front-end and back-end technologies, preparing you to develop, deploy, and maintain full web applications.'
+                id: 3,
+                module: "Module 3",
+                title: "Frontend Development with HTML, CSS & JavaScript",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Building Web Pages with HTML5",
+                        "Introduction to CSS: Styling, Selectors, and Layout",
+                        "CSS Positioning: Flexbox, Grid, and Media Queries",
+                        "Responsive Web Design Principles",
+                        "Introduction to JavaScript (ES6+, DOM Manipulation)",
+                        "Working with Bootstrap/Tailwind CSS for Responsive Design"
+                    ]
+                }
+            },
+            {
+                id: 4,
+                module: "Module 4",
+                title: "Frontend Development with React.js",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to React.js and its Ecosystem",
+                        "React Components, Props, and State Management",
+                        "React Router for Single Page Applications (SPA)",
+                        "Managing Side Effects in React using useEffect",
+                        "Integrating APIs with React (Axios and Fetch)",
+                        "Deploying React Applications"
+                    ]
+                }
+            },
+            {
+                id: 5,
+                module: "Module 5",
+                title: "Databases and Backend Integration",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Relational Databases: MySQL and PostgreSQL",
+                        "CRUD Operations and Database Management",
+                        "NoSQL Databases: MongoDB, Redis",
+                        "Integrating Databases with Backend (Django, Flask)",
+                        "Building Full Stack Projects using REST APIs"
+                    ]
+                }
+            },
+            {
+                id: 6,
+                module: "Module 6",
+                title: "Version Control and Deployment",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Version Control Systems: Git and GitHub",
+                        "Collaborative Development with Branches and Pull Requests",
+                        "Deploying Full Stack Applications to Heroku, AWS, and Azure",
+                        "Setting up CI/CD Pipelines for Automated Testing and Deployment"
+                    ]
+                }
+            },
+            {
+                id: 7,
+                module: "Module 7",
+                title: "Testing & Debugging",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Testing Frameworks (PyTest, Unittest)",
+                        "Writing Unit Tests and Integration Tests",
+                        "Debugging Techniques for Backend and Frontend",
+                        "End-to-End Testing with Selenium and Jest"
+                    ]
+                }
+            },
+            {
+                id: 8,
+                module: "Module 8",
+                title: "Advanced Topics & Microservices",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Microservices Architecture",
+                        "Building Microservices with Flask and Django",
+                        "Inter-Service Communication and API Gateway",
+                        "Containerization with Docker and Kubernetes",
+                        "Introduction to GraphQL for API Development"
+                    ]
+                }
+            },
+            {
+                id: 9,
+                module: "Module 9",
+                title: "Project Development & Capstone",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Planning and Scoping a Full-Stack Web Application",
+                        "Frontend and Backend Implementation",
+                        "Integrating Databases, APIs, and Third-Party Libraries",
+                        "Deploying the Application to Cloud Platforms",
+                        "Final Project Presentation and Code Review"
+                    ]
+                }
+            }
+        ],
+        levelcardIndex: [
+            {
+                icon: faCode,
+                title: "Master Full Stack Development",
+                description: "Learn to build dynamic web applications by mastering frontend technologies like HTML, CSS, JavaScript, and React, along with backend frameworks like Flask and Django."
+            },
+            {
+                icon: faServer,
+                title: "Backend Development & APIs",
+                description: "Gain expertise in backend development using Python. Learn to build RESTful APIs, work with databases, and implement authentication and authorization."
+            },
+            {
+                icon: faDatabase,
+                title: "Database Management",
+                description: "Master SQL and NoSQL databases like MySQL and MongoDB. Learn how to manage data efficiently and optimize database queries."
+            },
+            {
+                icon: faCloud,
+                title: "Cloud Deployment & DevOps",
+                description: "Learn how to deploy your web applications on cloud platforms like AWS, Heroku, and Azure. Understand CI/CD pipelines and containerization with Docker."
+            },
+            {
+                icon: faClipboardList,
+                title: "Weekly Assessments",
+                description: "Test your coding and development skills weekly to track progress and reinforce key concepts."
+            },
+            {
+                icon: faCalendarCheck,
+                title: "Monthly Evaluations",
+                description: "Participate in monthly evaluations to assess your understanding of full-stack development and problem-solving abilities."
+            },
+            {
+                icon: faProjectDiagram,
+                title: "Real-World Projects",
+                description: "Work on hands-on projects to apply your knowledge and build a robust portfolio that showcases your full-stack development skills."
+            },
+            {
+                icon: faBriefcase,
+                title: "Placement Preparation",
+                description: "Receive personalized guidance on resume building, GitHub portfolio, LinkedIn profile optimization, and interview preparation."
+            },
+            {
+                icon: faHandshake,
+                title: "Job Support & Assistance",
+                description: "Benefit from job support with mock interviews, career counseling, and interview opportunities until you land your dream job."
             }
         ],
         popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'full stack' },
-            { dropDownid: 1, courseName: 'java' },
-            { dropDownid: 2, courseName: 'Data Analytics' },
-            { dropDownid: 3, courseName: 'Gen AI' },
+            { dropDownid: 0, courseName: 'Python Full stack Development' },
+            { dropDownid: 1, courseName: 'Web Development' },
+            { dropDownid: 2, courseName: 'Mern Stack Development' },
         ],
         studentPlacedImages: [
             { id: 1, image: student45 },
@@ -417,19 +604,102 @@ export const data = [
             { id: 15, image: student8 },
             { id: 16, image: student9 },
             { id: 17, image: student10 }
-        ]
+        ],
+        accordionContent: [
+            {
+                title: 'Course Overview',
+                content: 'This Full Stack Python Development course covers both front-end and back-end technologies, preparing you to develop, deploy, and maintain full web applications.'
+            },
+            {
+                title: 'What is the duration of the Full Stack Python course?',
+                content: 'The course duration ranges from 3 to 6 months, depending on the learning pace of the student.'
+            },
+            {
+                title: 'What is the "Learn Till You Get Placed" program?',
+                content: 'This program ensures that students receive continuous support, including training, mock interviews, and placement assistance, until they secure a job.'
+            },
+            {
+                title: 'What technologies will I learn in this course?',
+                content: 'You will learn Python, along with HTML, CSS, JavaScript, Bootstrap, ReactJS, and backend development using Django or Flask.'
+            },
+            {
+                title: 'Are soft skills included in the training?',
+                content: 'Yes, we provide comprehensive soft skills training to help students excel in interviews and workplace communication.'
+            },
+            {
+                title: 'What kind of interview preparation is included?',
+                content: 'We offer coding exams, mock interviews, and personalized feedback sessions to ensure students are fully prepared for technical and HR interviews.'
+            },
+            {
+                title: 'How many projects will I work on during the course?',
+                content: 'You will complete over 20 real-time projects to build practical skills and enhance your portfolio.'
+            },
+            {
+                title: 'Are hackathons part of the curriculum?',
+                content: 'Yes, we conduct hackathons to help students apply their knowledge, improve problem-solving skills, and collaborate with peers.'
+            },
+            {
+                title: 'How many assignments are included in the course?',
+                content: 'The course includes over 100 assignments designed to reinforce learning and test your understanding of the concepts.'
+            },
+            {
+                title: 'What kind of backend frameworks will I learn?',
+                content: 'You will learn backend development with Python frameworks like Django or Flask.'
+            },
+            {
+                title: 'Are there regular exams or tests during the course?',
+                content: 'Yes, we conduct monthly exams, mock tests, topic-wise tests, and assignments to track your progress and understanding.'
+            },
+            {
+                title: 'Will there be coding exams during the course?',
+                content: 'Yes, coding exams are an integral part of the course to evaluate and improve your problem-solving and coding skills.'
+            },
+            {
+                title: 'Do I need prior coding experience to join this course?',
+                content: 'No prior experience is required; we start with the basics and gradually progress to advanced topics.'
+            },
+            {
+                title: 'What kind of placement support will I get?',
+                content: 'We provide resume building, interview scheduling, job referrals, and personalized mentorship until you secure a job.'
+            },
+            {
+                title: 'How many students are admitted to each batch?',
+                content: 'We intake only one batch per month, with a maximum of 15 students to ensure personalized attention and quality training.'
+            },
+            {
+                title: 'What makes this course different from others?',
+                content: 'Our students learn end-to-end app development, deployment, and monitoring tools. This corporate-style program prepares students to handle every phase of a real-world project from start to finish.'
+            },
+            {
+                title: 'What makes this course unique?',
+                content: 'Our program offers a comprehensive curriculum, real-time projects, soft skills training, hackathons, and job placement support, all with a small batch size for focused learning.'
+            }
+        ],
+        masterClassBookSessionLink:'https://topmate.io/mahesh_channa/1291210' 
     },
 
     {
         id: 1,
-        imageSrc: img3,
         courseID: 3,
+        imageSrc: img3,
         courseTitle: 'Development',
-        Duration: ' 4 months',
-        students: '1500+ ',
-        no_of_lessons: '4 lessons',
-        About: "Welcome to our UI/ UX Development course, where you will embark on an exciting journey to master the art and science of creating intuitive and user - centered digital experiences.In today’s fast - paced digital landscape, the importance of effective UI / UX design cannot be overstated; it is essential for ensuring that products are not only visually appealing but also functional and easy to navigate.Throughout this course, you will acquire a diverse set of skills, including visual design principles, interaction design strategies, and user research methodologies.Additionally, you'll learn how to create responsive designs that adapt seamlessly across devices and platforms. Emphasizing collaboration, you will work alongside peers to develop a keen understanding of user needs and behavior, preparing you to excel in the dynamic field of UI/UX design.",
-        text: 'UI/UX Development',
+        Duration: ' 6 months',
+        students: '2600+ Students',
+        no_of_lessons: '6 months',
+        courseImage: DS_Image,
+        MasterclassImage: classDemoImageFSW,
+        TestmonialsCommentsImage1: testmonialsCommentImageDS,
+        TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
+        Header1: 'Learn Java Full Stack Development & Become a Certified Professional in',
+        Header2: 'Learn Java Full Stack Development & Become a Certified Professional in',
+        selfQuestioningPart1: 'Do you feel confused about',
+        selfQuestioningPart2: 'starting your Java Full Stack Career?',
+        questions: [
+            "You want to explore career opportunities in Java Full Stack Development.",
+            "You want to learn the essential skills to master in 180 days.",
+            "You want to excel in office meetings and presentations."
+        ],
+        text: 'Full Stack Java Development',
         name: 'Balu',
         price: '$20.00',
         rating: 5,
@@ -440,36 +710,309 @@ export const data = [
         levelIndex: 1,    // Intermediate
         priceIndex: 1,    // Paid
         bannerImage: fullStackImage,
-        whatWillYouLearn: [{ topic1: 'Introduction to UI & UX Design', topic2: 'Design Thinking and Problem Solving', topic3: 'UI Design and Visual Elements', topic4: 'Portfolio Building and Resume Review', topic5: 'Final Project and Presentation', topic6: 'Python', topic8: 'Django' }],
-        accordionContent: [
+        Description:'Full Stack Java Developers are in high demand across a wide range of industries, from startups to global tech giants like Google, Amazon, and IBM. As businesses continue to build and scale web applications, the need for skilled developers who can handle both the front-end and back-end has grown significantly. This comprehensive course covers the core technologies for Full Stack Java Development, including Frontend Development (HTML, CSS, JavaScript, React.js), Backend Development (Java, Spring Boot, Hibernate, REST APIs), Databases (MySQL, PostgreSQL, MongoDB), Version Control (Git, GitHub), Cloud Deployment (Heroku, AWS), and Testing & Debugging (JUnit, Mockito). By mastering these technologies, you will be prepared to develop, deploy, and maintain high-performance, scalable web applications, making you a valuable asset in the tech industry.',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Java Full stack Development' },
+            { dropDownid: 1, courseName: 'Web Development' },
+            { dropDownid: 2, courseName: 'Mern Stack Development' },
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student45 },
+            { id: 2, image: student46 },
+            { id: 3, image: student47 },
+            { id: 4, image: student48 },
+            { id: 5, image: student49 },
+            { id: 6, image: student50 },
+            { id: 7, image: student51 },
+            { id: 8, image: student1 },
+            { id: 9, image: student2 },
+            { id: 10, image: student3 },
+            { id: 11, image: student4 },
+            { id: 12, image: student5 },
+            { id: 13, image: student6 },
+            { id: 14, image: student7 },
+            { id: 15, image: student8 },
+            { id: 16, image: student9 },
+            { id: 17, image: student10 }
+        ],
+        moduleContent: [
             {
-                title: 'Course Overview',
-                content: 'This Full Stack Java Development course covers both front-end and back-end technologies, preparing you to develop, deploy, and maintain full web applications.'
+                id: 1,
+                module: "Module 1",
+                title: "Introduction to Full Stack Development & HTML",
+                details: {
+                    videos: 7,
+                    time: "2 months",
+                    descriptions: [
+                        "What is Full Stack Development?",
+                        "Frontend vs. Backend Development",
+                        "Technologies Used for Full Stack Development",
+                        "Introduction to Webpages and Websites",
+                        "Static vs. Dynamic Websites",
+                        "Introduction to Servers and Types of Servers",
+                        "Introduction to HTML and Web Page Structure"
+                    ]
+                }
             },
             {
-                title: 'Syllabus Details',
-                content: `
-                <ul>
-                    <li>Introduction to HTML, CSS, JavaScript</li>
-                    <li>React JS and Bootstrap for front-end development</li>
-                    <li>Core and Advanced Java for back-end development</li>
-                    <li>SQL and Spring Boot for database management and server-side integration</li>
-                    <li>Deploying applications on cloud platforms</li>
-                    <li>Version control systems</li>
-                </ul>
-            `
+                id: 2,
+                module: "Module 2",
+                title: "CSS for Frontend Development",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to CSS and Styling Web Pages",
+                        "Selectors: ID, Class, Tag, Group, Universal",
+                        "Background Properties, Colors, and Gradients",
+                        "Text and Font Properties",
+                        "Box Model: Padding, Margins, Borders, Outline",
+                        "Positioning: Relative, Absolute, Fixed, Static, Sticky",
+                        "Flexbox and Grid Layout",
+                        "Advanced Selectors, Transformations, and Animations",
+                        "Responsive Web Design with Media Queries"
+                    ]
+                }
             },
             {
-                title: 'Frequently Asked Questions',
-                content: `
-                <p><strong>Q:</strong> Do I need prior programming experience?</p>
-                <p><strong>A:</strong> While prior programming experience is not required, basic knowledge of HTML and programming concepts will help you better understand the course content.</p>
-                
-                <p><strong>Q:</strong> Will I receive a certificate upon completion?</p>
-                <p><strong>A:</strong> Yes, you will receive a certificate upon completing the course and all hands-on projects.</p>
-            `
+                id: 3,
+                module: "Module 3",
+                title: "JavaScript Fundamentals",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to JavaScript",
+                        "Variables: var, let, const, Scope & Hoisting",
+                        "Data Types: Primitive and Non-Primitive",
+                        "Operators: Arithmetic, Assignment, Comparison, Logical",
+                        "Functions: Default, Arrow, Callback, IIFE",
+                        "Conditional Statements: if, if-else, switch-case",
+                        "Loops: for, while, do-while, for-of, for-in",
+                        "Arrays & Objects: Methods and Properties",
+                        "DOM Manipulation and BOM (Browser Object Model)",
+                        "Event Handling and Error Handling",
+                        "Introduction to ES6, Promises, Async/Await",
+                        "Introduction to APIs (CRUD Operations)"
+                    ]
+                }
+            },
+            {
+                id: 4,
+                module: "Module 4",
+                title: "Frontend Framework: Bootstrap",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Bootstrap",
+                        "Typography and Buttons",
+                        "Grid System and Layout",
+                        "Forms and Form Validation",
+                        "Cards, Tables, Lists, and Navigations",
+                        "Dropdowns, Navbars, and Jumbotron",
+                        "Building Responsive Designs with Bootstrap"
+                    ]
+                }
+            },
+            {
+                id: 5,
+                module: "Module 5",
+                title: "Introduction to Java and OOPs",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Java: Working, Features, JVM, JRE, JDK",
+                        "Data Types and Variables",
+                        "Naming Conventions and Keywords",
+                        "Operators and Control Statements",
+                        "OOP Concepts: Classes, Objects, Inheritance, Polymorphism, Abstraction, Encapsulation",
+                        "Arrays and Strings",
+                        "Exception Handling in Java"
+                    ]
+                }
+            },
+            {
+                id: 6,
+                module: "Module 6",
+                title: "Advanced Java Concepts",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "JVM Architecture and Memory Management",
+                        "Multi-threading: Concepts, Lifecycle, Synchronization, Deadlock",
+                        "Collection Framework: List, Set, Map",
+                        "Java 8 Features: Lambda Expressions, Functional Interfaces, Streams API",
+                        "Regular Expressions in Java"
+                    ]
+                }
+            },
+            {
+                id: 7,
+                module: "Module 7",
+                title: "Database Management with MySQL & JDBC",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Databases: MySQL Basics",
+                        "DDL, DML, DRL, DCL, TCL Commands",
+                        "Joins and Constraints",
+                        "Introduction to JDBC: Drivers, Connections, Statements, ResultSets",
+                        "Integrating Java Applications with Databases"
+                    ]
+                }
+            },
+            {
+                id: 8,
+                module: "Module 8",
+                title: "ORM with Hibernate/JPA",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Hibernate",
+                        "Advantages of ORM and Hibernate",
+                        "Configuration and Mapping",
+                        "CRUD Operations with Hibernate",
+                        "Relationships and Inheritance Mapping",
+                        "HQL (Hibernate Query Language) and JPQL"
+                    ]
+                }
+            },
+            {
+                id: 9,
+                module: "Module 9",
+                title: "Project Development & Capstone",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Planning and Scoping a Full Stack Java Application",
+                        "Developing Frontend and Backend Functionality",
+                        "Database Integration and API Development",
+                        "Deploying Applications to Cloud Platforms",
+                        "Final Project Presentation and Code Review"
+                    ]
+                }
             }
         ],
+        levelcardIndex: [
+            {
+                icon: faCode,
+                title: "Master Full Stack Java Development",
+                description: "Learn to build dynamic web applications using Java for backend development with frameworks like Spring Boot, Hibernate, and integrate with frontend technologies like HTML, CSS, JavaScript, and React."
+            },
+            {
+                icon: faServer,
+                title: "Backend Development with Java",
+                description: "Gain expertise in backend development using Java and Spring Boot. Learn to build RESTful APIs, manage server-side logic, and integrate with databases and external services."
+            },
+            {
+                icon: faDatabase,
+                title: "Database Management with Java",
+                description: "Master database management using both SQL (MySQL, PostgreSQL) and NoSQL (MongoDB). Learn how to implement CRUD operations and optimize database queries for scalable applications."
+            },
+            {
+                icon: faCloud,
+                title: "Cloud Deployment & DevOps",
+                description: "Learn how to deploy Java applications on cloud platforms like AWS, Heroku, and Azure. Understand CI/CD pipelines, containerization with Docker, and automation using Jenkins."
+            },
+            {
+                icon: faClipboardList,
+                title: "Weekly Assessments",
+                description: "Test your coding and development skills weekly to track progress and reinforce key concepts in Java development and full-stack integration."
+            },
+            {
+                icon: faCalendarCheck,
+                title: "Monthly Evaluations",
+                description: "Participate in monthly evaluations to assess your understanding of Java backend development, full-stack integration, and problem-solving abilities."
+            },
+            {
+                icon: faProjectDiagram,
+                title: "Real-World Projects",
+                description: "Work on hands-on Java-based projects to apply your knowledge in building scalable web applications, including database management and RESTful API development."
+            },
+            {
+                icon: faBriefcase,
+                title: "Placement Preparation",
+                description: "Receive personalized guidance on resume building, GitHub portfolio, LinkedIn profile optimization, and interview preparation tailored to Java full-stack roles."
+            },
+            {
+                icon: faHandshake,
+                title: "Job Support & Assistance",
+                description: "Benefit from job support with mock interviews, career counseling, and interview opportunities until you land your dream job in full-stack Java development."
+            }
+        ],
+        accordionContent:[
+            {
+                title: 'What is the duration of the Full Stack Java course?',
+                content: 'The course duration ranges from 3 to 6 months, depending on the learning pace of the student.'
+            },
+            {
+                title: 'What is the "Learn Till You Get Placed" program?',
+                content: 'This program ensures that students receive continuous support, including training, mock interviews, and placement assistance, until they secure a job.'
+            },
+            {
+                title: 'What technologies will I learn in this course?',
+                content: 'You will learn Java, HTML, CSS, JavaScript, Bootstrap, ReactJS, and backend development with Java frameworks like Spring Boot.'
+            },
+            {
+                title: 'Are soft skills included in the training?',
+                content: 'Yes, we provide comprehensive soft skills training to help students excel in interviews and workplace communication.'
+            },
+            {
+                title: 'What kind of interview preparation is included?',
+                content: 'We offer coding exams, mock interviews, and personalized feedback sessions to ensure students are fully prepared for technical and HR interviews.'
+            },
+            {
+                title: 'How many projects will I work on during the course?',
+                content: 'You will complete over 20 real-time projects to build practical skills and enhance your portfolio.'
+            },
+            {
+                title: 'Are hackathons part of the curriculum?',
+                content: 'Yes, we conduct hackathons to help students apply their knowledge, improve problem-solving skills, and collaborate with peers.'
+            },
+            {
+                title: 'How many assignments are included in the course?',
+                content: 'The course includes over 100 assignments designed to reinforce learning and test your understanding of the concepts.'
+            },
+            {
+                title: 'What kind of backend frameworks will I learn?',
+                content: 'You will learn backend development with Java frameworks such as Spring Boot and Hibernate.'
+            },
+            {
+                title: 'Are there regular exams or tests during the course?',
+                content: 'Yes, we conduct monthly exams, mock tests, topic-wise tests, and assignments to track your progress and understanding.'
+            },
+            {
+                title: 'Will there be coding exams during the course?',
+                content: 'Yes, coding exams are an integral part of the course to evaluate and improve your problem-solving and coding skills.'
+            },
+            {
+                title: 'Do I need prior coding experience to join this course?',
+                content: 'No prior experience is required; we start with the basics and gradually progress to advanced topics.'
+            },
+            {
+                title: 'What kind of placement support will I get?',
+                content: 'We provide resume building, interview scheduling, job referrals, and personalized mentorship until you secure a job.'
+            },
+            {
+                title: 'How many students are admitted to each batch?',
+                content: 'We intake only one batch per month, with a maximum of 15 students to ensure personalized attention and quality training.'
+            },
+            {
+                title: 'What makes this course different from others?',
+                content: 'Our students learn end-to-end app development, deployment, and monitoring tools. This corporate-style program prepares students to handle every phase of a real-world project from start to finish.'
+            },
+            {
+                title: 'What makes this course unique?',
+                content: 'Our program offers a comprehensive curriculum, real-time projects, soft skills training, hackathons, and job placement support, all with a small batch size for focused learning.'
+            }
+        ],
+        masterClassBookSessionLink: 'https://topmate.io/mahesh_channa/1291210' 
     },
     {
         id: 1,

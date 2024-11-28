@@ -12,24 +12,26 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
     }, [isOpen]);
 
     return (
-        <div className={styles.accordionItem}>
-            <h2 className={styles.accordionHeader}>
-                <button
-                    className={`${styles.accordionButton} ${isOpen ? '' : styles.collapsed}`}
-                    onClick={onClick}
-                    aria-expanded={isOpen}
+        <div>
+            <div className={styles.accordionItem}>
+                <h2 className={styles.accordionHeader}>
+                    <button
+                        className={`${styles.accordionButton} ${isOpen ? '' : styles.collapsed}`}
+                        onClick={onClick}
+                        aria-expanded={isOpen}
+                    >
+                        {title}
+                        <span className={styles.symbol}>{isOpen ? '-' : '+'}</span>
+                    </button>
+                </h2>
+                <div
+                    ref={contentRef}
+                    style={{ maxHeight }}
+                    className={styles.accordionContent}
                 >
-                    {title}
-                    <span className={styles.symbol}>{isOpen ? '-' : '+'}</span>
-                </button>
-            </h2>
-            <div
-                ref={contentRef}
-                style={{ maxHeight }}
-                className={styles.accordionContent}
-            >
-                <div className={styles.accordionBody}>
-                    {content}
+                    <div className={styles.accordionBody}>
+                        {content}
+                    </div>
                 </div>
             </div>
         </div>

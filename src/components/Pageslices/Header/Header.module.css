@@ -113,9 +113,12 @@
 }
 
 .headerText {
+  padding-top: 30px;
+  margin-bottom: -5px;
   text-align: left;
   font-family: sans-serif;
-  max-width: 85%;
+  max-width: 90%;
+  height:auto;
   margin-top: -20px;
   color: black;
   font-size: 42px;

@@ -46,6 +46,10 @@ select {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .closeButton {
@@ -57,4 +61,8 @@ select {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

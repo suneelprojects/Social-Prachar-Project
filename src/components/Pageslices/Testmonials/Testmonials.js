@@ -11,6 +11,7 @@ const Testmonials = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [hasAnimated, setHasAnimated] = useState(false);
     const [card, setCard] = useState(null);
+    const [testimonialImage, setTestimonialImage] = useState('');
     const statsRef = useRef(null);
     const carouselRef = useRef(null); // Ref for carousel container
     const { cardId } = useParams();
@@ -23,6 +24,27 @@ const Testmonials = () => {
             setCard(cardDetails);
         }
     }, [cardId]);
+
+    useEffect(() => {
+        // Set the appropriate image based on screen size
+        const updateTestimonialImage = () => {
+            if (screenWidth < 768) {
+                setTestimonialImage(card?.TestmonialsCommentsImage2 || '');
+            } else {
+                setTestimonialImage(card?.TestmonialsCommentsImage1 || '');
+            }
+        };
+
+        updateTestimonialImage(); // Initial update
+
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+            updateTestimonialImage(); // Update on resize
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [screenWidth, card]);
 
     const animateCount = (setter, target, duration) => {
         let start = 0;
@@ -38,12 +60,6 @@ const Testmonials = () => {
             }
         }, 50);
     };
-
-    useEffect(() => {
-        const handleResize = () => setScreenWidth(window.innerWidth);
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -86,8 +102,6 @@ const Testmonials = () => {
         return () => clearInterval(scrollInterval); // Cleanup on unmount
     }, [studentPlacedImages]);
 
-
-
     return (
         <div className={styles.testimonials}>
             <p className={styles.heading}>TESTIMONIALS</p>
@@ -104,9 +118,9 @@ const Testmonials = () => {
                     alt="Decorative Line"
                     className={styles.line}
                 />
-                {card?.TestmonialsCommentsImage1 ? (
+                {testimonialImage ? (
                     <img
-                        src={card.TestmonialsCommentsImage1}
+                        src={testimonialImage}
                         alt="Student Testimonials"
                         className={styles.image}
                     />

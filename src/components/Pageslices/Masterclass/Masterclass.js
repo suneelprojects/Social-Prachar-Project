@@ -53,7 +53,11 @@ const Masterclass = () => {
 
     // onClick functionality for Enrollbutton
     const handleEnrollClick = () => {
-        window.open('https://topmate.io/mahesh_channa/618092', '_blank', 'noopener,noreferrer');
+        if (card && card.masterClassBookSessionLink) {
+            window.open(card.masterClassBookSessionLink, '_blank', 'noopener,noreferrer');
+        } else {
+            window.alert('Booking link is not available for this course.');
+        }
     };
 
     return (
