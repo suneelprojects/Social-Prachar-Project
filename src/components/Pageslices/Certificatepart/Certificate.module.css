@@ -1,8 +1,4 @@
-/**
- * General Styles
- *
- * @format
- */
+/** @format */
 
 .timelineHeading {
   position: relative;
@@ -142,7 +138,7 @@
   .timelineHeading {
     font-size: 28px;
   }
-  
+
   .levelCard {
     max-width: 300px;
     flex-direction: column;
@@ -228,8 +224,6 @@
     left: -38px;
   }
   .levelCard {
-    position: relative;
-    top: -60px;
     max-width: 250px;
   }
 

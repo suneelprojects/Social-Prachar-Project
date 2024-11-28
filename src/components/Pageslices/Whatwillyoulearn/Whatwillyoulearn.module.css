@@ -360,7 +360,7 @@
 
   .heading {
     text-align: start;
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: -15px;
   }
 
@@ -374,6 +374,7 @@
   }
 
   .moduleContainer {
+    width: 100%;
     padding: 20px;
     margin-bottom: 20px;
   }
@@ -412,7 +413,7 @@
 
   .masterclassQuestion {
     width: 100%;
-    font-size: 22px;
+    font-size: 30px;
   }
 
   .roleContainer {
@@ -448,10 +449,13 @@
     height: auto;
   }
   .header {
-    width: 45%;
+    width: 30%;
   }
   .modules {
-    width: 60%;
+    width: 70%;
+  }
+  .moduleContainer{
+    width: 100%;
   }
   .moduleSubTitle {
     font-size: 20px !important;

@@ -123,7 +123,7 @@
 
   .ClassImage {
     width: 90%;
-    margin-top: 80px;
+    /* margin-top: 80px; */
   }
 
   .nextLive {
@@ -176,7 +176,7 @@
 
   .ClassImage {
     width: 85%;
-    margin-top: 60px;
+    margin-top: -30px;
   }
 
   .nextLive {
@@ -230,7 +230,7 @@
 
   .ClassImage {
     width: 80%;
-    margin-top: 40px;
+    margin-top: -70px;
   }
 
   .nextLive {
@@ -283,7 +283,7 @@
 
   .ClassImage {
     width: 75%;
-    margin-top: 30px;
+    margin-top: -130px;
   }
 
   .nextLive {
