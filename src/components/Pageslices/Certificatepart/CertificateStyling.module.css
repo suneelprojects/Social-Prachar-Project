@@ -84,6 +84,10 @@
   .textContainer {
     max-width: 100%;
   }
+  .certificateImage{
+    width: 500px;
+    height: 200px;
+  }
   .heading {
     font-size: 24px;
     display: flex;
@@ -100,9 +104,7 @@
   .symbol {
     font-size: 25px;
   }
-  .certificateImage {
-    height: auto;
-  }
+ 
   .btn {
     display: flex;
     justify-content: center;
@@ -125,7 +127,8 @@
     width: 100%;
   }
   .certificateImage {
-    height: auto;
+    width: 500px;
+    height: 250px;
   }
   .textContainer {
     max-width: 100%;
@@ -140,7 +143,7 @@
     justify-content: center;
   }
   .description {
-    font-size: 22px;
+    font-size: 16px;
     line-height: 0;
   }
   .symbol {

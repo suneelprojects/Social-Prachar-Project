@@ -2,7 +2,7 @@ import React, { useState, useEffect, Suspense } from 'react';
 import styles from './PopUpForm.module.css';
 import { data } from './../../Cards/CardData';
 import { useNavigate, useParams } from 'react-router-dom';
-import Loading from '../../extraComponents/loading';
+import Loading from '../../extraComponents/loading'; // Assuming you have this component for the spinner
 
 const SignInForm = ({ onClose, courseID }) => {
     const [formData, setFormData] = useState({
@@ -15,7 +15,7 @@ const SignInForm = ({ onClose, courseID }) => {
 
     const { cardId } = useParams();
     const [card, setCard] = useState(null);
-    const [isLoading, setIsLoading] = useState(false); // State for lazy loading
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -49,8 +49,8 @@ const SignInForm = ({ onClose, courseID }) => {
                 body: formPayload,
             });
 
-            setIsLoading(true);
-            
+            setIsLoading(false); // Hide the loading spinner after submission
+
             if (response.ok) {
                 alert('Form submitted successfully!');
                 navigate('/thank-you');
@@ -58,7 +58,7 @@ const SignInForm = ({ onClose, courseID }) => {
                 alert('Failed to submit form. Please try again.');
             }
         } catch (error) {
-            setIsLoading(false); // Hide loading spinner
+            setIsLoading(false);
             console.error('Error:', error);
             alert('There was an error submitting the form.');
         }
@@ -71,81 +71,97 @@ const SignInForm = ({ onClose, courseID }) => {
 
     return (
         <div className={styles.overlay}>
+            {/* Lazy Loading Spinner at the top */}
+            {isLoading && (
+                <div className={styles.loadingOverlay}>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Loading />
+                    </Suspense>
+                </div>
+            )}
+
             <div className={styles.formContainer}>
-                <h2>Enroll Now</h2>
-                    <form>
-                        {/* Full Name */}
-                        <div className={styles.formGroup}>
-                            <input
-                                type="text"
-                                name="fullName"
-                                placeholder="Full Name"
-                                value={formData.fullName}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
+                <button
+                    className={styles.closeButton}
+                    onClick={onClose}
+                    aria-label="Close Form"
+                >
+                    &times;
+                </button>
+                <form>
+                    <h2>Enroll Now</h2>
+                    {/* Full Name */}
+                    <div className={styles.formGroup}>
+                        <input
+                            type="text"
+                            name="fullName"
+                            placeholder="Full Name"
+                            value={formData.fullName}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
 
-                        {/* Email */}
-                        <div className={styles.formGroup}>
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
+                    {/* Email */}
+                    <div className={styles.formGroup}>
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
 
-                        {/* Phone Number */}
-                        <div className={styles.formGroup}>
-                            <input
-                                type="tel"
-                                name="phone"
-                                placeholder="Phone Number"
-                                value={formData.phone}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
+                    {/* Phone Number */}
+                    <div className={styles.formGroup}>
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone Number"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
 
-                        {/* Select Course */}
-                        <div className={styles.formGroup}>
-                            <select
-                                name="course"
-                                value={formData.course}
-                                onChange={handleChange}
-                                required
-                            >
-                                <option value="">Select Course</option>
-                                {card && card.popUpDropDownCourses && card.popUpDropDownCourses.length > 0 ? (
-                                    card.popUpDropDownCourses.map((course) => (
-                                        <option key={course.dropDownid} value={course.courseName}>
-                                            {course.courseName}
-                                        </option>
-                                    ))
-                                ) : (
-                                    <option disabled>No available courses</option>
-                                )}
-                            </select>
-                        </div>
+                    {/* Select Course */}
+                    <div className={styles.formGroup}>
+                        <select
+                            name="course"
+                            value={formData.course}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="">Select Course</option>
+                            {card && card.popUpDropDownCourses && card.popUpDropDownCourses.length > 0 ? (
+                                card.popUpDropDownCourses.map((course) => (
+                                    <option key={course.dropDownid} value={course.courseName}>
+                                        {course.courseName}
+                                    </option>
+                                ))
+                            ) : (
+                                <option disabled>No available courses</option>
+                            )}
+                        </select>
+                    </div>
 
-                        {/* Select Training Mode */}
-                        <div className={styles.formGroup}>
-                            <select
-                                name="mode"
-                                value={formData.mode}
-                                onChange={handleChange}
-                                required
-                            >
-                                <option value="">Select Training Mode</option>
-                                <option value="Online">Online</option>
-                                <option value="Offline">Offline</option>
-                            </select>
-                        </div>
+                    {/* Select Training Mode */}
+                    <div className={styles.formGroup}>
+                        <select
+                            name="mode"
+                            value={formData.mode}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="">Select Training Mode</option>
+                            <option value="Online">Online</option>
+                            <option value="Offline">Offline</option>
+                        </select>
+                    </div>
 
-                        {/* Submit and Close Buttons */}
+                    {/* Submit Button */}
                     <button
                         type="submit"
                         className={styles.submitButton}
@@ -153,20 +169,7 @@ const SignInForm = ({ onClose, courseID }) => {
                     >
                         {isLoading ? 'Submitting...' : 'Submit'}
                     </button>
-
-                        <button
-                            type="button"
-                            className={styles.closeButton}
-                            onClick={onClose}
-                        >
-                            Close
-                        </button>
-                    </form>
-                {isLoading && (
-                    <Suspense fallback={<div>Loading...</div>}>
-                        <Loading />
-                    </Suspense>
-                )}
+                </form>
             </div>
         </div>
     );
