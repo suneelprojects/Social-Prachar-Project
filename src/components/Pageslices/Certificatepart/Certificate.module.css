@@ -57,7 +57,7 @@
   gap: 40px;
   z-index: 3;
   position: relative;
-  padding-top: 20px;
+  top: -30px;
   padding-bottom: 20px;
 }
 
@@ -140,14 +140,14 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
   .timelineHeading {
-    font-size: 24px;
+    font-size: 28px;
   }
-
+  
   .levelCard {
     max-width: 300px;
     flex-direction: column;
     align-items: center;
-    transform: translateX(0); /* Reset positioning for smaller screens */
+    transform: translateX(0);
     margin: 0 auto;
   }
 
@@ -159,7 +159,9 @@
     align-items: center;
     text-align: center;
   }
-
+  .levelDescription {
+    text-align: start;
+  }
   .levelCard:nth-child(odd) {
     flex-direction: row-reverse;
     margin-right: auto;
@@ -219,13 +221,15 @@
 
 @media (max-width: 376px) {
   .timelineHeading {
-    font-size: 24px;
+    font-size: 25px;
   }
   .timelineLine {
     position: absolute;
     left: -38px;
   }
   .levelCard {
+    position: relative;
+    top: -60px;
     max-width: 250px;
   }
 
