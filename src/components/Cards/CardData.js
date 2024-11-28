@@ -280,8 +280,9 @@ export const data = [
                 content: 'You can register on their website or contact their admissions team for detailed information on batch timings and enrollment procedures.'
             }
         ],
+        bannerImage: fullStackImage,
         bannerHeader: 'Learn Data Science Today',
-        bannerStudentsEnrolled: '16k+ Students Enrolled',
+        bannerStudentsEnrolled: '6k+ Students Enrolled',
         timeLineHeading: 'Data Science',
         levelcardIndex: [
             {
@@ -378,6 +379,10 @@ export const data = [
         price: '$20.00',
         rating: 5,
         authorImage: authorPhoto,
+        bannerImage: fullStackImage,
+        bannerHeader: 'Learn Full stack Python Today',
+        bannerStudentsEnrolled: '6k+ Students Enrolled',
+        timeLineHeading: 'Full Stack Python',
         no_of_ratings: 0,
         categoryIndex: 0,
         tagIndex: 6,
@@ -710,6 +715,9 @@ export const data = [
         levelIndex: 1,    // Intermediate
         priceIndex: 1,    // Paid
         bannerImage: fullStackImage,
+        bannerHeader: 'Learn Full stack Java Today',
+        bannerStudentsEnrolled: '6k+ Students Enrolled',
+        timeLineHeading: 'Full Stack Java',
         Description:'Full Stack Java Developers are in high demand across a wide range of industries, from startups to global tech giants like Google, Amazon, and IBM. As businesses continue to build and scale web applications, the need for skilled developers who can handle both the front-end and back-end has grown significantly. This comprehensive course covers the core technologies for Full Stack Java Development, including Frontend Development (HTML, CSS, JavaScript, React.js), Backend Development (Java, Spring Boot, Hibernate, REST APIs), Databases (MySQL, PostgreSQL, MongoDB), Version Control (Git, GitHub), Cloud Deployment (Heroku, AWS), and Testing & Debugging (JUnit, Mockito). By mastering these technologies, you will be prepared to develop, deploy, and maintain high-performance, scalable web applications, making you a valuable asset in the tech industry.',
         popUpDropDownCourses: [
             { dropDownid: 0, courseName: 'Java Full stack Development' },
@@ -1145,8 +1153,6 @@ export const data = [
         bannerImage: DataAnalyticsImage,
         whatWillYouLearn: [{ topic1: 'Python', topic2: 'Statistics', topic3: 'Machine Learning', topic4: 'Mathematics', topic5: 'PowerBI', topic6: 'Tableau', table7: 'SQL' }]
     },
-
-
     {
         id: 3,
         imageSrc: img2,
