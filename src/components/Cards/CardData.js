@@ -57,9 +57,15 @@ import student48 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (4).pn
 import student49 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (6).png';
 import student50 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (7).png';
 import student51 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE.png';
-// students placed images
+
+
+// testmonials Comment Images
 import testmonialsCommentImageDS from '../../assets/AssetsOfDetailsPage/masterclass/commentsDS (1).jpg';
 import testmonialsCommentImageSSDS from '../../assets/AssetsOfDetailsPage/masterclass/commentImageofSSDS.jpg';
+import testmonialsCommentImageFSW from '../../assets/AssetsOfDetailsPage/commnetsForFSW.jpg';
+import testmonialsCommentImageFSWSS from '../../assets/AssetsOfDetailsPage/commnetsForFSWSS.jpg';
+
+
 import classDemoImageDS from '../../assets/AssetsOfDetailsPage/masterclass/featured-topmate masteclass image.jpg';
 import classDemoImageFSW from '../../assets/AssetsOfDetailsPage/masterclass/MasterclassFSW.jpg';
 import DS_Image from '../../assets/AssetsOfDetailsPage/masterclass/header-removebg-preview.png';
@@ -89,12 +95,12 @@ export const data = [
         Header1: 'Learn Data Science AI course & Become a Certified Professional in',
         Header2: 'Learn Data Science AI course & Become a Certified Professional in',
         questions: [
-            "You want to explore career opportunities in Data Science and AI.",
-            "You want to learn the essential skills to master in 150 days.",
-            "You want to excel in office meetings and presentations."
+            "You want to explore career opportunities in Data Science and AI?",
+            "You want to learn the essential skills to master in 150 days?",
+            "Do you want to kickstart your Data Science & AI career with 10+ LPA opportunities?"
         ],
         selfQuestioningPart1: 'Do you feel confused about',
-        selfQuestioningPart2: 'starting your Data Science Career?',
+        selfQuestioningPart2: 'Starting your Data Science Career?',
         Description: 'Data Scientists are in high demand across every industry.Even tech giants such as Google, Amazon, Apple, Facebook, and Microsoft are constantly seeking experts in data extraction, data mining, visualization, and more.The course covers a comprehensive range of topics including Data Analytics(Power BI, Tableau, Excel), Data Science(Machine Learning, Python, SQL, Statistics), AI(Deep Learning, NLP, OpenCV), and Cloud(AWS DevOps).',
         moduleContent: [
             {
@@ -283,7 +289,7 @@ export const data = [
         bannerImage: fullStackImage,
         bannerHeader: 'Learn Data Science Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
-        timeLineHeading: 'Data Science',
+        timeLineHeading: 'Data Scientist',
         levelcardIndex: [
             {
                 icon: faChartBar,
@@ -361,6 +367,8 @@ export const data = [
         imageSrc: img2,
         courseImage: DS_Image,
         MasterclassImage: classDemoImageFSW,
+        TestmonialsCommentsImage1: testmonialsCommentImageFSW,
+        TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: ' 6 months',
         courseTitle: 'Development',
         students: '2900+ students',
@@ -368,9 +376,9 @@ export const data = [
         selfQuestioningPart1: 'Do you feel confused about',
         selfQuestioningPart2: 'starting your Python Full Stack Career?',
         questions: [
-            "You want to explore career opportunities in Python Full Stack Development.",
-            "You want to learn the essential skills to master in 180 days.",
-            "You want to excel in office meetings and presentations."
+            "You want to explore career opportunities in Python Full Stack Development?",
+            "You want to learn the essential skills to master in 180 days?",
+            "Do you want to kickstart your Full Stack Python Developer career with 10+ LPA opportunities?"
         ],
         text: 'Full Stack Python Development',
         Header1: 'Learn Python Full Stack Development & Become a Certified Professional in',
@@ -383,7 +391,7 @@ export const data = [
         certificate: DS_certificate,
         bannerHeader: 'Learn Full stack Python Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
-        timeLineHeading: 'Full Stack Python',
+        timeLineHeading: 'Full Stack Python Developer',
         no_of_ratings: 0,
         categoryIndex: 0,
         tagIndex: 6,
@@ -694,17 +702,17 @@ export const data = [
         no_of_lessons: '6 months',
         courseImage: DS_Image,
         MasterclassImage: classDemoImageFSW,
-        TestmonialsCommentsImage1: testmonialsCommentImageDS,
-        TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
+        TestmonialsCommentsImage1: testmonialsCommentImageFSW,
+        TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         certificate: DS_certificate,
         Header1: 'Learn Java Full Stack Development & Become a Certified Professional in',
         Header2: 'Learn Java Full Stack Development & Become a Certified Professional in',
         selfQuestioningPart1: 'Do you feel confused about',
         selfQuestioningPart2: 'starting your Java Full Stack Career?',
         questions: [
-            "You want to explore career opportunities in Java Full Stack Development.",
-            "You want to learn the essential skills to master in 180 days.",
-            "You want to excel in office meetings and presentations."
+            "You want to explore career opportunities in Java Full Stack Development?",
+            "You want to learn the essential skills to master in 180 days?",
+            "Do you want to kickstart your Full Stack Java Developer career with 10+ LPA opportunities?"
         ],
         text: 'Full Stack Java Development',
         name: 'Balu',
@@ -719,7 +727,7 @@ export const data = [
         bannerImage: fullStackImage,
         bannerHeader: 'Learn Full stack Java Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
-        timeLineHeading: 'Full Stack Java',
+        timeLineHeading: 'Full Stack Java Developer',
         Description:'Full Stack Java Developers are in high demand as businesses scale web applications. This course covers key technologies like Frontend (HTML, CSS, JavaScript, React.js), Backend (Java, Spring Boot, REST APIs), Databases (MySQL, PostgreSQL, MongoDB), Version Control (Git), Cloud Deployment (AWS, Heroku), and Testing (JUnit, Mockito). By mastering these skills, you’ll be prepared to build and maintain scalable web applications, making you a valuable asset in the tech industry.',
         popUpDropDownCourses: [
             { dropDownid: 0, courseName: 'Java Full stack Development' },

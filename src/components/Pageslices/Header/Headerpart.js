@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import videoSymbol from '../../../assets/AssetsOfDetailsPage/movieLogo.svg';
-import smallVideo from '../../../assets/AssetsOfDetailsPage/smallvideosymbol.svg';
-import padsymbol from '../../../assets/AssetsOfDetailsPage/padLogo.svg';
-import badgeSymbol from '../../../assets/AssetsOfDetailsPage/badgeesymbol.svg';
-import booksymbol from '../../../assets/AssetsOfDetailsPage/bookLogo.svg';
-import globeSymbol from '../../../assets/AssetsOfDetailsPage/globesymbol.svg';
+
+// headerpage logos
+import unlockLogo from '../../../assets/AssetsOfDetailsPage/masterclass/unlock.png';
+import booksymbol from '../../../assets/AssetsOfDetailsPage/masterclass/open-book.png';
+import successLogo from '../../../assets/AssetsOfDetailsPage/masterclass/success.png';
+import partnershipLogo from '../../../assets/AssetsOfDetailsPage/masterclass/hand-shake.png';
+import MobileIconLogo from '../../../assets/AssetsOfDetailsPage/masterclass/mobile-development.png';
+
 import style from './Header.module.css';
 import Enrollbutton from './../Enrollbutton/Enrollbutton';
 import BackgroundImg from '../../../assets/AssetsOfDetailsPage/background.png';
@@ -34,6 +36,7 @@ import company17Logo from '../../../assets/AssetsOfDetailsPage/masterclass/Tricu
 import company18Logo from '../../../assets/AssetsOfDetailsPage/masterclass/Yotta_Data_Services_Logo.jpg';
 import company19Logo from '../../../assets/AssetsOfDetailsPage/masterclass/amber_flux_private_limited_logo.jpeg';
 import company20Logo from '../../../assets/AssetsOfDetailsPage/masterclass/dell_technologies_logo.png';
+import Testmonials from './../Testmonials/Testmonials';
 
 
 const Headerpart = () => {
@@ -94,51 +97,43 @@ const Headerpart = () => {
                     <div className={style.symbolItemContent}>
                         <div className={style.symbolItem}>
                             <img
-                                src={isMobile ? smallVideo : videoSymbol}
+                                src={unlockLogo}
                                 alt="Book symbol"
-                                className={style.symbol}
+                                className={style.symbol1}
                             />
-                            <span className={style.symbolText}>Online Training & offline training available</span>
+                            <span className={style.symbolText}>Unlock 12+ LPA with In-Demand Skills</span>
                         </div>
                         <div className={style.symbolItem}>
                             <img
-                                src={isMobile ? smallVideo : videoSymbol}
+                                src={booksymbol}
                                 alt="Book symbol"
                                 className={style.symbol}
                             />
-                            <span className={style.symbolText}> Dedicated Mobile app for Live classes & Recorded classes  </span>
+                            <span className={style.symbolText}> Flexible Learning: Classroom & Online Options </span>
                         </div>
                         <div className={style.symbolItem}>
                             <img
-                                src={isMobile ? badgeSymbol : booksymbol}
+                                src={successLogo}
                                 alt="Book symbol"
                                 className={style.symbol}
                             />
-                            <span className={style.symbolText}>16,000+ Successful Career Transitions since 2014</span>
+                            <span className={style.symbolText}>17,000+ Successful Career Transitions Since 2014</span>
                         </div>
                         <div className={style.symbolItem}>
                             <img
-                                src={isMobile ? badgeSymbol : booksymbol}
+                                src={partnershipLogo}
                                 alt="Book symbol"
                                 className={style.symbol}
                             />
-                            <span className={style.symbolText}> Lifetime LMS access</span>
+                            <span className={style.symbolText}> 550+ Batches Completed, 350+ Hiring Partners</span>
                         </div>
                         <div className={style.symbolItem}>
                             <img
-                                src={isMobile ? globeSymbol : padsymbol}
+                                src={MobileIconLogo}
                                 alt="Book symbol"
                                 className={style.symbol}
                             />
-                            <span className={style.symbolText}>300+ Hiring partners</span>
-                        </div>
-                        <div className={style.symbolItem}>
-                            <img
-                                src={isMobile ? globeSymbol : padsymbol}
-                                alt="Book symbol"
-                                className={style.symbol}
-                            />
-                            <span className={style.symbolText}>450+ Batches completed</span>
+                            <span className={style.symbolText}>Lifetime LMS Access & Dedicated Mobile App</span>
                         </div>
                     </div>
                 </div>
@@ -190,6 +185,7 @@ const Headerpart = () => {
                 </div>
             </div>
 
+            <Testmonials/>
             <div className={style.DoughtsPart} ref={doughtsPartRef}>
                 <p ref={header1Ref} className={`${style.header1}`}>
                     {card?.selfQuestioningPart1}

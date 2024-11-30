@@ -61,7 +61,7 @@ const Masterclass = () => {
     };
 
     return (
-        <div>
+        <div className={styles.masterClassContent}>
             <div className={styles.MasterClass}>
                 <div className={styles.headings}>
                     <p className={styles.Text1}>That's why we created</p>

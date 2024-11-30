@@ -2,6 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import styles from './Accordian.module.css';
 import { data } from '../../Cards/CardData'; // Import the data
 import { useParams } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faChalkboardTeacher, faPhone, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => {
     const contentRef = useRef(null);
@@ -76,7 +79,66 @@ const CourseAccordion = () => {
     // Extract the accordion content for the specific course
     const accordionItems = card ? card.accordionContent : [];
 
-    return <Accordion items={accordionItems} />;
+    // Sample contact information (can be dynamic or static)
+    const contactInfo = [
+        { name: 'John Doe', email: 'john.doe@example.com', phone: '+1234567890' },
+        { name: 'Jane Smith', email: 'jane.smith@example.com', phone: '+0987654321' }
+    ];
+
+    return (
+        <div>
+            <Accordion items={accordionItems} />
+            
+            {/* Contact Boxes below Accordion */}
+            <div className={styles.contact}>
+                <p
+                    className="text-center mb-4 fw-bold"
+                    style={{ fontSize: "32px", position: 'relative', top: '18px' }}
+                >
+                    Let's <span style={{ color: "#ff5003" }}>Connect</span>
+                </p>
+                <div className="container my-5">
+                    <div className="row justify-content-center">
+                        {/* Call Box */}
+                        <div className="col-md-6 col-lg-5 mb-3 d-flex justify-content-center">
+                            <div
+                                className="box p-4 text-center border border-primary rounded shadow-sm w-100"
+                                style={{ maxWidth: "300px" }}
+                            >
+                                <FontAwesomeIcon icon={faPhone} className="mb-3" style={{ fontSize: "50px", color: "#000" }} />
+                                <h4 className="mb-1 text-primary fw-semibold">Call Us</h4>
+                                <p className="fw-bold mb-3" style={{ fontSize: "20px" }}>8047495555</p>
+                                <a href="tel:+8047495555" className="btn btn-primary w-100">
+                                    <b>Call Now</b>
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* WhatsApp Chat Box */}
+                        <div className="col-md-6 col-lg-5 mb-3 d-flex justify-content-center">
+                            <div
+                                className="box p-4 text-center border border-success rounded shadow-sm w-100"
+                                style={{ maxWidth: "300px" }}
+                            >
+                                <FontAwesomeIcon icon={faWhatsapp} className="mb-3" style={{ fontSize: "50px", color: "#25D366" }} />
+                                <h4 className="mb-1 text-primary fw-semibold">WhatsApp Us at</h4>
+                                <p className="fw-bold mb-3" style={{ fontSize: "20px" }}>8867900461</p>
+                                <a
+                                    href="https://wa.me/8867900461"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn btn-success w-100"
+                                >
+                                    <b>Chat on WhatsApp</b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    );
 };
 
 export default CourseAccordion;

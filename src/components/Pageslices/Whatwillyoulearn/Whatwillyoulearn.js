@@ -25,7 +25,7 @@ const Whatwillyoulearn = () => {
     }
 
     return (
-        <>
+        <div className={styles.totalPage}>
             <div className={styles.container}>
                 <div className={styles.header}>
                     <p className={styles.heading}>
@@ -94,7 +94,7 @@ const Whatwillyoulearn = () => {
                     </article>
                 </section>
             </div>
-        </>
+        </div>
     );
 };
 

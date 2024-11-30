@@ -72,7 +72,7 @@ const TimelineComponent = () => {
             >
                 <div className={styles.timelineHeading}>
                     {card ? (
-                        <p>Your Journey to becoming a <span style={{ color: "#ff5003" }}>{card.timeLineHeading}</span></p>
+                        <p>Your Path to Becoming a Job-Ready <span style={{ color: "#ff5003" }}>{card.timeLineHeading}</span> Starts Here!</p>
                     ) : (
                         <p>Loading...</p>
                     )}

@@ -63,8 +63,8 @@
   color: #2d2d2d;
 }
 .symbol {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
 }
 
 .EnrollButtonContent {
@@ -210,10 +210,10 @@
 
 /* DoughtsPart */
 .DoughtsPart {
-  margin-top: 80px;
   text-align: center;
   position: relative;
-  z-index: 1;
+  top: 50px;
+  z-index: 1000;
 }
 
 .header2 {
@@ -234,8 +234,8 @@
   transform: translateX(-100%);
   transition: opacity 0.6s ease, transform 0.6s ease;
   position: relative;
-  top: -55px;
-  left: 13rem;
+  top: -75px;
+  left: 2rem;
 }
 
 .redLineVisible {
@@ -258,17 +258,19 @@
 
 /* Add to Header.module.css */
 .SelfQuestioning {
-  margin-top: -120px;
+  margin-top: -150px;
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .questionItem {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8px;
-  padding: 30px;
+  height: 170px;
+  position: relative;
+  bottom: 20px;
 }
 
 .questionItem p {
@@ -583,6 +585,8 @@
 
   .SelfQuestioning {
     margin-top: -20px;
+    display: flex;
+    flex-direction: column;
   }
 
   .questionItem {
@@ -599,7 +603,7 @@
   }
 }
 
-@media (min-width: 441px) and (max-width: 768px) {
+@media (min-width: 441px) and (max-width: 767px) {
   .headerContainer {
     width: 100%;
   }
@@ -667,13 +671,13 @@
   }
 
   .HeaderPicture {
-    width: 120%;
+    width: 100%;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     position: relative;
-    top: -350px;
+    top: -300px;
     left: -16px;
     gap: 25px;
   }
@@ -681,7 +685,7 @@
   .headerText {
     position: relative;
     top: 26px;
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: 15px;
     max-width: 95%;
     text-align: center;
@@ -739,6 +743,8 @@
 
   .SelfQuestioning {
     margin-top: -20px;
+    display: flex;
+    flex-direction: column;
   }
 
   .questionItem {
@@ -759,7 +765,7 @@
   }
 }
 
-@media (min-width: 769px) and (max-width: 920px) {
+@media (min-width: 768px) and (max-width: 920px) {
   .headerContainer {
     width: 100%;
     height: auto;

@@ -1,4 +1,10 @@
 /** @format */
+.text-center {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
 .Mentorpage {
   padding-top: 35px;
 }

@@ -105,7 +105,6 @@ const Testmonials = () => {
     return (
         <div className={styles.testimonials}>
             <p className={styles.heading}>TESTIMONIALS</p>
-
             {/* Section 1: Student Transformation */}
             <div className={styles.section}>
                 <h3 className={styles.subHeading}>
