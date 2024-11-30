@@ -121,9 +121,9 @@ const Mentorpage = () => {
             {/* Mentor Profile Section */}
             <div className={styles.mentorInfo}>
                 <div className={styles.mentorProfile}>
-                    <p className={styles.smallHeading}>
-                        Meet your <span className={styles.color}>Instructor</span>
-                    </p>
+                    {/* <p className={styles.smallHeading}>
+                        About <span className={styles.color}>Instructor</span>
+                    </p> */}
 
                     {/* Carousel for mentor images */}
                     <img

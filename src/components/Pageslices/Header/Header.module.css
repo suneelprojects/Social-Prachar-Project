@@ -8,7 +8,7 @@
 }
 
 .highlightedWord {
-  color: #ff5733;
+  color: #ff5003;
   font-weight: bold;
 }
 
@@ -118,7 +118,7 @@
   text-align: left;
   font-family: sans-serif;
   max-width: 90%;
-  height:auto;
+  height: auto;
   margin-top: -20px;
   color: black;
   font-size: 42px;
@@ -211,9 +211,7 @@
 /* DoughtsPart */
 .DoughtsPart {
   text-align: center;
-  position: relative;
-  top: 50px;
-  z-index: 1000;
+  padding-top: 120px;
 }
 
 .header2 {
@@ -274,12 +272,11 @@
 }
 
 .questionItem p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   max-width: 320px;
   margin: 0;
   text-align: left;
-  line-height: 1.5;
 }
 
 .questionIcon {
@@ -386,7 +383,8 @@
   }
 
   .scrollSection p {
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 600;
   }
 
   .logoContainer {
@@ -404,7 +402,8 @@
   }
 
   .DoughtsPart {
-    margin-top: 150px;
+    padding-top: 100px;
+    z-index: 1000;
   }
 
   .header2 {
@@ -424,9 +423,10 @@
   }
 
   .SelfQuestioning {
-    margin-top: -60px;
+    margin-top: -70px;
     display: flex;
     flex-direction: column;
+    z-index: 1000;
   }
 
   .questionItem {
@@ -434,12 +434,14 @@
     flex-direction: column;
     padding: 20px;
     text-align: center;
+    z-index: 1000;
   }
 
   .questionItem p {
     font-size: 16px;
-    max-width: 80%;
+    max-width: 90%;
     text-align: center;
+    z-index: 1000;
   }
 }
 @media (min-width: 377px) and (max-width: 440px) {
@@ -866,37 +868,39 @@
 
   .scrollSection p {
     font-size: 24px;
-    max-width: 60%;
+    max-width: 70%;
     position: relative;
     left: 125px;
   }
 
   .logoContainer {
-    padding: 20px;
+    padding: 10px;
   }
 
   .logoScroll1,
   .logoScroll2 {
     padding: 25px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
-
+  .logo {
+    height: 45px;
+  }
   .companyName {
     width: 100px;
     margin: 0 25px;
   }
 
   .DoughtsPart {
-    margin-top: 220px;
+    margin-top: 60px;
   }
 
   .header2 {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 40px;
   }
 
   .header1 {
-    font-size: 36px;
+    font-size: 30px;
   }
 
   .redLine {
@@ -905,6 +909,7 @@
 
   .SelfQuestioning {
     margin-top: -40px;
+    height: 250px;
   }
 
   .questionItem {
@@ -1039,7 +1044,7 @@
   }
 
   .DoughtsPart {
-    margin-top: 200px;
+    margin-top: 100px;
   }
 
   .header2 {
@@ -1061,7 +1066,8 @@
   .SelfQuestioning {
     margin-top: -60px;
     display: flex;
-    /* flex-direction: column; */
+    height: 240px;
+
   }
 
   .questionItem {
@@ -1143,17 +1149,19 @@
   }
 
   .DoughtsPart {
-    margin-top: 120px;
+    margin-top: 80px;
   }
 
   .header2 {
-    font-size: 56px;
+    font-size: 45px;
   }
 
   .header1 {
-    font-size: 36px;
+    font-size: 32px;
   }
-
+  .SelfQuestioning {
+    height: 220px;
+  }
   .questionItem {
     display: flex;
     flex-direction: column;
@@ -1161,8 +1169,9 @@
     text-align: center;
   }
   .questionItem p {
-    font-size: 20px;
+    font-size: 16px;
     max-width: 95%;
     text-align: center;
+    z-index: 9999;
   }
 }

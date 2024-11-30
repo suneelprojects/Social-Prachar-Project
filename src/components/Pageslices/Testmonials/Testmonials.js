@@ -94,12 +94,12 @@ const Testmonials = () => {
         const scrollInterval = setInterval(() => {
             scrollAmount += step;
             if (scrollAmount >= carousel.scrollWidth / 2) {
-                scrollAmount = 0; // Reset scroll position for seamless looping
+                scrollAmount = 0;
             }
-            carousel.scrollLeft = scrollAmount; // Use scrollLeft for precise positioning
+            carousel.scrollLeft = scrollAmount;
         }, interval);
 
-        return () => clearInterval(scrollInterval); // Cleanup on unmount
+        return () => clearInterval(scrollInterval); 
     }, [studentPlacedImages]);
 
     return (
@@ -130,7 +130,7 @@ const Testmonials = () => {
 
             {/* Section 2: Statistics with Scrolling Carousel */}
             <div className={styles.section} ref={statsRef}>
-                <h3 className={styles.subHeading}>
+                <h3 className={styles.subHeading1}>
                     <span style={{ color: "#ff5003" }}>Numbers </span>that speak for themselves
                 </h3>
                 <div className={styles.statsContainer}>

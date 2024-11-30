@@ -14,8 +14,8 @@
 }
 
 .carouselImage img {
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 350px;
   border-radius: 15px;
 }
 
@@ -34,6 +34,7 @@
   align-items: center;
   position: relative;
   top: 150px;
+
 }
 
 .section {
@@ -57,6 +58,7 @@
   margin-bottom: -20px;
   padding: 5px 15px;
   letter-spacing: 1.5px;
+  z-index: 1;
 }
 
 .subHeading {
@@ -69,6 +71,7 @@
   text-align: center;
   line-height: 51px;
 }
+
 .highlatedWord {
   font-size: 42px;
   color: rgb(255, 80, 3);
@@ -83,7 +86,7 @@
 }
 
 .image {
-  width: 80%;
+  width: 70%;
   margin-top: 10px;
 }
 
@@ -112,21 +115,27 @@
 /* Media Queries for up to 375px screens */
 @media (max-width: 376px) {
   .testmonials {
-    margin-top: -100px;
+    margin-top: 30px;
     padding: 10px;
   }
 
   .heading {
     font-size: 18px;
     padding: 5px 10px;
+    position: relative;
+    top: 180px;
   }
 
   .subHeading {
     font-size: 24px;
-    line-height: 36px;
-    margin-bottom: 5px;
+    position: relative;
+    top: 40px;
   }
-
+  .subHeading1{
+    top: 15px;
+    max-width: 80%;
+    text-align: center;
+  }
   .highlateWord {
     font-size: 22px;
   }
@@ -267,15 +276,17 @@
     font-size: 22px;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .testmonials {
-    margin-top: -60px;
+    margin-top: -40px;
     padding: 20px;
   }
 
   .heading {
+    
     font-size: 22px;
-    padding: 15px 20px;
+    padding: 10px 15px;
   }
 
   .subHeading {

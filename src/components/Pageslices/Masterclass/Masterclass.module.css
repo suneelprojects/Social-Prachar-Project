@@ -1,8 +1,5 @@
 /** @format */
-.masterClassContent{
-  /* position: relative; */
-  /* top: 150px; */
-}
+
 .MasterClass {
   display: flex;
   flex-direction: column;
@@ -10,7 +7,6 @@
   background-image: url("../../../assets/AssetsOfDetailsPage/masterclass/pattern-colour.png");
   height: 400px;
   text-align: center;
-  position: relative;
 }
 .Text1,
 .Text3 {
@@ -120,11 +116,7 @@
   .nextLive {
     top: -150px;
   }
-
-  .nextLive h2 {
-    padding-top: 15px;
-  }
-
+  
   .timerBox {
     width: 70px;
     padding:18px 2px;

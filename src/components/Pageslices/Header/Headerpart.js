@@ -156,7 +156,7 @@ const Headerpart = () => {
 
 
             <div className={style.scrollSection}>
-                <p>Trusted by Learners Working At Top Companies Like</p>
+                <p>Trusted by Learners Working At Top Companies</p>
                 <div className={style.logoContainer}>
                     <div className={style.logoScroll1}>
                         <img src={company1Logo} alt="Company 1" className={style.logo} />

@@ -80,7 +80,7 @@ const Masterclass = () => {
 
             <div className={styles.nextLive}>
                 <button className={styles.shinebtn} onClick={handleEnrollClick}>Book Free Session</button>
-                <h2>NEXT Upcoming Batch Starts in</h2>
+                <h2>Next <span style={{ color:'#ff5003'}}>cohort</span> Starts in</h2>
                 <div className={styles.timerBoxes}>
                     <div className={styles.timerBox}>
                         <div className={styles.timeCount}>{timeLeft.days}</div>
