@@ -101,7 +101,7 @@ const CourseAccordion = () => {
                             >
                                 <FontAwesomeIcon icon={faPhone} className="mb-3" style={{ fontSize: "50px", color: "#000" }} />
                                 <h4 className="mb-1 text-primary fw-semibold">Call Us</h4>
-                                <p className="fw-bold mb-3" style={{ fontSize: "20px" }}>8047-495-555</p>
+                                <p className="fw-bold mb-3" style={{ fontSize: "20px" }}>8019-479-419</p>
                                 <a href="tel:+8047495555" className="btn btn-primary w-100">
                                     <b>Call Now</b>
                                 </a>
@@ -116,7 +116,7 @@ const CourseAccordion = () => {
                             >
                                 <FontAwesomeIcon icon={faWhatsapp} className="mb-3" style={{ fontSize: "50px", color: "#25D366" }} />
                                 <h4 className="mb-1 text-primary fw-semibold">WhatsApp Us at</h4>
-                                <p className="fw-bold mb-3" style={{ fontSize: "20px" }}>9515-235-259</p>
+                                <p className="fw-bold mb-3" style={{ fontSize: "20px" }}>8019-479-419</p>
                                 <a
                                     href="https://wa.me/8867900461"
                                     target="_blank"
