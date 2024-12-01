@@ -68,13 +68,14 @@ const Accordion = ({ items = [] }) => {
 };
 
 const CourseAccordion = () => {
-    const { cardId } = useParams();
+    
+    const { slug } = useParams();
     const [card, setCard] = useState(null);
 
     useEffect(() => {
-        const cardDetails = data.find(card => card.courseID === parseInt(cardId));
+        const cardDetails = data.find(item => item.slug === slug);
         setCard(cardDetails);
-    }, [cardId]);
+    }, [slug]);
 
     // Extract the accordion content for the specific course
     const accordionItems = card ? card.accordionContent : [];

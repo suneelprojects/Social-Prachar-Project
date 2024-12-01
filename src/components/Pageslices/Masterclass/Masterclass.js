@@ -6,14 +6,14 @@ import { useParams } from 'react-router-dom';
 import { data } from './../../Cards/CardData';
 
 const Masterclass = () => {
-    const { cardId } = useParams();
+    const { slug } = useParams();
     const [card, setCard] = useState(null);
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
-        const cardDetails = data.find(card => card.courseID === parseInt(cardId));
+        const cardDetails = data.find(card => card.slug === slug);
         setCard(cardDetails);
-    }, [cardId]);
+    }, [slug]);
 
     // Event date calculation and setting
     useEffect(() => {

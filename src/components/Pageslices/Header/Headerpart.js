@@ -40,19 +40,24 @@ import Testmonials from './../Testmonials/Testmonials';
 
 
 const Headerpart = () => {
-    const { cardId } = useParams();
+    const { slug } = useParams();
     const [card, setCard] = useState(null);
     const redLineRef = useRef(null);
     const header1Ref = useRef(null);
     const header2Ref = useRef(null);
     const doughtsPartRef = useRef(null);
-    const navigate = useNavigate();
-
+    
 
     useEffect(() => {
-        const cardDetails = data.find(card => card.courseID === parseInt(cardId));
+        const cardDetails = data.find(item => item.slug === slug);
         setCard(cardDetails);
-    }, [cardId]);
+    }, [slug]);
+
+    // useEffect(() => {
+    //     const cardDetails = data.find(card => card.courseID === parseInt(cardId));
+    //     setCard(cardDetails);
+    // }, [cardId]);
+
 
     // below the screen size
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
@@ -185,9 +190,9 @@ const Headerpart = () => {
                 </div>
             </div>
 
-           <div className={style.testimonials}>
+            <div className={style.testimonials}>
                 <Testmonials />
-           </div>
+            </div>
             <div className={style.DoughtsPart} ref={doughtsPartRef}>
                 <p ref={header1Ref} className={`${style.header1}`}>
                     {card?.selfQuestioningPart1}

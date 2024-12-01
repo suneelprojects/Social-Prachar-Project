@@ -82,6 +82,7 @@ export const data = [
     {
         id: 1,
         courseID: 1,
+        slug:'data-science-course',
         Duration: ' 6 months',
         imageSrc: img1,
         courseImage: DS_Image,
@@ -364,6 +365,7 @@ export const data = [
     {
         id: 1,
         courseID: 2,
+        slug:'python-full-stack-development',
         imageSrc: img2,
         courseImage: DS_Image,
         MasterclassImage: classDemoImageFSW,
@@ -696,6 +698,7 @@ export const data = [
         id: 1,
         courseID: 3,
         imageSrc: img3,
+        slug:'java-full-stack-development',
         courseTitle: 'Development',
         Duration: ' 6 months',
         students: '2600+ Students',

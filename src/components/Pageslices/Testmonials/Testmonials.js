@@ -14,16 +14,14 @@ const Testmonials = () => {
     const [testimonialImage, setTestimonialImage] = useState('');
     const statsRef = useRef(null);
     const carouselRef = useRef(null); // Ref for carousel container
-    const { cardId } = useParams();
+    const { slug } = useParams();
 
     const studentPlacedImages = card?.studentPlacedImages || [];
 
     useEffect(() => {
-        const cardDetails = data.find((card) => card.courseID === parseInt(cardId));
-        if (cardDetails) {
-            setCard(cardDetails);
-        }
-    }, [cardId]);
+        const cardDetails = data.find(item => item.slug === slug);
+        setCard(cardDetails);
+    }, [slug]);
 
     useEffect(() => {
         // Set the appropriate image based on screen size

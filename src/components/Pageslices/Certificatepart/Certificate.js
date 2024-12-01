@@ -13,14 +13,13 @@ const TimelineComponent = () => {
     const [progressHeight, setProgressHeight] = useState(0);
     const timelineRef = useRef(null);
     const cardRefs = useRef([]);
-    const { cardId } = useParams();
+    const { slug } = useParams();
     const [card, setCard] = useState(null);
 
     useEffect(() => {
-        const cardDetails = data.find(card => card.courseID === parseInt(cardId));
+        const cardDetails = data.find(item => item.slug === slug);
         setCard(cardDetails);
-    }, [cardId]);
-
+    }, [slug]);
 
     // Update progress line based on visible cards
     const updateProgress = () => {

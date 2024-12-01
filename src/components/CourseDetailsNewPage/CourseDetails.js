@@ -10,11 +10,10 @@ const Certificate = React.lazy(() => import('../Pageslices/Certificatepart/Certi
 const Banner = React.lazy(() => import('../Pageslices/Banner/Banner'));
 const CourseAccordion = React.lazy(() => import('../Pageslices/AccordianQuestions/Accordian'));
 
-
 const CourseDetails = () => {
     return (
         <div>
-            <Suspense fallback={<div>{Loading}</div>}>
+            <Suspense fallback={<Loading />}>
                 <Headerpart />
                 <Masterclass />
                 <Whatwillyoulearn />

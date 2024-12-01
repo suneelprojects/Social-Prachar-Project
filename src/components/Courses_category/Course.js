@@ -94,8 +94,6 @@ const Course = () => {
                 setChecked(prevChecked => {
                     // Only update if the state is actually different to avoid re-renders
                     if (JSON.stringify(prevChecked) !== JSON.stringify(updatedChecked)) {
-                        console.log("hiii", category)
-                        console.log("hiii", category)
                         return updatedChecked;
                     }
                     return prevChecked;
@@ -267,7 +265,6 @@ const Course = () => {
                         </button>
                     )}
                 </div>
-
 
             </div>
             <Footer />

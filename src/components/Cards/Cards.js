@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { data } from '../Cards/CardData';
 import cardsCSS from './Cards.module.css';
 import GridSymbol from '../../assets/menu (1).png';
@@ -116,9 +116,10 @@ const Cards = ({ filters }) => {
 
 
     const navigate = useNavigate();
+    // const { slug } = useParams();
     const handleCardTitleClick = (courseID) => {
         const selectedCard = data.find(card => card.courseID === courseID);
-        navigate(`/details/${courseID}`, { state: { cardDetails: selectedCard } });
+        navigate(`/details/${selectedCard.slug}`, { state: { cardDetails: selectedCard } });
     };
 
 

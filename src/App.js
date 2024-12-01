@@ -32,7 +32,7 @@ const Enrolled = React.lazy(() => import('./Dashboard/MenuBarComponents/Enrolled
 const ActiveCourses = React.lazy(() => import('./Dashboard/MenuBarComponents/EnrolledCoursesComponent/ActiveCourses.js'));
 const CompletedCourses = React.lazy(() => import('./Dashboard/MenuBarComponents/EnrolledCoursesComponent/CompletedCourses.js'));
 const Course = React.lazy(() => import('./components/Courses_category/Course.js'));
-const DetailsNewPage = React.lazy(() => import('./components/CourseDetailsNewPage/CourseDetails.js'));
+const NewDetailsPage = React.lazy(() => import('./components/CourseDetailsNewPage/CourseDetails.js'));
 const MyWork = React.lazy(() => import('./Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js'));
 const Aboutus = React.lazy(() => import('./components/aboutus/aboutus.js'));
 
@@ -61,7 +61,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<AllHomeComp />} />
               <Route path='/courses' element={<Course />} />
-              <Route path='/details/:cardId' element={<DetailsNewPage />} />
+              <Route path='/details/:slug' element={<NewDetailsPage />} />
               <Route path="/course/:courseID" component={<CourseAccordion />} />
               <Route path="/thank-you" element={<ThankyouPage />} />
               <Route path='/aboutUs' element={<Aboutus />} />

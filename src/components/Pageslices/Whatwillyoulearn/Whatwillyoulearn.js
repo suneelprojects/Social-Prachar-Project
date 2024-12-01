@@ -12,13 +12,13 @@ import { useParams } from 'react-router-dom';
 const colors = ["#f0f8ff", "#f5f5dc", "#ffe4e1", "#e6e6fa", "#ffefd5", "#d3ffce", "#e6e6fa", "#ffefd5", "#d3ffce"];
 
 const Whatwillyoulearn = () => {
-    const { cardId } = useParams();
+    const { slug } = useParams();
     const [card, setCard] = useState(null);
 
     useEffect(() => {
-        const cardDetails = data.find(card => card.courseID === parseInt(cardId));
+        const cardDetails = data.find(item => item.slug === slug);
         setCard(cardDetails);
-    }, [cardId]);
+    }, [slug]);
 
     if (!card) {
         return <div>Loading...</div>;
