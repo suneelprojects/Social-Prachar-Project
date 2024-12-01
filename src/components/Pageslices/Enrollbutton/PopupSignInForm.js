@@ -13,15 +13,15 @@ const SignInForm = ({ onClose, courseID }) => {
         mode: '',
     });
 
-    const { cardId } = useParams();
+    const { slug } = useParams();
     const [card, setCard] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
-        const cardDetails = data.find(card => card.courseID === parseInt(cardId));
+        const cardDetails = data.find(card => card.slug === slug);
         setCard(cardDetails);
-    }, [cardId]);
+    }, [slug]);
 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwUXmxm_e_U4J3yR7y7sn8b26WM4dIr51UIjuTmCt43VUOnxSuUR0USb2N_Iqbm2bTV/exec '; // Replace with your Google Apps Script Web App URL
 
