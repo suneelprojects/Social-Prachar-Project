@@ -1,5 +1,8 @@
 /** @format */
-
+.masterClassContent{
+  position: relative;
+  top: 130px;
+}
 .MasterClass {
   display: flex;
   flex-direction: column;

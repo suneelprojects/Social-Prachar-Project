@@ -3,6 +3,7 @@
 .headerContainer {
   width: 100%;
   height: auto;
+  margin-bottom:-150px;
   overflow: hidden;
   position: relative;
 }
@@ -211,7 +212,7 @@
 /* DoughtsPart */
 .DoughtsPart {
   text-align: center;
-  padding-top: 120px;
+  padding-top: 180px;
 }
 
 .header2 {
@@ -241,14 +242,6 @@
   transform: translateX(0);
 }
 
-/* Slide-down animation for DoughtsPart */
-.DoughtsPart {
-  margin-top: 120px;
-  opacity: 0;
-  transform: translateY(-50%);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
 .DoughtsPartVisible {
   opacity: 1;
   transform: translateY(0);
@@ -259,7 +252,7 @@
   margin-top: -150px;
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 .questionItem {
@@ -402,7 +395,7 @@
   }
 
   .DoughtsPart {
-    padding-top: 100px;
+    padding-top: 200px;
     z-index: 1000;
   }
 
@@ -445,6 +438,11 @@
   }
 }
 @media (min-width: 377px) and (max-width: 440px) {
+  .testimonials{
+    position: relative;
+    top: 150px;
+  }
+
   .headerContainer {
     width: 100%;
   }
@@ -569,7 +567,7 @@
   }
 
   .DoughtsPart {
-    margin-top: 120px;
+    margin-top: 200px;
   }
 
   .header2 {
@@ -606,6 +604,10 @@
 }
 
 @media (min-width: 441px) and (max-width: 767px) {
+  .testimonials{
+    position: relative;
+    top: 150px;
+  }
   .headerContainer {
     width: 100%;
   }
@@ -768,6 +770,10 @@
 }
 
 @media (min-width: 768px) and (max-width: 920px) {
+.testimonials{
+  position:relative;
+  top: 50px;
+}
   .headerContainer {
     width: 100%;
     height: auto;
@@ -891,7 +897,7 @@
   }
 
   .DoughtsPart {
-    margin-top: 60px;
+    margin-top: 40px;
   }
 
   .header2 {
@@ -906,9 +912,8 @@
   .redLine {
     display: none;
   }
-
   .SelfQuestioning {
-    margin-top: -40px;
+    margin-top: 0;
     height: 250px;
   }
 
@@ -1044,7 +1049,7 @@
   }
 
   .DoughtsPart {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 
   .header2 {
@@ -1101,7 +1106,7 @@
   }
 
   .DoughtsPart {
-    margin-top: 120px;
+    margin-top: 10px;
   }
 
   .header2 {
@@ -1149,7 +1154,7 @@
   }
 
   .DoughtsPart {
-    margin-top: 80px;
+    margin-top: 20px;
   }
 
   .header2 {

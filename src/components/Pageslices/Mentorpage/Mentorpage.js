@@ -172,7 +172,7 @@ const Mentorpage = () => {
                     </div>
 
                     {/* Featured In Section */}
-                    <p className={styles.featuredHeading}>Social Prachar Got Featured in</p>
+                    <p className={styles.featuredHeading}><span style={{ color:'#ff5003'}}>Social Prachar</span> Got Featured in</p>
                     <div className={styles.featured}>
                         <div className={styles.logos}>
                             <img src={featuredIn} alt="Featured Logo" className={styles.featuredImage} />

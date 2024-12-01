@@ -82,7 +82,7 @@ const CourseAccordion = () => {
     return (
         <div>
             <Accordion items={accordionItems} />
-            
+
             {/* Contact Boxes below Accordion */}
             <div className={styles.contact}>
                 <p
@@ -101,8 +101,8 @@ const CourseAccordion = () => {
                             >
                                 <FontAwesomeIcon icon={faPhone} className="mb-3" style={{ fontSize: "50px", color: "#000" }} />
                                 <h4 className="mb-1 text-primary fw-semibold">Call Us</h4>
-                                <p className="fw-bold mb-3" style={{ fontSize: "20px" }}>8019-479-419</p>
-                                <a href="tel:+8047495555" className="btn btn-primary w-100">
+                                <p className="fw-bold mb-3" style={{ fontSize: "20px" }}>+91-8019-479-419</p>
+                                <a href="tel:+918019479419" className="btn btn-primary w-100">
                                     <b>Call Now</b>
                                 </a>
                             </div>
@@ -116,15 +116,16 @@ const CourseAccordion = () => {
                             >
                                 <FontAwesomeIcon icon={faWhatsapp} className="mb-3" style={{ fontSize: "50px", color: "#25D366" }} />
                                 <h4 className="mb-1 text-primary fw-semibold">WhatsApp Us at</h4>
-                                <p className="fw-bold mb-3" style={{ fontSize: "20px" }}>8019-479-419</p>
+                                <p className="fw-bold mb-3" style={{ fontSize: "20px" }}>+91-8019-479-419</p>
                                 <a
-                                    href="https://wa.me/8867900461"
+                                    href="https://wa.me/918019479419?text=Hello%2C%20I%20would%20like%20to%20connect%20with%20you!"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="btn btn-success w-100"
                                 >
-                                    <b>Chat on WhatsApp</b>
+                                    Chat with us on WhatsApp
                                 </a>
+                        
                             </div>
                         </div>
                     </div>

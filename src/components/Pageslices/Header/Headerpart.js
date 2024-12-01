@@ -72,7 +72,7 @@ const Headerpart = () => {
                     }
                 });
             },
-            { threshold: 0.5 } 
+            { threshold: 0.5 }
         );
 
         if (doughtsPartRef.current) observer.observe(doughtsPartRef.current);
@@ -185,7 +185,9 @@ const Headerpart = () => {
                 </div>
             </div>
 
-            <Testmonials/>
+           <div className={style.testimonials}>
+                <Testmonials />
+           </div>
             <div className={style.DoughtsPart} ref={doughtsPartRef}>
                 <p ref={header1Ref} className={`${style.header1}`}>
                     {card?.selfQuestioningPart1}
