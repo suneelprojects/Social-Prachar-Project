@@ -14,7 +14,7 @@ import ImgTwelve from '../../assets/twelve.jpg'
 import ImgThirteen from '../../assets/thirteen.webp'
 import ImgFourteen from '../../assets/fourteen.jpg'
 import ImgFifteen from '../../assets/fifteen.jpg'
-import MarqueeComp from '../extraComponents/marqueeComp'
+import MarqueeComp from '../extraComponents/marqueeComp';
 import PartnerStyle from '../clients/Partner.module.css'
 import BulbText from '../extraComponents/bulbText'
 const partners = () => {

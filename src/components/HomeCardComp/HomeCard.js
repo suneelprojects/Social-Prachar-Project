@@ -31,8 +31,11 @@ const HomeCard = ({ selectedCategory }) => {
 
     const handleCardTitleClick = (courseID) => {
         const selectedCard = data.find(card => card.courseID === courseID);
-        navigate(`/details/${courseID}`, { state: { cardDetails: selectedCard } });
+        if (selectedCard) {
+            navigate(`/${selectedCard.slug}`, { state: { cardDetails: selectedCard } });
+        }
     };
+
 
     return (
         <div className={cardsCSS.cardsSection}>
@@ -71,7 +74,7 @@ const HomeCard = ({ selectedCategory }) => {
                                         />
                                     </div>
                                     <div className={cardsCSS.card_body}>
-                                        <p className={cardsCSS.CardTitle}>{card.title}</p>
+                                        <p className={cardsCSS.CardTitle}>{card.courseTitle}</p>
                                         <div className={cardsCSS.lessons}>
                                             <div className={cardsCSS.calendar_pen}>
                                                 <img src={calendar} alt="" />

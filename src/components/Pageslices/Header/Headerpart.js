@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-
+import DS_Image from '../../../assets/AssetsOfDetailsPage/masterclass/header-removebg-preview.png';
 // headerpage logos
 import unlockLogo from '../../../assets/AssetsOfDetailsPage/masterclass/unlock.png';
 import booksymbol from '../../../assets/AssetsOfDetailsPage/masterclass/open-book.png';
@@ -38,6 +38,28 @@ import company19Logo from '../../../assets/AssetsOfDetailsPage/masterclass/amber
 import company20Logo from '../../../assets/AssetsOfDetailsPage/masterclass/dell_technologies_logo.png';
 import Testmonials from './../Testmonials/Testmonials';
 
+const logos = [
+    { src: company1Logo, alt: "Company 1" },
+    { src: company2Logo, alt: "Company 2" },
+    { src: company3Logo, alt: "Company 3" },
+    { src: company4Logo, alt: "Company 4" },
+    { src: company5Logo, alt: "Company 5" },
+    { src: company6Logo, alt: "Company 6" },
+    { src: company7Logo, alt: "Company 7" },
+    { src: company8Logo, alt: "Company 8" },
+    { src: company9Logo, alt: "Company 9" },
+    { src: company10Logo, alt: "Company 10" },
+    { src: company11Logo, alt: "Company 11" },
+    { src: company12Logo, alt: "Company 12" },
+    { src: company13Logo, alt: "Company 13" },
+    { src: company14Logo, alt: "Company 14" },
+    { src: company15Logo, alt: "Company 15" },
+    { src: company16Logo, alt: "Company 16" },
+    { src: company17Logo, alt: "Company 17" },
+    { src: company18Logo, alt: "Company 18" },
+    { src: company19Logo, alt: "Company 19" },
+    { src: company20Logo, alt: "Company 20" }
+];
 
 const Headerpart = () => {
     const { slug } = useParams();
@@ -143,7 +165,7 @@ const Headerpart = () => {
                     </div>
                 </div>
                 <div className={style.HeaderPicture}>
-                    {card && <img src={card.courseImage} alt="Course" className={style.headerImage} />}
+                    {card && <img src={DS_Image} alt="Course" className={style.headerImage} />}
                     <div className={style.EnrollButtonContent}>
                         {card && !isMobile && <Enrollbutton label="Enroll Now" courseID={card.id} className={style.EnrollButton} />}
                         <span><img src={FollowerImg} alt="Follower group" className={style.FollowerImage} /></span>
@@ -164,29 +186,16 @@ const Headerpart = () => {
                 <p>Trusted by Learners Working At Top Companies</p>
                 <div className={style.logoContainer}>
                     <div className={style.logoScroll1}>
-                        <img src={company1Logo} alt="Company 1" className={style.logo} />
-                        <img src={company2Logo} alt="Company 2" className={style.logo} />
-                        <img src={company3Logo} alt="Company 3" className={style.logo} />
-                        <img src={company4Logo} alt="Company 4" className={style.logo} />
-                        <img src={company5Logo} alt="Company 5" className={style.logo} />
-                        <img src={company6Logo} alt="Company 6" className={style.logo} />
-                        <img src={company7Logo} alt="Company 7" className={style.logo} />
-                        <img src={company8Logo} alt="Company 8" className={style.logo} />
-                        <img src={company9Logo} alt="Company 9" className={style.logo} />
-                        <img src={company10Logo} alt="Company 10" className={style.logo} />
+                        {logos.slice(0, 10).map((logo, index) => (
+                            <img key={index} src={logo.src} alt={logo.alt} className={style.logo} />
+                        ))}
                     </div>
                     <div className={style.logoScroll2}>
-                        <img src={company11Logo} alt="Company 1" className={style.logo} />
-                        <img src={company12Logo} alt="Company 2" className={style.logo} />
-                        <img src={company13Logo} alt="Company 3" className={style.logo} />
-                        <img src={company14Logo} alt="Company 4" className={style.logo} />
-                        <img src={company15Logo} alt="Company 5" className={style.logo} />
-                        <img src={company16Logo} alt="Company 6" className={style.logo} />
-                        <img src={company17Logo} alt="Company 7" className={style.logo} />
-                        <img src={company18Logo} alt="Company 8" className={style.logo} />
-                        <img src={company19Logo} alt="Company 9" className={style.logo} />
-                        <img src={company20Logo} alt="Company 10" className={style.logo} />
+                        {logos.slice(10).map((logo, index) => (
+                            <img key={index} src={logo.src} alt={logo.alt} className={style.logo} />
+                        ))}
                     </div>
+
                 </div>
             </div>
 

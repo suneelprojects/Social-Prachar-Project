@@ -9,9 +9,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Aos from 'aos';
 import CourseAccordion from './components/Pageslices/AccordianQuestions/Accordian.js';
-import ThankyouPage from './components/Pageslices/Enrollbutton/ThankyouPage.js';
 
 // Lazy load components
+const ThankyouPage = React.lazy(() => import('./components/Pageslices/Enrollbutton/ThankyouPage.js'));
 const AllHomeComp = React.lazy(() => import('./components/allHomeComp'));
 const SignUp = React.lazy(() => import('./Login&SignUpComponet/SignUp.js'));
 const Login = React.lazy(() => import('./Login&SignUpComponet/Login.js'));
@@ -35,6 +35,8 @@ const Course = React.lazy(() => import('./components/Courses_category/Course.js'
 const NewDetailsPage = React.lazy(() => import('./components/CourseDetailsNewPage/CourseDetails.js'));
 const MyWork = React.lazy(() => import('./Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js'));
 const Aboutus = React.lazy(() => import('./components/aboutus/aboutus.js'));
+const SuccessStories = React.lazy(() => import ('./components/successStories/SuccessStories.js'));
+
 
 const App = () => {
   const [user, setUser] = useState();
@@ -61,10 +63,11 @@ const App = () => {
             <Routes>
               <Route path="/" element={<AllHomeComp />} />
               <Route path='/courses' element={<Course />} />
-              <Route path='/details/:slug' element={<NewDetailsPage />} />
+              <Route path='/aboutUs' element={<Aboutus />} />
+              <Route path='/:slug' element={<NewDetailsPage />} />
+              <Route path='/SuccessStories' element={<SuccessStories/>} />
               <Route path="/course/:courseID" component={<CourseAccordion />} />
               <Route path="/thank-you" element={<ThankyouPage />} />
-              <Route path='/aboutUs' element={<Aboutus />} />
               <Route path='/user'
                 element={user ? <Navigate to='/profile' /> : <Login />}>
               </Route>

@@ -97,7 +97,7 @@ const Testmonials = () => {
             carousel.scrollLeft = scrollAmount;
         }, interval);
 
-        return () => clearInterval(scrollInterval); 
+        return () => clearInterval(scrollInterval);
     }, [studentPlacedImages]);
 
     return (

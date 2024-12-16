@@ -24,43 +24,34 @@ const NavBar = () => {
   const [selectedValue, setSelectedValue] = useState("");
 
   const categoryArraryOne = [
-    {
-      courseImg: course6,
-      courseName: `Web Development`,
-      NoOFCourses: "5+ courses",
-    },
-    //  {courseImg:course3,
-    //   courseName:'Academics',
-    //   NoOFCourses:'0 courses'
-    // },
+    {courseImg: course6,courseName: `Web Development`,NoOFCourses: "5+ courses"}, 
     { courseImg: course2, courseName: "Analytics", NoOFCourses: "4+ courses" },
-    {
-      courseImg: course7,
-      courseName: "HR Analytics",
-      NoOFCourses: "1+ courses",
-    },
+    { courseImg: course3, courseName: "Marketing", NoOFCourses: "3+ courses" },
   ];
   const categoryArraryTwo = [
-    { courseImg: course3, courseName: "Marketing", NoOFCourses: "3+ courses" },
-    { courseImg: course5, courseName: "Accounting", NoOFCourses: "3+ courses" },
+    // {
+    //   courseImg: course7,
+    //   courseName: "HR Analytics",
+    //   NoOFCourses: "1+ courses",
+    // },
+    // { courseImg: course5, courseName: "Accounting", NoOFCourses: "3+ courses" },
     // {courseImg:course4,
     //   courseName:'Photography',
     //   NoOFCourses:'0 courses'
     // },
-    { courseImg: course8, courseName: "Finance", NoOFCourses: "2+ courses" },
+    // { courseImg: course8, courseName: "Finance", NoOFCourses: "2+ courses" },
   ];
 
   const dropDownValues = [
     "Web Development",
     "Analytics",
     "Marketing",
-    "Accounting",
-    "Finance",
-    "HR Analytics",
+    // "Accounting",
+    // "Finance",
+    // "HR Analytics",
   ];
 
   const Navigate = useNavigate();
-
   const handleCategoryClick = (category) => {
     Navigate("/courses", { state: { category } });
   };
@@ -72,6 +63,7 @@ const NavBar = () => {
     }
     setSelectedValue("");
   };
+  
 
   const [expanded, setExpand] = useState(false);
   const Showtoggle = () => {
@@ -114,7 +106,7 @@ const NavBar = () => {
     }
   }
 
-  useEffect(() => {}, [handleCategoryClick]);
+  useEffect(() => { }, [handleCategoryClick]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -133,17 +125,19 @@ const NavBar = () => {
       console.log("Error logging out: ", error.message);
     }
   }
+  useEffect(() => { }, [handleCategoryClick]);
 
-  useEffect(() => {}, [handleCategoryClick]);
-
+  
   return (
     <div className={`${navBarStyle.navBarSticky}`}>
-      {/* second nav bar starts */}
 
+      {/* second nav bar starts */}
       <nav className={`navbar navbar-expand-lg ${navBarStyle.secondNav}`}>
+
         <div
           className={`${navBarStyle.containerfluidForNav} container-fluid  `}
         >
+
           {/* brand name and category code start */}
           <div className="d-flex ">
             <a className="navbar-brand" href="http://socialprachar.in">
@@ -234,15 +228,14 @@ const NavBar = () => {
             <span className="navbar-toggler-icon "></span>
           </button>
           {/* togglet code ends  */}
-          
+
 
           {/* navigation code starts */}
 
           <div className={`${navBarStyle.navBarList}`}>
             <div
-              className={`collapse navbar-collapse offcanvas offcanvas-end ${
-                navBarStyle.offCanvasContaniner
-              }  ${!!expanded && "show"}`}
+              className={`collapse navbar-collapse offcanvas offcanvas-end ${navBarStyle.offCanvasContaniner
+                }  ${!!expanded && "show"}`}
             >
               <div
                 className={`offcanvas-header  ${navBarStyle.offCanvasContaninerHeader}`}
@@ -283,6 +276,15 @@ const NavBar = () => {
                     onClick={closeToggle}
                   >
                     About Us
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    to={"/SuccessStories"}
+                    className={`nav-link ${navBarStyle.NavLinkForHover}`}
+                    onClick={closeToggle}
+                  >
+                    Success Stories
                   </NavLink>
                 </li>
               </ul>

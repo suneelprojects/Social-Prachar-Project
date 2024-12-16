@@ -3,8 +3,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { data } from '../Cards/CardData';
 import cardsCSS from './Cards.module.css';
 import GridSymbol from '../../assets/menu (1).png';
-import calendar from '../../assets/calendar-lines-pen.png';
-import user from '../../assets/usergroup.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faList, faStar } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -116,10 +114,11 @@ const Cards = ({ filters }) => {
 
 
     const navigate = useNavigate();
-    // const { slug } = useParams();
     const handleCardTitleClick = (courseID) => {
         const selectedCard = data.find(card => card.courseID === courseID);
-        navigate(`/details/${selectedCard.slug}`, { state: { cardDetails: selectedCard } });
+        if (selectedCard) {
+            navigate(`/${selectedCard.slug}`, { state: { cardDetails: selectedCard } });
+        }
     };
 
 
