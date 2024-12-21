@@ -1,0 +1,14 @@
+.signupContainer,.loginContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+
+}
+.signupForm,.loginForm{
+    border: 1px solid #cbc0f3;
+    border-radius: 10px;
+    width:30rem;
+    margin: 10px 10px;
+}
