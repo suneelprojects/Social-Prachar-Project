@@ -58,7 +58,7 @@ const WhatWillYouGet = () => {
 
             <div className={style.comments}>
                 <div className={`${style.commentsContainer} container py-5 vh-75`}>
-                    <h1 className="text-center fw-bold mb-4">
+                    <h1 className="text-center fw-bold fs-5 mb-4">
                         Join the <span className="" style={{ color: '#ffd702' }}>12,000+ GRADUATES </span>
                         Who Have Successfully Launched Their Tech Careers - Your Journey Starts Here!
                     </h1>

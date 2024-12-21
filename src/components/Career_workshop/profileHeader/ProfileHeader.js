@@ -58,8 +58,9 @@ const ProfileHeader = () => {
         <>
             <div className="container">
                 <div className="d-flex flex-column justify-content-center align-items-center text-center">
-                    <p className={`${style.topText} fw-bold fs-4 fs-6 p-3`}>
-                        <span style={{ color:'#ffd702'}}>Dream Jobs Made Easy: </span>&nbsp;FREE Career Success Masterclass!
+                    <p className={`${style.topText} fw-bold fs-4 fs-6 p-3 d-flex flex-column flex-md-row`}>
+                        <span style={{ color: '#ffd702' }}>Dream Jobs Made Easy:</span>
+                        <span className="ms-md-2">FREE Career Success Masterclass!</span>
                     </p>
                     <p className={`${style.headerText} fw-bold fs-1 my-3 col-xl-10`}>
                         Fast-Track Your Career Like the <span style={{ color: '#ffd702' }}>Top 1% Achievers</span>
