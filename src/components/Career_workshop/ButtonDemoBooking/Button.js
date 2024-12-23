@@ -123,8 +123,8 @@ const Button = () => {
                     </button>
                 </div>
                 <div className="text-center">
-                    <p className="fw-bold" style={{ fontSize: '18px' }}>
-                        Register by <span style={{ color: '#625BCC', fontSize: '22px' }}>{weekDate}</span> to unlock exclusive bonuses worth ₹5,393 – offer ends today!
+                    <p className="fw-bold fs-4 fs-6" style={{ fontSize: '18px'}}>
+                        Register by <span style={{ color: '#1e1b61', fontSize: '22px' }}>{weekDate}</span> to unlock exclusive bonuses worth ₹5,393 – offer ends today!
                     </p>
                 </div>
             </div>

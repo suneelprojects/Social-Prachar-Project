@@ -10,13 +10,13 @@ const WhatWillYouGet = () => {
             <div className={`${style.WhatWillYouGet} d-flex justify-content-center align-items-center text-light py-5`}>
                 <div className="text-center">
                     <p className="h2 fw-bold mb-4">
-                        What you will get from <span className="text-warning">2-Hour Time Investment</span>
+                        What you will get from <span className="text-warning"><br />2-Hour Time Investment</span>
                         {/* <hr style={{ width: '10%', border: '3px solid white' }} className="mx-auto" /> */}
                     </p>
                     <div className="row justify-content-center gx-3 gy-3 px-3 mx-0">
                         <div className="col-12 col-md-6 col-lg-5 d-flex">
                             <div className={`${style.pointer} p-3 border rounded text-white flex-grow-1`}>
-                                <p className="m-0 d-flex align-items-start text-warning">
+                                <p className="m-0 d-flex align-items-center text-warning">
                                     <img src={tickMark} alt="tick mark" className="me-2" width="24" height="24" />
                                     4 Steps to Kickstart a Profitable and Rewarding Career
                                 </p>
@@ -25,7 +25,7 @@ const WhatWillYouGet = () => {
                         </div>
                         <div className="col-12 col-md-6 col-lg-5 d-flex">
                             <div className={`${style.pointer} p-3 border rounded text-white flex-grow-1`}>
-                                <p className="m-0 d-flex align-items-start text-warning">
+                                <p className="m-0 d-flex align-items-center text-warning">
                                     <img src={tickMark} alt="tick mark" className="me-2" width="24" height="24" />
                                     How to Create a Supportive Network to Accelerate Your Career
                                 </p>
@@ -34,7 +34,7 @@ const WhatWillYouGet = () => {
                         </div>
                         <div className="col-12 col-md-6 col-lg-5 d-flex">
                             <div className={`${style.pointer} p-3 border rounded text-white flex-grow-1`}>
-                                <p className="m-0 d-flex align-items-start text-warning">
+                                <p className="m-0 d-flex align-items-center text-warning">
                                     <img src={tickMark} alt="tick mark" className="me-2" width="24" height="24" />
                                     Explore In-Demand Skills and Accelerate Your Career Growth
                                 </p>
@@ -43,8 +43,8 @@ const WhatWillYouGet = () => {
                         </div>
                         <div className="col-12 col-md-6 col-lg-5 d-flex">
                             <div className={`${style.pointer} p-3 border rounded text-white flex-grow-1`}>
-                                <p className="m-0 d-flex align-items-start text-warning">
-                                    <img src={tickMark} alt="tick mark" className="me-2" width="24" height="24" />
+                                <p className="m-0 d-flex align-items-center text-warning">
+                                    <img src={tickMark} alt="tick mark" className="me-2" width="27" height="27" />
                                     3 Core Principles to Achieve Long-Term Career Success
                                 </p>
                                 <small className="text-white">Focus on critical areas that ensure consistent progress and make your career future-proof.</small>
@@ -58,8 +58,8 @@ const WhatWillYouGet = () => {
 
             <div className={style.comments}>
                 <div className={`${style.commentsContainer} container py-5 vh-75`}>
-                    <h1 className="text-center fw-bold fs-5 mb-4">
-                        Join the <span className="" style={{ color: '#ffd702' }}>12,000+ GRADUATES </span>
+                    <h1 className="text-center fw-bold fs-1 fs-5 mb-4">
+                        Join the <span className="" style={{ color: '#ffc107' }}>12,000+ GRADUATES </span>
                         Who Have Successfully Launched Their Tech Careers - Your Journey Starts Here!
                     </h1>
                     <div className="row justify-content-center gx-4 gy-4 mt-5">

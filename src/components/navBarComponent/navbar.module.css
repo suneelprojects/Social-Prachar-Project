@@ -244,6 +244,10 @@
     top: 5px;
     max-width: 100px;
   }
+  .categorySection{
+    display: none;
+  }
+
 }
 
 @media (min-width: 340.6px) and (max-width: 464px) {

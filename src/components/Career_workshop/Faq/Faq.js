@@ -60,7 +60,7 @@ const Faq = () => {
             <h1 className="text-center mb-4">Frequently Asked Questions</h1>
             <div className="accordion" id="faqAccordion">
                 {faqData.map((faq, index) => (
-                    <div className="accordion-item shadow" key={index} style={{ marginBottom: "1.2 rem" }}>
+                    <div className="accordion-item shadow" key={index} style={{ marginBottom: "0.5rem" }}>
                         <h2 className="accordion-header" id={`heading${index}`}>
                             <button
                                 className={`fw-bold accordion-button faq-button ${openIndex !== index ? "collapsed" : ""}`}

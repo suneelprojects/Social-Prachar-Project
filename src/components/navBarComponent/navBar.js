@@ -158,7 +158,7 @@ const NavBar = () => {
             </select>
 
             <div
-              className={`${navBarStyle.hiddenMobileSm} ms-4 ${navBarStyle.categorySection} `}
+              className={`${navBarStyle.hiddenMobileSm} ${navBarStyle.categorySection} `}
             >
               <button className={`${navBarStyle.category}`}>
                 <i className="bi bi-grid-3x2-gap-fill"></i>Courses

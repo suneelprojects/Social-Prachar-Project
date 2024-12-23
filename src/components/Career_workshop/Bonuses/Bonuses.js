@@ -54,9 +54,9 @@ const Bonuses = () => {
                 className={`${style.container} text-white py-5 d-flex flex-column align-items-center`}
                 style={{ backgroundColor: '#090820', overflowX: 'hidden', minHeight: '100vh' }}
             >
-                <h1 className="text-center mb-4">
+                <p className="fw-bold text-center fs-1 fs-5 mb-4">
                     This <span style={{ color: '#ffd702' }}>2-Hour Free Career Guidance Session</span> is for you if
-                </h1>
+                </p>
                 <div className="row gx-3 justify-content-center align-items-stretch">
                     {items.map((item, index) => (
                         <div
@@ -85,7 +85,7 @@ const Bonuses = () => {
 
             <div>
                 <h1 className="card-text fw-bold text-center my-5">
-                    Get FREE <span style={{ color: '#ffd702' }}>BONUSES</span> worth INR ₹5,393 /-
+                    Get FREE <span style={{ color: '#ffc107' }}>BONUSES</span> worth INR ₹5,393 /-
                 </h1>
 
                 <div className="container my-5">
@@ -109,8 +109,8 @@ const Bonuses = () => {
                                     </div>
                                     <div className="card-body p-4 d-flex flex-column">
                                         <div className="d-flex justify-content-center mb-3">
-                                            <h2 className="fw-bold" style={{ fontSize: '1.8rem', color: 'black' }}>
-                                                <span style={{ color: '' }}>{item.title}</span>
+                                            <h2 className="fw-bold fs-5" style={{color: 'black' }}>
+                                                <span>{item.title}</span>
                                             </h2>
                                         </div>
                                         <p className="fw-medium text-start fs-6 text-muted mb-5">
