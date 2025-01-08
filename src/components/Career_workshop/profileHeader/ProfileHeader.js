@@ -62,10 +62,10 @@ const ProfileHeader = () => {
                         <span style={{ color: '#ffc107' }}>Dream Jobs Made Easy:</span>
                         <span className="ms-md-2">FREE Career Success Masterclass!</span>
                     </p>
-                    <p className={`${style.headerText} fw-bold fs-1 my-3 col-xl-10`}>
+                    <p className={`${style.headerText} fw-bold fs-1 fs-2 my-3 col-xl-10`}>
                         Fast-Track Your Career Like the <span style={{ color: '#ffc107' }}>Top 1% Achievers</span>
                     </p>
-                    <p className={`${style.lowerText} fs-4 fs-6 col-xl-10`}>
+                    <p className={`${style.lowerText} col-xl-10`}>
                         Achieve Salaries of Up to '12 LPA' with Proven Strategies to Build In-Demand Skills, Excel in Interviews, and Advance Like Top Professionals. Create a Clear Career Roadmap for Sustained Success in High-Growth Tech Roles.
                     </p>
                 </div>
@@ -91,7 +91,7 @@ const ProfileHeader = () => {
                     <div className="col-md-6">
                         <div className="p-4 rounded">
                             <p className="fw-bold text-center fs-4 mb-4">Career Success WorkShop Details</p>
-                            <div className="d-flex justify-content-around mb-4">
+                            <div className="d-flex justify-content-between mb-4">
                                 <div className="border p-3 rounded d-flex align-items-center fs-6" style={{ width: "45%", height: '70px', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1), 0px -4px 6px rgba(0, 0, 0, 0.1), 4px 0px 6px rgba(0, 0, 0, 0.1), -4px 0px 6px rgba(0, 0, 0, 0.1)' }}>
                                     <span
                                         style={{

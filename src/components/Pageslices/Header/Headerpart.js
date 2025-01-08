@@ -117,9 +117,11 @@ const Headerpart = () => {
             <div className={style.contentContainer}>
                 <div className={style.symbolsContainer}>
                     <h2 className={style.headerText}>
-                        {card && (isMobile
-                            ? <>{card.Header2} <span className={style.highlightedWord}>{card.Duration}</span></>
-                            : <>{card.Header1} <span className={style.highlightedWord}>{card.Duration}</span></>)}
+                        {card && (
+                            <>
+                                {card.Header} <span className={style.highlightedWord}>{card.Duration}</span>
+                            </>
+                        )}
                     </h2>
                     <div className={style.symbolItemContent}>
                         <div className={style.symbolItem}>
@@ -175,7 +177,7 @@ const Headerpart = () => {
                                     <img key={index} src={starSymbol} alt="Star" className={style.star} />
                                 ))}
                             </div>
-                            <span className={style.FollowerCount}>10K+ reviews (4.9 of 5)</span>
+                            <span className={style.FollowerCount}> 426 reviews (4.7 of 5)</span>
                         </div>
                     </div>
                 </div>
@@ -204,10 +206,10 @@ const Headerpart = () => {
             </div>
             <div className={style.DoughtsPart} ref={doughtsPartRef}>
                 <p ref={header1Ref} className={`${style.header1}`}>
-                    {card?.selfQuestioningPart1}
+                    Do you Feel Confused About
                 </p>
                 <p ref={header2Ref} className={`${style.header2}`}>
-                    {card?.selfQuestioningPart2}
+                    {card?.selfQuestioning}
                 </p>
                 <img
                     ref={redLineRef}

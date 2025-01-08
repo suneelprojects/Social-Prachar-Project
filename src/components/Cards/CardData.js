@@ -64,44 +64,37 @@ import testmonialsCommentImageDS from '../../assets/AssetsOfDetailsPage/mastercl
 import testmonialsCommentImageSSDS from '../../assets/AssetsOfDetailsPage/masterclass/commentImageofSSDS.jpg';
 import testmonialsCommentImageFSW from '../../assets/AssetsOfDetailsPage/commnetsForFSW.jpg';
 import testmonialsCommentImageFSWSS from '../../assets/AssetsOfDetailsPage/commnetsForFSWSS.jpg';
+import testmonialsCommentImageDA from '../../assets/AssetsOfDetailsPage/DA comment.png';
+import testmonialsCommentImageDevOps from '../../assets/AssetsOfDetailsPage/DevOps comment.png';
+import testmonialsCommentImageDM from '../../assets/AssetsOfDetailsPage/DM comment.png';
 
 
-import classDemoImageDS from '../../assets/AssetsOfDetailsPage/masterclass/featured-topmate masteclass image.jpg';
-import classDemoImageFSW from '../../assets/AssetsOfDetailsPage/masterclass/MasterclassFSW.jpg';
-import DS_Image from '../../assets/AssetsOfDetailsPage/masterclass/header-removebg-preview.png';
 import DS_certificate from '../../assets/AssetsOfDetailsPage/masterclass/Datascience certificate.jpg';
 import authorPhoto from '../../assets/authorphoto.jpg';
-import fullStackImage from '../../assets/classplus-banner-fullstack.webp';
-import DataAnalyticsImage from '../../assets/FSD-Banner-1-datascience.webp';
-import MarketingImage from '../../assets/DM-new-Banner-DigitalMarketing.webp';
-import { faHandshake, faCalendarCheck, faChartBar } from "@fortawesome/free-regular-svg-icons";
-import { faBriefcase, faClipboardList, faCloud, faCode, faDatabase, faProjectDiagram, faRobot, faServer } from '@fortawesome/free-solid-svg-icons';
+import { faHandshake, faCalendarCheck, faChartBar, faThumbsUp, faEnvelope, faSnowflake, faEye } from "@fortawesome/free-regular-svg-icons";
+import { faArrowUp, faBinoculars, faBriefcase, faBullhorn, faCertificate, faChartLine, faChartPie, faClipboardCheck, faClipboardList, faCloud, faCloudUploadAlt, faCode, faCodeBranch, faCogs, faDatabase, faDesktop, faGlobe, faLaptopCode, faLock, faMoneyBillWave, faPlug, faProjectDiagram, faRobot, faRocket, faSearch, faServer, faShareAlt, faSyncAlt, faTable, faTachometerAlt, faTasks, faTools } from '@fortawesome/free-solid-svg-icons';
+import { faDocker, faNodeJs, faPiedPiper, faReact } from '@fortawesome/free-brands-svg-icons';
 
 
 export const data = [
     {
         id: 1,
         courseID: 1,
-        slug:'data-science-course',
+        slug: 'data-science-course',
         Duration: ' 6 months',
         imageSrc: img1,
-        courseImage: DS_Image,
-        MasterclassImage: classDemoImageDS,
         TestmonialsCommentsImage1: testmonialsCommentImageDS,
         TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
         courseTitle: 'Development',
-        students: '1600 + Students',
-        no_of_lessons: '6 months',
-        text: 'Data Science & AI Development',
-        Header1: 'Learn Data Science AI course & Become a Certified Professional in',
-        Header2: 'Learn Data Science AI course & Become a Certified Professional in',
+        students: '1600+ Students',
+        text: 'Data Science & AI',
+        Header: 'Learn Data Science AI course & Become a Certified Professional in',
         questions: [
             "You want to explore career opportunities in Data Science and AI?",
             "You want to learn the essential skills to master in 150 days?",
             "Do you want to kickstart your Data Science & AI career with 10+ LPA opportunities?"
         ],
-        selfQuestioningPart1: 'Do you feel confused about',
-        selfQuestioningPart2: 'Starting your Data Science Career?',
+        selfQuestioning: 'Starting your Data Science Career?',
         Description: 'Data Scientists are in high demand across every industry.Even tech giants such as Google, Amazon, Apple, Facebook, and Microsoft are constantly seeking experts in data extraction, data mining, visualization, and more.The course covers a comprehensive range of topics including Data Analytics(Power BI, Tableau, Excel), Data Science(Machine Learning, Python, SQL, Statistics), AI(Deep Learning, NLP, OpenCV), and Cloud(AWS DevOps).',
         moduleContent: [
             {
@@ -236,14 +229,9 @@ export const data = [
                 }
             }
         ],
-        price: '',
-        rating: 5,
-        authorImage: authorPhoto,
-        no_of_ratings: 2,
-        categoryIndex: 0, // Development
-        tagIndex: 6,      // Web Development
-        levelIndex: 0,    // Intermediate
-        priceIndex: 0,    // Paid
+        rating: 4.5,
+        categoryIndex: 4,
+        tagIndex: 3,
         certificate: DS_certificate,
         accordionContent: [
             {
@@ -287,7 +275,6 @@ export const data = [
                 content: 'You can register on their website or contact their admissions team for detailed information on batch timings and enrollment procedures.'
             }
         ],
-        bannerImage: fullStackImage,
         bannerHeader: 'Learn Data Science Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
         timeLineHeading: 'Data Scientist',
@@ -357,48 +344,45 @@ export const data = [
             { id: 17, image: student21 },
             { id: 18, image: student22 },
             { id: 19, image: student23 },
-            { id: 20, image: student24 }
+            { id: 20, image: student24 },
+            { id: 21, image: student37 },
+            { id: 22, image: student38 },
+            { id: 23, image: student39 },
+            { id: 24, image: student40 },
+            { id: 25, image: student41 },
+            { id: 26, image: student42 },
+            { id: 27, image: student44 },
         ],
-        masterClassBookSessionLink:'https://topmate.io/mahesh_channa/618092'
     },
 
     {
         id: 1,
         courseID: 2,
-        slug:'python-full-stack-development',
+        slug: 'python-full-stack-development',
         imageSrc: img2,
-        courseImage: DS_Image,
-        MasterclassImage: classDemoImageFSW,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: ' 6 months',
         courseTitle: 'Development',
         students: '2900+ students',
-        no_of_lessons: '6 months',
-        selfQuestioningPart1: 'Do you feel confused about',
-        selfQuestioningPart2: 'starting your Python Full Stack Career?',
+        selfQuestioning: 'starting your Python Full Stack Career?',
         questions: [
             "You want to explore career opportunities in Python Full Stack Development?",
             "You want to learn the essential skills to master in 180 days?",
             "Do you want to kickstart your Full Stack Python Developer career with 10+ LPA opportunities?"
         ],
         text: 'Full Stack Python Development',
-        Header1: 'Learn Python Full Stack Development & Become a Certified Professional in',
-        Header2: 'Learn Python Full Stack Development & Become a Certified Professional in',
+        Header: 'Learn Python Full Stack Development & Become a Certified Professional in',
         name: 'Balu',
-        price: '',
-        rating: 5,
+        rating: 4.8,
         authorImage: authorPhoto,
-        bannerImage: fullStackImage,
         certificate: DS_certificate,
         bannerHeader: 'Learn Full stack Python Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
         timeLineHeading: 'Full Stack Python Developer',
-        no_of_ratings: 0,
-        categoryIndex: 0,
-        tagIndex: 6,
-        levelIndex: 1,
-        priceIndex: 1,
+        no_of_ratings: 1,
+        categoryIndex: 1,
+        tagIndex: 0,
         Description: 'Full Stack Python Developers are in high demand across various industries, from startups to tech giants like Google, Amazon, Microsoft, and Facebook. As businesses increasingly rely on web applications, the need for skilled developers who can build and maintain both the frontend and backend has skyrocketed. This comprehensive course covers essential technologies for Full Stack Development, including Frontend Development (HTML, CSS, JavaScript, React.js), Backend Development (Python, Flask, Django, REST APIs), Databases (MySQL, PostgreSQL, MongoDB), Version Control (Git, GitHub), Cloud Deployment (Heroku, AWS), and Testing & Debugging (PyTest, Selenium). By mastering these skills, you will be equipped to develop, deploy, and manage robust, scalable web applications, making you a sought- after professional in the tech industry.',
         moduleContent: [
             {
@@ -619,7 +603,9 @@ export const data = [
             { id: 14, image: student7 },
             { id: 15, image: student8 },
             { id: 16, image: student9 },
-            { id: 17, image: student10 }
+            { id: 17, image: student10 },
+            { id: 18, image: student35 },
+            { id: 19, image: student36 },
         ],
         accordionContent: [
             {
@@ -691,27 +677,21 @@ export const data = [
                 content: 'Our program offers a comprehensive curriculum, real-time projects, soft skills training, hackathons, and job placement support, all with a small batch size for focused learning.'
             }
         ],
-        masterClassBookSessionLink:'https://topmate.io/mahesh_channa/1291210' 
     },
 
     {
         id: 1,
         courseID: 3,
         imageSrc: img3,
-        slug:'java-full-stack-development',
+        slug: 'java-full-stack-development',
         courseTitle: 'Development',
         Duration: ' 6 months',
         students: '2600+ Students',
-        no_of_lessons: '6 months',
-        courseImage: DS_Image,
-        MasterclassImage: classDemoImageFSW,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         certificate: DS_certificate,
-        Header1: 'Learn Java Full Stack Development & Become a Certified Professional in',
-        Header2: 'Learn Java Full Stack Development & Become a Certified Professional in',
-        selfQuestioningPart1: 'Do you feel confused about',
-        selfQuestioningPart2: 'starting your Java Full Stack Career?',
+        Header: 'Learn Java Full Stack Development & Become a Certified Professional in',
+        selfQuestioning: 'starting your Java Full Stack Career?',
         questions: [
             "You want to explore career opportunities in Java Full Stack Development?",
             "You want to learn the essential skills to master in 180 days?",
@@ -719,19 +699,15 @@ export const data = [
         ],
         text: 'Full Stack Java Development',
         name: 'Balu',
-        price: '',
-        rating: 5,
+        rating: 4.7,
         authorImage: authorPhoto,
         no_of_ratings: 2,
-        categoryIndex: 0, // Development
-        tagIndex: 6,      // Web Development
-        levelIndex: 1,    // Intermediate
-        priceIndex: 1,    // Paid
-        bannerImage: fullStackImage,
+        categoryIndex: 2,
+        tagIndex: 0,
         bannerHeader: 'Learn Full stack Java Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
         timeLineHeading: 'Full Stack Java Developer',
-        Description:'Full Stack Java Developers are in high demand as businesses scale web applications. This course covers key technologies like Frontend (HTML, CSS, JavaScript, React.js), Backend (Java, Spring Boot, REST APIs), Databases (MySQL, PostgreSQL, MongoDB), Version Control (Git), Cloud Deployment (AWS, Heroku), and Testing (JUnit, Mockito). By mastering these skills, you’ll be prepared to build and maintain scalable web applications, making you a valuable asset in the tech industry.',
+        Description: 'Full Stack Java Developers are in high demand as businesses scale web applications. This course covers key technologies like Frontend (HTML, CSS, JavaScript, React.js), Backend (Java, Spring Boot, REST APIs), Databases (MySQL, PostgreSQL, MongoDB), Version Control (Git), Cloud Deployment (AWS, Heroku), and Testing (JUnit, Mockito). By mastering these skills, you’ll be prepared to build and maintain scalable web applications, making you a valuable asset in the tech industry.',
         popUpDropDownCourses: [
             { dropDownid: 0, courseName: 'Java Full stack Development' },
             { dropDownid: 1, courseName: 'Web Development' },
@@ -967,7 +943,7 @@ export const data = [
                 description: "Benefit from job support with mock interviews, career counseling, and interview opportunities until you land your dream job in full-stack Java development."
             }
         ],
-        accordionContent:[
+        accordionContent: [
             {
                 title: 'What is the duration of the Full Stack Java course?',
                 content: 'The course duration ranges from 3 to 6 months, depending on the learning pace of the student.'
@@ -1033,318 +1009,2070 @@ export const data = [
                 content: 'Our program offers a comprehensive curriculum, real-time projects, soft skills training, hackathons, and job placement support, all with a small batch size for focused learning.'
             }
         ],
-        masterClassBookSessionLink: 'https://topmate.io/mahesh_channa/1291210' 
     },
-    // {
-    //     id: 1,
-    //     imageSrc: img4,
-    //     courseID: 4,
-    //     courseTitle: 'Development',
-    //     Duration: ' 5 months',
-    //     students: '2590 +',
-    //     no_of_lessons: '4 lessons',
-    //     About: "Welcome to our MERN Stack Development course, where you'll embark on an exciting journey to master one of the most popular full-stack JavaScript frameworks in the industry! MERN, which stands for MongoDB, Express.js, React.js, and Node.js, empowers you to build dynamic, scalable web applications from scratch. This course is designed for aspiring developers eager to learn how to create robust user interfaces and seamless back-end services. Throughout the program, you will gain hands-on experience with essential skills such as database management, RESTful API development, front-end design, state management with Redux, and authentication processes. By the end of this course, you'll be equipped with the knowledge and confidence to tackle real-world projects, making you a valuable asset in the tech industry!",
-    //     text: 'MERN Stack',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 5,
-    //     authorImage: authorPhoto,
-    //     no_of_ratings: 2,
-    //     categoryIndex: 0, // Development
-    //     tagIndex: 6,      // Web Development
-    //     levelIndex: 1,    // Intermediate
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: fullStackImage,
-    //     whatWillYouLearn: [{ topic1: 'HTML', topic2: 'CSS', topic3: 'Javascript', topic4: 'Bootstrap', topic5: 'React JS', topic6: 'Node JS', topic8: 'Express JS', topic9: 'TypeScript', topic10: 'SQL', topic11: 'MongoDB' }]
-    // },
-    // {
-    //     id: 1,
-    //     imageSrc: img5,
-    //     courseID: 5,
-    //     Duration: ' 6 months',
-    //     courseTitle: 'Development',
-    //     students: '2760 +',
-    //     no_of_lessons: '4 lessons',
 
-    //     About: "Welcome to our Advanced Full Stack Development course, where you'll dive deep into the world of web applications, mastering both front-end and back-end technologies. This course is designed for those who already have a foundational understanding of web development and are eager to elevate their skills to an advanced level. You will learn to build robust, scalable applications using modern frameworks such as React and Node.js, while also exploring databases, APIs, and cloud services. Through hands-on projects and real-world scenarios, you'll enhance your abilities in responsive design, database management, and application deployment. By the end of the course, you’ll not only be equipped with the technical skills needed for full-stack development but also the confidence to tackle complex projects in a collaborative environment.",
-    //     text: 'Advanced Full Stack',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 5,
-    //     authorImage: authorPhoto,
-    //     no_of_ratings: 2,
-    //     categoryIndex: 0, // Development
-    //     tagIndex: 6,      // Web Development
-    //     levelIndex: 1,    // Intermediate
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: fullStackImage,
-    //     whatWillYouLearn: [{ topic1: 'HTML', topic2: 'CSS', topic3: 'Javascript', topic4: 'Bootstrap', topic5: 'Core Java,Advanced Java,SpringBoot / Python Django', topic6: 'SQL', topic8: 'React JS', topic9: 'MongoDB', topic10: '+3 Months internship' }]
-    // },
+    {
+        id: 2,
+        courseID: 4,
+        categoryIndex: 6, // Development
+        tagIndex: 1,      // Web Development
+        slug: 'digital-marketing-course-training-institute-hyderabad',
+        courseTitle: 'Marketing',
+        imageSrc: img4,
+        Duration: '4 months',
+        students: '3200+ students',
+        text: 'Digital Marketing',
+        rating: 4.0,
+        Header: 'Learn Digital Marketing Course & Become a Certified Professional in',
+        TestmonialsCommentsImage1: testmonialsCommentImageDM,
+        TestmonialsCommentsImage2: testmonialsCommentImageDM,
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Digital Marketing' },
+        ],
+        selfQuestioning: 'Starting your Digital Marketing Career?',
+        questions: [
+            "Do you want to explore career opportunities in Digital Marketing?",
+            "Are you ready to master essential Digital Marketing skills in just 120 days?",
+            "Do you want to kickstart your Digital Marketing career with 4+ LPA opportunities?",
+        ],
+        Description: 'Social Prachar ranked as #1 Best Digital Marketing Course Training Institute in Hyderabad with 15,000+ Success Stories since 2014. We Provide 100% placement Guarantee for all our Trainees with Top MNCs & StartUps. Become Digital Marketing Expert in less than 4 months. Enroll now for the most Advanced Digital Marketing Training Program.',
+        moduleContent: [
+            {
+                id: 1,
+                module: "Module 1",
+                title: "Introduction to Digital Marketing",
+                details: {
+                    videos: 7,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Understanding the fundamentals of digital marketing and its role in modern businesses",
+                        "Key digital marketing channels: SEO, SEM, social media, email marketing, and content marketing",
+                        "Overview of marketing funnels and customer journeys"
+                    ]
+                }
+            },
+            {
+                id: 2,
+                module: "Module 2",
+                title: "Search Engine Optimization (SEO)",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "On-page SEO: Keywords, meta tags, headings, and content optimization",
+                        "Off-page SEO: Backlinks, guest posting, and link-building strategies",
+                        "Technical SEO: Website speed, mobile responsiveness, and crawling"
+                    ]
+                }
+            },
+            {
+                id: 3,
+                module: "Module 3",
+                title: "Search Engine Marketing (SEM) & Paid Ads",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Introduction to Google Ads: Campaign creation, keyword targeting, and ad formats",
+                        "Understanding pay-per-click (PPC) advertising and cost-per-click (CPC)",
+                        "Optimizing ad performance and A/B testing strategies"
+                    ]
+                }
+            },
+            {
+                id: 4,
+                module: "Module 4",
+                title: "Social Media Marketing (SMM)",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Crafting effective social media strategies for platforms like Facebook, Instagram, Twitter, and LinkedIn",
+                        "Content creation: Visuals, copywriting, and video marketing",
+                        "Analyzing social media metrics and improving campaign performance"
+                    ]
+                }
+            },
+            {
+                id: 5,
+                module: "Module 5",
+                title: "Email Marketing & Automation",
+                details: {
+                    videos: 7,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Building an email list and creating high-converting campaigns",
+                        "Email automation tools: Drip campaigns and customer segmentation",
+                        "Measuring email performance: Open rates, click-through rates, and ROI"
+                    ]
+                }
+            },
+            {
+                id: 6,
+                module: "Module 6",
+                title: "Content Marketing & Blogging",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Creating engaging content tailored to your audience",
+                        "Building authority through blogging and guest posting",
+                        "Leveraging content marketing tools to boost reach and engagement"
+                    ]
+                }
+            },
+            {
+                id: 7,
+                module: "Module 7",
+                title: "Web Analytics & Performance Tracking",
+                details: {
+                    videos: 7,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Introduction to Google Analytics: Setting up and understanding reports",
+                        "Tracking user behavior and conversion rates",
+                        "Analyzing key performance indicators (KPIs) to measure success"
+                    ]
+                }
+            },
+            {
+                id: 8,
+                module: "Module 8",
+                title: "E-Commerce Marketing",
+                details: {
+                    videos: 7,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Driving traffic and sales to online stores",
+                        "Understanding product listing ads (PLAs) and remarketing strategies",
+                        "Case studies on successful e-commerce campaigns"
+                    ]
+                }
+            },
+            {
+                id: 9,
+                module: "Module 9",
+                title: "Capstone Project & Certification",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Building a complete digital marketing strategy for a real-world business",
+                        "Implementing SEO, SEM, social media, and email marketing tactics",
+                        "Creating performance reports and presenting insights"
+                    ]
+                }
+            }
+        ],
+        timeLineHeading: 'Digital Marketing',
+        levelcardIndex: [
+            {
+                icon: faGlobe,
+                title: "Introduction",
+                description: "Explore the foundational concepts of digital marketing, including online business models, basic marketing principles, and website fundamentals."
+            },
+            {
+                icon: faDesktop,
+                title: "Website Designing",
+                description: "Learn to create and design responsive, visually appealing websites using CMS platforms like WordPress. Topics include dashboard navigation, theme customization, and advanced design techniques."
+            },
+            {
+                icon: faSearch,
+                title: "Search Engine Optimization (SEO)",
+                description: "Master SEO strategies, including on-page and off-page optimization, search engine algorithms, and content optimization to enhance visibility."
+            },
+            {
+                icon: faBullhorn,
+                title: "Search Engine Marketing (SEM)",
+                description: "Dive into paid marketing strategies, including search ads, display ads, video ads, shopping ads, remarketing, and conversion tracking."
+            },
+            {
+                icon: faThumbsUp,
+                title: "Social Media Marketing (SMM)",
+                description: "Learn to create engaging campaigns for platforms like Facebook, LinkedIn, Instagram, and Twitter/X to boost brand visibility and engagement."
+            },
+            {
+                icon: faTools,
+                title: "Google Tools & Monetization",
+                description: "Understand website analytics and performance with tools like Google Search Console, Google Analytics, and Google My Business."
+            },
+            {
+                icon: faMoneyBillWave,
+                title: "Monetization",
+                description: "Explore revenue generation methods like Google AdSense, affiliate marketing, and YouTube monetization strategies."
+            },
+            {
+                icon: faEnvelope,
+                title: "Email Marketing",
+                description: "Build effective email campaigns, grow subscriber lists, and track performance for improved user engagement."
+            },
+            {
+                icon: faDatabase,
+                title: "Master Data Analytics",
+                description: "Learn data analysis and visualization using tools like Excel, SQL, and Power BI. Apply data-driven decision-making in marketing strategies."
+            },
+            {
+                icon: faCloud,
+                title: "Cloud Deployment & AI",
+                description: "Understand AI concepts, deep learning, and NLP techniques, and deploy marketing automation models on platforms like AWS and Azure."
+            },
+            {
+                icon: faTasks,
+                title: "Project Work",
+                description: "Implement real-world projects to apply your learning, improve problem-solving skills, and gain practical experience."
+            },
+            {
+                icon: faBriefcase,
+                title: "Placement Preparation",
+                description: "Enhance your resume, optimize LinkedIn profiles, and prepare for job interviews with comprehensive support."
+            }
+        ],
+        accordionContent: [
+            {
+                title: 'What is the duration of the Digital Marketing program at SocialPrachar?',
+                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to fit varying schedules and learning objectives.'
+            },
+            {
+                title: 'What topics are covered in the Digital Marketing curriculum?',
+                content: 'Topics include SEO, SEM, social media marketing, content marketing, email marketing, analytics, and real-time project implementation.'
+            },
+            {
+                title: 'Are there any internship or job guarantee options?',
+                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the industry.'
+            },
+            {
+                title: 'What are the class formats available (online or classroom)?',
+                content: 'Both online and classroom learning options are available to accommodate the preferences and needs of students.'
+            },
+            {
+                title: 'Is there a certification awarded upon completion?',
+                content: 'Yes, a professional certification is awarded upon successful completion of the program, which adds value to your resume and portfolio.'
+            },
+            {
+                title: 'What are the average salary expectations for program graduates?',
+                content: 'Graduates can expect competitive salaries in the digital marketing field, with opportunities for growth depending on their expertise and the job role secured.'
+            },
+            {
+                title: 'Who are the trainers, and what qualifications do they have?',
+                content: 'Trainers are experienced digital marketing professionals with a proven track record in the industry, offering practical insights and up-to-date training.'
+            },
+            {
+                title: 'How does SocialPrachar support non-marketing professionals?',
+                content: 'SocialPrachar offers foundational modules to help beginners and non-marketing professionals gain the skills needed to transition into the field.'
+            },
+            {
+                title: 'What kind of projects will I work on during the course?',
+                content: 'Projects include real-world digital marketing campaigns, SEO optimization, content strategy, and analytics-based decision-making, ensuring hands-on learning.'
+            },
+            {
+                title: 'How can I register or get more information about upcoming batches?',
+                content: 'You can register through the website or contact the admissions team for detailed information about batch schedules and enrollment processes.'
+            }
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student25 },
+            { id: 2, image: student26 },
+            { id: 3, image: student27 },
+            { id: 4, image: student28 },
+            { id: 5, image: student29 },
+            { id: 6, image: student30 },
+            { id: 7, image: student31 },
+            { id: 8, image: student32 },
+            { id: 9, image: student33 },
+            { id: 11, image: student15 },
+            { id: 12, image: student16 },
+            { id: 13, image: student17 },
+            { id: 14, image: student18 },
+            { id: 15, image: student19 },
+            { id: 17, image: student21 },
+            { id: 18, image: student22 },
+            { id: 19, image: student23 },
+            { id: 20, image: student24 }
+        ],
+        bannerHeader: 'Learn Digital Marketing Today',
+        bannerStudentsEnrolled: '6k+ Students Enrolled',
 
-    // {
-    //     id: 2,
-    //     imageSrc: img6,
-    //     courseID: 21,
-    //     Duration: ' 3 months',
-    //     students: '1560 +',
-    //     courseTitle: 'Analytics',
-    //     no_of_lessons: '4 lessons',
-    //     About: 'Social Prachar offers the best Data Analytics certification courses in Hyderabad. The training program equips you with an apt understanding of data processing tools like Excel, SQL/NoSQL, and Data Visualization tools like Tableau and PowerBI. While SQL/NoSQL is used to work with the data stored in the Database Management software, Tableau and PowerBI are used in analysing it and presenting visual stories to end-users. Concepts such as Data Preparation, Data Cleansing, and Exploratory Data Analysis are explored in detail. Influential concepts like Data Mining of Structured (RDBMS) and Unstructured (Big Data) data, with real-life examples, are illustrated. Advanced Excel aids in data proficiency Concepts and it will help to reduce reduces working hours',
-    //     text: 'Data Analytics',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 4.00,
-    //     authorImage: authorPhoto,
-    //     categoryIndex: 1, // Design & Art
-    //     tagIndex: 3,      // App
-    //     levelIndex: 0,    // All Levels
-    //     priceIndex: 0,    // Free
-    //     bannerImage: DataAnalyticsImage,
-    //     whatWillYouLearn: [{ topic1: 'PowerBI', topic2: 'Tableau', topic3: 'SQL', topic4: 'MS Excel', topic5: 'Python' }]
-    // },
+    },
 
-    // {
-    //     id: 2,
-    //     imageSrc: img7,
-    //     courseID: 22,
-    //     Duration: ' 7 months',
-    //     students: '1860 +',
-    //     courseTitle: 'Analytics',
-    //     no_of_lessons: '4 lessons',
-    //     About: "Welcome to our Data Science course, where we unlock the power of data to drive informed decision-making and innovation. In this comprehensive program, you will explore the fundamental concepts and advanced techniques of data analysis, machine learning, and statistical modeling. Our curriculum is designed to equip you with essential skills such as data visualization, programming in Python and R, data wrangling, and predictive analytics. Through hands-on projects and real-world case studies, you'll learn how to extract valuable insights from complex datasets, enabling you to tackle real-world challenges across various industries. Join us on this exciting journey to become a proficient data scientist and transform data into actionable intelligence.",
-    //     text: 'Data Science',
-    //     name: 'Balu',
-    //     price: '',
-    //     authorImage: authorPhoto,
-    //     rating: 3.0,
-    //     categoryIndex: 1, // Finance
-    //     tagIndex: 0,     // Design
-    //     levelIndex: 2,    // Expert
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: 'DataAnalyticsImage',
-    //     whatWillYouLearn: [{ topic1: 'Python', topic2: 'Statistics', topic3: 'Machine Learning', topic4: 'Mathematics', topic5: 'PowerBI', topic6: 'Tableau', table7: 'SQL' }]
-    // },
-    // {
-    //     id: 2,
-    //     imageSrc: img8,
-    //     courseID: 23,
-    //     Duration: ' 7 months',
-    //     students: '1560 + students',
-    //     courseTitle: 'Analytics',
-    //     no_of_lessons: '4 lessons',
-    //     About: "Welcome to the Artificial Intelligence course, where we embark on an exciting journey to explore the transformative power of AI technologies in our daily lives and various industries. This course is designed to provide you with a comprehensive understanding of fundamental AI concepts, including machine learning, neural networks, natural language processing, and computer vision. Through hands-on projects and real-world applications, you will develop essential skills such as programming in Python, data analysis, algorithm design, and critical thinking. Join us to unlock the potential of AI and gain the knowledge and tools to create innovative solutions that can shape the future!",
-    //     text: 'Artificial Intelligence',
-    //     name: 'Balu',
-    //     price: '',
-    //     authorImage: authorPhoto,
-    //     rating: 4.0,
-    //     categoryIndex: 1, // Finance
-    //     tagIndex: 2,      // Design
-    //     levelIndex: 2,    // Expert
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: DataAnalyticsImage,
-    //     whatWillYouLearn: [{ topic1: 'Python', topic2: 'Statistics', topic3: 'Machine Learning', topic4: 'Mathematics', topic5: 'PowerBI', topic6: 'Tableau', table7: 'SQL' }]
-    // },
-    // {
-    //     id: 2,
-    //     imageSrc: img1,
-    //     courseID: 24,
-    //     Duration: ' 7 months',
-    //     students: '1700+ students',
-    //     courseTitle: 'Analytics',
-    //     no_of_lessons: '4 lessons',
-    //     About: "Welcome to the Generative AI course, where creativity meets technology! In this course, you will explore the fascinating world of generative artificial intelligence, learning how to leverage algorithms and data to create innovative solutions across various domains. From generating stunning images and music to crafting compelling text, this course provides you with the tools and techniques to harness the power of AI in your projects. You will gain hands-on experience with popular frameworks and tools, understand the underlying principles of machine learning, and develop a strong foundation in neural networks and deep learning. Join us on this exciting journey to unlock your creative potential and transform the way you approach problem-solving in the digital age!",
-    //     text: 'Generative AI',
-    //     name: 'Balu',
-    //     price: '',
-    //     authorImage: authorPhoto,
-    //     rating: 4.0,
-    //     categoryIndex: 1, // Finance
-    //     tagIndex: 2,      // Design
-    //     levelIndex: 2,    // Expert
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: DataAnalyticsImage,
-    //     whatWillYouLearn: [{ topic1: 'Python', topic2: 'Statistics', topic3: 'Machine Learning', topic4: 'Mathematics', topic5: 'PowerBI', topic6: 'Tableau', table7: 'SQL' }]
-    // },
-    // {
-    //     id: 3,
-    //     imageSrc: img2,
-    //     courseID: 31,
-    //     courseTitle: 'Marketing',
-    //     Duration: ' 6 months',
-    //     no_of_lessons: '4 lessons',
-    //     About: "In today's fast-paced digital landscape, mastering the art and science of digital marketing is essential for businesses looking to thrive and connect with their audiences. Our Digital Marketing course offers a comprehensive exploration of key strategies and tools that drive online success. From understanding consumer behavior and crafting compelling content to leveraging social media, SEO, and data analytics, this course equips students with the skills needed to create impactful marketing campaigns. Through hands-on projects and real-world case studies, you'll learn to navigate the digital ecosystem and develop innovative marketing solutions that resonate with your target audience. Join us to unlock the potential of digital marketing and elevate your career in this dynamic field!",
-    //     students: '1 students',
-    //     text: 'Digital Marketing',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 4.00,
-    //     authorImage: authorPhoto,
-    //     categoryIndex: 2, // Accounting
-    //     tagIndex: 3,      // Education
-    //     levelIndex: 0,    // All Levels
-    //     priceIndex: 0,    // Free
-    //     bannerImage: MarketingImage,
-    //     whatWillYouLearn: [{ topic1: 'Introduction', topic2: 'Website Designing', topic3: 'SEO(Search Engine optimisation)', topic4: 'SEM(search Engine Marketing)', topic5: 'SSM(social media Marketing)', topic6: 'Google Analytics', table7: 'Email Marketing Etc....' }]
-    // },
-    // {
-    //     id: 3,
-    //     imageSrc: img3,
-    //     courseID: 32,
-    //     courseTitle: 'Marketing',
-    //     students: '3 students',
-    //     no_of_lessons: '4 lessons',
-    //     About: "Unlock the potential of your online presence with our comprehensive SEO (Search Engine Optimization) course. In today’s digital landscape, understanding SEO is essential for businesses and individuals aiming to enhance their visibility and reach. This course will guide you through the fundamental principles of SEO, including keyword research, on-page optimization, technical SEO, and link-building strategies. You will gain practical skills to analyze website performance, optimize content for search engines, and stay ahead of ever-evolving algorithms. Whether you're a marketer, business owner, or aspiring SEO professional, this course equips you with the tools and knowledge to drive organic traffic, improve search rankings, and achieve sustainable growth for your online projects.",
-    //     text: 'SEO(Search Engine Optimisation)',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 4.00,
-    //     authorImage: authorPhoto,
-    //     categoryIndex: 2, // Business
-    //     tagIndex: 1,      // Book
-    //     levelIndex: 1,    // Intermediate
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: MarketingImage,
-    //     whatWillYouLearn: [{ topic1: 'Introduction to Search Engine', topic2: 'how Search Engine Works', topic3: 'SE Algorithm Updates', topic4: 'On-Page Optimisation', topic5: 'OFF-page Optimisation' }]
-    // },
+    {
+        id: 2,
+        courseID: 5,
+        categoryIndex: 5, // Development
+        tagIndex: 2,      // Web Development
+        slug: 'awsdevopscourse',
+        courseTitle: 'Cloud Development',
+        imageSrc: img5,
+        Duration: '6 months',
+        students: '2800+ students',
+        text: 'AWS With DevOps',
+        rating: 4.7,
+        Header: 'Learn AWS DevOps Course & Become a Certified Professional in',
+        TestmonialsCommentsImage1: testmonialsCommentImageDevOps,
+        TestmonialsCommentsImage2: testmonialsCommentImageDevOps,
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'AWS DevOps' },
+        ],
+        selfQuestioning: 'Starting your AWS With DevOps Career?',
+        questions: [
+            "Do you want to explore career opportunities in AWS With DevOps?",
+            "Are you ready to master essential AWS DevOps skills in just 180 days?",
+            "Do you want to kickstart your AWS With DevOps career with 4+ LPA opportunities?"
+        ],
+        Description: 'AWS DevOps is a highly sought-after skill, essential for professionals in cloud computing, automation, and infrastructure management. This course offers hands-on experience in key areas such as cloud infrastructure management (AWS services like EC2, S3, Lambda), DevOps practices (CI/CD, Docker, Kubernetes), Infrastructure as Code (Terraform, AWS CloudFormation), monitoring and logging (CloudWatch, ELK Stack), version control (Git, Jenkins), security and compliance (IAM), and automation pipelines (AWS CodePipeline). By completing this course, you"ll gain the skills to manage, scale, and automate cloud applications, while integrating DevOps practices to optimize deployment processes.',
+        moduleContent: [
+            {
+                id: 1,
+                module: "Module 1",
+                title: "Introduction to AWS and DevOps",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Introduction to Amazon Web Services (AWS) and DevOps concepts",
+                        "Understanding the role of DevOps in modern software development",
+                        "Overview of the AWS cloud infrastructure and services for DevOps"
+                    ]
+                }
+            },
+            {
+                id: 2,
+                module: "Module 2",
+                title: "Infrastructure as Code (IaC) with AWS CloudFormation",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Introduction to Infrastructure as Code (IaC)",
+                        "Creating and managing infrastructure using AWS CloudFormation templates",
+                        "Best practices for defining infrastructure and managing deployments"
+                    ]
+                }
+            },
+            {
+                id: 3,
+                module: "Module 3",
+                title: "Continuous Integration and Continuous Delivery (CI/CD) with AWS",
+                details: {
+                    videos: 8,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Setting up Continuous Integration (CI) pipelines with AWS CodeBuild",
+                        "Automating deployment processes using AWS CodeDeploy",
+                        "Implementing Continuous Delivery (CD) for rapid application releases"
+                    ]
+                }
+            },
+            {
+                id: 4,
+                module: "Module 4",
+                title: "Monitoring and Logging with AWS CloudWatch",
+                details: {
+                    videos: 7,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Configuring AWS CloudWatch for real-time monitoring",
+                        "Setting up alerts and logs for application and infrastructure performance",
+                        "Analyzing CloudWatch logs to troubleshoot and optimize performance"
+                    ]
+                }
+            },
+            {
+                id: 5,
+                module: "Module 5",
+                title: "Containerization and Orchestration with AWS ECS and EKS",
+                details: {
+                    videos: 8,
+                    time: "4 weeks",
+                    descriptions: [
+                        "Introduction to containerization and Docker",
+                        "Deploying containerized applications with Amazon ECS (Elastic Container Service)",
+                        "Orchestrating containers using AWS EKS (Elastic Kubernetes Service)"
+                    ]
+                }
+            },
+            {
+                id: 6,
+                module: "Module 6",
+                title: "Automating Infrastructure Management with AWS OpsWorks",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Overview of AWS OpsWorks for managing applications and infrastructure",
+                        "Configuring and managing infrastructure with AWS OpsWorks Stacks and Layers",
+                        "Automating application deployment and lifecycle management"
+                    ]
+                }
+            },
+            {
+                id: 7,
+                module: "Module 7",
+                title: "Security and Compliance in AWS DevOps",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Ensuring security in the DevOps pipeline",
+                        "Using AWS Identity and Access Management (IAM) for user permissions",
+                        "Complying with security best practices and managing audits in AWS"
+                    ]
+                }
+            },
+            {
+                id: 8,
+                module: "Module 8",
+                title: "Scaling and Load Balancing with AWS",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Auto-scaling applications on AWS to handle traffic spikes",
+                        "Configuring Elastic Load Balancing (ELB) to distribute traffic efficiently",
+                        "Best practices for scaling and balancing workloads on AWS"
+                    ]
+                }
+            },
+            {
+                id: 9,
+                module: "Module 9",
+                title: "Capstone Project & Certification",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Building a complete AWS DevOps pipeline for a real-world project",
+                        "Implementing CI/CD, monitoring, and automated infrastructure management",
+                        "Showcasing a final project and preparing for certification"
+                    ]
+                }
+            }
+        ],
+        timeLineHeading: 'AWS DevOps',
+        levelcardIndex: [
+            {
+                icon: faCloud,
+                title: "Introduction to AWS DevOps",
+                description: "Learn the fundamental concepts of DevOps, including continuous integration (CI), continuous delivery (CD), and automation using AWS services."
+            },
+            {
+                icon: faCodeBranch,
+                title: "Version Control with Git & GitHub",
+                description: "Master Git for version control, branching, merging, and managing repositories using GitHub, along with setting up remote repositories and collaborating with teams."
+            },
+            {
+                icon: faCogs,
+                title: "Infrastructure as Code (IaC)",
+                description: "Understand the principles of Infrastructure as Code using AWS CloudFormation and Terraform to automate the provisioning and management of AWS resources."
+            },
+            {
+                icon: faTools,
+                title: "Continuous Integration (CI) with Jenkins",
+                description: "Learn how to set up and configure Jenkins for continuous integration, automate build processes, and integrate with AWS for deployment automation."
+            },
+            {
+                icon: faPiedPiper,
+                title: "Continuous Delivery (CD) with AWS CodePipeline",
+                description: "Dive into AWS CodePipeline to automate the release of software applications, including testing, building, and deploying code changes to different environments."
+            },
+            {
+                icon: faDocker,
+                title: "Containerization with Docker",
+                description: "Learn to build and manage Docker containers, including creating Dockerfiles, running containers, and integrating them with AWS services like Amazon ECS and EKS."
+            },
+            {
+                icon: faRocket,
+                title: "Automating Deployments with AWS Elastic Beanstalk",
+                description: "Understand how to use AWS Elastic Beanstalk for deploying, managing, and scaling applications without having to manage the underlying infrastructure."
+            },
+            {
+                icon: faCloudUploadAlt,
+                title: "Monitoring and Logging with AWS CloudWatch",
+                description: "Master monitoring tools and techniques using AWS CloudWatch to track application performance, analyze logs, and set up alarms for proactive troubleshooting."
+            },
+            {
+                icon: faLock,
+                title: "Security in AWS DevOps",
+                description: "Learn about securing AWS environments with best practices for Identity and Access Management (IAM), encryption, and securing pipelines with AWS Secrets Manager."
+            },
+            {
+                icon: faDesktop,
+                title: "Automation with AWS Lambda",
+                description: "Learn how to use AWS Lambda to automate various DevOps processes, including deploying serverless applications and managing microservices without provisioning servers."
+            },
+            {
+                icon: faTasks,
+                title: "Project Work",
+                description: "Implement real-world DevOps projects that apply your knowledge of CI/CD, cloud automation, containerization, and monitoring to solve complex challenges."
+            },
+            {
+                icon: faBriefcase,
+                title: "Placement Preparation",
+                description: "Get ready for the job market with resume building, interview preparation, and understanding DevOps roles and responsibilities in the AWS ecosystem."
+            }
+        ],
+        accordionContent: [
+            {
+                title: 'What is the duration of the Digital Marketing program at SocialPrachar?',
+                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to fit varying schedules and learning objectives.'
+            },
+            {
+                title: 'What topics are covered in the Digital Marketing curriculum?',
+                content: 'Topics include SEO, SEM, social media marketing, content marketing, email marketing, analytics, and real-time project implementation.'
+            },
+            {
+                title: 'Are there any internship or job guarantee options?',
+                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the industry.'
+            },
+            {
+                title: 'What are the class formats available (online or classroom)?',
+                content: 'Both online and classroom learning options are available to accommodate the preferences and needs of students.'
+            },
+            {
+                title: 'Is there a certification awarded upon completion?',
+                content: 'Yes, a professional certification is awarded upon successful completion of the program, which adds value to your resume and portfolio.'
+            },
+            {
+                title: 'What are the average salary expectations for program graduates?',
+                content: 'Graduates can expect competitive salaries in the digital marketing field, with opportunities for growth depending on their expertise and the job role secured.'
+            },
+            {
+                title: 'Who are the trainers, and what qualifications do they have?',
+                content: 'Trainers are experienced digital marketing professionals with a proven track record in the industry, offering practical insights and up-to-date training.'
+            },
+            {
+                title: 'How does SocialPrachar support non-marketing professionals?',
+                content: 'SocialPrachar offers foundational modules to help beginners and non-marketing professionals gain the skills needed to transition into the field.'
+            },
+            {
+                title: 'What kind of projects will I work on during the course?',
+                content: 'Projects include real-world digital marketing campaigns, SEO optimization, content strategy, and analytics-based decision-making, ensuring hands-on learning.'
+            },
+            {
+                title: 'How can I register or get more information about upcoming batches?',
+                content: 'You can register through the website or contact the admissions team for detailed information about batch schedules and enrollment processes.'
+            }
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student25 },
+            { id: 2, image: student26 },
+            { id: 3, image: student27 },
+            { id: 4, image: student28 },
+            { id: 5, image: student29 },
+            { id: 6, image: student30 },
+            { id: 7, image: student31 },
+            { id: 8, image: student32 },
+            { id: 9, image: student33 },
+            { id: 11, image: student15 },
+            { id: 12, image: student16 },
+            { id: 13, image: student17 },
+            { id: 14, image: student18 },
+            { id: 15, image: student19 },
+            { id: 17, image: student21 },
+            { id: 18, image: student22 },
+            { id: 19, image: student23 },
+            { id: 20, image: student24 },
+            { id: 21, image: student37 },
+            { id: 22, image: student38 },
+            { id: 23, image: student39 },
+            { id: 24, image: student40 },
+            { id: 25, image: student41 },
+            { id: 26, image: student42 },
+            { id: 27, image: student44 },
+        ],
+        bannerHeader: 'Learn AWS DevOps Today',
+        bannerStudentsEnrolled: '6k+ Students Enrolled',
+    },
 
-    // {
-    //     id: 3,
-    //     imageSrc: img4,
-    //     courseID: 33,
-    //     courseTitle: 'Marketing',
-    //     students: '3 students',
-    //     no_of_lessons: '4 lessons',
-    //     About: '',
-    //     text: ' ⁠Digital Marketing with AI Tools',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 4.00,
-    //     authorImage: authorPhoto,
-    //     categoryIndex: 2,
-    //     tagIndex: 1,
-    //     levelIndex: 1,
-    //     priceIndex: 1,
-    //     bannerImage: MarketingImage,
-    //     whatWillYouLearn: [{ topic1: 'Introduction to Search Engine', topic2: 'how Search Engine Works', topic3: 'SE Algorithm Updates', topic4: 'On-Page Optimisation', topic5: 'OFF-page Optimisation' }]
+    {
+        id: 2,
+        courseID: 6,
+        categoryIndex: 7,
+        tagIndex: 3,
+        slug: 'artificial-intelligence-course-training-institute-in-hyderabad',
+        courseTitle: 'AI Development',
+        imageSrc: img6,
+        TestmonialsCommentsImage1: testmonialsCommentImageDS,
+        TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
+        Duration: '6 months',
+        students: '3800+ students',
+        text: 'Artificial Intelligence',
+        rating: 4.2,
+        Header: 'Learn Artificial Intelligence Course & Become a Certified Professional in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Digital Marketing' },
+        ],
+        selfQuestioning: 'Starting your Artificial Intelligence Career?',
+        questions: [
+            "Do you want to explore career opportunities in Artificial Intelligence?",
+            "Are you ready to master essential Artificial Intelligence skills in just 120 days?",
+            "Do you want to kickstart your Artificial Intelligence career with 4+ LPA opportunities?"
+        ],
+        Description: 'Social Prachar ranked as #1 Best Digital Marketing Course Training Institute in Hyderabad with 15,000+ Success Stories since 2014. We Provide 100% placement Guarantee for all our Trainees with Top MNCs & StartUps. Become Digital Marketing Expert in less than 4 months. Enroll now for the most Advanced Digital Marketing Training Program.',
+        moduleContent: [
+            {
+                id: 1,
+                module: "Module 1",
+                title: "Introduction & Installations",
+                details: {
+                    videos: 7,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Introduction to corporate training",
+                        "Software life cycle",
+                        "Methodologies",
+                        "Soft skills",
+                        "Professional Ethics",
+                        "Understanding your strengths",
+                        "Self-assessment: Where do you stand?",
+                        "Installations required for data science",
+                        "Step-by-step setup for data science tools"
+                    ]
+                }
+            },
+            {
+                id: 2,
+                module: "Module 2",
+                title: "Data Science & AI Fundamentals",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "What is data science?",
+                        "Need for data science?",
+                        "Data science vs Business Intelligence",
+                        "Prerequisites for learning data science",
+                        "Roles and responsibilities of a data scientist",
+                        "Data science life cycle with examples",
+                        "Demand and opportunities in data science"
+                    ]
+                }
+            },
+            {
+                id: 3,
+                module: "Module 3",
+                title: "Python Programming & Libraries",
+                details: {
+                    videos: 7,
+                    time: "4 weeks",
+                    descriptions: [
+                        "Introduction to Python",
+                        "Operators and Data Types",
+                        "Control Statements",
+                        "Functions",
+                        "Data Structures: Lists, Sets, Tuples, Strings, Dictionaries",
+                        "OOPS Concepts",
+                        "Overview of key libraries: Numpy, Pandas, Scipy, Scikit-Learn, Keras",
+                        "Visualization tools: Matplotlib, Seaborn, Cufflinks",
+                        "Natural Language Processing (NLP) with NLTK"
+                    ]
+                }
+            },
+            {
+                id: 4,
+                module: "Module 4",
+                title: "Data Exploration & Preprocessing",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Collecting and analyzing data from different sources",
+                        "Data preprocessing and munging",
+                        "Data manipulation and visualization",
+                        "Feature selection, scaling, and dimensionality reduction"
+                    ]
+                }
+            },
+            {
+                id: 5,
+                module: "Module 5",
+                title: "Statistics & Mathematics",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Basics of Statistics",
+                        "Descriptive and Inferential Statistics",
+                        "Qualitative vs Quantitative Analysis",
+                        "Hypothesis Testing and Data Distribution",
+                        "Probability and Calculus",
+                        "Linear Algebra",
+                        "Applications in data science"
+                    ]
+                }
+            },
+            {
+                id: 6,
+                module: "Module 6",
+                title: "Machine Learning",
+                details: {
+                    videos: 7,
+                    time: "4 weeks",
+                    descriptions: [
+                        "Introduction to Machine Learning models",
+                        "Supervised and Unsupervised Learning",
+                        "Regression, Classification, Clustering, and Aggregation models",
+                        "Dealing with overfitting and underfitting"
+                    ]
+                }
+            },
+            {
+                id: 7,
+                module: "Module 7",
+                title: "Deep Learning & Algorithms",
+                details: {
+                    videos: 7,
+                    time: "4 weeks",
+                    descriptions: [
+                        "Introduction to Deep Learning",
+                        "Artificial Neural Networks, CNNs, RNNs",
+                        "TensorFlow and OpenCV",
+                        "Advanced optimization techniques"
+                    ]
+                }
+            },
+            {
+                id: 8,
+                module: "Module 8",
+                title: "Natural Language Processing (NLP)",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Introduction to NLP",
+                        "Text preprocessing, lemmatization, and stemming",
+                        "Feature extraction from text",
+                        "Important tasks and libraries in NLP"
+                    ]
+                }
+            },
+            {
+                id: 9,
+                module: "Module 9",
+                title: "Computer Vision & Project Work",
+                details: {
+                    videos: 7,
+                    time: "4 weeks",
+                    descriptions: [
+                        "Working on data science projects",
+                        "Preparing and analyzing data",
+                        "Selecting algorithms and evaluating results",
+                        "Real-time project work and best practices"
+                    ]
+                }
+            }
+        ],
 
-    // },
-    // {
-    //     id: 4,
-    //     imageSrc: img5,
-    //     courseID: 41,
-    //     courseTitle: 'Accounting',
-    //     students: '3 students',
-    //     no_of_lessons: '4 lessons',
-    //     About: '',
-    //     text: 'Advanced Tally',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 4.00,
-    //     authorImage: authorPhoto,
-    //     categoryIndex: 3, // Business
-    //     tagIndex: 1,      // Book
-    //     levelIndex: 1,    // Intermediate
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: ''
-    // },
-    // {
-    //     id: 4,
-    //     imageSrc: img6,
-    //     courseID: 42,
-    //     courseTitle: 'Accounting',
-    //     students: '3 students',
-    //     no_of_lessons: '4 lessons',
-    //     About: '',
-    //     text: 'Taxation',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 4.00,
-    //     authorImage: authorPhoto,
-    //     categoryIndex: 3, // Business
-    //     tagIndex: 1,      // Book
-    //     levelIndex: 1,    // Intermediate
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: ''
-    // },
-    // {
-    //     id: 4,
-    //     imageSrc: img7,
-    //     courseID: 43,
-    //     courseTitle: 'Accounting',
-    //     students: '3 students',
-    //     no_of_lessons: '4 lessons',
-    //     About: '',
-    //     text: ' GST Filing',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 4.00,
-    //     authorImage: authorPhoto,
-    //     categoryIndex: 3, // Business
-    //     tagIndex: 1,      // Book
-    //     levelIndex: 1,    // Intermediate
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: ''
-    // },
-    // {
-    //     id: 5,
-    //     imageSrc: img8,
-    //     courseID: 51,
-    //     courseTitle: 'Finance',
-    //     students: '3 students',
-    //     no_of_lessons: '4 lessons',
-    //     About: '',
-    //     text: ' Finance Literacy',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 4.00,
-    //     authorImage: authorPhoto,
-    //     categoryIndex: 4, // Business
-    //     tagIndex: 1,      // Book
-    //     levelIndex: 1,    // Intermediate
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: ''
-    // },
+        timeLineHeading: 'Digital Marketing',
+        levelcardIndex: [
+            {
+                icon: faGlobe,
+                title: "Introduction",
+                description: "Explore the foundational concepts of digital marketing, including online business models, basic marketing principles, and website fundamentals."
+            },
+            {
+                icon: faDesktop,
+                title: "Website Designing",
+                description: "Learn to create and design responsive, visually appealing websites using CMS platforms like WordPress. Topics include dashboard navigation, theme customization, and advanced design techniques."
+            },
+            {
+                icon: faSearch,
+                title: "Search Engine Optimization (SEO)",
+                description: "Master SEO strategies, including on-page and off-page optimization, search engine algorithms, and content optimization to enhance visibility."
+            },
+            {
+                icon: faBullhorn,
+                title: "Search Engine Marketing (SEM)",
+                description: "Dive into paid marketing strategies, including search ads, display ads, video ads, shopping ads, remarketing, and conversion tracking."
+            },
+            {
+                icon: faThumbsUp,
+                title: "Social Media Marketing (SMM)",
+                description: "Learn to create engaging campaigns for platforms like Facebook, LinkedIn, Instagram, and Twitter/X to boost brand visibility and engagement."
+            },
+            {
+                icon: faTools,
+                title: "Google Tools & Monetization",
+                description: "Understand website analytics and performance with tools like Google Search Console, Google Analytics, and Google My Business."
+            },
+            {
+                icon: faMoneyBillWave,
+                title: "Monetization",
+                description: "Explore revenue generation methods like Google AdSense, affiliate marketing, and YouTube monetization strategies."
+            },
+            {
+                icon: faEnvelope,
+                title: "Email Marketing",
+                description: "Build effective email campaigns, grow subscriber lists, and track performance for improved user engagement."
+            },
+            {
+                icon: faDatabase,
+                title: "Master Data Analytics",
+                description: "Learn data analysis and visualization using tools like Excel, SQL, and Power BI. Apply data-driven decision-making in marketing strategies."
+            },
+            {
+                icon: faCloud,
+                title: "Cloud Deployment & AI",
+                description: "Understand AI concepts, deep learning, and NLP techniques, and deploy marketing automation models on platforms like AWS and Azure."
+            },
+            {
+                icon: faTasks,
+                title: "Project Work",
+                description: "Implement real-world projects to apply your learning, improve problem-solving skills, and gain practical experience."
+            },
+            {
+                icon: faBriefcase,
+                title: "Placement Preparation",
+                description: "Enhance your resume, optimize LinkedIn profiles, and prepare for job interviews with comprehensive support."
+            }
+        ],
+        accordionContent: [
+            {
+                title: 'What is the duration of the Digital Marketing program at SocialPrachar?',
+                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to fit varying schedules and learning objectives.'
+            },
+            {
+                title: 'What topics are covered in the Digital Marketing curriculum?',
+                content: 'Topics include SEO, SEM, social media marketing, content marketing, email marketing, analytics, and real-time project implementation.'
+            },
+            {
+                title: 'Are there any internship or job guarantee options?',
+                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the industry.'
+            },
+            {
+                title: 'What are the class formats available (online or classroom)?',
+                content: 'Both online and classroom learning options are available to accommodate the preferences and needs of students.'
+            },
+            {
+                title: 'Is there a certification awarded upon completion?',
+                content: 'Yes, a professional certification is awarded upon successful completion of the program, which adds value to your resume and portfolio.'
+            },
+            {
+                title: 'What are the average salary expectations for program graduates?',
+                content: 'Graduates can expect competitive salaries in the digital marketing field, with opportunities for growth depending on their expertise and the job role secured.'
+            },
+            {
+                title: 'Who are the trainers, and what qualifications do they have?',
+                content: 'Trainers are experienced digital marketing professionals with a proven track record in the industry, offering practical insights and up-to-date training.'
+            },
+            {
+                title: 'How does SocialPrachar support non-marketing professionals?',
+                content: 'SocialPrachar offers foundational modules to help beginners and non-marketing professionals gain the skills needed to transition into the field.'
+            },
+            {
+                title: 'What kind of projects will I work on during the course?',
+                content: 'Projects include real-world digital marketing campaigns, SEO optimization, content strategy, and analytics-based decision-making, ensuring hands-on learning.'
+            },
+            {
+                title: 'How can I register or get more information about upcoming batches?',
+                content: 'You can register through the website or contact the admissions team for detailed information about batch schedules and enrollment processes.'
+            }
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student25 },
+            { id: 2, image: student26 },
+            { id: 3, image: student27 },
+            { id: 4, image: student28 },
+            { id: 5, image: student29 },
+            { id: 6, image: student30 },
+            { id: 7, image: student31 },
+            { id: 8, image: student32 },
+            { id: 9, image: student33 },
+            { id: 11, image: student15 },
+            { id: 12, image: student16 },
+            { id: 13, image: student17 },
+            { id: 14, image: student18 },
+            { id: 15, image: student19 },
+            { id: 17, image: student21 },
+            { id: 18, image: student22 },
+            { id: 19, image: student23 },
+            { id: 20, image: student24 },
+            { id: 21, image: student37 },
+            { id: 22, image: student38 },
+            { id: 23, image: student39 },
+            { id: 24, image: student40 },
+            { id: 25, image: student41 },
+            { id: 26, image: student42 },
+            { id: 27, image: student44 },
+        ],
+        bannerHeader: 'Learn Digital Marketing Today',
+        bannerStudentsEnrolled: '6k+ Students Enrolled',
 
-    // {
-    //     id: 5,
-    //     imageSrc: img1,
-    //     courseID: 52,
-    //     courseTitle: 'Finance',
-    //     students: '3 students',
-    //     no_of_lessons: '4 lessons',
-    //     About: '',
-    //     text: 'Banking,Capital Market and Investments',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 4.00,
-    //     authorImage: authorPhoto,
-    //     categoryIndex: 4, // Businessa
-    //     tagIndex: 1,      // Book
-    //     levelIndex: 1,    // Intermediate
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: ''
-    // },
-    // {
-    //     id: 6,
-    //     imageSrc: img2,
-    //     courseID: 61,
-    //     courseTitle: 'HR Analytics',
-    //     students: '1200+ students',
-    //     no_of_lessons: '4 lessons',
-    //     About: '',
-    //     text: 'HR Analytics Certification',
-    //     name: 'Balu',
-    //     price: '',
-    //     rating: 4.00,
-    //     authorImage: authorPhoto,
-    //     categoryIndex: 5, // Business
-    //     tagIndex: 1,      // Book
-    //     levelIndex: 1,    // Intermediate
-    //     priceIndex: 1,    // Paid
-    //     bannerImage: '',
-    //     whatWillYouLearn: [{
-    //         topic1: 'Introduction to HR Analytics', topic2: 'Data Collection and Management', topic3: 'Workforce Planning', topic4: 'Talent Acquisition Analytics', topic5: 'Performance and Productivity Analytics', topic6: 'Employee Engagement and Satisfaction', table7: 'Learning and Development Analytics', table8: 'Diversity and Inclusion Analytics Etc...'
-    //     }]
-    // }
+    },
+
+    {
+        id: 2,
+        courseID: 6,
+        categoryIndex: 0, // Development
+        tagIndex: 0,      // Web Development
+        slug: 'mern-stack',
+        courseTitle: 'Development',
+        imageSrc: img7,
+        TestmonialsCommentsImage1: testmonialsCommentImageFSW,
+        TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
+        Duration: '6 months',
+        students: '2800+ students',
+        text: 'Mern Stack (Full Stack)',
+        rating: 4.3,
+        Header: 'Learn Mern Stack Course & Become a Certified Professional in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Mern Stack (Full Stack)' },
+        ],
+        selfQuestioning: 'Starting your Mern Stack Career?',
+        questions: [
+            "Do you want to explore career opportunities in Mern Stack?",
+            "Are you ready to master essential Mern Stack skills in just 180 days?",
+            "Do you want to kickstart your Mern Stack career with 4+ LPA opportunities?"
+        ],
+        Description: 'The MERN Stack (MongoDB, Express.js, React.js, Node.js) is one of the most popular full-stack development frameworks, enabling developers to build robust, scalable, and interactive web applications. This course provides a hands-on learning experience in mastering the MERN Stack. You will gain skills in designing and developing dynamic web applications, building APIs, integrating front-end and back-end development, managing databases, and deploying applications. Key areas of focus include building RESTful APIs, creating interactive user interfaces, managing state with Redux, authenticating users, and deploying applications on platforms like Heroku or Vercel. By the end of this course, you"ll be equipped to develop and deploy modern web applications with the MERN Stack.',
+        moduleContent: [
+            {
+                id: 1,
+                module: "Module 1",
+                title: "Introduction to Full-Stack Development with MERN",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Overview of the MERN stack and its ecosystem",
+                        "Fundamentals of full-stack development",
+                        "Setting up your development environment"
+                    ]
+                }
+            },
+            {
+                id: 2,
+                module: "Module 2",
+                title: "Infrastructure as Code (IaC) with AWS CloudFormation",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Introduction to Infrastructure as Code (IaC)",
+                        "Creating and managing infrastructure using AWS CloudFormation templates",
+                        "Best practices for defining infrastructure and managing deployments"
+                    ]
+                }
+            },
+            {
+                id: 3,
+                module: "Module 3",
+                title: "Continuous Integration and Continuous Delivery (CI/CD) with AWS",
+                details: {
+                    videos: 8,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Setting up Continuous Integration (CI) pipelines with AWS CodeBuild",
+                        "Automating deployment processes using AWS CodeDeploy",
+                        "Implementing Continuous Delivery (CD) for rapid application releases"
+                    ]
+                }
+            },
+            {
+                id: 4,
+                module: "Module 4",
+                title: "Monitoring and Logging with AWS CloudWatch",
+                details: {
+                    videos: 7,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Configuring AWS CloudWatch for real-time monitoring",
+                        "Setting up alerts and logs for application and infrastructure performance",
+                        "Analyzing CloudWatch logs to troubleshoot and optimize performance"
+                    ]
+                }
+            },
+            {
+                id: 5,
+                module: "Module 5",
+                title: "Containerization and Orchestration with AWS ECS and EKS",
+                details: {
+                    videos: 8,
+                    time: "4 weeks",
+                    descriptions: [
+                        "Introduction to containerization and Docker",
+                        "Deploying containerized applications with Amazon ECS (Elastic Container Service)",
+                        "Orchestrating containers using AWS EKS (Elastic Kubernetes Service)"
+                    ]
+                }
+            },
+            {
+                id: 6,
+                module: "Module 6",
+                title: "Automating Infrastructure Management with AWS OpsWorks",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Overview of AWS OpsWorks for managing applications and infrastructure",
+                        "Configuring and managing infrastructure with AWS OpsWorks Stacks and Layers",
+                        "Automating application deployment and lifecycle management"
+                    ]
+                }
+            },
+            {
+                id: 7,
+                module: "Module 7",
+                title: "Security and Compliance in AWS DevOps",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Ensuring security in the DevOps pipeline",
+                        "Using AWS Identity and Access Management (IAM) for user permissions",
+                        "Complying with security best practices and managing audits in AWS"
+                    ]
+                }
+            },
+            {
+                id: 8,
+                module: "Module 8",
+                title: "Scaling and Load Balancing with AWS",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Auto-scaling applications on AWS to handle traffic spikes",
+                        "Configuring Elastic Load Balancing (ELB) to distribute traffic efficiently",
+                        "Best practices for scaling and balancing workloads on AWS"
+                    ]
+                }
+            },
+            {
+                id: 9,
+                module: "Module 9",
+                title: "Capstone Project & Certification",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Building a complete AWS DevOps pipeline for a real-world project",
+                        "Implementing CI/CD, monitoring, and automated infrastructure management",
+                        "Showcasing a final project and preparing for certification"
+                    ]
+                }
+            }
+        ],
+        timeLineHeading: 'Mern Stack',
+        levelcardIndex: [
+            {
+                icon: faCode,
+                title: "Introduction to MERN Stack",
+                description: "Learn the core concepts of the MERN stack, including MongoDB, Express.js, React.js, and Node.js, and understand how they work together in modern web applications."
+            },
+            {
+                icon: faDatabase,
+                title: "Database Management with MongoDB",
+                description: "Master MongoDB for storing and managing data, including schema design, CRUD operations, indexing, and using the Mongoose library for seamless integration."
+            },
+            {
+                icon: faServer,
+                title: "Building APIs with Express.js",
+                description: "Learn to build scalable and efficient RESTful APIs using Express.js, including middleware integration, routing, and error handling."
+            },
+            {
+                icon: faReact,
+                title: "Frontend Development with React",
+                description: "Develop dynamic and responsive user interfaces using React, including state management with hooks, component lifecycles, and best practices for performance optimization."
+            },
+            {
+                icon: faNodeJs,
+                title: "Backend Development with Node.js",
+                description: "Understand the fundamentals of Node.js for server-side programming, asynchronous operations, and integrating with third-party libraries and APIs."
+            },
+            {
+                icon: faSyncAlt,
+                title: "Connecting Frontend and Backend",
+                description: "Learn to connect the React frontend with the Express backend through RESTful APIs, including data fetching, form handling, and state synchronization."
+            },
+            {
+                icon: faCodeBranch,
+                title: "Version Control with Git & GitHub",
+                description: "Master Git for version control and collaborate on projects using GitHub, including branching, merging, and pull request workflows."
+            },
+            {
+                icon: faChartLine,
+                title: "State Management with Redux",
+                description: "Dive deep into Redux for managing application state in larger React applications, including creating reducers, actions, and middleware."
+            },
+            {
+                icon: faLaptopCode,
+                title: "Full Stack Application Development",
+                description: "Build a complete full-stack application from scratch, integrating MongoDB, Express, React, and Node.js, with a focus on best practices and scalability."
+            },
+            {
+                icon: faLock,
+                title: "Authentication and Authorization",
+                description: "Implement user authentication and authorization using JSON Web Tokens (JWT) and secure data transmission with encryption techniques."
+            },
+            {
+                icon: faCogs,
+                title: "Deployment and Hosting",
+                description: "Learn to deploy MERN applications on platforms like Heroku, Netlify, or AWS, and understand the setup of CI/CD pipelines for seamless updates."
+            },
+            {
+                icon: faTasks,
+                title: "Capstone Project",
+                description: "Work on a real-world project that integrates all aspects of MERN stack development, showcasing your skills in building, testing, and deploying a production-grade application."
+            },
+            {
+                icon: faBriefcase,
+                title: "Placement Preparation",
+                description: "Prepare for the job market with resume building, interview preparation, and understanding the roles and responsibilities of a MERN Stack Developer."
+            }
+        ],
+        accordionContent: [
+            {
+                title: 'What is the duration of the MERN Stack program at SocialPrachar?',
+                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to suit different learning paces and schedules.'
+            },
+            {
+                title: 'What topics are covered in the MERN Stack curriculum?',
+                content: 'Topics include MongoDB, Express.js, React.js, Node.js, API integration, authentication, deployment, and real-world project implementation.'
+            },
+            {
+                title: 'Are there any internship or job guarantee options?',
+                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the tech industry.'
+            },
+            {
+                title: 'What are the class formats available (online or classroom)?',
+                content: 'Both online and classroom learning options are available to accommodate the preferences and needs of students.'
+            },
+            {
+                title: 'Is there a certification awarded upon completion?',
+                content: 'Yes, a professional certification is awarded upon successful completion of the program, which enhances your resume and demonstrates your expertise in MERN Stack development.'
+            },
+            {
+                title: 'What are the average salary expectations for program graduates?',
+                content: 'Graduates can expect competitive salaries in the software development field, with opportunities for growth based on their skill level and the roles they secure.'
+            },
+            {
+                title: 'Who are the trainers, and what qualifications do they have?',
+                content: 'Trainers are experienced full-stack developers with a strong background in MERN Stack technologies, providing practical insights and up-to-date industry knowledge.'
+            },
+            {
+                title: 'How does SocialPrachar support non-programming professionals?',
+                content: 'SocialPrachar offers foundational modules to help beginners and non-programmers build the necessary coding skills to transition into the field of web development.'
+            },
+            {
+                title: 'What kind of projects will I work on during the course?',
+                content: 'Projects include building full-stack web applications, CRUD operations with MongoDB, developing RESTful APIs, creating dynamic UIs with React, and deploying applications to production.'
+            },
+            {
+                title: 'How can I register or get more information about upcoming batches?',
+                content: 'You can register through the website or contact the admissions team for detailed information about batch schedules and the enrollment process.'
+            }
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student45 },
+            { id: 2, image: student46 },
+            { id: 3, image: student47 },
+            { id: 4, image: student48 },
+            { id: 5, image: student49 },
+            { id: 6, image: student50 },
+            { id: 7, image: student51 },
+            { id: 8, image: student1 },
+            { id: 9, image: student2 },
+            { id: 10, image: student3 },
+            { id: 11, image: student4 },
+            { id: 12, image: student5 },
+            { id: 13, image: student6 },
+            { id: 14, image: student7 },
+            { id: 15, image: student8 },
+            { id: 16, image: student9 },
+            { id: 17, image: student10 }
+        ],
+        bannerHeader: 'Learn Mern Stack Today',
+        bannerStudentsEnrolled: '2.8k+ Students Enrolled',
+
+    },
+
+    {
+        id: 2,
+        courseID: 7,
+        categoryIndex: 3, // Development
+        tagIndex: 3,      // Web Development
+        slug: 'data-analytics-course-training-hyderabad',
+        courseTitle: 'Data Science',
+        imageSrc: img8,
+        Duration: '5 months',
+        students: '2700+ students',
+        text: 'Data Analytics',
+        rating: 4.5,
+        Header: 'Learn Data Analytics Course & Become a Certified Professional in',
+        TestmonialsCommentsImage1: testmonialsCommentImageDA,
+        TestmonialsCommentsImage2: testmonialsCommentImageDA,
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Data Analytics' },
+        ],
+        selfQuestioning: 'Starting your Data Analytics Career?',
+        questions: [
+            "Do you want to explore career opportunities in Data Analytics?",
+            "Are you ready to master essential Data Analytics skills in just 180 days?",
+            "Do you want to kickstart your Data Analytics career with 4+ LPA opportunities?"
+        ],
+        Description: "In this comprehensive Data Analytics certification course, you will gain a thorough understanding of essential data processing tools such as Excel, SQL, and NoSQL, enabling you to work efficiently with database management systems. You'll also learn to use powerful data visualization tools like Tableau and Power BI to analyze data and create compelling visual stories for end - users.The program delves into critical concepts such as Data Preparation, Data Cleansing, and Exploratory Data Analysis, ensuring a solid foundation for handling diverse datasets.You will explore advanced topics like Data Mining of both Structured(RDBMS) and Unstructured(Big Data) data, illustrated with real - world examples to bridge theory and practice.Mastery of Advanced Excel will enhance your data proficiency, helping you optimize workflows and significantly reduce working hours.Through this training, you'll gain practical skills to transform raw data into actionable insights, empowering you to make data-driven decisions with confidence.",
+        moduleContent: [
+            {
+                id: 1,
+                module: "Module 1",
+                title: "Introduction to Data Analytics",
+                details: {
+                    videos: 5,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Overview of data analytics and its importance in decision-making",
+                        "Introduction to data processing tools like Excel, SQL, and NoSQL",
+                        "Setting up a data analytics environment"
+                    ]
+                }
+            },
+            {
+                id: 2,
+                module: "Module 2",
+                title: "Data Preparation and Cleansing",
+                details: {
+                    videos: 6,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Understanding the importance of clean data",
+                        "Techniques for data preparation and cleansing",
+                        "Working with structured and unstructured data"
+                    ]
+                }
+            },
+            {
+                id: 3,
+                module: "Module 3",
+                title: "Exploratory Data Analysis (EDA)",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Performing exploratory analysis to uncover patterns",
+                        "Visualization techniques for data exploration",
+                        "Using statistical methods to summarize data"
+                    ]
+                }
+            },
+            {
+                id: 4,
+                module: "Module 4",
+                title: "Data Mining Techniques",
+                details: {
+                    videos: 8,
+                    time: "4 weeks",
+                    descriptions: [
+                        "Introduction to data mining and its applications",
+                        "Techniques for mining structured (RDBMS) data",
+                        "Approaches to mining unstructured (Big Data) data"
+                    ]
+                }
+            },
+            {
+                id: 5,
+                module: "Module 5",
+                title: "Data Visualization with Tableau and Power BI",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Introduction to data visualization principles",
+                        "Creating visual dashboards with Tableau",
+                        "Building interactive reports using Power BI"
+                    ]
+                }
+            },
+            {
+                id: 6,
+                module: "Module 6",
+                title: "Advanced Excel for Data Proficiency",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Mastering advanced Excel functions for data manipulation",
+                        "Using pivot tables and charts for data analysis",
+                        "Automating workflows with Excel macros"
+                    ]
+                }
+            },
+            {
+                id: 7,
+                module: "Module 7",
+                title: "Real-World Applications and Case Studies",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Applying data analytics in real-world scenarios",
+                        "Analyzing case studies to solve business challenges",
+                        "Presenting insights with actionable recommendations"
+                    ]
+                }
+            },
+            {
+                id: 8,
+                module: "Module 8",
+                title: "Capstone Project & Certification",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Executing a full-scale data analytics project",
+                        "Integrating data processing, EDA, and visualization",
+                        "Preparing for certification with project showcase"
+                    ]
+                }
+            }
+        ],
+        timeLineHeading: 'Data Analytics',
+        levelcardIndex: [
+            {
+                icon: faChartBar,
+                title: "Introduction to Data Analytics",
+                description: "Gain an understanding of the fundamentals of data analytics, its importance, and how it impacts decision-making across industries."
+            },
+            {
+                icon: faTable,
+                title: "Data Processing with Excel",
+                description: "Master the use of Excel for data manipulation, cleaning, and preparation, including advanced formulas, pivot tables, and charts."
+            },
+            {
+                icon: faDatabase,
+                title: "Database Management with SQL and NoSQL",
+                description: "Learn to manage structured data using SQL and explore NoSQL databases for handling unstructured data efficiently."
+            },
+            {
+                icon: faBinoculars,
+                title: "Exploratory Data Analysis (EDA)",
+                description: "Discover patterns and insights in data through statistical techniques and visualization, laying the foundation for deeper analysis."
+            },
+            {
+                icon: faSearch,
+                title: "Data Mining Techniques",
+                description: "Explore methods for extracting meaningful patterns from structured and unstructured datasets, including real-world applications."
+            },
+            {
+                icon: faChartPie,
+                title: "Data Visualization with Tableau",
+                description: "Learn to create compelling data visualizations using Tableau, enabling clear and impactful storytelling with data."
+            },
+            {
+                icon: faChartLine,
+                title: "Data Visualization with Power BI",
+                description: "Master Power BI to develop interactive dashboards and generate actionable insights from raw data."
+            },
+            {
+                icon: faClipboardCheck,
+                title: "Advanced Excel Techniques",
+                description: "Enhance your data handling skills with advanced Excel functions, macros, and automation techniques for efficiency."
+            },
+            {
+                icon: faProjectDiagram,
+                title: "Real-World Case Studies",
+                description: "Analyze practical examples to understand how data analytics solves business challenges and drives decision-making."
+            },
+            {
+                icon: faCogs,
+                title: "Capstone Project",
+                description: "Work on a comprehensive project that integrates all aspects of data analytics, showcasing your ability to process, analyze, and visualize data."
+            },
+            {
+                icon: faBriefcase,
+                title: "Placement Preparation",
+                description: "Prepare for the job market with guidance on resume building, interview preparation, and understanding the roles in data analytics."
+            }
+        ],
+        accordionContent: [
+            {
+                title: 'What is the duration of the Data Analytics program at SocialPrachar?',
+                content: 'The program duration is flexible, offering both short-term certification courses and comprehensive programs tailored to different learning paces and schedules.'
+            },
+            {
+                title: 'What topics are covered in the Data Analytics curriculum?',
+                content: 'Topics include data collection and preprocessing, exploratory data analysis, statistics, Python for data analysis, SQL, Tableau, Power BI, machine learning basics, and real-world project implementation.'
+            },
+            {
+                title: 'Are there any internship or job guarantee options?',
+                content: 'Yes, SocialPrachar provides job placement assistance and internship opportunities to help students gain hands-on experience and secure roles in the data analytics domain.'
+            },
+            {
+                title: 'What are the class formats available (online or classroom)?',
+                content: 'Both online and classroom learning options are available, enabling students to choose a format that suits their preferences and schedules.'
+            },
+            {
+                title: 'Is there a certification awarded upon completion?',
+                content: 'Yes, a professional certification is awarded upon successful completion of the program, which enhances your resume and validates your expertise in data analytics.'
+            },
+            {
+                title: 'What are the average salary expectations for program graduates?',
+                content: 'Graduates can expect competitive salaries in the analytics field, with potential for growth based on their skills and the roles they secure.'
+            },
+            {
+                title: 'Who are the trainers, and what qualifications do they have?',
+                content: 'Trainers are industry experts with extensive experience in data analytics and related fields, providing practical knowledge and real-world insights.'
+            },
+            {
+                title: 'How does SocialPrachar support non-technical professionals?',
+                content: 'SocialPrachar offers foundational modules to help beginners and non-technical professionals build the required skills to transition into data analytics roles successfully.'
+            },
+            {
+                title: 'What kind of projects will I work on during the course?',
+                content: 'Projects include analyzing datasets, building dashboards in Tableau and Power BI, writing SQL queries for data extraction, applying Python for predictive modeling, and developing machine learning models for business insights.'
+            },
+            {
+                title: 'How can I register or get more information about upcoming batches?',
+                content: 'You can register through the website or contact the admissions team for detailed information on batch schedules and the enrollment process.'
+            }
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student15 },
+            { id: 2, image: student16 },
+            { id: 3, image: student17 },
+            { id: 4, image: student18 },
+            { id: 5, image: student19 },
+            { id: 7, image: student21 },
+            { id: 8, image: student22 },
+            { id: 9, image: student23 },
+            { id: 10, image: student24 },
+            { id: 11, image: student25 },
+            { id: 12, image: student26 },
+            { id: 13, image: student27 },
+            { id: 14, image: student28 },
+            { id: 15, image: student29 },
+            { id: 16, image: student30 },
+            { id: 17, image: student31 },
+            { id: 18, image: student32 },
+            { id: 19, image: student33 },
+        ],
+        bannerHeader: 'Learn Data Analytics Today',
+        bannerStudentsEnrolled: '2.7k+ Students Enrolled',
+
+    },
+
+    {
+        id: 2,
+        courseID: 8,
+        categoryIndex: 8, // Development
+        tagIndex: 2,      // Web Development
+        slug: 'snowflake-training-in-hyderabad',
+        courseTitle: 'Cloud',
+        imageSrc: img1,
+        TestmonialsCommentsImage1: testmonialsCommentImageFSW,
+        TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
+        Duration: '5 months',
+        students: '2700+ students',
+        text: 'SnowFlake Course',
+        rating: 4.1,
+        Header: 'Learn Snow Flake Course & Become a Certified Professional in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'SnowFlake' },
+        ],
+        selfQuestioning: 'Starting your Snow Flake Career?',
+        questions: [
+            "Do you want to explore career opportunities in Snow Flake?",
+            "Are you ready to master essential Snow Flake skills in just 180 days?",
+            "Do you want to kickstart your Snow Flake career with 4+ LPA opportunities?"
+        ],
+        Description: "In this in-depth Snowflake certification course, you will gain expertise in cloud-based data warehousing, empowering you with the skills to handle, store, and analyze organizational data efficiently. Snowflake’s high-speed, versatile, and user-friendly architecture enables seamless customization and creation of ready-to-query tables, offering significant advantages over traditional systems. You will learn how to leverage Snowflake’s innovative SQL query engine for advanced data analysis and reporting. Additionally, the course covers key topics such as data preparation, cleansing, and exploratory data analysis to ensure you have a solid foundation in managing diverse datasets. You'll also gain proficiency in tools like Excel, SQL, Tableau, and Power BI to transform raw data into actionable insights and create compelling visual reports.By mastering these skills, you will be equipped to make data- driven decisions and optimize workflows, significantly reducing the time spent on data management tasks.",
+        moduleContent: [
+            {
+                id: 1,
+                module: "Module 1",
+                title: "Introduction to Snowflake",
+                details: {
+                    videos: 4,
+                    time: "1 week",
+                    descriptions: [
+                        "Overview of Snowflake and its architecture",
+                        "Understanding Snowflake's cloud data platform",
+                        "Snowflake vs traditional databases",
+                        "Setting up a Snowflake account and environment"
+                    ]
+                }
+            },
+            {
+                id: 2,
+                module: "Module 2",
+                title: "Data Loading and Integration in Snowflake",
+                details: {
+                    videos: 5,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Methods for loading data into Snowflake (e.g., bulk loading, streaming)",
+                        "Integrating Snowflake with third-party ETL tools",
+                        "Using Snowflake's native data loading features",
+                        "Understanding file formats and stage management"
+                    ]
+                }
+            },
+            {
+                id: 3,
+                module: "Module 3",
+                title: "Data Modeling in Snowflake",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Creating and managing schemas and databases",
+                        "Understanding Snowflake's multi-cluster architecture",
+                        "Designing and optimizing data models in Snowflake",
+                        "Best practices for dimensional modeling in Snowflake"
+                    ]
+                }
+            },
+            {
+                id: 4,
+                module: "Module 4",
+                title: "Querying Data in Snowflake",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Introduction to SQL in Snowflake",
+                        "Advanced SQL techniques for querying large datasets",
+                        "Optimizing queries for performance",
+                        "Using Snowflake’s clustering keys and partitioning"
+                    ]
+                }
+            },
+            {
+                id: 5,
+                module: "Module 5",
+                title: "Security and Governance in Snowflake",
+                details: {
+                    videos: 5,
+                    time: "1.5 weeks",
+                    descriptions: [
+                        "Understanding Snowflake's security model",
+                        "User and role management",
+                        "Data encryption and key management",
+                        "Implementing access control policies and data governance"
+                    ]
+                }
+            },
+            {
+                id: 6,
+                module: "Module 6",
+                title: "Performance Optimization in Snowflake",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Best practices for optimizing query performance",
+                        "Using virtual warehouses for scalable performance",
+                        "Query profiling and optimization techniques",
+                        "Managing and monitoring Snowflake performance"
+                    ]
+                }
+            },
+            {
+                id: 7,
+                module: "Module 7",
+                title: "Snowflake Data Sharing and Collaboration",
+                details: {
+                    videos: 5,
+                    time: "1 week",
+                    descriptions: [
+                        "Understanding Snowflake’s data sharing capabilities",
+                        "Setting up secure data sharing with external partners",
+                        "Collaborative analytics with Snowflake's sharing features",
+                        "Real-time collaboration using Snowflake and Snowpipe"
+                    ]
+                }
+            },
+            {
+                id: 8,
+                module: "Module 8",
+                title: "Advanced Snowflake Features and Use Cases",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Exploring Snowflake's semi-structured data capabilities (JSON, Avro, Parquet)",
+                        "Utilizing Snowflake's machine learning integrations",
+                        "Real-time data streaming with Snowflake",
+                        "Use cases: IoT, analytics, and data science in Snowflake"
+                    ]
+                }
+            },
+            {
+                id: 9,
+                module: "Module 9",
+                title: "Capstone Project & Certification",
+                details: {
+                    videos: 8,
+                    time: "1 month",
+                    descriptions: [
+                        "Designing and implementing a Snowflake-based project",
+                        "Integrating data loading, modeling, and querying",
+                        "Optimizing performance and security in a real-world scenario",
+                        "Preparing for Snowflake certification with project showcase"
+                    ]
+                }
+            }
+        ],
+        timeLineHeading: 'SnowFlake Training',
+        levelcardIndex: [
+            {
+                icon: faCloud,
+                title: "Introduction to Snowflake",
+                description: "Overview of Snowflake as a cloud data platform, its architecture, key features, benefits, and how it compares with traditional data warehousing solutions."
+            },
+            {
+                icon: faDatabase,
+                title: "Snowflake Architecture",
+                description: "Learn about Snowflake's virtual warehouses, databases, schemas, and its approach to scaling and concurrency through its cloud-native architecture."
+            },
+            {
+                icon: faArrowUp,
+                title: "Data Loading and Unloading",
+                description: "Understand how to load and unload data into Snowflake using different tools, and perform data transformations during loading."
+            },
+            {
+                icon: faCogs,
+                title: "Data Modeling",
+                description: "Learn best practices for schema design, creating tables and views, and working with semi-structured data such as JSON, Parquet, and Avro."
+            },
+            {
+                icon: faCode,
+                title: "SQL in Snowflake",
+                description: "Master SQL in Snowflake by querying data, using advanced SQL commands, handling NULLs, and managing transactions."
+            },
+            {
+                icon: faTachometerAlt,
+                title: "Performance Tuning and Optimization",
+                description: "Understand query execution plans, caching, and clustering keys to optimize performance in Snowflake."
+            },
+            {
+                icon: faLock,
+                title: "Security and Access Control",
+                description: "Learn about user roles, data encryption, secure views, data masking, and managing authentication in Snowflake."
+            },
+            {
+                icon: faPlug,
+                title: "Snowflake Integrations",
+                description: "Integrate Snowflake with ETL/ELT tools, third-party platforms like Power BI and Tableau, and cloud platforms such as AWS, Azure, and Google Cloud."
+            },
+            {
+                icon: faShareAlt,
+                title: "Data Sharing and Collaboration",
+                description: "Explore Snowflake's secure data sharing, data marketplace, and collaboration features for sharing data with external partners."
+            },
+            {
+                icon: faEye,
+                title: "Monitoring and Maintenance",
+                description: "Learn how to monitor query performance, manage virtual warehouses, and use Snowflake's Resource Monitor and system tables for maintenance."
+            },
+            {
+                icon: faRocket,
+                title: "Advanced Snowflake Topics",
+                description: "Explore advanced topics such as Snowflake's machine learning integration, support for semi-structured data, and continuous data processing using streams and tasks."
+            },
+            {
+                icon: faThumbsUp,
+                title: "Best Practices and Case Studies",
+                description: "Discover best practices for optimizing data loading and querying, and learn from real-world case studies in big data analytics and business intelligence."
+            },
+            {
+                icon: faCertificate,
+                title: "Certification Preparation",
+                description: "Prepare for Snowflake certifications like Data Engineer and Architect, with exam preparation and sample questions."
+            }
+        ],
+        accordionContent: [
+            {
+                title: 'How fast is Snowflake growing?',
+                content: 'Last year, Snowflake saw an impressive 94% of its revenue derived from its product segment. The company anticipates significant growth in this area, projecting product revenue to surge from $1.14 billion in fiscal 2022 to approximately $10 billion by fiscal 2029. This trajectory suggests a robust compound annual growth rate (CAGR) of 36% over the forthcoming seven years.'
+            },
+            {
+                title: 'Does Snowflake require coding?',
+                content: 'No, Snowflake’s architecture eliminates the need for extra software, hardware, or maintenance compared to other platforms. It comprises three layers: data storage, query processing, and cloud services, each designed for specific functions.'
+            },
+            {
+                title: 'Is Snowflake in demand in India?',
+                content: 'The primary user base of Snowflake for data warehousing comprises predominantly of companies from the United States, which constitutes 65.83% of all Snowflake users. Following closely behind are the United Kingdom and India,(25.46%) and (18.94%) respectively, making them other significant users of Snowflake. India is Gaining Global Market share with Vast potential in coming years !!'
+            },
+            {
+                title: 'What is the salary of Snowflake 2 years experience in India?',
+                content: 'Snowflake Developer salary in India with less than 2 year of experience to 6 years ranges from ₹ 4.2 Lakhs to ₹ 16.9 Lakhs with an average annual salary of ₹ 8 Lakhs based on 1.8k latest salaries.'
+            },
+            {
+                title: 'What is the future growth of Snowflake?',
+                content: 'The projected growth rates for Snowflake indicate an anticipated increase in earnings and revenue by 19.3% and 22.5% per annum, respectively. Additionally, the company’s earnings per share (EPS) are expected to grow at a rate of 25.2% annually. Furthermore, the forecasted return on equity stands at 9.7% within a three-year period.'
+            },
+            {
+                title: 'Is Snowflake a good career choice?',
+                content: 'A Snowflake certified professional typically earns an average salary ranging from $80,000 USD to $95,000 USD. Opting for a career in Snowflake Database presents a compelling choice due to its array of unique features not found in other data warehouses, offering simplicity and innovation.'
+            },
+            {
+                title: 'What is the career path of a Snowflake?',
+                content: 'This certification caters to individuals aiming to progress in the field of data engineering. The SnowPro Advanced: Data Engineer Certification provides an in-depth comprehension and proficiency in applying data engineering principles utilizing Snowflake components.'
+            },
+            {
+                title: 'Why Snowflake is better than Databricks?',
+                content: 'Snowflake excels in SQL-like business intelligence applications, boasting superior performance. Conversely, Databricks extends its support to multiple programming languages.'
+            },
+            {
+                title: 'Why choose Snowflake over AWS?',
+                content: 'Snowflake emerges as the clear Winner over AWS Redshift in terms of maintenance due to its distinct storage and compute architecture, which simplifies the process of scaling up and down. Altering the size of a warehouse or increasing cluster numbers becomes more manageable with Snowflake.'
+            },
+            {
+                title: 'What are the challenges faced in Snowflake?',
+                content: 'Ensuring data security and governance within a Snowflake environment poses a unique challenge for numerous organizations. Despite Snowflake’s robust security features such as multi-factor authentication, encryption at rest, and secure zone isolation, effectively managing data governance in the cloud remains a complex task.'
+            },
+            {
+                title: 'Does Snowflake have a future?',
+                content: 'In 2024, more than 17,087 companies worldwide have adopted Snowflake as their preferred data warehousing tool. The majority of these companies, totaling 9,672 customers, hail from the United States, representing 65.83% of all Snowflake users.'
+            },
+            {
+                title: 'Why is Snowflake so successful?',
+                content: 'The foundation of Snowflake’s architecture lies in a singular elastic performance engine, providing exceptional speed and scalability. Snowflake boasts the capability to accommodate a large volume of concurrent users and workloads, whether they are interactive or batch-oriented. This capability owes much to its multi-cluster resource isolation functionality.'
+            },
+            {
+                title: 'Why should I join Snowflake?',
+                content: 'Engaging with an exceptional product and mastering its intricacies. Snowflake Data Cloud stands as a premier data platform, offering unified security and governance tailored for various roles such as data engineers, architects, data scientists, and data analysts—essentially, anyone operating with data within an enterprise setting.'
+            },
+            {
+                title: 'Is Snowflake difficult to learn?',
+                content: 'Learning Snowflake can be quite Easy, particularly for those who already have experience with SQL and data warehousing. However, achieving proficiency in its advanced features and optimizing performance may necessitate a greater investment of time and hands-on experience.'
+            },
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student15 },
+            { id: 2, image: student16 },
+            { id: 3, image: student17 },
+            { id: 4, image: student18 },
+            { id: 5, image: student19 },
+            { id: 7, image: student21 },
+            { id: 8, image: student22 },
+            { id: 9, image: student23 },
+            { id: 10, image: student24 },
+            { id: 11, image: student25 },
+            { id: 12, image: student26 },
+            { id: 13, image: student27 },
+            { id: 14, image: student28 },
+            { id: 15, image: student29 },
+            { id: 16, image: student30 },
+            { id: 17, image: student31 },
+            { id: 18, image: student32 },
+            { id: 19, image: student33 },
+        ],
+        bannerHeader: 'Learn Snow Flake Today',
+        bannerStudentsEnrolled: '2.7k+ Students Enrolled',
+
+    },
+
+    {
+        id: 2,
+        courseID: 9,
+        categoryIndex: 9, // Development
+        tagIndex: 2,      // Web Development
+        slug: 'salesforce-course',
+        courseTitle: 'Cloud',
+        imageSrc: img2,
+        TestmonialsCommentsImage1: testmonialsCommentImageFSW,
+        TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
+        Duration: '5 months',
+        students: '2700+ students',
+        text: 'SalesForce Course',
+        rating: 4.2,
+        Header: 'Learn Sales Force Course & Become a Certified Professional in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Sales Force Development' },
+        ],
+        selfQuestioning: 'Starting your Sales Force Career?',
+        questions: [
+            "Do you want to explore career opportunities in Sales Force?",
+            "Are you ready to master essential Sales Force skills in just 180 days?",
+            "Do you want to kickstart your Sales Force career with 4+ LPA opportunities?"
+        ],
+        Description: "In this comprehensive Salesforce Development course, you will master the skills needed to build and customize applications on the Salesforce platform.Learn how to leverage Salesforce's powerful tools and features, including Apex, Visualforce, and Lightning Components, to develop scalable solutions that meet business needs. This course will guide you through the process of creating automated workflows, managing data, and optimizing CRM processes. By gaining hands-on experience with Salesforce development, you will be equipped to create tailored applications that enhance customer relationships and drive business growth.",
+        moduleContent: [
+            {
+                id: 1,
+                module: "Module 1",
+                title: "Introduction to Salesforce Development",
+                details: {
+                    videos: 4,
+                    time: "1 week",
+                    descriptions: [
+                        "Overview of Salesforce platform and architecture",
+                        "Understanding Salesforce's cloud-based solutions",
+                        "Salesforce vs traditional CRM systems",
+                        "Setting up a Salesforce Developer Edition and environment"
+                    ]
+                }
+            },
+            {
+                id: 2,
+                module: "Module 2",
+                title: "Apex Programming in Salesforce",
+                details: {
+                    videos: 5,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Introduction to Apex programming language",
+                        "Writing triggers and classes in Apex",
+                        "Handling exceptions and debugging in Apex",
+                        "Best practices for writing efficient Apex code"
+                    ]
+                }
+            },
+            {
+                id: 3,
+                module: "Module 3",
+                title: "Visualforce Pages and Lightning Components",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Creating and customizing Visualforce pages",
+                        "Understanding the Visualforce lifecycle",
+                        "Introduction to Lightning Web Components (LWC)",
+                        "Building reusable components with LWC"
+                    ]
+                }
+            },
+            {
+                id: 4,
+                module: "Module 4",
+                title: "Salesforce Data Management and Integration",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Data models in Salesforce: Objects, Fields, and Relationships",
+                        "Using Salesforce Data Import Wizard and Data Loader",
+                        "Integrating Salesforce with external systems using APIs",
+                        "Working with third-party integration tools"
+                    ]
+                }
+            },
+            {
+                id: 5,
+                module: "Module 5",
+                title: "Security and User Management in Salesforce",
+                details: {
+                    videos: 5,
+                    time: "1.5 weeks",
+                    descriptions: [
+                        "Understanding Salesforce security model and layers",
+                        "Configuring user profiles, roles, and permissions",
+                        "Implementing field-level security and record sharing",
+                        "Best practices for securing Salesforce applications"
+                    ]
+                }
+            },
+            {
+                id: 6,
+                module: "Module 6",
+                title: "Salesforce Automation: Process Builder and Flows",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Introduction to Salesforce Process Builder",
+                        "Creating and automating business processes with Flows",
+                        "Advanced automation techniques using Flow Builder",
+                        "Implementing complex workflows and approval processes"
+                    ]
+                }
+            },
+            {
+                id: 7,
+                module: "Module 7",
+                title: "Salesforce Lightning Design System (SLDS)",
+                details: {
+                    videos: 5,
+                    time: "1 week",
+                    descriptions: [
+                        "Overview of Salesforce Lightning Design System",
+                        "Building responsive and visually appealing pages with SLDS",
+                        "Designing with SLDS components and patterns",
+                        "Customizing SLDS for branded user interfaces"
+                    ]
+                }
+            },
+            {
+                id: 8,
+                module: "Module 8",
+                title: "Advanced Salesforce Development Techniques",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Understanding Salesforce's asynchronous processes (Batch Apex, Future Methods)",
+                        "Advanced Apex: Testing, Collections, and Dynamic Apex",
+                        "Working with Salesforce APIs for advanced integration",
+                        "Exploring custom domains, Visualforce remoting, and other advanced features"
+                    ]
+                }
+            },
+            {
+                id: 9,
+                module: "Module 9",
+                title: "Capstone Project & Salesforce Certification Preparation",
+                details: {
+                    videos: 8,
+                    time: "1 month",
+                    descriptions: [
+                        "Designing and implementing a Salesforce-based solution",
+                        "Integrating Apex, Visualforce, and Lightning components",
+                        "Optimizing performance and security in real-world scenarios",
+                        "Preparing for Salesforce certification with project showcase"
+                    ]
+                }
+            }
+        ],
+        timeLineHeading: 'Sales Force',
+        levelcardIndex: [
+            {
+                icon: faCloud,
+                title: "Introduction to Salesforce",
+                description: "Get an overview of Salesforce as a cloud-based CRM platform, its features, and how it helps organizations automate sales, marketing, and customer service processes."
+            },
+            {
+                icon: faDatabase,
+                title: "Salesforce Data Model",
+                description: "Learn about Salesforce's data model, including standard and custom objects, relationships, and how to structure data for maximum efficiency."
+            },
+            {
+                icon: faArrowUp,
+                title: "Data Import and Export in Salesforce",
+                description: "Understand how to import, export, and manage data within Salesforce using tools like Data Loader and Data Import Wizard, and perform data transformations."
+            },
+            {
+                icon: faCogs,
+                title: "Apex Programming",
+                description: "Learn Apex, Salesforce’s proprietary programming language, to automate business logic, create triggers, and manage complex processes on the Salesforce platform."
+            },
+            {
+                icon: faCode,
+                title: "Visualforce and Lightning Components",
+                description: "Master building custom user interfaces in Salesforce using Visualforce and Lightning Components, and create dynamic, responsive pages and applications."
+            },
+            {
+                icon: faTachometerAlt,
+                title: "Salesforce Performance Optimization",
+                description: "Understand best practices for optimizing Salesforce performance, including query optimization, governor limits, and asynchronous processing in Apex."
+            },
+            {
+                icon: faLock,
+                title: "Salesforce Security and Access Control",
+                description: "Learn about Salesforce’s security model, including user permissions, role hierarchies, sharing rules, field-level security, and profile management."
+            },
+            {
+                icon: faPlug,
+                title: "Salesforce Integrations",
+                description: "Integrate Salesforce with third-party applications, external APIs, and other cloud platforms like AWS, Azure, and Google Cloud for seamless data exchange."
+            },
+            {
+                icon: faShareAlt,
+                title: "Collaboration and Sharing in Salesforce",
+                description: "Explore Salesforce's collaboration features such as Chatter, Salesforce Files, and external sharing capabilities for enhanced teamwork."
+            },
+            {
+                icon: faEye,
+                title: "Salesforce Monitoring and Debugging",
+                description: "Learn how to use Salesforce’s debug tools, monitoring capabilities, and log files to troubleshoot and ensure smooth performance of your applications."
+            },
+            {
+                icon: faRocket,
+                title: "Advanced Salesforce Development Topics",
+                description: "Dive into advanced topics like Salesforce Lightning Web Components, Salesforce DX, and automated testing to enhance your development workflow."
+            },
+            {
+                icon: faThumbsUp,
+                title: "Best Practices and Case Studies",
+                description: "Discover best practices for optimizing Salesforce development and learn from real-world case studies on implementing CRM solutions in diverse industries."
+            },
+            {
+                icon: faCertificate,
+                title: "Salesforce Certification Preparation",
+                description: "Prepare for Salesforce certifications like Platform Developer I & II and Administrator, with exam preparation and sample questions."
+            }
+        ],
+        accordionContent: [
+            {
+                title: 'How fast is Salesforce growing?',
+                content: 'Salesforce continues to expand rapidly, with a projected annual growth rate of 20% over the next few years. The company has consistently seen an increase in its cloud services revenue, contributing to its strong position in the CRM market. With a wide range of products including Sales Cloud, Service Cloud, and Marketing Cloud, Salesforce is poised for continued growth.'
+            },
+            {
+                title: 'Does Salesforce require coding?',
+                content: 'Salesforce offers both no-code and low-code solutions, such as Salesforce Lightning, which allow developers to create applications without needing extensive coding knowledge. However, for more complex customizations, understanding coding languages like Apex (Salesforce’s proprietary programming language) and Visualforce (for creating custom user interfaces) is required.'
+            },
+            {
+                title: 'Is Salesforce in demand in India?',
+                content: 'Salesforce is gaining significant traction in India as companies across various industries are adopting it for customer relationship management (CRM). India is expected to become one of the largest markets for Salesforce as businesses in the country increasingly shift to cloud-based solutions. The demand for Salesforce developers is growing steadily.'
+            },
+            {
+                title: 'What is the salary of a Salesforce Developer with 2 years of experience in India?',
+                content: 'A Salesforce Developer with less than 2 years of experience in India can expect to earn between ₹4.5 Lakhs to ₹8 Lakhs per year. With more experience, the salary can rise significantly, with developers in India earning up to ₹18 Lakhs per annum.'
+            },
+            {
+                title: 'What is the future growth of Salesforce?',
+                content: 'Salesforce’s future growth looks promising, with continued expansion into various sectors including healthcare, financial services, and education. With innovations like Einstein AI and Salesforce Blockchain, the company is poised to grow its product offerings, driving both revenue and user base in the coming years.'
+            },
+            {
+                title: 'Is Salesforce a good career choice?',
+                content: 'Salesforce offers excellent career opportunities due to its dominance in the CRM market. Professionals with Salesforce certifications (e.g., Salesforce Administrator, Salesforce Developer) can command competitive salaries, and the demand for skilled Salesforce professionals is expected to rise. It is a strong choice for those looking to work in the cloud technology and CRM space.'
+            },
+            {
+                title: 'What is the career path in Salesforce?',
+                content: 'A career in Salesforce typically begins as an administrator, followed by roles such as Salesforce Developer, Consultant, and Architect. Advanced certifications, such as the Salesforce Certified Technical Architect, open opportunities for leadership positions in large-scale Salesforce implementations.'
+            },
+            {
+                title: 'Why is Salesforce better than other CRM solutions?',
+                content: 'Salesforce stands out due to its highly customizable platform, which allows businesses to tailor the solution to their specific needs. Additionally, its seamless integration with other enterprise systems and its powerful cloud-based solutions, including Sales Cloud, Service Cloud, and Marketing Cloud, make it a top choice for companies looking for a comprehensive CRM solution.'
+            },
+            {
+                title: 'Why choose Salesforce over Microsoft Dynamics?',
+                content: 'Salesforce is often considered superior to Microsoft Dynamics due to its scalability, ease of customization, and robust ecosystem of apps available through the Salesforce AppExchange. Salesforce’s focus on customer experience and its cloud-first approach give it an edge over Dynamics, which is more suited to on-premise deployments.'
+            },
+            {
+                title: 'What are the challenges faced in Salesforce development?',
+                content: 'Salesforce development can present challenges such as handling complex integration with third-party systems, managing data security in a multi-tenant environment, and dealing with Salesforce’s governor limits on resources like API calls and database queries. Developers need to be well-versed in Apex and Visualforce to overcome these challenges effectively.'
+            },
+            {
+                title: 'Does Salesforce have a future?',
+                content: 'Salesforce has a promising future as it continues to dominate the CRM market and expand its product offerings. The company’s focus on AI, machine learning, and automation, as well as its continuous innovation with products like Salesforce Einstein, will help drive growth and secure its position as a leader in the enterprise software market.'
+            },
+            {
+                title: 'Why is Salesforce so successful?',
+                content: 'Salesforce’s success can be attributed to its customer-centric approach, constant innovation, and adaptability. By providing a unified platform for CRM, analytics, and marketing, Salesforce enables businesses to manage their customer relationships more efficiently. The strong developer ecosystem and ease of integration with other enterprise software also contribute to its widespread adoption.'
+            },
+            {
+                title: 'Why should I join Salesforce?',
+                content: 'Joining Salesforce offers the opportunity to work with cutting-edge technology in a fast-paced, growth-oriented environment. Salesforce’s culture is focused on equality, innovation, and career development, making it a great place for those looking to build a long-term career in cloud-based enterprise solutions.'
+            },
+            {
+                title: 'Is Salesforce difficult to learn?',
+                content: 'Salesforce can be easy to learn for beginners, especially with the platform’s emphasis on point-and-click tools like Salesforce Lightning. However, more advanced topics such as Apex programming and Visualforce pages may require deeper technical knowledge. Salesforce offers a wealth of training resources, including its free online courses through Trailhead, which can help new learners get started.'
+            },
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student15 },
+            { id: 2, image: student16 },
+            { id: 3, image: student17 },
+            { id: 4, image: student18 },
+            { id: 5, image: student19 },
+            { id: 7, image: student21 },
+            { id: 8, image: student22 },
+            { id: 9, image: student23 },
+            { id: 10, image: student24 },
+            { id: 11, image: student25 },
+            { id: 12, image: student26 },
+            { id: 13, image: student27 },
+            { id: 14, image: student28 },
+            { id: 15, image: student29 },
+            { id: 16, image: student30 },
+            { id: 17, image: student31 },
+            { id: 18, image: student32 },
+            { id: 19, image: student33 },
+        ],
+        bannerHeader: 'Learn Sales Force Today',
+        bannerStudentsEnrolled: '2.7k+ Students Enrolled',
+
+    },
 ];

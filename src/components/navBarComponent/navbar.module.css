@@ -247,7 +247,10 @@
   .categorySection{
     display: none;
   }
-
+  .hiddenMobileLgMin{
+    position: relative;
+    left: 10px !important;
+  }
 }
 
 @media (min-width: 340.6px) and (max-width: 464px) {
@@ -256,7 +259,7 @@
     width: 120px;
   }
   .selectDropDown {
-    max-width: 100px;
+    max-width: 90px;
   }
 }
 

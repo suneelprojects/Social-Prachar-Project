@@ -28,7 +28,7 @@
   left: 50%;
   top: 100px;
   width: 4px;
-  height: 85%;
+  height: 92%;
   background: #e0e0e0;
   transform: translateX(-50%);
   transition: height 0.3s ease-in-out;

@@ -1,4 +1,3 @@
-// ToggleBar.js
 import React, { useState, useRef } from 'react';
 import ToggleBarCSS from './ToggleBar.module.css';
 import courseCSS from '../Courses_category/Course.module.css';
@@ -8,8 +7,6 @@ import { faSliders } from '@fortawesome/free-solid-svg-icons';
 const ToggleBar = ({
     items,
     Tag,
-    Level,
-    Price,
     checked,
     setChecked,
     showUncheckedShadow,
@@ -18,14 +15,6 @@ const ToggleBar = ({
     setCheckedTags,
     showUncheckedShadowTags,
     setShowUncheckedShadowTags,
-    checkedLevel,
-    setCheckedLevel,
-    showUncheckedShadowLevel,
-    setShowUncheckedShadowLevel,
-    checkedPrice,
-    setCheckedPrice,
-    showUncheckedShadowPrice,
-    setShowUncheckedShadowPrice,
     clearFilters
 }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -48,10 +37,6 @@ const ToggleBar = ({
             updateShowUncheckedShadow(showUncheckedShadow, setShowUncheckedShadow, updateChecked(checked, setChecked));
         } else if (type === 'tag') {
             updateShowUncheckedShadow(showUncheckedShadowTags, setShowUncheckedShadowTags, updateChecked(checkedTags, setCheckedTags));
-        } else if (type === 'level') {
-            updateShowUncheckedShadow(showUncheckedShadowLevel, setShowUncheckedShadowLevel, updateChecked(checkedLevel, setCheckedLevel));
-        } else if (type === 'price') {
-            updateShowUncheckedShadow(showUncheckedShadowPrice, setShowUncheckedShadowPrice, updateChecked(checkedPrice, setCheckedPrice));
         }
     };
 
@@ -123,39 +108,7 @@ const ToggleBar = ({
                             </div>
                             <hr />
 
-                            {/* Level part */}
-                            <div className={courseCSS.categories}>
-                                <h5>Level</h5>
-                                {Level.map((level, index) => (
-                                    <div key={index} className={courseCSS.categorypart}>
-                                        <input
-                                            type="checkbox"
-                                            id={`level-${index}`}
-                                            checked={checkedLevel[index]}
-                                            onChange={() => handleCheckboxClick(index, 'level')}
-                                            className={`${checkedLevel[index] ? courseCSS.shadow : showUncheckedShadowLevel[index] ? courseCSS.unchecked_shadow : ''}`}
-                                        />
-                                        <label htmlFor={`level-${index}`}><p>{level}</p></label>
-                                    </div>
-                                ))}
-                            </div>
-                            <hr />
-                            {/* Price part */}
-                            <div className={courseCSS.categories}>
-                                <h5>Price</h5>
-                                {Price.map((price, index) => (
-                                    <div key={index} className={courseCSS.categorypart}>
-                                        <input
-                                            type="checkbox"
-                                            id={`price-${index}`}
-                                            checked={checkedPrice[index]}
-                                            onChange={() => handleCheckboxClick(index, 'price')}
-                                            className={`${checkedPrice[index] ? courseCSS.shadow : showUncheckedShadowPrice[index] ? courseCSS.unchecked_shadow : ''}`}
-                                        />
-                                        <label htmlFor={`price-${index}`}><p>{price}</p></label>
-                                    </div>
-                                ))}
-                            </div>
+                    
                             <div className={courseCSS.button}>
                                 <button className={courseCSS.btn} onClick={clearFilters}>&#x2715;&nbsp;&nbsp;&nbsp;&nbsp;Clear All Filters</button>
                             </div>

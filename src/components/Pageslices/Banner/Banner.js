@@ -4,6 +4,8 @@ import { data } from '../../Cards/CardData';
 import { useParams } from 'react-router-dom';
 import SignInForm from '../Enrollbutton/PopupSignInForm';
 import EnrollButton from '../Enrollbutton/Enrollbutton';
+import fullStackImage from '../../../assets/classplus-banner-fullstack.webp';
+
 
 const Banner = () => {
     const { slug } = useParams();
@@ -35,8 +37,7 @@ const Banner = () => {
             <div className={style.bannerContent}>
                 <div className={style.bannerInfo}>
                     <img
-                        src={card.bannerImage || "https://via.placeholder.com/150"}
-                        alt={card.bannerHeader || "Course Thumbnail"}
+                        src={fullStackImage}
                         className={style.bannerImage}
                     />
                     <div className={style.bannerText}>

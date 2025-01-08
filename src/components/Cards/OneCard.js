@@ -7,13 +7,16 @@ import cardsCSS from './Cards.module.css';
 import { useWishlist } from '../../Dashboard/MenuBarComponents/WishListContext';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase';
-
+import { faStarHalfAlt } from '@fortawesome/free-regular-svg-icons';
 
 const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCancelEnrollment }) => {
     const { wishlist, toggleWishlist } = useWishlist();
     const navigate = useNavigate();
     const currentUser = auth.currentUser;
 
+    const handleButtonClick = () => {
+        navigate(`/${card.slug}`);
+    };
     // Track if the card is already saved in the wishlist
     const [isSaved, setIsSaved] = useState(false);
 
@@ -55,7 +58,7 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
                     <div className={cardsCSS.lessons}>
                         <div className={cardsCSS.calendar_pen}>
                             <img src={calendar} alt="Calendar Icon" />
-                            <p className={cardsCSS.lesson}>{card.no_of_lessons}</ p>
+                            <p className={cardsCSS.lesson}>{card.Duration}</ p>
                         </div>
                         <div className={cardsCSS.users}>
                             <img src={user} alt="User  Icon" />
@@ -70,15 +73,44 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
                     </h5>
                     <div className={cardsCSS.starPrice}>
                         <div className={cardsCSS.rating}>
-                            {Array.from({ length: 5 }, (_, starIndex) => (
-                                <FontAwesomeIcon
-                                    key={starIndex}
-                                    icon={faStar}
-                                    className={starIndex < card.rating ? cardsCSS.filledStar : cardsCSS.emptyStar}
-                                />
-                            ))}
+                            {Array.from({ length: 5 }, (_, starIndex) => {
+                                // Check if it's a full star, partial star, or empty star
+                                if (starIndex < Math.floor(card.rating)) {
+                                    return (
+                                        <FontAwesomeIcon
+                                            key={starIndex}
+                                            icon={faStar}
+                                            className={cardsCSS.filledStar} // Full star
+                                        />
+                                    );
+                                } else if (starIndex < card.rating) {
+                                    return (
+                                        <FontAwesomeIcon
+                                            key={starIndex}
+                                            icon={faStarHalfAlt} // Partial star
+                                            className={cardsCSS.filledStar} // Can apply a different class for partial stars if needed
+                                        />
+                                    );
+                                } else {
+                                    return (
+                                        <FontAwesomeIcon
+                                            key={starIndex}
+                                            icon={faStar}
+                                            className={cardsCSS.emptyStar} // Empty star
+                                        />
+                                    );
+                                }
+                            })}
+                            <span className={`fw-bold text-muted ${cardsCSS.ratingValue}`}>({card.rating.toFixed(1)})</span>
                         </div>
-                        <p className={cardsCSS.price}>{card.price}</p>
+
+                        <button
+                            className="btn fw-bold shadow"
+                            style={{ background: '#553cdf', color: 'white', position: 'relative', bottom: '10px', left: '-8px', border: '1px solid #212529' }}
+                            onClick={handleButtonClick}
+                        >
+                            Know More
+                        </button>
                     </div>
                     {isEnrolledCoursesPage && isEnrolled && (
                         <button className={cardsCSS.cancelEnrollment} onClick={() => handleCancelEnrollment(card.courseID)}>

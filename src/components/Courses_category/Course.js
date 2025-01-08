@@ -9,11 +9,45 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
 import Footer from '../footer/footer';
 
+export const items = [
+    'MERN Stack Development',
+    'Python Development',
+    'Java Development',
+    'Analytics',
+    'Data Science',
+    'AWS DevOps',
+    'Digital Marketing',
+    'Artificial Intelligence',
+    'SnowFlake Course',
+    'SalesForce',
+];
 
-export const items = ['Web Development', 'Analytics', 'Marketing', 'Accounting', 'Finance', 'HR Analytics'];
-export const Tag = ['App', 'Business', 'Course', 'Data', 'Design', 'Education', 'Web Development'];
-export const Level = ['All Levels', 'Beginner', 'Intermediate', 'Expert'];
-export const Price = ['Free', 'Paid'];
+export const Tag = ['Web Development', 'Marketing', 'Cloud', 'Job Guarentee Prgrams'];
+let categoryIndex = 0;
+let tagIndex = 0;
+const filterItems = (items, categoryIndex, tagIndex) => {
+    // Define categories mapping for each tag
+    const categories = [
+        ['Python Development', 'Java Development', 'MERN Stack Development'],
+        ['Digital Marketing'],
+        ['AWS DevOps', 'SalesForce','SnowFlake Course'],
+        ['Analytics', 'Data Science', 'Artificial Intelligence'],
+    ];
+    const selectedTag = Tag[tagIndex] || '';
+    if (selectedTag === 'Web Development' || selectedTag === 'Regular Programs') {
+        categoryIndex = 0;
+    }
+    const selectedCategoryItems = categories[categoryIndex] || [];
+    console.log(`Filtering for category: ${selectedTag} (${selectedCategoryItems.join(', ')})`);
+    const filteredItems = items.filter(item =>
+        selectedCategoryItems.includes(item)
+    );
+
+    return filteredItems;
+};
+const filteredResults = filterItems(items, categoryIndex, tagIndex);
+console.log(filteredResults);
+
 
 const Course = () => {
     const location = useLocation();
@@ -25,12 +59,6 @@ const Course = () => {
     const [checkedTags, setCheckedTags] = useState(new Array(Tag.length).fill(false));
     const [showUncheckedShadowTags, setShowUncheckedShadowTags] = useState(new Array(Tag.length).fill(false));
 
-    const [checkedLevel, setCheckedLevel] = useState(new Array(Level.length).fill(false));
-    const [showUncheckedShadowLevel, setShowUncheckedShadowLevel] = useState(new Array(Level.length).fill(false));
-
-    const [checkedPrice, setCheckedPrice] = useState(new Array(Price.length).fill(false));
-    const [showUncheckedShadowPrice, setShowUncheckedShadowPrice] = useState(new Array(Price.length).fill(false));
-
     const [showButton, setShowButton] = useState(false);
     const [refreshCards, setRefreshCards] = useState([]);
     const [filteredCards, setFilteredCards] = useState([]);
@@ -40,8 +68,6 @@ const Course = () => {
     const clearFilters = () => {
         setChecked(new Array(items.length).fill(false));
         setCheckedTags(new Array(Tag.length).fill(false));
-        setCheckedLevel(new Array(Level.length).fill(false));
-        setCheckedPrice(new Array(Price.length).fill(false));
         setRefreshCards(true);
     };
 
@@ -65,8 +91,6 @@ const Course = () => {
         if (containerRef.current && !containerRef.current.contains(event.target)) {
             setShowUncheckedShadow(new Array(items.length).fill(false));
             setShowUncheckedShadowTags(new Array(Tag.length).fill(false));
-            setShowUncheckedShadowLevel(new Array(Level.length).fill(false));
-            setShowUncheckedShadowPrice(new Array(Price.length).fill(false));
         }
     };
 
@@ -84,7 +108,7 @@ const Course = () => {
         }
 
         // Update the Cards component with the filtered cards
-        <Cards filters={{ checkedCategories: updatedChecked, checkedTags, checkedLevel, checkedPrice }} cards={filteredCards} />;
+        <Cards filters={{ checkedCategories: updatedChecked, checkedTags }} cards={filteredCards} />;
     };
     useEffect(() => {
         if (category) {
@@ -110,19 +134,18 @@ const Course = () => {
         setShowUncheckedShadowTags(updatedShowUncheckedShadowTags);
     };
 
-    const handleLevelCheckboxClick = (index) => {
-        const updatedCheckedLevel = checkedLevel.map((item, i) => i === index ? !item : item);
-        setCheckedLevel(updatedCheckedLevel);
-        const updatedShowUncheckedShadowLevel = updatedCheckedLevel.map((item, i) => i === index && !item);
-        setShowUncheckedShadowLevel(updatedShowUncheckedShadowLevel);
-    };
+    //     const updatedCheckedLevel = checkedLevel.map((item, i) => i === index ? !item : item);
+    //     setCheckedLevel(updatedCheckedLevel);
+    //     const updatedShowUncheckedShadowLevel = updatedCheckedLevel.map((item, i) => i === index && !item);
+    //     setShowUncheckedShadowLevel(updatedShowUncheckedShadowLevel);
+    // };
 
-    const handlePriceCheckboxClick = (index) => {
-        const updatedCheckedPrice = checkedPrice.map((item, i) => i === index ? !item : item);
-        setCheckedPrice(updatedCheckedPrice);
-        const updatedShowUncheckedShadowPrice = updatedCheckedPrice.map((item, i) => i === index && !item);
-        setShowUncheckedShadowPrice(updatedShowUncheckedShadowPrice);
-    };
+    // const handlePriceCheckboxClick = (index) => {
+    //     const updatedCheckedPrice = checkedPrice.map((item, i) => i === index ? !item : item);
+    //     setCheckedPrice(updatedCheckedPrice);
+    //     const updatedShowUncheckedShadowPrice = updatedCheckedPrice.map((item, i) => i === index && !item);
+    //     setShowUncheckedShadowPrice(updatedShowUncheckedShadowPrice);
+    // };
 
     useEffect(() => {
         handleScroll();
@@ -145,8 +168,6 @@ const Course = () => {
                 <ToggleBar
                     items={items}
                     Tag={Tag}
-                    Level={Level}
-                    Price={Price}
                     checked={checked}
                     setChecked={setChecked}
                     showUncheckedShadow={showUncheckedShadow}
@@ -155,14 +176,7 @@ const Course = () => {
                     setCheckedTags={setCheckedTags}
                     showUncheckedShadowTags={showUncheckedShadowTags}
                     setShowUncheckedShadowTags={setShowUncheckedShadowTags}
-                    checkedLevel={checkedLevel}
-                    setCheckedLevel={setCheckedLevel}
-                    showUncheckedShadowLevel={showUncheckedShadowLevel}
-                    setShowUncheckedShadowLevel={setShowUncheckedShadowLevel}
-                    checkedPrice={checkedPrice}
-                    setCheckedPrice={setCheckedPrice}
-                    showUncheckedShadowPrice={showUncheckedShadowPrice}
-                    setShowUncheckedShadowPrice={setShowUncheckedShadowPrice}
+
                     clearFilters={clearFilters}
                 />
 
@@ -180,7 +194,7 @@ const Course = () => {
                             <hr />
                             {/* Category part */}
                             <div className={courseCSS.categories}>
-                                <h5>Category</h5>
+                                <h5>Course</h5>
                                 {items.map((item, index) => (
                                     <div key={index} className={courseCSS.categorypart}>
                                         <input
@@ -197,7 +211,7 @@ const Course = () => {
                             <hr />
                             {/* Tag part */}
                             <div className={courseCSS.categories}>
-                                <h5>Tags</h5>
+                                <h5>Catogery</h5>
                                 {Tag.map((tag, index) => (
                                     <div key={index} className={courseCSS.categorypart}>
                                         <input
@@ -213,38 +227,7 @@ const Course = () => {
                             </div>
                             <hr />
                             {/* Level part */}
-                            <div className={courseCSS.categories}>
-                                <h5>Level</h5>
-                                {Level.map((level, index) => (
-                                    <div key={index} className={courseCSS.categorypart}>
-                                        <input
-                                            type="checkbox"
-                                            id={`level-${index}`}
-                                            checked={checkedLevel[index]}
-                                            onChange={() => handleLevelCheckboxClick(index)}
-                                            className={`${checkedLevel[index] ? courseCSS.shadow : showUncheckedShadowLevel[index] ? courseCSS.unchecked_shadow : ''}`}
-                                        />
-                                        <label htmlFor={`level-${index}`}><p>{level}</p></label>
-                                    </div>
-                                ))}
-                            </div>
-                            <hr />
-                            {/* Price part */}
-                            <div className={courseCSS.categories}>
-                                <h5>Price</h5>
-                                {Price.map((price, index) => (
-                                    <div key={index} className={courseCSS.categorypart}>
-                                        <input
-                                            type="checkbox"
-                                            id={`price-${index}`}
-                                            checked={checkedPrice[index]}
-                                            onChange={() => handlePriceCheckboxClick(index)}
-                                            className={`${checkedPrice[index] ? courseCSS.shadow : showUncheckedShadowPrice[index] ? courseCSS.unchecked_shadow : ''}`}
-                                        />
-                                        <label htmlFor={`price-${index}`}><p>{price}</p></label>
-                                    </div>
-                                ))}
-                            </div>
+
                             <div className={courseCSS.button}>
                                 <button className={courseCSS.btn} onClick={handleClick}>&#x2715;&nbsp;&nbsp;&nbsp;&nbsp;Clear All Filters</button>
                             </div>
@@ -255,8 +238,7 @@ const Course = () => {
                             filters={{
                                 checkedCategories: checked,
                                 checkedTags,
-                                checkedLevel,
-                                checkedPrice
+
                             }} />
                     </div>
                     {showButton && (

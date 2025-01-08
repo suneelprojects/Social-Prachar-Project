@@ -23,38 +23,30 @@ const TimelineComponent = () => {
 
     // Update progress line based on visible cards
     const updateProgress = () => {
-        if (!cardRefs.current.length) return;
+        if (!timelineRef.current || !cardRefs.current.length) return;
 
-        const totalCards = cardRefs.current.filter((ref) => ref !== null).length;
-        const visibleCards = cardRefs.current.filter((card) => {
-            if (!card) return false; // Check for null ref
-            const rect = card.getBoundingClientRect();
-            return rect.top < window.innerHeight && rect.bottom > 0;
-        }).length;
+        const timelineRect = timelineRef.current.getBoundingClientRect();
+        const totalHeight = timelineRect.height;
+        const visibleHeight = Math.min(window.innerHeight - timelineRect.top, totalHeight);
 
-        // Calculate progress based on visible cards
-        const progress = (visibleCards / totalCards) * 100;
+        // Ensure visibleHeight is non-negative
+        const progress = Math.max((visibleHeight / totalHeight) * 100, 0);
         setProgressHeight(progress);
     };
 
     useEffect(() => {
-        // Initialize cardRefs array based on levelcardIndex length
-        if (card && card.levelcardIndex) {
-            cardRefs.current = Array(card.levelcardIndex.length).fill(null);
-        }
-        // Set up scroll and resize event listeners
-        const handleScroll = () => updateProgress();
-        window.addEventListener("scroll", handleScroll);
-        window.addEventListener("resize", handleScroll);
+        const handleScrollAndResize = () => updateProgress();
 
-        // Initial update
-        updateProgress();
+        window.addEventListener("scroll", handleScrollAndResize);
+        window.addEventListener("resize", handleScrollAndResize);
+
+        updateProgress(); // Initial calculation
 
         return () => {
-            window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", handleScroll);
+            window.removeEventListener("scroll", handleScrollAndResize);
+            window.removeEventListener("resize", handleScrollAndResize);
         };
-    }, [card]);
+    }, []);
 
     return (
         <>

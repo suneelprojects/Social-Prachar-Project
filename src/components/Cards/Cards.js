@@ -15,15 +15,13 @@ import { auth } from '../../firebase';
 
 const Cards = ({ filters }) => {
 
-    const { checkedCategories, checkedTags, checkedLevel, checkedPrice } = filters;
-
+    const { checkedCategories, checkedTags } = filters;
     const matchesFilters = (card) => {
         const categoryMatch = checkedCategories[card.categoryIndex] || !checkedCategories.some(Boolean);
         const tagMatch = checkedTags[card.tagIndex] || !checkedTags.some(Boolean);
-        const levelMatch = checkedLevel[card.levelIndex] || !checkedLevel.some(Boolean);
-        const priceMatch = checkedPrice[card.priceIndex] || !checkedPrice.some(Boolean);
 
-        return categoryMatch && tagMatch && levelMatch && priceMatch;
+
+        return categoryMatch && tagMatch;
     };
     const filteredCards = data.filter(matchesFilters);
 
@@ -130,7 +128,7 @@ const Cards = ({ filters }) => {
 
             <div className={cardsCSS.cardfilter}>
                 <div className={cardsCSS.dropdownSection}>
-                    <h4>Short By</h4>
+                    <h4>Sort By</h4>
                     <div className={cardsCSS.dropdown} ref={dropdownRef}>
                         <div className={cardsCSS.selectedOption} onClick={() => setIsOpen(!isOpen)}>
                             {selectedOption}<FontAwesomeIcon icon={faChevronDown} />

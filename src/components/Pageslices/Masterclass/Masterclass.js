@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Masterclass.module.css';
-import classImage from '../../../assets/AssetsOfDetailsPage/masterclass/Group-5015-min-1.png';
-// import Enrollbutton from '../Enrollbutton/Enrollbutton';
-import { useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { data } from './../../Cards/CardData';
+import masterClassImage from '../../../assets/careerworkshop/Free.png';
 
 const Masterclass = () => {
     const { slug } = useParams();
     const [card, setCard] = useState(null);
+    const navigate = useNavigate();
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
@@ -51,15 +51,6 @@ const Masterclass = () => {
         return () => clearInterval(interval);
     }, []);
 
-    // onClick functionality for Enrollbutton
-    const handleEnrollClick = () => {
-        if (card && card.masterClassBookSessionLink) {
-            window.open(card.masterClassBookSessionLink, '_blank', 'noopener,noreferrer');
-        } else {
-            window.alert('Booking link is not available for this course.');
-        }
-    };
-
     return (
         <div className={styles.masterClassContent}>
             <div className={styles.MasterClass}>
@@ -72,14 +63,14 @@ const Masterclass = () => {
 
             <div className={styles.classVideo}>
                 <img
-                    src={card ? card.MasterclassImage : classImage}
+                    src={masterClassImage}
                     alt="Masterclass"
                     className={styles.ClassImage}
                 />
             </div>
 
             <div className={styles.nextLive}>
-                <button className={styles.shinebtn} onClick={handleEnrollClick}>Book Free Session</button>
+                <button className={styles.shinebtn} onClick={() => navigate('/Career-Success-workshop')}>Book Free Session</button>
                 <h2>Next <span style={{ color:'#ff5003'}}>cohort</span> Starts in</h2>
                 <div className={styles.timerBoxes}>
                     <div className={styles.timerBox}>

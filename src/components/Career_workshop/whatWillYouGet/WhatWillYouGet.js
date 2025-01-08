@@ -58,11 +58,11 @@ const WhatWillYouGet = () => {
 
             <div className={style.comments}>
                 <div className={`${style.commentsContainer} container py-5 vh-75`}>
-                    <h1 className="text-center fw-bold fs-1 fs-5 mb-4">
+                    <h1 className="text-center fw-bold fs-2 fs-6 mb-0">
                         Join the <span className="" style={{ color: '#ffc107' }}>12,000+ GRADUATES </span>
                         Who Have Successfully Launched Their Tech Careers - Your Journey Starts Here!
                     </h1>
-                    <div className="row justify-content-center gx-4 gy-4 mt-5">
+                    <div className="row justify-content-center gx-4 gy-4 mt-2">
                         {[
                             {
                                 text: "This workshop was a game-changer for me! I learned how to identify my strengths and prepare for interviews effectively. Today, Iâ€™m a proud software engineer, thanks to the strategies I picked up here.", author: "Priyanka Reddy K", role: 'Software Engineer at FrameWorks(Chennai)'
@@ -82,13 +82,6 @@ const WhatWillYouGet = () => {
                             {
                                 text: "The entrepreneurship tips and real-life success stories shared at the workshop inspired me to start my own venture. I gained the confidence to take risks and build a profitable business.", author: "Vikram Srinivas", role: 'Enterpreneur at HealthTech Start Up'
                             },
-
-                            {
-                                text: "The workshop taught me how to develop a portfolio and present my design work during interviews. The tips I got on storytelling helped me land my job at Swiggy!", author: "Radhika Anantha P", role: 'UX Designer at Swiggy'
-                            },
-                              {
-                                  text: "The Career Success Workshop not only gave me a roadmap to break into AI but also connected me with mentors who guided me throughout my journey. A must-attend for anyone aiming high in tech!", author: "Kunal Rajasekhar", role: 'AI Researcher at Yellow .ai'
-                            }
 
                         ].map((comment, index) => (
                             <div key={index} className="col-12 col-md-6 col-lg-4 d-flex">

@@ -47,7 +47,6 @@ const Button = () => {
 
             const data = await response.json();
             console.log("Form submitted successfully:", data);
-
             // Show success alert after the form is successfully submitted
             alert('Thank you for registering! Your form has been submitted successfully.');
 
@@ -124,7 +123,7 @@ const Button = () => {
                 </div>
                 <div className="text-center">
                     <p className="fw-bold fs-4 fs-6" style={{ fontSize: '18px'}}>
-                        Register by <span style={{ color: '#1e1b61', fontSize: '22px' }}>{weekDate}</span> to unlock exclusive bonuses worth ₹5,393 – offer ends today!
+                        Register by <span style={{ color: '#4941e1', fontSize: '22px' }}>{weekDate}</span> to unlock exclusive bonuses worth ₹5,393 – offer ends today!
                     </p>
                 </div>
             </div>

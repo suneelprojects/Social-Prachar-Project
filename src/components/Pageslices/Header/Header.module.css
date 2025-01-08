@@ -3,7 +3,7 @@
 .headerContainer {
   width: 100%;
   height: auto;
-  margin-bottom:-150px;
+  margin-bottom: -150px;
   overflow: hidden;
   position: relative;
 }
@@ -357,7 +357,7 @@
   .headerText {
     position: relative;
     top: 15px;
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: 10px;
     max-width: 100%;
     text-align: center;
@@ -438,8 +438,9 @@
     z-index: 1000;
   }
 }
+
 @media (min-width: 377px) and (max-width: 440px) {
-  .testimonials{
+  .testimonials {
     position: relative;
     top: 150px;
   }
@@ -605,7 +606,7 @@
 }
 
 @media (min-width: 441px) and (max-width: 767px) {
-  .testimonials{
+  .testimonials {
     position: relative;
     top: 150px;
   }
@@ -771,10 +772,10 @@
 }
 
 @media (min-width: 768px) and (max-width: 920px) {
-.testimonials{
-  position:relative;
-  top: 50px;
-}
+  .testimonials {
+    position: relative;
+    top: 50px;
+  }
   .headerContainer {
     width: 100%;
     height: auto;
@@ -933,6 +934,10 @@
 }
 
 @media (min-width: 921px) and (max-width: 1024px) {
+  .testimonials {
+    position: relative;
+    top: 100px;
+  }
   .headerContainer {
     width: 100%;
   }
@@ -958,7 +963,7 @@
 
   .symbolItemContent {
     position: relative;
-    top: 680px;
+    top: 700px;
     left: 20%;
   }
 
@@ -974,7 +979,7 @@
 
   .EnrollButtonContent {
     position: relative;
-    top: 620px;
+    top: 650px;
     display: flex;
     justify-content: center;
     gap: 5px;
@@ -1033,7 +1038,7 @@
   }
 
   .scrollSection p {
-    font-size: 28px;
+    font-size: 18px;
     width: 95%;
     text-align: center;
   }
@@ -1073,7 +1078,6 @@
     margin-top: -60px;
     display: flex;
     height: 240px;
-
   }
 
   .questionItem {
@@ -1091,7 +1095,6 @@
   }
 }
 
-/* Medium Screens (Tablets, Max width: 1199px) */
 @media (min-width: 1025px) and (max-width: 1199px) {
   .contentContainer {
     width: 98%;
@@ -1137,7 +1140,6 @@
   }
 }
 
-/* Large Screens (Desktops, Min width: 1200px) */
 @media (min-width: 1200px) and (max-width: 1250px) {
   .contentContainer {
     width: 95%;

@@ -92,7 +92,7 @@ const Mentorpage = () => {
                                         height:'130px',
                                         width: '100%',
                                         padding: '20px',
-                                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow for better aesthetics
+                                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                                     }}
                                 >
                                     {/* Box logo */}

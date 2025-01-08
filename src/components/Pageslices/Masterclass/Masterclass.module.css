@@ -11,6 +11,9 @@
   height: 400px;
   text-align: center;
 }
+.ClassImage{
+  border: 5px solid white;
+}
 .Text1,
 .Text3 {
   font-size: 20px;
@@ -41,7 +44,7 @@
 }
 .ClassImage {
   border-radius: 50px;
-  width: 65%;
+  width: 50%;
   height: auto;
   margin-top: 20px;
 }

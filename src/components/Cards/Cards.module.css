@@ -1,5 +1,4 @@
 /** @format */
-
 .cardfilter {
   display: flex;
   justify-content: space-between;
@@ -220,6 +219,14 @@ button:focus {
 
 .emptyStar {
   color: gray;
+}
+
+.ratingValue {
+  margin-left: 8px;
+  position: relative;
+  bottom:2px;
+  font-size: 14px;
+  color: #333;
 }
 
 .price {

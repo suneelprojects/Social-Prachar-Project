@@ -11,7 +11,7 @@ import course8 from "../../assets/course8.jpg";
 import spLogo from "../../assets/SP_Logo.png";
 import spLogoIcon from "../../assets/SP_Logo-icon.png";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { auth } from "../../firebase";
 import {
@@ -22,9 +22,10 @@ import {
 
 const NavBar = () => {
   const [selectedValue, setSelectedValue] = useState("");
+  const location = useLocation();
 
   const categoryArraryOne = [
-    {courseImg: course6,courseName: `Web Development`,NoOFCourses: "5+ courses"}, 
+    { courseImg: course6, courseName: `Web Development`, NoOFCourses: "5+ courses" },
     { courseImg: course2, courseName: "Analytics", NoOFCourses: "4+ courses" },
     { courseImg: course3, courseName: "Marketing", NoOFCourses: "3+ courses" },
   ];
@@ -63,7 +64,7 @@ const NavBar = () => {
     }
     setSelectedValue("");
   };
-  
+
 
   const [expanded, setExpand] = useState(false);
   const Showtoggle = () => {
@@ -127,7 +128,12 @@ const NavBar = () => {
   }
   useEffect(() => { }, [handleCategoryClick]);
 
-  
+
+
+  const isCareerWorkshopPage =
+    location.pathname === "/Career-Success-workshop";
+
+
   return (
     <div className={`${navBarStyle.navBarSticky}`}>
 
@@ -144,26 +150,29 @@ const NavBar = () => {
               <img src={spLogo} className={`${navBarStyle.spLogo}`} />
             </a>
 
-            <select
-              className={`${navBarStyle.selectDropDown}`}
-              value={selectedValue}
-              onChange={handleCategoryDropDown}
-            >
-              <option>Courses</option>
-              {dropDownValues.map((course, i) => (
-                <option value={`${course}`} key={i}>
-                  {course}
-                </option>
-              ))}
-            </select>
+
+            {!isCareerWorkshopPage && (
+              <select
+                className={`${navBarStyle.selectDropDown}`}
+                value={selectedValue}
+                onChange={handleCategoryDropDown}
+              >
+                <option>Courses</option>
+                {dropDownValues.map((course, i) => (
+                  <option value={`${course}`} key={i}>
+                    {course}
+                  </option>
+                ))}
+              </select>
+            )}
 
             <div
               className={`${navBarStyle.hiddenMobileSm} ${navBarStyle.categorySection} `}
             >
-              <button className={`${navBarStyle.category}`}>
+              {/* <button className={`${navBarStyle.category}`}>
                 <i className="bi bi-grid-3x2-gap-fill"></i>Courses
                 <i className="bi bi-chevron-compact-down"></i>
-              </button>
+              </button> */}
 
               <div className={`${navBarStyle.categoryMenu}`}>
                 <div className="d-flex">
@@ -296,6 +305,15 @@ const NavBar = () => {
                     Career WorkShop
                   </NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink
+                    to={"/Upcoming-batches"}
+                    className={`nav-link ${navBarStyle.NavLinkForHover}`}
+                    onClick={closeToggle}
+                  >
+                    Upcoming Batches
+                  </NavLink>
+                </li>
               </ul>
             </div>
           </div>
@@ -305,11 +323,15 @@ const NavBar = () => {
           {/* search icon and login button code starts */}
 
           <div className="d-flex">
-            <div className={`${navBarStyle.hiddenMobileLgMin}`}>
-              <span onClick={handleClickOnIcon}>
-                <i className="bi bi-person-fill"></i>
-              </span>
-            </div>
+
+            {!isCareerWorkshopPage && (
+              <div className={`${navBarStyle.hiddenMobileLgMin}`}>
+                <span>
+                  <i className="bi bi-person-fill"></i>
+                </span>
+              </div>
+            )}
+
             <div className={`${navBarStyle.hiddenMobileLg} `}>
               {user ? (
                 <>
