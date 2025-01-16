@@ -19,8 +19,6 @@ const Cards = ({ filters }) => {
     const matchesFilters = (card) => {
         const categoryMatch = checkedCategories[card.categoryIndex] || !checkedCategories.some(Boolean);
         const tagMatch = checkedTags[card.tagIndex] || !checkedTags.some(Boolean);
-
-
         return categoryMatch && tagMatch;
     };
     const filteredCards = data.filter(matchesFilters);
@@ -63,7 +61,6 @@ const Cards = ({ filters }) => {
 
     // Buttons for Grid and List View
     const [selectedButton, setSelectedButton] = useState('grid');
-
     const handleButtonClick = (buttonType) => {
         setSelectedButton(buttonType);
     };
@@ -86,14 +83,13 @@ const Cards = ({ filters }) => {
     const [wishlist, setWishlist] = useState([]);
     const {addToWishlist} = useWishlist();
     const [user, setUser] = useState();
-    
-
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged((user) => {
         setUser(user);
       });
       return () => unsubscribe();
     }, []);
+
 
     // Constant Sign In form
     const [showSignInForm, setShowSignInForm] = useState(false);

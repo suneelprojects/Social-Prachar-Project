@@ -18,9 +18,6 @@ import student7 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (7).pn
 import student8 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (8).png';
 import student9 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (9).png';
 import student10 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE.png';
-import student11 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/BA.png';
-import student12 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/BDA.png';
-import student13 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/BrandManager.png';
 import student15 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DA (2).png';
 import student16 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DA (3).png';
 import student17 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DA (4).png';
@@ -39,7 +36,6 @@ import student30 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS (7).pn
 import student31 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS (8).png';
 import student32 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS (9).png';
 import student33 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DS.png';
-import student34 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/DevopsE.png';
 import student35 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/FSD.png';
 import student36 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/FSW.png';
 import student37 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (2).png';
@@ -48,7 +44,6 @@ import student39 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (4).pn
 import student40 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (5).png';
 import student41 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (6).png';
 import student42 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (7).png';
-import student43 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML.png';
 import student44 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SD.png';
 import student45 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (3).png';
 import student46 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (2).png';
@@ -74,6 +69,7 @@ import authorPhoto from '../../assets/authorphoto.jpg';
 import { faHandshake, faCalendarCheck, faChartBar, faThumbsUp, faEnvelope, faSnowflake, faEye } from "@fortawesome/free-regular-svg-icons";
 import { faArrowUp, faBinoculars, faBriefcase, faBullhorn, faCertificate, faChartLine, faChartPie, faClipboardCheck, faClipboardList, faCloud, faCloudUploadAlt, faCode, faCodeBranch, faCogs, faDatabase, faDesktop, faGlobe, faLaptopCode, faLock, faMoneyBillWave, faPlug, faProjectDiagram, faRobot, faRocket, faSearch, faServer, faShareAlt, faSyncAlt, faTable, faTachometerAlt, faTasks, faTools } from '@fortawesome/free-solid-svg-icons';
 import { faDocker, faNodeJs, faPiedPiper, faReact } from '@fortawesome/free-brands-svg-icons';
+
 
 
 export const data = [
@@ -358,7 +354,7 @@ export const data = [
     {
         id: 1,
         courseID: 2,
-        slug: 'python-full-stack-development',
+        slug: 'python-full-stack-development-course',
         imageSrc: img2,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
@@ -683,7 +679,7 @@ export const data = [
         id: 1,
         courseID: 3,
         imageSrc: img3,
-        slug: 'java-full-stack-development',
+        slug: 'java-full-stack-development-course',
         courseTitle: 'Development',
         Duration: ' 6 months',
         students: '2600+ Students',
@@ -1014,138 +1010,138 @@ export const data = [
     {
         id: 2,
         courseID: 4,
-        categoryIndex: 6, // Development
-        tagIndex: 1,      // Web Development
-        slug: 'digital-marketing-course-training-institute-hyderabad',
-        courseTitle: 'Marketing',
-        imageSrc: img4,
-        Duration: '4 months',
-        students: '3200+ students',
-        text: 'Digital Marketing',
-        rating: 4.0,
-        Header: 'Learn Digital Marketing Course & Become a Certified Professional in',
-        TestmonialsCommentsImage1: testmonialsCommentImageDM,
-        TestmonialsCommentsImage2: testmonialsCommentImageDM,
+        categoryIndex: 0, // Development
+        tagIndex: 0,      // Web Development
+        slug: 'reactjs-training',
+        courseTitle: 'Development',
+        imageSrc: img7,
+        TestmonialsCommentsImage1: testmonialsCommentImageFSW,
+        TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
+        Duration: '6 months',
+        students: '2800+ students',
+        text: 'Mern Stack (Full Stack)',
+        rating: 4.3,
+        Header: 'Learn Mern Stack Course & Become a Certified Professional in',
         popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Digital Marketing' },
+            { dropDownid: 0, courseName: 'Mern Stack (Full Stack)' },
         ],
-        selfQuestioning: 'Starting your Digital Marketing Career?',
+        selfQuestioning: 'Starting your Mern Stack Career?',
         questions: [
-            "Do you want to explore career opportunities in Digital Marketing?",
-            "Are you ready to master essential Digital Marketing skills in just 120 days?",
-            "Do you want to kickstart your Digital Marketing career with 4+ LPA opportunities?",
+            "Do you want to explore career opportunities in Mern Stack?",
+            "Are you ready to master essential Mern Stack skills in just 180 days?",
+            "Do you want to kickstart your Mern Stack career with 4+ LPA opportunities?"
         ],
-        Description: 'Social Prachar ranked as #1 Best Digital Marketing Course Training Institute in Hyderabad with 15,000+ Success Stories since 2014. We Provide 100% placement Guarantee for all our Trainees with Top MNCs & StartUps. Become Digital Marketing Expert in less than 4 months. Enroll now for the most Advanced Digital Marketing Training Program.',
+        Description: 'The MERN Stack (MongoDB, Express.js, React.js, Node.js) is one of the most popular full-stack development frameworks, enabling developers to build robust, scalable, and interactive web applications. This course provides a hands-on learning experience in mastering the MERN Stack. You will gain skills in designing and developing dynamic web applications, building APIs, integrating front-end and back-end development, managing databases, and deploying applications. Key areas of focus include building RESTful APIs, creating interactive user interfaces, managing state with Redux, authenticating users, and deploying applications on platforms like Heroku or Vercel. By the end of this course, you"ll be equipped to develop and deploy modern web applications with the MERN Stack.',
         moduleContent: [
             {
                 id: 1,
                 module: "Module 1",
-                title: "Introduction to Digital Marketing",
+                title: "Introduction to Full-Stack Development with MERN",
                 details: {
-                    videos: 7,
+                    videos: 6,
                     time: "2 weeks",
                     descriptions: [
-                        "Understanding the fundamentals of digital marketing and its role in modern businesses",
-                        "Key digital marketing channels: SEO, SEM, social media, email marketing, and content marketing",
-                        "Overview of marketing funnels and customer journeys"
+                        "Overview of the MERN stack and its ecosystem",
+                        "Fundamentals of full-stack development",
+                        "Setting up your development environment"
                     ]
                 }
             },
             {
                 id: 2,
                 module: "Module 2",
-                title: "Search Engine Optimization (SEO)",
+                title: "Infrastructure as Code (IaC) with AWS CloudFormation",
                 details: {
                     videos: 7,
                     time: "3 weeks",
                     descriptions: [
-                        "On-page SEO: Keywords, meta tags, headings, and content optimization",
-                        "Off-page SEO: Backlinks, guest posting, and link-building strategies",
-                        "Technical SEO: Website speed, mobile responsiveness, and crawling"
+                        "Introduction to Infrastructure as Code (IaC)",
+                        "Creating and managing infrastructure using AWS CloudFormation templates",
+                        "Best practices for defining infrastructure and managing deployments"
                     ]
                 }
             },
             {
                 id: 3,
                 module: "Module 3",
-                title: "Search Engine Marketing (SEM) & Paid Ads",
+                title: "Continuous Integration and Continuous Delivery (CI/CD) with AWS",
                 details: {
-                    videos: 7,
+                    videos: 8,
                     time: "3 weeks",
                     descriptions: [
-                        "Introduction to Google Ads: Campaign creation, keyword targeting, and ad formats",
-                        "Understanding pay-per-click (PPC) advertising and cost-per-click (CPC)",
-                        "Optimizing ad performance and A/B testing strategies"
+                        "Setting up Continuous Integration (CI) pipelines with AWS CodeBuild",
+                        "Automating deployment processes using AWS CodeDeploy",
+                        "Implementing Continuous Delivery (CD) for rapid application releases"
                     ]
                 }
             },
             {
                 id: 4,
                 module: "Module 4",
-                title: "Social Media Marketing (SMM)",
+                title: "Monitoring and Logging with AWS CloudWatch",
                 details: {
                     videos: 7,
-                    time: "1 month",
+                    time: "2 weeks",
                     descriptions: [
-                        "Crafting effective social media strategies for platforms like Facebook, Instagram, Twitter, and LinkedIn",
-                        "Content creation: Visuals, copywriting, and video marketing",
-                        "Analyzing social media metrics and improving campaign performance"
+                        "Configuring AWS CloudWatch for real-time monitoring",
+                        "Setting up alerts and logs for application and infrastructure performance",
+                        "Analyzing CloudWatch logs to troubleshoot and optimize performance"
                     ]
                 }
             },
             {
                 id: 5,
                 module: "Module 5",
-                title: "Email Marketing & Automation",
+                title: "Containerization and Orchestration with AWS ECS and EKS",
                 details: {
-                    videos: 7,
-                    time: "2 weeks",
+                    videos: 8,
+                    time: "4 weeks",
                     descriptions: [
-                        "Building an email list and creating high-converting campaigns",
-                        "Email automation tools: Drip campaigns and customer segmentation",
-                        "Measuring email performance: Open rates, click-through rates, and ROI"
+                        "Introduction to containerization and Docker",
+                        "Deploying containerized applications with Amazon ECS (Elastic Container Service)",
+                        "Orchestrating containers using AWS EKS (Elastic Kubernetes Service)"
                     ]
                 }
             },
             {
                 id: 6,
                 module: "Module 6",
-                title: "Content Marketing & Blogging",
+                title: "Automating Infrastructure Management with AWS OpsWorks",
                 details: {
-                    videos: 7,
-                    time: "3 weeks",
+                    videos: 6,
+                    time: "2 weeks",
                     descriptions: [
-                        "Creating engaging content tailored to your audience",
-                        "Building authority through blogging and guest posting",
-                        "Leveraging content marketing tools to boost reach and engagement"
+                        "Overview of AWS OpsWorks for managing applications and infrastructure",
+                        "Configuring and managing infrastructure with AWS OpsWorks Stacks and Layers",
+                        "Automating application deployment and lifecycle management"
                     ]
                 }
             },
             {
                 id: 7,
                 module: "Module 7",
-                title: "Web Analytics & Performance Tracking",
+                title: "Security and Compliance in AWS DevOps",
                 details: {
                     videos: 7,
-                    time: "2 weeks",
+                    time: "3 weeks",
                     descriptions: [
-                        "Introduction to Google Analytics: Setting up and understanding reports",
-                        "Tracking user behavior and conversion rates",
-                        "Analyzing key performance indicators (KPIs) to measure success"
+                        "Ensuring security in the DevOps pipeline",
+                        "Using AWS Identity and Access Management (IAM) for user permissions",
+                        "Complying with security best practices and managing audits in AWS"
                     ]
                 }
             },
             {
                 id: 8,
                 module: "Module 8",
-                title: "E-Commerce Marketing",
+                title: "Scaling and Load Balancing with AWS",
                 details: {
                     videos: 7,
-                    time: "2 weeks",
+                    time: "3 weeks",
                     descriptions: [
-                        "Driving traffic and sales to online stores",
-                        "Understanding product listing ads (PLAs) and remarketing strategies",
-                        "Case studies on successful e-commerce campaigns"
+                        "Auto-scaling applications on AWS to handle traffic spikes",
+                        "Configuring Elastic Load Balancing (ELB) to distribute traffic efficiently",
+                        "Best practices for scaling and balancing workloads on AWS"
                     ]
                 }
             },
@@ -1157,88 +1153,93 @@ export const data = [
                     videos: 7,
                     time: "1 month",
                     descriptions: [
-                        "Building a complete digital marketing strategy for a real-world business",
-                        "Implementing SEO, SEM, social media, and email marketing tactics",
-                        "Creating performance reports and presenting insights"
+                        "Building a complete AWS DevOps pipeline for a real-world project",
+                        "Implementing CI/CD, monitoring, and automated infrastructure management",
+                        "Showcasing a final project and preparing for certification"
                     ]
                 }
             }
         ],
-        timeLineHeading: 'Digital Marketing',
+        timeLineHeading: 'Mern Stack',
         levelcardIndex: [
             {
-                icon: faGlobe,
-                title: "Introduction",
-                description: "Explore the foundational concepts of digital marketing, including online business models, basic marketing principles, and website fundamentals."
-            },
-            {
-                icon: faDesktop,
-                title: "Website Designing",
-                description: "Learn to create and design responsive, visually appealing websites using CMS platforms like WordPress. Topics include dashboard navigation, theme customization, and advanced design techniques."
-            },
-            {
-                icon: faSearch,
-                title: "Search Engine Optimization (SEO)",
-                description: "Master SEO strategies, including on-page and off-page optimization, search engine algorithms, and content optimization to enhance visibility."
-            },
-            {
-                icon: faBullhorn,
-                title: "Search Engine Marketing (SEM)",
-                description: "Dive into paid marketing strategies, including search ads, display ads, video ads, shopping ads, remarketing, and conversion tracking."
-            },
-            {
-                icon: faThumbsUp,
-                title: "Social Media Marketing (SMM)",
-                description: "Learn to create engaging campaigns for platforms like Facebook, LinkedIn, Instagram, and Twitter/X to boost brand visibility and engagement."
-            },
-            {
-                icon: faTools,
-                title: "Google Tools & Monetization",
-                description: "Understand website analytics and performance with tools like Google Search Console, Google Analytics, and Google My Business."
-            },
-            {
-                icon: faMoneyBillWave,
-                title: "Monetization",
-                description: "Explore revenue generation methods like Google AdSense, affiliate marketing, and YouTube monetization strategies."
-            },
-            {
-                icon: faEnvelope,
-                title: "Email Marketing",
-                description: "Build effective email campaigns, grow subscriber lists, and track performance for improved user engagement."
+                icon: faCode,
+                title: "Introduction to MERN Stack",
+                description: "Learn the core concepts of the MERN stack, including MongoDB, Express.js, React.js, and Node.js, and understand how they work together in modern web applications."
             },
             {
                 icon: faDatabase,
-                title: "Master Data Analytics",
-                description: "Learn data analysis and visualization using tools like Excel, SQL, and Power BI. Apply data-driven decision-making in marketing strategies."
+                title: "Database Management with MongoDB",
+                description: "Master MongoDB for storing and managing data, including schema design, CRUD operations, indexing, and using the Mongoose library for seamless integration."
             },
             {
-                icon: faCloud,
-                title: "Cloud Deployment & AI",
-                description: "Understand AI concepts, deep learning, and NLP techniques, and deploy marketing automation models on platforms like AWS and Azure."
+                icon: faServer,
+                title: "Building APIs with Express.js",
+                description: "Learn to build scalable and efficient RESTful APIs using Express.js, including middleware integration, routing, and error handling."
+            },
+            {
+                icon: faReact,
+                title: "Frontend Development with React",
+                description: "Develop dynamic and responsive user interfaces using React, including state management with hooks, component lifecycles, and best practices for performance optimization."
+            },
+            {
+                icon: faNodeJs,
+                title: "Backend Development with Node.js",
+                description: "Understand the fundamentals of Node.js for server-side programming, asynchronous operations, and integrating with third-party libraries and APIs."
+            },
+            {
+                icon: faSyncAlt,
+                title: "Connecting Frontend and Backend",
+                description: "Learn to connect the React frontend with the Express backend through RESTful APIs, including data fetching, form handling, and state synchronization."
+            },
+            {
+                icon: faCodeBranch,
+                title: "Version Control with Git & GitHub",
+                description: "Master Git for version control and collaborate on projects using GitHub, including branching, merging, and pull request workflows."
+            },
+            {
+                icon: faChartLine,
+                title: "State Management with Redux",
+                description: "Dive deep into Redux for managing application state in larger React applications, including creating reducers, actions, and middleware."
+            },
+            {
+                icon: faLaptopCode,
+                title: "Full Stack Application Development",
+                description: "Build a complete full-stack application from scratch, integrating MongoDB, Express, React, and Node.js, with a focus on best practices and scalability."
+            },
+            {
+                icon: faLock,
+                title: "Authentication and Authorization",
+                description: "Implement user authentication and authorization using JSON Web Tokens (JWT) and secure data transmission with encryption techniques."
+            },
+            {
+                icon: faCogs,
+                title: "Deployment and Hosting",
+                description: "Learn to deploy MERN applications on platforms like Heroku, Netlify, or AWS, and understand the setup of CI/CD pipelines for seamless updates."
             },
             {
                 icon: faTasks,
-                title: "Project Work",
-                description: "Implement real-world projects to apply your learning, improve problem-solving skills, and gain practical experience."
+                title: "Capstone Project",
+                description: "Work on a real-world project that integrates all aspects of MERN stack development, showcasing your skills in building, testing, and deploying a production-grade application."
             },
             {
                 icon: faBriefcase,
                 title: "Placement Preparation",
-                description: "Enhance your resume, optimize LinkedIn profiles, and prepare for job interviews with comprehensive support."
+                description: "Prepare for the job market with resume building, interview preparation, and understanding the roles and responsibilities of a MERN Stack Developer."
             }
         ],
         accordionContent: [
             {
-                title: 'What is the duration of the Digital Marketing program at SocialPrachar?',
-                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to fit varying schedules and learning objectives.'
+                title: 'What is the duration of the MERN Stack program at SocialPrachar?',
+                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to suit different learning paces and schedules.'
             },
             {
-                title: 'What topics are covered in the Digital Marketing curriculum?',
-                content: 'Topics include SEO, SEM, social media marketing, content marketing, email marketing, analytics, and real-time project implementation.'
+                title: 'What topics are covered in the MERN Stack curriculum?',
+                content: 'Topics include MongoDB, Express.js, React.js, Node.js, API integration, authentication, deployment, and real-world project implementation.'
             },
             {
                 title: 'Are there any internship or job guarantee options?',
-                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the industry.'
+                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the tech industry.'
             },
             {
                 title: 'What are the class formats available (online or classroom)?',
@@ -1246,51 +1247,50 @@ export const data = [
             },
             {
                 title: 'Is there a certification awarded upon completion?',
-                content: 'Yes, a professional certification is awarded upon successful completion of the program, which adds value to your resume and portfolio.'
+                content: 'Yes, a professional certification is awarded upon successful completion of the program, which enhances your resume and demonstrates your expertise in MERN Stack development.'
             },
             {
                 title: 'What are the average salary expectations for program graduates?',
-                content: 'Graduates can expect competitive salaries in the digital marketing field, with opportunities for growth depending on their expertise and the job role secured.'
+                content: 'Graduates can expect competitive salaries in the software development field, with opportunities for growth based on their skill level and the roles they secure.'
             },
             {
                 title: 'Who are the trainers, and what qualifications do they have?',
-                content: 'Trainers are experienced digital marketing professionals with a proven track record in the industry, offering practical insights and up-to-date training.'
+                content: 'Trainers are experienced full-stack developers with a strong background in MERN Stack technologies, providing practical insights and up-to-date industry knowledge.'
             },
             {
-                title: 'How does SocialPrachar support non-marketing professionals?',
-                content: 'SocialPrachar offers foundational modules to help beginners and non-marketing professionals gain the skills needed to transition into the field.'
+                title: 'How does SocialPrachar support non-programming professionals?',
+                content: 'SocialPrachar offers foundational modules to help beginners and non-programmers build the necessary coding skills to transition into the field of web development.'
             },
             {
                 title: 'What kind of projects will I work on during the course?',
-                content: 'Projects include real-world digital marketing campaigns, SEO optimization, content strategy, and analytics-based decision-making, ensuring hands-on learning.'
+                content: 'Projects include building full-stack web applications, CRUD operations with MongoDB, developing RESTful APIs, creating dynamic UIs with React, and deploying applications to production.'
             },
             {
                 title: 'How can I register or get more information about upcoming batches?',
-                content: 'You can register through the website or contact the admissions team for detailed information about batch schedules and enrollment processes.'
+                content: 'You can register through the website or contact the admissions team for detailed information about batch schedules and the enrollment process.'
             }
         ],
         studentPlacedImages: [
-            { id: 1, image: student25 },
-            { id: 2, image: student26 },
-            { id: 3, image: student27 },
-            { id: 4, image: student28 },
-            { id: 5, image: student29 },
-            { id: 6, image: student30 },
-            { id: 7, image: student31 },
-            { id: 8, image: student32 },
-            { id: 9, image: student33 },
-            { id: 11, image: student15 },
-            { id: 12, image: student16 },
-            { id: 13, image: student17 },
-            { id: 14, image: student18 },
-            { id: 15, image: student19 },
-            { id: 17, image: student21 },
-            { id: 18, image: student22 },
-            { id: 19, image: student23 },
-            { id: 20, image: student24 }
+            { id: 1, image: student45 },
+            { id: 2, image: student46 },
+            { id: 3, image: student47 },
+            { id: 4, image: student48 },
+            { id: 5, image: student49 },
+            { id: 6, image: student50 },
+            { id: 7, image: student51 },
+            { id: 8, image: student1 },
+            { id: 9, image: student2 },
+            { id: 10, image: student3 },
+            { id: 11, image: student4 },
+            { id: 12, image: student5 },
+            { id: 13, image: student6 },
+            { id: 14, image: student7 },
+            { id: 15, image: student8 },
+            { id: 16, image: student9 },
+            { id: 17, image: student10 }
         ],
-        bannerHeader: 'Learn Digital Marketing Today',
-        bannerStudentsEnrolled: '6k+ Students Enrolled',
+        bannerHeader: 'Learn Mern Stack Today',
+        bannerStudentsEnrolled: '2.8k+ Students Enrolled',
 
     },
 
@@ -1901,139 +1901,139 @@ export const data = [
 
     {
         id: 2,
-        courseID: 6,
-        categoryIndex: 0, // Development
-        tagIndex: 0,      // Web Development
-        slug: 'mern-stack',
-        courseTitle: 'Development',
-        imageSrc: img7,
-        TestmonialsCommentsImage1: testmonialsCommentImageFSW,
-        TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
-        Duration: '6 months',
-        students: '2800+ students',
-        text: 'Mern Stack (Full Stack)',
-        rating: 4.3,
-        Header: 'Learn Mern Stack Course & Become a Certified Professional in',
+        courseID: 7,
+        categoryIndex: 6, // Development
+        tagIndex: 1,      // Web Development
+        slug: 'digital-marketing-course-training-institute-hyderabad',
+        courseTitle: 'Marketing',
+        imageSrc: img4,
+        Duration: '4 months',
+        students: '3200+ students',
+        text: 'Digital Marketing',
+        rating: 4.0,
+        Header: 'Learn Digital Marketing Course & Become a Certified Professional in',
+        TestmonialsCommentsImage1: testmonialsCommentImageDM,
+        TestmonialsCommentsImage2: testmonialsCommentImageDM,
         popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Mern Stack (Full Stack)' },
+            { dropDownid: 0, courseName: 'Digital Marketing' },
         ],
-        selfQuestioning: 'Starting your Mern Stack Career?',
+        selfQuestioning: 'Starting your Digital Marketing Career?',
         questions: [
-            "Do you want to explore career opportunities in Mern Stack?",
-            "Are you ready to master essential Mern Stack skills in just 180 days?",
-            "Do you want to kickstart your Mern Stack career with 4+ LPA opportunities?"
+            "Do you want to explore career opportunities in Digital Marketing?",
+            "Are you ready to master essential Digital Marketing skills in just 120 days?",
+            "Do you want to kickstart your Digital Marketing career with 4+ LPA opportunities?",
         ],
-        Description: 'The MERN Stack (MongoDB, Express.js, React.js, Node.js) is one of the most popular full-stack development frameworks, enabling developers to build robust, scalable, and interactive web applications. This course provides a hands-on learning experience in mastering the MERN Stack. You will gain skills in designing and developing dynamic web applications, building APIs, integrating front-end and back-end development, managing databases, and deploying applications. Key areas of focus include building RESTful APIs, creating interactive user interfaces, managing state with Redux, authenticating users, and deploying applications on platforms like Heroku or Vercel. By the end of this course, you"ll be equipped to develop and deploy modern web applications with the MERN Stack.',
+        Description: 'Social Prachar ranked as #1 Best Digital Marketing Course Training Institute in Hyderabad with 15,000+ Success Stories since 2014. We Provide 100% placement Guarantee for all our Trainees with Top MNCs & StartUps. Become Digital Marketing Expert in less than 4 months. Enroll now for the most Advanced Digital Marketing Training Program.',
         moduleContent: [
             {
                 id: 1,
                 module: "Module 1",
-                title: "Introduction to Full-Stack Development with MERN",
+                title: "Introduction to Digital Marketing",
                 details: {
-                    videos: 6,
+                    videos: 7,
                     time: "2 weeks",
                     descriptions: [
-                        "Overview of the MERN stack and its ecosystem",
-                        "Fundamentals of full-stack development",
-                        "Setting up your development environment"
+                        "Understanding the fundamentals of digital marketing and its role in modern businesses",
+                        "Key digital marketing channels: SEO, SEM, social media, email marketing, and content marketing",
+                        "Overview of marketing funnels and customer journeys"
                     ]
                 }
             },
             {
                 id: 2,
                 module: "Module 2",
-                title: "Infrastructure as Code (IaC) with AWS CloudFormation",
+                title: "Search Engine Optimization (SEO)",
                 details: {
                     videos: 7,
                     time: "3 weeks",
                     descriptions: [
-                        "Introduction to Infrastructure as Code (IaC)",
-                        "Creating and managing infrastructure using AWS CloudFormation templates",
-                        "Best practices for defining infrastructure and managing deployments"
+                        "On-page SEO: Keywords, meta tags, headings, and content optimization",
+                        "Off-page SEO: Backlinks, guest posting, and link-building strategies",
+                        "Technical SEO: Website speed, mobile responsiveness, and crawling"
                     ]
                 }
             },
             {
                 id: 3,
                 module: "Module 3",
-                title: "Continuous Integration and Continuous Delivery (CI/CD) with AWS",
+                title: "Search Engine Marketing (SEM) & Paid Ads",
                 details: {
-                    videos: 8,
+                    videos: 7,
                     time: "3 weeks",
                     descriptions: [
-                        "Setting up Continuous Integration (CI) pipelines with AWS CodeBuild",
-                        "Automating deployment processes using AWS CodeDeploy",
-                        "Implementing Continuous Delivery (CD) for rapid application releases"
+                        "Introduction to Google Ads: Campaign creation, keyword targeting, and ad formats",
+                        "Understanding pay-per-click (PPC) advertising and cost-per-click (CPC)",
+                        "Optimizing ad performance and A/B testing strategies"
                     ]
                 }
             },
             {
                 id: 4,
                 module: "Module 4",
-                title: "Monitoring and Logging with AWS CloudWatch",
+                title: "Social Media Marketing (SMM)",
                 details: {
                     videos: 7,
-                    time: "2 weeks",
+                    time: "1 month",
                     descriptions: [
-                        "Configuring AWS CloudWatch for real-time monitoring",
-                        "Setting up alerts and logs for application and infrastructure performance",
-                        "Analyzing CloudWatch logs to troubleshoot and optimize performance"
+                        "Crafting effective social media strategies for platforms like Facebook, Instagram, Twitter, and LinkedIn",
+                        "Content creation: Visuals, copywriting, and video marketing",
+                        "Analyzing social media metrics and improving campaign performance"
                     ]
                 }
             },
             {
                 id: 5,
                 module: "Module 5",
-                title: "Containerization and Orchestration with AWS ECS and EKS",
+                title: "Email Marketing & Automation",
                 details: {
-                    videos: 8,
-                    time: "4 weeks",
+                    videos: 7,
+                    time: "2 weeks",
                     descriptions: [
-                        "Introduction to containerization and Docker",
-                        "Deploying containerized applications with Amazon ECS (Elastic Container Service)",
-                        "Orchestrating containers using AWS EKS (Elastic Kubernetes Service)"
+                        "Building an email list and creating high-converting campaigns",
+                        "Email automation tools: Drip campaigns and customer segmentation",
+                        "Measuring email performance: Open rates, click-through rates, and ROI"
                     ]
                 }
             },
             {
                 id: 6,
                 module: "Module 6",
-                title: "Automating Infrastructure Management with AWS OpsWorks",
+                title: "Content Marketing & Blogging",
                 details: {
-                    videos: 6,
-                    time: "2 weeks",
+                    videos: 7,
+                    time: "3 weeks",
                     descriptions: [
-                        "Overview of AWS OpsWorks for managing applications and infrastructure",
-                        "Configuring and managing infrastructure with AWS OpsWorks Stacks and Layers",
-                        "Automating application deployment and lifecycle management"
+                        "Creating engaging content tailored to your audience",
+                        "Building authority through blogging and guest posting",
+                        "Leveraging content marketing tools to boost reach and engagement"
                     ]
                 }
             },
             {
                 id: 7,
                 module: "Module 7",
-                title: "Security and Compliance in AWS DevOps",
+                title: "Web Analytics & Performance Tracking",
                 details: {
                     videos: 7,
-                    time: "3 weeks",
+                    time: "2 weeks",
                     descriptions: [
-                        "Ensuring security in the DevOps pipeline",
-                        "Using AWS Identity and Access Management (IAM) for user permissions",
-                        "Complying with security best practices and managing audits in AWS"
+                        "Introduction to Google Analytics: Setting up and understanding reports",
+                        "Tracking user behavior and conversion rates",
+                        "Analyzing key performance indicators (KPIs) to measure success"
                     ]
                 }
             },
             {
                 id: 8,
                 module: "Module 8",
-                title: "Scaling and Load Balancing with AWS",
+                title: "E-Commerce Marketing",
                 details: {
                     videos: 7,
-                    time: "3 weeks",
+                    time: "2 weeks",
                     descriptions: [
-                        "Auto-scaling applications on AWS to handle traffic spikes",
-                        "Configuring Elastic Load Balancing (ELB) to distribute traffic efficiently",
-                        "Best practices for scaling and balancing workloads on AWS"
+                        "Driving traffic and sales to online stores",
+                        "Understanding product listing ads (PLAs) and remarketing strategies",
+                        "Case studies on successful e-commerce campaigns"
                     ]
                 }
             },
@@ -2045,93 +2045,88 @@ export const data = [
                     videos: 7,
                     time: "1 month",
                     descriptions: [
-                        "Building a complete AWS DevOps pipeline for a real-world project",
-                        "Implementing CI/CD, monitoring, and automated infrastructure management",
-                        "Showcasing a final project and preparing for certification"
+                        "Building a complete digital marketing strategy for a real-world business",
+                        "Implementing SEO, SEM, social media, and email marketing tactics",
+                        "Creating performance reports and presenting insights"
                     ]
                 }
             }
         ],
-        timeLineHeading: 'Mern Stack',
+        timeLineHeading: 'Digital Marketing',
         levelcardIndex: [
             {
-                icon: faCode,
-                title: "Introduction to MERN Stack",
-                description: "Learn the core concepts of the MERN stack, including MongoDB, Express.js, React.js, and Node.js, and understand how they work together in modern web applications."
+                icon: faGlobe,
+                title: "Introduction",
+                description: "Explore the foundational concepts of digital marketing, including online business models, basic marketing principles, and website fundamentals."
+            },
+            {
+                icon: faDesktop,
+                title: "Website Designing",
+                description: "Learn to create and design responsive, visually appealing websites using CMS platforms like WordPress. Topics include dashboard navigation, theme customization, and advanced design techniques."
+            },
+            {
+                icon: faSearch,
+                title: "Search Engine Optimization (SEO)",
+                description: "Master SEO strategies, including on-page and off-page optimization, search engine algorithms, and content optimization to enhance visibility."
+            },
+            {
+                icon: faBullhorn,
+                title: "Search Engine Marketing (SEM)",
+                description: "Dive into paid marketing strategies, including search ads, display ads, video ads, shopping ads, remarketing, and conversion tracking."
+            },
+            {
+                icon: faThumbsUp,
+                title: "Social Media Marketing (SMM)",
+                description: "Learn to create engaging campaigns for platforms like Facebook, LinkedIn, Instagram, and Twitter/X to boost brand visibility and engagement."
+            },
+            {
+                icon: faTools,
+                title: "Google Tools & Monetization",
+                description: "Understand website analytics and performance with tools like Google Search Console, Google Analytics, and Google My Business."
+            },
+            {
+                icon: faMoneyBillWave,
+                title: "Monetization",
+                description: "Explore revenue generation methods like Google AdSense, affiliate marketing, and YouTube monetization strategies."
+            },
+            {
+                icon: faEnvelope,
+                title: "Email Marketing",
+                description: "Build effective email campaigns, grow subscriber lists, and track performance for improved user engagement."
             },
             {
                 icon: faDatabase,
-                title: "Database Management with MongoDB",
-                description: "Master MongoDB for storing and managing data, including schema design, CRUD operations, indexing, and using the Mongoose library for seamless integration."
+                title: "Master Data Analytics",
+                description: "Learn data analysis and visualization using tools like Excel, SQL, and Power BI. Apply data-driven decision-making in marketing strategies."
             },
             {
-                icon: faServer,
-                title: "Building APIs with Express.js",
-                description: "Learn to build scalable and efficient RESTful APIs using Express.js, including middleware integration, routing, and error handling."
-            },
-            {
-                icon: faReact,
-                title: "Frontend Development with React",
-                description: "Develop dynamic and responsive user interfaces using React, including state management with hooks, component lifecycles, and best practices for performance optimization."
-            },
-            {
-                icon: faNodeJs,
-                title: "Backend Development with Node.js",
-                description: "Understand the fundamentals of Node.js for server-side programming, asynchronous operations, and integrating with third-party libraries and APIs."
-            },
-            {
-                icon: faSyncAlt,
-                title: "Connecting Frontend and Backend",
-                description: "Learn to connect the React frontend with the Express backend through RESTful APIs, including data fetching, form handling, and state synchronization."
-            },
-            {
-                icon: faCodeBranch,
-                title: "Version Control with Git & GitHub",
-                description: "Master Git for version control and collaborate on projects using GitHub, including branching, merging, and pull request workflows."
-            },
-            {
-                icon: faChartLine,
-                title: "State Management with Redux",
-                description: "Dive deep into Redux for managing application state in larger React applications, including creating reducers, actions, and middleware."
-            },
-            {
-                icon: faLaptopCode,
-                title: "Full Stack Application Development",
-                description: "Build a complete full-stack application from scratch, integrating MongoDB, Express, React, and Node.js, with a focus on best practices and scalability."
-            },
-            {
-                icon: faLock,
-                title: "Authentication and Authorization",
-                description: "Implement user authentication and authorization using JSON Web Tokens (JWT) and secure data transmission with encryption techniques."
-            },
-            {
-                icon: faCogs,
-                title: "Deployment and Hosting",
-                description: "Learn to deploy MERN applications on platforms like Heroku, Netlify, or AWS, and understand the setup of CI/CD pipelines for seamless updates."
+                icon: faCloud,
+                title: "Cloud Deployment & AI",
+                description: "Understand AI concepts, deep learning, and NLP techniques, and deploy marketing automation models on platforms like AWS and Azure."
             },
             {
                 icon: faTasks,
-                title: "Capstone Project",
-                description: "Work on a real-world project that integrates all aspects of MERN stack development, showcasing your skills in building, testing, and deploying a production-grade application."
+                title: "Project Work",
+                description: "Implement real-world projects to apply your learning, improve problem-solving skills, and gain practical experience."
             },
             {
                 icon: faBriefcase,
                 title: "Placement Preparation",
-                description: "Prepare for the job market with resume building, interview preparation, and understanding the roles and responsibilities of a MERN Stack Developer."
+                description: "Enhance your resume, optimize LinkedIn profiles, and prepare for job interviews with comprehensive support."
             }
         ],
         accordionContent: [
             {
-                title: 'What is the duration of the MERN Stack program at SocialPrachar?',
-                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to suit different learning paces and schedules.'
+                title: 'What is the duration of the Digital Marketing program at SocialPrachar?',
+                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to fit varying schedules and learning objectives.'
             },
             {
-                title: 'What topics are covered in the MERN Stack curriculum?',
-                content: 'Topics include MongoDB, Express.js, React.js, Node.js, API integration, authentication, deployment, and real-world project implementation.'
+                title: 'What topics are covered in the Digital Marketing curriculum?',
+                content: 'Topics include SEO, SEM, social media marketing, content marketing, email marketing, analytics, and real-time project implementation.'
             },
             {
                 title: 'Are there any internship or job guarantee options?',
-                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the tech industry.'
+                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the industry.'
             },
             {
                 title: 'What are the class formats available (online or classroom)?',
@@ -2139,56 +2134,57 @@ export const data = [
             },
             {
                 title: 'Is there a certification awarded upon completion?',
-                content: 'Yes, a professional certification is awarded upon successful completion of the program, which enhances your resume and demonstrates your expertise in MERN Stack development.'
+                content: 'Yes, a professional certification is awarded upon successful completion of the program, which adds value to your resume and portfolio.'
             },
             {
                 title: 'What are the average salary expectations for program graduates?',
-                content: 'Graduates can expect competitive salaries in the software development field, with opportunities for growth based on their skill level and the roles they secure.'
+                content: 'Graduates can expect competitive salaries in the digital marketing field, with opportunities for growth depending on their expertise and the job role secured.'
             },
             {
                 title: 'Who are the trainers, and what qualifications do they have?',
-                content: 'Trainers are experienced full-stack developers with a strong background in MERN Stack technologies, providing practical insights and up-to-date industry knowledge.'
+                content: 'Trainers are experienced digital marketing professionals with a proven track record in the industry, offering practical insights and up-to-date training.'
             },
             {
-                title: 'How does SocialPrachar support non-programming professionals?',
-                content: 'SocialPrachar offers foundational modules to help beginners and non-programmers build the necessary coding skills to transition into the field of web development.'
+                title: 'How does SocialPrachar support non-marketing professionals?',
+                content: 'SocialPrachar offers foundational modules to help beginners and non-marketing professionals gain the skills needed to transition into the field.'
             },
             {
                 title: 'What kind of projects will I work on during the course?',
-                content: 'Projects include building full-stack web applications, CRUD operations with MongoDB, developing RESTful APIs, creating dynamic UIs with React, and deploying applications to production.'
+                content: 'Projects include real-world digital marketing campaigns, SEO optimization, content strategy, and analytics-based decision-making, ensuring hands-on learning.'
             },
             {
                 title: 'How can I register or get more information about upcoming batches?',
-                content: 'You can register through the website or contact the admissions team for detailed information about batch schedules and the enrollment process.'
+                content: 'You can register through the website or contact the admissions team for detailed information about batch schedules and enrollment processes.'
             }
         ],
         studentPlacedImages: [
-            { id: 1, image: student45 },
-            { id: 2, image: student46 },
-            { id: 3, image: student47 },
-            { id: 4, image: student48 },
-            { id: 5, image: student49 },
-            { id: 6, image: student50 },
-            { id: 7, image: student51 },
-            { id: 8, image: student1 },
-            { id: 9, image: student2 },
-            { id: 10, image: student3 },
-            { id: 11, image: student4 },
-            { id: 12, image: student5 },
-            { id: 13, image: student6 },
-            { id: 14, image: student7 },
-            { id: 15, image: student8 },
-            { id: 16, image: student9 },
-            { id: 17, image: student10 }
+            { id: 1, image: student25 },
+            { id: 2, image: student26 },
+            { id: 3, image: student27 },
+            { id: 4, image: student28 },
+            { id: 5, image: student29 },
+            { id: 6, image: student30 },
+            { id: 7, image: student31 },
+            { id: 8, image: student32 },
+            { id: 9, image: student33 },
+            { id: 11, image: student15 },
+            { id: 12, image: student16 },
+            { id: 13, image: student17 },
+            { id: 14, image: student18 },
+            { id: 15, image: student19 },
+            { id: 17, image: student21 },
+            { id: 18, image: student22 },
+            { id: 19, image: student23 },
+            { id: 20, image: student24 }
         ],
-        bannerHeader: 'Learn Mern Stack Today',
-        bannerStudentsEnrolled: '2.8k+ Students Enrolled',
+        bannerHeader: 'Learn Digital Marketing Today',
+        bannerStudentsEnrolled: '6k+ Students Enrolled',
 
     },
 
     {
         id: 2,
-        courseID: 7,
+        courseID: 8,
         categoryIndex: 3, // Development
         tagIndex: 3,      // Web Development
         slug: 'data-analytics-course-training-hyderabad',
@@ -2452,7 +2448,7 @@ export const data = [
 
     {
         id: 2,
-        courseID: 8,
+        courseID: 9,
         categoryIndex: 8, // Development
         tagIndex: 2,      // Web Development
         slug: 'snowflake-training-in-hyderabad',
@@ -2765,9 +2761,9 @@ export const data = [
 
     {
         id: 2,
-        courseID: 9,
-        categoryIndex: 9, // Development
-        tagIndex: 2,      // Web Development
+        courseID: 10,
+        categoryIndex: 9,
+        tagIndex: 2,
         slug: 'salesforce-course',
         courseTitle: 'Cloud',
         imageSrc: img2,
@@ -3075,4 +3071,138 @@ export const data = [
         bannerStudentsEnrolled: '2.7k+ Students Enrolled',
 
     },
+
+    // HIdden Courses
+    {
+        CourseID:11,
+        slug:'azure-with-devops',
+        courseTitle:'Cloud',
+        tagIndex:2,
+        text: 'Azure With Devops',
+        Duration: '6 months',
+        students: '1600+ students',
+        imageSrc: img3,
+        rating:4.5,
+        Header: 'Learn Azure With DevOps Course & Become a Certified Professional in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Azure With DevOps' },
+        ],
+        selfQuestioning: 'Starting your Azure with DevOps Career?',
+        questions: [
+            "Do you want to explore career opportunities in Sales Force?",
+            "Are you ready to master essential Sales Force skills in just 180 days?",
+            "Do you want to kickstart your Sales Force career with 4+ LPA opportunities?"
+        ],
+    },
+
+    {
+        CourseID: 12,
+        slug: 'python-course',
+        courseTitle: 'Development',
+        tagIndex: 2,
+        text: 'Python Course',
+        Duration: '6 months',
+        students: '1600+ students',
+        imageSrc: img3,
+        rating: 4.5,
+        Header: 'Learn Python Course & Become a Certified Professional in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Python' },
+        ],
+        selfQuestioning: 'Starting your Python Career?',
+        questions: [
+            "Do you want to explore career opportunities in Python?",
+            "Are you ready to master essential Python skills in just 180 days?",
+            "Do you want to kickstart your Python career with 4+ LPA opportunities?"
+        ],
+    },
+
+    {
+        CourseID: 13,
+        slug: 'ai-course',
+        courseTitle: 'Cloud',
+        tagIndex: 2,
+        text: 'AI Course',
+        Duration: '6 months',
+        students: '1600+ students',
+        imageSrc: img3,
+        rating: 4.5,
+        Header: 'Learn AI Course & Become a Certified Professional in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'AI' },
+        ],
+        selfQuestioning: 'Starting your AI Career?',
+        questions: [
+            "Do you want to explore career opportunities in AI?",
+            "Are you ready to master essential AI skills in just 180 days?",
+            "Do you want to kickstart your AI career with 4+ LPA opportunities?"
+        ],
+    },
+
+    {
+        CourseID: 14,
+        slug: 'java-training',
+        courseTitle: 'Cloud',
+        tagIndex: 2,
+        text: 'Java Course',
+        Duration: '6 months',
+        students: '1600+ students',
+        imageSrc: img3,
+        rating: 4.5,
+        Header: 'Learn Java Course & Become a Certified Professional in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Java' },
+        ],
+        selfQuestioning: 'Starting your Java Career?',
+        questions: [
+            "Do you want to explore career opportunities in Java?",
+            "Are you ready to master essential Java skills in just 180 days?",
+            "Do you want to kickstart your Java career with 4+ LPA opportunities?"
+        ],
+    },
+
+    {
+        CourseID: 15,
+        slug: 'digital-marketing-course',
+        courseTitle: 'Cloud',
+        tagIndex: 2,
+        text: 'Digital Marketing Course',
+        Duration: '6 months',
+        students: '1600+ students',
+        imageSrc: img3,
+        rating: 4.5,
+        Header: 'Learn Digital Marketing Course & Become a Certified Professional in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Digital Marketing Course' },
+        ],
+        selfQuestioning: 'Starting your Digital Marketing Career?',
+        questions: [
+            "Do you want to explore career opportunities in Digital Marketing?",
+            "Are you ready to master essential Digital Marketing skills in just 180 days?",
+            "Do you want to kickstart your Digital Marketing career with 4+ LPA opportunities?"
+        ],
+    },
+    
+    {
+        CourseID: 16,
+        slug: 'blockchain-course-training',
+        courseTitle: 'Cloud',
+        tagIndex: 2,
+        text: 'Block-Chain Course',
+        Duration: '6 months',
+        students: '1600+ students',
+        imageSrc: img3,
+        rating: 4.5,
+        Header: 'Learn Block-Chain Course & Become a Certified Professional in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Block-Chain' },
+        ],
+        selfQuestioning: 'Starting your Block-Chain Career?',
+        questions: [
+            "Do you want to explore career opportunities in Block-Chain?",
+            "Are you ready to master essential Block-Chain skills in just 180 days?",
+            "Do you want to kickstart your Block-Chain career with 4+ LPA opportunities?"
+        ],
+    }
+
 ];

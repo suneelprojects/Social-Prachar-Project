@@ -49,7 +49,7 @@ const SignInForm = ({ onClose, courseID }) => {
                 body: formPayload,
             });
 
-            setIsLoading(false); // Hide the loading spinner after submission
+            setIsLoading(false);
 
             if (response.ok) {
                 alert('Form submitted successfully!');

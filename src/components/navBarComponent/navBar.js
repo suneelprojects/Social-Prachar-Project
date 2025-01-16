@@ -289,7 +289,7 @@ const NavBar = () => {
                 </li>
                 <li className="nav-item">
                   <NavLink
-                    to={"/SuccessStories"}
+                    to={"/success-stories"}
                     className={`nav-link ${navBarStyle.NavLinkForHover}`}
                     onClick={closeToggle}
                   >
@@ -298,7 +298,7 @@ const NavBar = () => {
                 </li>
                 <li className="nav-item">
                   <NavLink
-                    to={"/Career-Success-workshop"}
+                    to={"/career-counselling"}
                     className={`nav-link ${navBarStyle.NavLinkForHover}`}
                     onClick={closeToggle}
                   >
@@ -307,7 +307,7 @@ const NavBar = () => {
                 </li>
                 <li className="nav-item">
                   <NavLink
-                    to={"/Upcoming-batches"}
+                    to={"/upcoming-batches"}
                     className={`nav-link ${navBarStyle.NavLinkForHover}`}
                     onClick={closeToggle}
                   >

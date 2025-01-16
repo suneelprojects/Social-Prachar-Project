@@ -133,20 +133,7 @@ const Course = () => {
         const updatedShowUncheckedShadowTags = updatedCheckedTags.map((item, i) => i === index && !item);
         setShowUncheckedShadowTags(updatedShowUncheckedShadowTags);
     };
-
-    //     const updatedCheckedLevel = checkedLevel.map((item, i) => i === index ? !item : item);
-    //     setCheckedLevel(updatedCheckedLevel);
-    //     const updatedShowUncheckedShadowLevel = updatedCheckedLevel.map((item, i) => i === index && !item);
-    //     setShowUncheckedShadowLevel(updatedShowUncheckedShadowLevel);
-    // };
-
-    // const handlePriceCheckboxClick = (index) => {
-    //     const updatedCheckedPrice = checkedPrice.map((item, i) => i === index ? !item : item);
-    //     setCheckedPrice(updatedCheckedPrice);
-    //     const updatedShowUncheckedShadowPrice = updatedCheckedPrice.map((item, i) => i === index && !item);
-    //     setShowUncheckedShadowPrice(updatedShowUncheckedShadowPrice);
-    // };
-
+    
     useEffect(() => {
         handleScroll();
         document.addEventListener('mousedown', handleClickOutside);
@@ -226,7 +213,6 @@ const Course = () => {
                                 ))}
                             </div>
                             <hr />
-                            {/* Level part */}
 
                             <div className={courseCSS.button}>
                                 <button className={courseCSS.btn} onClick={handleClick}>&#x2715;&nbsp;&nbsp;&nbsp;&nbsp;Clear All Filters</button>

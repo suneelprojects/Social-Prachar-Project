@@ -75,10 +75,6 @@ const Headerpart = () => {
         setCard(cardDetails);
     }, [slug]);
 
-    // useEffect(() => {
-    //     const cardDetails = data.find(card => card.courseID === parseInt(cardId));
-    //     setCard(cardDetails);
-    // }, [cardId]);
 
 
     // below the screen size
@@ -116,13 +112,13 @@ const Headerpart = () => {
             <img src={BackgroundImg} alt="Background" className={style.backgroundImage} />
             <div className={style.contentContainer}>
                 <div className={style.symbolsContainer}>
-                    <h2 className={style.headerText}>
+                    <h3 className={style.headerText}>
                         {card && (
                             <>
                                 {card.Header} <span className={style.highlightedWord}>{card.Duration}</span>
                             </>
                         )}
-                    </h2>
+                    </h3>
                     <div className={style.symbolItemContent}>
                         <div className={style.symbolItem}>
                             <img

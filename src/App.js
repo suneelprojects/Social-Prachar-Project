@@ -8,8 +8,6 @@ import { WishListProvider } from './Dashboard/MenuBarComponents/WishListContext.
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Aos from 'aos';
-import CourseAccordion from './components/Pageslices/AccordianQuestions/Accordian.js';
-import CareerSelection from './components/QuizCareerSelection/CareerSelection.js';
 
 // Lazy load components
 const ThankyouPage = React.lazy(() => import('./components/Pageslices/Enrollbutton/ThankyouPage.js'));
@@ -36,9 +34,14 @@ const Course = React.lazy(() => import('./components/Courses_category/Course.js'
 const NewDetailsPage = React.lazy(() => import('./components/CourseDetailsNewPage/CourseDetails.js'));
 const MyWork = React.lazy(() => import('./Dashboard/MenuBarComponents/MyWorkComponent/MyWork.js'));
 const Aboutus = React.lazy(() => import('./components/aboutus/aboutus.js'));
-const SuccessStories = React.lazy(() => import ('./components/successStories/SuccessStories.js'));
-const CareerWorkShop = React.lazy(()=> import ("./components/Career_workshop/profileHeader/ProfileHeader.js"));
-const UpcomingBatches = React.lazy(() => import ("./components/upcomingBatches/UpcomingBatches.js"));
+const SuccessStories = React.lazy(() => import('./components/successStories/SuccessStories.js'));
+const CourseAccordion = React.lazy(() => import('./components/Pageslices/AccordianQuestions/Accordian.js'));
+const CareerWorkShop = React.lazy(() => import("./components/Career_workshop/profileHeader/ProfileHeader.js"));
+const UpcomingBatches = React.lazy(() => import("./components/upcomingBatches/UpcomingBatches.js"));
+const CareerSelection = React.lazy(() => import("./components/QuizCareerSelection/CareerSelection.js"));
+const CareerRoadMap = React.lazy(() => import("./components/CareerRoadMap/CareerRoadMap.js"));
+const PrivacyPolicy = React.lazy(() => import("./components/PrivacyPolicy/PrivacyPolicy.js"));
+const ScholarShipTest = React.lazy(() => import("./components/scholarshipTest/ScholarShipTest.js"));
 
 
 const App = () => {
@@ -65,13 +68,16 @@ const App = () => {
           <Suspense fallback={<Loading />}>
             <Routes>
               <Route path="/" element={<AllHomeComp />} />
+              <Route path='privacy-policy' element={<PrivacyPolicy />} />
+              <Route path='scholarship-test' element={<ScholarShipTest />} />
+              <Route path='/career-roadmaps' element={<CareerRoadMap />} />
               <Route path='/courses' element={<Course />} />
               <Route path='/aboutUs' element={<Aboutus />} />
               <Route path='/:slug' element={<NewDetailsPage />} />
-              <Route path='/SuccessStories' element={<SuccessStories/>} />
-              <Route path='/Career-Success-workshop' element={<CareerWorkShop/>}/>
-              <Route path='/Upcoming-batches' element={<UpcomingBatches/>} />
-              <Route path='/Quiz' element={<CareerSelection/>} />
+              <Route path='/success-stories' element={<SuccessStories />} />
+              <Route path='/career-counselling' element={<CareerWorkShop />} />
+              <Route path='/upcoming-batches' element={<UpcomingBatches />} />
+              <Route path='/Quiz' element={<CareerSelection />} />
               <Route path="/course/:courseID" component={<CourseAccordion />} />
               <Route path="/thank-you" element={<ThankyouPage />} />
               <Route path='/user'

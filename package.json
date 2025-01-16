@@ -1,5 +1,5 @@
 {
-  "name": "social-tech-website",
+  "name": "Top Choice for Training in Hyderabad - Social Prachar",
   "version": "0.1.0",
   "homepage": "http://socialprachar.in",
   "private": true,
@@ -16,6 +16,7 @@
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "dotenv": "^16.4.7",
     "firebase": "^10.12.5",
     "framer-motion": "^11.15.0",
     "install": "^0.13.0",

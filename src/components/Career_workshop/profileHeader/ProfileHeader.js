@@ -130,7 +130,6 @@ const ProfileHeader = () => {
                                     </span>
                                     <div className={style.DemoVenue}>
                                         <p className="mb-0">VENUE <br /><span className="fw-bold">Online</span></p>
-                                        {/* <p className="fw-bold">Online</p> */}
                                     </div>
                                 </div>
                             </div>

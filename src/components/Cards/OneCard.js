@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase';
 import { faStarHalfAlt } from '@fortawesome/free-regular-svg-icons';
 
-const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCancelEnrollment }) => {
+const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCancelEnrollment, courseIDToEliminate }) => {
     const { wishlist, toggleWishlist } = useWishlist();
     const navigate = useNavigate();
     const currentUser = auth.currentUser;
@@ -17,16 +17,14 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
     const handleButtonClick = () => {
         navigate(`/${card.slug}`);
     };
-    // Track if the card is already saved in the wishlist
-    const [isSaved, setIsSaved] = useState(false);
 
-    // Check if the card is in the wishlist on initial render and whenever the wishlist changes
+    const [isSaved, setIsSaved] = useState(false);
     useEffect(() => {
         const isCardSaved = wishlist.some((wishlistCard) => wishlistCard.courseID === card.courseID);
         setIsSaved(isCardSaved);
     }, [wishlist, card.courseID]);
 
-    // Toggle save/unsave functionality
+
     const handleSaveIconClick = () => {
         if (currentUser) {
             toggleWishlist(card);
@@ -36,6 +34,13 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
             navigate('/login');
         }
     };
+
+    // course to eliminate
+    // const courseIDToEliminate = [11];
+    const shouldEliminateCard = card.courseID === courseIDToEliminate;
+    if (shouldEliminateCard) {
+        return null;
+    }
 
     const enrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses')) || [];
     const isEnrolled = enrolledCourses.some((course) => course.courseID === card.courseID);
@@ -51,7 +56,7 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
                         onClick={handleSaveIconClick}
                         style={{ color: isSaved ? '#553cdf' : 'white' }}
                     />
-                    
+
                 </div>
                 <div className={cardsCSS.card_body}>
                     <p className={cardsCSS.CardTitle}>{card.courseTitle}</p>
@@ -74,21 +79,21 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
                     <div className={cardsCSS.starPrice}>
                         <div className={cardsCSS.rating}>
                             {Array.from({ length: 5 }, (_, starIndex) => {
-                                // Check if it's a full star, partial star, or empty star
+
                                 if (starIndex < Math.floor(card.rating)) {
                                     return (
                                         <FontAwesomeIcon
                                             key={starIndex}
                                             icon={faStar}
-                                            className={cardsCSS.filledStar} // Full star
+                                            className={cardsCSS.filledStar}
                                         />
                                     );
                                 } else if (starIndex < card.rating) {
                                     return (
                                         <FontAwesomeIcon
                                             key={starIndex}
-                                            icon={faStarHalfAlt} // Partial star
-                                            className={cardsCSS.filledStar} // Can apply a different class for partial stars if needed
+                                            icon={faStarHalfAlt}
+                                            className={cardsCSS.filledStar}
                                         />
                                     );
                                 } else {
@@ -96,12 +101,11 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
                                         <FontAwesomeIcon
                                             key={starIndex}
                                             icon={faStar}
-                                            className={cardsCSS.emptyStar} // Empty star
+                                            className={cardsCSS.emptyStar}
                                         />
                                     );
                                 }
                             })}
-                            <span className={`fw-bold text-muted ${cardsCSS.ratingValue}`}>({card.rating.toFixed(1)})</span>
                         </div>
 
                         <button

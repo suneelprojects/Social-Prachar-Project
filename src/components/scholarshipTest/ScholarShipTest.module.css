@@ -1,0 +1,35 @@
+/** @format */
+.boxBars {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #6ab1f7, #e6f0ff);
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.boxBars svg {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.downBoxBars{
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #6ab1f7, #e6f0ff);
+  border-radius: 25px;
+  padding: 25px 25px;
+  margin: 10px 0;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.marks{
+  margin-left: 15px;
+}

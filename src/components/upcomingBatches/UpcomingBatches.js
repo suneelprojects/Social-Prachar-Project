@@ -115,7 +115,7 @@ const UpcomingBatches = () => {
                     <div className="text-start d-flex flex-wrap align-items-center justify-content-between text-white">
                         <div>
                             <h1>Social Prachar</h1>
-                            <h2>MASTERCLASS</h2>
+                            <h2 className={`${style.Title} text-start`}>MASTERCLASS</h2>
                             <p className="fw-bold">Learn Tech Concepts From Industry Leaders Who Have Been there and done that!</p>
                         </div>
                         <div>

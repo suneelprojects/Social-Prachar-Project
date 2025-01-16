@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 const EnrolledCourses = () => {
   const [enrolledCourses, setEnrolledCourses] = useState(JSON.parse(localStorage.getItem('enrolledCourses')) || []);
 
-
   const handleCancelEnrollment = useCallback((courseID) => {
     const updatedCourses = enrolledCourses.filter((course) => course.courseID !== courseID);
     localStorage.setItem('enrolledCourses', JSON.stringify(updatedCourses));
