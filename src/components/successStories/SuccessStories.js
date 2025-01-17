@@ -547,13 +547,13 @@ const SuccessStories = () => {
                     }}
                     onMouseMove={handleMouseMove}
                 >
-                    <div className="row flex-row flex-nowrap pt-3">
+                    <div className="row flex-row flex-nowrap pt-3 align-items-stretch">
                         {googleData.map((data) => (
                             <div
                                 key={data.id}
-                                className={`col-3 col-sm-8 col-lg-6 col-xl-4`}
+                                className="col-3 col-sm-8 col-lg-6 col-xl-4 d-flex"
                             >
-                                <div className={`${GoogleStyle.googleCard} card`}>
+                                <div className={`${GoogleStyle.googleCard} card h-100 d-flex flex-column`}>
                                     <div className={GoogleStyle.insideGoogleCard}>
                                         <FontAwesomeIcon
                                             icon={faQuoteLeft}
@@ -592,6 +592,7 @@ const SuccessStories = () => {
                     </div>
                 </div>
             </div>
+
 
             {/* success Pilot */}
             <div className={trustPilotStyle.trustPilotContainer}>

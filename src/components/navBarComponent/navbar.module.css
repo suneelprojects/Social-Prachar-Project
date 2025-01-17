@@ -74,15 +74,13 @@
   color: #553cdf;
   border: #553cdf solid 1px;
   border-radius: 5px;
-  width: 83px;
-  height: 39px;
+  width: 83px !important;
+  height: 39px !important;
   background-color: white;
-  display: flex;
-  justify-content: center;
 }
+
 .login:hover {
   background-color: #553cdf;
-
   border: #553cdf solid 1px;
   color: white;
 }
@@ -92,8 +90,6 @@
   border-radius: 5px;
   width: 103px;
   height: 39px;
-  display: flex;
-  justify-content: center;
   color: white;
 }
 .register:hover {

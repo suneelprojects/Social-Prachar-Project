@@ -14,7 +14,7 @@ export const googleData = [
         commentPerson: {
             name: "Teja Swaroop",
             stars: "⭐⭐⭐⭐⭐",
-            profileImage:img_45,
+            profileImage: img_45,
         },
     },
     {
@@ -23,7 +23,7 @@ export const googleData = [
         commentPerson: {
             name: "Hrushikesh",
             stars: "⭐⭐⭐⭐⭐",
-            profileImage:img_4,
+            profileImage: img_4,
         },
     },
     {
@@ -32,7 +32,7 @@ export const googleData = [
         commentPerson: {
             name: "Bhavana Sai",
             stars: "⭐⭐⭐⭐⭐",
-            profileImage:img_7,
+            profileImage: img_7,
         },
     },
     {
@@ -50,7 +50,7 @@ export const googleData = [
         commentPerson: {
             name: "Divya Sree",
             stars: "⭐⭐⭐⭐⭐",
-            profileImage:img_15,
+            profileImage: img_15,
         },
     },
     {
@@ -68,7 +68,7 @@ export const googleData = [
         commentPerson: {
             name: "Reshma Kalluru",
             stars: "⭐⭐⭐⭐⭐",
-            profileImage:img_21,
+            profileImage: img_21,
         },
     },
     {
@@ -77,7 +77,7 @@ export const googleData = [
         commentPerson: {
             name: "Vamsi Krishna Guru Raj",
             stars: "⭐⭐⭐⭐⭐",
-            profileImage:img_25,
+            profileImage: img_25,
         },
     },
 ];
