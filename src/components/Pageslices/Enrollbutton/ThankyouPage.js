@@ -70,7 +70,7 @@ const ThankyouPage = () => {
                         Our friendly team will connect with you shortly.
                     </p>
                     <p style={styles.paragraph}>
-                        In case of urgency, call <strong style={styles.phoneNumber}>8019 479 419</strong> for any quick support.
+                        In case of quick support, call <strong style={styles.phoneNumber}> 8019 479 419 .</strong>
                     </p>
                     {/* <button
                         style={styles.button}

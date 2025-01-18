@@ -41,7 +41,7 @@ const routes = (
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="scholarship-test" element={<ScholarShipTest />} />
         <Route path="career-roadmaps" element={<CareerRoadMap />} />
-        <Route path="courses" element={<Course />} />
+        <Route path="/courses" element={<Course />} />
         <Route path="aboutUs" element={<Aboutus />} />
         <Route path=":slug" element={<NewDetailsPage />} />
         <Route path="success-stories" element={<SuccessStories />} />

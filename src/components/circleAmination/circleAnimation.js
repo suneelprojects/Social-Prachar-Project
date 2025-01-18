@@ -22,98 +22,105 @@ import { useNavigate } from "react-router-dom";
 const CircleAnimation = () => {
 
   const images = [
-    { src: wavesPic,
-      className:'objectOne',
-       dataValue: '5', alt: 'Image 1' },
-    { src: BookSvg,
-      className:'objectTwo', 
-      dataValue: '5', alt: 'Image 2' }
+    {
+      src: wavesPic,
+      className: 'objectOne',
+      dataValue: '5', alt: 'Image 1'
+    },
+    {
+      src: BookSvg,
+      className: 'objectTwo',
+      dataValue: '5', alt: 'Image 2'
+    }
   ];
 
-    var circleAnimationArray=[
-      {circleImg:circleColImg1,
-      circleText:'Expert Instructors'
-    },{circleImg:circleColImg2,
-      circleText:'Interactive Learning'
-    },{circleImg:circleColImg3,
-      circleText:'Affordable Learning'
-    },{circleImg:circleColImg4,
-      circleText:'Career Advance'
-    },{circleImg:circleColImg5,
-      circleText:'Course Selection'
-    },{circleImg:circleColImg6,
-      circleText:'Support Community'
+  var circleAnimationArray = [
+    {
+      circleImg: circleColImg1,
+      circleText: 'Expert Instructors'
+    }, {
+      circleImg: circleColImg2,
+      circleText: 'Interactive Learning'
+    }, {
+      circleImg: circleColImg3,
+      circleText: 'Affordable Learning'
+    }, {
+      circleImg: circleColImg4,
+      circleText: 'Career Advance'
+    }, {
+      circleImg: circleColImg5,
+      circleText: 'Course Selection'
+    }, {
+      circleImg: circleColImg6,
+      circleText: 'Support Community'
     }];
 
-    const Navigate =useNavigate();
+  const Navigate = useNavigate();
 
-    const handleClick= ()=>{
-      Navigate('/courses');
-    }
+  const handleClick = () => {
+    Navigate('/courses');
+  }
 
   return (
     <>
-    <div className={`${circleAnimationStyle.circleAnimationContainer } container-fluid `} id="circleAnimationHover">
-    <ParallaxEffect images={images} />
+      <div className={`${circleAnimationStyle.circleAnimationContainer} container-fluid `} id="circleAnimationHover">
+        <ParallaxEffect images={images} />
 
-      <div className="row    containerFluidForPadding ">
-        {/* left side box code start */}
-        <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <div className={`${circleAnimationStyle.leftSideOfCircleAni}`} >
-            
-            
-            <div className={`${circleAnimationStyle.leftImg}`} >
-              <img src={leftImg} />
-            </div>
-            
-            <div className={`${circleAnimationStyle.rightImg}`} >
-              <img src={rightImg} />
-            </div>
-          </div>
-        </div>
-        {/* left side box code end */}
-        {/* right side box code start */}
+        <div className="row    containerFluidForPadding ">
+          {/* left side box code start */}
+          <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div className={`${circleAnimationStyle.leftSideOfCircleAni}`} >
 
-        <div className={`col-12 col-sm-12 col-md-12  col-lg-6 col-xl-6  mt-5 ${circleAnimationStyle.rightSideOfCircleAni} `} >
-          <span className={circleAnimationStyle.whiteBulb}>
 
-          <BulbText whiteBulb={whiteBulb}
-          BulbText='Why Choose Us'
-          bulbTitle={`SocialPrachar Your Path to\nExcellence & Success`}
-          GreyText={`We are passionate about education and dedicated to \n providing high-quality learning resources for learners of all backgrounds.`}/>
-          
-          </span>
-
-          <div className={`row row-cols-2 row-col-sm-2 row-cols-lg-4 row-cols-xl-3 py-4 row-gap-4 ${circleAnimationStyle.circleAnimationRowDiv}`}>
-            
-            {
-              circleAnimationArray.map((circleAnimationDivItem,i)=>(
-                <div className={`${circleAnimationStyle.circleAnimationDiv}  col`} key={i}>
-                <img src={circleAnimationDivItem.circleImg} />
-                    
-                        
-                        <p>
-                        {circleAnimationDivItem.circleText}
-                        </p>
-                   
+              <div className={`${circleAnimationStyle.leftImg}`} >
+                <img src={leftImg} />
               </div>
-              ))
-            }
-         
-                
-          
-          </div>
-         
 
-          <div className={`${circleAnimationStyle.whiteBtn}`} >
-          
-          <ArrowButton ArrowText='View All Courses' handleClick={handleClick} />
-
+              <div className={`${circleAnimationStyle.rightImg}`} >
+                <img src={rightImg} />
+              </div>
+            </div>
           </div>
+          {/* left side box code end */}
+          {/* right side box code start */}
+
+          <div className={`col-12 col-sm-12 col-md-12  col-lg-6 col-xl-6  mt-5 ${circleAnimationStyle.rightSideOfCircleAni} `} >
+            <span className={circleAnimationStyle.whiteBulb}>
+
+              <BulbText whiteBulb={whiteBulb}
+                BulbText='Why Choose Us'
+                bulbTitle={`Social Prachar - Your Path to\nExcellence & Success`}
+                GreyText={`We are passionate about education and dedicated to \n providing high-quality learning resources for learners of all backgrounds.`} />
+
+            </span>
+
+            <div className={`row row-cols-2 row-col-sm-2 row-cols-lg-4 row-cols-xl-3 py-4 row-gap-4 ${circleAnimationStyle.circleAnimationRowDiv}`}>
+
+              {
+                circleAnimationArray.map((circleAnimationDivItem, i) => (
+                  <div className={`${circleAnimationStyle.circleAnimationDiv}  col`} key={i}>
+                    <img src={circleAnimationDivItem.circleImg} />
+                    <p>
+                      {circleAnimationDivItem.circleText}
+                    </p>
+                  </div>
+                ))
+              }
+
+
+
+            </div>
+
+
+            <div className={`${circleAnimationStyle.whiteBtn}`} >
+
+              <ArrowButton ArrowText='View All Courses' handleClick={handleClick} />
+
+            </div>
+          </div>
+          {/* right side box code end */}
         </div>
-        {/* right side box code end */}
       </div>
-    </div>
 
     </>
   );

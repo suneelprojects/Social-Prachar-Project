@@ -22,7 +22,7 @@ const Asidecard = () => {
             <div className={`${style.cardBody} card-body`}>
                 {/* Header */}
                 <h5 className="card-title fw-bold">Why Join</h5>
-                <h6 className="card-subtitle mb-4 text-muted">Social Prachar Masterclasses</h6>
+                <h6 className="card-subtitle mb-4 text-muted">Social Prachar</h6>
 
                 {/* Features Grid */}
                 <div className="row row-cols-2 g-3">

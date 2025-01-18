@@ -180,7 +180,7 @@ const Footer = () => {
     </div>
         <div className={`${footerStyle.copyRight}`}>
             <p>
-            Copyright © 2024 All Rights Reserved by SocailPrachar
+            Copyright © 2025 All Rights Reserved by Social Prachar
             </p>
         </div>
     </>

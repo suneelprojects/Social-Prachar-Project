@@ -22,7 +22,7 @@ export const items = [
     'SalesForce',
 ];
 
-export const Tag = ['Web Development', 'Marketing', 'Cloud', 'Job Guarentee Prgrams'];
+export const Tag = ['Web Development', 'Job Guarentee Prgrams', 'Marketing', 'Cloud',];
 let categoryIndex = 0;
 let tagIndex = 0;
 const filterItems = (items, categoryIndex, tagIndex) => {

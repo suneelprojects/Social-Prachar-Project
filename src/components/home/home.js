@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <>
       <div className="main-container container-fluid" id="forFooterBtn">
-        <ParallaxEffect images={images} />
+        {/* <ParallaxEffect images={images} /> */}
         <div className={`row containerFluidForPadding bg-body-tertiary forHoverEffect`}>
           {/* content side of home code starts */}
           <div className={`col-md-6 col-lg-6 col-xl-6 ${homeStyle.homeLeftSide}`} >
@@ -81,7 +81,7 @@ const Home = () => {
                       Strong Alumni
                     </p>
                   </div>
-                </div>
+                </div>  
               </div>
             </div>
           </div>

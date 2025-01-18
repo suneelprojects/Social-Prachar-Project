@@ -29,14 +29,14 @@ const UpcomingBatches = () => {
     ];
 
     const cardData = [
-        { id: 1, students: '5120+', image: masterDS, category: 'Data Science/AI', title: 'Artificial Intelligence', route: '/artificial-intelligence-course-training-institute-in-hyderabad' },
-        { id: 2, students: '3200+', image: masterAd_DS, category: 'Data Science/AI', title:'Advanced Data Science/AI', route: '/data-science-course' },
-        { id: 3, students: '4600+', image: masterDA, category: 'Data Science/AI', title: 'Data Analytics (Mastery)', route: '/data-analytics-course-training-hyderabad' },
-        { id: 4, students: '3800+', image: masterFSJ, category: 'Full Stack Development', title: 'Full Stack Java', route: '/java-full-stack-development' },
-        { id: 5, students: '4300+', image: masterFSP, category: 'Full Stack Development', title: 'Full Stack Python', route: '/python-full-stack-development' },
-        { id: 6, students: '4400+', image: masterFS, category: 'Full Stack Development', title: 'Mern Stack (Full Stack)', route: '/mern-stack'},
-        { id: 7, students: '3120+', image: masterAd_Devops, category: 'DevOps', title: 'Multi Cloud With Devops', route: '/awsdevopscourse' },
-        { id: 8, students: '4500+', image: masterAd_DM, category: 'Digital Marketing', title: 'Advanced Digital Marketing', route: 'digital-marketing-course-training-institute-hyderabad' },
+        { id: 1, students: '5120+',no_of_Slots:4,image: masterDS, category: 'Data Science/AI', title: 'Artificial Intelligence', route: '/artificial-intelligence-course-training-institute-in-hyderabad' },
+        { id: 2, students: '3200+',no_of_Slots: 6, image: masterAd_DS, category: 'Data Science/AI', title:'Advanced Data Science/AI', route: '/data-science-course' },
+        { id: 3, students: '4600+',no_of_Slots:5, image: masterDA, category: 'Data Science/AI', title: 'Data Analytics (Mastery)', route: '/data-analytics-course-training-hyderabad' },
+        { id: 4, students: '3800+',no_of_Slots: 7, image: masterFSJ, category: 'Full Stack Development', title: 'Full Stack Java', route: '/java-full-stack-development' },
+        { id: 5, students: '4300+',no_of_Slots:4, image: masterFSP, category: 'Full Stack Development', title: 'Full Stack Python', route: '/python-full-stack-development' },
+        { id: 6, students: '4400+',no_of_Slots: 6, image: masterFS, category: 'Full Stack Development', title: 'Mern Stack (Full Stack)', route: '/mern-stack'},
+        { id: 7, students: '3120+',no_of_Slots: 5, image: masterAd_Devops, category: 'DevOps', title: 'Multi Cloud With Devops', route: '/awsdevopscourse' },
+        { id: 8, students: '4500+',no_of_Slots:5, image: masterAd_DM, category: 'Digital Marketing', title: 'Advanced Digital Marketing', route: 'digital-marketing-course-training-institute-hyderabad' },
 
     ];
 
@@ -114,8 +114,7 @@ const UpcomingBatches = () => {
                     {/* Header Section */}
                     <div className="text-start d-flex flex-wrap align-items-center justify-content-between text-white">
                         <div>
-                            <h1>Social Prachar</h1>
-                            <h2 className={`${style.Title} text-start`}>MASTERCLASS</h2>
+                            <h1>Upcoming Batches</h1>
                             <p className="fw-bold">Learn Tech Concepts From Industry Leaders Who Have Been there and done that!</p>
                         </div>
                         <div>
@@ -153,7 +152,9 @@ const UpcomingBatches = () => {
                                             <div className="card-body">
                                                 <h5 className="card-title">{card.title}</h5>
                                                 <p className="card-text mb-1">Batch Starting Date: <span className='fw-bold'>{startDates[card.id]}</span></p>
-                                                <h6 className='text-danger'>Limited Slots Available</h6>
+                                                <h6 className='text-danger'>
+                                                    Hurry, only {card.no_of_Slots} slots remaining!
+                                                </h6>
                                                 <hr />
                                                 <div className="d-flex justify-content-between">
                                                     <h6 className={style.studentsEnrolledText}>Students Registered: {card.students}</h6>

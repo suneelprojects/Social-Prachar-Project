@@ -5,9 +5,8 @@ import HomeCard from './HomeCard';
 import homeCoursesStyle from './homeCourses.module.css'
 
 const HomeCourses = () => {
-    const items = ['All', 'Accounting', 'Finance', 'Analytics', 'Development', 'Marketing'];
+    const items = ['All', 'web Development','Job Guarentee Programs', 'Marketing', 'Cloud'];
     const [selectedCategory, setSelectedCategory] = useState('All');
-
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
     };

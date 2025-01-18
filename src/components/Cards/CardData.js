@@ -76,7 +76,7 @@ export const data = [
     {
         id: 1,
         courseID: 1,
-        slug: 'data-science-course',
+        slug: 'data-science',
         Duration: ' 6 months',
         imageSrc: img1,
         TestmonialsCommentsImage1: testmonialsCommentImageDS,
@@ -1012,9 +1012,9 @@ export const data = [
         courseID: 4,
         categoryIndex: 0, // Development
         tagIndex: 0,      // Web Development
-        slug: 'reactjs-training',
+        slug: 'full-stack-developer-course',
         courseTitle: 'Development',
-        imageSrc: img7,
+        imageSrc: img8,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: '6 months',

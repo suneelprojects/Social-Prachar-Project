@@ -106,7 +106,7 @@ const ProfileHeader = () => {
                                             height: '45px',
                                         }}
                                     >
-                                        <FontAwesomeIcon className='fs-4' icon={faHourglass} style={{ color: "black" }} />
+                                        
                                     </span>
                                     <div className={style.DemoVenue}>
                                         <p className="mb-0">DURATION <br /> <span className="fw-bold">2 Hours</span></p>

@@ -40,9 +40,7 @@ const TopCatogery = () => {
         </div>
 
         <div className={`${topCatogeryStyle.topCategory}`} id='topCategoryParallex'>
-        <ParallaxEffect images={images} />
-
-          
+        {/* <ParallaxEffect images={images} /> */}
           <SwipperTop/>
             
         </div>
