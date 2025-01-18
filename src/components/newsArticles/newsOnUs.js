@@ -1,6 +1,6 @@
 import React from 'react'
 import BulbText from '../extraComponents/bulbText'
-import MarqueeComp from '../extraComponents/marqueeComp'
+import MarqueeComp from '../extraComponents/marqueeComp.js'
 
 import newsArticleOne  from '../../assets/timesOfIndia.png'
 import newsArticleTwo  from '../../assets/bussinessStd.png'
@@ -33,4 +33,4 @@ const NewsOnUs = () => {
   )
 }
 
-export default NewsOnUs
+export default NewsOnUs;

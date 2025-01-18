@@ -1,18 +1,18 @@
 import React from 'react'
 
 import GateWay from './VideoGif/gateWay';
-import FourSteps from './fourSteps/fourSteps';
-import UpComming from './upComming/upComming';
-import TopCatogery from './topCatogery/topCatogery';
-import FooterBtn from './footerButton/footerBtn';
-import Footer from './footer/footer';
-import CircleAnimation from './circleAmination/circleAnimation';
-import Partner from './clients/partners';
-import Home from './home/home';
-import EnrollDetails from './enrollDetails/enrollDetails';
-import HomeCourse from './HomeCardComp/HomeCourses';
-import Comments from './comments/comments';
-import NewsOnUs from './newsArticles/newsOnUs';
+import FourSteps from './fourSteps/fourSteps.js';
+import UpComming from './upComming/upComming.js';
+import TopCatogery from './topCatogery/topCatogery.js';
+import FooterBtn from './footerButton/footerBtn.js';
+import Footer from './footer/footer.js';
+import CircleAnimation from './circleAmination/circleAnimation.js';
+import Partner from './clients/partners.js';
+import Home from './home/home.js';
+import EnrollDetails from './enrollDetails/enrollDetails.js';
+import HomeCourse from './HomeCardComp/HomeCourses.js';
+import Comments from './comments/comments.js';
+import NewsOnUs from './newsArticles/newsOnUs.js';
 
 
 const AllHomeComp = () => {

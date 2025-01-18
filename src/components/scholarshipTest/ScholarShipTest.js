@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import style from './ScholarShipTest.module.css';
 import testImage from '../../assets/careerworkshop/SocialPrachars.png';
-import Footer from '../footer/footer';
+import Footer from '../footer/footer.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faMedal, faPen, faTrophy } from '@fortawesome/free-solid-svg-icons';
 import { faCheckSquare } from '@fortawesome/free-regular-svg-icons';

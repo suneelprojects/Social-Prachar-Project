@@ -1,7 +1,7 @@
 // EnrollButton.js
 import React, { useState } from 'react';
 import Buttonstyle from './Enrollbutton.module.css';
-import SignInForm from './PopupSignInForm';
+import SignInForm from './PopupSignInForm.js';
 
 const EnrollButton = ({ label, courseID }) => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);

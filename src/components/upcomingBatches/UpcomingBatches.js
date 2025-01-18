@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from './UpcomingBatches.module.css';
-import Asidecard from './aside/Asidecard';
+import Asidecard from './aside/Asidecard.js';
 import navbarImage from '../../assets/careerworkshop/all banner.png';
 import masterAd_DA from '../../assets/careerworkshop/Master adv da.png';
 import masterAd_DS from '../../assets/careerworkshop/Master adv ds.png';
@@ -13,7 +13,7 @@ import masterDS from '../../assets/careerworkshop/Master DS.png';
 import masterFS from '../../assets/careerworkshop/Master FS.png';
 import masterFSJ from '../../assets/careerworkshop/Master FSJ.png';
 import masterFSP from '../../assets/careerworkshop/Master FSP.png';
-import Footer from './../footer/footer';
+import Footer from './../footer/footer.js';
 
 const UpcomingBatches = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');

@@ -3,7 +3,7 @@ import footerStyle from "./footer.module.css";
 import footerImg from "../../assets/footer2_cta_image.png";
 import spLogo from '../../assets/SP_Logo.png'
 
-import ParallaxEffect from '../extraComponents/ParallaxEffect'
+import ParallaxEffect from '../extraComponents/ParallaxEffect.js'
 import googlePlay from '../../assets/google_play.svg'
 import AppleStore from '../../assets/app_store.svg'
 

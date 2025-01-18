@@ -2,19 +2,19 @@ import React, { useEffect, useRef, useState } from 'react';
 import style from './SuccessStories.module.css';
 import GoogleStyle from './googleStyles.module.css';
 import trustPilotStyle from './trustPilot.module.css';
-import Footer from './../footer/footer';
+import Footer from './../footer/footer.js';
 import linkedinLogo from '../../../src/assets/successStories/linkedin.png';
 import googleLogo from '../../../src/assets/successStories/google.png';
-import { linkedinData } from './linkedinData';
-import { googleData } from './googleData';
-import { trustPilotData } from './trustpilot';
-import { ourAchievements } from './ourAchievements';
-import { ourAluminiReviews } from './ourAluminiReviews';
+import { linkedinData } from './linkedinData.js';
+import { googleData } from './googleData.js';
+import { trustPilotData } from './trustpilot.js';
+import { ourAchievements } from './ourAchievements.js';
+import { ourAluminiReviews } from './ourAluminiReviews.js';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import EnrollButton from './../Pageslices/Enrollbutton/Enrollbutton';
+import EnrollButton from './../Pageslices/Enrollbutton/Enrollbutton.js';
 import redline from '../../assets/RedLine.webp';
-import SignInForm from '../SignInForm/SignInform';
+import SignInForm from '../SignInForm/SignInform.js';
 
 
 const SuccessStories = () => {
