@@ -7,15 +7,6 @@ import img6 from '../../assets/img6.jpg';
 import img7 from '../../assets/img7.jpg';
 import img8 from '../../assets/img8.jpg';
 
-import java from '../../assets/careerworkshop/mern and java.png';
-import python from '../../assets/careerworkshop/mern and Python.png';
-import mern from '../../assets/careerworkshop/MERN.png';
-import AI from '../../assets/careerworkshop/AI.png';
-import AWS_multiCloud from '../../assets/careerworkshop/AWS Multi cloud.png';
-import Digital_M from '../../assets/careerworkshop/Digital M.png';
-import DS from '../../assets/careerworkshop/tData Science & AI.png';
-import DA from '../../assets/careerworkshop/Data Analytics.png';
-
 // studentsplaced images 
 import student1 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/compainManager.png';
 import student2 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ASE (2).png';
@@ -87,7 +78,7 @@ export const data = [
         courseID: 1,
         slug: 'data-science',
         Duration: ' 6 months',
-        imageSrc: DS,
+        imageSrc: img1,
         TestmonialsCommentsImage1: testmonialsCommentImageDS,
         TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
         courseTitle: 'Development',
@@ -364,7 +355,7 @@ export const data = [
         id: 1,
         courseID: 2,
         slug: 'python-full-stack-development-course',
-        imageSrc:python,
+        imageSrc: img2,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: ' 6 months',
@@ -687,7 +678,7 @@ export const data = [
     {
         id: 1,
         courseID: 3,
-        imageSrc: java,
+        imageSrc: img3,
         slug: 'java-full-stack-development-course',
         courseTitle: 'Development',
         Duration: ' 6 months',
@@ -1023,7 +1014,7 @@ export const data = [
         tagIndex: 0,      // Web Development
         slug: 'full-stack-developer-course',
         courseTitle: 'Development',
-        imageSrc: mern,
+        imageSrc: img8,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: '6 months',
@@ -1310,7 +1301,7 @@ export const data = [
         tagIndex: 2,      // Web Development
         slug: 'awsdevopscourse',
         courseTitle: 'Cloud Development',
-        imageSrc: AWS_multiCloud,
+        imageSrc: img5,
         Duration: '6 months',
         students: '2800+ students',
         text: 'AWS With DevOps',
@@ -1599,7 +1590,7 @@ export const data = [
         tagIndex: 3,
         slug: 'artificial-intelligence-course-training-institute-in-hyderabad',
         courseTitle: 'AI Development',
-        imageSrc: AI,
+        imageSrc: img6,
         TestmonialsCommentsImage1: testmonialsCommentImageDS,
         TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
         Duration: '6 months',
@@ -1915,7 +1906,7 @@ export const data = [
         tagIndex: 1,      // Web Development
         slug: 'digital-marketing-course-training-institute-hyderabad',
         courseTitle: 'Marketing',
-        imageSrc: Digital_M,
+        imageSrc: img4,
         Duration: '4 months',
         students: '3200+ students',
         text: 'Digital Marketing',
@@ -2198,7 +2189,7 @@ export const data = [
         tagIndex: 3,      // Web Development
         slug: 'data-analytics-course-training-hyderabad',
         courseTitle: 'Data Science',
-        imageSrc: DS,
+        imageSrc: img8,
         Duration: '5 months',
         students: '2700+ students',
         text: 'Data Analytics',

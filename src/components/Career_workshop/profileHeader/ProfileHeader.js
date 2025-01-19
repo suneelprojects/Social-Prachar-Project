@@ -8,6 +8,7 @@ import React, { useEffect, useState } from 'react';
 import WhatWillYouGet from '../whatWillYouGet/WhatWillYouGet.js';
 import Faq from '../../Career_workshop/Faq/Faq.js';
 import Bonuses from './../Bonuses/Bonuses';
+import Banner from '../banner/Banner.js';
 
 const ProfileHeader = () => {
     
@@ -81,7 +82,7 @@ const ProfileHeader = () => {
                             <div className={`${style.profileDetails} text-white rounded-3 px-4 py-3`} style={{ background: '#090820', width: '90%' }}>
                                 <p className='fs-4 fw-bold text-warning'>Mahesh Babu Channa</p>
                                 <p style={{ fontSize: '1.2rem', fontWeight: '600', marginBottom: '10px' }}>IIM Alumni | 8+ Years Experienced Career Consultant</p>
-                                <p style={{ fontSize: '1.2rem' }}>Trained Over <span className='text-warning' style={{fontWeight: '700' }}>8,500+ Professionals</span> since 2014</p>
+                                <p style={{ fontSize: '1.2rem' }}>Trained Over <span style={{ color: '#553cdf', fontWeight: '700' }}>8,500+ Professionals</span> since 2014</p>
                             </div>
                         </div>
                     </div>
@@ -105,7 +106,7 @@ const ProfileHeader = () => {
                                             height: '45px',
                                         }}
                                     >
-                                        <FontAwesomeIcon className="fs-4" icon={faHourglass} style={{ color: "black" }} />
+                                        
                                     </span>
                                     <div className={style.DemoVenue}>
                                         <p className="mb-0">DURATION <br /> <span className="fw-bold">2 Hours</span></p>

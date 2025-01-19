@@ -153,16 +153,6 @@
     align-items: center;
     flex-direction: column;
   }
-  .startButtonList{
-    font-size: 12px;
-    text-align: left !important;
-  }
-  .startButtonpara1{
-    font-size: 12px;
-  }
-  .startButtonpara2{
-    font-size: 12px;
-  }
 }
 
 /* Media Query for Mobile */

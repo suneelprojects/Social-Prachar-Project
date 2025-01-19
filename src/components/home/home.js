@@ -52,7 +52,7 @@ const Home = () => {
                 <span className='bulbSpan'>
                   <img src={bulb} />
                 </span>
-                <p className="blueText">Your Journey To a Dream Job Starts Here</p>
+                <p className="blueText">Gateway to Lifelong Learning</p>
               </div>
               <p className={`${homeStyle.title}`}>
                 Unlock Your Potential with SocialPrachar

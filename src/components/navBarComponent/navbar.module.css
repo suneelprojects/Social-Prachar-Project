@@ -231,10 +231,10 @@
 }
 
 @media (max-width: 375px) {
-  /* .spLogo {
-    height: 60px;
-    width: 115px;
-  } */
+  .spLogo {
+    height: 40px;
+    width: 85px;
+  }
   .selectDropDown {
     position: relative;
     top: 5px;
@@ -252,7 +252,7 @@
 @media (min-width: 340.6px) and (max-width: 464px) {
   .spLogo {
     height: auto;
-    width: 130px;
+    width: 120px;
   }
   .selectDropDown {
     max-width: 90px;

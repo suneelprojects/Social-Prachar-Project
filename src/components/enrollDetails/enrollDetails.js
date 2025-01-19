@@ -111,7 +111,8 @@ const EnrollDetails = () => {
           <img src={enrollStyle} alt="Enroll Details" />
         </div>
         <div className={`${EnrollDetailsStyle.detailsContainer}`}>
-          <form className={`col ms-2 ${EnrollDetailsStyle.form}`} onSubmit={handleSubmit}>
+          <form className="col ms-2" onSubmit={handleSubmit}>
+
             <div className={EnrollDetailsStyle.inputDivs}>
               <label htmlFor="inputForNumber" className="form-label">
                 Mobile No +91:

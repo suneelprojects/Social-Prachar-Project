@@ -93,7 +93,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Ramesh Mallipudi",
             role: "Data Scientist",
-            hike: "120% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: Expo_logo,
             startCompanyType: "Service based company",
@@ -103,7 +103,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Ravi Rachakonda",
             role: "Data Scientist",
-            hike: "100% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: sutherland,
             startCompanyType: "Service based company",
@@ -113,7 +113,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Narmada_Marpadaga",
             role: "Big Data Engineer",
-            hike: "70% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: tcs_logo,
             startCompanyType: "Service based company",
@@ -123,7 +123,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Chandra Sekhar K",
             role: "Machine Learning Engineer",
-            hike: "100% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: pinaca_logo,
             startCompanyType: "Service based company",
@@ -133,7 +133,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Teja Swaroop",
             role: "Data Scientist",
-            hike: "80% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany: sp_Logo,
             postCompany: ascentLogo,
             startCompanyType: "Service based company",
@@ -143,7 +143,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Lakshmikanth p",
             role: "Solution Engineer",
-            hike: "90% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: pinaca_logo,
             startCompanyType: "Service based company",
@@ -153,7 +153,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Pramod Kumar M",
             role: "Data Science",
-            hike: "70% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: cisco,
             startCompanyType: "Service based company",
@@ -163,7 +163,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Than Than Swe",
             role: "AI Software Engineer-Tricubics",
-            hike: "80% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany: sp_Logo,
             postCompany: tricubics,
             startCompanyType: "Service based company",
@@ -173,7 +173,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Navaneetha Karli",
             role: "Machine Learning Engineer",
-            hike: "120% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany: sp_Logo,
             postCompany: saptang_labs,
             startCompanyType: "Service based company",
@@ -184,7 +184,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Divya Sree S",
             role: "Junior Data Scientist- onPassive",
-            hike: "130% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany: sp_Logo,
             postCompany: onPassive,
             startCompanyType: "Service based company",
@@ -195,7 +195,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Supriya R",
             role: "Senior Technical Executive",
-            hike: "60% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: sonata,
             startCompanyType: "Service based company",
@@ -205,7 +205,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Bolla Akhil",
             role: "Machine Learning Engineer",
-            hike: "80% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: apstrol,
             startCompanyType: "Service based company",
@@ -215,7 +215,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Chaitra E",
             role: "Software Engineer",
-            hike: "120% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: succeed,
             startCompanyType: "Service based company",
@@ -225,7 +225,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Supriya Saloni",
             role: "CX-Business Analyst",
-            hike: "130% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: cisco,
             startCompanyType: "Service based company",
@@ -235,7 +235,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Virendra Kumar",
             role: "Software Engineer",
-            hike: "150% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany:cognizant,
             startCompanyType: "Service based company",
@@ -246,7 +246,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Chetan Patnaik",
             role: "Data Analyst",
-            hike: "100% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: xlExpress,
             startCompanyType: "Service based company",
@@ -257,7 +257,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Karthikey Singh",
             role: "Sr.Software Enginer L1",
-            hike: "60% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: tft,
             startCompanyType: "Service based company",
@@ -268,7 +268,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Neha Hemane",
             role: "Associate Software Engineer",
-            hike: "100% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: centific,
             startCompanyType: "Service based company",
@@ -279,7 +279,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Apurva Souda",
             role: "Data Scientist",
-            hike: "50% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: fusion_logo,
             startCompanyType: "Service based company",
@@ -290,7 +290,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Gokul Kadapa",
             role: "Software Engineer",
-            hike: "70% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: softility,
             startCompanyType: "Service based company",
@@ -301,7 +301,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Hashwanth Gigineni",
             role: "Data Scientist",
-            hike: "100% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: safeway,
             startCompanyType: "Service based company",
@@ -311,7 +311,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Prashanth Kumar V",
             role: "Data Scientist",
-            hike: "120% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: mouri,
             startCompanyType: "Service based company",
@@ -321,7 +321,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Patil Amit",
             role: "AI Development",
-            hike: "150% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: mea,
             startCompanyType: "Service based company",
@@ -332,7 +332,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Anudeep Reddy E",
             role: "Data Scientist",
-            hike: "50% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany:axelta,
             startCompanyType: "Service based company",
@@ -343,7 +343,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Gowri Sankar T",
             role: "ML Engineer",
-            hike: "70% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany:sp_Logo,
             postCompany: pinaca_logo,
             startCompanyType: "Service based company",
@@ -353,7 +353,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Prateek Tyagi",
             role: "Lead Data Services",
-            hike: "100% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany: sp_Logo,
             postCompany: simfoni,
             startCompanyType: "Service based company",
@@ -365,7 +365,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Navya Reddy Palvai",
             role: "Full stack Developer",
-            hike: "120% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: tech_M ,
             startCompanyType: "Service based company",
@@ -386,7 +386,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
 
             name: "Amith Reddy",
             role: "Sr. Web Producation Analyst",
-            hike: "50% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: dell,
             startCompanyType: "Service based company",
@@ -398,7 +398,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
 
             name: "Reshma Kalluru",
             role: "Full stack Web Developer",
-            hike: "120% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: axelta ,
             startCompanyType: "Service based company",
@@ -409,7 +409,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
 
             name: "Shubham Sad",
             role: "Full stack Web Developer",
-            hike: "100% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany:sonata,
             startCompanyType: "Service based company",
@@ -420,7 +420,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
 
             name: "Vamsi Krishna P",
             role: "Associate Software Engineer",
-            hike: "100% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: attivo,
             startCompanyType: "Service based company",
@@ -431,7 +431,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
 
             name: "Preethi M",
             role: "Software Engineer II",
-            hike: "120% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: honeywell,
             startCompanyType: "Service based company",
@@ -443,7 +443,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
 
             name: "Bhavishya Bobburi",
             role: "Software Engineer",
-            hike: "100% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: esoftlabs,
             startCompanyType: "Service based company",
@@ -458,7 +458,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
 
             name: "Sravani Pasunoori",
             role: "Data Analyst Python",
-            hike: "50% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: otsi,
             startCompanyType: "Service Based Compnay",
@@ -469,7 +469,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
 
             name: "DVS Manikanta",
             role: "FSD Python & Data Engineer",
-            hike: "70% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: aws,
             startCompanyType: "Service Based Compnay",
@@ -479,7 +479,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Dileep Kumar M",
             role: "Associate Engineer",
-            hike: "100% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: yotta,
             startCompanyType: "Service based company",
@@ -489,7 +489,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Hrushikesh Boddu",
             role: "Full-Stack Developer",
-            hike: "120% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany:robokidz ,
             startCompanyType: "Service based company",
@@ -509,7 +509,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Kalyan Chakravarthi",
             role: "Python full stack Developer",
-            hike: "70% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: yotta,
             startCompanyType: "Service based company",
@@ -519,7 +519,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Amir Mulani",
             role: "Associate Software Engineer",
-            hike: "100% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: tricubics,
             startCompanyType: "Service based company",
@@ -532,7 +532,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Guru Raj",
             role: "Devops Engineer",
-            hike: "80% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: apstrol,
             startCompanyType: "Service based company",
@@ -542,7 +542,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Ghaleeb_Mohammed",
             role: "Businees Analyst",
-            hike: "100% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: Accenture,
             startCompanyType: "Service based company",
@@ -552,7 +552,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Gayathri Sagi",
             role: "Marketing BS & C Leader",
-            hike: "70% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: gedu,
             startCompanyType: "Service based company",
@@ -562,7 +562,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Vaneeta",
             role: "Assistant System Engineer",
-            hike: "100% Salary Hike",
+            hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany:tcs_logo,
             startCompanyType: "Service based company",
@@ -572,7 +572,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Bhavana Sai",
             role: "Media Implementation Senior Associate",
-            hike: "150% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany: sp_Logo,
             postCompany: GOC,
             startCompanyType: "Service based company",
@@ -582,7 +582,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Metari Kumar",
             role: "Media Implementation Senior Associate",
-            hike: "150% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany: sp_Logo,
             postCompany: cognizant,
             startCompanyType: "Service based company",
@@ -592,7 +592,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         {
             name: "Divya Sree S",
             role: "Junior Data Scientist- onPassive",
-            hike: "120% Salary Hike",
+            hike: "170% Salary Hike",
             preCompany: sp_Logo,
             postCompany: onPassive,
             startCompanyType: "Service based company",
