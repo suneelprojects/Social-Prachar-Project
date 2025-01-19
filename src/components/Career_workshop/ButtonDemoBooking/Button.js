@@ -5,13 +5,13 @@ const Button = () => {
     const [weekDate, setWeekDate] = useState("");
     const [showForm, setShowForm] = useState(false);
     const [formData, setFormData] = useState({
-        slot: '',
+        course: '',
         name: '',
         email: '',
         phone: ''
     });
     const [formErrors, setFormErrors] = useState({
-        slot: '',
+        course: '',
         name: '',
         email: '',
         phone: ''
@@ -30,7 +30,7 @@ const Button = () => {
         }
 
         const url = new URL("https://script.google.com/macros/s/AKfycbyUfOokV7CvVSE_8o4LKv7HdykuFLaVltbRJFXr6dCURFncOXRWh5vzV-7DpGR9wUFVCg/exec");
-        url.searchParams.append('slot', formData.slot);
+        url.searchParams.append('course', formData.course);
         url.searchParams.append('name', formData.name);
         url.searchParams.append('email', formData.email);
         url.searchParams.append('phone', formData.phone);
@@ -64,8 +64,8 @@ const Button = () => {
         const errors = {};
 
         // Validate slot
-        if (!data.slot) {
-            errors.slot = 'Please select a slot.';
+        if (!data.course) {
+            errors.course = 'Please select a course.';
         }
 
         // Validate name
@@ -177,17 +177,19 @@ const Button = () => {
                                         <div className="mb-3">
                                             <select
                                                 className="form-select"
-                                                name="slot"
-                                                value={formData.slot}
+                                                name="course"
+                                                value={formData.course}
                                                 onChange={handleChange}
                                                 required
                                             >
-                                                <option value="" disabled>Select a slot</option>
-                                                <option value="slot1">Slot 1</option>
-                                                <option value="slot2">Slot 2</option>
-                                                <option value="slot3">Slot 3</option>
+                                                <option value="" disabled>Select Course</option>
+                                                <option value="slot1">Data Analytics</option>
+                                                <option value="slot2">Data Science & AI</option>
+                                                <option value="slot3">Full stack Mern Java</option>
+                                                <option value="slot4">Full stack Mern Python</option>
+                                                <option value="slot5">Multi Cloud DevOps</option>
                                             </select>
-                                            {formErrors.slot && <div className="text-danger">{formErrors.slot}</div>}
+                                            {formErrors.course && <div className="text-danger">{formErrors.course}</div>}
                                         </div>
                                         <div className="mb-3">
                                             <input

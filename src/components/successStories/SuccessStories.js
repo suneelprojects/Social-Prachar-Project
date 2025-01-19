@@ -19,7 +19,7 @@ import redline from '../../assets/RedLine.webp';
 import Loading from '../extraComponents/loading.js';
 
 
-const SuccessStories = ({ onClose }) => {
+const SuccessStories = () => {
     const [studentsEnrolled, setStudentsEnrolled] = useState(0);
     const [averageRating, setAverageRating] = useState(0);
     const [completionRating, setCompletionRating] = useState(0);
@@ -71,24 +71,24 @@ const SuccessStories = ({ onClose }) => {
             container.scrollLeft += e.movementX;
         }
     };
-
-    const [filter, setFilter] = useState('All'); // State to store the selected filter
-
+    const [filter, setFilter] = useState('All');
     // Function to handle filter change
     const handleFilterChange = (category) => {
         setFilter(category);
     };
     const filteredAchievements = ourAchievements.filter((achievement) => {
-        if (filter === 'All') return true; // Show all cards if 'All' is selected
-        return achievement.category === filter; // Match category with filter
+        if (filter === 'All') return true;
+        return achievement.category === filter;
     });
 
     const [showSignInForm, setShowSignInForm] = useState(false);
-    const [placeholderText, setPlaceholderText] = useState('Enter your email');
 
     const handleKnowMoreClick = () => {
         setShowSignInForm(true);
     };
+    const handleCloseClick = () =>{
+        setShowSignInForm(false);
+    }
 
     const [formData, setFormData] = useState({
         fullName: '',
@@ -118,7 +118,6 @@ const SuccessStories = ({ onClose }) => {
             alert('Please fill in all required fields.');
             return;
         }
-
         setIsLoading(true); // Show loading spinner
 
         try {
@@ -540,12 +539,12 @@ const SuccessStories = ({ onClose }) => {
                                 <div className={styles.formContainer}>
                                     <button
                                         className={styles.closeButton}
-                                        onClick={onClose}
+                                        onClick={handleCloseClick}
                                         aria-label="Close Form"
                                     >
                                         &times;
                                     </button>
-                                    <form>
+                                    <form onSubmit={handleSubmit}>
                                         <h2>Enroll Now</h2>
                                         {/* Full Name */}
                                         <div className={styles.formGroup}>
@@ -585,15 +584,20 @@ const SuccessStories = ({ onClose }) => {
 
                                         {/* Select Course */}
                                         <div className={styles.formGroup}>
-                                            <input
-                                                type="text"
+                                            <select
+                                                className="form-select"
                                                 name="course"
-                                                placeholder='Course Name'
                                                 value={formData.course}
                                                 onChange={handleChange}
-                                                list="courses"
                                                 required
-                                            />
+                                            >
+                                                <option value="" disabled>Select Course</option>
+                                                <option value="slot1">Data Analytics</option>
+                                                <option value="slot2">Data Science & AI</option>
+                                                <option value="slot3">Full stack Mern Java</option>
+                                                <option value="slot4">Full stack Mern Python</option>
+                                                <option value="slot5">Multi Cloud DevOps</option>
+                                            </select>
                                         </div>
 
 

@@ -221,7 +221,15 @@ input[type="checkbox"]:checked::after {
     margin-right: 10px;
   }
 }
-
+@media(max-width:1160px){
+  .category{
+    display: none;
+  }
+   .CardsSection {
+    margin: 20px;
+    flex: 1 1 calc(100%-20px);
+  }
+}
 @media (max-width: 1100px) and (min-width: 990px) {
   .searchBar button {
     left: 160px;
