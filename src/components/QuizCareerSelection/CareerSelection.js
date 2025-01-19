@@ -174,7 +174,7 @@ const CareerSelection = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [responses, setResponses] = useState([]);
     const [selectedOption, setSelectedOption] = useState(null);
-    const [timeLeft, setTimeLeft] = useState(600);
+    const [timeLeft, setTimeLeft] = useState(15);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [showResult, setShowResult] = useState(false);
     const navigate = useNavigate();
@@ -315,6 +315,23 @@ const CareerSelection = () => {
         <div className="container text-center mt-5">
             {!isFormSubmitted ? (
                 <div className={style.quizStartButton}>
+                    <h2 className="mb-3 fs-6">Find Your Dream Career in Just 10 Minutes!</h2>
+                    <p className={`lead ${style.startButtonpara1}`}>
+                        Feeling stuck or unsure about your career path? Take our quick, expert-designed quiz to discover the perfect career for you.
+                    </p>
+                    <p className={`${style.startButtonpara2}`}>Whether you're a student, a professional, or looking to switch fields, we’ve got you covered!</p>
+
+                    <h5 className="mt-4 fs-6">Why Take This Quiz?</h5>
+                    <ul className={`list-styled fs-6`}>
+                        <li className={`${style.startButtonList}`}><strong className='text-black'>Quick & Easy:</strong> Just 10 minutes to clarity.</li>
+                        <li className={`${style.startButtonList}`}><strong className='text-black'>Personalized Insights:</strong> Tailored recommendations based on your skills and interests.</li>
+                        <li className={`${style.startButtonList}`}><strong className='text-black'>Expert Guidance:</strong> Designed by career coaches to match you with in-demand careers.</li>
+                        <li className={`${style.startButtonList}`}><strong className='text-black'>Actionable Results:</strong> Receive a roadmap to start your journey.</li>
+                    </ul>
+
+                    <p className="mt-4">
+                        Take the guesswork out of your future. Start the Quiz today and find your perfect fit!
+                    </p>
                     <button className={`${style.QuizStartBtn} fw-bold`} onClick={handleFormSubmit}>
                         Start Quiz
                     </button>
@@ -326,7 +343,7 @@ const CareerSelection = () => {
                     <div className="mb-3">
                         <span className="badge" style={{ background: '#553cdf' }}>{formatTime(timeLeft)}</span>
                     </div>
-                    <div className={`${style.questionContainer }d-flex justify-content-center`}>
+                    <div className={`${style.questionContainer}d-flex justify-content-center`}>
                         <div className="sliderContainer">
                             <div
                                 className={`${style.questionsWrapper} col-12 m-3  `}
@@ -409,18 +426,18 @@ const CareerSelection = () => {
                             <div>
                                 <div className="container">
                                     <div className="row">
-                                        <div className="col-12 col-md-8 mb-4 mb-md-0">
+                                        <div className="col-12 col-md-6 mb-4 mb-md-0">
                                             <p className='fs-1 fs-6 fw-bold'>Career Path Recommendation</p>
-                                            <p className='fs-4 fs-6'>Your suggested career path:</p>
+                                            <p className='fs-4 fs-6 '>Your suggested career path:</p>
                                             <h4 className="fs-4 fs-6 text-center">
                                                 {calculateResult().resultText1}&nbsp;
-                                                <span className="fs-2 fs-5 fw-bold" style={{ color: '#553cdf' }}>
+                                                <span className="fs-4 fs-6 fw-bold" style={{ color: '#553cdf' }}>
                                                     {calculateResult().resultText2}&nbsp;
                                                 </span>
                                                 <span className="fs-4 fs-6">{calculateResult().resultText3}</span>
                                             </h4>
                                         </div>
-                                        <div className="col-12 col-md-4">
+                                        <div className="col-12 col-md-6">
                                             {/* Conditionally render pie chart or a placeholder */}
                                             {result.chartData && result.chartData.length > 0 ? (
                                                 <ResponsiveContainer height={300}>
@@ -430,11 +447,10 @@ const CareerSelection = () => {
                                                             data={result.chartData}
                                                             cx="50%"
                                                             cy="50%"
-                                                            outerRadius={150}
-                                                            innerRadius={80}
+                                                            outerRadius={100}
+                                                            innerRadius={50}
                                                             fill="#8884d8"
-
-                                                            label
+                                                            label={({ name, value }) => `${name}: ${value}`}
                                                         >
                                                             {result.chartData.map((entry, index) => (
                                                                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
