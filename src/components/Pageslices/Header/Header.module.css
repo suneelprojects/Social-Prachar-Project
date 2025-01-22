@@ -1,5 +1,8 @@
 /** @format */
-
+.testimonials{
+  position: relative;
+  top: 170px;
+}
 .headerContainer {
   width: 100%;
   height: auto;
@@ -281,6 +284,9 @@
 
 /* media queries */
 @media (max-width: 376px) {
+  .testimonials{
+    margin-top: -60px;
+  }
   .headerContainer {
     width: 100%;
   }
@@ -357,7 +363,7 @@
   .headerText {
     position: relative;
     top: 15px;
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 10px;
     max-width: 100%;
     text-align: center;
@@ -774,7 +780,7 @@
 @media (min-width: 768px) and (max-width: 920px) {
   .testimonials {
     position: relative;
-    top: 50px;
+    top: 120px;
   }
   .headerContainer {
     width: 100%;
@@ -936,7 +942,7 @@
 @media (min-width: 921px) and (max-width: 1024px) {
   .testimonials {
     position: relative;
-    top: 100px;
+    top: 150px;
   }
   .headerContainer {
     width: 100%;
@@ -1016,7 +1022,7 @@
   }
 
   .headerText {
-    font-size: 62px;
+    font-size: 60px;
     margin: 10px;
     max-width: 100%;
     text-align: center;

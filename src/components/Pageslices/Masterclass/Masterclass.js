@@ -55,7 +55,6 @@ const Masterclass = () => {
         <div className={styles.masterClassContent}>
            
             <div className={styles.nextLive}>
-
                 <h2>Next <span style={{ color:'#ff5003'}}>cohort</span> Starts in</h2>
                 <div className={styles.timerBoxes}>
                     <div className={styles.timerBox}>

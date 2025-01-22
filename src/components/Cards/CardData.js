@@ -298,8 +298,8 @@ export const data = [
             },
             {
                 icon: faChartBar,
-                title: "Learn Python Fundamentals",
-                description: "Dive into Python programming with a comprehensive course covering syntax, data structures, functions, and object-oriented programming. Build a strong foundation to kickstart your journey in programming and software development."
+                title: "Master Data-Science",
+                description: "Python, OOPs, Machine Learning, Statistics and Probability, Data Mining, Data Warehousing, Programming"
             },
             {
                 icon: faRobot,
