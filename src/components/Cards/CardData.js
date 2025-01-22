@@ -15,6 +15,8 @@ import AWS_multiCloud from '../../assets/careerworkshop/AWS Multi cloud.png';
 import Digital_M from '../../assets/careerworkshop/Digital M.png';
 import DS from '../../assets/careerworkshop/tData Science & AI.png';
 import DA from '../../assets/careerworkshop/Data Analytics.png';
+import SnowFlake from '../../assets/careerworkshop/SF.png';
+import salesForce from '../../assets/careerworkshop/Sales force.png';
 
 // studentsplaced images 
 import student1 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/compainManager.png';
@@ -236,7 +238,7 @@ export const data = [
         ],
         rating: 4.5,
         categoryIndex: 4,
-        tagIndex: 3,
+        tagIndex: 1,
         certificate: DS_certificate,
         accordionContent: [
             {
@@ -1020,7 +1022,7 @@ export const data = [
         id: 2,
         courseID: 4,
         categoryIndex: 0, // Development
-        tagIndex: 0,      // Web Development
+        tagIndex: 1,      // Web Development
         slug: 'full-stack-developer-course',
         courseTitle: 'Development',
         imageSrc: mern,
@@ -1307,7 +1309,7 @@ export const data = [
         id: 2,
         courseID: 5,
         categoryIndex: 5, // Development
-        tagIndex: 2,      // Web Development
+        tagIndex: 3,      // Web Development
         slug: 'awsdevopscourse',
         courseTitle: 'Cloud Development',
         imageSrc: AWS_multiCloud,
@@ -1596,7 +1598,7 @@ export const data = [
         id: 2,
         courseID: 6,
         categoryIndex: 7,
-        tagIndex: 3,
+        tagIndex: 1,
         slug: 'artificial-intelligence-course-training-institute-in-hyderabad',
         courseTitle: 'AI Development',
         imageSrc: AI,
@@ -2195,10 +2197,10 @@ export const data = [
         id: 2,
         courseID: 8,
         categoryIndex: 3, // Development
-        tagIndex: 3,      // Web Development
+        tagIndex: 1,      // Web Development
         slug: 'data-analytics-course-training-hyderabad',
         courseTitle: 'Data Science',
-        imageSrc: DS,
+        imageSrc: DA,
         Duration: '5 months',
         students: '2700+ students',
         text: 'Data Analytics',
@@ -2459,10 +2461,10 @@ export const data = [
         id: 2,
         courseID: 9,
         categoryIndex: 8, // Development
-        tagIndex: 2,      // Web Development
+        tagIndex: 3,      // Web Development
         slug: 'snowflake-training-in-hyderabad',
         courseTitle: 'Cloud',
-        imageSrc: img1,
+        imageSrc: SnowFlake,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: '5 months',
@@ -2772,10 +2774,10 @@ export const data = [
         id: 2,
         courseID: 10,
         categoryIndex: 9,
-        tagIndex: 2,
+        tagIndex: 3,
         slug: 'salesforce-course',
         courseTitle: 'Cloud',
-        imageSrc: img2,
+        imageSrc: salesForce,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: '5 months',
@@ -3082,136 +3084,136 @@ export const data = [
     },
 
     // HIdden Courses
-    {
-        CourseID:11,
-        slug:'azure-with-devops',
-        courseTitle:'Cloud',
-        tagIndex:2,
-        text: 'Azure With Devops',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating:4.5,
-        Header: 'Learn Azure With DevOps Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Azure With DevOps' },
-        ],
-        selfQuestioning: 'Starting your Azure with DevOps Career?',
-        questions: [
-            "Do you want to explore career opportunities in Sales Force?",
-            "Are you ready to master essential Sales Force skills in just 180 days?",
-            "Do you want to kickstart your Sales Force career with 4+ LPA opportunities?"
-        ],
-    },
+    // {
+    //     CourseID:11,
+    //     slug:'azure-with-devops',
+    //     courseTitle:'Cloud',
+    //     tagIndex:2,
+    //     text: 'Azure With Devops',
+    //     Duration: '6 months',
+    //     students: '1600+ students',
+    //     imageSrc: img3,
+    //     rating:4.5,
+    //     Header: 'Learn Azure With DevOps Course & Become a Certified Professional in',
+    //     popUpDropDownCourses: [
+    //         { dropDownid: 0, courseName: 'Azure With DevOps' },
+    //     ],
+    //     selfQuestioning: 'Starting your Azure with DevOps Career?',
+    //     questions: [
+    //         "Do you want to explore career opportunities in Sales Force?",
+    //         "Are you ready to master essential Sales Force skills in just 180 days?",
+    //         "Do you want to kickstart your Sales Force career with 4+ LPA opportunities?"
+    //     ],
+    // },
 
-    {
-        CourseID: 12,
-        slug: 'python-course',
-        courseTitle: 'Development',
-        tagIndex: 2,
-        text: 'Python Course',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating: 4.5,
-        Header: 'Learn Python Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Python' },
-        ],
-        selfQuestioning: 'Starting your Python Career?',
-        questions: [
-            "Do you want to explore career opportunities in Python?",
-            "Are you ready to master essential Python skills in just 180 days?",
-            "Do you want to kickstart your Python career with 4+ LPA opportunities?"
-        ],
-    },
+    // {
+    //     CourseID: 12,
+    //     slug: 'python-course',
+    //     courseTitle: 'Development',
+    //     tagIndex: 2,
+    //     text: 'Python Course',
+    //     Duration: '6 months',
+    //     students: '1600+ students',
+    //     imageSrc: img3,
+    //     rating: 4.5,
+    //     Header: 'Learn Python Course & Become a Certified Professional in',
+    //     popUpDropDownCourses: [
+    //         { dropDownid: 0, courseName: 'Python' },
+    //     ],
+    //     selfQuestioning: 'Starting your Python Career?',
+    //     questions: [
+    //         "Do you want to explore career opportunities in Python?",
+    //         "Are you ready to master essential Python skills in just 180 days?",
+    //         "Do you want to kickstart your Python career with 4+ LPA opportunities?"
+    //     ],
+    // },
 
-    {
-        CourseID: 13,
-        slug: 'ai-course',
-        courseTitle: 'Cloud',
-        tagIndex: 2,
-        text: 'AI Course',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating: 4.5,
-        Header: 'Learn AI Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'AI' },
-        ],
-        selfQuestioning: 'Starting your AI Career?',
-        questions: [
-            "Do you want to explore career opportunities in AI?",
-            "Are you ready to master essential AI skills in just 180 days?",
-            "Do you want to kickstart your AI career with 4+ LPA opportunities?"
-        ],
-    },
+    // {
+    //     CourseID: 13,
+    //     slug: 'ai-course',
+    //     courseTitle: 'Cloud',
+    //     tagIndex: 2,
+    //     text: 'AI Course',
+    //     Duration: '6 months',
+    //     students: '1600+ students',
+    //     imageSrc: img3,
+    //     rating: 4.5,
+    //     Header: 'Learn AI Course & Become a Certified Professional in',
+    //     popUpDropDownCourses: [
+    //         { dropDownid: 0, courseName: 'AI' },
+    //     ],
+    //     selfQuestioning: 'Starting your AI Career?',
+    //     questions: [
+    //         "Do you want to explore career opportunities in AI?",
+    //         "Are you ready to master essential AI skills in just 180 days?",
+    //         "Do you want to kickstart your AI career with 4+ LPA opportunities?"
+    //     ],
+    // },
 
-    {
-        CourseID: 14,
-        slug: 'java-training',
-        courseTitle: 'Cloud',
-        tagIndex: 2,
-        text: 'Java Course',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating: 4.5,
-        Header: 'Learn Java Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Java' },
-        ],
-        selfQuestioning: 'Starting your Java Career?',
-        questions: [
-            "Do you want to explore career opportunities in Java?",
-            "Are you ready to master essential Java skills in just 180 days?",
-            "Do you want to kickstart your Java career with 4+ LPA opportunities?"
-        ],
-    },
+    // {
+    //     CourseID: 14,
+    //     slug: 'java-training',
+    //     courseTitle: 'Cloud',
+    //     tagIndex: 2,
+    //     text: 'Java Course',
+    //     Duration: '6 months',
+    //     students: '1600+ students',
+    //     imageSrc: img3,
+    //     rating: 4.5,
+    //     Header: 'Learn Java Course & Become a Certified Professional in',
+    //     popUpDropDownCourses: [
+    //         { dropDownid: 0, courseName: 'Java' },
+    //     ],
+    //     selfQuestioning: 'Starting your Java Career?',
+    //     questions: [
+    //         "Do you want to explore career opportunities in Java?",
+    //         "Are you ready to master essential Java skills in just 180 days?",
+    //         "Do you want to kickstart your Java career with 4+ LPA opportunities?"
+    //     ],
+    // },
 
-    {
-        CourseID: 15,
-        slug: 'digital-marketing-course',
-        courseTitle: 'Cloud',
-        tagIndex: 2,
-        text: 'Digital Marketing Course',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating: 4.5,
-        Header: 'Learn Digital Marketing Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Digital Marketing Course' },
-        ],
-        selfQuestioning: 'Starting your Digital Marketing Career?',
-        questions: [
-            "Do you want to explore career opportunities in Digital Marketing?",
-            "Are you ready to master essential Digital Marketing skills in just 180 days?",
-            "Do you want to kickstart your Digital Marketing career with 4+ LPA opportunities?"
-        ],
-    },
+    // {
+    //     CourseID: 15,
+    //     slug: 'digital-marketing-course',
+    //     courseTitle: 'Cloud',
+    //     tagIndex: 2,
+    //     text: 'Digital Marketing Course',
+    //     Duration: '6 months',
+    //     students: '1600+ students',
+    //     imageSrc: img3,
+    //     rating: 4.5,
+    //     Header: 'Learn Digital Marketing Course & Become a Certified Professional in',
+    //     popUpDropDownCourses: [
+    //         { dropDownid: 0, courseName: 'Digital Marketing Course' },
+    //     ],
+    //     selfQuestioning: 'Starting your Digital Marketing Career?',
+    //     questions: [
+    //         "Do you want to explore career opportunities in Digital Marketing?",
+    //         "Are you ready to master essential Digital Marketing skills in just 180 days?",
+    //         "Do you want to kickstart your Digital Marketing career with 4+ LPA opportunities?"
+    //     ],
+    // },
     
-    {
-        CourseID: 16,
-        slug: 'blockchain-course-training',
-        courseTitle: 'Cloud',
-        tagIndex: 2,
-        text: 'Block-Chain Course',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating: 4.5,
-        Header: 'Learn Block-Chain Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Block-Chain' },
-        ],
-        selfQuestioning: 'Starting your Block-Chain Career?',
-        questions: [
-            "Do you want to explore career opportunities in Block-Chain?",
-            "Are you ready to master essential Block-Chain skills in just 180 days?",
-            "Do you want to kickstart your Block-Chain career with 4+ LPA opportunities?"
-        ],
-    }
+    // {
+    //     CourseID: 16,
+    //     slug: 'blockchain-course-training',
+    //     courseTitle: 'Cloud',
+    //     tagIndex: 2,
+    //     text: 'Block-Chain Course',
+    //     Duration: '6 months',
+    //     students: '1600+ students',
+    //     imageSrc: img3,
+    //     rating: 4.5,
+    //     Header: 'Learn Block-Chain Course & Become a Certified Professional in',
+    //     popUpDropDownCourses: [
+    //         { dropDownid: 0, courseName: 'Block-Chain' },
+    //     ],
+    //     selfQuestioning: 'Starting your Block-Chain Career?',
+    //     questions: [
+    //         "Do you want to explore career opportunities in Block-Chain?",
+    //         "Are you ready to master essential Block-Chain skills in just 180 days?",
+    //         "Do you want to kickstart your Block-Chain career with 4+ LPA opportunities?"
+    //     ],
+    // }
 
 ];

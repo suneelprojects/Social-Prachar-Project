@@ -4,8 +4,6 @@ import { Route } from 'react-router-dom';
 
 const ThankyouPage = React.lazy(() => import('./components/Pageslices/Enrollbutton/ThankyouPage.js'));
 const AllHomeComp = React.lazy(() => import('./components/allHomeComp.js'));
-const SignUp = React.lazy(() => import('./Login&SignUpComponet/SignUp.js'));
-const Login = React.lazy(() => import('./Login&SignUpComponet/Login.js'));
 const Profile = React.lazy(() => import('./Dashboard/profileComponent/Profile.js'));
 const Dashboard = React.lazy(() => import('./Dashboard/MenuBarComponents/DashboardComponent/Dashboard.js'));
 const MyProfile = React.lazy(() => import('./Dashboard/MenuBarComponents/MyProfile.js'));
@@ -34,10 +32,14 @@ const CareerSelection = React.lazy(() => import("./components/QuizCareerSelectio
 const CareerRoadMap = React.lazy(() => import("./components/CareerRoadMap/CareerRoadMap.js"));
 const PrivacyPolicy = React.lazy(() => import("./components/PrivacyPolicy/PrivacyPolicy.js"));
 const ScholarShipTest = React.lazy(() => import("./components/scholarshipTest/ScholarShipTest.js"));
+const SocialHire = React.lazy(() => import("./components/SocialHire/SocialHire.js"));
+const Blog = React.lazy(() => import("./components/Blog/Blog.js"));
 
 const routes = (
     <Route path="/">
         <Route index element={<AllHomeComp />} />
+        <Route path='blog' element={<Blog />} />
+        <Route path='socialhire' element={<SocialHire />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="scholarship-test" element={<ScholarShipTest />} />
         <Route path="career-roadmaps" element={<CareerRoadMap />} />
@@ -50,9 +52,7 @@ const routes = (
         <Route path="Quiz" element={<CareerSelection />} />
         <Route path="course/:courseID" element={<CourseAccordion />} />
         <Route path="thank-you" element={<ThankyouPage />} />
-        <Route path="login" element={<Login />} />
         <Route path="dashboard" element={<Dashboard />} />
-        <Route path="signup" element={<SignUp />} />
         <Route path="profile" element={<Profile />}>
             <Route index element={<Dashboard />} />
             <Route path="myprofile" element={<MyProfile />} />

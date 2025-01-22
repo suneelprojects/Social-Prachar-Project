@@ -6,11 +6,7 @@ import GridSymbol from '../../assets/menu (1).png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faList, faStar } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { faBookmark } from '@fortawesome/free-regular-svg-icons';
-import SignInForm from '../SignInForm/SignInform';
 import OneCard from './OneCard';
-import { useWishlist } from '../../Dashboard/MenuBarComponents/WishListContext';
-import { auth } from '../../firebase';
 
 
 const Cards = ({ filters }) => {
@@ -78,35 +74,6 @@ const Cards = ({ filters }) => {
     const isFirstPage = currentPage === 1;
     const isLastPage = currentPage === totalPages;
     const showPagination = totalPages > 1;
-
-    // Add to wish list
-    const [wishlist, setWishlist] = useState([]);
-    const {addToWishlist} = useWishlist();
-    const [user, setUser] = useState();
-    useEffect(() => {
-      const unsubscribe = auth.onAuthStateChanged((user) => {
-        setUser(user);
-      });
-      return () => unsubscribe();
-    }, []);
-
-
-    // Constant Sign In form
-    const [showSignInForm, setShowSignInForm] = useState(false);
-    const handleSaveIconClick = (card) => {
-        if (user) {
-            addToWishlist(card);
-            navigate('/profile/wishlist')
-        } else {
-            setShowSignInForm(true);
-        }
-    };
-
-    const handleCloseForm = () => {
-        setShowSignInForm(false);
-    };
-
-
     const navigate = useNavigate();
     const handleCardTitleClick = (courseID) => {
         const selectedCard = data.find(card => card.courseID === courseID);
@@ -118,10 +85,6 @@ const Cards = ({ filters }) => {
 
     return (
         <div className={cardsCSS.cardsSection}>
-
-            {showSignInForm && <div className={`${cardsCSS.overlay} ${showSignInForm ? cardsCSS.show : ''}`} />}
-            {showSignInForm && <SignInForm onClose={handleCloseForm} />}
-
             <div className={cardsCSS.cardfilter}>
                 <div className={cardsCSS.dropdownSection}>
                     <h4>Sort By</h4>
@@ -185,7 +148,6 @@ const Cards = ({ filters }) => {
                             card={card}
                             selectedButton={selectedButton}
                             handleCardTitleClick={handleCardTitleClick}
-                            handleSaveIconClick={handleSaveIconClick}
                         />
                     ))}
                 </div>

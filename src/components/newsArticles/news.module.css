@@ -6,3 +6,10 @@
 .ImagesSize img{
   width: 200px;
 }
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
