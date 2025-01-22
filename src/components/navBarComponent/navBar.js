@@ -357,8 +357,9 @@ const NavBar = () => {
                     rel="noopener noreferrer"
                     className={`${navBarStyle.buttonStyle} d-flex align-items-center justify-content-center`}
                     role="button"
+                    style={{color:'green'}}
                   >
-                    <FontAwesomeIcon icon={faWhatsapp} className="me-2" />
+                    <FontAwesomeIcon icon={faWhatsapp} className="me-2" style={{color:'green'}}/>
                     WhatsApp
                   </a>
                 </li>

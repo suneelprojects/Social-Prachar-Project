@@ -3,8 +3,6 @@
   display: flex;
   overflow: hidden;
   width: 95%;
-  position: relative;
-  top: 30px;
 }
 
 .carouselImages {
@@ -33,15 +31,13 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 150px;
+  /* top: 150px; */
 }
 
 .section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  top: 110px;
 }
 
 .heading {

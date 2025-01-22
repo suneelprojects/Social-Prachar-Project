@@ -200,28 +200,6 @@ const Headerpart = () => {
             <div className={style.testimonials}>
                 <Testmonials />
             </div>
-            <div className={style.DoughtsPart} ref={doughtsPartRef}>
-                <p ref={header1Ref} className={`${style.header1}`}>
-                    Do you Feel Confused About
-                </p>
-                <p ref={header2Ref} className={`${style.header2}`}>
-                    {card?.selfQuestioning}
-                </p>
-                <img
-                    ref={redLineRef}
-                    src={RedLine}
-                    alt=""
-                    className={`${style.redLine}`}
-                />
-                <div className={style.SelfQuestioning} data-aos="zoom-in" data-aos-duration="1000">
-                    {card && card.questions && card.questions.map((question, index) => (
-                        <div className={style.questionItem} key={index}>
-                            <img src={questionMark} alt="Question mark" className={style.questionIcon} />
-                            <p>{question}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
         </div>
     );
 };

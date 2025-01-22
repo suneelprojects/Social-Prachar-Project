@@ -213,7 +213,7 @@
 /* DoughtsPart */
 .DoughtsPart {
   text-align: center;
-  padding-top: 180px;
+  padding-top: 30px;
 }
 
 .header2 {
@@ -1095,7 +1095,7 @@
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1199px) {
+@media (min-width: 1025px) and (max-width: 1200px) {
   .contentContainer {
     width: 98%;
     height: 85vh;
@@ -1140,7 +1140,7 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1250px) {
+@media (min-width: 1201px) and (max-width: 1250px) {
   .contentContainer {
     width: 95%;
     height: 85vh;
@@ -1149,7 +1149,7 @@
   }
 
   .headerText {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   .FollowerImage {
