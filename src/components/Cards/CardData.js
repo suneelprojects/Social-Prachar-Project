@@ -391,7 +391,7 @@ export const data = [
         id: 1,
         courseID: 2,
         slug: 'python-full-stack-development-course',
-        imageSrc:python,
+        imageSrc: python,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: ' 6 months',
@@ -1118,7 +1118,7 @@ export const data = [
         students: '2800+ students',
         text: 'Mern Stack (Full Stack)',
         rating: 4.3,
-        Header: 'Learn Mern Stack Course & Become a Certified Professional in',
+        Header: 'Master Full Stack Java / Python With Mern Stack Course in',
         popUpDropDownCourses: [
             { dropDownid: 0, courseName: 'Mern Stack (Full Stack)' },
         ],
@@ -1128,7 +1128,7 @@ export const data = [
             "Are you ready to master essential Mern Stack skills in just 180 days?",
             "Do you want to kickstart your Mern Stack career with 4+ LPA opportunities?"
         ],
-        Description: 'The MERN Stack (MongoDB, Express.js, React.js, Node.js) is one of the most popular full-stack development frameworks, enabling developers to build robust, scalable, and interactive web applications. This course provides a hands-on learning experience in mastering the MERN Stack. You will gain skills in designing and developing dynamic web applications, building APIs, integrating front-end and back-end development, managing databases, and deploying applications. Key areas of focus include building RESTful APIs, creating interactive user interfaces, managing state with Redux, authenticating users, and deploying applications on platforms like Heroku or Vercel. By the end of this course, you"ll be equipped to develop and deploy modern web applications with the MERN Stack.',
+        Description: 'The Full Stack Java / python With MERN Stack  (MongoDB, Express.js, React.js, Node.js) is one of the most popular full-stack development frameworks, enabling developers to build robust, scalable, and interactive web applications. This course provides a hands-on learning experience in mastering the MERN Stack. You will gain skills in designing and developing dynamic web applications, building APIs, integrating front-end and back-end development, managing databases, and deploying applications. Key areas of focus include building RESTful APIs, creating interactive user interfaces, managing state with Redux, authenticating users, and deploying applications on platforms like Heroku or Vercel. By the end of this course, you"ll be equipped to develop and deploy modern web applications with the MERN Stack.',
         moduleContent: [
             {
                 id: 1,
@@ -1147,98 +1147,98 @@ export const data = [
             {
                 id: 2,
                 module: "Module 2",
-                title: "Infrastructure as Code (IaC) with AWS CloudFormation",
+                title: "Frontend Development with React",
                 details: {
-                    videos: 7,
+                    videos: 8,
                     time: "3 weeks",
                     descriptions: [
-                        "Introduction to Infrastructure as Code (IaC)",
-                        "Creating and managing infrastructure using AWS CloudFormation templates",
-                        "Best practices for defining infrastructure and managing deployments"
+                        "Building modern user interfaces with React",
+                        "State management using React Context and Redux",
+                        "Handling API calls and routing with React Router"
                     ]
                 }
             },
             {
                 id: 3,
                 module: "Module 3",
-                title: "Continuous Integration and Continuous Delivery (CI/CD) with AWS",
+                title: "Backend Development with Node.js and Express",
                 details: {
-                    videos: 8,
+                    videos: 7,
                     time: "3 weeks",
                     descriptions: [
-                        "Setting up Continuous Integration (CI) pipelines with AWS CodeBuild",
-                        "Automating deployment processes using AWS CodeDeploy",
-                        "Implementing Continuous Delivery (CD) for rapid application releases"
+                        "Introduction to backend development with Node.js",
+                        "Creating RESTful APIs with Express",
+                        "Connecting to databases with MongoDB"
                     ]
                 }
             },
             {
                 id: 4,
                 module: "Module 4",
-                title: "Monitoring and Logging with AWS CloudWatch",
+                title: "Introduction to Java Programming",
                 details: {
-                    videos: 7,
+                    videos: 6,
                     time: "2 weeks",
                     descriptions: [
-                        "Configuring AWS CloudWatch for real-time monitoring",
-                        "Setting up alerts and logs for application and infrastructure performance",
-                        "Analyzing CloudWatch logs to troubleshoot and optimize performance"
+                        "Getting started with Java and its ecosystem",
+                        "Object-oriented programming concepts in Java",
+                        "Writing and compiling Java applications"
                     ]
                 }
             },
             {
                 id: 5,
                 module: "Module 5",
-                title: "Containerization and Orchestration with AWS ECS and EKS",
+                title: "Python Programming for Backend Development",
                 details: {
-                    videos: 8,
-                    time: "4 weeks",
+                    videos: 7,
+                    time: "3 weeks",
                     descriptions: [
-                        "Introduction to containerization and Docker",
-                        "Deploying containerized applications with Amazon ECS (Elastic Container Service)",
-                        "Orchestrating containers using AWS EKS (Elastic Kubernetes Service)"
+                        "Introduction to Python programming",
+                        "Building REST APIs with Flask or FastAPI",
+                        "Interfacing with databases using SQLAlchemy or Django ORM"
                     ]
                 }
             },
             {
                 id: 6,
                 module: "Module 6",
-                title: "Automating Infrastructure Management with AWS OpsWorks",
+                title: "Database Design and Management",
                 details: {
-                    videos: 6,
-                    time: "2 weeks",
+                    videos: 7,
+                    time: "3 weeks",
                     descriptions: [
-                        "Overview of AWS OpsWorks for managing applications and infrastructure",
-                        "Configuring and managing infrastructure with AWS OpsWorks Stacks and Layers",
-                        "Automating application deployment and lifecycle management"
+                        "Introduction to relational and non-relational databases",
+                        "Designing efficient database schemas",
+                        "Performing CRUD operations with MongoDB and MySQL"
                     ]
                 }
             },
             {
                 id: 7,
                 module: "Module 7",
-                title: "Security and Compliance in AWS DevOps",
+                title: "Full-Stack Application Development",
                 details: {
-                    videos: 7,
-                    time: "3 weeks",
+                    videos: 8,
+                    time: "4 weeks",
                     descriptions: [
-                        "Ensuring security in the DevOps pipeline",
-                        "Using AWS Identity and Access Management (IAM) for user permissions",
-                        "Complying with security best practices and managing audits in AWS"
+                        "Building a full-stack application with MERN and Java/Python backend",
+                        "Integrating frontend and backend components",
+                        "Deploying applications to cloud platforms (e.g., AWS, Heroku)"
                     ]
                 }
             },
             {
                 id: 8,
                 module: "Module 8",
-                title: "Scaling and Load Balancing with AWS",
+                title: "Advanced Topics in Full-Stack Development",
                 details: {
                     videos: 7,
                     time: "3 weeks",
                     descriptions: [
-                        "Auto-scaling applications on AWS to handle traffic spikes",
-                        "Configuring Elastic Load Balancing (ELB) to distribute traffic efficiently",
-                        "Best practices for scaling and balancing workloads on AWS"
+                        "Implementing authentication and authorization",
+                        "Optimizing performance and scalability",
+                        "Best practices for debugging and testing applications"
                     ]
                 }
             },
@@ -1250,9 +1250,9 @@ export const data = [
                     videos: 7,
                     time: "1 month",
                     descriptions: [
-                        "Building a complete AWS DevOps pipeline for a real-world project",
-                        "Implementing CI/CD, monitoring, and automated infrastructure management",
-                        "Showcasing a final project and preparing for certification"
+                        "Building a comprehensive full-stack application with MERN and Java/Python",
+                        "Implementing real-world use cases and challenges",
+                        "Preparing for certification and showcasing your final project"
                     ]
                 }
             }
@@ -1265,24 +1265,19 @@ export const data = [
                 description: "Learn the core concepts of the MERN stack, including MongoDB, Express.js, React.js, and Node.js, and understand how they work together in modern web applications."
             },
             {
-                icon: faDatabase,
-                title: "Database Management with MongoDB",
-                description: "Master MongoDB for storing and managing data, including schema design, CRUD operations, indexing, and using the Mongoose library for seamless integration."
-            },
-            {
-                icon: faServer,
-                title: "Building APIs with Express.js",
-                description: "Learn to build scalable and efficient RESTful APIs using Express.js, including middleware integration, routing, and error handling."
-            },
-            {
                 icon: faReact,
                 title: "Frontend Development with React",
                 description: "Develop dynamic and responsive user interfaces using React, including state management with hooks, component lifecycles, and best practices for performance optimization."
             },
             {
-                icon: faNodeJs,
-                title: "Backend Development with Node.js",
-                description: "Understand the fundamentals of Node.js for server-side programming, asynchronous operations, and integrating with third-party libraries and APIs."
+                icon: faChartLine,
+                title: "State Management with Redux",
+                description: "Dive deep into Redux for managing application state in larger React applications, including creating reducers, actions, and middleware."
+            },
+            {
+                icon: faBook,
+                title: "Learn Complete Java/Python Course",
+                description: "Master programming fundamentals and advanced concepts in Java or Python, covering topics like OOP, data structures, algorithms, multithreading, and frameworks like Spring Boot or Django."
             },
             {
                 icon: faSyncAlt,
@@ -1290,14 +1285,24 @@ export const data = [
                 description: "Learn to connect the React frontend with the Express backend through RESTful APIs, including data fetching, form handling, and state synchronization."
             },
             {
+                icon: faDatabase,
+                title: "Database Management with MongoDB",
+                description: "Master MongoDB for storing and managing data, including schema design, CRUD operations, indexing, and using the Mongoose library for seamless integration."
+            },
+            {
+                icon: faNodeJs,
+                title: "Backend Development with Node.js",
+                description: "Understand the fundamentals of Node.js for server-side programming, asynchronous operations, and integrating with third-party libraries and APIs."
+            },
+            {
+                icon: faServer,
+                title: "Building APIs with Express.js",
+                description: "Learn to build scalable and efficient RESTful APIs using Express.js, including middleware integration, routing, and error handling."
+            },
+            {
                 icon: faCodeBranch,
                 title: "Version Control with Git & GitHub",
                 description: "Master Git for version control and collaborate on projects using GitHub, including branching, merging, and pull request workflows."
-            },
-            {
-                icon: faChartLine,
-                title: "State Management with Redux",
-                description: "Dive deep into Redux for managing application state in larger React applications, including creating reducers, actions, and middleware."
             },
             {
                 icon: faLaptopCode,
@@ -1323,8 +1328,9 @@ export const data = [
                 icon: faBriefcase,
                 title: "Placement Preparation",
                 description: "Prepare for the job market with resume building, interview preparation, and understanding the roles and responsibilities of a MERN Stack Developer."
-            }
-        ],
+            },
+        ]
+        ,
         accordionContent: [
             {
                 title: 'What is the duration of the MERN Stack program at SocialPrachar?',
@@ -1610,16 +1616,16 @@ export const data = [
         ],
         accordionContent: [
             {
-                title: 'What is the duration of the Digital Marketing program at SocialPrachar?',
-                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to fit varying schedules and learning objectives.'
+                title: 'What is the duration of the AWS DevOps program at SocialPrachar?',
+                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs tailored to fit varying schedules and learning goals.'
             },
             {
-                title: 'What topics are covered in the Digital Marketing curriculum?',
-                content: 'Topics include SEO, SEM, social media marketing, content marketing, email marketing, analytics, and real-time project implementation.'
+                title: 'What topics are covered in the AWS DevOps curriculum?',
+                content: 'Topics include AWS fundamentals, CI/CD pipelines, Infrastructure as Code (IaC) using Terraform, containerization with Docker and Kubernetes, monitoring and logging with CloudWatch, and real-time project implementation.'
             },
             {
                 title: 'Are there any internship or job guarantee options?',
-                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the industry.'
+                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain hands-on experience and secure positions in the industry.'
             },
             {
                 title: 'What are the class formats available (online or classroom)?',
@@ -1627,23 +1633,23 @@ export const data = [
             },
             {
                 title: 'Is there a certification awarded upon completion?',
-                content: 'Yes, a professional certification is awarded upon successful completion of the program, which adds value to your resume and portfolio.'
+                content: 'Yes, a professional certification is awarded upon successful completion of the program, which is recognized in the industry and enhances your resume.'
             },
             {
                 title: 'What are the average salary expectations for program graduates?',
-                content: 'Graduates can expect competitive salaries in the digital marketing field, with opportunities for growth depending on their expertise and the job role secured.'
+                content: 'Graduates can expect competitive salaries in the AWS DevOps field, with significant opportunities for career growth depending on their expertise and job roles.'
             },
             {
                 title: 'Who are the trainers, and what qualifications do they have?',
-                content: 'Trainers are experienced digital marketing professionals with a proven track record in the industry, offering practical insights and up-to-date training.'
+                content: 'Trainers are AWS-certified professionals with extensive industry experience, providing practical insights and up-to-date training.'
             },
             {
-                title: 'How does SocialPrachar support non-marketing professionals?',
-                content: 'SocialPrachar offers foundational modules to help beginners and non-marketing professionals gain the skills needed to transition into the field.'
+                title: 'How does SocialPrachar support beginners or non-IT professionals?',
+                content: 'SocialPrachar offers foundational modules and mentorship to help beginners and non-IT professionals acquire the necessary skills to excel in AWS DevOps roles.'
             },
             {
                 title: 'What kind of projects will I work on during the course?',
-                content: 'Projects include real-world digital marketing campaigns, SEO optimization, content strategy, and analytics-based decision-making, ensuring hands-on learning.'
+                content: 'Projects include designing and deploying CI/CD pipelines, creating scalable infrastructure with AWS, containerizing applications using Docker, and implementing monitoring solutions with CloudWatch.'
             },
             {
                 title: 'How can I register or get more information about upcoming batches?',
@@ -1999,9 +2005,8 @@ export const data = [
             { id: 26, image: student42 },
             { id: 27, image: student44 },
         ],
-        bannerHeader: 'Learn Digital Marketing Today',
+        bannerHeader: 'Learn Artificial Intelligence Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
-
     },
 
     {

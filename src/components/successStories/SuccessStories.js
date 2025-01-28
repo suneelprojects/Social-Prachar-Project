@@ -88,7 +88,7 @@ const SuccessStories = () => {
 
             <div className={style.topContent}>
                 <div className={style.insights}>
-                    <p className={`${style.insightsHeader} text-center mb-4`}>Uncovering top insights about us</p>
+                    <p className={`${style.insightsHeader} text-center mb-4`}>16000+ Success Stories Since 2014</p>
                     <div className="container">
                         <div className={`${style.wholeInsights} row justify-content-center g-3`}>
                             <div className="col-md-4 col-sm-4 col-12 d-flex flex-column">
@@ -124,9 +124,9 @@ const SuccessStories = () => {
                         <div className="col-12 col-md-4 text-center mb-3">
                             <div className={`${style.stat}`}>
                                 <span className={`${style.statValue} fs-2 fw-bold text-black`}>
-                                    {studentsEnrolled.toLocaleString()}K
+                                    {studentsEnrolled.toLocaleString()}000+
                                 </span>
-                                <p className={`${style.statLabel} mt-2`}>Students Enrolled</p>
+                                <p className={`${style.statLabel} mt-2`}>Students Alumini</p>
                             </div>
                         </div>
 
@@ -449,8 +449,8 @@ const SuccessStories = () => {
 
                 <hr className="mx-auto w-75" />
                 <div className="text-center" style={{ fontSize: '18px' }}>
-                    <p>
-                        There are 1250+ success stories which we have; these are just a few of them.
+                    <p className='fw-bold'>
+                        SocialPrachar alumni are working in 1,100+ companies across India. Contact us to know more about placements!
                     </p>
                     <SuccessStoriesForm/>
                 </div>

@@ -1,8 +1,22 @@
 /** @format */
-.testimonials{
+.testimonials {
   position: relative;
   top: 170px;
 }
+
+.header2 {
+  color: black;
+  font-weight: 550;
+  font-size: 56px;
+}
+
+.header1 {
+  color: #707070;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 5px 0;
+}
+
 .headerContainer {
   width: 100%;
   height: auto;
@@ -75,7 +89,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  /* margin-top: 10px; */
 }
 
 .FollowerStars {
@@ -109,11 +122,13 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-bottom: 30px;
 }
 .headerImage {
   width: 100%;
   height: auto;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7), 0 2px 6px rgba(0, 0, 0, 0.7) !important;
+  margin-bottom: 20px;
 }
 
 .headerText {
@@ -219,19 +234,6 @@
   padding-top: 30px;
 }
 
-.header2 {
-  color: black;
-  font-weight: 550;
-  font-size: 56px;
-}
-
-.header1 {
-  color: #707070;
-  font-weight: 700;
-  font-size: 32px;
-  margin: 5px 0;
-}
-
 .redLine {
   opacity: 0;
   transform: translateX(-100%);
@@ -284,7 +286,7 @@
 
 /* media queries */
 @media (max-width: 376px) {
-  .testimonials{
+  .testimonials {
     margin-top: -60px;
   }
   .headerContainer {
@@ -402,7 +404,7 @@
   }
 
   .DoughtsPart {
-    padding-top: 200px;
+    padding-top: 50px;
     z-index: 1000;
   }
 
@@ -479,7 +481,7 @@
   }
   .symbolItemContent {
     position: relative;
-    top: 420px;
+    top: 450px;
     left: 10px;
   }
 
@@ -575,16 +577,7 @@
   }
 
   .DoughtsPart {
-    margin-top: 200px;
-  }
-
-  .header2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-  }
-
-  .header1 {
-    font-size: 28px;
+    margin-top: 30px;
   }
 
   .redLine {
@@ -611,11 +604,12 @@
   }
 }
 
-@media (min-width: 441px) and (max-width: 767px) {
+@media (min-width: 441px) and (max-width: 768px) {
   .testimonials {
     position: relative;
     top: 150px;
   }
+
   .headerContainer {
     width: 100%;
   }
@@ -641,7 +635,7 @@
 
   .symbolItemContent {
     position: relative;
-    top: 450px;
+    top: 650px;
   }
 
   .symbolItem {
@@ -657,7 +651,7 @@
 
   .EnrollButtonContent {
     position: relative;
-    top: 550px;
+    top: 620px !important;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -737,7 +731,7 @@
   }
 
   .DoughtsPart {
-    margin-top: 170px;
+    margin-top: 50px;
   }
 
   .header2 {
@@ -777,7 +771,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 920px) {
+@media (min-width: 769px) and (max-width: 920px) {
   .testimonials {
     position: relative;
     top: 120px;
@@ -976,6 +970,8 @@
   .symbolItem {
     gap: 10px;
     padding-bottom: 13px;
+    position: relative;
+    top:100px;
   }
 
   .symbolText {
@@ -985,7 +981,7 @@
 
   .EnrollButtonContent {
     position: relative;
-    top: 650px;
+    top: 740px !important;
     display: flex;
     justify-content: center;
     gap: 5px;
@@ -1152,6 +1148,14 @@
     height: 85vh;
     padding: 10px 60px;
     margin: 20px auto;
+  }
+  .HeaderPicture {
+    width: 75%;
+    position: relative;
+    top: 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
   .headerText {

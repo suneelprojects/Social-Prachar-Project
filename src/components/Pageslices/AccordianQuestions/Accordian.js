@@ -166,12 +166,19 @@ const CourseAccordion = () => {
 
 
             <div className={style.DoughtsPart} ref={doughtsPartRef}>
-                <p ref={header1Ref} className={`${style.header1}`}>
+                <p
+                    ref={header1Ref}
+                    className={`${style.header1} text-center fw-bold`}
+                >
                     Do you Feel Confused About
                 </p>
-                <p ref={header2Ref} className={`${style.header2}`}>
+                <p
+                    ref={header2Ref}
+                    className={`${style.header2} text-center fw-bold`}
+                >
                     {card?.selfQuestioning}
                 </p>
+
                 <img
                     ref={redLineRef}
                     src={RedLine}
@@ -215,7 +222,7 @@ const CourseAccordion = () => {
             </div>
 
             {/* Contact Boxes below Accordion */}
-            <div className={styles.contact}>
+            <div className={`${styles.contact} m-3 m-md-5 m-lg-5`}>
                 <p
                     className="text-center mb-4 fw-bold"
                     style={{ fontSize: "32px", position: 'relative', top: '18px' }}
@@ -345,7 +352,7 @@ const CourseAccordion = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
 
         </>
     );

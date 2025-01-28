@@ -95,7 +95,9 @@
     right: 10px;
     display: none;
   }
-
+.shinebtn{
+  margin-top: 50px;
+}
   .MasterClass {
     height: 300px;
   }
@@ -145,7 +147,9 @@
     padding: 10px 12px;
     display: block;
   }
-
+.shinebtn{
+  margin-top: 80px;
+}
   .MasterClass {
     height: 350px;
   }
@@ -198,6 +202,9 @@
     font-size: 1.2rem;
     padding: 12px 15px;
     display: block;
+  }
+  .shinebtn{
+    margin-top: 100px;
   }
 
   .MasterClass {
@@ -252,7 +259,9 @@
     font-size: 1.3rem;
     padding: 15px 20px;
   }
-
+  .shinebtn{
+    margin-top: 100px;
+  }
   .MasterClass {
     height: 450px;
   }
@@ -298,6 +307,7 @@
     font-size: 36px;
   }
 }
+
 .Enrollbutton {
   display: flex;
   justify-content: center;

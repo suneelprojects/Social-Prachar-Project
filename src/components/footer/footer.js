@@ -34,10 +34,10 @@ const Footer = () => {
     ];
 
     const QuickLinks = [
-        { name: 'Full Stack Web Development', path: '/full-stack-web-development' },
-        { name: 'AWS + DevOps', path: '/aws-devops' },
-        { name: 'Data Science + AI', path: '/data-science-ai' },
-        { name: 'Digital Marketing', path: '/digital-marketing' },
+        { name: 'Full Stack Web Development', path: '/full-stack-developer-course' },
+        { name: 'AWS + DevOps', path: '/awsdevopscourse' },
+        { name: 'Data Science + AI', path: '/data-science' },
+        { name: 'Digital Marketing', path: '/digital-marketing-course-training-institute-hyderabad/' },
         { name: 'Privacy Policy', path: '/privacy-policy' }
     ];
 

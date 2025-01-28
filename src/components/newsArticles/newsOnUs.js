@@ -115,7 +115,7 @@ const NewsOnUs = () => {
                   </div>
                   <hr className="my-0" />
                   <p className="text-muted mb-0" style={{ fontSize: '14px' }}>
-                    Started from <br />
+                    Placed At<br />
                     <strong className="text-dark">{achievement.startCompanyType}</strong>
                   </p>
                 </div>

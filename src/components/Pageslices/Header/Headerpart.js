@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import DS_Image from '../../../assets/AssetsOfDetailsPage/masterclass/header-removebg-preview.png';
+import JD_course from '../../../assets/AssetsOfDetailsPage/JD_course.png';
+
 // headerpage logos
 import unlockLogo from '../../../assets/AssetsOfDetailsPage/masterclass/unlock.png';
 import booksymbol from '../../../assets/AssetsOfDetailsPage/masterclass/open-book.png';
@@ -12,8 +13,6 @@ import Enrollbutton from './../Enrollbutton/Enrollbutton';
 import BackgroundImg from '../../../assets/AssetsOfDetailsPage/background.png';
 import FollowerImg from '../../../assets/AssetsOfDetailsPage/FollowewrGroup.webp';
 import starSymbol from '../../../assets/AssetsOfDetailsPage/star.svg';
-import RedLine from '../../../assets/AssetsOfDetailsPage/RedLine.webp';
-import questionMark from '../../../assets/AssetsOfDetailsPage/RedQuestionmark.svg';
 import { data } from '../../Cards/CardData';
 import { useNavigate, useParams } from 'react-router-dom';
 import company1Logo from '../../../assets/AssetsOfDetailsPage/masterclass/Accenture.png';
@@ -37,6 +36,7 @@ import company18Logo from '../../../assets/AssetsOfDetailsPage/masterclass/Yotta
 import company19Logo from '../../../assets/AssetsOfDetailsPage/masterclass/amber_flux_private_limited_logo.jpeg';
 import company20Logo from '../../../assets/AssetsOfDetailsPage/masterclass/dell_technologies_logo.png';
 import Testmonials from './../Testmonials/Testmonials';
+import Masterclass from './../Masterclass/Masterclass';
 
 const logos = [
     { src: company1Logo, alt: "Company 1" },
@@ -163,7 +163,13 @@ const Headerpart = () => {
                     </div>
                 </div>
                 <div className={style.HeaderPicture}>
-                    {card && <img src={DS_Image} alt="Course" className={style.headerImage} />}
+                    {card && (
+                        <img        
+                            src={JD_course}
+                            alt="Course"
+                            className={`img-fluid ${style.headerImage} shadow`}
+                        />
+                    )}
                     <div className={style.EnrollButtonContent}>
                         {card && !isMobile && <Enrollbutton label="Enroll Now" courseID={card.id} className={style.EnrollButton} />}
                         <span><img src={FollowerImg} alt="Follower group" className={style.FollowerImage} /></span>

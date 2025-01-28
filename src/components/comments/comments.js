@@ -20,7 +20,7 @@ const Comments = () => {
     <div className='containerFluidForPadding my-5'>
       <div className={commentsStyle.BulbTextStyle}>
         <BulbText BulbText="Our Top Comments"
-          bulbTitle="Our Alumine Comments"
+          bulbTitle="Our Alumini Comments"
           GreyText="You'll find something to spark your curiosity and enhance"/>
       </div>
       <div >

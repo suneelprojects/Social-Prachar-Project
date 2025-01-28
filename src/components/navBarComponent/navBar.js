@@ -318,7 +318,7 @@ const NavBar = () => {
                 
                 <li className="nav-item" onMouseLeave={closeDropdown}>
                   <NavLink
-                    className={`nav-link ${navBarStyle.NavLinkForHover}`}
+                    className={`nav-link navbar-toggle dropdown-toggle ${navBarStyle.NavLinkForHover}`}
                     onClick={toggleDropdown}
                   >
                     More
