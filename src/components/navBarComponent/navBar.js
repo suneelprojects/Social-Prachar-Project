@@ -13,12 +13,6 @@ import spLogoIcon from "../../assets/SP_Logo-icon.png";
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { auth } from "../../firebase";
-import {
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  signOut,
-} from "firebase/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -48,8 +42,8 @@ const NavBar = () => {
 
   const dropDownValues = [
     { label: "Data Science + AI", path: "/data-science" },
-    { label: "Full Stack Program", path: "/full-stack" },
-    { label: "Digital Marketing", path: "/digital-marketing" }
+    { label: "Full Stack Program", path: "/full-stack-developer-course" },
+    { label: "Digital Marketing", path: "/digital-marketing-course-training-institute-hyderabad" }
   ];
 
   const navigate = useNavigate();

@@ -788,9 +788,10 @@ export const data = [
             {
                 id: 1,
                 module: "Part 1: Introduction to Full Stack Development & Basic Frontend Technologies",
-                details: [
+                title: "Module 1: Introduction to Full Stack Development & HTML",
+                details: 
                     {
-                        title: "Module 1: Introduction to Full Stack Development & HTML",
+
                         videos: 7,
                         time: "2 months",
                         descriptions: [
@@ -803,14 +804,15 @@ export const data = [
                             "Introduction to HTML and Web Page Structure"
                         ]
                     }
-                ]
+                
             },
             {
                 id: 2,
                 module: "Part 2: Advanced Frontend Styling",
-                details: [
+                title: "Module 2: CSS for Frontend Development",
+                details: 
                     {
-                        title: "Module 2: CSS for Frontend Development",
+
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -825,14 +827,15 @@ export const data = [
                             "Responsive Web Design with Media Queries"
                         ]
                     }
-                ]
+                
             },
             {
                 id: 3,
                 module: "Part 3: JavaScript Basics",
-                details: [
+                title: "Module 3: JavaScript Fundamentals",
+                details: 
                     {
-                        title: "Module 3: JavaScript Fundamentals",
+
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -850,14 +853,15 @@ export const data = [
                             "Introduction to APIs (CRUD Operations)"
                         ]
                     }
-                ]
+                
             },
             {
                 id: 4,
                 module: "Part 4: Frontend Framework - Bootstrap",
-                details: [
+                title: "Module 4: Frontend Framework: Bootstrap",
+                details: 
                     {
-                        title: "Module 4: Frontend Framework: Bootstrap",
+
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -870,14 +874,15 @@ export const data = [
                             "Building Responsive Designs with Bootstrap"
                         ]
                     }
-                ]
+                
             },
             {
                 id: 5,
                 module: "Part 5: Introduction to Java and OOPs Concepts",
-                details: [
+                title: "Module 5: Introduction to Java and OOPs",
+                details: 
                     {
-                        title: "Module 5: Introduction to Java and OOPs",
+
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -890,14 +895,15 @@ export const data = [
                             "Exception Handling in Java"
                         ]
                     }
-                ]
+                
             },
             {
                 id: 6,
                 module: "Part 6: Advanced Java Concepts",
-                details: [
+                title: "Module 6: Advanced Java Concepts",
+                details: 
                     {
-                        title: "Module 6: Advanced Java Concepts",
+
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -908,14 +914,15 @@ export const data = [
                             "Regular Expressions in Java"
                         ]
                     }
-                ]
+                
             },
             {
                 id: 7,
                 module: "Part 7: Database Management with MySQL & JDBC",
-                details: [
+                title: "Module 7: Database Management with MySQL & JDBC",
+                details: 
                     {
-                        title: "Module 7: Database Management with MySQL & JDBC",
+
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -926,14 +933,14 @@ export const data = [
                             "Integrating Java Applications with Databases"
                         ]
                     }
-                ]
+                
             },
             {
                 id: 8,
                 module: "Part 8: ORM with Hibernate/JPA",
-                details: [
+                title: "Module 8: ORM with Hibernate/JPA",
+                details: 
                     {
-                        title: "Module 8: ORM with Hibernate/JPA",
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -945,14 +952,14 @@ export const data = [
                             "HQL (Hibernate Query Language) and JPQL"
                         ]
                     }
-                ]
+                
             },
             {
                 id: 9,
                 module: "Part 9: Full Stack Project",
-                details: [
-                    {
-                        title: "Module 9: Full Stack Development Project",
+                title: "Module 9: Full Stack Development Project",
+                details: {
+                    
                         videos: 7,
                         time: "2 months",
                         descriptions: [
@@ -964,8 +971,8 @@ export const data = [
                             "Testing and Debugging the Application",
                             "Deployment and Version Control with Git"
                         ]
+                    
                     }
-                ]
             }
         ],
         levelcardIndex: [

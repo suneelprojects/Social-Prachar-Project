@@ -38,7 +38,7 @@ const App = () => {
               {routes}
             </Routes>
           </Suspense>
-          <QuickHelpButton/>
+          {/* <QuickHelpButton/> */}
         </BrowserRouter>
       </WishListProvider>
     </div>
