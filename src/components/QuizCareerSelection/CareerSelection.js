@@ -174,7 +174,7 @@ const CareerSelection = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [responses, setResponses] = useState([]);
     const [selectedOption, setSelectedOption] = useState(null);
-    const [timeLeft, setTimeLeft] = useState(15);
+    const [timeLeft, setTimeLeft] = useState(600);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [showResult, setShowResult] = useState(false);
     const navigate = useNavigate();
@@ -338,15 +338,14 @@ const CareerSelection = () => {
                 </div>
             ) : !showResult ? (
                 <div className={style.quiz_container}>
-                    {/* <img src={start_QuizBG} alt="" className={style.background_image} /> */}
                     <h1>Career Quiz</h1>
-                    <div className="mb-3">
+                    <div className="mb-2">
                         <span className="badge" style={{ background: '#553cdf' }}>{formatTime(timeLeft)}</span>
                     </div>
                     <div className={`${style.questionContainer}d-flex justify-content-center`}>
                         <div className="sliderContainer">
                             <div
-                                className={`${style.questionsWrapper} col-12 m-3  `}
+                                className={`${style.questionsWrapper} col-12`}
                                 style={{
                                     transform: `translateX(-${currentQuestion * 100}%)`,
                                     transition: "transform 0.5s ease-in-out",
@@ -354,11 +353,11 @@ const CareerSelection = () => {
                             >
                                 {quizData.map((questionData, questionIndex) => (
                                     <div className={style.questionSlide} key={questionIndex}>
-                                        <div className="questionContainer text-center">
+                                        <div className={`${style.questionContainer} questionContainer text-center m-3`}>
                                             <h2 className="fs-2 fs-6">
                                                 Q: {questionData.question}
                                             </h2>
-                                            <div className="mt-3 d-flex flex-column align-items-center">
+                                            <div className="mt-2 d-flex flex-column align-items-center">
                                                 {questionData.options.map((option, index) => (
                                                     <div
                                                         className="col-12 col-md-12 my-2 d-flex justify-content-center"

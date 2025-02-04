@@ -4,21 +4,21 @@ export const RoadMapData = [
         noOfHoursToLearn: 320,
         projectsIncluded: 18,
         studentsTrainedTillNow: "8000+",
-        downloadRoadMap: "Download RoadMap"
+        downloadRoadMap: "ai-data-scientist.pdf"
     },
     {
         courseName: "Data Analytics",
         noOfHoursToLearn: 150,
         projectsIncluded: 6,
         studentsTrainedTillNow: "8000+",
-        downloadRoadMap: "Download RoadMap"
+        downloadRoadMap: "data-analyst.pdf"
     },
     {
         courseName: "Full Stack - Python",
         noOfHoursToLearn: 350,
         projectsIncluded: 25,
         studentsTrainedTillNow: "7000+",
-        downloadRoadMap: "Download RoadMap"
+        downloadRoadMap: "fs-Python-Developer.pdf"
     },
     {
         courseName: "Full Stack - Java",
@@ -32,6 +32,13 @@ export const RoadMapData = [
         noOfHoursToLearn: 90,
         projectsIncluded: 6,
         studentsTrainedTillNow: "2000+",
-        downloadRoadMap: "Download RoadMap"
+        downloadRoadMap: "devops.pdf"
+    },
+     {
+        courseName: "Mern Stack(Full stack)",
+        noOfHoursToLearn: 360,
+        projectsIncluded: 6,
+        studentsTrainedTillNow: "2000+",
+        downloadRoadMap: "full-stack.pdf"
     }
 ];
