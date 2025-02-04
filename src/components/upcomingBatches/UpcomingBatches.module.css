@@ -1,19 +1,16 @@
 /** @format */
 .container {
-  height: 100vh;
   background: linear-gradient(
     to bottom,
-    rgb(85, 60, 223) 20%,
-    rgb(255, 255, 255) 50%
+    rgb(85, 60, 223) 5%,
+    rgb(255, 255, 255) 10%
   );
 }
 
 .Title {
     font-family:'Avant Garde'; 
-    /* font-size: 36px; */
     font-weight: bold;
-    text-align: left; /* This is equivalent to text-start in Bootstrap */
-    /* Any other styles you want to add */
+    text-align: left;
 }
 
 .active_category {
@@ -30,7 +27,6 @@
 .sticky_asidecard {
   position: sticky;
   top: 100px;
-  z-index: 100;
   background: #fff;
 }
 
@@ -40,7 +36,6 @@
 }
 
 .enrollBtn:hover {
-  /* background-color: white; */
   color: white;
   border: 1px solid #0048ff;
   transform: scale(1.05);

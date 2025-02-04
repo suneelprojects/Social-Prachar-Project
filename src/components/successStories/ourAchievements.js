@@ -96,7 +96,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "120% Salary Hike",
             preCompany: sp_Logo,
             postCompany: Expo_logo,
-            startCompanyType: "Service based company",
+            startCompanyType: "Exponential Company",
             profileImage:img_10,
             category: "Data Science"
         },
@@ -106,7 +106,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany: sp_Logo,
             postCompany: sutherland,
-            startCompanyType: "Service based company",
+            startCompanyType: "Sutherlands company",
             profileImage: img_11,
             category: "Full Stack Python"
         },
@@ -116,7 +116,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "70% Salary Hike",
             preCompany: sp_Logo,
             postCompany: tcs_logo,
-            startCompanyType: "Service based company",
+            startCompanyType: "TCS company",
             profileImage: img_12,
             category: "Data Science"
         },
@@ -126,7 +126,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany:sp_Logo,
             postCompany: pinaca_logo,
-            startCompanyType: "Service based company",
+            startCompanyType: "Pinaca Technologies",
             profileImage:img_2,
             category: "Data Science"
         },
@@ -136,7 +136,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "80% Salary Hike",
             preCompany: sp_Logo,
             postCompany: ascentLogo,
-            startCompanyType: "Service based company",
+            startCompanyType: "Ascent company",
             profileImage: img_45,
             category:"Data Science"
         },
@@ -146,7 +146,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "90% Salary Hike",
             preCompany: sp_Logo,
             postCompany: pinaca_logo,
-            startCompanyType: "Service based company",
+            startCompanyType: "Pinaca Technologies",
             profileImage: img_46,
             category: "Data Science"
         },
@@ -156,7 +156,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "70% Salary Hike",
             preCompany:sp_Logo,
             postCompany: cisco,
-            startCompanyType: "Service based company",
+            startCompanyType: "Cisco company",
             profileImage: img_3,
             category: "Data Science"
         },
@@ -166,7 +166,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "80% Salary Hike",
             preCompany: sp_Logo,
             postCompany: tricubics,
-            startCompanyType: "Service based company",
+            startCompanyType: "Tricubics company",
             profileImage: img_5,
             category: "Data Science"
         },
@@ -176,7 +176,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "120% Salary Hike",
             preCompany: sp_Logo,
             postCompany: saptang_labs,
-            startCompanyType: "Service based company",
+            startCompanyType: "Saptang Labs company",
             profileImage: img_6,
             category: "Data Science"
         },
@@ -187,7 +187,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "130% Salary Hike",
             preCompany: sp_Logo,
             postCompany: onPassive,
-            startCompanyType: "Service based company",
+            startCompanyType: "OnPassivecompany",
             profileImage: img_15,
             category: "Data Science"
         },
@@ -198,7 +198,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "60% Salary Hike",
             preCompany:sp_Logo,
             postCompany: sonata,
-            startCompanyType: "Service based company",
+            startCompanyType: "Sonata Technologies",
             profileImage: img_48,
             category: "Data Science"
         },
@@ -208,7 +208,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "80% Salary Hike",
             preCompany:sp_Logo,
             postCompany: apstrol,
-            startCompanyType: "Service based company",
+            startCompanyType: "Apstrol company",
             profileImage: img_17,
             category: "Data Science"
         },
@@ -218,7 +218,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "120% Salary Hike",
             preCompany:sp_Logo,
             postCompany: succeed,
-            startCompanyType: "Service based company",
+            startCompanyType: "Succeed company",
             profileImage: img_22,
             category: "Data Science"
         },
@@ -228,7 +228,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "130% Salary Hike",
             preCompany:sp_Logo,
             postCompany: cisco,
-            startCompanyType: "Service based company",
+            startCompanyType: "Cisco company",
             profileImage: img_23,
             category: "Data Science"
         },
@@ -238,7 +238,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany:cognizant,
-            startCompanyType: "Service based company",
+            startCompanyType: "Cognizant company",
             profileImage: blank_image,
             category: "Data Science"
         },
@@ -249,7 +249,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany:sp_Logo,
             postCompany: xlExpress,
-            startCompanyType: "Service based company",
+            startCompanyType: "xlExpress company",
             profileImage: img_31,
             category: "Data Science"
         },
@@ -260,7 +260,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "60% Salary Hike",
             preCompany:sp_Logo,
             postCompany: tft,
-            startCompanyType: "Service based company",
+            startCompanyType: "Think Future Technologies",
             profileImage: img_33,
             category: "Data Science"
         },
@@ -271,7 +271,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany:sp_Logo,
             postCompany: centific,
-            startCompanyType: "Service based company",
+            startCompanyType: "Centific company",
             profileImage: img_35,
             category: "Data Science"
         },
@@ -282,7 +282,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "50% Salary Hike",
             preCompany:sp_Logo,
             postCompany: fusion_logo,
-            startCompanyType: "Service based company",
+            startCompanyType: "Fusion company",
             profileImage:blank_image,
             category: "Data Science"
         },
@@ -293,7 +293,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "70% Salary Hike",
             preCompany:sp_Logo,
             postCompany: softility,
-            startCompanyType: "Service based company",
+            startCompanyType: "Softility company",
             profileImage: img_37,
             category: "Data Science"
         },
@@ -304,7 +304,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany:sp_Logo,
             postCompany: safeway,
-            startCompanyType: "Service based company",
+            startCompanyType: "Safeway company",
             profileImage: img_38,
             category: "Data Science"
         },
@@ -314,7 +314,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "120% Salary Hike",
             preCompany:sp_Logo,
             postCompany: mouri,
-            startCompanyType: "Service based company",
+            startCompanyType: "Mouri Technologies",
             profileImage:img_39,
             category: "Data Science"
         },
@@ -324,7 +324,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "150% Salary Hike",
             preCompany:sp_Logo,
             postCompany: mea,
-            startCompanyType: "Service based company",
+            startCompanyType: "Mea Technologies",
             profileImage: img_40,
             category: "Data Science"
         },
@@ -335,7 +335,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "50% Salary Hike",
             preCompany:sp_Logo,
             postCompany:axelta,
-            startCompanyType: "Service based company",
+            startCompanyType: "axelta company",
             profileImage:img_49,
             category: "Data Science"
         },
@@ -346,7 +346,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "70% Salary Hike",
             preCompany:sp_Logo,
             postCompany: pinaca_logo,
-            startCompanyType: "Service based company",
+            startCompanyType: "Pinaca Technologies",
             profileImage: img_42,
             category: "Data Science"
         },
@@ -356,7 +356,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany: sp_Logo,
             postCompany: simfoni,
-            startCompanyType: "Service based company",
+            startCompanyType: "Simfoni company",
             profileImage: img_43,
             category: "Data Science"
         },
@@ -368,7 +368,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "120% Salary Hike",
             preCompany:sp_Logo,
             postCompany: tech_M ,
-            startCompanyType: "Service based company",
+            startCompanyType: "Tech Mahindra company",
             profileImage:img_28,
             category: "Full Stack Java"
         },
@@ -378,7 +378,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: outlier,
-            startCompanyType: "Service based company",
+            startCompanyType: "Outlier company",
             profileImage: img_13,
             category: "Full Stack Java"
         },
@@ -389,7 +389,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "50% Salary Hike",
             preCompany:sp_Logo,
             postCompany: dell,
-            startCompanyType: "Service based company",
+            startCompanyType: "Dell Technologies",
             profileImage: img_14,
             category: "Full Stack Java"
         },
@@ -401,7 +401,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "120% Salary Hike",
             preCompany:sp_Logo,
             postCompany: axelta ,
-            startCompanyType: "Service based company",
+            startCompanyType: "axelta company",
             profileImage:img_21,
             category: "Full Stack Java"
         },
@@ -412,7 +412,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany:sp_Logo,
             postCompany:sonata,
-            startCompanyType: "Service based company",
+            startCompanyType: "Sonata company",
             profileImage: img_24,
             category: "Full Stack Java"
         },
@@ -423,7 +423,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany:sp_Logo,
             postCompany: attivo,
-            startCompanyType: "Service based company",
+            startCompanyType: "Attivo company",
             profileImage:img_25,
             category: "Full Stack Java"
         },
@@ -434,7 +434,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "120% Salary Hike",
             preCompany:sp_Logo,
             postCompany: honeywell,
-            startCompanyType: "Service based company",
+            startCompanyType: "Honeywell company",
             profileImage:img_29,
             category: "Full Stack Java"
         },
@@ -446,7 +446,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany: sp_Logo,
             postCompany: esoftlabs,
-            startCompanyType: "Service based company",
+            startCompanyType: "eSoftlabs company",
             profileImage: img_30,
             category: "Full Stack Java"
         },
@@ -461,7 +461,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "50% Salary Hike",
             preCompany:sp_Logo,
             postCompany: otsi,
-            startCompanyType: "Service Based Compnay",
+            startCompanyType: "Otsi Compnay",
             profileImage:img_41,
             category: "Full Stack Python"
         },
@@ -472,7 +472,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "70% Salary Hike",
             preCompany: sp_Logo,
             postCompany: aws,
-            startCompanyType: "Service Based Compnay",
+            startCompanyType: "AWS Compnay",
             profileImage: img_26,
             category: "Full Stack Python"
         },
@@ -482,7 +482,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany:sp_Logo,
             postCompany: yotta,
-            startCompanyType: "Service based company",
+            startCompanyType: "Yotta company",
             profileImage: img_20,
             category: "Full Stack Python"
         },
@@ -492,7 +492,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "120% Salary Hike",
             preCompany: sp_Logo,
             postCompany:robokidz ,
-            startCompanyType: "Service based company",
+            startCompanyType: "Robokidz company",
             profileImage: img_4,
             category: "Full Stack Python"
         },
@@ -502,7 +502,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: fusion_logo ,
-            startCompanyType: "Service based company",
+            startCompanyType: "Fusion Technologies",
             profileImage: img_8,
             category: "Full Stack Python"
         },
@@ -512,7 +512,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "70% Salary Hike",
             preCompany:sp_Logo,
             postCompany: yotta,
-            startCompanyType: "Service based company",
+            startCompanyType: "Yotta company",
             profileImage: img_16,
             category: "Full Stack Python"
         },
@@ -522,7 +522,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany:sp_Logo,
             postCompany: tricubics,
-            startCompanyType: "Service based company",
+            startCompanyType: "Tricubics company",
             profileImage: img_44,
             category: "Full Stack Python"
         },
@@ -535,7 +535,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "80% Salary Hike",
             preCompany:sp_Logo,
             postCompany: apstrol,
-            startCompanyType: "Service based company",
+            startCompanyType: "Apstrol company",
             profileImage:img_32,
             category: "Digital Marketing"
         },
@@ -545,7 +545,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany: sp_Logo,
             postCompany: Accenture,
-            startCompanyType: "Service based company",
+            startCompanyType: "Accenture company",
             profileImage: img_27,
             category: "Digital Marketing"
         },
@@ -555,7 +555,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "70% Salary Hike",
             preCompany: sp_Logo,
             postCompany: gedu,
-            startCompanyType: "Service based company",
+            startCompanyType: "Gedu company",
             profileImage: img_18,
             category: "Digital Marketing"
         },
@@ -565,7 +565,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "100% Salary Hike",
             preCompany:sp_Logo,
             postCompany:tcs_logo,
-            startCompanyType: "Service based company",
+            startCompanyType: "TCS company",
             profileImage: img_19,
             category: "Digital Marketing"
         },
@@ -575,7 +575,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: GOC,
-            startCompanyType: "Service based company",
+            startCompanyType: "GOC company",
             profileImage: img_7,
             category:"Digital Marketing"
         },
@@ -585,7 +585,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "150% Salary Hike",
             preCompany: sp_Logo,
             postCompany: cognizant,
-            startCompanyType: "Service based company",
+            startCompanyType: "Cognizant company",
             profileImage: img_9,
             category: "Digital Marketing"
         },
@@ -595,7 +595,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             hike: "120% Salary Hike",
             preCompany: sp_Logo,
             postCompany: onPassive,
-            startCompanyType: "Service based company",
+            startCompanyType: "OnPassive company",
             profileImage: img_15,
             category: "Digital Marketing"
         },

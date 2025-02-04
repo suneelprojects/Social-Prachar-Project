@@ -53,24 +53,8 @@ const Masterclass = () => {
 
     return (
         <div className={styles.masterClassContent}>
-            <div className={styles.MasterClass}>
-                <div className={styles.headings}>
-                    <p className={styles.Text1}>That's why we created</p>
-                    <p className={styles.Text2}>A masterclass</p>
-                    <p className={styles.Text3}>to help you speak with confidence and clarity</p>
-                </div>
-            </div>
-
-            <div className={styles.classVideo}>
-                <img
-                    src={masterClassImage}
-                    alt="Masterclass"
-                    className={styles.ClassImage}
-                />
-            </div>
-
+           
             <div className={styles.nextLive}>
-                <button className={styles.shinebtn} onClick={() => navigate('/career-counselling')}>Book Free Session</button>
                 <h2>Next <span style={{ color:'#ff5003'}}>cohort</span> Starts in</h2>
                 <div className={styles.timerBoxes}>
                     <div className={styles.timerBox}>

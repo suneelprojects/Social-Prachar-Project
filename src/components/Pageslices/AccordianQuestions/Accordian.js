@@ -1,11 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './Accordian.module.css';
-import { data } from '../../Cards/CardData'; // Import the data
+import style from '../Header/Header.module.css';
+import masterclassStyles from '../Masterclass/Masterclass.module.css';
+import RedLine from '../../../assets/AssetsOfDetailsPage/RedLine.webp';
+import questionMark from '../../../assets/AssetsOfDetailsPage/RedQuestionmark.svg';
+import masterClassImage from '../../../assets/careerworkshop/Free.png';
+import { data } from '../../Cards/CardData';
 import { useNavigate, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faChalkboardTeacher, faPhone, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faLightbulb } from '@fortawesome/free-regular-svg-icons';
+import Footer from './../../footer/footer';
 
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => {
@@ -81,6 +87,31 @@ const CourseAccordion = () => {
     const [formData, setFormData] = useState({ name: '', mobile: '' });
     const [loading, setLoading] = useState(false);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+    const redLineRef = useRef(null);
+    const header1Ref = useRef(null);
+    const header2Ref = useRef(null);
+    const doughtsPartRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(style.DoughtsPartVisible);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        if (doughtsPartRef.current) observer.observe(doughtsPartRef.current);
+        if (redLineRef.current) observer.observe(redLineRef.current);
+
+        return () => {
+            if (doughtsPartRef.current) observer.unobserve(doughtsPartRef.current);
+            if (redLineRef.current) observer.unobserve(redLineRef.current);
+        };
+    }, []);
 
     useEffect(() => {
         const cardDetails = data.find(item => item.slug === slug);
@@ -133,8 +164,65 @@ const CourseAccordion = () => {
         <>
             <Accordion items={accordionItems} />
 
+
+            <div className={style.DoughtsPart} ref={doughtsPartRef}>
+                <p
+                    ref={header1Ref}
+                    className={`${style.header1} text-center fw-bold`}
+                >
+                    Do you Feel Confused About
+                </p>
+                <p
+                    ref={header2Ref}
+                    className={`${style.header2} text-center fw-bold`}
+                >
+                    {card?.selfQuestioning}
+                </p>
+
+                <img
+                    ref={redLineRef}
+                    src={RedLine}
+                    alt=""
+                    className={`${style.redLine}`}
+                />
+                <div className={style.SelfQuestioning} data-aos="zoom-in" data-aos-duration="1000">
+                    {card && card.questions && card.questions.map((question, index) => (
+                        <div className={style.questionItem} key={index}>
+                            <img src={questionMark} alt="Question mark" className={style.questionIcon} />
+                            <p>{question}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div>
+                <div className={masterclassStyles.MasterClass}>
+                    <div className={masterclassStyles.headings}>
+                        <p className={masterclassStyles.Text1}>That's why we created</p>
+                        <p className={masterclassStyles.Text2}>A masterclass</p>
+                        <p className={masterclassStyles.Text3}>to help you speak with confidence and clarity</p>
+                    </div>
+                </div>
+
+                <div className={masterclassStyles.classVideo}>
+                    <img
+                        src={masterClassImage}
+                        alt="Masterclass"
+                        className={masterclassStyles.ClassImage}
+                    />
+                </div>
+                <div className="d-flex justify-content-center">
+                    <button
+                        className={`${masterclassStyles.shinebtn} btn`}
+                        onClick={() => navigate('/career-counselling')}
+                    >
+                        Book Free Session
+                    </button>
+                </div>
+
+            </div>
+
             {/* Contact Boxes below Accordion */}
-            <div className={styles.contact}>
+            <div className={`${styles.contact} m-3 m-md-5 m-lg-5`}>
                 <p
                     className="text-center mb-4 fw-bold"
                     style={{ fontSize: "32px", position: 'relative', top: '18px' }}
@@ -264,6 +352,7 @@ const CourseAccordion = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
 
         </>
     );

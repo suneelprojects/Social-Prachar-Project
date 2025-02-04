@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Buttonstyle from '../Enrollbutton/Enrollbutton.module.css';
 // Styles defined separately
 const styles = {
     container: {
@@ -72,13 +72,30 @@ const ThankyouPage = () => {
                     <p style={styles.paragraph}>
                         In case of quick support, call <strong style={styles.phoneNumber}> 8019 479 419 .</strong>
                     </p>
-                    {/* <button
-                        style={styles.button}
-                        onMouseOver={(e) => e.target.style.backgroundColor = '#0056b3'}
-                        onMouseOut={(e) => e.target.style.backgroundColor = '#007bff'}
-                    >
-                        Contact Us
-                    </button> */}
+                    <div className="dropdown">
+                        <button className={`${Buttonstyle.shinebtn} btn btn-secondary dropdown-toggle`} type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Download Curriculums
+                        </button>
+                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li>
+                                <a className="dropdown-item" href="/curriculum_pdfs/full_stack_curriculum.pdf" download="full_stack_curriculum.pdf">
+                                    Full Stack Curriculum
+                                </a>
+                            </li>
+                            <li>
+                                <a className="dropdown-item" href="/curriculum_pdfs/Data_Science_Curriculum.pdf" download="Data_Science_Curriculum.pdf">
+                                    Data Science Curriculum
+                                </a>
+                            </li>
+                            <li>
+                                <a className="dropdown-item" href="/curriculum_pdfs/DM_Advanced_Curriculum_Hyd.pdf" download="DM_Advanced_Curriculum_Hyd.pdf">
+                                    Digital Marketing Curriculum
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
                 </div>
             </div>
         </div>

@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState, Suspense } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { data } from '../Cards/CardData.js';
+
 import style from './SuccessStories.module.css';
 import GoogleStyle from './googleStyles.module.css';
 import trustPilotStyle from './trustPilot.module.css';
 import Footer from './../footer/footer.js';
 import linkedinLogo from '../../../src/assets/successStories/linkedin.png';
+import justDialLogo from '../../../src/assets/AssetsOfDetailsPage/masterclass/JustDial_Logo.png';
 import googleLogo from '../../../src/assets/successStories/google.png';
 import { linkedinData } from './linkedinData.js';
 import { googleData } from './googleData.js';
@@ -14,9 +15,9 @@ import { ourAchievements } from './ourAchievements.js';
 import { ourAluminiReviews } from './ourAluminiReviews.js';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from '../Pageslices/Enrollbutton/PopUpForm.module.css';
 import redline from '../../assets/RedLine.webp';
 import Loading from '../extraComponents/loading.js';
+import SuccessStoriesForm from './SuccessStoriesForm.js';
 
 
 const SuccessStories = () => {
@@ -81,85 +82,13 @@ const SuccessStories = () => {
         return achievement.category === filter;
     });
 
-    const [showSignInForm, setShowSignInForm] = useState(false);
-
-    const handleKnowMoreClick = () => {
-        setShowSignInForm(true);
-    };
-    const handleCloseClick = () =>{
-        setShowSignInForm(false);
-    }
-
-    const [formData, setFormData] = useState({
-        fullName: '',
-        email: '',
-        phone: '',
-        course: '',
-        mode: '',
-    });
-
-    const { slug } = useParams();
-    const [card, setCard] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        const cardDetails = data.find(card => card.slug === slug);
-        setCard(cardDetails);
-    }, [slug]);
-
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwUXmxm_e_U4J3yR7y7sn8b26WM4dIr51UIjuTmCt43VUOnxSuUR0USb2N_Iqbm2bTV/exec '; // Replace with your Google Apps Script Web App URL
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const { fullName, email, phone, course, mode } = formData;
-
-        if (!fullName || !email || !phone || !course || !mode) {
-            alert('Please fill in all required fields.');
-            return;
-        }
-        setIsLoading(true); // Show loading spinner
-
-        try {
-            const formPayload = new FormData();
-            formPayload.append('fullName', formData.fullName);
-            formPayload.append('email', formData.email);
-            formPayload.append('phone', formData.phone);
-            formPayload.append('course', formData.course);
-            formPayload.append('mode', formData.mode);
-
-            const response = await fetch(scriptURL, {
-                method: 'POST',
-                body: formPayload,
-            });
-
-            setIsLoading(false);
-
-            if (response.ok) {
-                alert('Form submitted successfully!');
-                navigate('/thank-you');
-            } else {
-                alert('Failed to submit form. Please try again.');
-            }
-        } catch (error) {
-            setIsLoading(false);
-            console.error('Error:', error);
-            alert('There was an error submitting the form.');
-        }
-    };
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
     return (
 
         <>
 
             <div className={style.topContent}>
                 <div className={style.insights}>
-                    <p className={`${style.insightsHeader} text-center mb-4`}>Uncovering top insights about us</p>
+                    <p className={`${style.insightsHeader} text-center mb-4`}>16000+ Success Stories Since 2014</p>
                     <div className="container">
                         <div className={`${style.wholeInsights} row justify-content-center g-3`}>
                             <div className="col-md-4 col-sm-4 col-12 d-flex flex-column">
@@ -195,9 +124,9 @@ const SuccessStories = () => {
                         <div className="col-12 col-md-4 text-center mb-3">
                             <div className={`${style.stat}`}>
                                 <span className={`${style.statValue} fs-2 fw-bold text-black`}>
-                                    {studentsEnrolled.toLocaleString()}K
+                                    {studentsEnrolled.toLocaleString()}000+
                                 </span>
-                                <p className={`${style.statLabel} mt-2`}>Students Enrolled</p>
+                                <p className={`${style.statLabel} mt-2`}>Students Alumini</p>
                             </div>
                         </div>
 
@@ -324,106 +253,6 @@ const SuccessStories = () => {
                                     }}
                                 >
                                     {filteredAchievements
-                                        .filter((_, index) => index % 2 === 0)
-                                        .map((achievement, index) => (
-                                            <div
-                                                key={index}
-                                                className="card text-center p-3 shadow-sm"
-                                                style={{
-                                                    minWidth: '320px',
-                                                    height: '250px',
-                                                    borderRadius: '12px',
-                                                }}
-                                            >
-                                                <div className="d-flex text-start">
-                                                    <div>
-                                                        <img
-                                                            src={achievement.profileImage}
-                                                            alt={achievement.name}
-                                                            className="rounded-circle mb-2"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                border: '4px solid #553cdf',
-                                                                marginRight: '16px',
-                                                            }}
-                                                        />
-                                                    </div>
-                                                    <div>
-                                                        <h5 className="card-title">{achievement.name}</h5>
-                                                        <p
-                                                            className="text-muted mb-2"
-                                                            style={{ fontSize: '14px' }}
-                                                        >
-                                                            {achievement.role}
-                                                        </p>
-                                                        <span
-                                                            className="badge py-1 px-3"
-                                                            style={{
-                                                                color: '#553cdf',
-                                                                borderRadius: '12px',
-                                                                fontSize: '12px',
-                                                                background: '#543cdf31',
-                                                            }}
-                                                        >
-                                                            {achievement.hike}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="d-flex justify-content-around align-items-center mt-4" style={{ position: 'relative', top: '-8px' }}>
-                                                    <div>
-                                                        <p
-                                                            className="text-muted mb-0"
-                                                            style={{ fontSize: '14px' }}
-                                                        >
-                                                            Pre Social Prachar
-                                                        </p>
-                                                        <img
-                                                            src={achievement.preCompany}
-                                                            alt="Previous Company Logo"
-                                                            style={{ width: 'auto', height: '30px' }}
-                                                        />
-                                                    </div>
-                                                    <div>
-                                                        <i className="bi bi-arrow-right"></i>
-                                                    </div>
-                                                    <div>
-                                                        <p
-                                                            className="text-muted mb-0"
-                                                            style={{ fontSize: '14px' }}
-                                                        >
-                                                            Post Social Prachar
-                                                        </p>
-                                                        <img
-                                                            src={achievement.postCompany}
-                                                            alt="Previous Company Logo"
-                                                            style={{ width: 'auto', height: '30px' }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <hr className="my-0" />
-                                                <p
-                                                    className="text-muted mb-0"
-                                                    style={{ fontSize: '14px' }}
-                                                >
-                                                    started from <br />
-                                                    <strong className="text-dark">
-                                                        {achievement.startCompanyType}
-                                                    </strong>
-                                                </p>
-                                            </div>
-                                        ))}
-                                </div>
-
-                                {/* Second Row */}
-                                <div
-                                    className="d-flex flex-nowrap"
-                                    style={{
-                                        scrollbarWidth: 'thin',
-                                        gap: '25px',
-                                    }}
-                                >
-                                    {filteredAchievements
                                         .filter((_, index) => index % 2 !== 0)
                                         .map((achievement, index) => (
                                             <div
@@ -514,6 +343,105 @@ const SuccessStories = () => {
                                             </div>
                                         ))}
                                 </div>
+                                {/* Second Row */}
+                                <div
+                                    className="d-flex flex-nowrap"
+                                    style={{
+                                        scrollbarWidth: 'thin',
+                                        gap: '25px',
+                                    }}
+                                >
+                                    {filteredAchievements
+                                        .filter((_, index) => index % 2 === 0)
+                                        .map((achievement, index) => (
+                                            <div
+                                                key={index}
+                                                className="card text-center p-3 shadow-sm"
+                                                style={{
+                                                    minWidth: '320px',
+                                                    height: '250px',
+                                                    borderRadius: '12px',
+                                                }}
+                                            >
+                                                <div className="d-flex text-start">
+                                                    <div>
+                                                        <img
+                                                            src={achievement.profileImage}
+                                                            alt={achievement.name}
+                                                            className="rounded-circle mb-2"
+                                                            style={{
+                                                                width: '80px',
+                                                                height: '80px',
+                                                                border: '4px solid #553cdf',
+                                                                marginRight: '16px',
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <div>
+                                                        <h5 className="card-title">{achievement.name}</h5>
+                                                        <p
+                                                            className="text-muted mb-2"
+                                                            style={{ fontSize: '14px' }}
+                                                        >
+                                                            {achievement.role}
+                                                        </p>
+                                                        <span
+                                                            className="badge py-1 px-3"
+                                                            style={{
+                                                                color: '#553cdf',
+                                                                borderRadius: '12px',
+                                                                fontSize: '12px',
+                                                                background: '#543cdf31',
+                                                            }}
+                                                        >
+                                                            {achievement.hike}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div className="d-flex justify-content-around align-items-center mt-4" style={{ position: 'relative', top: '-8px' }}>
+                                                    <div>
+                                                        <p
+                                                            className="text-muted mb-0"
+                                                            style={{ fontSize: '14px' }}
+                                                        >
+                                                            Pre Social Prachar
+                                                        </p>
+                                                        <img
+                                                            src={achievement.preCompany}
+                                                            alt="Previous Company Logo"
+                                                            style={{ width: 'auto', height: '30px' }}
+                                                        />
+                                                    </div>
+                                                    <div>
+                                                        <i className="bi bi-arrow-right"></i>
+                                                    </div>
+                                                    <div>
+                                                        <p
+                                                            className="text-muted mb-0"
+                                                            style={{ fontSize: '14px' }}
+                                                        >
+                                                            Post Social Prachar
+                                                        </p>
+                                                        <img
+                                                            src={achievement.postCompany}
+                                                            alt="Previous Company Logo"
+                                                            style={{ width: 'auto', height: '30px' }}
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <hr className="my-0" />
+                                                <p
+                                                    className="text-muted mb-0"
+                                                    style={{ fontSize: '14px' }}
+                                                >
+                                                    started from <br />
+                                                    <strong className="text-dark">
+                                                        {achievement.startCompanyType}
+                                                    </strong>
+                                                </p>
+                                            </div>
+                                        ))}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -521,139 +449,25 @@ const SuccessStories = () => {
 
                 <hr className="mx-auto w-75" />
                 <div className="text-center" style={{ fontSize: '18px' }}>
-                    <p>
-                        There are 1250+ success stories which we have; these are just a few of them.
+                    <p className='fw-bold'>
+                        SocialPrachar alumni are working in 1,100+ companies across India. Contact us to know more about placements!
                     </p>
-                    <div>
-                        {showSignInForm && (
-                            <div className={styles.overlay}>
-                                {/* Lazy Loading Spinner at the top */}
-                                {isLoading && (
-                                    <div className={styles.loadingOverlay}>
-                                        <Suspense fallback={<div>Loading...</div>}>
-                                            <Loading />
-                                        </Suspense>
-                                    </div>
-                                )}
-
-                                <div className={styles.formContainer}>
-                                    <button
-                                        className={styles.closeButton}
-                                        onClick={handleCloseClick}
-                                        aria-label="Close Form"
-                                    >
-                                        &times;
-                                    </button>
-                                    <form onSubmit={handleSubmit}>
-                                        <h2>Enroll Now</h2>
-                                        {/* Full Name */}
-                                        <div className={styles.formGroup}>
-                                            <input
-                                                type="text"
-                                                name="fullName"
-                                                placeholder="Full Name"
-                                                value={formData.fullName}
-                                                onChange={handleChange}
-                                                required
-                                            />
-                                        </div>
-
-                                        {/* Email */}
-                                        <div className={styles.formGroup}>
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                placeholder="Email"
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                required
-                                            />
-                                        </div>
-
-                                        {/* Phone Number */}
-                                        <div className={styles.formGroup}>
-                                            <input
-                                                type="tel"
-                                                name="phone"
-                                                placeholder="Phone Number"
-                                                value={formData.phone}
-                                                onChange={handleChange}
-                                                required
-                                            />
-                                        </div>
-
-                                        {/* Select Course */}
-                                        <div className={styles.formGroup}>
-                                            <select
-                                                className="form-select"
-                                                name="course"
-                                                value={formData.course}
-                                                onChange={handleChange}
-                                                required
-                                            >
-                                                <option value="" disabled>Select Course</option>
-                                                <option value="slot1">Data Analytics</option>
-                                                <option value="slot2">Data Science & AI</option>
-                                                <option value="slot3">Full stack Mern Java</option>
-                                                <option value="slot4">Full stack Mern Python</option>
-                                                <option value="slot5">Multi Cloud DevOps</option>
-                                            </select>
-                                        </div>
-
-
-                                        {/* Select Training Mode */}
-                                        <div className={styles.formGroup}>
-                                            <select
-                                                name="mode"
-                                                value={formData.mode}
-                                                onChange={handleChange}
-                                                required
-                                            >
-                                                <option value="">Select Training Mode</option>
-                                                <option value="Online">Online</option>
-                                                <option value="Offline">Offline</option>
-                                            </select>
-                                        </div>
-
-                                        {/* Submit Button */}
-                                        <button
-                                            type="submit"
-                                            className={styles.submitButton}
-                                            onClick={handleSubmit}
-                                        >
-                                            {isLoading ? 'Submitting...' : 'Submit'}
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-
-                        )}
-                        <button
-                            className="btn"
-                            onClick={handleKnowMoreClick}
-                            style={{
-                                fontSize: '16px',
-                                color: '#553cdf',
-                                fontWeight: '600',
-                                border: '1px solid black',
-                                padding: '10px 20px',
-                            }}
-                        >
-                            Know More
-                        </button>
-                    </div>
-                    {/* {<EnrollButton label="Know more" className={style.EnrollButton} />} */}
+                    <SuccessStoriesForm/>
                 </div>
             </div>
-
-
-
-
 
             {/*Linkedin cards  */}
             <div className={style.linkedin}>
                 <div className="text-center pt-5">
-                    <h1 className={`${style.linkedinHeader} mb-4`}>Linkedin</h1>
+                    <h1 className={`${style.linkedinHeader} mb-4`}>Linkedin
+                        <span>
+                            <img
+                                src={linkedinLogo}
+                                alt="Google Logo"
+                                className={GoogleStyle.HeadingLinkedinLogo}
+                            />
+                        </span>
+                    </h1>
                 </div>
                 <div
                     className={`${style.wholeLinkedinCard} container`}
@@ -699,7 +513,15 @@ const SuccessStories = () => {
 
             {/* google comments */}
             <div className={GoogleStyle.google}>
-                <p className={`${GoogleStyle.header} text-center`}>Google</p>
+                <p className={`${GoogleStyle.header} text-center`}>Google
+                    <span>
+                        <img
+                            src={googleLogo}
+                            alt="Google Logo"
+                            className={GoogleStyle.HeadingGoogleLogo}
+                        />
+                    </span>
+                </p>
                 <div
                     className={`${GoogleStyle.wholeGoogleCard} container`}
                     ref={scrollRef}
@@ -713,7 +535,7 @@ const SuccessStories = () => {
                         {googleData.map((data) => (
                             <div
                                 key={data.id}
-                                className="col-3 col-sm-8 col-lg-6 col-xl-4 d-flex"
+                                className="col-3 col-sm-4 col-lg-4 col-xl-4 d-flex"
                             >
                                 <div className={`${GoogleStyle.googleCard} card h-100 d-flex flex-column`}>
                                     <div className={GoogleStyle.insideGoogleCard}>
@@ -759,7 +581,15 @@ const SuccessStories = () => {
             {/* success Pilot */}
             <div className={trustPilotStyle.trustPilotContainer}>
                 <div className="text-center pt-5">
-                    <h1 className={`${trustPilotStyle.trustPilotHeader} mb-4`}>Just Dial</h1>
+                    <h1 className={`${trustPilotStyle.trustPilotHeader} mb-4`}>
+                        <span>
+                            <img
+                                src={justDialLogo}
+                                alt="JustDial Logo"
+                                className={GoogleStyle.HeadingJustDialLogo}
+                            />
+                        </span>
+                    </h1>
                 </div>
                 <div
                     className={`${trustPilotStyle.trustPilotScrollContainer} container`}

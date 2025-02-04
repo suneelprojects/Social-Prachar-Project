@@ -28,7 +28,7 @@ export const googleData = [
     },
     {
         id: 3,
-        content: `Social Prachar has been a pivotal part of my career development. The courses are well-structured and cover the latest industry trends. The trainers are highly skilled and provide mentorship that goes beyond just teaching. They encourage active participation and ensure concepts are understood thoroughly. The hands-on experience through projects made a huge difference in building my confidence. I appreciate the efforts of the team in making the learning process enjoyable and productive. Social Prachar is the perfect choice for anyone who wants to excel in their chosen field.`,
+        content: `Social Prachar has been an instrumental and transformative part of my career development. The meticulously structured course, The trainers are exceptionally skilled, offering mentorship that transcends traditional teaching methods.The hands-on experience gained through real-world projects has significantly boosted my confidence and practical skills. I deeply appreciate the dedication and efforts of the team in making the learning process not only enjoyable but also immensely productive. Social Prachar is an outstanding choice for anyone aspiring to excel and achieve excellence in their chosen field.`,
         commentPerson: {
             name: "Bhavana Sai",
             stars: "⭐⭐⭐⭐⭐",
@@ -73,7 +73,7 @@ export const googleData = [
     },
     {
         id: 8,
-        content: `The training at Social Prachar is nothing short of exceptional. The instructors go the extra mile to ensure you grasp each concept thoroughly. They have a unique way of simplifying complex topics, making learning a delightful experience. The real-time projects were especially beneficial in understanding practical applications. The course material is comprehensive, and the staff is always willing to help. I came out of the program with newfound confidence in my skills. If you’re looking to gain both theoretical and practical knowledge in your field, Social Prachar is the right choice.`,
+        content: `The training at Social Prachar is nothing short of exceptional. The instructors go the extra mile to ensure you grasp each concept thoroughly. They have a unique way of simplifying complex topics, making learning a delightful experience. The real-time projects were especially beneficial in understanding practical applications.The time learn course in socialprachar is great. The course material is comprehensive, and the staff is always willing to help. I came out of the program with newfound confidence in my skills. If you’re looking to gain both theoretical and practical knowledge in your field, Social Prachar is the right choice.`,
         commentPerson: {
             name: "Vamsi Krishna Guru Raj",
             stars: "⭐⭐⭐⭐⭐",

@@ -15,7 +15,7 @@ greyText availile at index.css
     font-size: 60px;
     font-weight: 600;
     color: #221859;
-    line-height: 64px;
+    /* line-height: 64px; */
     /* max-height: 132px; */
   }
 .homeLeftSide .imgIcons img{
@@ -218,11 +218,10 @@ greyText availile at index.css
 @media (max-width:400px){
     .homeRightSide  .flowtingLeftBtn{
         position: relative;
-        /* top: -50px; */
         left: 0;
     }
     .homeLeftSide{
-        margin-top: 100px;
+        margin-top: 40px;
     }
 }
 
@@ -242,11 +241,7 @@ greyText availile at index.css
     width: auto;
     margin-left: 42%;
 }
-@media (max-width:768px){
-    .yellowLine{
-    display: none;
-    }
-}
+
 @media (max-width:1024px){
     .yellowLine{
     margin-left: 20%;

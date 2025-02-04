@@ -19,6 +19,10 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+
 
 const NavBar = () => {
   const [selectedValue, setSelectedValue] = useState("");
@@ -127,29 +131,32 @@ const NavBar = () => {
     }
   }
   useEffect(() => { }, [handleCategoryClick]);
-
-
-
   const isCareerWorkshopPage =
     location.pathname === "/Career-Success-workshop";
 
+  // for drop Down
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
 
   return (
     <div className={`${navBarStyle.navBarSticky}`}>
-
       {/* second nav bar starts */}
       <nav className={`navbar navbar-expand-lg ${navBarStyle.secondNav}`}>
-
         <div
-          className={`${navBarStyle.containerfluidForNav} container-fluid  `}
+          className={`${navBarStyle.containerfluidForNav} container-fluid`}
         >
-
           {/* brand name and category code start */}
           <div className="d-flex ">
             <a className="navbar-brand" href="http://socialprachar.com">
               <img src={spLogo} className={`${navBarStyle.spLogo}`} />
             </a>
-
 
             {!isCareerWorkshopPage && (
               <select
@@ -169,11 +176,6 @@ const NavBar = () => {
             <div
               className={`${navBarStyle.hiddenMobileSm} ${navBarStyle.categorySection} `}
             >
-              {/* <button className={`${navBarStyle.category}`}>
-                <i className="bi bi-grid-3x2-gap-fill"></i>Courses
-                <i className="bi bi-chevron-compact-down"></i>
-              </button> */}
-
               <div className={`${navBarStyle.categoryMenu}`}>
                 <div className="d-flex">
                   <ul>
@@ -243,8 +245,7 @@ const NavBar = () => {
 
           <div className={`${navBarStyle.navBarList}`}>
             <div
-              className={`collapse navbar-collapse offcanvas offcanvas-end ${navBarStyle.offCanvasContaniner
-                }  ${!!expanded && "show"}`}
+              className={`collapse navbar-collapse offcanvas offcanvas-end ${navBarStyle.offCanvasContaniner}  ${!!expanded && "show"}`}
             >
               <div
                 className={`offcanvas-header  ${navBarStyle.offCanvasContaninerHeader}`}
@@ -259,7 +260,7 @@ const NavBar = () => {
                 ></button>
               </div>
 
-              <ul className="navbar-nav me-auto mb-lg-0 gap-4 ">
+              <ul className="navbar-nav me-auto mb-lg-0 gap-3 ">
                 <li className="nav-item d-flex">
                   <NavLink
                     to={"/"}
@@ -280,15 +281,6 @@ const NavBar = () => {
                 </li>
                 <li className="nav-item">
                   <NavLink
-                    to={"/aboutUs"}
-                    className={`nav-link ${navBarStyle.NavLinkForHover}`}
-                    onClick={closeToggle}
-                  >
-                    About Us
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink
                     to={"/success-stories"}
                     className={`nav-link ${navBarStyle.NavLinkForHover}`}
                     onClick={closeToggle}
@@ -302,7 +294,7 @@ const NavBar = () => {
                     className={`nav-link ${navBarStyle.NavLinkForHover}`}
                     onClick={closeToggle}
                   >
-                    Career WorkShop
+                    Career Workshop
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -314,15 +306,74 @@ const NavBar = () => {
                     Upcoming Batches
                   </NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink
+                    to={"/socialhire"}
+                    className={`nav-link ${navBarStyle.NavLinkForHover}`}
+                    onClick={closeToggle}
+                  >
+                    SocialHire
+                  </NavLink>
+                </li>
+                
+                <li className="nav-item" onMouseLeave={closeDropdown}>
+                  <NavLink
+                    className={`nav-link navbar-toggle dropdown-toggle ${navBarStyle.NavLinkForHover}`}
+                    onClick={toggleDropdown}
+                  >
+                    More
+                  </NavLink>
+                  <div className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
+                    <NavLink to="/aboutUs" className="dropdown-item" onClick={closeDropdown}>
+                      About us
+                    </NavLink>
+                    <a href="https://finversity.in" className="dropdown-item" target="_blank" rel="noopener noreferrer" onClick={closeDropdown}>
+                      Finversity
+                    </a>
+                    <NavLink to="/scholarship-test" className="dropdown-item" onClick={closeDropdown}>
+                      Scholarship Test
+                    </NavLink>
+                    <NavLink to="blog" className="dropdown-item" onClick={closeDropdown}>
+                      Blog
+                    </NavLink>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <a
+                      href="tel:+918019479419"
+                      className={`${navBarStyle.buttonStyle} d-flex align-items-center justify-content-center`}
+                      role="button"
+                    >
+                      <FontAwesomeIcon icon={faPhone} className="me-2" />
+                      Call
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/918019479419?text=Hello%2C%20I%20would%20like%20to%20connect%20with%20you!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${navBarStyle.buttonStyle} d-flex align-items-center justify-content-center`}
+                    role="button"
+                    style={{color:'green'}}
+                  >
+                    <FontAwesomeIcon icon={faWhatsapp} className="me-2" style={{color:'green'}}/>
+                    WhatsApp
+                  </a>
+                </li>
+
               </ul>
             </div>
           </div>
 
+          
           {/* navigation code ends */}
 
           {/* search icon and login button code starts */}
 
-          <div className="d-flex">
+          {/* <div className="d-flex">
 
             {!isCareerWorkshopPage && (
               <div className={`${navBarStyle.hiddenMobileLgMin}`}>
@@ -369,8 +420,7 @@ const NavBar = () => {
                 </>
               )}
             </div>
-          </div>
-
+          </div> */}
           {/* search icon and login button code ends */}
         </div>
       </nav>

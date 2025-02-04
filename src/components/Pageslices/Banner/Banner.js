@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 import SignInForm from '../Enrollbutton/PopupSignInForm';
 import EnrollButton from '../Enrollbutton/Enrollbutton';
 import fullStackImage from '../../../assets/classplus-banner-fullstack.webp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 
 const Banner = () => {
@@ -48,7 +50,14 @@ const Banner = () => {
                 <div className={style.bannerPrice}>
                     <span className={style.originalPrice}>Unlock Exclusive OFFERS<p>Almost Full <span className={style.offerText}>Only 5 Slots Left!</span></p></span>
                 </div>
-                <EnrollButton label="Enroll" courseID={card.id} className={style.EnrollButton} />
+                <EnrollButton label={
+                    <>
+                         Curriculum
+                        <FontAwesomeIcon icon={faDownload}/>
+                    </>
+                } 
+                courseID={card.id}  className={style.EnrollButton} />
+                
             </div>
             {showForm && <SignInForm onClose={handleCloseForm} />}
         </div>

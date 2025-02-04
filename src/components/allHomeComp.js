@@ -1,6 +1,4 @@
 import React from 'react'
-
-import GateWay from './VideoGif/gateWay';
 import FourSteps from './fourSteps/fourSteps.js';
 import UpComming from './upComming/upComming.js';
 import TopCatogery from './topCatogery/topCatogery.js';
@@ -22,14 +20,13 @@ const AllHomeComp = () => {
       <Home/>
       <FourSteps/>
       <Partner/>
-      <GateWay/>
       <EnrollDetails/>
+      <NewsOnUs />
       <TopCatogery/>
       <HomeCourse/>
       <CircleAnimation/>
       <UpComming/>
-      <NewsOnUs/>
-      <Comments/>
+      <Comments />
       <FooterBtn/>
       <Footer/>
     </div>

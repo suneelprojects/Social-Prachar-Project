@@ -3,7 +3,7 @@ import { data } from '../Cards/CardData';
 import cardsCSS from '../Cards/Cards.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faBookmark } from '@fortawesome/free-solid-svg-icons';
-import SignInForm from '../SignInForm/SignInform';
+// import SignInForm from '../SignInForm/SignInform';
 import calendar from '../../assets/calendar-lines-pen.png';
 import userPic from '../../assets/usergroup.png';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +13,7 @@ import { auth } from '../../firebase';
 const HomeCard = ({ selectedCategory }) => {
     const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
     const user = auth.currentUser;
-    const [showSignInForm, setShowSignInForm] = useState(false);
+    // const [showSignInForm, setShowSignInForm] = useState(false);
     const navigate = useNavigate();
 
     const filterCardsByCategory = data.filter((card) =>
@@ -32,12 +32,12 @@ const HomeCard = ({ selectedCategory }) => {
     return (
         <>
             <div className={cardsCSS.cardsSection}>
-                {showSignInForm && (
+                {/* {showSignInForm && (
                     <>
                         <div className={`${cardsCSS.overlay} ${showSignInForm ? cardsCSS.show : ''}`} />
                         <SignInForm onClose={() => setShowSignInForm(false)} />
                     </>
-                )}
+                )} */}
 
                 <div className={cardsCSS.cards}>
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4" style={{ width: '100%' }}>

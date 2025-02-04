@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import style from './ScholarShipTest.module.css';
 import testImage from '../../assets/careerworkshop/SocialPrachars.png';
 import Footer from '../footer/footer.js';
@@ -6,8 +6,55 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faMedal, faPen, faTrophy } from '@fortawesome/free-solid-svg-icons';
 import { faCheckSquare } from '@fortawesome/free-regular-svg-icons';
 import { color } from 'framer-motion';
+import SuccessStoriesForm from '../successStories/SuccessStoriesForm.js';
+
+
+const faqData = [
+    {
+        question: "What is Social Prachar?",
+        answer: "It is one of the largest online scholarship competitions in India. All Participants in Social Prachar receive a substantial scholarship for Social Prachar’s Beginner Full Stack Web Development & Data Analytics Course."
+    },
+    {
+        question: "Who is eligible for the Test?",
+        answer: "Anyone and everyone is eligible!! (Students already enrolled in Social Prachar’s Main Batch cannot avail the scholarship)."
+    },
+    {
+        question: "What total prize money will be awarded after the Test?",
+        answer: "We are contributing more than Rs 1Cr. worth of scholarships for participants of our test. The prizes will be given in the form of scholarships depending on the rank you score on the aptitude test."
+    },
+    {
+        question: "Can I use my phone to take part in this Test?",
+        answer: "No. You can't use your Mobile Phones/tablets to give the Test. Use only Laptop/Desktop."
+    },
+    {
+        question: "How exactly do I take part in this challenge?",
+        answer: "Steps to take part in the challenge: Register for the challenge, Visit the challenge page on the start date/time, Click on ‘Attempt Now’ to proceed."
+    },
+    {
+        question: "What will be the syllabus of the aptitude test?",
+        answer: "The syllabus typically includes topics like logical reasoning, quantitative aptitude, verbal ability, and analytical reasoning. Check the official website for detailed syllabus information."
+    },
+    {
+        question: "Will the questions be MCQ based?",
+        answer: "Yes, all the questions will be MCQ based."
+    },
+    {
+        question: "When will the test results be announced?",
+        answer: "The results will be announced within 48 hours on this page."
+    },
+    {
+        question: "Shall I write multiple times?",
+        answer: "No, Only ONE time per user is eligible. We will consider your First test marks in order to provide you the discount."
+    }
+];
+
 
 const ScholarShipTest = () => {
+    const [openIndex, setOpenIndex] = useState(null);
+    const toggleAccordion = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
     const formRef = useRef(null);
     const handleScrollToForm = () => {
         if (formRef.current) {
@@ -115,14 +162,14 @@ const ScholarShipTest = () => {
                                 </div>
                             </div>
                             <div class={style.downBoxBars}>
-                                <div class={style.discount_icon}><FontAwesomeIcon icon={faTrophy} style={{color:"#f56200",fontSize:'50px'}}/></div>
+                                <div class={style.discount_icon}><FontAwesomeIcon icon={faTrophy} style={{ color: "#f56200", fontSize: '50px' }} /></div>
                                 <div className={style.marks}>
                                     <h3 className='fw-bold text-start'>21-26 Marks</h3>
                                     <h3>Eligible for Fee Discount of 8,000 INR</h3>
                                 </div>
                             </div>
                             <div class={style.downBoxBars}>
-                                <div class={style.discount_icon}><FontAwesomeIcon icon={faMedal} style={{fontSize:'50px'}}/></div>
+                                <div class={style.discount_icon}><FontAwesomeIcon icon={faMedal} style={{ fontSize: '50px' }} /></div>
                                 <div className={style.marks}>
                                     <h3 className='fw-bold text-start'>15-20 Marks</h3>
                                     <h3>Eligible for Fee Discount of 5,000 INR</h3>
@@ -131,137 +178,46 @@ const ScholarShipTest = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className='container py-5'>
                 <div className="mb-4">
-                    <p>Have Any Doubts?</p>
-                    <p>Frequently Asked Questions</p>
+                    {/* <p className='text-center'>Have Any Doubts?</p> */}
+                    <h1 className="text-center mb-4">Frequently Asked Questions</h1>
                 </div>
 
-                <div class="accordion text-start" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                What is Social Prachar?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                            <div class="accordion-body text-start">
-                                It is one of the largest online scholarship competitions in India. All Participants in Social Prachar receive a substantial scholarship for Social Prachar’s Beginner Full Stack Web Development & Data Analytics Course.
+                <div className="accordion" id="faqAccordion">
+                    {faqData.map((faq, index) => (
+                        <div className="accordion-item shadow" key={index} style={{ marginBottom: "0.5rem" }}>
+                            <h2 className="accordion-header" id={`heading${index}`}>
+                                <button
+                                    className={`fw-bold accordion-button faq-button ${openIndex !== index ? "collapsed" : ""}`}
+                                    type="button"
+                                    onClick={() => toggleAccordion(index)}
+                                    aria-expanded={openIndex === index ? "true" : "false"}
+                                    aria-controls={`collapse${index}`}
+                                >
+                                    {faq.question}
+                                </button>
+                            </h2>
+                            <div
+                                id={`collapse${index}`}
+                                className={`accordion-collapse collapse ${openIndex === index ? "show" : ""}`}
+                                aria-labelledby={`heading${index}`}
+                                data-bs-parent="#faqAccordion"
+                            >
+                                <div className="accordion-body">
+                                    <h6>{faq.answer}</h6>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Who is eligible for Test?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Anyone and everyone is eligible!! (Students already enrolled in Social Prachar’s Main Batch cannot avail the scholarship).
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                What total prize money will be awarded after the Test?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                We are contributing more than Rs 1Cr. worth of scholarships for participants of our test. The prizes will be given in the form of scholarships depending on the rank you score on the aptitude test.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Can I use my phone to take part in this Test?
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                No. You can't use your Mobile Phones/tablets to give the Test. Use only Laptop/Desktop.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                How exactly do I take part in this challenge?
-                            </button>
-                        </h2>
-                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Steps to take part in the challenge: Register for the challenge, Visit the challenge page on the start date/time, Click on ‘Attempt Now’ to proceed.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                What will be the syllabus of the aptitude test?
-                            </button>
-                        </h2>
-                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                The syllabus typically includes topics like logical reasoning, quantitative aptitude, verbal ability, and analytical reasoning. Check the official website for detailed syllabus information.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                Will the questions be MCQ based?
-                            </button>
-                        </h2>
-                        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                Yes, all the questions will be MCQ based.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                When will the test results be announced?
-                            </button>
-                        </h2>
-                        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                The results will be announced within 48 hours on this page.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                Shall I write multiple times?
-                            </button>
-                        </h2>
-                        <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                No, Only ONE time per user is eligible. We will consider your First test marks in order to provide you the discount.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className="mb-4">
-                    <p>What Our Students Say!!</p>
-                    <a href="#">View More Reviews</a>
-                </div>
-
-                <div ref={formRef}>
-                    <p>Ready to Crack the Test? Fill the details</p>
-                    <input type="text" className="form-control mb-2" placeholder="Name" />
-                    <input type="text" className="form-control mb-2" placeholder="Email" />
-                    <input type="text" className="form-control mb-2" placeholder="Phone" />
-                    <input type="text" className="form-control mb-2" placeholder="Course" />
+                    ))}
                 </div>
             </div>
 
+            <div className='p-3 text-center'>
+                <SuccessStoriesForm />
+            </div>
             <Footer />
         </>
     );

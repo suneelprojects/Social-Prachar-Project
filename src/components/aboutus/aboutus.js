@@ -51,8 +51,26 @@ const Aboutus = () => {
         <div className={aboutusStyle.smallBuss}>
           <img src={smallBuss} />
         </div>
+
+        <h1 className="my-5 text-center">What We Provide</h1>
+        <div className="row row-gap-4 my-5">
+          {aboutusArray.map((aboutusItem, i) => (
+            <div
+              className={`col-12 col-sm-6 col-md-6 col-lg-3 ${aboutusStyle.weProvide}`}
+              key={i}
+            >
+              <div>
+                <img src={aboutusItem.image} />
+                <h5>{aboutusItem.heading}</h5>
+                <p>{aboutusItem.sentense}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+
         <div className={`row my-5 d-flex align-items-center ${aboutusStyle.aboutUsWomenCon}`}>
-          <div className={`col-12 col-md-4 my-5 ${aboutusStyle.aboutUsWomenConImg}`}>
+          <div className={`col-12 col-md-4  d-flex justify-content-center ${aboutusStyle.aboutUsWomenConImg}`}>
             <img src={aboutUsWomen} />
           </div>
           <div className="col-12 col-md-8">
@@ -62,12 +80,23 @@ const Aboutus = () => {
               GreyText="You'll find something to spark your curiosity and enhance" />
             <p className="aboutusStyle.para">
               <div className="container">
+                <div>
+                  <h3 className="fs-3 fs-6 text-start mb-4 text-primary font-weight-bold">
+                    At SocialPrachar, We Empower Careers
+                  </h3>
+                  <p style={{ fontSize: '12px' }}>
+                    At SocialPrachar, we are committed to transforming careers and empowering individuals with cutting-edge technical skills. Founded by an IIM alumnus, SocialPrachar has been a pioneer in the EdTech industry for over a decade, delivering excellence in education and career development. With state-of-the-art training programs in Full Stack Development, Data Science, AI, Cloud Computing, and Digital Marketing, we aim to prepare our students for in-demand tech roles.
+                  </p>
+                  <p style={{ fontSize: '12px' }}>
+                    We have successfully trained over 16,000 students through both online and classroom programs in Hyderabad and Bangalore. Recognized with 9 prestigious EdTech awards, our focus on quality education and student success has set us apart in the industry. Our efforts have resulted in a remarkable 95% placement ratio, with graduates securing job packages ranging from ₹3 to ₹12 LPA.
+                  </p>
+                </div>
                 <h3>
                   Why Choose SocialPrachar?
                 </h3>
                 <ul className="list-group list-group-flush">
                   <li>
-                    <FontAwesomeIcon className="fs-6" icon={faCheckCircle} style={{ color: "green",paddingRight:'15px' }} /> 10+ years of expertise in EdTech
+                    <FontAwesomeIcon className="fs-6" icon={faCheckCircle} style={{ color: "green" }} /> 10+ years of expertise in EdTech
                   </li>
                   <li>
                     <FontAwesomeIcon className="fs-6" icon={faCheckCircle} style={{ color: "green" }} /> 16,000+ students trained
@@ -97,40 +126,7 @@ const Aboutus = () => {
             </p>
           </div>
         </div>
-        <div>
-          <h2 className="text-center mb-4 text-primary font-weight-bold">
-            At SocialPrachar, We Empower Careers
-          </h2>
-          <p className="lead text-justify mb-4">
-            At SocialPrachar, we are committed to transforming careers and empowering individuals with cutting-edge technical skills. Founded by an IIM alumnus, SocialPrachar has been a pioneer in the EdTech industry for over a decade, delivering excellence in education and career development. With state-of-the-art training programs in Full Stack Development, Data Science, AI, Cloud Computing, and Digital Marketing, we aim to prepare our students for in-demand tech roles.
-          </p>
-          <p className="text-justify mb-4">
-            We have successfully trained over 16,000 students through both online and classroom programs in Hyderabad and Bangalore. Recognized with 9 prestigious EdTech awards, our focus on quality education and student success has set us apart in the industry. Our efforts have resulted in a remarkable 95% placement ratio, with graduates securing job packages ranging from ₹3 to ₹12 LPA.
-          </p>
-          <p className="text-justify mb-4">
-            Our dedicated team of industry experts ensures a hands-on learning experience through live projects, internships, and mentorship. At SocialPrachar, we don’t just teach skills – we shape careers, guiding students towards their dream roles with confidence and competence.
-          </p>
-          <p className="text-justify mb-4">
-            With SocialHire, our AI-powered career platform, and strong partnerships with leading organizations, we provide students with comprehensive career support, including job placements, mock interviews, resume building, and more. We believe in a “Learn till You Get Placed” approach, ensuring every student achieves their professional goals.
-          </p>
 
-        </div>
-
-        <h1 className="my-5 text-center">What We Provide</h1>
-        <div className="row row-gap-4 my-5">
-          {aboutusArray.map((aboutusItem, i) => (
-            <div
-              className={`col-12 col-sm-6 col-md-6 col-lg-3 ${aboutusStyle.weProvide}`}
-              key={i}
-            >
-              <div>
-                <img src={aboutusItem.image} />
-                <h5>{aboutusItem.heading}</h5>
-                <p>{aboutusItem.sentense}</p>
-              </div>
-            </div>
-          ))}
-        </div>
         {/* Industry Recognitions */}
         <div className="text-center my-5">
 

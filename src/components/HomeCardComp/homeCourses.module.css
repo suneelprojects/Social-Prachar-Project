@@ -1,9 +1,25 @@
+.animated_icon {
+    font-size:3rem;
+
+    color: #553cdf;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translatex(0);
+    }
+    50% {
+        transform: translatex(-10px);
+    }
+}
+
 .homeCoursesBtn{
-    background-color: #ebe9e9;
+    background-color: #553cdf;
     font-size: 14px;
     margin-right: 8px;
     font-weight: 500;
-    color: #553cdf;
+    color: white;
     border-radius: 3px;
     border: none;
 }

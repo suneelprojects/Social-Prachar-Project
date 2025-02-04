@@ -14,7 +14,7 @@ const Asidecard = () => {
         { img: star, labelHead: "Top", labelDown: "Instructors" },
         { img: book, labelHead: "Bonus", labelDown: "Resources" },
         { img: quiz, labelHead: "Live", labelDown: "Quizzes" },
-        { img: globe, labelHead: "Real", labelDown: "World Topics" },
+        { img: globe, labelHead: "Real", labelDown: "World Projects" },
     ];
 
     return (

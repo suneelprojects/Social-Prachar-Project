@@ -3,11 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import style from './UpcomingBatches.module.css';
 import Asidecard from './aside/Asidecard.js';
 import navbarImage from '../../assets/careerworkshop/all banner.png';
-import masterAd_DA from '../../assets/careerworkshop/Master adv da.png';
 import masterAd_DS from '../../assets/careerworkshop/Master adv ds.png';
 import masterAd_DM from '../../assets/careerworkshop/Master adv dm.png';
 import masterAd_Devops from '../../assets/careerworkshop/Master adv devops.png';
-import masterAI from '../../assets/careerworkshop/Master AI.png';
 import masterDA from '../../assets/careerworkshop/Master DA.png';
 import masterDS from '../../assets/careerworkshop/Master DS.png';
 import masterFS from '../../assets/careerworkshop/Master FS.png';
@@ -29,21 +27,23 @@ const UpcomingBatches = () => {
     ];
 
     const cardData = [
-        { id: 1, students: '5120+',no_of_Slots:4,image: masterDS, category: 'Data Science/AI', title: 'Artificial Intelligence', route: '/artificial-intelligence-course-training-institute-in-hyderabad' },
-        { id: 2, students: '3200+',no_of_Slots: 6, image: masterAd_DS, category: 'Data Science/AI', title:'Advanced Data Science/AI', route: '/data-science-course' },
-        { id: 3, students: '4600+',no_of_Slots:5, image: masterDA, category: 'Data Science/AI', title: 'Data Analytics (Mastery)', route: '/data-analytics-course-training-hyderabad' },
-        { id: 4, students: '3800+',no_of_Slots: 7, image: masterFSJ, category: 'Full Stack Development', title: 'Full Stack Java', route: '/java-full-stack-development' },
-        { id: 5, students: '4300+',no_of_Slots:4, image: masterFSP, category: 'Full Stack Development', title: 'Full Stack Python', route: '/python-full-stack-development' },
-        { id: 6, students: '4400+',no_of_Slots: 6, image: masterFS, category: 'Full Stack Development', title: 'Mern Stack (Full Stack)', route: '/mern-stack'},
-        { id: 7, students: '3120+',no_of_Slots: 5, image: masterAd_Devops, category: 'DevOps', title: 'Multi Cloud With Devops', route: '/awsdevopscourse' },
-        { id: 8, students: '4500+',no_of_Slots:5, image: masterAd_DM, category: 'Digital Marketing', title: 'Advanced Digital Marketing', route: 'digital-marketing-course-training-institute-hyderabad' },
-
+        { id: 1, students: '5120+', no_of_Slots: 4, image: masterDS, category: 'Data Science/AI', title: 'Artificial Intelligence', route: '/artificial-intelligence-course-training-institute-in-hyderabad' },
+        { id: 2, students: '3200+', no_of_Slots: 6, image: masterAd_DS, category: 'Data Science/AI', title: 'Advanced Data Science/AI', route: '/data-science-course' },
+        { id: 3, students: '4600+', no_of_Slots: 5, image: masterDA, category: 'Data Science/AI', title: 'Data Analytics (Mastery)', route: '/data-analytics-course-training-hyderabad' },
+        { id: 4, students: '3800+', no_of_Slots: 7, image: masterFSJ, category: 'Full Stack Development', title: 'Full Stack Java', route: '/java-full-stack-development' },
+        { id: 5, students: '4300+', no_of_Slots: 4, image: masterFSP, category: 'Full Stack Development', title: 'Full Stack Python', route: '/python-full-stack-development' },
+        { id: 6, students: '4400+', no_of_Slots: 6, image: masterFS, category: 'Full Stack Development', title: 'Mern Stack (Full Stack)', route: '/mern-stack' },
+        { id: 7, students: '3120+', no_of_Slots: 5, image: masterAd_Devops, category: 'DevOps', title: 'Multi Cloud With Devops', route: '/awsdevopscourse' },
+        { id: 8, students: '4500+', no_of_Slots: 5, image: masterAd_DM, category: 'Digital Marketing', title: 'Advanced Digital Marketing', route: '/digital-marketing-course-training-institute-hyderabad' },
     ];
-
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
     };
+
+    const filteredCards = selectedCategory === 'All'
+        ? cardData
+        : cardData.filter(card => card.category === selectedCategory);
 
     const fetchHolidays = async () => {
         const apiKey = 'VQcZbnVRoTZgJnRtNXQ1z8VDZFsF5IWo';
@@ -52,45 +52,47 @@ const UpcomingBatches = () => {
 
         try {
             const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const data = await response.json();
-            if (data && data.response && data.response.holidays) {
-                const holidayDates = data.response.holidays.map(holiday => holiday.date.iso);
-                setHolidays(holidayDates);
+            if (data?.response?.holidays) {
+                setHolidays(data.response.holidays.map(holiday => holiday.date.iso));
             }
         } catch (error) {
             console.error('Error fetching holidays:', error);
         }
     };
 
+
     const calculateStartDates = () => {
-        const today = new Date(new Date().getFullYear(), 0, 6);
+        const today = new Date();
         const startDatesMap = {};
 
         cardData.forEach(card => {
             let nextDate = new Date(today);
             let daysAdded = 0;
 
-            while (daysAdded < 10) {
+            while (daysAdded < 12) {
                 nextDate.setDate(nextDate.getDate() + 1);
                 const dateString = nextDate.toISOString().split('T')[0];
-                const dayOfWeek = nextDate.getDay(); // Get day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+                const dayOfWeek = nextDate.getDay();
 
-                // Check if the date is a holiday or Sunday
                 if (!holidays.includes(dateString) && dayOfWeek !== 0) {
                     daysAdded++;
                 }
             }
 
-            const formattedDate = nextDate.toLocaleDateString('en-US', {
+            // Store the start date in the map
+            startDatesMap[card.id] = nextDate.toLocaleDateString('en-US', {
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric',
             });
-            startDatesMap[card.id] = formattedDate;
         });
-
         setStartDates(startDatesMap);
     };
+
 
     useEffect(() => {
         fetchHolidays();
@@ -102,14 +104,9 @@ const UpcomingBatches = () => {
         }
     }, [holidays]);
 
-    const filteredCards =
-        selectedCategory === 'All'
-            ? cardData
-            : cardData.filter((card) => card.category === selectedCategory);
-
     return (
         <>
-            <div className={`${style.container}`}>
+            <div className={style.container}>
                 <div className={`${style.bg} container pt-5`}>
                     {/* Header Section */}
                     <div className="text-start d-flex flex-wrap align-items-center justify-content-between text-white">
@@ -124,10 +121,10 @@ const UpcomingBatches = () => {
 
                     {/* Button Section */}
                     <div className="d-flex flex-wrap justify-content-start mb-4 bg-light p-1 rounded">
-                        {categories.map((category) => (
+                        {categories.map(category => (
                             <button
                                 key={category}
-                                className={`btn mx-2 mb-2 ${selectedCategory === category ? style.active_category : ''} w-auto w-sm-25 w-md-auto`}
+                                className={`btn mx-2 mb-2 ${selectedCategory === category ? style.active_category : ''}`}
                                 onClick={() => handleCategoryClick(category)}
                             >
                                 {category}
@@ -140,19 +137,19 @@ const UpcomingBatches = () => {
                         {/* Main Cards Section */}
                         <div className="col-md-8">
                             <div className="row">
-                                {filteredCards.map((card) => (
+                                {filteredCards.map(card => (
                                     <div className="col-md-6 mb-4 shadow" key={card.id}>
                                         <div className="card" style={{ width: '100%' }}>
                                             <img
                                                 src={card.image}
                                                 className="card-img-top img-fluid"
-                                                alt="Placeholder"
+                                                alt={card.title}
                                                 style={{ height: '160px', backgroundPosition: 'center' }}
                                             />
                                             <div className="card-body">
                                                 <h5 className="card-title">{card.title}</h5>
-                                                <p className="card-text mb-1">Batch Starting Date: <span className='fw-bold'>{startDates[card.id]}</span></p>
-                                                <h6 className='text-danger'>
+                                                <p className="card-text mb-1">Batch Starting Date: <span className="fw-bold">{startDates[card.id]}</span></p>
+                                                <h6 className="text-danger">
                                                     Hurry, only {card.no_of_Slots} slots remaining!
                                                 </h6>
                                                 <hr />

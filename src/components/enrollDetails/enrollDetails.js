@@ -104,103 +104,105 @@ const EnrollDetails = () => {
 
   return (
     <div className={`container mb-5`}>
-      <p className={EnrollDetailsStyle.para}>Please Provide Some Information About You</p>
-
       <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2">
         <div className={`col ${EnrollDetailsStyle.infoAboutUser}`}>
           <img src={enrollStyle} alt="Enroll Details" />
         </div>
-        <div className={`${EnrollDetailsStyle.detailsContainer}`}>
-          <form className={`col ms-2 ${EnrollDetailsStyle.form}`} onSubmit={handleSubmit}>
-            <div className={EnrollDetailsStyle.inputDivs}>
-              <label htmlFor="inputForNumber" className="form-label">
-                Mobile No +91:
-              </label>
-              <input
-                type="tel"
-                className="form-control"
-                value={Number}
-                onChange={(e) => handleMobileNumberChange(e.target.value.replace(/\D/g, ""))}
-                placeholder="Enter Number"
-                required
-              />
-            </div>
 
-
-            <div className={EnrollDetailsStyle.inputDivs}>
-              <label htmlFor="inputForText" className="form-label">
-                Name :
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                value={Name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="john"
-                required
-              />
-            </div>
-
-            <div className={EnrollDetailsStyle.inputDivs}>
-              <label htmlFor="inputForEmail" className="form-label">
-                Email :
-              </label>
-              <input
-                type="email"
-                className="form-control"
-                value={Email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="john@gmail.com"
-                required
-              />
-            </div>
-
-            <div className={EnrollDetailsStyle.inputDivs}>
-              <label htmlFor="inputForCategory" className="form-label">
-                Select your course :
-              </label>
-              <select
-                className="form-select"
-                value={selectedCategory}
-                onChange={handleCategoryChange}
-                required
-              >
-                <option value="">Select Category</option>
-                <option value="Web Development">Web Development</option>
-                <option value="Analytics">Analytics</option>
-                <option value="Marketing">Marketing</option>
-                <option value="Accounting">Accounting</option>
-                <option value="Finance">Finance</option>
-                <option value="HR Analytics">HR Analytics</option>
-              </select>
-            </div>
-
-            {subOptions.length > 0 && (
+        <div>
+          <h2 className='text-center fw-bold' style={{ color:'#221859'}}>Let's...! Get Start</h2>
+          <div className={`${EnrollDetailsStyle.detailsContainer}`}>
+            <form className={`col ms-2 ${EnrollDetailsStyle.form}`} onSubmit={handleSubmit}>
               <div className={EnrollDetailsStyle.inputDivs}>
-                <label htmlFor="inputForSubCategory" className="form-label">
-                  Select your domain :
+                <label htmlFor="inputForNumber" className="form-label">
+                  Mobile No +91:
+                </label>
+                <input
+                  type="tel"
+                  className="form-control"
+                  value={Number}
+                  onChange={(e) => handleMobileNumberChange(e.target.value.replace(/\D/g, ""))}
+                  placeholder="Enter Number"
+                  required
+                />
+              </div>
+
+
+              <div className={EnrollDetailsStyle.inputDivs}>
+                <label htmlFor="inputForText" className="form-label">
+                  Name :
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={Name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="john"
+                  required
+                />
+              </div>
+
+              <div className={EnrollDetailsStyle.inputDivs}>
+                <label htmlFor="inputForEmail" className="form-label">
+                  Email :
+                </label>
+                <input
+                  type="email"
+                  className="form-control"
+                  value={Email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="john@gmail.com"
+                  required
+                />
+              </div>
+
+              <div className={EnrollDetailsStyle.inputDivs}>
+                <label htmlFor="inputForCategory" className="form-label">
+                  Select your course :
                 </label>
                 <select
                   className="form-select"
-                  value={subCategory}
-                  onChange={(e) => setSubCategory(e.target.value)}
+                  value={selectedCategory}
+                  onChange={handleCategoryChange}
                   required
                 >
-                  <option value="">Select Sub-Option</option>
-                  {subOptions.map((option, index) => (
-                    <option key={index} value={option}>
-                      {option}
-                    </option>
-                  ))}
+                  <option value="">Select Category</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Analytics">Analytics</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="Accounting">Accounting</option>
+                  <option value="Finance">Finance</option>
+                  <option value="HR Analytics">HR Analytics</option>
                 </select>
               </div>
-            )}
 
-            <button className={`${EnrollDetailsStyle.submitBtn}`} type="submit">
-              Submit
-            </button>
-          </form>
-          <ToastContainer />
+              {subOptions.length > 0 && (
+                <div className={EnrollDetailsStyle.inputDivs}>
+                  <label htmlFor="inputForSubCategory" className="form-label">
+                    Select your domain :
+                  </label>
+                  <select
+                    className="form-select"
+                    value={subCategory}
+                    onChange={(e) => setSubCategory(e.target.value)}
+                    required
+                  >
+                    <option value="">Select Sub-Option</option>
+                    {subOptions.map((option, index) => (
+                      <option key={index} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
+
+              <button className={`${EnrollDetailsStyle.submitBtn}`} type="submit">
+                Submit
+              </button>
+            </form>
+            <ToastContainer />
+          </div>
         </div>
       </div>
     </div>

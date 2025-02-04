@@ -3,8 +3,7 @@
   display: flex;
   overflow: hidden;
   width: 95%;
-  position: relative;
-  top: 30px;
+  height: 500px;
 }
 
 .carouselImages {
@@ -13,9 +12,9 @@
   animation: scroll-left 0s linear infinite;
 }
 
-.carouselImage img {
+.carouselImage img{
   width: 250px;
-  height: 350px;
+  height: auto;
   border-radius: 15px;
 }
 
@@ -33,20 +32,18 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 150px;
+  /* top: 150px; */
 }
 
 .section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  top: 110px;
 }
 
 .heading {
   position: relative;
-  top: 120px;
+  top: 50px;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: fit-content;
@@ -54,7 +51,6 @@
   background: #ffebda;
   border-radius: 32px;
   font-size: 20px;
-  margin-bottom: -20px;
   padding: 5px 15px;
   letter-spacing: 1.5px;
   z-index: 1;
@@ -114,7 +110,6 @@
 /* Media Queries for up to 375px screens */
 @media (max-width: 376px) {
   .testmonials {
-    margin-top: 30px;
     padding: 10px;
   }
 
@@ -122,7 +117,7 @@
     font-size: 18px;
     padding: 5px 10px;
     position: relative;
-    top: 180px;
+    top: 80px;
   }
 
   .subHeading {
@@ -130,6 +125,7 @@
     position: relative;
     top: 40px;
   }
+
   .subHeading1 {
     top: 15px;
     max-width: 80%;
@@ -139,7 +135,6 @@
   .line {
     width: 50%;
     height: 24px;
-    /* margin-top: 2px; */
     position: relative;
     top: -20px;
     left: -80px;

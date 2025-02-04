@@ -1,4 +1,32 @@
 /** @format */
+.buttonStyle {
+  align-items: center;
+  background: #ffffff;
+  border: 0 solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  display: inline-flex;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 45px;
+  justify-content: center;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  padding: 20px;
+  text-decoration: none;
+  width: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.buttonStyle:hover {
+  transform: scale(1.05); /* Slightly enlarge the button */
+  transition: all 0.3s ease;
+}
 
 .navBarSticky {
   position: sticky;
@@ -10,6 +38,7 @@
   font-family: "Hind", sans-serif;
   font-style: normal;
 }
+
 .navbarTogglerBar {
   border: none !important;
   outline: none !important;
@@ -22,7 +51,7 @@
 }
 .containerfluidForNav {
   padding-left: 45px !important;
-  padding-right: 45px !important;
+  padding-right: 200px !important;
 }
 
 /* second nav css start */
@@ -44,17 +73,10 @@
     margin-left: 30px;
   }
 }
-.secondNav {
-  background-color: white;
-  font-weight: 600;
-}
 .spLogo {
-  /* height: auto; */
-  width: 200px;
+  height: auto;
+  width: 350px;
 }
-/* .spLogoIcon{
-    display: none;
-} */
 
 .category {
   font-size: 17px;
@@ -168,7 +190,7 @@
 /* categoryMenu code ends */
 /* navBarList code starts */
 .navBarList .NavLinkForHover {
-  font-weight: 400;
+  font-weight: 500;
   color: #1f1f25;
 }
 .navBarList ul li .NavLinkForHover:hover {
@@ -188,12 +210,17 @@
   .hiddenMobilemd {
     display: none;
   }
+  .spLogo {
+    width: 170px;
+  }
 }
+
 @media (min-width: 450px) {
   .selectDropDown {
     margin-left: 40px;
   }
 }
+
 @media (min-width: 767px) {
   .selectDropDown {
     display: none;
@@ -211,6 +238,12 @@
   .hiddenMobileLgMin i {
     color: #553cdf;
   }
+  .buttonStyle {
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: 80px;
+  }
 }
 
 @media (min-width: 1200.5px) {
@@ -218,7 +251,15 @@
     display: none !important;
   }
 }
-
+@media (max-width: 1250px) {
+  .spLogo {
+    width: 220px;
+  }
+  .containerfluidForNav {
+    padding-left: 5px !important;
+    padding-right: 10px !important;
+  }
+}
 @media (max-width: 340px) {
   .containerfluidForNav {
     padding-left: 1px !important;
@@ -231,19 +272,19 @@
 }
 
 @media (max-width: 375px) {
-  /* .spLogo {
-    height: 60px;
-    width: 115px;
-  } */
+  .spLogo {
+    height: auto;
+    width: 170px !important;
+  }
   .selectDropDown {
     position: relative;
     top: 5px;
     max-width: 100px;
   }
-  .categorySection{
+  .categorySection {
     display: none;
   }
-  .hiddenMobileLgMin{
+  .hiddenMobileLgMin {
     position: relative;
     left: 10px !important;
   }
@@ -252,7 +293,7 @@
 @media (min-width: 340.6px) and (max-width: 464px) {
   .spLogo {
     height: auto;
-    width: 130px;
+    width: 150px;
   }
   .selectDropDown {
     max-width: 90px;
@@ -289,5 +330,20 @@
   }
   .navBarSticky {
     padding: 8px 0px 8px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: flex;
+    flex-direction: row; /* Arrange items side by side */
+    flex-wrap: wrap; /* Wrap items if they don't fit in one row */
+    justify-content: space-around; /* Add space between items */
+  }
+
+  .dropdown-item {
+    flex: 1; /* Allow items to take equal space */
+    text-align: center; /* Center-align the text */
+    padding: 10px; /* Add some padding for better touch targets */
   }
 }

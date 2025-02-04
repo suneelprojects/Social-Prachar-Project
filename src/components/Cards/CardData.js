@@ -15,6 +15,8 @@ import AWS_multiCloud from '../../assets/careerworkshop/AWS Multi cloud.png';
 import Digital_M from '../../assets/careerworkshop/Digital M.png';
 import DS from '../../assets/careerworkshop/tData Science & AI.png';
 import DA from '../../assets/careerworkshop/Data Analytics.png';
+import SnowFlake from '../../assets/careerworkshop/SF.png';
+import salesForce from '../../assets/careerworkshop/Sales force.png';
 
 // studentsplaced images 
 import student1 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/compainManager.png';
@@ -73,10 +75,10 @@ import testmonialsCommentImageDevOps from '../../assets/AssetsOfDetailsPage/DevO
 import testmonialsCommentImageDM from '../../assets/AssetsOfDetailsPage/DM comment.png';
 
 
-import DS_certificate from '../../assets/AssetsOfDetailsPage/masterclass/Datascience certificate.jpg';
+import defaultCertificate from '../../assets/AssetsOfDetailsPage/masterclass/defaultcertificate.png';
 import authorPhoto from '../../assets/authorphoto.jpg';
-import { faHandshake, faCalendarCheck, faChartBar, faThumbsUp, faEnvelope, faSnowflake, faEye } from "@fortawesome/free-regular-svg-icons";
-import { faArrowUp, faBinoculars, faBriefcase, faBullhorn, faCertificate, faChartLine, faChartPie, faClipboardCheck, faClipboardList, faCloud, faCloudUploadAlt, faCode, faCodeBranch, faCogs, faDatabase, faDesktop, faGlobe, faLaptopCode, faLock, faMoneyBillWave, faPlug, faProjectDiagram, faRobot, faRocket, faSearch, faServer, faShareAlt, faSyncAlt, faTable, faTachometerAlt, faTasks, faTools } from '@fortawesome/free-solid-svg-icons';
+import { faHandshake, faCalendarCheck, faChartBar, faThumbsUp, faEnvelope, faSnowflake, faEye, faImages } from "@fortawesome/free-regular-svg-icons";
+import { faArrowUp, faBinoculars, faBook, faBoxes, faBrain, faBriefcase, faBullhorn, faCertificate, faChartLine, faChartPie, faClipboardCheck, faClipboardList, faCloud, faCloudUploadAlt, faCode, faCodeBranch, faCogs, faDatabase, faDesktop, faGlobe, faLaptopCode, faLock, faMoneyBillWave, faNetworkWired, faPlug, faProjectDiagram, faRobot, faRocket, faSearch, faServer, faShareAlt, faShieldAlt, faSyncAlt, faTable, faTachometerAlt, faTasks, faTools, faUserGraduate, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faDocker, faNodeJs, faPiedPiper, faReact } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -236,8 +238,8 @@ export const data = [
         ],
         rating: 4.5,
         categoryIndex: 4,
-        tagIndex: 3,
-        certificate: DS_certificate,
+        tagIndex: 1,
+        certificate: defaultCertificate,
         accordionContent: [
             {
                 title: 'What is the duration of the Data Science program at SocialPrachar?',
@@ -287,12 +289,17 @@ export const data = [
             {
                 icon: faChartBar,
                 title: "Master Data Analytics",
-                description: "Learn data analysis, statistics, and visualization using tools like Excel, SQL, and Power BI. Build a strong foundation for data-driven decision-making"
+                description: "Learn data analysis, statistics, and visualization using tools like Excel, SQL, and Power BI. Build a strong foundation for data-driven decision-making."
             },
             {
                 icon: faCloud,
                 title: "Learn Cloud Deployment",
                 description: "Deploy AI models on cloud platforms like AWS and Azure. Gain practical knowledge of scaling and automation."
+            },
+            {
+                icon: faChartBar,
+                title: "Master Data-Science",
+                description: "Python, OOPs, Machine Learning, Statistics and Probability, Data Mining, Data Warehousing, Programming"
             },
             {
                 icon: faRobot,
@@ -311,8 +318,13 @@ export const data = [
             },
             {
                 icon: faProjectDiagram,
-                title: "Project Work",
-                description: "Complete hands-on projects to apply your learning. Build a portfolio to showcase your skills to employers."
+                title: "Capstone Projects",
+                description: "Work on real-world projects that simulate industry scenarios. Solve complex challenges and gain valuable experience."
+            },
+            {
+                icon: faUsers,
+                title: "Group Activities",
+                description: "Collaborate with peers in group tasks and brainstorming sessions. Build teamwork and problem-solving skills."
             },
             {
                 icon: faBriefcase,
@@ -323,6 +335,21 @@ export const data = [
                 icon: faHandshake,
                 title: "Job Support",
                 description: "Receive unlimited interview opportunities until you secure a job. Achieve your career goals with our placement assistance."
+            },
+            {
+                icon: faSearch,
+                title: "Research Techniques",
+                description: "Learn research methodologies and techniques to solve problems effectively. Build skills in data sourcing and analysis."
+            },
+            {
+                icon: faBook,
+                title: "Interactive Tutorials",
+                description: "Access engaging tutorials that break down complex topics into simple concepts. Learn at your own pace with comprehensive resources."
+            },
+            {
+                icon: faCogs,
+                title: "Technical Skills Training",
+                description: "Master essential technical skills required in the industry, including tools, frameworks, and best practices."
             }
         ],
         popUpDropDownCourses: [
@@ -364,7 +391,7 @@ export const data = [
         id: 1,
         courseID: 2,
         slug: 'python-full-stack-development-course',
-        imageSrc:python,
+        imageSrc: python,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: ' 6 months',
@@ -381,7 +408,7 @@ export const data = [
         name: 'Balu',
         rating: 4.8,
         authorImage: authorPhoto,
-        certificate: DS_certificate,
+        certificate: defaultCertificate,
         bannerHeader: 'Learn Full stack Python Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
         timeLineHeading: 'Full Stack Python Developer',
@@ -542,48 +569,68 @@ export const data = [
         levelcardIndex: [
             {
                 icon: faCode,
-                title: "Master Full Stack Development",
-                description: "Learn to build dynamic web applications by mastering frontend technologies like HTML, CSS, JavaScript, and React, along with backend frameworks like Flask and Django."
+                title: "Master Frontend Development",
+                description: "Learn to build visually appealing web interfaces using HTML, CSS, JavaScript, and frameworks like React."
+            },
+            {
+                icon: faLaptopCode,
+                title: "Advanced JavaScript Techniques",
+                description: "Deepen your knowledge of JavaScript with advanced concepts like ES6+, closures, and asynchronous programming."
             },
             {
                 icon: faServer,
-                title: "Backend Development & APIs",
-                description: "Gain expertise in backend development using Python. Learn to build RESTful APIs, work with databases, and implement authentication and authorization."
+                title: "Backend Development Essentials",
+                description: "Understand the core concepts of backend development using Python and frameworks like Flask and Django."
+            },
+            {
+                icon: faNetworkWired,
+                title: "RESTful APIs and Web Services",
+                description: "Learn to design, build, and consume RESTful APIs to enable communication between the frontend and backend."
             },
             {
                 icon: faDatabase,
-                title: "Database Management",
-                description: "Master SQL and NoSQL databases like MySQL and MongoDB. Learn how to manage data efficiently and optimize database queries."
+                title: "SQL and Relational Databases",
+                description: "Master SQL databases like MySQL and PostgreSQL. Learn to write complex queries and optimize database performance."
+            },
+            {
+                icon: faBoxes,
+                title: "NoSQL and Modern Databases",
+                description: "Get hands-on experience with NoSQL databases like MongoDB and learn to handle unstructured data."
             },
             {
                 icon: faCloud,
-                title: "Cloud Deployment & DevOps",
-                description: "Learn how to deploy your web applications on cloud platforms like AWS, Heroku, and Azure. Understand CI/CD pipelines and containerization with Docker."
+                title: "Cloud Platforms and Services",
+                description: "Deploy applications on AWS, Heroku, and Azure. Explore cloud services and hosting strategies."
+            },
+            {
+                icon: faCogs,
+                title: "DevOps and CI/CD Pipelines",
+                description: "Understand DevOps principles and automate deployments with CI/CD pipelines and Docker containerization."
             },
             {
                 icon: faClipboardList,
-                title: "Weekly Assessments",
-                description: "Test your coding and development skills weekly to track progress and reinforce key concepts."
+                title: "Weekly Coding Challenges",
+                description: "Solve weekly challenges to enhance coding skills and reinforce fundamental concepts."
             },
             {
                 icon: faCalendarCheck,
-                title: "Monthly Evaluations",
-                description: "Participate in monthly evaluations to assess your understanding of full-stack development and problem-solving abilities."
+                title: "Monthly Knowledge Check",
+                description: "Participate in detailed evaluations to assess your progress and gain insights for improvement."
             },
             {
                 icon: faProjectDiagram,
-                title: "Real-World Projects",
-                description: "Work on hands-on projects to apply your knowledge and build a robust portfolio that showcases your full-stack development skills."
+                title: "Capstone and Real-World Projects",
+                description: "Work on complex projects to apply your full-stack development skills in real-world scenarios."
             },
             {
                 icon: faBriefcase,
-                title: "Placement Preparation",
-                description: "Receive personalized guidance on resume building, GitHub portfolio, LinkedIn profile optimization, and interview preparation."
+                title: "Resume and Portfolio Building",
+                description: "Get personalized tips to craft an impressive resume and GitHub portfolio that stands out."
             },
             {
                 icon: faHandshake,
-                title: "Job Support & Assistance",
-                description: "Benefit from job support with mock interviews, career counseling, and interview opportunities until you land your dream job."
+                title: "Comprehensive Job Support",
+                description: "Benefit from career counseling, mock interviews, and networking opportunities to land your dream job."
             }
         ],
         popUpDropDownCourses: [
@@ -694,7 +741,7 @@ export const data = [
         students: '2600+ Students',
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
-        certificate: DS_certificate,
+        certificate: defaultCertificate,
         Header: 'Learn Java Full Stack Development & Become a Certified Professional in',
         selfQuestioning: 'starting your Java Full Stack Career?',
         questions: [
@@ -740,165 +787,185 @@ export const data = [
         moduleContent: [
             {
                 id: 1,
-                module: "Module 1",
-                title: "Introduction to Full Stack Development & HTML",
-                details: {
-                    videos: 7,
-                    time: "2 months",
-                    descriptions: [
-                        "What is Full Stack Development?",
-                        "Frontend vs. Backend Development",
-                        "Technologies Used for Full Stack Development",
-                        "Introduction to Webpages and Websites",
-                        "Static vs. Dynamic Websites",
-                        "Introduction to Servers and Types of Servers",
-                        "Introduction to HTML and Web Page Structure"
-                    ]
-                }
+                module: "Part 1: Introduction to Full Stack Development & Basic Frontend Technologies",
+                details: [
+                    {
+                        title: "Module 1: Introduction to Full Stack Development & HTML",
+                        videos: 7,
+                        time: "2 months",
+                        descriptions: [
+                            "What is Full Stack Development?",
+                            "Frontend vs. Backend Development",
+                            "Technologies Used for Full Stack Development",
+                            "Introduction to Webpages and Websites",
+                            "Static vs. Dynamic Websites",
+                            "Introduction to Servers and Types of Servers",
+                            "Introduction to HTML and Web Page Structure"
+                        ]
+                    }
+                ]
             },
             {
                 id: 2,
-                module: "Module 2",
-                title: "CSS for Frontend Development",
-                details: {
-                    videos: 7,
-                    time: "1 month",
-                    descriptions: [
-                        "Introduction to CSS and Styling Web Pages",
-                        "Selectors: ID, Class, Tag, Group, Universal",
-                        "Background Properties, Colors, and Gradients",
-                        "Text and Font Properties",
-                        "Box Model: Padding, Margins, Borders, Outline",
-                        "Positioning: Relative, Absolute, Fixed, Static, Sticky",
-                        "Flexbox and Grid Layout",
-                        "Advanced Selectors, Transformations, and Animations",
-                        "Responsive Web Design with Media Queries"
-                    ]
-                }
+                module: "Part 2: Advanced Frontend Styling",
+                details: [
+                    {
+                        title: "Module 2: CSS for Frontend Development",
+                        videos: 7,
+                        time: "1 month",
+                        descriptions: [
+                            "Introduction to CSS and Styling Web Pages",
+                            "Selectors: ID, Class, Tag, Group, Universal",
+                            "Background Properties, Colors, and Gradients",
+                            "Text and Font Properties",
+                            "Box Model: Padding, Margins, Borders, Outline",
+                            "Positioning: Relative, Absolute, Fixed, Static, Sticky",
+                            "Flexbox and Grid Layout",
+                            "Advanced Selectors, Transformations, and Animations",
+                            "Responsive Web Design with Media Queries"
+                        ]
+                    }
+                ]
             },
             {
                 id: 3,
-                module: "Module 3",
-                title: "JavaScript Fundamentals",
-                details: {
-                    videos: 7,
-                    time: "1 month",
-                    descriptions: [
-                        "Introduction to JavaScript",
-                        "Variables: var, let, const, Scope & Hoisting",
-                        "Data Types: Primitive and Non-Primitive",
-                        "Operators: Arithmetic, Assignment, Comparison, Logical",
-                        "Functions: Default, Arrow, Callback, IIFE",
-                        "Conditional Statements: if, if-else, switch-case",
-                        "Loops: for, while, do-while, for-of, for-in",
-                        "Arrays & Objects: Methods and Properties",
-                        "DOM Manipulation and BOM (Browser Object Model)",
-                        "Event Handling and Error Handling",
-                        "Introduction to ES6, Promises, Async/Await",
-                        "Introduction to APIs (CRUD Operations)"
-                    ]
-                }
+                module: "Part 3: JavaScript Basics",
+                details: [
+                    {
+                        title: "Module 3: JavaScript Fundamentals",
+                        videos: 7,
+                        time: "1 month",
+                        descriptions: [
+                            "Introduction to JavaScript",
+                            "Variables: var, let, const, Scope & Hoisting",
+                            "Data Types: Primitive and Non-Primitive",
+                            "Operators: Arithmetic, Assignment, Comparison, Logical",
+                            "Functions: Default, Arrow, Callback, IIFE",
+                            "Conditional Statements: if, if-else, switch-case",
+                            "Loops: for, while, do-while, for-of, for-in",
+                            "Arrays & Objects: Methods and Properties",
+                            "DOM Manipulation and BOM (Browser Object Model)",
+                            "Event Handling and Error Handling",
+                            "Introduction to ES6, Promises, Async/Await",
+                            "Introduction to APIs (CRUD Operations)"
+                        ]
+                    }
+                ]
             },
             {
                 id: 4,
-                module: "Module 4",
-                title: "Frontend Framework: Bootstrap",
-                details: {
-                    videos: 7,
-                    time: "1 month",
-                    descriptions: [
-                        "Introduction to Bootstrap",
-                        "Typography and Buttons",
-                        "Grid System and Layout",
-                        "Forms and Form Validation",
-                        "Cards, Tables, Lists, and Navigations",
-                        "Dropdowns, Navbars, and Jumbotron",
-                        "Building Responsive Designs with Bootstrap"
-                    ]
-                }
+                module: "Part 4: Frontend Framework - Bootstrap",
+                details: [
+                    {
+                        title: "Module 4: Frontend Framework: Bootstrap",
+                        videos: 7,
+                        time: "1 month",
+                        descriptions: [
+                            "Introduction to Bootstrap",
+                            "Typography and Buttons",
+                            "Grid System and Layout",
+                            "Forms and Form Validation",
+                            "Cards, Tables, Lists, and Navigations",
+                            "Dropdowns, Navbars, and Jumbotron",
+                            "Building Responsive Designs with Bootstrap"
+                        ]
+                    }
+                ]
             },
             {
                 id: 5,
-                module: "Module 5",
-                title: "Introduction to Java and OOPs",
-                details: {
-                    videos: 7,
-                    time: "1 month",
-                    descriptions: [
-                        "Introduction to Java: Working, Features, JVM, JRE, JDK",
-                        "Data Types and Variables",
-                        "Naming Conventions and Keywords",
-                        "Operators and Control Statements",
-                        "OOP Concepts: Classes, Objects, Inheritance, Polymorphism, Abstraction, Encapsulation",
-                        "Arrays and Strings",
-                        "Exception Handling in Java"
-                    ]
-                }
+                module: "Part 5: Introduction to Java and OOPs Concepts",
+                details: [
+                    {
+                        title: "Module 5: Introduction to Java and OOPs",
+                        videos: 7,
+                        time: "1 month",
+                        descriptions: [
+                            "Introduction to Java: Working, Features, JVM, JRE, JDK",
+                            "Data Types and Variables",
+                            "Naming Conventions and Keywords",
+                            "Operators and Control Statements",
+                            "OOP Concepts: Classes, Objects, Inheritance, Polymorphism, Abstraction, Encapsulation",
+                            "Arrays and Strings",
+                            "Exception Handling in Java"
+                        ]
+                    }
+                ]
             },
             {
                 id: 6,
-                module: "Module 6",
-                title: "Advanced Java Concepts",
-                details: {
-                    videos: 7,
-                    time: "1 month",
-                    descriptions: [
-                        "JVM Architecture and Memory Management",
-                        "Multi-threading: Concepts, Lifecycle, Synchronization, Deadlock",
-                        "Collection Framework: List, Set, Map",
-                        "Java 8 Features: Lambda Expressions, Functional Interfaces, Streams API",
-                        "Regular Expressions in Java"
-                    ]
-                }
+                module: "Part 6: Advanced Java Concepts",
+                details: [
+                    {
+                        title: "Module 6: Advanced Java Concepts",
+                        videos: 7,
+                        time: "1 month",
+                        descriptions: [
+                            "JVM Architecture and Memory Management",
+                            "Multi-threading: Concepts, Lifecycle, Synchronization, Deadlock",
+                            "Collection Framework: List, Set, Map",
+                            "Java 8 Features: Lambda Expressions, Functional Interfaces, Streams API",
+                            "Regular Expressions in Java"
+                        ]
+                    }
+                ]
             },
             {
                 id: 7,
-                module: "Module 7",
-                title: "Database Management with MySQL & JDBC",
-                details: {
-                    videos: 7,
-                    time: "1 month",
-                    descriptions: [
-                        "Introduction to Databases: MySQL Basics",
-                        "DDL, DML, DRL, DCL, TCL Commands",
-                        "Joins and Constraints",
-                        "Introduction to JDBC: Drivers, Connections, Statements, ResultSets",
-                        "Integrating Java Applications with Databases"
-                    ]
-                }
+                module: "Part 7: Database Management with MySQL & JDBC",
+                details: [
+                    {
+                        title: "Module 7: Database Management with MySQL & JDBC",
+                        videos: 7,
+                        time: "1 month",
+                        descriptions: [
+                            "Introduction to Databases: MySQL Basics",
+                            "DDL, DML, DRL, DCL, TCL Commands",
+                            "Joins and Constraints",
+                            "Introduction to JDBC: Drivers, Connections, Statements, ResultSets",
+                            "Integrating Java Applications with Databases"
+                        ]
+                    }
+                ]
             },
             {
                 id: 8,
-                module: "Module 8",
-                title: "ORM with Hibernate/JPA",
-                details: {
-                    videos: 7,
-                    time: "1 month",
-                    descriptions: [
-                        "Introduction to Hibernate",
-                        "Advantages of ORM and Hibernate",
-                        "Configuration and Mapping",
-                        "CRUD Operations with Hibernate",
-                        "Relationships and Inheritance Mapping",
-                        "HQL (Hibernate Query Language) and JPQL"
-                    ]
-                }
+                module: "Part 8: ORM with Hibernate/JPA",
+                details: [
+                    {
+                        title: "Module 8: ORM with Hibernate/JPA",
+                        videos: 7,
+                        time: "1 month",
+                        descriptions: [
+                            "Introduction to Hibernate",
+                            "Advantages of ORM and Hibernate",
+                            "Configuration and Mapping",
+                            "CRUD Operations with Hibernate",
+                            "Relationships and Inheritance Mapping",
+                            "HQL (Hibernate Query Language) and JPQL"
+                        ]
+                    }
+                ]
             },
             {
                 id: 9,
-                module: "Module 9",
-                title: "Project Development & Capstone",
-                details: {
-                    videos: 7,
-                    time: "1 month",
-                    descriptions: [
-                        "Planning and Scoping a Full Stack Java Application",
-                        "Developing Frontend and Backend Functionality",
-                        "Database Integration and API Development",
-                        "Deploying Applications to Cloud Platforms",
-                        "Final Project Presentation and Code Review"
-                    ]
-                }
+                module: "Part 9: Full Stack Project",
+                details: [
+                    {
+                        title: "Module 9: Full Stack Development Project",
+                        videos: 7,
+                        time: "2 months",
+                        descriptions: [
+                            "Project Overview and Planning",
+                            "Building the Backend with Java and Spring Boot",
+                            "Frontend Development with HTML, CSS, JavaScript, and Bootstrap",
+                            "Connecting Frontend and Backend via APIs",
+                            "Integrating Database using JDBC and Hibernate",
+                            "Testing and Debugging the Application",
+                            "Deployment and Version Control with Git"
+                        ]
+                    }
+                ]
             }
         ],
         levelcardIndex: [
@@ -938,6 +1005,21 @@ export const data = [
                 description: "Work on hands-on Java-based projects to apply your knowledge in building scalable web applications, including database management and RESTful API development."
             },
             {
+                icon: faUsers,
+                title: "Collaborative Learning",
+                description: "Engage in collaborative coding sessions and group projects to enhance teamwork skills and learn best practices in full-stack development."
+            },
+            {
+                icon: faBook,
+                title: "Comprehensive Tutorials",
+                description: "Access detailed tutorials covering advanced Java topics, Spring Boot configurations, and front-end integration techniques."
+            },
+            {
+                icon: faCogs,
+                title: "Technical Skills Development",
+                description: "Build proficiency in debugging, optimizing code, and implementing clean architecture practices for scalable applications."
+            },
+            {
                 icon: faBriefcase,
                 title: "Placement Preparation",
                 description: "Receive personalized guidance on resume building, GitHub portfolio, LinkedIn profile optimization, and interview preparation tailored to Java full-stack roles."
@@ -946,6 +1028,11 @@ export const data = [
                 icon: faHandshake,
                 title: "Job Support & Assistance",
                 description: "Benefit from job support with mock interviews, career counseling, and interview opportunities until you land your dream job in full-stack Java development."
+            },
+            {
+                icon: faCertificate,
+                title: "Certification of Completion",
+                description: "Earn an industry-recognized certificate upon completing the course to showcase your expertise in full-stack Java development."
             }
         ],
         accordionContent: [
@@ -1020,17 +1107,18 @@ export const data = [
         id: 2,
         courseID: 4,
         categoryIndex: 0, // Development
-        tagIndex: 0,      // Web Development
+        tagIndex: 1,      // Web Development
         slug: 'full-stack-developer-course',
         courseTitle: 'Development',
         imageSrc: mern,
+        certificate: defaultCertificate,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: '6 months',
         students: '2800+ students',
         text: 'Mern Stack (Full Stack)',
         rating: 4.3,
-        Header: 'Learn Mern Stack Course & Become a Certified Professional in',
+        Header: 'Master Full Stack Java / Python With Mern Stack Course in',
         popUpDropDownCourses: [
             { dropDownid: 0, courseName: 'Mern Stack (Full Stack)' },
         ],
@@ -1040,7 +1128,7 @@ export const data = [
             "Are you ready to master essential Mern Stack skills in just 180 days?",
             "Do you want to kickstart your Mern Stack career with 4+ LPA opportunities?"
         ],
-        Description: 'The MERN Stack (MongoDB, Express.js, React.js, Node.js) is one of the most popular full-stack development frameworks, enabling developers to build robust, scalable, and interactive web applications. This course provides a hands-on learning experience in mastering the MERN Stack. You will gain skills in designing and developing dynamic web applications, building APIs, integrating front-end and back-end development, managing databases, and deploying applications. Key areas of focus include building RESTful APIs, creating interactive user interfaces, managing state with Redux, authenticating users, and deploying applications on platforms like Heroku or Vercel. By the end of this course, you"ll be equipped to develop and deploy modern web applications with the MERN Stack.',
+        Description: 'The Full Stack Java / python With MERN Stack  (MongoDB, Express.js, React.js, Node.js) is one of the most popular full-stack development frameworks, enabling developers to build robust, scalable, and interactive web applications. This course provides a hands-on learning experience in mastering the MERN Stack. You will gain skills in designing and developing dynamic web applications, building APIs, integrating front-end and back-end development, managing databases, and deploying applications. Key areas of focus include building RESTful APIs, creating interactive user interfaces, managing state with Redux, authenticating users, and deploying applications on platforms like Heroku or Vercel. By the end of this course, you"ll be equipped to develop and deploy modern web applications with the MERN Stack.',
         moduleContent: [
             {
                 id: 1,
@@ -1059,98 +1147,98 @@ export const data = [
             {
                 id: 2,
                 module: "Module 2",
-                title: "Infrastructure as Code (IaC) with AWS CloudFormation",
+                title: "Frontend Development with React",
                 details: {
-                    videos: 7,
+                    videos: 8,
                     time: "3 weeks",
                     descriptions: [
-                        "Introduction to Infrastructure as Code (IaC)",
-                        "Creating and managing infrastructure using AWS CloudFormation templates",
-                        "Best practices for defining infrastructure and managing deployments"
+                        "Building modern user interfaces with React",
+                        "State management using React Context and Redux",
+                        "Handling API calls and routing with React Router"
                     ]
                 }
             },
             {
                 id: 3,
                 module: "Module 3",
-                title: "Continuous Integration and Continuous Delivery (CI/CD) with AWS",
+                title: "Backend Development with Node.js and Express",
                 details: {
-                    videos: 8,
+                    videos: 7,
                     time: "3 weeks",
                     descriptions: [
-                        "Setting up Continuous Integration (CI) pipelines with AWS CodeBuild",
-                        "Automating deployment processes using AWS CodeDeploy",
-                        "Implementing Continuous Delivery (CD) for rapid application releases"
+                        "Introduction to backend development with Node.js",
+                        "Creating RESTful APIs with Express",
+                        "Connecting to databases with MongoDB"
                     ]
                 }
             },
             {
                 id: 4,
                 module: "Module 4",
-                title: "Monitoring and Logging with AWS CloudWatch",
+                title: "Introduction to Java Programming",
                 details: {
-                    videos: 7,
+                    videos: 6,
                     time: "2 weeks",
                     descriptions: [
-                        "Configuring AWS CloudWatch for real-time monitoring",
-                        "Setting up alerts and logs for application and infrastructure performance",
-                        "Analyzing CloudWatch logs to troubleshoot and optimize performance"
+                        "Getting started with Java and its ecosystem",
+                        "Object-oriented programming concepts in Java",
+                        "Writing and compiling Java applications"
                     ]
                 }
             },
             {
                 id: 5,
                 module: "Module 5",
-                title: "Containerization and Orchestration with AWS ECS and EKS",
+                title: "Python Programming for Backend Development",
                 details: {
-                    videos: 8,
-                    time: "4 weeks",
+                    videos: 7,
+                    time: "3 weeks",
                     descriptions: [
-                        "Introduction to containerization and Docker",
-                        "Deploying containerized applications with Amazon ECS (Elastic Container Service)",
-                        "Orchestrating containers using AWS EKS (Elastic Kubernetes Service)"
+                        "Introduction to Python programming",
+                        "Building REST APIs with Flask or FastAPI",
+                        "Interfacing with databases using SQLAlchemy or Django ORM"
                     ]
                 }
             },
             {
                 id: 6,
                 module: "Module 6",
-                title: "Automating Infrastructure Management with AWS OpsWorks",
+                title: "Database Design and Management",
                 details: {
-                    videos: 6,
-                    time: "2 weeks",
+                    videos: 7,
+                    time: "3 weeks",
                     descriptions: [
-                        "Overview of AWS OpsWorks for managing applications and infrastructure",
-                        "Configuring and managing infrastructure with AWS OpsWorks Stacks and Layers",
-                        "Automating application deployment and lifecycle management"
+                        "Introduction to relational and non-relational databases",
+                        "Designing efficient database schemas",
+                        "Performing CRUD operations with MongoDB and MySQL"
                     ]
                 }
             },
             {
                 id: 7,
                 module: "Module 7",
-                title: "Security and Compliance in AWS DevOps",
+                title: "Full-Stack Application Development",
                 details: {
-                    videos: 7,
-                    time: "3 weeks",
+                    videos: 8,
+                    time: "4 weeks",
                     descriptions: [
-                        "Ensuring security in the DevOps pipeline",
-                        "Using AWS Identity and Access Management (IAM) for user permissions",
-                        "Complying with security best practices and managing audits in AWS"
+                        "Building a full-stack application with MERN and Java/Python backend",
+                        "Integrating frontend and backend components",
+                        "Deploying applications to cloud platforms (e.g., AWS, Heroku)"
                     ]
                 }
             },
             {
                 id: 8,
                 module: "Module 8",
-                title: "Scaling and Load Balancing with AWS",
+                title: "Advanced Topics in Full-Stack Development",
                 details: {
                     videos: 7,
                     time: "3 weeks",
                     descriptions: [
-                        "Auto-scaling applications on AWS to handle traffic spikes",
-                        "Configuring Elastic Load Balancing (ELB) to distribute traffic efficiently",
-                        "Best practices for scaling and balancing workloads on AWS"
+                        "Implementing authentication and authorization",
+                        "Optimizing performance and scalability",
+                        "Best practices for debugging and testing applications"
                     ]
                 }
             },
@@ -1162,9 +1250,9 @@ export const data = [
                     videos: 7,
                     time: "1 month",
                     descriptions: [
-                        "Building a complete AWS DevOps pipeline for a real-world project",
-                        "Implementing CI/CD, monitoring, and automated infrastructure management",
-                        "Showcasing a final project and preparing for certification"
+                        "Building a comprehensive full-stack application with MERN and Java/Python",
+                        "Implementing real-world use cases and challenges",
+                        "Preparing for certification and showcasing your final project"
                     ]
                 }
             }
@@ -1177,24 +1265,19 @@ export const data = [
                 description: "Learn the core concepts of the MERN stack, including MongoDB, Express.js, React.js, and Node.js, and understand how they work together in modern web applications."
             },
             {
-                icon: faDatabase,
-                title: "Database Management with MongoDB",
-                description: "Master MongoDB for storing and managing data, including schema design, CRUD operations, indexing, and using the Mongoose library for seamless integration."
-            },
-            {
-                icon: faServer,
-                title: "Building APIs with Express.js",
-                description: "Learn to build scalable and efficient RESTful APIs using Express.js, including middleware integration, routing, and error handling."
-            },
-            {
                 icon: faReact,
                 title: "Frontend Development with React",
                 description: "Develop dynamic and responsive user interfaces using React, including state management with hooks, component lifecycles, and best practices for performance optimization."
             },
             {
-                icon: faNodeJs,
-                title: "Backend Development with Node.js",
-                description: "Understand the fundamentals of Node.js for server-side programming, asynchronous operations, and integrating with third-party libraries and APIs."
+                icon: faChartLine,
+                title: "State Management with Redux",
+                description: "Dive deep into Redux for managing application state in larger React applications, including creating reducers, actions, and middleware."
+            },
+            {
+                icon: faBook,
+                title: "Learn Complete Java/Python Course",
+                description: "Master programming fundamentals and advanced concepts in Java or Python, covering topics like OOP, data structures, algorithms, multithreading, and frameworks like Spring Boot or Django."
             },
             {
                 icon: faSyncAlt,
@@ -1202,14 +1285,24 @@ export const data = [
                 description: "Learn to connect the React frontend with the Express backend through RESTful APIs, including data fetching, form handling, and state synchronization."
             },
             {
+                icon: faDatabase,
+                title: "Database Management with MongoDB",
+                description: "Master MongoDB for storing and managing data, including schema design, CRUD operations, indexing, and using the Mongoose library for seamless integration."
+            },
+            {
+                icon: faNodeJs,
+                title: "Backend Development with Node.js",
+                description: "Understand the fundamentals of Node.js for server-side programming, asynchronous operations, and integrating with third-party libraries and APIs."
+            },
+            {
+                icon: faServer,
+                title: "Building APIs with Express.js",
+                description: "Learn to build scalable and efficient RESTful APIs using Express.js, including middleware integration, routing, and error handling."
+            },
+            {
                 icon: faCodeBranch,
                 title: "Version Control with Git & GitHub",
                 description: "Master Git for version control and collaborate on projects using GitHub, including branching, merging, and pull request workflows."
-            },
-            {
-                icon: faChartLine,
-                title: "State Management with Redux",
-                description: "Dive deep into Redux for managing application state in larger React applications, including creating reducers, actions, and middleware."
             },
             {
                 icon: faLaptopCode,
@@ -1235,8 +1328,9 @@ export const data = [
                 icon: faBriefcase,
                 title: "Placement Preparation",
                 description: "Prepare for the job market with resume building, interview preparation, and understanding the roles and responsibilities of a MERN Stack Developer."
-            }
-        ],
+            },
+        ]
+        ,
         accordionContent: [
             {
                 title: 'What is the duration of the MERN Stack program at SocialPrachar?',
@@ -1307,10 +1401,11 @@ export const data = [
         id: 2,
         courseID: 5,
         categoryIndex: 5, // Development
-        tagIndex: 2,      // Web Development
+        tagIndex: 3,      // Web Development
         slug: 'awsdevopscourse',
         courseTitle: 'Cloud Development',
         imageSrc: AWS_multiCloud,
+        certificate: defaultCertificate,
         Duration: '6 months',
         students: '2800+ students',
         text: 'AWS With DevOps',
@@ -1521,16 +1616,16 @@ export const data = [
         ],
         accordionContent: [
             {
-                title: 'What is the duration of the Digital Marketing program at SocialPrachar?',
-                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to fit varying schedules and learning objectives.'
+                title: 'What is the duration of the AWS DevOps program at SocialPrachar?',
+                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs tailored to fit varying schedules and learning goals.'
             },
             {
-                title: 'What topics are covered in the Digital Marketing curriculum?',
-                content: 'Topics include SEO, SEM, social media marketing, content marketing, email marketing, analytics, and real-time project implementation.'
+                title: 'What topics are covered in the AWS DevOps curriculum?',
+                content: 'Topics include AWS fundamentals, CI/CD pipelines, Infrastructure as Code (IaC) using Terraform, containerization with Docker and Kubernetes, monitoring and logging with CloudWatch, and real-time project implementation.'
             },
             {
                 title: 'Are there any internship or job guarantee options?',
-                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the industry.'
+                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain hands-on experience and secure positions in the industry.'
             },
             {
                 title: 'What are the class formats available (online or classroom)?',
@@ -1538,23 +1633,23 @@ export const data = [
             },
             {
                 title: 'Is there a certification awarded upon completion?',
-                content: 'Yes, a professional certification is awarded upon successful completion of the program, which adds value to your resume and portfolio.'
+                content: 'Yes, a professional certification is awarded upon successful completion of the program, which is recognized in the industry and enhances your resume.'
             },
             {
                 title: 'What are the average salary expectations for program graduates?',
-                content: 'Graduates can expect competitive salaries in the digital marketing field, with opportunities for growth depending on their expertise and the job role secured.'
+                content: 'Graduates can expect competitive salaries in the AWS DevOps field, with significant opportunities for career growth depending on their expertise and job roles.'
             },
             {
                 title: 'Who are the trainers, and what qualifications do they have?',
-                content: 'Trainers are experienced digital marketing professionals with a proven track record in the industry, offering practical insights and up-to-date training.'
+                content: 'Trainers are AWS-certified professionals with extensive industry experience, providing practical insights and up-to-date training.'
             },
             {
-                title: 'How does SocialPrachar support non-marketing professionals?',
-                content: 'SocialPrachar offers foundational modules to help beginners and non-marketing professionals gain the skills needed to transition into the field.'
+                title: 'How does SocialPrachar support beginners or non-IT professionals?',
+                content: 'SocialPrachar offers foundational modules and mentorship to help beginners and non-IT professionals acquire the necessary skills to excel in AWS DevOps roles.'
             },
             {
                 title: 'What kind of projects will I work on during the course?',
-                content: 'Projects include real-world digital marketing campaigns, SEO optimization, content strategy, and analytics-based decision-making, ensuring hands-on learning.'
+                content: 'Projects include designing and deploying CI/CD pipelines, creating scalable infrastructure with AWS, containerizing applications using Docker, and implementing monitoring solutions with CloudWatch.'
             },
             {
                 title: 'How can I register or get more information about upcoming batches?',
@@ -1596,10 +1691,11 @@ export const data = [
         id: 2,
         courseID: 6,
         categoryIndex: 7,
-        tagIndex: 3,
+        tagIndex: 1,
         slug: 'artificial-intelligence-course-training-institute-in-hyderabad',
         courseTitle: 'AI Development',
         imageSrc: AI,
+        certificate: defaultCertificate,
         TestmonialsCommentsImage1: testmonialsCommentImageDS,
         TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
         Duration: '6 months',
@@ -1608,7 +1704,7 @@ export const data = [
         rating: 4.2,
         Header: 'Learn Artificial Intelligence Course & Become a Certified Professional in',
         popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Digital Marketing' },
+            { dropDownid: 0, courseName: 'Artificial Intelligence' },
         ],
         selfQuestioning: 'Starting your Artificial Intelligence Career?',
         questions: [
@@ -1771,81 +1867,86 @@ export const data = [
             }
         ],
 
-        timeLineHeading: 'Digital Marketing',
+        timeLineHeading: 'Artificial Intelligence',
         levelcardIndex: [
             {
-                icon: faGlobe,
-                title: "Introduction",
-                description: "Explore the foundational concepts of digital marketing, including online business models, basic marketing principles, and website fundamentals."
+                icon: faBrain,
+                title: "Introduction to AI",
+                description: "Explore the foundational concepts of Artificial Intelligence, its history, applications, and the impact it has on various industries."
             },
             {
-                icon: faDesktop,
-                title: "Website Designing",
-                description: "Learn to create and design responsive, visually appealing websites using CMS platforms like WordPress. Topics include dashboard navigation, theme customization, and advanced design techniques."
+                icon: faCogs,
+                title: "Machine Learning Basics",
+                description: "Understand the basics of Machine Learning, including supervised, unsupervised, and reinforcement learning techniques."
             },
             {
-                icon: faSearch,
-                title: "Search Engine Optimization (SEO)",
-                description: "Master SEO strategies, including on-page and off-page optimization, search engine algorithms, and content optimization to enhance visibility."
+                icon: faChartLine,
+                title: "Data Analysis for AI",
+                description: "Learn to preprocess and analyze data using tools like Python, NumPy, and Pandas to prepare datasets for AI models."
             },
             {
-                icon: faBullhorn,
-                title: "Search Engine Marketing (SEM)",
-                description: "Dive into paid marketing strategies, including search ads, display ads, video ads, shopping ads, remarketing, and conversion tracking."
+                icon: faProjectDiagram,
+                title: "Deep Learning Foundations",
+                description: "Dive into neural networks, activation functions, and techniques to build deep learning models using frameworks like TensorFlow or PyTorch."
             },
             {
-                icon: faThumbsUp,
-                title: "Social Media Marketing (SMM)",
-                description: "Learn to create engaging campaigns for platforms like Facebook, LinkedIn, Instagram, and Twitter/X to boost brand visibility and engagement."
+                icon: faRobot,
+                title: "Natural Language Processing (NLP)",
+                description: "Discover NLP techniques, including text processing, sentiment analysis, and chatbots, using libraries like NLTK and SpaCy."
             },
             {
-                icon: faTools,
-                title: "Google Tools & Monetization",
-                description: "Understand website analytics and performance with tools like Google Search Console, Google Analytics, and Google My Business."
-            },
-            {
-                icon: faMoneyBillWave,
-                title: "Monetization",
-                description: "Explore revenue generation methods like Google AdSense, affiliate marketing, and YouTube monetization strategies."
-            },
-            {
-                icon: faEnvelope,
-                title: "Email Marketing",
-                description: "Build effective email campaigns, grow subscriber lists, and track performance for improved user engagement."
-            },
-            {
-                icon: faDatabase,
-                title: "Master Data Analytics",
-                description: "Learn data analysis and visualization using tools like Excel, SQL, and Power BI. Apply data-driven decision-making in marketing strategies."
+                icon: faImages,
+                title: "Computer Vision",
+                description: "Learn image processing, object detection, and facial recognition techniques using OpenCV and deep learning models."
             },
             {
                 icon: faCloud,
-                title: "Cloud Deployment & AI",
-                description: "Understand AI concepts, deep learning, and NLP techniques, and deploy marketing automation models on platforms like AWS and Azure."
+                title: "AI in the Cloud",
+                description: "Understand how to deploy AI solutions on cloud platforms like AWS, Azure, or Google Cloud."
+            },
+            {
+                icon: faShieldAlt,
+                title: "AI Ethics & Responsible AI",
+                description: "Explore ethical considerations, bias mitigation, and responsible AI practices to ensure fairness and transparency in AI systems."
+            },
+            {
+                icon: faNetworkWired,
+                title: "AI for IoT Applications",
+                description: "Combine AI with IoT to create smart solutions for real-world applications, including predictive maintenance and automation."
             },
             {
                 icon: faTasks,
-                title: "Project Work",
-                description: "Implement real-world projects to apply your learning, improve problem-solving skills, and gain practical experience."
+                title: "AI Project Lifecycle",
+                description: "Learn how to design, implement, and manage AI projects, including problem identification, solution deployment, and monitoring."
+            },
+            {
+                icon: faUserGraduate,
+                title: "AI Research & Development",
+                description: "Understand the process of AI research, including literature review, experimentation, and publishing findings."
+            },
+            {
+                icon: faCode,
+                title: "AI Programming Challenges",
+                description: "Practice solving real-world problems using AI techniques to strengthen your programming and problem-solving skills."
             },
             {
                 icon: faBriefcase,
-                title: "Placement Preparation",
-                description: "Enhance your resume, optimize LinkedIn profiles, and prepare for job interviews with comprehensive support."
+                title: "Career in AI",
+                description: "Prepare for careers in AI with guidance on resume building, interview preparation, and leveraging LinkedIn effectively."
             }
         ],
         accordionContent: [
             {
-                title: 'What is the duration of the Digital Marketing program at SocialPrachar?',
-                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to fit varying schedules and learning objectives.'
+                title: 'What is the duration of the Artificial Intelligence program at SocialPrachar?',
+                content: 'The program duration is flexible, offering both short-term certification courses and comprehensive programs designed to fit varying schedules and learning objectives.'
             },
             {
-                title: 'What topics are covered in the Digital Marketing curriculum?',
-                content: 'Topics include SEO, SEM, social media marketing, content marketing, email marketing, analytics, and real-time project implementation.'
+                title: 'What topics are covered in the Artificial Intelligence curriculum?',
+                content: 'Topics include machine learning, deep learning, natural language processing, computer vision, AI ethics, robotics, and real-world project implementations.'
             },
             {
                 title: 'Are there any internship or job guarantee options?',
-                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the industry.'
+                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the AI industry.'
             },
             {
                 title: 'What are the class formats available (online or classroom)?',
@@ -1857,25 +1958,26 @@ export const data = [
             },
             {
                 title: 'What are the average salary expectations for program graduates?',
-                content: 'Graduates can expect competitive salaries in the digital marketing field, with opportunities for growth depending on their expertise and the job role secured.'
+                content: 'Graduates can expect competitive salaries in the AI field, with opportunities for growth depending on their expertise and the job role secured.'
             },
             {
                 title: 'Who are the trainers, and what qualifications do they have?',
-                content: 'Trainers are experienced digital marketing professionals with a proven track record in the industry, offering practical insights and up-to-date training.'
+                content: 'Trainers are experienced AI professionals and industry experts with a proven track record, offering practical insights and up-to-date training.'
             },
             {
-                title: 'How does SocialPrachar support non-marketing professionals?',
-                content: 'SocialPrachar offers foundational modules to help beginners and non-marketing professionals gain the skills needed to transition into the field.'
+                title: 'How does SocialPrachar support non-technical professionals?',
+                content: 'SocialPrachar offers foundational modules to help beginners and non-technical professionals gain the skills needed to transition into the AI field.'
             },
             {
                 title: 'What kind of projects will I work on during the course?',
-                content: 'Projects include real-world digital marketing campaigns, SEO optimization, content strategy, and analytics-based decision-making, ensuring hands-on learning.'
+                content: 'Projects include developing machine learning models, building chatbots, implementing AI algorithms for real-world problems, and working with data sets for predictive analysis.'
             },
             {
                 title: 'How can I register or get more information about upcoming batches?',
                 content: 'You can register through the website or contact the admissions team for detailed information about batch schedules and enrollment processes.'
             }
         ],
+
         studentPlacedImages: [
             { id: 1, image: student25 },
             { id: 2, image: student26 },
@@ -1903,9 +2005,8 @@ export const data = [
             { id: 26, image: student42 },
             { id: 27, image: student44 },
         ],
-        bannerHeader: 'Learn Digital Marketing Today',
+        bannerHeader: 'Learn Artificial Intelligence Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
-
     },
 
     {
@@ -1916,6 +2017,7 @@ export const data = [
         slug: 'digital-marketing-course-training-institute-hyderabad',
         courseTitle: 'Marketing',
         imageSrc: Digital_M,
+        certificate: defaultCertificate,
         Duration: '4 months',
         students: '3200+ students',
         text: 'Digital Marketing',
@@ -2195,10 +2297,11 @@ export const data = [
         id: 2,
         courseID: 8,
         categoryIndex: 3, // Development
-        tagIndex: 3,      // Web Development
+        tagIndex: 1,      // Web Development
         slug: 'data-analytics-course-training-hyderabad',
         courseTitle: 'Data Science',
-        imageSrc: DS,
+        imageSrc: DA,
+        certificate: defaultCertificate,
         Duration: '5 months',
         students: '2700+ students',
         text: 'Data Analytics',
@@ -2459,10 +2562,11 @@ export const data = [
         id: 2,
         courseID: 9,
         categoryIndex: 8, // Development
-        tagIndex: 2,      // Web Development
+        tagIndex: 3,      // Web Development
         slug: 'snowflake-training-in-hyderabad',
         courseTitle: 'Cloud',
-        imageSrc: img1,
+        imageSrc: SnowFlake,
+        certificate: defaultCertificate,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: '5 months',
@@ -2772,10 +2876,11 @@ export const data = [
         id: 2,
         courseID: 10,
         categoryIndex: 9,
-        tagIndex: 2,
+        tagIndex: 3,
         slug: 'salesforce-course',
         courseTitle: 'Cloud',
-        imageSrc: img2,
+        imageSrc: salesForce,
+        certificate: defaultCertificate,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: '5 months',
@@ -3080,138 +3185,5 @@ export const data = [
         bannerStudentsEnrolled: '2.7k+ Students Enrolled',
 
     },
-
-    // HIdden Courses
-    {
-        CourseID:11,
-        slug:'azure-with-devops',
-        courseTitle:'Cloud',
-        tagIndex:2,
-        text: 'Azure With Devops',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating:4.5,
-        Header: 'Learn Azure With DevOps Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Azure With DevOps' },
-        ],
-        selfQuestioning: 'Starting your Azure with DevOps Career?',
-        questions: [
-            "Do you want to explore career opportunities in Sales Force?",
-            "Are you ready to master essential Sales Force skills in just 180 days?",
-            "Do you want to kickstart your Sales Force career with 4+ LPA opportunities?"
-        ],
-    },
-
-    {
-        CourseID: 12,
-        slug: 'python-course',
-        courseTitle: 'Development',
-        tagIndex: 2,
-        text: 'Python Course',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating: 4.5,
-        Header: 'Learn Python Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Python' },
-        ],
-        selfQuestioning: 'Starting your Python Career?',
-        questions: [
-            "Do you want to explore career opportunities in Python?",
-            "Are you ready to master essential Python skills in just 180 days?",
-            "Do you want to kickstart your Python career with 4+ LPA opportunities?"
-        ],
-    },
-
-    {
-        CourseID: 13,
-        slug: 'ai-course',
-        courseTitle: 'Cloud',
-        tagIndex: 2,
-        text: 'AI Course',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating: 4.5,
-        Header: 'Learn AI Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'AI' },
-        ],
-        selfQuestioning: 'Starting your AI Career?',
-        questions: [
-            "Do you want to explore career opportunities in AI?",
-            "Are you ready to master essential AI skills in just 180 days?",
-            "Do you want to kickstart your AI career with 4+ LPA opportunities?"
-        ],
-    },
-
-    {
-        CourseID: 14,
-        slug: 'java-training',
-        courseTitle: 'Cloud',
-        tagIndex: 2,
-        text: 'Java Course',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating: 4.5,
-        Header: 'Learn Java Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Java' },
-        ],
-        selfQuestioning: 'Starting your Java Career?',
-        questions: [
-            "Do you want to explore career opportunities in Java?",
-            "Are you ready to master essential Java skills in just 180 days?",
-            "Do you want to kickstart your Java career with 4+ LPA opportunities?"
-        ],
-    },
-
-    {
-        CourseID: 15,
-        slug: 'digital-marketing-course',
-        courseTitle: 'Cloud',
-        tagIndex: 2,
-        text: 'Digital Marketing Course',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating: 4.5,
-        Header: 'Learn Digital Marketing Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Digital Marketing Course' },
-        ],
-        selfQuestioning: 'Starting your Digital Marketing Career?',
-        questions: [
-            "Do you want to explore career opportunities in Digital Marketing?",
-            "Are you ready to master essential Digital Marketing skills in just 180 days?",
-            "Do you want to kickstart your Digital Marketing career with 4+ LPA opportunities?"
-        ],
-    },
-    
-    {
-        CourseID: 16,
-        slug: 'blockchain-course-training',
-        courseTitle: 'Cloud',
-        tagIndex: 2,
-        text: 'Block-Chain Course',
-        Duration: '6 months',
-        students: '1600+ students',
-        imageSrc: img3,
-        rating: 4.5,
-        Header: 'Learn Block-Chain Course & Become a Certified Professional in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Block-Chain' },
-        ],
-        selfQuestioning: 'Starting your Block-Chain Career?',
-        questions: [
-            "Do you want to explore career opportunities in Block-Chain?",
-            "Are you ready to master essential Block-Chain skills in just 180 days?",
-            "Do you want to kickstart your Block-Chain career with 4+ LPA opportunities?"
-        ],
-    }
 
 ];

@@ -1,43 +1,43 @@
-import React, {  useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import courseCSS from '../Courses_category/Course.module.css';
 import BulbText from '../extraComponents/bulbText';
 import HomeCard from './HomeCard';
-import homeCoursesStyle from './homeCourses.module.css'
+import homeCoursesStyle from './homeCourses.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightLong } from '@fortawesome/free-solid-svg-icons';
 
 const HomeCourses = () => {
-    const items = ['All', 'web Development','Job Guarentee Programs', 'Marketing', 'Cloud'];
-    const [selectedCategory, setSelectedCategory] = useState('All');
-    const handleCategoryClick = (category) => {
-        setSelectedCategory(category);
+    const navigate = useNavigate();
+
+    const handleKnowMoreClick = () => {
+        navigate('/courses');
     };
 
     return (
         <div className={`${courseCSS.categorypage} containerFluidForPadding my-5`}>
             <div className='row '>
                 <div className='col col-12 col-sm-12 col-xl-6'>
-                    
-                <BulbText 
-                    BulbText="Courses"
-                    bulbTitle="Explore Featured Courses"
-                    GreyText="You'll find something to spark your curiosity and enhance"
-                />
+                    <BulbText
+                        BulbText="Courses"
+                        bulbTitle="Explore Featured Courses"
+                        GreyText="You'll find something to spark your curiosity and enhance"
+                    />
                 </div>
-                <div className="d-flex col justify-content-end mt-5 col-12 col-sm-12 col-xl-6 flex-wrap ">
-                    {items.map((item, index) => (
-                        <div key={index}>
-                            <button
-                                onClick={() => handleCategoryClick(item)}
-                                className={` ${homeCoursesStyle.homeCoursesBtn}  ${selectedCategory === item ? `${homeCoursesStyle.homeCoursesBtnactive}` : ''} mt-2`}
-                            >
-                                {item}
-                            </button>
-                        </div>
-                    ))}
+                <div className="d-flex justify-content-end flex-wrap">
+                    <FontAwesomeIcon icon={faRightLong} className={homeCoursesStyle.animated_icon} />
+                    <button
+                        className={`btn ${homeCoursesStyle.homeCoursesBtn} fw-bold`}
+                        onClick={handleKnowMoreClick}
+                    >
+                        All Courses
+                    </button>
                 </div>
+
             </div>
 
-            <div >
-                <HomeCard selectedCategory={selectedCategory} />
+            <div>
+                <HomeCard selectedCategory="All" />
             </div>
         </div>
     );

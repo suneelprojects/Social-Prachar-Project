@@ -19,7 +19,7 @@
     align-items: end;
 }
 .footerCertificate div p{
-    font-size: 40px;
+    font-size:38px;
     line-height: 58px;
     color: white;
     font-family: sans-serif;
@@ -51,6 +51,7 @@
     line-height: 35px;
     font-weight: 500;
     color: gray;
+    cursor: pointer;
 }
 .fotterList b{
     line-height: 42px;
