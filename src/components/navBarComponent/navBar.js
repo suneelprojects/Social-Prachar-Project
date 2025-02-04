@@ -25,7 +25,6 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 
 const NavBar = () => {
-  const [selectedValue, setSelectedValue] = useState("");
   const location = useLocation();
 
   const categoryArraryOne = [
@@ -48,27 +47,26 @@ const NavBar = () => {
   ];
 
   const dropDownValues = [
-    "Web Development",
-    "Analytics",
-    "Marketing",
-    // "Accounting",
-    // "Finance",
-    // "HR Analytics",
+    { label: "Data Science + AI", path: "/data-science" },
+    { label: "Full Stack Program", path: "/full-stack" },
+    { label: "Digital Marketing", path: "/digital-marketing" }
   ];
 
-  const Navigate = useNavigate();
-  const handleCategoryClick = (category) => {
-    Navigate("/courses", { state: { category } });
+  const navigate = useNavigate();
+  const [selectedValue, setSelectedValue] = useState("");
+
+  const handleCategoryClick = (path, category) => {
+    navigate(path, { state: { category } });
   };
 
   const handleCategoryDropDown = (event) => {
-    const category = event.target.value;
-    if (category) {
-      Navigate("/courses", { state: { category } });
+    const selectedIndex = event.target.selectedIndex;
+    if (selectedIndex > 0) {
+      const selectedOption = dropDownValues[selectedIndex - 1]; // Adjust for default option
+      navigate(selectedOption.path, { state: { category: selectedOption.label } });
+      setSelectedValue(""); // Reset dropdown after navigation
     }
-    setSelectedValue("");
   };
-
 
   const [expanded, setExpand] = useState(false);
   const Showtoggle = () => {
@@ -78,58 +76,6 @@ const NavBar = () => {
     setExpand(false);
   };
 
-  const handleLogin = () => {
-    Navigate("/login");
-  };
-  const handleDashoard = () => {
-    Navigate("/user");
-  };
-  const handleRegister = () => {
-    Navigate("/signup");
-  };
-
-  const handleClickOnIcon = () => {
-    Navigate("/user");
-  };
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  async function handleLogout() {
-    try {
-      await auth.signOut();
-      Navigate("/login");
-      console.log("user Logging out Successfully");
-    } catch (error) {
-      console.log("Error logging out: ", error.message);
-    }
-  }
-
-  useEffect(() => { }, [handleCategoryClick]);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  async function handleLogout() {
-    try {
-      await auth.signOut();
-      Navigate("/login");
-      console.log("user Logging out Successfully");
-    } catch (error) {
-      console.log("Error logging out: ", error.message);
-    }
-  }
   useEffect(() => { }, [handleCategoryClick]);
   const isCareerWorkshopPage =
     location.pathname === "/Career-Success-workshop";
@@ -165,9 +111,9 @@ const NavBar = () => {
                 onChange={handleCategoryDropDown}
               >
                 <option>Courses</option>
-                {dropDownValues.map((course, i) => (
-                  <option value={`${course}`} key={i}>
-                    {course}
+                {dropDownValues.map((item, index) => (
+                  <option key={index} value={item.label}>
+                    {item.label}
                   </option>
                 ))}
               </select>

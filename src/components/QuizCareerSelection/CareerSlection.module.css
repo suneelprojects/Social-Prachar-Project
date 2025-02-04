@@ -132,6 +132,7 @@
 @media (max-width: 376px) {
   .options {
     font-size: 12px !important;
+    margin-right: 15px !important;
   }
   .checkBox {
     width: 25px !important;

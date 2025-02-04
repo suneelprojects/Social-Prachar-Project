@@ -288,6 +288,11 @@ export const data = [
         levelcardIndex: [
             {
                 icon: faChartBar,
+                title: "Master Data-Science",
+                description: "Python, OOPs, Machine Learning, Statistics and Probability, Data Mining, Data Warehousing, Programming"
+            },
+            {
+                icon: faChartBar,
                 title: "Master Data Analytics",
                 description: "Learn data analysis, statistics, and visualization using tools like Excel, SQL, and Power BI. Build a strong foundation for data-driven decision-making."
             },
@@ -295,11 +300,6 @@ export const data = [
                 icon: faCloud,
                 title: "Learn Cloud Deployment",
                 description: "Deploy AI models on cloud platforms like AWS and Azure. Gain practical knowledge of scaling and automation."
-            },
-            {
-                icon: faChartBar,
-                title: "Master Data-Science",
-                description: "Python, OOPs, Machine Learning, Statistics and Probability, Data Mining, Data Warehousing, Programming"
             },
             {
                 icon: faRobot,
