@@ -101,7 +101,7 @@ const NavBar = () => {
           {/* brand name and category code start */}
           <div className="d-flex ">
             <a className="navbar-brand" href="http://socialprachar.com">
-              <img src={spLogo} className={`${navBarStyle.spLogo}`} />
+              {/* <img src={spLogo} className={`${navBarStyle.spLogo}`} /> */}
             </a>
 
             {!isCareerWorkshopPage && (

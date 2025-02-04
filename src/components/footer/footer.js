@@ -90,7 +90,7 @@ const Footer = () => {
                         {/* First Column */}
                         <div className="col-12 col-md-3">
                             <div className={footerStyle.spLogo}>
-                                <img src={spLogo} alt="SP Logo" />
+                                {/* <img src={spLogo} alt="SP Logo" /> */}
                             </div>
                             <p>
                                 SocialPrachar, founded by an IIM alumnus, is a leading EdTech company with 10+ years of expertise. We’ve trained 16,000+ students and achieved a 95% placement success rate with packages.
