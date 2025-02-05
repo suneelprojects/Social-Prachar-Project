@@ -49,7 +49,7 @@ const routes = (
         <Route path="success-stories" element={<SuccessStories />} />
         <Route path="career-counselling" element={<CareerWorkShop />} />
         <Route path="upcoming-batches" element={<UpcomingBatches />} />
-        <Route path="Quiz" element={<CareerSelection />} />
+        <Route path="career-quiz" element={<CareerSelection />} />
         <Route path="course/:courseID" element={<CourseAccordion />} />
         <Route path="thank-you" element={<ThankyouPage />} />
         <Route path="dashboard" element={<Dashboard />} />

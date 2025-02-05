@@ -174,7 +174,7 @@ const CareerSelection = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [responses, setResponses] = useState([]);
     const [selectedOption, setSelectedOption] = useState(null);
-    const [timeLeft, setTimeLeft] = useState(15);
+    const [timeLeft, setTimeLeft] = useState(600);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [showResult, setShowResult] = useState(false);
     const navigate = useNavigate();
