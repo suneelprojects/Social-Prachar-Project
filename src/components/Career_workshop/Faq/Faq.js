@@ -5,6 +5,7 @@ import { faPhone, faQuestion } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import { faLightbulb } from '@fortawesome/free-regular-svg-icons';
+import Footer from '../../footer/footer';
 
 const faqData = [
     {
@@ -52,54 +53,10 @@ const faqData = [
 const Faq = () => {
 
     const [openIndex, setOpenIndex] = useState(null);
-    const [showForm, setShowForm] = useState(false);
-    const [formData, setFormData] = useState({ name: '', mobile: '' });
-    const [loading, setLoading] = useState(false);
-    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const navigate = useNavigate();
 
     const toggleAccordion = (index) => {
         setOpenIndex(openIndex === index ? null : index);
-    };
-    const sheetURL = "https://script.google.com/macros/s/AKfycbzotULs3HUahUDwjd8WYsiFxl25h--C807lt3ClyUDhCiVcs2seQ2RQkeczX4laYRdO4w/exec";
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        if (!formData.name || !/^[A-Za-z\s]+$/.test(formData.name)) {
-            alert("Please enter a valid name (alphabets only).");
-            return;
-        }
-
-        if (!formData.mobile || !/^\d{10}$/.test(formData.mobile)) {
-            alert("Please enter a valid 10-digit mobile number.");
-            return;
-        }
-
-        setLoading(true);
-        fetch(sheetURL, {
-            method: 'POST',
-            body: new URLSearchParams({ name: formData.name, phone: formData.mobile }),
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        })
-            .then((response) => {
-                if (response.ok) {
-                    alert('Form submitted successfully!');
-                    setIsFormSubmitted(true);
-                    navigate('/Quiz'); 
-                } else {
-                    alert('Error submitting form. Please try again.');
-                }
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                alert('An error occurred while submitting the form.');
-            })
-            .finally(() => setLoading(false));
     };
 
     return (
@@ -173,74 +130,12 @@ const Faq = () => {
                                 </p>
                                 <button
                                     className="btn btn-danger w-100"
-                                    onClick={() => setShowForm(true)}
+                                    onClick={() => navigate('/Quiz')}
                                 >
                                     <b>Career Checker</b>
                                 </button>
                             </div>
                         </div>
-
-                        {showForm && (
-                            <div
-                                className="modal fade show d-block"
-                                tabIndex="-1"
-                                role="dialog"
-                                aria-hidden="true"
-                                style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
-                            >
-                                <div className="modal-dialog modal-dialog-centered" role="document">
-                                    <div className="modal-content">
-                                        <div className="modal-header">
-                                            <h5 className="modal-title">Career Quiz Registration</h5>
-                                            <button
-                                                type="button"
-                                                className="btn-close"
-                                                onClick={() => setShowForm(false)}
-                                                aria-label="Close"
-                                            ></button>
-                                        </div>
-                                        <div className="modal-body">
-                                            <form onSubmit={handleSubmit}>
-                                                <div className="mb-3">
-                                                    <input
-                                                        type="text"
-                                                        name="name"
-                                                        className="form-control"
-                                                        placeholder="Enter your name"
-                                                        value={formData.name}
-                                                        onChange={handleInputChange}
-                                                    />
-                                                </div>
-                                                <div className="mb-3">
-                                                    <input
-                                                        type="text"
-                                                        name="mobile"
-                                                        className="form-control"
-                                                        placeholder="Enter your mobile number"
-                                                        value={formData.mobile}
-                                                        onChange={handleInputChange}
-                                                    />
-                                                </div>
-                                                <button
-                                                    type="submit"
-                                                    className="btn btn-primary w-100"
-                                                    disabled={loading}
-
-                                                >
-                                                    {loading ? (
-                                                        <div className="spinner-border text-light" role="status">
-                                                            <span className="visually-hidden">Loading...</span>
-                                                        </div>
-                                                    ) : (
-                                                        "Start Quiz"
-                                                    )}
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
 
                         {/* WhatsApp Chat Box */}
                         <div className="col-md-4 mb-3 d-flex justify-content-center">
@@ -265,6 +160,8 @@ const Faq = () => {
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </>
     );
 };

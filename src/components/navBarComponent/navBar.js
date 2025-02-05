@@ -307,60 +307,6 @@ const NavBar = () => {
               </ul>
             </div>
           </div>
-
-          
-          {/* navigation code ends */}
-
-          {/* search icon and login button code starts */}
-
-          {/* <div className="d-flex">
-
-            {!isCareerWorkshopPage && (
-              <div className={`${navBarStyle.hiddenMobileLgMin}`}>
-                <span>
-                  <i className="bi bi-person-fill"></i>
-                </span>
-              </div>
-            )}
-
-            <div className={`${navBarStyle.hiddenMobileLg} `}>
-              {user ? (
-                <>
-                  <div className="d-flex">
-                    <button
-                      className={`${navBarStyle.login} ms-4 me-2 `}
-                      onClick={handleLogout}
-                    >
-                      Logout
-                    </button>
-                    <button
-                      className={`${navBarStyle.register}`}
-                      onClick={handleDashoard}
-                    >
-                      Dashboard
-                    </button>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="d-flex">
-                    <button
-                      className={`${navBarStyle.login} ms-4 me-2 `}
-                      onClick={handleLogin}
-                    >
-                      Login
-                    </button>
-                    <button
-                      className={`${navBarStyle.register}`}
-                      onClick={handleRegister}
-                    >
-                      Register
-                    </button>
-                  </div>
-                </>
-              )}
-            </div>
-          </div> */}
           {/* search icon and login button code ends */}
         </div>
       </nav>

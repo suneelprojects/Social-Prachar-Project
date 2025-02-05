@@ -5,29 +5,32 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Loading from '../../extraComponents/loading'; // Assuming you have this component for the spinner
 
 const SignInForm = ({ onClose, courseID }) => {
+    const { slug } = useParams();
+    const [card, setCard] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
         phone: '',
         course: '',
         mode: '',
+        pageUrl: window.location.href,
+        slug: slug || "",
     });
 
-    const { slug } = useParams();
-    const [card, setCard] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
-    const navigate = useNavigate();
 
     useEffect(() => {
         const cardDetails = data.find(card => card.slug === slug);
         setCard(cardDetails);
     }, [slug]);
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwUXmxm_e_U4J3yR7y7sn8b26WM4dIr51UIjuTmCt43VUOnxSuUR0USb2N_Iqbm2bTV/exec '; // Replace with your Google Apps Script Web App URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwX-GV8RYc7RETdiIbdrYXRrV4_gXIpV2v7eC3L4GY2Inc5DijgMLQbZIq68wMLg3Av/exec'; // Replace with your Google Apps Script Web App URL
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { fullName, email, phone, course, mode } = formData;
+        const { fullName, email, phone, course, mode, pageUrl, slug } = formData;
 
         if (!fullName || !email || !phone || !course || !mode) {
             alert('Please fill in all required fields.');
@@ -43,6 +46,8 @@ const SignInForm = ({ onClose, courseID }) => {
             formPayload.append('phone', formData.phone);
             formPayload.append('course', formData.course);
             formPayload.append('mode', formData.mode);
+            formPayload.append('pageUrl', pageUrl); // Send Page URL
+            formPayload.append('slug', slug); // Send Page Slug
 
             const response = await fetch(scriptURL, {
                 method: 'POST',

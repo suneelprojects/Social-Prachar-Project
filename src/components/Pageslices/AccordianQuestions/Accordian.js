@@ -259,7 +259,7 @@ const CourseAccordion = () => {
                                 </p>
                                 <button
                                     className="btn btn-danger w-100"
-                                    onClick={() => setShowForm(true)}
+                                    onClick={() => navigate('/Quiz')}
                                 >
                                     <b>Career Checker</b>
                                 </button>
@@ -342,7 +342,7 @@ const CourseAccordion = () => {
                                     href="https://wa.me/918019479419?text=Hello%2C%20I%20would%20like%20to%20connect%20with%20you!"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="btn btn-success w-100"
+                                    className="btn btn-success w-100 fw-bold"
                                 >
                                     Chat with us on WhatsApp
                                 </a>

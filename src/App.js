@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Aos from 'aos';
 import routes from './routes.js';
-import QuickHelpButton from './components/quickHelp_Button/QuickHelpButton.js';
+// import QuickHelpButton from './components/quickHelp_Button/QuickHelpButton.js';
 
 const App = () => {
   const [user, setUser] = useState();

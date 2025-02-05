@@ -791,7 +791,7 @@ export const data = [
                 title: "Module 1: Introduction to Full Stack Development & HTML",
                 details: 
                     {
-
+                       
                         videos: 7,
                         time: "2 months",
                         descriptions: [
@@ -804,15 +804,14 @@ export const data = [
                             "Introduction to HTML and Web Page Structure"
                         ]
                     }
-                
             },
             {
                 id: 2,
                 module: "Part 2: Advanced Frontend Styling",
                 title: "Module 2: CSS for Frontend Development",
-                details: 
+                details:
                     {
-
+                       
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -827,15 +826,14 @@ export const data = [
                             "Responsive Web Design with Media Queries"
                         ]
                     }
-                
             },
             {
                 id: 3,
                 module: "Part 3: JavaScript Basics",
                 title: "Module 3: JavaScript Fundamentals",
-                details: 
+                details:
                     {
-
+                        
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -861,7 +859,7 @@ export const data = [
                 title: "Module 4: Frontend Framework: Bootstrap",
                 details: 
                     {
-
+                       
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -882,7 +880,7 @@ export const data = [
                 title: "Module 5: Introduction to Java and OOPs",
                 details: 
                     {
-
+                        
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -903,7 +901,7 @@ export const data = [
                 title: "Module 6: Advanced Java Concepts",
                 details: 
                     {
-
+                       
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -922,7 +920,7 @@ export const data = [
                 title: "Module 7: Database Management with MySQL & JDBC",
                 details: 
                     {
-
+                        
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -941,6 +939,7 @@ export const data = [
                 title: "Module 8: ORM with Hibernate/JPA",
                 details: 
                     {
+                       
                         videos: 7,
                         time: "1 month",
                         descriptions: [
@@ -958,8 +957,9 @@ export const data = [
                 id: 9,
                 module: "Part 9: Full Stack Project",
                 title: "Module 9: Full Stack Development Project",
-                details: {
-                    
+                details: 
+                    {
+                      
                         videos: 7,
                         time: "2 months",
                         descriptions: [
@@ -971,7 +971,6 @@ export const data = [
                             "Testing and Debugging the Application",
                             "Deployment and Version Control with Git"
                         ]
-                    
                     }
             }
         ],
