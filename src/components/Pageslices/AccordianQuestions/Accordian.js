@@ -259,7 +259,7 @@ const CourseAccordion = () => {
                                 </p>
                                 <button
                                     className="btn btn-danger w-100"
-                                    onClick={() => navigate('/Quiz')}
+                                    onClick={() => navigate('/career-quiz')}
                                 >
                                     <b>Career Checker</b>
                                 </button>
