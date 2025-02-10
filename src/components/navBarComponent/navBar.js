@@ -99,19 +99,22 @@ const NavBar = () => {
             </a>
 
             {!isCareerWorkshopPage && (
-              <select
-                className={`${navBarStyle.selectDropDown}`}
-                value={selectedValue}
-                onChange={handleCategoryDropDown}
-              >
-                <option>Courses</option>
-                {dropDownValues.map((item, index) => (
-                  <option key={index} value={item.label}>
-                    {item.label}
-                  </option>
-                ))}
-              </select>
+              <div className="d-flex align-items-center">
+                <select
+                  className={`form-select ${navBarStyle.selectDropDown}`}
+                  value={selectedValue}
+                  onChange={handleCategoryDropDown}
+                >
+                  <option>Courses</option>
+                  {dropDownValues.map((item, index) => (
+                    <option key={index} value={item.label}>
+                      {item.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
             )}
+
 
             <div
               className={`${navBarStyle.hiddenMobileSm} ${navBarStyle.categorySection} `}

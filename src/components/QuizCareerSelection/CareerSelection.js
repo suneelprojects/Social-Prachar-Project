@@ -252,7 +252,7 @@ const CareerSelection = () => {
         }
     };
 
-    const sheetURL = "https://script.google.com/macros/s/AKfycbzotULs3HUahUDwjd8WYsiFxl25h--C807lt3ClyUDhCiVcs2seQ2RQkeczX4laYRdO4w/exec";
+    const sheetURL = "https://script.google.com/macros/s/AKfycbxFX7BZDG-QM-JGZQP8vWaxZKljH_dPRxndk0COH_DUDVjQDVIRnCGvTXQxcztrPeoyDA/exec";
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -281,7 +281,6 @@ const CareerSelection = () => {
                 if (response.ok) {
                     alert('Form submitted successfully!');
                     setIsFormSubmitted(true);
-                    navigate('/Quiz');
                 } else {
                     alert('Error submitting form. Please try again.');
                 }

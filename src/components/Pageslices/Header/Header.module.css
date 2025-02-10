@@ -448,9 +448,13 @@
 }
 
 @media (min-width: 377px) and (max-width: 440px) {
+  .symbol1 {
+    width: 22px;
+    height: 22px;
+  }
   .testimonials {
     position: relative;
-    top: 150px;
+    top: 200px;
   }
 
   .headerContainer {
@@ -476,8 +480,8 @@
     gap: 10px;
   }
   .symbol {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
   }
   .symbolItemContent {
     position: relative;
@@ -601,6 +605,13 @@
     font-size: 18px;
     max-width: 90%;
     text-align: center;
+  }
+   .header1 {
+    font-size: 24px;
+  }
+
+  .header2{
+    font-size: 24px;
   }
 }
 
@@ -971,7 +982,7 @@
     gap: 10px;
     padding-bottom: 13px;
     position: relative;
-    top:100px;
+    top: 100px;
   }
 
   .symbolText {

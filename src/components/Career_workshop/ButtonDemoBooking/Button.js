@@ -29,7 +29,7 @@ const Button = () => {
             return;
         }
 
-        const url = new URL("https://script.google.com/macros/s/AKfycbyUfOokV7CvVSE_8o4LKv7HdykuFLaVltbRJFXr6dCURFncOXRWh5vzV-7DpGR9wUFVCg/exec");
+        const url = new URL("https://script.google.com/macros/s/AKfycbxFX7BZDG-QM-JGZQP8vWaxZKljH_dPRxndk0COH_DUDVjQDVIRnCGvTXQxcztrPeoyDA/exec");
         url.searchParams.append('course', formData.course);
         url.searchParams.append('name', formData.name);
         url.searchParams.append('email', formData.email);
@@ -122,7 +122,7 @@ const Button = () => {
                     </button>
                 </div>
                 <div className="text-center">
-                    <p className="fw-bold fs-4 fs-6" style={{ fontSize: '18px'}}>
+                    <p className="fw-bold fs-4 fs-6" style={{ fontSize: '18px' }}>
                         Register by <span style={{ color: '#4941e1', fontSize: '22px' }}>{weekDate}</span> to unlock exclusive bonuses worth ₹5,393 – offer ends today!
                     </p>
                 </div>
@@ -183,11 +183,11 @@ const Button = () => {
                                                 required
                                             >
                                                 <option value="" disabled>Select Course</option>
-                                                <option value="slot1">Data Analytics</option>
-                                                <option value="slot2">Data Science & AI</option>
-                                                <option value="slot3">Full stack Mern Java</option>
-                                                <option value="slot4">Full stack Mern Python</option>
-                                                <option value="slot5">Multi Cloud DevOps</option>
+                                                <option value="Data Analytics">Data Analytics</option>
+                                                <option value="Data Science & AI">Data Science & AI</option>
+                                                <option value="Full stack Mern Java">Full stack Mern Java</option>
+                                                <option value="Full stack Mern Python">Full stack Mern Python</option>
+                                                <option value="Multi Cloud DevOps">Multi Cloud DevOps</option>
                                             </select>
                                             {formErrors.course && <div className="text-danger">{formErrors.course}</div>}
                                         </div>

@@ -38,7 +38,7 @@ const Mentorpage = () => {
         <div className={styles.Mentorpage}>
             {/* Section for unlocking bonuses */}
             <div className={`${styles.background} p-4 rounded shadow`}>
-                <h2 className="text-center mb-4">
+                <h2 className="text-center mb-4 fs-1 fs-5">
                     Unlock Bonuses worth <span className="text-primary">₹ 17000 /-</span>
                 </h2>
 

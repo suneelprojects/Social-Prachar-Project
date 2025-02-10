@@ -1,5 +1,5 @@
 /** @format */
-.masterClassContent{
+.masterClassContent {
   position: relative;
   top: 50px;
 }
@@ -13,7 +13,7 @@
   z-index: 100;
   text-align: center;
 }
-.ClassImage{
+.ClassImage {
   border: 5px solid white;
 }
 .Text1,
@@ -21,7 +21,6 @@
   font-size: 20px;
   color: white;
   margin-bottom: -35px;
-
 }
 
 .Text2 {
@@ -30,7 +29,7 @@
   font-size: 60px;
   font-weight: 600;
   color: white;
-  letter-spacing:3px;
+  letter-spacing: 3px;
 }
 
 .headings {
@@ -43,7 +42,7 @@
   justify-content: center;
   position: relative;
   top: -240px;
-  margin-bottom:-220px;
+  margin-bottom: -220px;
 }
 .ClassImage {
   border-radius: 50px;
@@ -52,39 +51,39 @@
   margin-top: 20px;
 }
 
-.nextLive{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 120px;
-    margin-bottom: 120px;
+.nextLive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
-.nextLive h2{
-    padding-top: 25px;
+.nextLive h2 {
+  padding-top: 25px;
 }
 
 .timerBoxes {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .timerBox {
-    background-color: #e49fff3e;
-    border: 3px solid blueviolet;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 0 25px;
-    width: 200px;
-    text-align: center;
-    font-size: 18px;
-    box-shadow: 4px 4px 0 2px rgba(151, 82, 255, 0.416);
+  background-color: #e49fff3e;
+  border: 3px solid blueviolet;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 25px;
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 4px 4px 0 2px rgba(151, 82, 255, 0.416);
 }
 
-.timeCount{
-    font-size: 40px;
-    font-family: sans-serif;
-    color: #000958;
+.timeCount {
+  font-size: 40px;
+  font-family: sans-serif;
+  color: #000958;
 }
 
 /* media queries */
@@ -95,9 +94,9 @@
     right: 10px;
     display: none;
   }
-.shinebtn{
-  margin-top: 50px;
-}
+  .shinebtn {
+    margin-top: 50px;
+  }
   .MasterClass {
     height: 300px;
   }
@@ -125,13 +124,13 @@
   }
 
   .nextLive {
-    top:150px;
+    top: 150px;
     padding-bottom: 30px;
   }
-  
+
   .timerBox {
     width: 70px;
-    padding:18px 2px;
+    padding: 18px 2px;
     margin: 0 8px;
     font-size: 16px;
   }
@@ -147,9 +146,9 @@
     padding: 10px 12px;
     display: block;
   }
-.shinebtn{
-  margin-top: 80px;
-}
+  .shinebtn {
+    margin-top: 80px;
+  }
   .MasterClass {
     height: 350px;
   }
@@ -178,7 +177,7 @@
 
   .nextLive {
     top: -130px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 
   .nextLive h2 {
@@ -186,9 +185,10 @@
   }
 
   .timerBox {
-    width: 80px;
-    padding: 20px 5px;
-    font-size: 18px;
+    width: 70px;
+    padding: 18px 2px;
+    margin: 0 12px;
+    font-size: 16px;
   }
 
   .timeCount {
@@ -203,7 +203,7 @@
     padding: 12px 15px;
     display: block;
   }
-  .shinebtn{
+  .shinebtn {
     margin-top: 100px;
   }
 
@@ -259,7 +259,7 @@
     font-size: 1.3rem;
     padding: 15px 20px;
   }
-  .shinebtn{
+  .shinebtn {
     margin-top: 100px;
   }
   .MasterClass {
@@ -359,7 +359,7 @@
   }
 }
 
-@media(min-width:1025px) and (max-width: 1200px) {
+@media (min-width: 1025px) and (max-width: 1200px) {
   .shinebtn {
     padding: 14px 40px;
     font-size: 18px;

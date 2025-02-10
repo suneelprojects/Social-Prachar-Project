@@ -459,7 +459,7 @@ const SuccessStories = () => {
             {/*Linkedin cards  */}
             <div className={style.linkedin}>
                 <div className="text-center pt-5">
-                    <h1 className={`${style.linkedinHeader} mb-4`}>Linkedin
+                    <h1 className={`${style.linkedinHeader} mb-4`}>Linked
                         <span>
                             <img
                                 src={linkedinLogo}

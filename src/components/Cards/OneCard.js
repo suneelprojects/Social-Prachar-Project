@@ -35,8 +35,6 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
         }
     };
 
-    // course to eliminate
-    // const courseIDToEliminate = [11];
     const shouldEliminateCard = card.courseID === courseIDToEliminate;
     if (shouldEliminateCard) {
         return null;
