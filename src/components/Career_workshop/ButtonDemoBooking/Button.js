@@ -16,7 +16,7 @@ const Button = () => {
         email: '',
         phone: ''
     });
-    const [loading, setLoading] = useState(false); // Loading state for spinner
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -29,7 +29,7 @@ const Button = () => {
             return;
         }
 
-        const url = new URL("https://script.google.com/macros/s/AKfycbxFX7BZDG-QM-JGZQP8vWaxZKljH_dPRxndk0COH_DUDVjQDVIRnCGvTXQxcztrPeoyDA/exec");
+        const url = new URL("https://script.google.com/macros/s/AKfycbwq2ZtrNBCozKx_A23Ab4k02yCsxt5v1Wx7OQsY2RRzECvEnieV98bYm5rmWch0ZjcIag/exec");
         url.searchParams.append('course', formData.course);
         url.searchParams.append('name', formData.name);
         url.searchParams.append('email', formData.email);
@@ -93,7 +93,7 @@ const Button = () => {
     // Calculate next Wednesday's date
     useEffect(() => {
         const today = new Date();
-        const daysUntilWednesday = (3 - today.getDay() + 7) % 7; // 3 is Wednesday
+        const daysUntilWednesday = (3 - today.getDay() + 7) % 7;
         const nextWednesday = new Date(today);
         nextWednesday.setDate(today.getDate() + daysUntilWednesday);
 

@@ -4,8 +4,10 @@ import sampleImage from '../../assets/careerworkshop/mern and Python.png';
 export const BlogData = [
 
     {
+        slug:'Llama-name',
         capTitle:'named model',
         title: "Llama 3.2",
+        openBlogTitle:'Deploying LLaMA Model Using MLflow on Vipas.AI: A Comprehensive Guide',
         name: "Llama-3B",
         image:sampleImage,
         updated: 15,
@@ -15,8 +17,11 @@ export const BlogData = [
         uses: 94,
         views: 69,
         price: "0.01",
+        tools: ["React", "Redux", "Firebase", "Tailwind CSS"],
+        topics: ["Components", "Management", "Hooks", "Routing"]
     },
     {
+        slug:'LLAMA-Health',
         capTitle:'seconde named model',
         title: "LLAMA-Health",
         name: "LLAMA-Health",
@@ -28,8 +33,11 @@ export const BlogData = [
         uses: 24,
         views: 16,
         price: "0.01",
+        tools: ["React", "Redux", "Firebase", "Tailwind CSS"],
+        topics: ["Components", "Management", "Hooks", "Routing"]
     },
     {
+        slug:'Llama-3B',
         capTitle: 'named model',
         title: "Llama 3.2",
         name: "Llama-3B",
@@ -41,8 +49,11 @@ export const BlogData = [
         uses: 94,
         views: 69,
         price: "0.01",
+        tools: ["React", "Redux redux store/firestore", "Firebase", "Tailwind CSS"],
+        topics: ["Components", "Management", "Hooks", "Routing"]
     },
     {
+        slug:'LLAMA-Balu',
         capTitle: 'seconde named model',
         title: "LLAMA-Health",
         name: "LLAMA-Health",
@@ -54,5 +65,7 @@ export const BlogData = [
         uses: 24,
         views: 16,
         price: "0.01",
+        tools: ["React", "Redux", "Firebase", "Tailwind CSS"],
+        topics: ["Components", "Management", "Hooks", "Routing"]
     },
 ];

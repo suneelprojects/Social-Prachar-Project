@@ -411,7 +411,7 @@
   .masterclassQuestion {
    margin-top: 25px;
     width: 100%;
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .roleContainer {
@@ -422,7 +422,6 @@
   .role {
     width: 90%;
     margin: 15px 0;
-    padding: 30px 20px;
     height: auto;
   }
 

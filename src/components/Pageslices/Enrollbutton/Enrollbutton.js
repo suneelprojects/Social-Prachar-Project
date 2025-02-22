@@ -13,7 +13,7 @@ const EnrollButton = ({ label, courseID }) => {
   return (
     <div className={Buttonstyle.Enrollbutton}>
       <button className={Buttonstyle.shinebtn} onClick={togglePopup}>
-        {label}
+        <span> {label}</span>
       </button>
 
       {isPopupVisible && <SignInForm onClose={togglePopup} courseID={courseID} />}

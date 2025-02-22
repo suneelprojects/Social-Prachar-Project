@@ -154,14 +154,14 @@
     align-items: center;
     flex-direction: column;
   }
-  .startButtonList{
+  .startButtonList {
     font-size: 12px;
     text-align: left !important;
   }
-  .startButtonpara1{
+  .startButtonpara1 {
     font-size: 12px;
   }
-  .startButtonpara2{
+  .startButtonpara2 {
     font-size: 12px;
   }
 }
@@ -183,6 +183,10 @@
   .quiz_answer {
     font-size: 0.7rem;
   }
+  /* .startButtonList {
+    display: block;
+    margin-left: 0;
+  } */
 }
 
 @media (min-width: 769px) and(max-width:1024px) {
@@ -204,5 +208,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+}
+
+@media (min-width: 1000px) {
+  .startButtonList {
+    display: flex;
+    margin-left: 20%;
   }
 }

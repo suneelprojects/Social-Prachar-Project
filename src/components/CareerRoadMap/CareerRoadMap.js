@@ -4,6 +4,19 @@ import style from './CareerRoadMap.module.css';
 import Footer from '../footer/footer';
 
 const CareerRoadMap = () => {
+
+    const handleDownload = (fileName) => {
+        if (fileName !== "Download RoadMap") {
+            const link = document.createElement("a");
+            link.href = `/roadmaps/${fileName}`;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } else {
+            alert("Download not available for this course.");
+        }
+    };
     return (
         <>
 
@@ -29,7 +42,9 @@ const CareerRoadMap = () => {
                                     <span className={style.checkIcon}></span>
                                     Students Trained Till Now: {course.studentsTrainedTillNow}
                                 </p>
-                                <button className={`fw-bold btn mt-3 ${style.downloadRoadMap}`}>Download RoadMap</button>
+                                <button className={`fw-bold btn mt-3 ${style.downloadRoadMap}`}
+                                    onClick={() => handleDownload(course.downloadRoadMap)}
+                                >Download RoadMap</button>
                             </div>
                             {index % 2 === 0 && index < RoadMapData.length - 1 && (
                                 <div className={`${style.verticalLine} mx-2`}></div>

@@ -4,9 +4,6 @@ import { data } from '../../Cards/CardData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 import backgroundImage from '../../../assets/AssetsOfDetailsPage/background.png';
-import professional from '../../../assets/AssetsOfDetailsPage/professional.svg';
-import student from '../../../assets/AssetsOfDetailsPage/educationsymbol.svg';
-import business from '../../../assets/AssetsOfDetailsPage/businesssymbol.svg';
 import { useParams } from 'react-router-dom';
 
 const colors = ["#f0f8ff", "#f5f5dc", "#ffe4e1", "#e6e6fa", "#ffefd5", "#d3ffce", "#e6e6fa", "#ffefd5", "#d3ffce"];
@@ -69,29 +66,17 @@ const Whatwillyoulearn = () => {
 
             <div className={styles.masterclassInfo}>
                 <img src={backgroundImage} alt="Background" className={styles.backgroundImage} />
-                <p className={styles.masterclassQuestion}>Who is this <span>Course</span> for?</p>
+                <p className={styles.masterclassQuestion}>Who is this <span>Course</span> for...?</p>
                 <section className={styles.roleContainer}>
-                    <article className={styles.role}>
-                        <img src={student} alt="Student" className={styles.roleImage} />
-                        <div className={styles.roleContent}>
-                            <h3 className={styles.roleTitle}>Fresh Graduates</h3>
-                            <p className={styles.roleDescription}>Discover the best career opportunities in Data Science and AI to kickstart your journey into the tech industry.</p>
-                        </div>
-                    </article>
-                    <article className={styles.role}>
-                        <img src={professional} alt="Working Professional" className={styles.roleImage} />
-                        <div className={styles.roleContent}>
-                            <h3 className={styles.roleTitle}>Experienced IT Professionals</h3>
-                            <p className={styles.roleDescription}>Upskill with the latest Data Science and AI trends to stay ahead in your career.</p>
-                        </div>
-                    </article>
-                    <article className={styles.role}>
-                        <img src={business} alt="Business Owner" className={styles.roleImage} />
-                        <div className={styles.roleContent}>
-                            <h3 className={styles.roleTitle}>Entrepreneurs</h3>
-                            <p className={styles.roleDescription}>Learn how to leverage AI to launch and scale your startup successfully.</p>
-                        </div>
-                    </article>
+                    {card && card.courseFor.map((course, index) => (
+                        <article key={index} className={styles.role}>
+                            <img src={course.image} alt={course.alt} className={styles.roleImage} />
+                            <div className={styles.roleContent}>
+                                <h3 className={styles.roleTitle}>{course.title}</h3>
+                                <p className={styles.roleDescription}>{course.content}</p>
+                            </div>
+                        </article>
+                    ))}
                 </section>
             </div>
         </div>

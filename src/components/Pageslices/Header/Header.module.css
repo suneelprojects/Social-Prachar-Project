@@ -460,7 +460,6 @@
   .headerContainer {
     width: 100%;
   }
-
   .contentContainer {
     width: 95%;
     padding: 20px;
@@ -485,7 +484,7 @@
   }
   .symbolItemContent {
     position: relative;
-    top: 450px;
+    top: 420px;
     left: 10px;
   }
 
@@ -503,7 +502,7 @@
 
   .EnrollButtonContent {
     position: relative;
-    top: 380px;
+    top: 400px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -530,12 +529,12 @@
 
   .HeaderPicture {
     width: 115%;
-    padding-bottom: 20px;
     display: flex;
     flex-direction: column-reverse;
     position: relative;
-    top: -300px;
+    top: -280px;
     gap: 25px;
+    
   }
 
   .headerText {

@@ -1,13 +1,11 @@
 import React, { useRef, useState } from 'react';
 import style from './ScholarShipTest.module.css';
-import testImage from '../../assets/careerworkshop/SocialPrachars.png';
+import testImage from '../../assets/careerworkshop/SocialPrachar.png';
 import Footer from '../footer/footer.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faMedal, faPen, faTrophy } from '@fortawesome/free-solid-svg-icons';
 import { faCheckSquare } from '@fortawesome/free-regular-svg-icons';
-import { color } from 'framer-motion';
-import SuccessStoriesForm from '../successStories/SuccessStoriesForm.js';
-
+import ScholarshipFormTest from './ScholarshipFormTest.js';
 
 const faqData = [
     {
@@ -51,25 +49,24 @@ const faqData = [
 
 const ScholarShipTest = () => {
     const [openIndex, setOpenIndex] = useState(null);
+    const [isPopupVisible, setIsPopupVisible] = useState(false);
+    const togglePopup = () => {
+        setIsPopupVisible(!isPopupVisible);
+    };
     const toggleAccordion = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
-    const formRef = useRef(null);
-    const handleScrollToForm = () => {
-        if (formRef.current) {
-            formRef.current.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
     return (
         <>
             <div className={`${style.container} d-flex flex-column align-items-center text-center`} style={{ margin: '0 auto', maxWidth: '1200px', padding: '20px' }}>
                 <img src={testImage} alt="Scholarship Test" className="img-fluid mb-4" />
                 <h1 className="mb-2 fw-bold text-secondary">Upcoming Online Test within 10 Days</h1>
                 <h3 className="mb-4">Student Discounts Totaling 4,65,000 INR Awarded in the Past Month</h3>
-                <button className="btn btn-primary mb-4 fw-bold" onClick={handleScrollToForm}>Register Now</button>
+                <button className="btn btn-primary mb-4 fw-bold" onClick={togglePopup}>Register Now</button>
+                {isPopupVisible && <ScholarshipFormTest onClose={togglePopup} />}
 
-                <p className="mb-5 text-danger fw-bold">We are excited to announce the Scholarship Test 2024, an exclusive opportunity for recent graduates to secure incredible benefits while enrolling in our courses. This is your chance to prove your aptitude and gain access to high-quality education at a fraction of the cost—or even for free!</p>
+                <p className="mb-5 text-danger fw-bold">We are excited to announce the Scholarship Test 2025, an exclusive opportunity for recent graduates to secure incredible benefits while enrolling in our courses. This is your chance to prove your aptitude and gain access to high-quality education at a fraction of the cost—or even for free!</p>
 
                 <h6 className="mb-4 text-center">Every week one Top Winner, whoever cracks 30/30 in less time will get a complete FREE Course (No Hidden Charges)</h6>
 
@@ -140,35 +137,35 @@ const ScholarShipTest = () => {
 
 
                 <div className="mb-4">
-                    <h4 className='text-muted fw-bold'>Social Prachar's Scholarship Test 2024</h4>
+                    <h4 className='text-muted fw-bold'>Social Prachar's Scholarship Test 2025</h4>
                     <h3 className='text-primary'>Everyone is a Winner: 30 Questions - 40 Minutes - 30 Marks</h3>
                 </div>
 
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class={style.downBoxBars}>
+                            <div class={`${style.downBoxBars} bg-primary`}>
                                 <div class={style.discount_icon}><FontAwesomeIcon icon={faTrophy} style={{ color: "#FFD43B", fontSize: '50px' }} /></div>
                                 <div className={style.marks}>
                                     <h3 className='fw-bold text-start'>30 Marks</h3>
                                     <h3>Eligible for Fee Discount of 15,000 INR</h3>
                                 </div>
                             </div>
-                            <div class={style.downBoxBars}>
+                            <div class={`${style.downBoxBars} bg-primary`}>
                                 <div class={style.discount_icon}><FontAwesomeIcon icon={faTrophy} style={{ color: "#969696", fontSize: '50px' }} /></div>
                                 <div className={style.marks}>
                                     <h3 className='fw-bold text-start'>27-29 Marks</h3>
                                     <h3>Eligible for Fee Discount of 10,000 INR</h3>
                                 </div>
                             </div>
-                            <div class={style.downBoxBars}>
+                            <div class={`${style.downBoxBars} bg-primary`}>
                                 <div class={style.discount_icon}><FontAwesomeIcon icon={faTrophy} style={{ color: "#f56200", fontSize: '50px' }} /></div>
                                 <div className={style.marks}>
                                     <h3 className='fw-bold text-start'>21-26 Marks</h3>
                                     <h3>Eligible for Fee Discount of 8,000 INR</h3>
                                 </div>
                             </div>
-                            <div class={style.downBoxBars}>
+                            <div class={`${style.downBoxBars} bg-primary`}>
                                 <div class={style.discount_icon}><FontAwesomeIcon icon={faMedal} style={{ fontSize: '50px' }} /></div>
                                 <div className={style.marks}>
                                     <h3 className='fw-bold text-start'>15-20 Marks</h3>
@@ -216,7 +213,7 @@ const ScholarShipTest = () => {
             </div>
 
             <div className='p-3 text-center'>
-                <SuccessStoriesForm />
+                <button className="btn mb-4 fw-bold" onClick={togglePopup} style={{ background: '#553cdf', color: 'white' }}>Register Now</button>
             </div>
             <Footer />
         </>

@@ -52,7 +52,7 @@ const Banner = () => {
                 </div>
                 <EnrollButton label={
                     <>
-                         Curriculum
+                        Curriculum
                         <FontAwesomeIcon icon={faDownload}/>
                     </>
                 } 

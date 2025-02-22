@@ -29,7 +29,7 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
         if (currentUser) {
             toggleWishlist(card);
             setIsSaved(!isSaved);
-            navigate('/profile/wishlist');
+            // navigate('/profile/wishlist');
         } else {
             navigate('/login');
         }
@@ -45,13 +45,13 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
 
     return (
         <div className={`col-md-4 mt-4 ${cardsCSS.cardItem}`}>
-            <div className={`card ${cardsCSS.card}`}>
+            <div className={`card ${cardsCSS.card}`} onClick={() => handleCardTitleClick(card.courseID)}>
                 <div className={cardsCSS.cardImgContainer}>
                     <img src={card.imageSrc} className={cardsCSS.cardImgTop} alt={card.courseTitle} />
                     <FontAwesomeIcon
                         icon={faBookmark}
                         className={`${cardsCSS.saveIcon} ${isSaved ? cardsCSS.saved : ''}`}
-                        onClick={handleSaveIconClick}
+                        // onClick={handleSaveIconClick}
                         style={{ color: isSaved ? '#553cdf' : 'white' }}
                     />
 

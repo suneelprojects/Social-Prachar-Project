@@ -1,10 +1,10 @@
 import React, { useState, useEffect, Suspense } from 'react';
-import styles from './PopUpForm.module.css';
+import styles from '../Enrollbutton/PopUpForm.module.css';
 import { data } from './../../Cards/CardData';
 import { useNavigate, useParams } from 'react-router-dom';
 import Loading from '../../extraComponents/loading';
 
-const SignInForm = ({ onClose, courseID }) => {
+const HeaderSignInForm = ({ onClose, courseID }) => {
     const { slug } = useParams();
     const [card, setCard] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
@@ -37,7 +37,7 @@ const SignInForm = ({ onClose, courseID }) => {
             return;
         }
 
-        setIsLoading(true); // Show loading spinner
+        setIsLoading(true);
 
         try {
             const formPayload = new FormData();
@@ -46,8 +46,8 @@ const SignInForm = ({ onClose, courseID }) => {
             formPayload.append('phone', formData.phone);
             formPayload.append('course', formData.course);
             formPayload.append('mode', formData.mode);
-            formPayload.append('pageUrl', pageUrl); // Send Page URL
-            formPayload.append('slug', slug); // Send Page Slug
+            formPayload.append('pageUrl', pageUrl);
+            formPayload.append('slug', slug);
 
             const response = await fetch(scriptURL, {
                 method: 'POST',
@@ -58,7 +58,13 @@ const SignInForm = ({ onClose, courseID }) => {
 
             if (response.ok) {
                 alert('Form submitted successfully!');
-                navigate('/thank-you');
+                if (card?.careerRoadmap) {
+                    downloadRoadmap(card.careerRoadmap);
+                }
+                setTimeout(() => {
+                    navigate("/thank-you");
+                }, 1500);
+                // navigate('/thank-you');
             } else {
                 alert('Failed to submit form. Please try again.');
             }
@@ -67,6 +73,16 @@ const SignInForm = ({ onClose, courseID }) => {
             console.error('Error:', error);
             alert('There was an error submitting the form.');
         }
+    };
+
+    const downloadRoadmap = (url) => {
+        const course = data.find(course => course.courseID === courseID);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'career-roadmap.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     const handleChange = (e) => {
@@ -180,4 +196,4 @@ const SignInForm = ({ onClose, courseID }) => {
     );
 };
 
-export default SignInForm;
+export default HeaderSignInForm;

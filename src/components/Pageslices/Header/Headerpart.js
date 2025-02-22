@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import JD_course from '../../../assets/AssetsOfDetailsPage/JD_course.png';
-
+import Buttonstyle from '../Enrollbutton/Enrollbutton.module.css';
 // headerpage logos
 import unlockLogo from '../../../assets/AssetsOfDetailsPage/masterclass/unlock.png';
 import booksymbol from '../../../assets/AssetsOfDetailsPage/masterclass/open-book.png';
@@ -37,6 +37,8 @@ import company19Logo from '../../../assets/AssetsOfDetailsPage/masterclass/amber
 import company20Logo from '../../../assets/AssetsOfDetailsPage/masterclass/dell_technologies_logo.png';
 import Testmonials from './../Testmonials/Testmonials';
 import Masterclass from './../Masterclass/Masterclass';
+import SignInForm from '../Enrollbutton/PopupSignInForm';
+import HeaderSignInForm from './HeaderSignInForm';
 
 const logos = [
     { src: company1Logo, alt: "Company 1" },
@@ -61,21 +63,17 @@ const logos = [
     { src: company20Logo, alt: "Company 20" }
 ];
 
-const Headerpart = () => {
+const Headerpart = (courseID) => {
     const { slug } = useParams();
     const [card, setCard] = useState(null);
     const redLineRef = useRef(null);
-    const header1Ref = useRef(null);
-    const header2Ref = useRef(null);
     const doughtsPartRef = useRef(null);
+    const [isPopupVisible, setIsPopupVisible] = useState(false);
     
-
     useEffect(() => {
         const cardDetails = data.find(item => item.slug === slug);
         setCard(cardDetails);
     }, [slug]);
-
-
 
     // below the screen size
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
@@ -106,6 +104,30 @@ const Headerpart = () => {
             if (redLineRef.current) observer.unobserve(redLineRef.current);
         };
     }, []);
+
+
+
+    const togglePopup = () => {
+        if (isPopupVisible) {
+            // Close the form
+            setIsPopupVisible(false);
+        } else {
+            // Open the form
+            setIsPopupVisible(true);
+        }
+    };
+    
+    const downloadRoadmap = (url) => {
+        const course = data.find(course => course.courseID === courseID);
+        const link = document.createElement('a');
+        link.href = url; 
+        link.download = 'career-roadmap.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+
 
     return (
         <div className={style.headerContainer}>
@@ -164,7 +186,7 @@ const Headerpart = () => {
                 </div>
                 <div className={style.HeaderPicture}>
                     {card && (
-                        <img        
+                        <img
                             src={JD_course}
                             alt="Course"
                             className={`img-fluid ${style.headerImage} shadow`}
@@ -199,11 +221,20 @@ const Headerpart = () => {
                             <img key={index} src={logo.src} alt={logo.alt} className={style.logo} />
                         ))}
                     </div>
-
                 </div>
             </div>
 
+
             <div className={style.testimonials}>
+                <div className={`d-flex m-4 ${isMobile ? 'flex-column text-center' : 'justify-content-center align-items-center gap-2'}`}>
+                    <h3 className="fw-bold">
+                        <span style={{ color: '#ff5003' }}> Know More</span> About {card && card.text}
+                    </h3>
+                    <button className={`btn btn-primary fw-bold ${Buttonstyle.shinebtn}`} onClick={togglePopup}>
+                        Download Roadmap
+                    </button>
+                    {isPopupVisible && <HeaderSignInForm onClose={togglePopup} courseID={courseID} />}
+                </div>
                 <Testmonials />
             </div>
         </div>

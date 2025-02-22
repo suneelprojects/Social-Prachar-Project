@@ -1,12 +1,3 @@
-import img1 from '../../assets/img1.jpg';
-import img2 from '../../assets/img2.jpg';
-import img3 from '../../assets/img3.jpg';
-import img4 from '../../assets/img4.jpg';
-import img5 from '../../assets/img5.jpg';
-import img6 from '../../assets/img6.jpg';
-import img7 from '../../assets/img7.jpg';
-import img8 from '../../assets/img8.jpg';
-
 import java from '../../assets/careerworkshop/mern and java.png';
 import python from '../../assets/careerworkshop/mern and Python.png';
 import mern from '../../assets/careerworkshop/MERN.png';
@@ -81,6 +72,9 @@ import { faHandshake, faCalendarCheck, faChartBar, faThumbsUp, faEnvelope, faSno
 import { faArrowUp, faBinoculars, faBook, faBoxes, faBrain, faBriefcase, faBullhorn, faCertificate, faChartLine, faChartPie, faClipboardCheck, faClipboardList, faCloud, faCloudUploadAlt, faCode, faCodeBranch, faCogs, faDatabase, faDesktop, faGlobe, faLaptopCode, faLock, faMoneyBillWave, faNetworkWired, faPlug, faProjectDiagram, faRobot, faRocket, faSearch, faServer, faShareAlt, faShieldAlt, faSyncAlt, faTable, faTachometerAlt, faTasks, faTools, faUserGraduate, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faDocker, faNodeJs, faPiedPiper, faReact } from '@fortawesome/free-brands-svg-icons';
 
+import professional from '../../assets/AssetsOfDetailsPage/professional.svg';
+import student from '../../assets/AssetsOfDetailsPage/educationsymbol.svg';
+import business from '../../assets/AssetsOfDetailsPage/businesssymbol.svg';
 
 
 export const data = [
@@ -90,6 +84,7 @@ export const data = [
         slug: 'data-science',
         Duration: ' 6 months',
         imageSrc: DS,
+        careerRoadmap:'/textTypeRoadmaps/DataScience&AI.pdf',
         TestmonialsCommentsImage1: testmonialsCommentImageDS,
         TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
         courseTitle: 'Development',
@@ -100,6 +95,26 @@ export const data = [
             "You want to explore career opportunities in Data Science and AI?",
             "You want to learn the essential skills to master in 150 days?",
             "Do you want to kickstart your Data Science & AI career with 10+ LPA opportunities?"
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Discover the best career opportunities in Data Science and AI to kickstart your journey into the tech industry.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT Professionals',
+                content: 'Upskill with the latest Data Science and AI trends to stay ahead in your career.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Entrepreneurs',
+                content: 'Learn how to leverage AI to launch and scale your startup successfully.',
+                image: business,
+                alt: 'Business Owner'
+            }
         ],
         selfQuestioning: 'Starting your Data Science Career?',
         Description: 'Data Scientists are in high demand across every industry.Even tech giants such as Google, Amazon, Apple, Facebook, and Microsoft are constantly seeking experts in data extraction, data mining, visualization, and more.The course covers a comprehensive range of topics including Data Analytics(Power BI, Tableau, Excel), Data Science(Machine Learning, Python, SQL, Statistics), AI(Deep Learning, NLP, OpenCV), and Cloud(AWS DevOps).',
@@ -392,6 +407,7 @@ export const data = [
         courseID: 2,
         slug: 'python-full-stack-development-course',
         imageSrc: python,
+        careerRoadmap: '/roadmaps/ai-data-scientist.pdf',
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: ' 6 months',
@@ -402,6 +418,26 @@ export const data = [
             "You want to explore career opportunities in Python Full Stack Development?",
             "You want to learn the essential skills to master in 180 days?",
             "Do you want to kickstart your Full Stack Python Developer career with 10+ LPA opportunities?"
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Kickstart your career with Python Full Stack development, mastering both frontend and backend technologies.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT professionals',
+                content: 'Enhance your skills with advanced Python frameworks and stay ahead in the rapidly evolving Full Stack ecosystem.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Freelancers & Entrepreneurs',
+                content: 'Build scalable web applications using Python and modern frameworks to take your projects to the next level.',
+                image: business,
+                alt: 'Business Owner'
+            }
         ],
         text: 'Full Stack Python Development',
         Header: 'Learn Python Full Stack Development & Become a Certified Professional in',
@@ -735,6 +771,7 @@ export const data = [
         id: 1,
         courseID: 3,
         imageSrc: java,
+        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
         slug: 'java-full-stack-development-course',
         courseTitle: 'Development',
         Duration: ' 6 months',
@@ -748,6 +785,26 @@ export const data = [
             "You want to explore career opportunities in Java Full Stack Development?",
             "You want to learn the essential skills to master in 180 days?",
             "Do you want to kickstart your Full Stack Java Developer career with 10+ LPA opportunities?"
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Kickstart your Full Stack career with hands-on Java, Spring Boot, and React projects.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT Professionals',
+                content: 'Master backend and frontend with Java, Spring Boot, React, Microservices, and DevOps.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Entrepreneurs',
+                content: 'Build scalable web apps using Java Full Stack technologies to grow your startup.',
+                image: business,
+                alt: 'Business Owner'
+            }
         ],
         text: 'Full Stack Java Development',
         name: 'Balu',
@@ -789,189 +846,189 @@ export const data = [
                 id: 1,
                 module: "Part 1: Introduction to Full Stack Development & Basic Frontend Technologies",
                 title: "Module 1: Introduction to Full Stack Development & HTML",
-                details: 
-                    {
-                       
-                        videos: 7,
-                        time: "2 months",
-                        descriptions: [
-                            "What is Full Stack Development?",
-                            "Frontend vs. Backend Development",
-                            "Technologies Used for Full Stack Development",
-                            "Introduction to Webpages and Websites",
-                            "Static vs. Dynamic Websites",
-                            "Introduction to Servers and Types of Servers",
-                            "Introduction to HTML and Web Page Structure"
-                        ]
-                    }
+                details:
+                {
+
+                    videos: 7,
+                    time: "2 months",
+                    descriptions: [
+                        "What is Full Stack Development?",
+                        "Frontend vs. Backend Development",
+                        "Technologies Used for Full Stack Development",
+                        "Introduction to Webpages and Websites",
+                        "Static vs. Dynamic Websites",
+                        "Introduction to Servers and Types of Servers",
+                        "Introduction to HTML and Web Page Structure"
+                    ]
+                }
             },
             {
                 id: 2,
                 module: "Part 2: Advanced Frontend Styling",
                 title: "Module 2: CSS for Frontend Development",
                 details:
-                    {
-                       
-                        videos: 7,
-                        time: "1 month",
-                        descriptions: [
-                            "Introduction to CSS and Styling Web Pages",
-                            "Selectors: ID, Class, Tag, Group, Universal",
-                            "Background Properties, Colors, and Gradients",
-                            "Text and Font Properties",
-                            "Box Model: Padding, Margins, Borders, Outline",
-                            "Positioning: Relative, Absolute, Fixed, Static, Sticky",
-                            "Flexbox and Grid Layout",
-                            "Advanced Selectors, Transformations, and Animations",
-                            "Responsive Web Design with Media Queries"
-                        ]
-                    }
+                {
+
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to CSS and Styling Web Pages",
+                        "Selectors: ID, Class, Tag, Group, Universal",
+                        "Background Properties, Colors, and Gradients",
+                        "Text and Font Properties",
+                        "Box Model: Padding, Margins, Borders, Outline",
+                        "Positioning: Relative, Absolute, Fixed, Static, Sticky",
+                        "Flexbox and Grid Layout",
+                        "Advanced Selectors, Transformations, and Animations",
+                        "Responsive Web Design with Media Queries"
+                    ]
+                }
             },
             {
                 id: 3,
                 module: "Part 3: JavaScript Basics",
                 title: "Module 3: JavaScript Fundamentals",
                 details:
-                    {
-                        
-                        videos: 7,
-                        time: "1 month",
-                        descriptions: [
-                            "Introduction to JavaScript",
-                            "Variables: var, let, const, Scope & Hoisting",
-                            "Data Types: Primitive and Non-Primitive",
-                            "Operators: Arithmetic, Assignment, Comparison, Logical",
-                            "Functions: Default, Arrow, Callback, IIFE",
-                            "Conditional Statements: if, if-else, switch-case",
-                            "Loops: for, while, do-while, for-of, for-in",
-                            "Arrays & Objects: Methods and Properties",
-                            "DOM Manipulation and BOM (Browser Object Model)",
-                            "Event Handling and Error Handling",
-                            "Introduction to ES6, Promises, Async/Await",
-                            "Introduction to APIs (CRUD Operations)"
-                        ]
-                    }
-                
+                {
+
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to JavaScript",
+                        "Variables: var, let, const, Scope & Hoisting",
+                        "Data Types: Primitive and Non-Primitive",
+                        "Operators: Arithmetic, Assignment, Comparison, Logical",
+                        "Functions: Default, Arrow, Callback, IIFE",
+                        "Conditional Statements: if, if-else, switch-case",
+                        "Loops: for, while, do-while, for-of, for-in",
+                        "Arrays & Objects: Methods and Properties",
+                        "DOM Manipulation and BOM (Browser Object Model)",
+                        "Event Handling and Error Handling",
+                        "Introduction to ES6, Promises, Async/Await",
+                        "Introduction to APIs (CRUD Operations)"
+                    ]
+                }
+
             },
             {
                 id: 4,
                 module: "Part 4: Frontend Framework - Bootstrap",
                 title: "Module 4: Frontend Framework: Bootstrap",
-                details: 
-                    {
-                       
-                        videos: 7,
-                        time: "1 month",
-                        descriptions: [
-                            "Introduction to Bootstrap",
-                            "Typography and Buttons",
-                            "Grid System and Layout",
-                            "Forms and Form Validation",
-                            "Cards, Tables, Lists, and Navigations",
-                            "Dropdowns, Navbars, and Jumbotron",
-                            "Building Responsive Designs with Bootstrap"
-                        ]
-                    }
-                
+                details:
+                {
+
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Bootstrap",
+                        "Typography and Buttons",
+                        "Grid System and Layout",
+                        "Forms and Form Validation",
+                        "Cards, Tables, Lists, and Navigations",
+                        "Dropdowns, Navbars, and Jumbotron",
+                        "Building Responsive Designs with Bootstrap"
+                    ]
+                }
+
             },
             {
                 id: 5,
                 module: "Part 5: Introduction to Java and OOPs Concepts",
                 title: "Module 5: Introduction to Java and OOPs",
-                details: 
-                    {
-                        
-                        videos: 7,
-                        time: "1 month",
-                        descriptions: [
-                            "Introduction to Java: Working, Features, JVM, JRE, JDK",
-                            "Data Types and Variables",
-                            "Naming Conventions and Keywords",
-                            "Operators and Control Statements",
-                            "OOP Concepts: Classes, Objects, Inheritance, Polymorphism, Abstraction, Encapsulation",
-                            "Arrays and Strings",
-                            "Exception Handling in Java"
-                        ]
-                    }
-                
+                details:
+                {
+
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Java: Working, Features, JVM, JRE, JDK",
+                        "Data Types and Variables",
+                        "Naming Conventions and Keywords",
+                        "Operators and Control Statements",
+                        "OOP Concepts: Classes, Objects, Inheritance, Polymorphism, Abstraction, Encapsulation",
+                        "Arrays and Strings",
+                        "Exception Handling in Java"
+                    ]
+                }
+
             },
             {
                 id: 6,
                 module: "Part 6: Advanced Java Concepts",
                 title: "Module 6: Advanced Java Concepts",
-                details: 
-                    {
-                       
-                        videos: 7,
-                        time: "1 month",
-                        descriptions: [
-                            "JVM Architecture and Memory Management",
-                            "Multi-threading: Concepts, Lifecycle, Synchronization, Deadlock",
-                            "Collection Framework: List, Set, Map",
-                            "Java 8 Features: Lambda Expressions, Functional Interfaces, Streams API",
-                            "Regular Expressions in Java"
-                        ]
-                    }
-                
+                details:
+                {
+
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "JVM Architecture and Memory Management",
+                        "Multi-threading: Concepts, Lifecycle, Synchronization, Deadlock",
+                        "Collection Framework: List, Set, Map",
+                        "Java 8 Features: Lambda Expressions, Functional Interfaces, Streams API",
+                        "Regular Expressions in Java"
+                    ]
+                }
+
             },
             {
                 id: 7,
                 module: "Part 7: Database Management with MySQL & JDBC",
                 title: "Module 7: Database Management with MySQL & JDBC",
-                details: 
-                    {
-                        
-                        videos: 7,
-                        time: "1 month",
-                        descriptions: [
-                            "Introduction to Databases: MySQL Basics",
-                            "DDL, DML, DRL, DCL, TCL Commands",
-                            "Joins and Constraints",
-                            "Introduction to JDBC: Drivers, Connections, Statements, ResultSets",
-                            "Integrating Java Applications with Databases"
-                        ]
-                    }
-                
+                details:
+                {
+
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Databases: MySQL Basics",
+                        "DDL, DML, DRL, DCL, TCL Commands",
+                        "Joins and Constraints",
+                        "Introduction to JDBC: Drivers, Connections, Statements, ResultSets",
+                        "Integrating Java Applications with Databases"
+                    ]
+                }
+
             },
             {
                 id: 8,
                 module: "Part 8: ORM with Hibernate/JPA",
                 title: "Module 8: ORM with Hibernate/JPA",
-                details: 
-                    {
-                       
-                        videos: 7,
-                        time: "1 month",
-                        descriptions: [
-                            "Introduction to Hibernate",
-                            "Advantages of ORM and Hibernate",
-                            "Configuration and Mapping",
-                            "CRUD Operations with Hibernate",
-                            "Relationships and Inheritance Mapping",
-                            "HQL (Hibernate Query Language) and JPQL"
-                        ]
-                    }
-                
+                details:
+                {
+
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Introduction to Hibernate",
+                        "Advantages of ORM and Hibernate",
+                        "Configuration and Mapping",
+                        "CRUD Operations with Hibernate",
+                        "Relationships and Inheritance Mapping",
+                        "HQL (Hibernate Query Language) and JPQL"
+                    ]
+                }
+
             },
             {
                 id: 9,
                 module: "Part 9: Full Stack Project",
                 title: "Module 9: Full Stack Development Project",
-                details: 
-                    {
-                      
-                        videos: 7,
-                        time: "2 months",
-                        descriptions: [
-                            "Project Overview and Planning",
-                            "Building the Backend with Java and Spring Boot",
-                            "Frontend Development with HTML, CSS, JavaScript, and Bootstrap",
-                            "Connecting Frontend and Backend via APIs",
-                            "Integrating Database using JDBC and Hibernate",
-                            "Testing and Debugging the Application",
-                            "Deployment and Version Control with Git"
-                        ]
-                    }
+                details:
+                {
+
+                    videos: 7,
+                    time: "2 months",
+                    descriptions: [
+                        "Project Overview and Planning",
+                        "Building the Backend with Java and Spring Boot",
+                        "Frontend Development with HTML, CSS, JavaScript, and Bootstrap",
+                        "Connecting Frontend and Backend via APIs",
+                        "Integrating Database using JDBC and Hibernate",
+                        "Testing and Debugging the Application",
+                        "Deployment and Version Control with Git"
+                    ]
+                }
             }
         ],
         levelcardIndex: [
@@ -1117,6 +1174,7 @@ export const data = [
         slug: 'full-stack-developer-course',
         courseTitle: 'Development',
         imageSrc: mern,
+        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
         certificate: defaultCertificate,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
@@ -1133,6 +1191,26 @@ export const data = [
             "Do you want to explore career opportunities in Mern Stack?",
             "Are you ready to master essential Mern Stack skills in just 180 days?",
             "Do you want to kickstart your Mern Stack career with 4+ LPA opportunities?"
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Kickstart your career in web development by mastering the MERN stack and building real-world applications.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT Professionals',
+                content: 'Enhance your web development skills with the latest MERN stack technologies and stay ahead in the industry.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Entrepreneurs',
+                content: 'Leverage MERN stack development to build and scale your startup with robust and scalable web applications.',
+                image: business,
+                alt: 'Business Owner'
+            }
         ],
         Description: 'The Full Stack Java / python With MERN Stack  (MongoDB, Express.js, React.js, Node.js) is one of the most popular full-stack development frameworks, enabling developers to build robust, scalable, and interactive web applications. This course provides a hands-on learning experience in mastering the MERN Stack. You will gain skills in designing and developing dynamic web applications, building APIs, integrating front-end and back-end development, managing databases, and deploying applications. Key areas of focus include building RESTful APIs, creating interactive user interfaces, managing state with Redux, authenticating users, and deploying applications on platforms like Heroku or Vercel. By the end of this course, you"ll be equipped to develop and deploy modern web applications with the MERN Stack.',
         moduleContent: [
@@ -1411,6 +1489,7 @@ export const data = [
         slug: 'awsdevopscourse',
         courseTitle: 'Cloud Development',
         imageSrc: AWS_multiCloud,
+        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
         certificate: defaultCertificate,
         Duration: '6 months',
         students: '2800+ students',
@@ -1427,6 +1506,26 @@ export const data = [
             "Do you want to explore career opportunities in AWS With DevOps?",
             "Are you ready to master essential AWS DevOps skills in just 180 days?",
             "Do you want to kickstart your AWS With DevOps career with 4+ LPA opportunities?"
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Start your career in DevOps with AWS, mastering cloud computing, automation, and CI/CD pipelines.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT Professionals',
+                content: 'Upgrade your skills with AWS DevOps, learning infrastructure automation, containerization, and cloud security.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Entrepreneurs',
+                content: 'Leverage AWS DevOps to build scalable, secure, and automated cloud infrastructure for your business.',
+                image: business,
+                alt: 'Business Owner'
+            }
         ],
         Description: 'AWS DevOps is a highly sought-after skill, essential for professionals in cloud computing, automation, and infrastructure management. This course offers hands-on experience in key areas such as cloud infrastructure management (AWS services like EC2, S3, Lambda), DevOps practices (CI/CD, Docker, Kubernetes), Infrastructure as Code (Terraform, AWS CloudFormation), monitoring and logging (CloudWatch, ELK Stack), version control (Git, Jenkins), security and compliance (IAM), and automation pipelines (AWS CodePipeline). By completing this course, you"ll gain the skills to manage, scale, and automate cloud applications, while integrating DevOps practices to optimize deployment processes.',
         moduleContent: [
@@ -1701,6 +1800,7 @@ export const data = [
         slug: 'artificial-intelligence-course-training-institute-in-hyderabad',
         courseTitle: 'AI Development',
         imageSrc: AI,
+        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
         certificate: defaultCertificate,
         TestmonialsCommentsImage1: testmonialsCommentImageDS,
         TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
@@ -1717,6 +1817,26 @@ export const data = [
             "Do you want to explore career opportunities in Artificial Intelligence?",
             "Are you ready to master essential Artificial Intelligence skills in just 120 days?",
             "Do you want to kickstart your Artificial Intelligence career with 4+ LPA opportunities?"
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Kickstart your AI career by learning machine learning, deep learning, and AI model deployment.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT Professionals',
+                content: 'Enhance your expertise with AI technologies, including neural networks, NLP, and computer vision.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Entrepreneurs',
+                content: 'Leverage AI to build intelligent applications, automate processes, and scale your business efficiently.',
+                image: business,
+                alt: 'Business Owner'
+            }
         ],
         Description: 'Social Prachar ranked as #1 Best Digital Marketing Course Training Institute in Hyderabad with 15,000+ Success Stories since 2014. We Provide 100% placement Guarantee for all our Trainees with Top MNCs & StartUps. Become Digital Marketing Expert in less than 4 months. Enroll now for the most Advanced Digital Marketing Training Program.',
         moduleContent: [
@@ -2023,6 +2143,7 @@ export const data = [
         slug: 'digital-marketing-course-training-institute-hyderabad',
         courseTitle: 'Marketing',
         imageSrc: Digital_M,
+        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
         certificate: defaultCertificate,
         Duration: '4 months',
         students: '3200+ students',
@@ -2039,6 +2160,26 @@ export const data = [
             "Do you want to explore career opportunities in Digital Marketing?",
             "Are you ready to master essential Digital Marketing skills in just 120 days?",
             "Do you want to kickstart your Digital Marketing career with 4+ LPA opportunities?",
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Discover the best career opportunities in Data Science and AI to kickstart your journey into the tech industry.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT Professionals',
+                content: 'Upskill with the latest Data Science and AI trends to stay ahead in your career.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Entrepreneurs',
+                content: 'Learn how to leverage AI to launch and scale your startup successfully.',
+                image: business,
+                alt: 'Business Owner'
+            }
         ],
         Description: 'Social Prachar ranked as #1 Best Digital Marketing Course Training Institute in Hyderabad with 15,000+ Success Stories since 2014. We Provide 100% placement Guarantee for all our Trainees with Top MNCs & StartUps. Become Digital Marketing Expert in less than 4 months. Enroll now for the most Advanced Digital Marketing Training Program.',
         moduleContent: [
@@ -2307,6 +2448,7 @@ export const data = [
         slug: 'data-analytics-course-training-hyderabad',
         courseTitle: 'Data Science',
         imageSrc: DA,
+        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
         certificate: defaultCertificate,
         Duration: '5 months',
         students: '2700+ students',
@@ -2323,6 +2465,26 @@ export const data = [
             "Do you want to explore career opportunities in Data Analytics?",
             "Are you ready to master essential Data Analytics skills in just 180 days?",
             "Do you want to kickstart your Data Analytics career with 4+ LPA opportunities?"
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Start your career in Data Analytics with essential skills in data visualization, statistical analysis, and business intelligence tools.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT Professionals',
+                content: 'Advance your skills in analytics, predictive modeling, and big data for data-driven decisions.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Entrepreneurs',
+                content: 'Leverage data analytics to gain insights, optimize operations, and make strategic business decisions for growth and success.',
+                image: business,
+                alt: 'Business Owner'
+            }
         ],
         Description: "In this comprehensive Data Analytics certification course, you will gain a thorough understanding of essential data processing tools such as Excel, SQL, and NoSQL, enabling you to work efficiently with database management systems. You'll also learn to use powerful data visualization tools like Tableau and Power BI to analyze data and create compelling visual stories for end - users.The program delves into critical concepts such as Data Preparation, Data Cleansing, and Exploratory Data Analysis, ensuring a solid foundation for handling diverse datasets.You will explore advanced topics like Data Mining of both Structured(RDBMS) and Unstructured(Big Data) data, illustrated with real - world examples to bridge theory and practice.Mastery of Advanced Excel will enhance your data proficiency, helping you optimize workflows and significantly reduce working hours.Through this training, you'll gain practical skills to transform raw data into actionable insights, empowering you to make data-driven decisions with confidence.",
         moduleContent: [
@@ -2572,6 +2734,7 @@ export const data = [
         slug: 'snowflake-training-in-hyderabad',
         courseTitle: 'Cloud',
         imageSrc: SnowFlake,
+        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
         certificate: defaultCertificate,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
@@ -2588,6 +2751,26 @@ export const data = [
             "Do you want to explore career opportunities in Snow Flake?",
             "Are you ready to master essential Snow Flake skills in just 180 days?",
             "Do you want to kickstart your Snow Flake career with 4+ LPA opportunities?"
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Kickstart your career with Snowflake by learning cloud data warehousing, SQL, and data modeling.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT Professionals',
+                content: 'Master Snowflake’s architecture, performance optimization, and data sharing to enhance your data expertise.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Entrepreneurs',
+                content: 'Leverage Snowflake for scalable, cost-effective data storage and real-time business insights.',
+                image: business,
+                alt: 'Business Owner'
+            }
         ],
         Description: "In this in-depth Snowflake certification course, you will gain expertise in cloud-based data warehousing, empowering you with the skills to handle, store, and analyze organizational data efficiently. Snowflake’s high-speed, versatile, and user-friendly architecture enables seamless customization and creation of ready-to-query tables, offering significant advantages over traditional systems. You will learn how to leverage Snowflake’s innovative SQL query engine for advanced data analysis and reporting. Additionally, the course covers key topics such as data preparation, cleansing, and exploratory data analysis to ensure you have a solid foundation in managing diverse datasets. You'll also gain proficiency in tools like Excel, SQL, Tableau, and Power BI to transform raw data into actionable insights and create compelling visual reports.By mastering these skills, you will be equipped to make data- driven decisions and optimize workflows, significantly reducing the time spent on data management tasks.",
         moduleContent: [
@@ -2886,6 +3069,7 @@ export const data = [
         slug: 'salesforce-course',
         courseTitle: 'Cloud',
         imageSrc: salesForce,
+        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
         certificate: defaultCertificate,
         TestmonialsCommentsImage1: testmonialsCommentImageFSW,
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
@@ -2902,6 +3086,26 @@ export const data = [
             "Do you want to explore career opportunities in Sales Force?",
             "Are you ready to master essential Sales Force skills in just 180 days?",
             "Do you want to kickstart your Sales Force career with 4+ LPA opportunities?"
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Kickstart your career by learning Salesforce CRM, automation, and customer relationship management fundamentals.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT Professionals',
+                content: 'Enhance your skills in Salesforce administration, development, and integration to optimize business processes.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Entrepreneurs',
+                content: 'Leverage Salesforce to streamline sales, improve customer engagement, and drive business growth.',
+                image: business,
+                alt: 'Business Owner'
+            }
         ],
         Description: "In this comprehensive Salesforce Development course, you will master the skills needed to build and customize applications on the Salesforce platform.Learn how to leverage Salesforce's powerful tools and features, including Apex, Visualforce, and Lightning Components, to develop scalable solutions that meet business needs. This course will guide you through the process of creating automated workflows, managing data, and optimizing CRM processes. By gaining hands-on experience with Salesforce development, you will be equipped to create tailored applications that enhance customer relationships and drive business growth.",
         moduleContent: [

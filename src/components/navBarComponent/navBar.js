@@ -251,11 +251,11 @@ const NavBar = () => {
                 </li>
                 <li className="nav-item">
                   <NavLink
-                    to={"/socialhire"}
+                    to={"/subscription"}
                     className={`nav-link ${navBarStyle.NavLinkForHover}`}
                     onClick={closeToggle}
                   >
-                    SocialHire
+                    Subscription
                   </NavLink>
                 </li>
                 
@@ -276,8 +276,15 @@ const NavBar = () => {
                     <NavLink to="/scholarship-test" className="dropdown-item" onClick={closeDropdown}>
                       Scholarship Test
                     </NavLink>
-                    <NavLink to="blog" className="dropdown-item" onClick={closeDropdown}>
-                      Blog
+                    <NavLink
+                      to="/socialhire"
+                      className="dropdown-item"
+                      onClick={closeDropdown}
+                    >
+                      SocialHire
+                    </NavLink>
+                    <NavLink to="projects" className="dropdown-item" onClick={closeDropdown}>
+                      Students-Projects
                     </NavLink>
                   </div>
                 </li>

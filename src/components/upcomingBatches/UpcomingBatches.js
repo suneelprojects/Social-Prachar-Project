@@ -73,7 +73,7 @@ const UpcomingBatches = () => {
             let nextDate = new Date(today);
             let daysAdded = 0;
 
-            while (daysAdded < 12) {
+            while (daysAdded < 6) {
                 nextDate.setDate(nextDate.getDate() + 1);
                 const dateString = nextDate.toISOString().split('T')[0];
                 const dayOfWeek = nextDate.getDay();

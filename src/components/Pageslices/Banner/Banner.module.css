@@ -111,6 +111,12 @@
   
 }
 
+@media(max-width:440px){
+  .btnText{
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 768px) {
   .bannerInfo {
     display: none;

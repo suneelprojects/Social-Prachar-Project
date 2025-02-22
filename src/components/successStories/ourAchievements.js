@@ -589,15 +589,6 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             profileImage: img_9,
             category: "Digital Marketing"
         },
-        {
-            name: "Divya Sree S",
-            role: "Junior Data Scientist- onPassive",
-            hike: "120% Salary Hike",
-            preCompany: sp_Logo,
-            postCompany: onPassive,
-            startCompanyType: "OnPassive company",
-            profileImage: img_15,
-            category: "Digital Marketing"
-        },
+       
 
     ]

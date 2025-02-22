@@ -1,6 +1,6 @@
 // routes.js
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 const ThankyouPage = React.lazy(() => import('./components/Pageslices/Enrollbutton/ThankyouPage.js'));
 const AllHomeComp = React.lazy(() => import('./components/allHomeComp.js'));
@@ -33,48 +33,33 @@ const CareerRoadMap = React.lazy(() => import("./components/CareerRoadMap/Career
 const PrivacyPolicy = React.lazy(() => import("./components/PrivacyPolicy/PrivacyPolicy.js"));
 const ScholarShipTest = React.lazy(() => import("./components/scholarshipTest/ScholarShipTest.js"));
 const SocialHire = React.lazy(() => import("./components/SocialHire/SocialHire.js"));
-const Blog = React.lazy(() => import("./components/Blog/Blog.js"));
+const Projects = React.lazy(() => import("./components/Projects/Blog.js"));
+const OpenBlogPage = React.lazy(() => import('./components/Projects/openBlogPage.js'));
+const ProjectDashBoard = React.lazy(() => import("./components/Projects/BlogDashboard.js"));
+const PageNotFound = React.lazy(() => (import('./components/pageNotFound/PageNotFound.js')));
+const Subscription = React.lazy(()=> (import ('./components/subscriptionPage/SubscriptionHeader.js')))
 
-const routes = (
-    <Route path="/">
-        <Route index element={<AllHomeComp />} />
-        <Route path='blog' element={<Blog />} />
-        <Route path='socialhire' element={<SocialHire />} />
-        <Route path="privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="scholarship-test" element={<ScholarShipTest />} />
-        <Route path="career-roadmaps" element={<CareerRoadMap />} />
-        <Route path="/courses" element={<Course />} />
-        <Route path="aboutUs" element={<Aboutus />} />
-        <Route path=":slug" element={<NewDetailsPage />} />
-        <Route path="success-stories" element={<SuccessStories />} />
-        <Route path="career-counselling" element={<CareerWorkShop />} />
-        <Route path="upcoming-batches" element={<UpcomingBatches />} />
-        <Route path="career-quiz" element={<CareerSelection />} />
-        <Route path="course/:courseID" element={<CourseAccordion />} />
-        <Route path="thank-you" element={<ThankyouPage />} />
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="profile" element={<Profile />}>
-            <Route index element={<Dashboard />} />
-            <Route path="myprofile" element={<MyProfile />} />
-            <Route path="mywork" element={<MyWork />} />
-            <Route path="enrolled-courses" element={<EnrolledCourses />}>
-                <Route index element={<Enrolled />} />
-                <Route path="enrolled" element={<Enrolled />} />
-                <Route path="active-courses" element={<ActiveCourses />} />
-                <Route path="completed-courses" element={<CompletedCourses />} />
-            </Route>
-            <Route path="wishlist" element={<Wishlist />} />
-            <Route path="reviews" element={<Reviews />} />
-            <Route path="quizAttempts" element={<QuizAttempts />} />
-            <Route path="orderHistory" element={<OrderHistory />} />
-            <Route path="question-answer" element={<QuestionAnswer />} />
-            <Route path="settings" element={<Settings />}>
-                <Route index element={<ProfileSettings />} />
-                <Route path="password-settings" element={<PasswordSettings />} />
-                <Route path="socialProfile-settings" element={<SocialProfileSettings />} />
-            </Route>
-        </Route>
-    </Route>
-);
+const routes = [
+            <Route path="/" element={<AllHomeComp />} />,
+            <Route path='subscription' element={<Subscription/>}/>,
+            <Route path='project-dashboard' element={<ProjectDashBoard />} />,
+            <Route path='projects/:id' element={<OpenBlogPage />} />,
+            <Route path='projects' element={<Projects />} />,
+            <Route path='socialhire' element={<SocialHire />} />,
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />,
+            <Route path="scholarship-test" element={<ScholarShipTest />} />,
+            <Route path="career-roadmaps" element={<CareerRoadMap />} />,
+            <Route path="courses" element={<Course />} />,
+            <Route path="aboutUs" element={<Aboutus />} />,
+            <Route path=":slug" element={<NewDetailsPage />} />,
+            <Route path="success-stories" element={<SuccessStories />} />,
+            <Route path="career-counselling" element={<CareerWorkShop />} />,
+            <Route path="upcoming-batches" element={<UpcomingBatches />} />,
+            <Route path="career-quiz" element={<CareerSelection />} />,
+            <Route path="course/:courseID" element={<CourseAccordion />} />,
+            <Route path="thank-you" element={<ThankyouPage />} />,
+            <Route path="*" element={<PageNotFound />} /> 
+];
+
 
 export default routes;

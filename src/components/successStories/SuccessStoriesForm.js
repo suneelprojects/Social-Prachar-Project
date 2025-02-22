@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import styles from '../Pageslices/Enrollbutton/PopUpForm.module.css';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { data } from '../Cards/CardData.js';
 import Loading from '../extraComponents/loading.js';
 
@@ -27,14 +27,13 @@ const SuccessStoriesForm = () => {
     const { slug } = useParams();
     const [card, setCard] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
-    const navigate = useNavigate();
 
     useEffect(() => {
         const cardDetails = data.find(card => card.slug === slug);
         setCard(cardDetails);
     }, [slug]);
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwUXmxm_e_U4J3yR7y7sn8b26WM4dIr51UIjuTmCt43VUOnxSuUR0USb2N_Iqbm2bTV/exec '; // Replace with your Google Apps Script Web App URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwUXmxm_e_U4J3yR7y7sn8b26WM4dIr51UIjuTmCt43VUOnxSuUR0USb2N_Iqbm2bTV/exec ';
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -150,11 +149,11 @@ const SuccessStoriesForm = () => {
                                         required
                                     >
                                         <option value="" disabled>Select Course</option>
-                                        <option value="slot1">Data Analytics</option>
-                                        <option value="slot2">Data Science & AI</option>
-                                        <option value="slot3">Full stack Mern Java</option>
-                                        <option value="slot4">Full stack Mern Python</option>
-                                        <option value="slot5">Multi Cloud DevOps</option>
+                                        <option value="Data Analytics">Data Analytics</option>
+                                        <option value="Data Science & AI">Data Science & AI</option>
+                                        <option value="Full stack Mern Java">Full stack Mern Java</option>
+                                        <option value="Full stack Mern Python">Full stack Mern Python</option>
+                                        <option value="Multi Cloud DevOps">Multi Cloud DevOps</option>
                                     </select>
                                 </div>
 
