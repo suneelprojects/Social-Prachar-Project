@@ -61,7 +61,7 @@ const Home = () => {
               <img src={yellowLine} alt="yellowLine" className={`${homeStyle.yellowLine} `} />
               <br />
               <p className="greyText ">
-                Discover a world of knowledge and opportunities with our Mentorly job-ready courses.
+                Discover a world of knowledge and opportunities with our Mentor job-ready courses.
               </p>
 
               <div className="row mt-4 ">

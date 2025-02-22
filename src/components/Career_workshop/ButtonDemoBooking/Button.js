@@ -28,6 +28,13 @@ const Button = () => {
         if (Object.values(errors).some(error => error !== '')) {
             return;
         }
+        setLoading(true);
+
+        const formDataEncoded = new FormData();
+        Object.entries(formData).forEach(([key, value]) => {
+            formDataEncoded.append(key, value);
+        });
+        formDataEncoded.append('sheetName', 'careerWoskshop');
 
         const url = new URL("https://script.google.com/macros/s/AKfycbwq2ZtrNBCozKx_A23Ab4k02yCsxt5v1Wx7OQsY2RRzECvEnieV98bYm5rmWch0ZjcIag/exec");
         url.searchParams.append('course', formData.course);
@@ -36,7 +43,7 @@ const Button = () => {
         url.searchParams.append('phone', formData.phone);
 
         try {
-            setLoading(true); // Show spinner
+            // Show spinner
             const response = await fetch(url.toString(), {
                 method: "POST",
             });
