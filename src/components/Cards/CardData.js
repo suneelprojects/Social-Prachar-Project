@@ -64,27 +64,31 @@ import testmonialsCommentImageFSWSS from '../../assets/AssetsOfDetailsPage/commn
 import testmonialsCommentImageDA from '../../assets/AssetsOfDetailsPage/DA comment.png';
 import testmonialsCommentImageDevOps from '../../assets/AssetsOfDetailsPage/DevOps comment.png';
 import testmonialsCommentImageDM from '../../assets/AssetsOfDetailsPage/DM comment.png';
-
+ 
 
 import defaultCertificate from '../../assets/AssetsOfDetailsPage/masterclass/defaultcertificate.png';
 import authorPhoto from '../../assets/authorphoto.jpg';
 import { faHandshake, faCalendarCheck, faChartBar, faThumbsUp, faEnvelope, faSnowflake, faEye, faImages } from "@fortawesome/free-regular-svg-icons";
-import { faArrowUp, faBinoculars, faBook, faBoxes, faBrain, faBriefcase, faBullhorn, faCertificate, faChartLine, faChartPie, faClipboardCheck, faClipboardList, faCloud, faCloudUploadAlt, faCode, faCodeBranch, faCogs, faDatabase, faDesktop, faGlobe, faLaptopCode, faLock, faMoneyBillWave, faNetworkWired, faPlug, faProjectDiagram, faRobot, faRocket, faSearch, faServer, faShareAlt, faShieldAlt, faSyncAlt, faTable, faTachometerAlt, faTasks, faTools, faUserGraduate, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faBinoculars, faBook, faBoxes, faBrain, faBriefcase, faBullhorn, faCertificate, faChartLine, faChartPie, faClipboardCheck, faClipboardList, faCloud, faCloudUploadAlt, faCode, faCodeBranch, faCogs, faDatabase, faDesktop, faGlobe, faLaptopCode, faLock, faMoneyBillWave, faMusic, faNetworkWired, faPalette, faPlug, faProjectDiagram, faRobot, faRocket, faSearch, faServer, faShareAlt, faShieldAlt, faSyncAlt, faTable, faTachometerAlt, faTasks, faTools, faUserGraduate, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faDocker, faNodeJs, faPiedPiper, faReact } from '@fortawesome/free-brands-svg-icons';
 
 import professional from '../../assets/AssetsOfDetailsPage/professional.svg';
 import student from '../../assets/AssetsOfDetailsPage/educationsymbol.svg';
 import business from '../../assets/AssetsOfDetailsPage/businesssymbol.svg';
+import { Tag } from '../Courses_category/Course';
+import { time } from 'framer-motion';
 
 
 export const data = [
     {
         id: 1,
         courseID: 1,
+        categoryIndex: 0,
+        tagIndex: 1,
         slug: 'data-science',
         Duration: ' 6 months',
         imageSrc: DS,
-        careerRoadmap:'/textTypeRoadmaps/DataScience&AI.pdf',
+        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
         TestmonialsCommentsImage1: testmonialsCommentImageDS,
         TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
         courseTitle: 'Development',
@@ -252,8 +256,6 @@ export const data = [
             }
         ],
         rating: 4.5,
-        categoryIndex: 4,
-        tagIndex: 1,
         certificate: defaultCertificate,
         accordionContent: [
             {
@@ -403,8 +405,325 @@ export const data = [
     },
 
     {
-        id: 1,
+        id: 2,
         courseID: 2,
+        categoryIndex: 1, // Development
+        tagIndex: 1,      // Web Development
+        slug: 'full-stack-developer-course',
+        courseTitle: 'Development',
+        imageSrc: mern,
+        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
+        certificate: defaultCertificate,
+        TestmonialsCommentsImage1: testmonialsCommentImageFSW,
+        TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
+        Duration: '6 months',
+        students: '2800+ students',
+        text: 'Mern Stack (Full Stack)',
+        rating: 4.3,
+        Header: 'Master Full Stack Java / Python With Mern Stack Course in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Mern Stack (Full Stack)' },
+        ],
+        selfQuestioning: 'Starting your Mern Stack Career?',
+        questions: [
+            "Do you want to explore career opportunities in Mern Stack?",
+            "Are you ready to master essential Mern Stack skills in just 180 days?",
+            "Do you want to kickstart your Mern Stack career with 4+ LPA opportunities?"
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Kickstart your career in web development by mastering the MERN stack and building real-world applications.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT Professionals',
+                content: 'Enhance your web development skills with the latest MERN stack technologies and stay ahead in the industry.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Entrepreneurs',
+                content: 'Leverage MERN stack development to build and scale your startup with robust and scalable web applications.',
+                image: business,
+                alt: 'Business Owner'
+            }
+        ],
+        Description: 'The Full Stack Java / python With MERN Stack  (MongoDB, Express.js, React.js, Node.js) is one of the most popular full-stack development frameworks, enabling developers to build robust, scalable, and interactive web applications. This course provides a hands-on learning experience in mastering the MERN Stack. You will gain skills in designing and developing dynamic web applications, building APIs, integrating front-end and back-end development, managing databases, and deploying applications. Key areas of focus include building RESTful APIs, creating interactive user interfaces, managing state with Redux, authenticating users, and deploying applications on platforms like Heroku or Vercel. By the end of this course, you"ll be equipped to develop and deploy modern web applications with the MERN Stack.',
+        moduleContent: [
+            {
+                id: 1,
+                module: "Module 1",
+                title: "Introduction to Full-Stack Development with MERN",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Overview of the MERN stack and its ecosystem",
+                        "Fundamentals of full-stack development",
+                        "Setting up your development environment"
+                    ]
+                }
+            },
+            {
+                id: 2,
+                module: "Module 2",
+                title: "Frontend Development with React",
+                details: {
+                    videos: 8,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Building modern user interfaces with React",
+                        "State management using React Context and Redux",
+                        "Handling API calls and routing with React Router"
+                    ]
+                }
+            },
+            {
+                id: 3,
+                module: "Module 3",
+                title: "Backend Development with Node.js and Express",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Introduction to backend development with Node.js",
+                        "Creating RESTful APIs with Express",
+                        "Connecting to databases with MongoDB"
+                    ]
+                }
+            },
+            {
+                id: 4,
+                module: "Module 4",
+                title: "Introduction to Java Programming",
+                details: {
+                    videos: 6,
+                    time: "2 weeks",
+                    descriptions: [
+                        "Getting started with Java and its ecosystem",
+                        "Object-oriented programming concepts in Java",
+                        "Writing and compiling Java applications"
+                    ]
+                }
+            },
+            {
+                id: 5,
+                module: "Module 5",
+                title: "Python Programming for Backend Development",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Introduction to Python programming",
+                        "Building REST APIs with Flask or FastAPI",
+                        "Interfacing with databases using SQLAlchemy or Django ORM"
+                    ]
+                }
+            },
+            {
+                id: 6,
+                module: "Module 6",
+                title: "Database Design and Management",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Introduction to relational and non-relational databases",
+                        "Designing efficient database schemas",
+                        "Performing CRUD operations with MongoDB and MySQL"
+                    ]
+                }
+            },
+            {
+                id: 7,
+                module: "Module 7",
+                title: "Full-Stack Application Development",
+                details: {
+                    videos: 8,
+                    time: "4 weeks",
+                    descriptions: [
+                        "Building a full-stack application with MERN and Java/Python backend",
+                        "Integrating frontend and backend components",
+                        "Deploying applications to cloud platforms (e.g., AWS, Heroku)"
+                    ]
+                }
+            },
+            {
+                id: 8,
+                module: "Module 8",
+                title: "Advanced Topics in Full-Stack Development",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Implementing authentication and authorization",
+                        "Optimizing performance and scalability",
+                        "Best practices for debugging and testing applications"
+                    ]
+                }
+            },
+            {
+                id: 9,
+                module: "Module 9",
+                title: "Capstone Project & Certification",
+                details: {
+                    videos: 7,
+                    time: "1 month",
+                    descriptions: [
+                        "Building a comprehensive full-stack application with MERN and Java/Python",
+                        "Implementing real-world use cases and challenges",
+                        "Preparing for certification and showcasing your final project"
+                    ]
+                }
+            }
+        ],
+        timeLineHeading: 'Mern Stack',
+        levelcardIndex: [
+            {
+                icon: faCode,
+                title: "Introduction to MERN Stack",
+                description: "Learn the core concepts of the MERN stack, including MongoDB, Express.js, React.js, and Node.js, and understand how they work together in modern web applications."
+            },
+            {
+                icon: faReact,
+                title: "Frontend Development with React",
+                description: "Develop dynamic and responsive user interfaces using React, including state management with hooks, component lifecycles, and best practices for performance optimization."
+            },
+            {
+                icon: faChartLine,
+                title: "State Management with Redux",
+                description: "Dive deep into Redux for managing application state in larger React applications, including creating reducers, actions, and middleware."
+            },
+            {
+                icon: faBook,
+                title: "Learn Complete Java/Python Course",
+                description: "Master programming fundamentals and advanced concepts in Java or Python, covering topics like OOP, data structures, algorithms, multithreading, and frameworks like Spring Boot or Django."
+            },
+            {
+                icon: faSyncAlt,
+                title: "Connecting Frontend and Backend",
+                description: "Learn to connect the React frontend with the Express backend through RESTful APIs, including data fetching, form handling, and state synchronization."
+            },
+            {
+                icon: faDatabase,
+                title: "Database Management with MongoDB",
+                description: "Master MongoDB for storing and managing data, including schema design, CRUD operations, indexing, and using the Mongoose library for seamless integration."
+            },
+            {
+                icon: faNodeJs,
+                title: "Backend Development with Node.js",
+                description: "Understand the fundamentals of Node.js for server-side programming, asynchronous operations, and integrating with third-party libraries and APIs."
+            },
+            {
+                icon: faServer,
+                title: "Building APIs with Express.js",
+                description: "Learn to build scalable and efficient RESTful APIs using Express.js, including middleware integration, routing, and error handling."
+            },
+            {
+                icon: faCodeBranch,
+                title: "Version Control with Git & GitHub",
+                description: "Master Git for version control and collaborate on projects using GitHub, including branching, merging, and pull request workflows."
+            },
+            {
+                icon: faLaptopCode,
+                title: "Full Stack Application Development",
+                description: "Build a complete full-stack application from scratch, integrating MongoDB, Express, React, and Node.js, with a focus on best practices and scalability."
+            },
+            {
+                icon: faLock,
+                title: "Authentication and Authorization",
+                description: "Implement user authentication and authorization using JSON Web Tokens (JWT) and secure data transmission with encryption techniques."
+            },
+            {
+                icon: faCogs,
+                title: "Deployment and Hosting",
+                description: "Learn to deploy MERN applications on platforms like Heroku, Netlify, or AWS, and understand the setup of CI/CD pipelines for seamless updates."
+            },
+            {
+                icon: faTasks,
+                title: "Capstone Project",
+                description: "Work on a real-world project that integrates all aspects of MERN stack development, showcasing your skills in building, testing, and deploying a production-grade application."
+            },
+            {
+                icon: faBriefcase,
+                title: "Placement Preparation",
+                description: "Prepare for the job market with resume building, interview preparation, and understanding the roles and responsibilities of a MERN Stack Developer."
+            },
+        ]
+        ,
+        accordionContent: [
+            {
+                title: 'What is the duration of the MERN Stack program at SocialPrachar?',
+                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to suit different learning paces and schedules.'
+            },
+            {
+                title: 'What topics are covered in the MERN Stack curriculum?',
+                content: 'Topics include MongoDB, Express.js, React.js, Node.js, API integration, authentication, deployment, and real-world project implementation.'
+            },
+            {
+                title: 'Are there any internship or job guarantee options?',
+                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the tech industry.'
+            },
+            {
+                title: 'What are the class formats available (online or classroom)?',
+                content: 'Both online and classroom learning options are available to accommodate the preferences and needs of students.'
+            },
+            {
+                title: 'Is there a certification awarded upon completion?',
+                content: 'Yes, a professional certification is awarded upon successful completion of the program, which enhances your resume and demonstrates your expertise in MERN Stack development.'
+            },
+            {
+                title: 'What are the average salary expectations for program graduates?',
+                content: 'Graduates can expect competitive salaries in the software development field, with opportunities for growth based on their skill level and the roles they secure.'
+            },
+            {
+                title: 'Who are the trainers, and what qualifications do they have?',
+                content: 'Trainers are experienced full-stack developers with a strong background in MERN Stack technologies, providing practical insights and up-to-date industry knowledge.'
+            },
+            {
+                title: 'How does SocialPrachar support non-programming professionals?',
+                content: 'SocialPrachar offers foundational modules to help beginners and non-programmers build the necessary coding skills to transition into the field of web development.'
+            },
+            {
+                title: 'What kind of projects will I work on during the course?',
+                content: 'Projects include building full-stack web applications, CRUD operations with MongoDB, developing RESTful APIs, creating dynamic UIs with React, and deploying applications to production.'
+            },
+            {
+                title: 'How can I register or get more information about upcoming batches?',
+                content: 'You can register through the website or contact the admissions team for detailed information about batch schedules and the enrollment process.'
+            }
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student45 },
+            { id: 2, image: student46 },
+            { id: 3, image: student47 },
+            { id: 4, image: student48 },
+            { id: 5, image: student49 },
+            { id: 6, image: student50 },
+            { id: 7, image: student51 },
+            { id: 8, image: student1 },
+            { id: 9, image: student2 },
+            { id: 10, image: student3 },
+            { id: 11, image: student4 },
+            { id: 12, image: student5 },
+            { id: 13, image: student6 },
+            { id: 14, image: student7 },
+            { id: 15, image: student8 },
+            { id: 16, image: student9 },
+            { id: 17, image: student10 }
+        ],
+        bannerHeader: 'Learn Mern Stack Today',
+        bannerStudentsEnrolled: '2.8k+ Students Enrolled',
+
+    },
+
+    {
+        id: 1,
+        courseID: 3,
+        categoryIndex: 2,
+        tagIndex: 0,
         slug: 'python-full-stack-development-course',
         imageSrc: python,
         careerRoadmap: '/roadmaps/ai-data-scientist.pdf',
@@ -449,8 +768,6 @@ export const data = [
         bannerStudentsEnrolled: '6k+ Students Enrolled',
         timeLineHeading: 'Full Stack Python Developer',
         no_of_ratings: 1,
-        categoryIndex: 1,
-        tagIndex: 0,
         Description: 'Full Stack Python Developers are in high demand across various industries, from startups to tech giants like Google, Amazon, Microsoft, and Facebook. As businesses increasingly rely on web applications, the need for skilled developers who can build and maintain both the frontend and backend has skyrocketed. This comprehensive course covers essential technologies for Full Stack Development, including Frontend Development (HTML, CSS, JavaScript, React.js), Backend Development (Python, Flask, Django, REST APIs), Databases (MySQL, PostgreSQL, MongoDB), Version Control (Git, GitHub), Cloud Deployment (Heroku, AWS), and Testing & Debugging (PyTest, Selenium). By mastering these skills, you will be equipped to develop, deploy, and manage robust, scalable web applications, making you a sought- after professional in the tech industry.',
         moduleContent: [
             {
@@ -769,7 +1086,9 @@ export const data = [
 
     {
         id: 1,
-        courseID: 3,
+        courseID: 4,
+        categoryIndex: 3,
+        tagIndex: 0,
         imageSrc: java,
         careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
         slug: 'java-full-stack-development-course',
@@ -811,8 +1130,6 @@ export const data = [
         rating: 4.7,
         authorImage: authorPhoto,
         no_of_ratings: 2,
-        categoryIndex: 2,
-        tagIndex: 0,
         bannerHeader: 'Learn Full stack Java Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
         timeLineHeading: 'Full Stack Java Developer',
@@ -1164,321 +1481,6 @@ export const data = [
                 content: 'Our program offers a comprehensive curriculum, real-time projects, soft skills training, hackathons, and job placement support, all with a small batch size for focused learning.'
             }
         ],
-    },
-
-    {
-        id: 2,
-        courseID: 4,
-        categoryIndex: 0, // Development
-        tagIndex: 1,      // Web Development
-        slug: 'full-stack-developer-course',
-        courseTitle: 'Development',
-        imageSrc: mern,
-        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
-        certificate: defaultCertificate,
-        TestmonialsCommentsImage1: testmonialsCommentImageFSW,
-        TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
-        Duration: '6 months',
-        students: '2800+ students',
-        text: 'Mern Stack (Full Stack)',
-        rating: 4.3,
-        Header: 'Master Full Stack Java / Python With Mern Stack Course in',
-        popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Mern Stack (Full Stack)' },
-        ],
-        selfQuestioning: 'Starting your Mern Stack Career?',
-        questions: [
-            "Do you want to explore career opportunities in Mern Stack?",
-            "Are you ready to master essential Mern Stack skills in just 180 days?",
-            "Do you want to kickstart your Mern Stack career with 4+ LPA opportunities?"
-        ],
-        courseFor: [
-            {
-                title: 'Fresh Graduates',
-                content: 'Kickstart your career in web development by mastering the MERN stack and building real-world applications.',
-                image: student,
-                alt: 'Student'
-            },
-            {
-                title: 'Experienced IT Professionals',
-                content: 'Enhance your web development skills with the latest MERN stack technologies and stay ahead in the industry.',
-                image: professional,
-                alt: 'Working Professional'
-            },
-            {
-                title: 'Entrepreneurs',
-                content: 'Leverage MERN stack development to build and scale your startup with robust and scalable web applications.',
-                image: business,
-                alt: 'Business Owner'
-            }
-        ],
-        Description: 'The Full Stack Java / python With MERN Stack  (MongoDB, Express.js, React.js, Node.js) is one of the most popular full-stack development frameworks, enabling developers to build robust, scalable, and interactive web applications. This course provides a hands-on learning experience in mastering the MERN Stack. You will gain skills in designing and developing dynamic web applications, building APIs, integrating front-end and back-end development, managing databases, and deploying applications. Key areas of focus include building RESTful APIs, creating interactive user interfaces, managing state with Redux, authenticating users, and deploying applications on platforms like Heroku or Vercel. By the end of this course, you"ll be equipped to develop and deploy modern web applications with the MERN Stack.',
-        moduleContent: [
-            {
-                id: 1,
-                module: "Module 1",
-                title: "Introduction to Full-Stack Development with MERN",
-                details: {
-                    videos: 6,
-                    time: "2 weeks",
-                    descriptions: [
-                        "Overview of the MERN stack and its ecosystem",
-                        "Fundamentals of full-stack development",
-                        "Setting up your development environment"
-                    ]
-                }
-            },
-            {
-                id: 2,
-                module: "Module 2",
-                title: "Frontend Development with React",
-                details: {
-                    videos: 8,
-                    time: "3 weeks",
-                    descriptions: [
-                        "Building modern user interfaces with React",
-                        "State management using React Context and Redux",
-                        "Handling API calls and routing with React Router"
-                    ]
-                }
-            },
-            {
-                id: 3,
-                module: "Module 3",
-                title: "Backend Development with Node.js and Express",
-                details: {
-                    videos: 7,
-                    time: "3 weeks",
-                    descriptions: [
-                        "Introduction to backend development with Node.js",
-                        "Creating RESTful APIs with Express",
-                        "Connecting to databases with MongoDB"
-                    ]
-                }
-            },
-            {
-                id: 4,
-                module: "Module 4",
-                title: "Introduction to Java Programming",
-                details: {
-                    videos: 6,
-                    time: "2 weeks",
-                    descriptions: [
-                        "Getting started with Java and its ecosystem",
-                        "Object-oriented programming concepts in Java",
-                        "Writing and compiling Java applications"
-                    ]
-                }
-            },
-            {
-                id: 5,
-                module: "Module 5",
-                title: "Python Programming for Backend Development",
-                details: {
-                    videos: 7,
-                    time: "3 weeks",
-                    descriptions: [
-                        "Introduction to Python programming",
-                        "Building REST APIs with Flask or FastAPI",
-                        "Interfacing with databases using SQLAlchemy or Django ORM"
-                    ]
-                }
-            },
-            {
-                id: 6,
-                module: "Module 6",
-                title: "Database Design and Management",
-                details: {
-                    videos: 7,
-                    time: "3 weeks",
-                    descriptions: [
-                        "Introduction to relational and non-relational databases",
-                        "Designing efficient database schemas",
-                        "Performing CRUD operations with MongoDB and MySQL"
-                    ]
-                }
-            },
-            {
-                id: 7,
-                module: "Module 7",
-                title: "Full-Stack Application Development",
-                details: {
-                    videos: 8,
-                    time: "4 weeks",
-                    descriptions: [
-                        "Building a full-stack application with MERN and Java/Python backend",
-                        "Integrating frontend and backend components",
-                        "Deploying applications to cloud platforms (e.g., AWS, Heroku)"
-                    ]
-                }
-            },
-            {
-                id: 8,
-                module: "Module 8",
-                title: "Advanced Topics in Full-Stack Development",
-                details: {
-                    videos: 7,
-                    time: "3 weeks",
-                    descriptions: [
-                        "Implementing authentication and authorization",
-                        "Optimizing performance and scalability",
-                        "Best practices for debugging and testing applications"
-                    ]
-                }
-            },
-            {
-                id: 9,
-                module: "Module 9",
-                title: "Capstone Project & Certification",
-                details: {
-                    videos: 7,
-                    time: "1 month",
-                    descriptions: [
-                        "Building a comprehensive full-stack application with MERN and Java/Python",
-                        "Implementing real-world use cases and challenges",
-                        "Preparing for certification and showcasing your final project"
-                    ]
-                }
-            }
-        ],
-        timeLineHeading: 'Mern Stack',
-        levelcardIndex: [
-            {
-                icon: faCode,
-                title: "Introduction to MERN Stack",
-                description: "Learn the core concepts of the MERN stack, including MongoDB, Express.js, React.js, and Node.js, and understand how they work together in modern web applications."
-            },
-            {
-                icon: faReact,
-                title: "Frontend Development with React",
-                description: "Develop dynamic and responsive user interfaces using React, including state management with hooks, component lifecycles, and best practices for performance optimization."
-            },
-            {
-                icon: faChartLine,
-                title: "State Management with Redux",
-                description: "Dive deep into Redux for managing application state in larger React applications, including creating reducers, actions, and middleware."
-            },
-            {
-                icon: faBook,
-                title: "Learn Complete Java/Python Course",
-                description: "Master programming fundamentals and advanced concepts in Java or Python, covering topics like OOP, data structures, algorithms, multithreading, and frameworks like Spring Boot or Django."
-            },
-            {
-                icon: faSyncAlt,
-                title: "Connecting Frontend and Backend",
-                description: "Learn to connect the React frontend with the Express backend through RESTful APIs, including data fetching, form handling, and state synchronization."
-            },
-            {
-                icon: faDatabase,
-                title: "Database Management with MongoDB",
-                description: "Master MongoDB for storing and managing data, including schema design, CRUD operations, indexing, and using the Mongoose library for seamless integration."
-            },
-            {
-                icon: faNodeJs,
-                title: "Backend Development with Node.js",
-                description: "Understand the fundamentals of Node.js for server-side programming, asynchronous operations, and integrating with third-party libraries and APIs."
-            },
-            {
-                icon: faServer,
-                title: "Building APIs with Express.js",
-                description: "Learn to build scalable and efficient RESTful APIs using Express.js, including middleware integration, routing, and error handling."
-            },
-            {
-                icon: faCodeBranch,
-                title: "Version Control with Git & GitHub",
-                description: "Master Git for version control and collaborate on projects using GitHub, including branching, merging, and pull request workflows."
-            },
-            {
-                icon: faLaptopCode,
-                title: "Full Stack Application Development",
-                description: "Build a complete full-stack application from scratch, integrating MongoDB, Express, React, and Node.js, with a focus on best practices and scalability."
-            },
-            {
-                icon: faLock,
-                title: "Authentication and Authorization",
-                description: "Implement user authentication and authorization using JSON Web Tokens (JWT) and secure data transmission with encryption techniques."
-            },
-            {
-                icon: faCogs,
-                title: "Deployment and Hosting",
-                description: "Learn to deploy MERN applications on platforms like Heroku, Netlify, or AWS, and understand the setup of CI/CD pipelines for seamless updates."
-            },
-            {
-                icon: faTasks,
-                title: "Capstone Project",
-                description: "Work on a real-world project that integrates all aspects of MERN stack development, showcasing your skills in building, testing, and deploying a production-grade application."
-            },
-            {
-                icon: faBriefcase,
-                title: "Placement Preparation",
-                description: "Prepare for the job market with resume building, interview preparation, and understanding the roles and responsibilities of a MERN Stack Developer."
-            },
-        ]
-        ,
-        accordionContent: [
-            {
-                title: 'What is the duration of the MERN Stack program at SocialPrachar?',
-                content: 'The program duration is flexible, with options for short-term certification courses and comprehensive programs designed to suit different learning paces and schedules.'
-            },
-            {
-                title: 'What topics are covered in the MERN Stack curriculum?',
-                content: 'Topics include MongoDB, Express.js, React.js, Node.js, API integration, authentication, deployment, and real-world project implementation.'
-            },
-            {
-                title: 'Are there any internship or job guarantee options?',
-                content: 'Yes, SocialPrachar provides job placement support and internship opportunities to help students gain practical experience and secure positions in the tech industry.'
-            },
-            {
-                title: 'What are the class formats available (online or classroom)?',
-                content: 'Both online and classroom learning options are available to accommodate the preferences and needs of students.'
-            },
-            {
-                title: 'Is there a certification awarded upon completion?',
-                content: 'Yes, a professional certification is awarded upon successful completion of the program, which enhances your resume and demonstrates your expertise in MERN Stack development.'
-            },
-            {
-                title: 'What are the average salary expectations for program graduates?',
-                content: 'Graduates can expect competitive salaries in the software development field, with opportunities for growth based on their skill level and the roles they secure.'
-            },
-            {
-                title: 'Who are the trainers, and what qualifications do they have?',
-                content: 'Trainers are experienced full-stack developers with a strong background in MERN Stack technologies, providing practical insights and up-to-date industry knowledge.'
-            },
-            {
-                title: 'How does SocialPrachar support non-programming professionals?',
-                content: 'SocialPrachar offers foundational modules to help beginners and non-programmers build the necessary coding skills to transition into the field of web development.'
-            },
-            {
-                title: 'What kind of projects will I work on during the course?',
-                content: 'Projects include building full-stack web applications, CRUD operations with MongoDB, developing RESTful APIs, creating dynamic UIs with React, and deploying applications to production.'
-            },
-            {
-                title: 'How can I register or get more information about upcoming batches?',
-                content: 'You can register through the website or contact the admissions team for detailed information about batch schedules and the enrollment process.'
-            }
-        ],
-        studentPlacedImages: [
-            { id: 1, image: student45 },
-            { id: 2, image: student46 },
-            { id: 3, image: student47 },
-            { id: 4, image: student48 },
-            { id: 5, image: student49 },
-            { id: 6, image: student50 },
-            { id: 7, image: student51 },
-            { id: 8, image: student1 },
-            { id: 9, image: student2 },
-            { id: 10, image: student3 },
-            { id: 11, image: student4 },
-            { id: 12, image: student5 },
-            { id: 13, image: student6 },
-            { id: 14, image: student7 },
-            { id: 15, image: student8 },
-            { id: 16, image: student9 },
-            { id: 17, image: student10 }
-        ],
-        bannerHeader: 'Learn Mern Stack Today',
-        bannerStudentsEnrolled: '2.8k+ Students Enrolled',
-
     },
 
     {
@@ -1838,7 +1840,7 @@ export const data = [
                 alt: 'Business Owner'
             }
         ],
-        Description: 'Social Prachar ranked as #1 Best Digital Marketing Course Training Institute in Hyderabad with 15,000+ Success Stories since 2014. We Provide 100% placement Guarantee for all our Trainees with Top MNCs & StartUps. Become Digital Marketing Expert in less than 4 months. Enroll now for the most Advanced Digital Marketing Training Program.',
+        Description: "Social Prachar is ranked as the #1 Best Artificial Intelligence Training Institute in Hyderabad, with 15,000+ success stories since 2014. We offer a 100% placement guarantee for all our trainees with top MNCs and startups. Master AI concepts, including machine learning, deep learning, and generative AI, in less than 4 months. Enroll now in the most advanced AI training program and accelerate your career in Artificial Intelligence!",
         moduleContent: [
             {
                 id: 1,
@@ -2137,7 +2139,7 @@ export const data = [
 
     {
         id: 2,
-        courseID: 7,
+        courseID: 8,
         categoryIndex: 6, // Development
         tagIndex: 1,      // Web Development
         slug: 'digital-marketing-course-training-institute-hyderabad',
@@ -2442,8 +2444,322 @@ export const data = [
 
     {
         id: 2,
-        courseID: 8,
-        categoryIndex: 3, // Development
+        courseID: 7,
+        categoryIndex: 8,
+        tagIndex: 1,
+        slug: 'generative-ai-course-training-institute-hyderabad',
+        courseTitle: 'Generative AI Development',
+        imageSrc: AI,
+        careerRoadmap: '/textTypeRoadmaps/DataScience&AI.pdf',
+        certificate: defaultCertificate,
+        TestmonialsCommentsImage1: testmonialsCommentImageDS,
+        TestmonialsCommentsImage2: testmonialsCommentImageSSDS,
+        Duration: '4 months',
+        students: '1600+ students',
+        text: 'Generative AI',
+        rating: 4.3,
+        Header: 'Learn Generative AI Course & Become a Certified Professional in',
+        popUpDropDownCourses: [
+            { dropDownid: 0, courseName: 'Generative AI' },
+        ],
+        selfQuestioning: 'Starting your Generative AI Career?',
+        questions: [
+            "Do you want to explore career opportunities in Generative AI ?",
+            "Are you ready to master essential Generative AI skills in just 120 days?",
+            "Do you want to kickstart your Generative AI career with 4+ LPA opportunities?"
+        ],
+        courseFor: [
+            {
+                title: 'Fresh Graduates',
+                content: 'Kickstart your Generative AI journey by mastering large language models, prompt engineering, and AI-powered content creation.',
+                image: student,
+                alt: 'Student'
+            },
+            {
+                title: 'Experienced IT Professionals',
+                content: 'Expand your expertise with Generative AI, including diffusion models, transformers, and AI-driven automation.',
+                image: professional,
+                alt: 'Working Professional'
+            },
+            {
+                title: 'Entrepreneurs',
+                content: 'Leverage Generative AI to create innovative applications, automate content generation, and enhance customer engagement.',
+                image: business,
+                alt: 'Business Owner'
+            }
+        ],
+        Description: "Social Prachar is ranked as the #1 Best Generative AI Training Institute in Hyderabad, with 15,000+ success stories since 2014. We offer a 100% placement guarantee for all our trainees with top MNCs and startups. Master cutting-edge Generative AI concepts, including deep learning, neural networks, NLP, and AI model deployment, in less than 4 months. Enroll now in the most advanced Generative AI training program and unlock new career opportunities in Artificial Intelligence!",
+        moduleContent: [
+            {
+                id: 1,
+                module: " Module 1",
+                title: "Fundamentals of Generative AI and LLMs ",
+                details: {
+                    videos: 6,
+                    time: '4 weeks',
+                    descriptions: [
+                        "Evolution and fundamentals of AI/ML",
+                        "Large Language Models architecture",
+                        "Prompt engineering and optimization",
+                        "LLM applications and use cases",
+                        "ChatGPT (Prompt engineering)",
+                        "Claude (Analysis and coding)",
+                        "Langchain (LLM framework)",
+                        "GitHub Copilot (Code assistance)",
+                        "OpenAI Playground (API testing)"
+                    ]
+                }
+            },
+            {
+                id: 2,
+                module: "Module 2",
+                title: "Multi-Modal AI ",
+                details: {
+                    videos: 7,
+                    time: "3 weeks",
+                    descriptions: [
+                        "Image generation and manipulation",
+                        "Audio and speech processing",
+                        "Video generation and editing",
+                        "Multi-modal integration",
+                        "Midjourney (Image generation)",
+                        "DALL-E 3 (Image creation)",
+                        "ElevenLabs (Voice synthesis)",
+                        "Runway (Video generation)",
+                        "D-ID (Digital avatars)"
+                    ]
+                }
+            },
+            {
+                id: 3,
+                module: "Module 3",
+                title: "AI Automation and Productivity ",
+                details: {
+                    videos: 6,
+                    time: "4 weeks",
+                    descriptions: [
+                        " Personal task automation",
+                        "Business process automation",
+                        "Content automation",
+                        "Workflow optimization",
+                        " Zapier(Workflow automation)",
+                        "Make.com(Complex automation)",
+                        " Beautiful.ai(Presentations)",
+                        " TextCortex(Content automation)",
+                        "Notion AI(Documentation)"
+                    ]
+                }
+            },
+            {
+                id: 4,
+                module: "Module 4",
+                title: ": AI Agents Implementation ",
+                details: {
+                    videos: 8,
+                    time: "3 weeks",
+                    descriptions: [
+                        "AI agent fundamentals,Agent development",
+                        "Multi - agent systems, Future trends",
+                        " AutoGPT(Agent development), LangChain(Framework) ",
+                        " Fixie.ai(Development platform)",
+                        " SuperAGI(Infrastructure)",
+                        "Chipp.ai(Marketplace)"
+                    ]
+                }
+            },
+            {
+                id: 5,
+                module: "Module 5",
+                title: ": AI App Building",
+                details: {
+                    videos: 8,
+                    time: "4 weeks",
+                    descriptions: [
+                        "App planning and architecture",
+                        "Frontend development with AI",
+                        " Backend integration,Deployment and scaling ",
+                        " Streamlit (App development),",
+                        " Vercel AI SDK (Integration)",
+                        "Bubble.io (No-code),Gradio (UI creation)",
+                        "Retool (Internal tools)"
+                    ]
+                }
+            },
+            {
+                id: 6,
+                module: "Module 6",
+                title: "Domain Applications & Career",
+                details: {
+                    videos: 8,
+                    time: "4 weeks",
+                    descriptions: [
+                        "Marketing & Sales - Campaign automation, Customer analytics, Content creation, Lead generation",
+                        "Finance & Banking - Risk assessment, Investment analysis, Fraud detection, Automated reporting",
+                        "Education - Content generation, Student support, Assessment automation, Learning analytics",
+                        "Healthcare - Patient care automation, Administrative tasks, Medical analysis, Research assistance",
+                        " Manufacturing - Production planning, Quality control, Supply chain optimization, Predictive maintenance",
+                    ]
+                }
+            },
+            {
+                id: 7,
+                module: "Module 7",
+                title: "Capstone Project",
+                details: {
+                    videos: 8,
+                    time: "4 weeks",
+                    descriptions: [
+                        "Students can demonstrate their competencies through either a single development effort (Capstone Project) or a series of mini-projects (Learn by Doing Assignments).",
+                        "Project Options:",
+                        " AI-Powered Business Solution, Customer Service Automation Suite",
+                        " Smart Document Processing System, AI-Powered Recruitment Assistant",
+                        "Multi-Modal Content Creation Suite, AI Agent Ecosystem",
+                        "Industry-Specific Application."
+                    ]
+                }
+            },
+
+        ],
+        levelcardIndex: [
+            {
+                icon: faBrain,
+                title: "Introduction to Generative AI",
+                description: "Understand the fundamentals of Generative AI, its evolution, applications, and impact across industries."
+            },
+            {
+                icon: faCogs,
+                title: "Machine Learning & Deep Learning Basics",
+                description: "Learn core ML and deep learning principles, including neural networks, supervised, and unsupervised learning."
+            },
+            {
+                icon: faProjectDiagram,
+                title: "Neural Networks & Transformers",
+                description: "Dive into deep learning architectures, including CNNs, RNNs, GANs, and transformers like GPT and BERT."
+            },
+            {
+                icon: faPalette,
+                title: "Text Generation with NLP",
+                description: "Master natural language processing techniques for text generation using LLMs like ChatGPT and T5."
+            },
+            {
+                icon: faImages,
+                title: "Image & Video Generation",
+                description: "Explore AI-driven image and video synthesis using GANs, Stable Diffusion, and tools like DALL·E and Midjourney."
+            },
+            {
+                icon: faMusic,
+                title: "AI in Music & Audio Generation",
+                description: "Learn how AI generates music, speech, and soundscapes with models like OpenAI's Jukebox and Google’s WaveNet."
+            },
+            {
+                icon: faCloud,
+                title: "Generative AI in Cloud & APIs",
+                description: "Deploy and integrate generative AI models using cloud platforms like OpenAI API, AWS Bedrock, and Google Vertex AI."
+            },
+            {
+                icon: faRobot,
+                title: "AI Chatbots & Virtual Assistants",
+                description: "Build intelligent AI-powered chatbots with NLP frameworks and tools like Dialogflow and Rasa."
+            },
+            {
+                icon: faCode,
+                title: "Prompt Engineering & Fine-Tuning Models",
+                description: "Learn advanced prompting techniques and fine-tune AI models for specific business use cases."
+            },
+            {
+                icon: faShieldAlt,
+                title: "Ethics & Bias in Generative AI",
+                description: "Understand AI bias, ethical concerns, and responsible AI practices for transparent and fair AI solutions."
+            },
+            {
+                icon: faTasks,
+                title: "Hands-on AI Project Development",
+                description: "Work on real-world generative AI projects, including AI art, text-to-image generation, and AI-assisted content creation."
+            },
+            {
+                icon: faUserGraduate,
+                title: "Career in Generative AI",
+                description: "Get expert guidance on AI job roles, resume building, interview prep, and leveraging AI skills for career growth."
+            }
+        ],
+        accordionContent: [
+            {
+                title: 'What is the duration of the Generative AI program at SocialPrachar?',
+                content: 'The program duration is flexible, offering both short-term certification courses and comprehensive programs designed to fit different learning paces and career goals.'
+            },
+            {
+                title: 'What topics are covered in the Generative AI curriculum?',
+                content: 'The curriculum includes deep learning, transformers, LLMs, text and image generation, GANs, diffusion models, AI ethics, and real-world applications of Generative AI.'
+            },
+            {
+                title: 'Are there any internship or job placement opportunities?',
+                content: 'Yes, SocialPrachar offers job placement assistance, internships, and networking opportunities to help students secure roles in the AI industry.'
+            },
+            {
+                title: 'What are the available learning formats (online or classroom)?',
+                content: 'We offer both online and in-person classroom training, allowing students to choose the format that best suits their learning style.'
+            },
+            {
+                title: 'Do I receive a certification upon completion?',
+                content: 'Yes, a professional certification is awarded upon successful completion, helping to validate your expertise in Generative AI and enhance your career prospects.'
+            },
+            {
+                title: 'What are the average salary expectations for graduates?',
+                content: 'Generative AI professionals can expect competitive salaries, with earnings depending on expertise, project experience, and job roles in the AI industry.'
+            },
+            {
+                title: 'Who are the instructors, and what are their qualifications?',
+                content: 'Our trainers are industry experts and AI professionals with deep experience in building and deploying generative AI models across various domains.'
+            },
+            {
+                title: 'Can non-technical professionals enroll in this program?',
+                content: 'Yes, we provide foundational modules and hands-on training to help beginners and non-technical learners transition smoothly into the field of Generative AI.'
+            },
+            {
+                title: 'What projects will I work on during the course?',
+                content: 'Projects include fine-tuning LLMs, developing AI-generated content, building text-to-image applications, chatbot creation, and deploying generative AI models in real-world scenarios.'
+            },
+            {
+                title: 'How can I enroll or get more details about the course?',
+                content: 'You can register on our website or contact our admissions team for batch schedules, course details, and enrollment guidance.'
+            }
+        ],
+        studentPlacedImages: [
+            { id: 1, image: student25 },
+            { id: 2, image: student26 },
+            { id: 3, image: student27 },
+            { id: 4, image: student28 },
+            { id: 5, image: student29 },
+            { id: 6, image: student30 },
+            { id: 7, image: student31 },
+            { id: 8, image: student32 },
+            { id: 9, image: student33 },
+            { id: 11, image: student15 },
+            { id: 12, image: student16 },
+            { id: 13, image: student17 },
+            { id: 14, image: student18 },
+            { id: 15, image: student19 },
+            { id: 17, image: student21 },
+            { id: 18, image: student22 },
+            { id: 19, image: student23 },
+            { id: 20, image: student24 },
+            { id: 21, image: student37 },
+            { id: 22, image: student38 },
+            { id: 23, image: student39 },
+            { id: 24, image: student40 },
+            { id: 25, image: student41 },
+            { id: 26, image: student42 },
+            { id: 27, image: student44 },
+        ],
+        bannerHeader: 'Learn Generative AI Today',
+        bannerStudentsEnrolled: '6k+ Students Enrolled',
+
+    },
+
+    {
+        id: 2,
+        courseID: 9,
+        categoryIndex: 4, // Development
         tagIndex: 1,      // Web Development
         slug: 'data-analytics-course-training-hyderabad',
         courseTitle: 'Data Science',
@@ -2728,9 +3044,9 @@ export const data = [
 
     {
         id: 2,
-        courseID: 9,
-        categoryIndex: 8, // Development
-        tagIndex: 3,      // Web Development
+        courseID: 10,
+        categoryIndex: 9, // Development
+        tagIndex: 2,      // Web Development
         slug: 'snowflake-training-in-hyderabad',
         courseTitle: 'Cloud',
         imageSrc: SnowFlake,
@@ -3063,9 +3379,9 @@ export const data = [
 
     {
         id: 2,
-        courseID: 10,
-        categoryIndex: 9,
-        tagIndex: 3,
+        courseID: 11,
+        categoryIndex: 10,
+        tagIndex: 2,
         slug: 'salesforce-course',
         courseTitle: 'Cloud',
         imageSrc: salesForce,
@@ -3395,5 +3711,6 @@ export const data = [
         bannerStudentsEnrolled: '2.7k+ Students Enrolled',
 
     },
+    
 
 ];

@@ -16,7 +16,7 @@ const EnrollButton = ({ label, courseID }) => {
         <span> {label}</span>
       </button>
 
-      {isPopupVisible && <SignInForm onClose={togglePopup} courseID={courseID} />}
+      {isPopupVisible && <SignInForm onClose={togglePopup} courseID={courseID} actionType="Enroll Now"/>}
     </div>
   );
 };

@@ -1,18 +1,17 @@
 import React from 'react';
+import SubscriptionSteps from './subscriptionSteps';
 
 const ThirdPart = () => {
     return (
         <>
 
             <div className='text-center' style={{ background: "linear-gradient(to top, rgb(85, 60, 223) 5%, rgb(255, 255, 255) 100%)", }}>
-                <h3 className="fw-bold">Your path forward starts here</h3>
-                <p className="text-muted">
-                    Find exactly what you need to get anywhere you want to go in school, at work, and in life.
-                    It all starts with All Apps.
-                </p>
 
+                <div>
+                    <SubscriptionSteps/>
+                </div>
                 <div className="container text-start mt-5 mb-3 ">
-                    <div className="card p-4 mx-auto shadow-lg rounded-4" style={{ maxWidth: "450px",border:'1px solid #553cdf' }}>
+                    <div className="card p-4 mx-auto shadow-lg rounded-4" style={{ maxWidth: "450px", border: '1px solid #553cdf' }}>
                         <div className="d-flex justify-content-end">
                             <p
                                 className="ms-auto rounded-3"
@@ -57,7 +56,7 @@ const ThirdPart = () => {
                                 </React.Fragment>
                             ))}
                         </ul>
-                       
+
                     </div>
                 </div>
                 <button className="btn btn-dark px-4 mt-3 rounded-pill mb-5">View all pricing</button>

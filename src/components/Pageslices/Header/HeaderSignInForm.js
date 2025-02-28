@@ -4,7 +4,7 @@ import { data } from './../../Cards/CardData';
 import { useNavigate, useParams } from 'react-router-dom';
 import Loading from '../../extraComponents/loading';
 
-const HeaderSignInForm = ({ onClose, courseID }) => {
+const HeaderSignInForm = ({ onClose, courseID, actionType }) => {
     const { slug } = useParams();
     const [card, setCard] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
@@ -18,6 +18,7 @@ const HeaderSignInForm = ({ onClose, courseID }) => {
         mode: '',
         pageUrl: window.location.href,
         slug: slug || "",
+        actionType: actionType || ""
     });
 
 
@@ -26,11 +27,11 @@ const HeaderSignInForm = ({ onClose, courseID }) => {
         setCard(cardDetails);
     }, [slug]);
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwX-GV8RYc7RETdiIbdrYXRrV4_gXIpV2v7eC3L4GY2Inc5DijgMLQbZIq68wMLg3Av/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyiFH6YnpFoN2CeaCSOIB5Uv0667e_H3u183xrWTeK95GHV7iUBO1TPn40C6ydXYME2/exec';
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { fullName, email, phone, course, mode, pageUrl, slug } = formData;
+        const { fullName, email, phone, actionType, course, mode, pageUrl, slug } = formData;
 
         if (!fullName || !email || !phone || !course || !mode) {
             alert('Please fill in all required fields.');
@@ -44,6 +45,7 @@ const HeaderSignInForm = ({ onClose, courseID }) => {
             formPayload.append('fullName', formData.fullName);
             formPayload.append('email', formData.email);
             formPayload.append('phone', formData.phone);
+            formPayload.append('actionType', actionType);
             formPayload.append('course', formData.course);
             formPayload.append('mode', formData.mode);
             formPayload.append('pageUrl', pageUrl);

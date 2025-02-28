@@ -9,18 +9,55 @@ const Accordion = () => {
     };
 
     const faqs = [
-        { question: "Is Adobe Creative Cloud free for college students?", answer: "Adobe offers student discounts but is not entirely free." },
-        { question: "How do I get a student discount on Adobe Creative Cloud?", answer: "You can apply for a student discount on Adobe's website by verifying your student status." },
-        { question: "How does Adobe verify student status?", answer: "Adobe verifies student status using an official school email or document submission." },
-        { question: "How long does an Adobe Creative Cloud student membership last?", answer: "The student membership lasts as long as you provide proof of student status, typically for one year at a time." }
+        {
+            question: "What is included in the SocialPrachar subscription?",
+            answer: "Our subscription gives you access to multiple career-focused courses, live and recorded sessions, hands-on projects, internships, AI-powered career tools, and expert mentorship."
+        },
+        {
+            question: "How does the EMI plan work?",
+            answer: "You can start learning with an EMI as low as ₹50 per day. We offer flexible payment options to make learning affordable."
+        },
+        {
+            question: "Can I access multiple courses under one subscription?",
+            answer: "Yes! Our plans include a variety of courses such as Full Stack Development, Data Science, AI, Cloud Computing, Digital Marketing, and DevOps."
+        },
+        {
+            question: "Are the courses live or recorded?",
+            answer: "We offer both live training (online/classroom) and recorded sessions, depending on your plan. You can choose what suits your schedule."
+        },
+        {
+            question: "Do I get a certificate after completing a course?",
+            answer: "Yes! Upon successful completion of a course, you will receive an industry-recognized certification from SocialPrachar."
+        },
+        {
+            question: "Will I get internship opportunities?",
+            answer: "Yes, our Career Growth Pack & Ultimate Job-Ready Pack include internships where you gain hands-on experience working on real projects."
+        },
+        {
+            question: "What kind of career support is provided?",
+            answer: "We offer resume building, AI-powered mock interviews, job assistance, and mentorship to help you land a high-paying job."
+        },
+        {
+            question: "Can working professionals take these courses?",
+            answer: "Absolutely! Our courses are designed for freshers, working professionals, and career switchers, with flexible learning options."
+        },
+        {
+            question: "What if I want a custom learning plan?",
+            answer: "We offer a Custom Learning Pack where you can select courses as per your career goals and learning preferences."
+        },
+        {
+            question: "How do I enroll in a subscription plan?",
+            answer: "Click the 'Enroll Now' button, select your preferred plan, complete the payment, and start your learning journey instantly! 🚀"
+        }
     ];
+
 
     return (
         <>
         
           <div className="bg-light py-5">
-                <div className="container my-4">
-                    <h3 className="text-center">Question ...? We have Answers.</h3>
+                <div className="container my-4 col-md-8">
+                    <h3 className="text-center py-4"> Frequently Asked Questions (FAQs) – SocialPrachar Subscription Plans</h3>
                     {faqs.map((item, index) => (
                         <div key={index} className="border-bottom">
                             <button
@@ -32,7 +69,7 @@ const Accordion = () => {
                                 {openIndex === index ? <FaMinus /> : <FaPlus />}
                             </button>
                             {openIndex === index && (
-                                <div className="py-2 px-3 text-muted">{item.answer}</div>
+                                <div className="py-2 px-3 py-3 text-muted">{item.answer}</div>
                             )}
                         </div>
                     ))}

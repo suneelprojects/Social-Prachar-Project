@@ -30,22 +30,17 @@ const Button = () => {
         }
         setLoading(true);
 
+        // Create FormData instance
         const formDataEncoded = new FormData();
         Object.entries(formData).forEach(([key, value]) => {
             formDataEncoded.append(key, value);
         });
-        formDataEncoded.append('sheetName', 'careerWoskshop');
-
-        const url = new URL("https://script.google.com/macros/s/AKfycbwq2ZtrNBCozKx_A23Ab4k02yCsxt5v1Wx7OQsY2RRzECvEnieV98bYm5rmWch0ZjcIag/exec");
-        url.searchParams.append('course', formData.course);
-        url.searchParams.append('name', formData.name);
-        url.searchParams.append('email', formData.email);
-        url.searchParams.append('phone', formData.phone);
+        formDataEncoded.append('sheetName', 'CareerWorkshop');
 
         try {
-            // Show spinner
-            const response = await fetch(url.toString(), {
+            const response = await fetch("https://script.google.com/macros/s/AKfycbwq2ZtrNBCozKx_A23Ab4k02yCsxt5v1Wx7OQsY2RRzECvEnieV98bYm5rmWch0ZjcIag/exec", {
                 method: "POST",
+                body: formDataEncoded,
             });
 
             if (!response.ok) {
@@ -54,7 +49,6 @@ const Button = () => {
 
             const data = await response.json();
             console.log("Form submitted successfully:", data);
-            // Show success alert after the form is successfully submitted
             alert('Thank you for registering! Your form has been submitted successfully.');
 
             setShowForm(false); // Hide the form after submission
@@ -62,9 +56,10 @@ const Button = () => {
             console.error("Error submitting form:", error);
             alert('There was an error submitting your form. Please try again later.');
         } finally {
-            setLoading(false); // Hide spinner after submission
+            setLoading(false);
         }
     };
+
 
 
     const validateForm = (data) => {

@@ -193,7 +193,7 @@ const Headerpart = (courseID) => {
                         />
                     )}
                     <div className={style.EnrollButtonContent}>
-                        {card && !isMobile && <Enrollbutton label="Enroll Now" courseID={card.id} className={style.EnrollButton} />}
+                        {card && !isMobile && <Enrollbutton label="Enroll Now" courseID={card.id} className={style.EnrollButton} actionType="Button:Enroll Now" />}
                         <span><img src={FollowerImg} alt="Follower group" className={style.FollowerImage} /></span>
                         <div className={style.reviewContainer}>
                             <div className={style.FollowerStars}>
@@ -233,7 +233,7 @@ const Headerpart = (courseID) => {
                     <button className={`btn btn-primary fw-bold ${Buttonstyle.shinebtn}`} onClick={togglePopup}>
                         Download Roadmap
                     </button>
-                    {isPopupVisible && <HeaderSignInForm onClose={togglePopup} courseID={courseID} />}
+                    {isPopupVisible && <HeaderSignInForm onClose={togglePopup} courseID={courseID} actionType="Download Roadmap"/>}
                 </div>
                 <Testmonials />
             </div>

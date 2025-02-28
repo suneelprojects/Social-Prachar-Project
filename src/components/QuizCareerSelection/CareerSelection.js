@@ -253,6 +253,7 @@ const CareerSelection = () => {
     };
 
     const sheetURL = "https://script.google.com/macros/s/AKfycbwq2ZtrNBCozKx_A23Ab4k02yCsxt5v1Wx7OQsY2RRzECvEnieV98bYm5rmWch0ZjcIag/exec";
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -272,10 +273,16 @@ const CareerSelection = () => {
         }
 
         setLoading(true);
+
+        // Create FormData object
+        const formDataEncoded = new FormData();
+        formDataEncoded.append('name', formData.name);
+        formDataEncoded.append('phone', formData.mobile);
+        formDataEncoded.append('sheetName', 'careerQuiz');  // Specifying the sheet name
+
         fetch(sheetURL, {
             method: 'POST',
-            body: new URLSearchParams({ name: formData.name, phone: formData.mobile }),
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: formDataEncoded
         })
             .then((response) => {
                 if (response.ok) {
@@ -291,7 +298,6 @@ const CareerSelection = () => {
             })
             .finally(() => setLoading(false));
     };
-
 
 
 

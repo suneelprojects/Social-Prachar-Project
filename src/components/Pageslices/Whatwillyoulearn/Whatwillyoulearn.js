@@ -5,12 +5,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 import backgroundImage from '../../../assets/AssetsOfDetailsPage/background.png';
 import { useParams } from 'react-router-dom';
+import Buttonstyle from '../Enrollbutton/Enrollbutton.module.css';
+import SignInForm from '../Enrollbutton/PopupSignInForm';
 
 const colors = ["#f0f8ff", "#f5f5dc", "#ffe4e1", "#e6e6fa", "#ffefd5", "#d3ffce", "#e6e6fa", "#ffefd5", "#d3ffce"];
 
 const Whatwillyoulearn = () => {
     const { slug } = useParams();
     const [card, setCard] = useState(null);
+    const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+    const togglePopup = () => {
+        setIsPopupVisible(!isPopupVisible);
+    };
+
 
     useEffect(() => {
         const cardDetails = data.find(item => item.slug === slug);
@@ -78,6 +86,12 @@ const Whatwillyoulearn = () => {
                         </article>
                     ))}
                 </section>
+
+                <div className='p-5'>
+                    <h2>Skill Up Now, Pay in Easy Installments! – <span style={{ color: '#ff5003' }}>₹2,999/month EMIs with 0% Interest </span></h2>
+                    <button className={`${Buttonstyle.shinebtn} btn`}onClick={togglePopup}>Get Details </button>
+                    {isPopupVisible && <SignInForm onClose={togglePopup} actionType="Button:pricing Details" />}
+                </div>
             </div>
         </div>
     );

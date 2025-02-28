@@ -15,10 +15,11 @@ const CourseAccordion = React.lazy(() => import('../Pageslices/AccordianQuestion
 
 const validSlugs = ['data-science', 
     'python-full-stack-development-course',
-    'java - full - stack - development - course',
+    'java-full-stack-development-course',
     'full-stack-developer-course',
     'awsdevopscourse',
     'artificial-intelligence-course-training-institute-in-hyderabad',
+    'generative-ai-course-training-institute-hyderabad',
     'digital-marketing-course-training-institute-hyderabad',
     'data-analytics-course-training-hyderabad',
     'snowflake-training-in-hyderabad',

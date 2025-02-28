@@ -58,7 +58,7 @@ const routes = [
             <Route path="career-quiz" element={<CareerSelection />} />,
             <Route path="course/:courseID" element={<CourseAccordion />} />,
             <Route path="thank-you" element={<ThankyouPage />} />,
-            <Route path="*" element={<PageNotFound />} /> 
+            // <Route path="*" element={<PageNotFound />} /> 
 ];
 
 

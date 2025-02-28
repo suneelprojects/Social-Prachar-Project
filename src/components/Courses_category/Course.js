@@ -10,43 +10,44 @@ import { useLocation } from 'react-router-dom';
 import Footer from '../footer/footer';
 
 export const items = [
+    'Data Science',
     'MERN Stack Development',
     'Python Development',
     'Java Development',
     'Analytics',
-    'Data Science',
     'AWS DevOps',
     'Digital Marketing',
     'Artificial Intelligence',
+    'Generative AI',
     'SnowFlake Course',
     'SalesForce',
 ];
 
-export const Tag = ['Web Development', 'Job Guarantee Programs', 'Marketing', 'Cloud',];
+export const Tag = ['Web Development', 'Job Guarantee Programs', 'Cloud',];
 let categoryIndex = 0;
 let tagIndex = 0;
-const filterItems = (items, categoryIndex, tagIndex) => {
-    // Define categories mapping for each tag
-    const categories = [
-        ['Python Development', 'Java Development', 'MERN Stack Development'],
-        ['Digital Marketing'],
-        ['AWS DevOps', 'SalesForce','SnowFlake Course'],
-        ['Analytics', 'Data Science', 'Artificial Intelligence'],
-    ];
-    const selectedTag = Tag[tagIndex] || '';
-    if (selectedTag === 'Web Development' || selectedTag === 'Regular Programs') {
-        categoryIndex = 0;
-    }
-    const selectedCategoryItems = categories[categoryIndex] || [];
-    console.log(`Filtering for category: ${selectedTag} (${selectedCategoryItems.join(', ')})`);
-    const filteredItems = items.filter(item =>
-        selectedCategoryItems.includes(item)
-    );
+// const filterItems = (items, categoryIndex, tagIndex) => {
+//     // Define categories mapping for each tag
+//     const categories = [
+//         ['Python Development', 'Java Development', 'MERN Stack Development'],
+//         ['Digital Marketing'],
+//         ['AWS DevOps', 'SalesForce','SnowFlake Course'],
+//         ['Analytics', 'Data Science', 'Artificial Intelligence','Generative AI'],
+//     ];
+//     const selectedTag = Tag[tagIndex] || '';
+//     if (selectedTag === 'Web Development' || selectedTag === 'Regular Programs') {
+//         categoryIndex = 0;
+//     }
+//     const selectedCategoryItems = categories[categoryIndex] || [];
+//     console.log(`Filtering for category: ${selectedTag} (${selectedCategoryItems.join(', ')})`);
+//     const filteredItems = items.filter(item =>
+//         selectedCategoryItems.includes(item)
+//     );
 
-    return filteredItems;
-};
-const filteredResults = filterItems(items, categoryIndex, tagIndex);
-console.log(filteredResults);
+//     return filteredItems;
+// };
+// const filteredResults = filterItems(items, categoryIndex, tagIndex);
+// console.log(filteredResults);
 
 
 const Course = () => {

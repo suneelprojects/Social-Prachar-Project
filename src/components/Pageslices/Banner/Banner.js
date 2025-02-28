@@ -7,12 +7,13 @@ import EnrollButton from '../Enrollbutton/Enrollbutton';
 import fullStackImage from '../../../assets/classplus-banner-fullstack.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
-
+import Buttonstyle from '../Enrollbutton/Enrollbutton.module.css';
 
 const Banner = () => {
     const { slug } = useParams();
     const [card, setCard] = useState(null);
-    const [showForm, setShowForm] = useState(false);
+    const [isPopupVisible, setIsPopupVisible] = useState(false);
+
 
     useEffect(() => {
         const cardDetails = data.find(item => item.slug === slug);
@@ -23,15 +24,8 @@ const Banner = () => {
     if (!card) {
         return <div>Loading...</div>;
     }
-
-    // Function to open the SignInForm
-    const handleEnrollClick = () => {
-        setShowForm(true);
-    };
-
-    // Function to close the SignInForm
-    const handleCloseForm = () => {
-        setShowForm(false);
+    const togglePopup = () => {
+        setIsPopupVisible(!isPopupVisible);
     };
 
     return (
@@ -50,16 +44,17 @@ const Banner = () => {
                 <div className={style.bannerPrice}>
                     <span className={style.originalPrice}>Unlock Exclusive OFFERS<p>Almost Full <span className={style.offerText}>Only 5 Slots Left!</span></p></span>
                 </div>
-                <EnrollButton label={
-                    <>
-                        Curriculum
-                        <FontAwesomeIcon icon={faDownload}/>
-                    </>
-                } 
-                courseID={card.id}  className={style.EnrollButton} />
-                
+                <button
+                    className={`btn btn-primary d-flex align-items-center justify-content-center ${Buttonstyle.shinebtn}`}
+                    onClick={togglePopup}
+                >
+                    Curriculum
+                    <FontAwesomeIcon icon={faDownload} className="ms-2" />
+                </button>
+
+
             </div>
-            {showForm && <SignInForm onClose={handleCloseForm} />}
+            {isPopupVisible && <SignInForm onClose={togglePopup} actionType="Button:Download Curriculum" />}
         </div>
     );
 };
