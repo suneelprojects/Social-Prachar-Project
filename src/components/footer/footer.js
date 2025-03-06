@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import footerStyle from "./footer.module.css";
 import footerImg from "../../assets/footer2_cta_image.png";
 import spLogo from '../../assets/SP_Logo.png';
@@ -9,9 +9,12 @@ import AppleStore from '../../assets/app_store.svg';
 import wavesPic from '../../assets/waves.png';
 import BookSvg from '../../assets/book.png';
 import whiteBulb from '../../assets/whiteBulb.png';
+import style from '../Pageslices/Enrollbutton/Enrollbutton.module.css';
+
 
 const Footer = () => {
-    const navigate = useNavigate(); // Initialize useNavigate
+    const navigate = useNavigate();
+
     const images = [
         { src: wavesPic, className: 'objectOne', dataValue: '5', alt: 'Waves Image' },
         { src: BookSvg, className: 'objectTwo', dataValue: '5', alt: 'Book Image' },
@@ -26,11 +29,27 @@ const Footer = () => {
     ];
 
     const OfficeDetails = [
-        <b>Head Office:</b>, '#508, 5th Floor,', 'Manjeera Majestic Commercial,', 'JNTU - HiTech City Road,', 'KPHB, Hyderabad - 500072', 'Contact: +91-8019 479 419'
+        <b>Head Office:</b>, '#216, 2nd Floor,', 'Manjeera Majestic Commercial,', 'JNTU - HiTech City Road,', 'KPHB, Hyderabad - 500072', 'Contact: +91-8019 479 419',
+        <div>
+
+            <div className="container mt-3">
+                <div className="embed-responsive embed-responsive-16by9">
+                    <iframe
+                        className="embed-responsive-item"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.453265774153!2d78.3910161!3d17.491839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91f20663c46d%3A0x846796db82f76735!2sSocial%20Prachar!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+
+        </div>
     ];
 
     const TrainingCenter = [
-        <b>Training Center:</b>, '#301, 4th Floor,', 'Sathyabhama Commercial Complex,', 'BhagyaNagar Colony,', 'KPHB, Hyderabad – 500072', 'Contact: +91-8019 479 419'
+        <b>Training Centers:</b>, '#301, 4th Floor,', 'Sathyabhama Commercial Complex,', 'BhagyaNagar Colony,', 'KPHB, Hyderabad .',
+        '#224, 2nd Floor,', 'Manjeera Majestic Commercial,', 'JNTU - HiTech City Road,', 'KPHB, Hyderabad - 500072', 'Contact: +91-8019 479 419'
     ];
 
     const QuickLinks = [
@@ -120,7 +139,7 @@ const Footer = () => {
                         </div>
 
                         {/* Fourth Column - Quick Links */}
-                        <div className="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div className="col-12 col-sm-12 col-md-3 col-lg-3">
                             <b>Job Guarantee Programs</b>
                             <div>
                                 {QuickLinks.map((link, i) => (
@@ -132,12 +151,12 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
 
             {/* Footer Copyright */}
-            <div className={footerStyle.copyRight}>
+            <div div className={footerStyle.copyRight} >
                 <p>Copyright © 2025 All Rights Reserved by Social Prachar</p>
-            </div>
+            </div >
         </>
     );
 };

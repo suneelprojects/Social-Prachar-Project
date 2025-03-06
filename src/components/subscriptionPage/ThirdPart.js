@@ -1,65 +1,62 @@
 import React from 'react';
-import SubscriptionSteps from './subscriptionSteps';
+import Steps from './Steps';
+import icon from '../../assets/1-1.png';
+import RegisterForm from './FormButton';
+import RB from '../../assets/subscriptionpage/resume-prep.png';
+import interview from '../../assets/subscriptionpage/interview.png';
+import DS from '../../assets/subscriptionpage/science.png';
+import mentor from '../../assets/subscriptionpage/mentorship.png';
+import upskilling from '../../assets/subscriptionpage/upskilling.png';
+import FL from '../../assets/subscriptionpage/event.png';
+import OC from '../../assets/subscriptionpage/online-course.png';
+import LT from '../../assets/subscriptionpage/live-classes.png';
+import MP from '../../assets/subscriptionpage/multiple-paths.png';
+
 
 const ThirdPart = () => {
     return (
         <>
 
             <div className='text-center' style={{ background: "linear-gradient(to top, rgb(85, 60, 223) 5%, rgb(255, 255, 255) 100%)", }}>
-
                 <div>
-                    <SubscriptionSteps/>
+                    <Steps />
                 </div>
                 <div className="container text-start mt-5 mb-3 ">
-                    <div className="card p-4 mx-auto shadow-lg rounded-4" style={{ maxWidth: "450px", border: '1px solid #553cdf' }}>
-                        <div className="d-flex justify-content-end">
-                            <p
-                                className="ms-auto rounded-3"
-                                style={{
-                                    background: "#553cdf",
-                                    color: "white",
-                                    width: "fit-content",
-                                    padding: "4px 10px",
-                                }}
-                            >
-                                Students Discount
-                            </p>
-                        </div>
-
-                        <h5 className="fw-bold">Creative Cloud All Apps for Students and Teachers</h5>
-                        <p className="fs-5 text-danger">₹1,915.14/mo <span className="fw-bold">₹638.38/mo</span> incl. GST</p>
-                        <p className="text-muted">
-                            Save over 65% on 20+ creative apps, including Photoshop and Acrobat Pro.
-                            First year only, then ₹956.98/mo. <a href="#">See terms.</a>
-                        </p>
-
+                    <h3 className='text-center fw-bold'>Your Career Growth Starts Here – <span style={{color:'#553cdf'}}>Learn, Upskill & Grow!</span></h3>
+                    <div className="card p-4 mx-auto shadow-lg rounded-4" style={{ maxWidth: "600px", border: '1px solid #553cdf' }}>
+                        <p className="text-start fw-bold">Find the perfect learning plan to upskill, grow, and achieve your career goals—whether you're a fresher, working professional, or career switcher. One subscription, endless possibilities!</p>
+                        <p>It all starts with <span className='fw-bold'>SocialPrachar’s All-in-One Learning Packs.</span> </p>
                         <div className="d-flex gap-3 justify-content-end my-3">
-                            <button className="btn btn-outline-dark px-4 rounded-pill">Free Trial</button>
-                            <button className="btn btn-primary px-4 rounded-pill">Buy Now</button>
+                            <RegisterForm label={"Buy Now"} className="btn btn-primary px-4 rounded-pill"/>
+                            <RegisterForm label={"Free Trail"} className="btn btn-outline-dark px-4 rounded-pill" />
                         </div>
-
                         <hr />
                         <ul className="list-unstyled text-start">
                             {[
-                                { text: "Access to Photoshop, Illustrator, and more.", img: "https://via.placeholder.com/40/ff5733/ffffff?text=A" },
-                                { text: "Create stunning videos with Premiere Pro.", img: "https://via.placeholder.com/40/33ff57/ffffff?text=B" },
-                                { text: "Professional-grade tools for designers.", img: "https://via.placeholder.com/40/5733ff/ffffff?text=C" },
-                                { text: "Seamless cloud storage and sharing.", img: "https://via.placeholder.com/40/ff33a1/ffffff?text=D" },
-                                { text: "Exclusive student discounts available.", img: "https://via.placeholder.com/40/33a1ff/ffffff?text=E" },
+                                {
+                                    text: "One Subscription – Multiple Career Paths!.", img:MP
+                                },
+                                { text: " Learn at Your Own Pace with Flexible Options!.", img:OC },
+                                { text: "Get Hands-On Experience with Internships & AI-Powered Career Tools!", img: mentor },
+                                { text: " Industry-Recognized Certification to Boost Your Resume!", img: RB},
+                                { text: "Live Training, Recorded Sessions & Hybrid Learning Options!", img: LT },
+                                { text: "Expert Mentorship & Career Guidance for Job Readiness!", img:mentor },
+                                { text: " Access to AI-Powered Resume Building, Mock Interviews & Job Assistance!", img:RB },
+                                { text: "Real-World Projects & Case Studies for Practical Learning!", img:upskilling},
                             ].map((item, index, array) => (
                                 <React.Fragment key={index}>
                                     <li className="d-flex align-items-center mb-3">
-                                        <img src={item.img} alt="Icon" className="me-3" />
+                                        <img src={item.img} alt="Icon" className="me-3 rounded-5" style={{ width: "50px", height: "50px", objectFit: "contain"}} />
                                         <p className="mb-0">{item.text}</p>
                                     </li>
-                                    {index !== array.length - 1 && <hr className="my-2" />} {/* Adds line after every item except last */}
+                                    {index !== array.length - 1 && <hr className="my-2" />}
                                 </React.Fragment>
                             ))}
                         </ul>
 
                     </div>
                 </div>
-                <button className="btn btn-dark px-4 mt-3 rounded-pill mb-5">View all pricing</button>
+                <button className="btn btn-dark px-4 mt-3 rounded-pill mb-5">EMI Starts at Just ₹50/- &nbsp; Per Day</button>
             </div>
         </>
     );

@@ -36,8 +36,6 @@ import company18Logo from '../../../assets/AssetsOfDetailsPage/masterclass/Yotta
 import company19Logo from '../../../assets/AssetsOfDetailsPage/masterclass/amber_flux_private_limited_logo.jpeg';
 import company20Logo from '../../../assets/AssetsOfDetailsPage/masterclass/dell_technologies_logo.png';
 import Testmonials from './../Testmonials/Testmonials';
-import Masterclass from './../Masterclass/Masterclass';
-import SignInForm from '../Enrollbutton/PopupSignInForm';
 import HeaderSignInForm from './HeaderSignInForm';
 
 const logos = [
@@ -115,16 +113,6 @@ const Headerpart = (courseID) => {
             // Open the form
             setIsPopupVisible(true);
         }
-    };
-    
-    const downloadRoadmap = (url) => {
-        const course = data.find(course => course.courseID === courseID);
-        const link = document.createElement('a');
-        link.href = url; 
-        link.download = 'career-roadmap.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
     };
 
 

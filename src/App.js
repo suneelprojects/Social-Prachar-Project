@@ -11,7 +11,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Aos from 'aos';
 import routes from './routes.js';
 import PageNotFound from './components/pageNotFound/PageNotFound.js';
-// import QuickHelpButton from './components/quickHelp_Button/QuickHelpButton.js';
+import QuickHelpButton from './components/quickHelp_Button/QuickHelpButton.js';
 
 const App = () => {
   
@@ -40,7 +40,7 @@ const App = () => {
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </Suspense>
-          {/* <QuickHelpButton/> */}
+          <QuickHelpButton/>
         </WishListProvider>
       </BrowserRouter>
     </>

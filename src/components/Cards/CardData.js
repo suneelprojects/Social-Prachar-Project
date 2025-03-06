@@ -418,11 +418,11 @@ export const data = [
         TestmonialsCommentsImage2: testmonialsCommentImageFSWSS,
         Duration: '6 months',
         students: '2800+ students',
-        text: 'Mern Stack (Full Stack)',
+        text: 'Advanced Full Stack',
         rating: 4.3,
         Header: 'Master Full Stack Java / Python With Mern Stack Course in',
         popUpDropDownCourses: [
-            { dropDownid: 0, courseName: 'Mern Stack (Full Stack)' },
+            { dropDownid: 0, courseName: 'Advanced Full stack' },
         ],
         selfQuestioning: 'Starting your Mern Stack Career?',
         questions: [

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styles from '../Pageslices/Enrollbutton/PopUpForm.module.css';
 import Loading from '../extraComponents/loading';
 
-const ScholarshipFormTest = ({ onClose }) => {
+
+const SubscriptionForm = ({ onClose }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -14,7 +15,7 @@ const ScholarshipFormTest = ({ onClose }) => {
         trainingMode: '',
     });
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwq2ZtrNBCozKx_A23Ab4k02yCsxt5v1Wx7OQsY2RRzECvEnieV98bYm5rmWch0ZjcIag/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbyxgrTsN2fn8C3XAXvmBIjGniaxzF4jHnA9LMuC2CAIwGTNEyp4uPmLOmtjT3SunGqI9g/exec";
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -35,7 +36,7 @@ const ScholarshipFormTest = ({ onClose }) => {
         Object.entries(formData).forEach(([key, value]) => {
             formDataEncoded.append(key, value);
         });
-        formDataEncoded.append('sheetName', 'scholarshipTest');
+        formDataEncoded.append('sheetName', 'subscription');
 
         try {
             const response = await fetch(scriptURL, {
@@ -73,7 +74,7 @@ const ScholarshipFormTest = ({ onClose }) => {
             <div className={styles.formContainer}>
                 <button className={styles.closeButton} onClick={onClose}>&times;</button>
                 <form onSubmit={handleSubmit}>
-                    <h2 style={{color:'black'}}>Register Now</h2>
+                    <h2 style={{ color: 'black' }}>Register Now</h2>
                     {['name', 'email', 'phone', 'yearOfPassing'].map(field => (
                         <div className={styles.formGroup} key={field}>
                             <input
@@ -105,4 +106,4 @@ const ScholarshipFormTest = ({ onClose }) => {
     );
 };
 
-export default ScholarshipFormTest;
+export default SubscriptionForm;

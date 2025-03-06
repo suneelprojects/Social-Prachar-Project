@@ -270,6 +270,9 @@ const NavBar = () => {
                     <NavLink to="/aboutUs" className="dropdown-item" onClick={closeDropdown}>
                       About us
                     </NavLink>
+                    <NavLink to="/events" className="dropdown-item" onClick={closeDropdown}>
+                      Events
+                    </NavLink>
                     <a href="https://finversity.in" className="dropdown-item" target="_blank" rel="noopener noreferrer" onClick={closeDropdown}>
                       Finversity
                     </a>

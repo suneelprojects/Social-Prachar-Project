@@ -47,8 +47,8 @@ const ToggleBar = ({
 
     return (
         <div className={ToggleBarCSS.toggleBar} ref={containerRef}>
-            <div className={ToggleBarCSS.Header}>
-                <p>Courses</p>
+            <div className={`${ToggleBarCSS.Header} px-3 py-5`}>
+                <p className="m-0">Courses</p>
                 <button
                     className={`${ToggleBarCSS.toggleButton} ${isClicked ? ToggleBarCSS.Clicked : ''}`}
                     onClick={handleToggle}

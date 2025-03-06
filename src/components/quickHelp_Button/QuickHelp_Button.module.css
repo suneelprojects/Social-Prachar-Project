@@ -47,8 +47,12 @@
   right: 10px;
   font-size: 1rem;
 }
-
-@media (max-width: 376px) {
+@media(min-width:450px){
+  .suggestionButton{
+    display: none;
+  }
+}
+@media (max-width: 400px) {
   .quickHelpText {
     font-weight: 600;
     position: relative;

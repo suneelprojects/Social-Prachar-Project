@@ -13,6 +13,7 @@ const colors = ["#f0f8ff", "#f5f5dc", "#ffe4e1", "#e6e6fa", "#ffefd5", "#d3ffce"
 const Whatwillyoulearn = () => {
     const { slug } = useParams();
     const [card, setCard] = useState(null);
+    const [courseID,setCourseID] = useState(null);
     const [isPopupVisible, setIsPopupVisible] = useState(false);
 
     const togglePopup = () => {
@@ -23,6 +24,7 @@ const Whatwillyoulearn = () => {
     useEffect(() => {
         const cardDetails = data.find(item => item.slug === slug);
         setCard(cardDetails);
+        setCourseID(cardDetails.courseID);
     }, [slug]);
 
     if (!card) {
@@ -87,9 +89,16 @@ const Whatwillyoulearn = () => {
                     ))}
                 </section>
 
-                <div className='p-5'>
-                    <h2>Skill Up Now, Pay in Easy Installments! – <span style={{ color: '#ff5003' }}>₹2,999/month EMIs with 0% Interest </span></h2>
-                    <button className={`${Buttonstyle.shinebtn} btn`}onClick={togglePopup}>Get Details </button>
+                <div className='pt-5'>
+                    <h2>
+                        Skill Up Now, Pay in Easy Installments! –
+                        <span style={{ color: '#ff5003' }}>
+                            {courseID === 1 ? "₹3,500/month EMIs" : "₹2,999/month EMIs"}
+                        </span>
+                        <button className={`${Buttonstyle.shinebtn} btn`} onClick={togglePopup}>
+                            Get Details
+                        </button>
+                    </h2>
                     {isPopupVisible && <SignInForm onClose={togglePopup} actionType="Button:pricing Details" />}
                 </div>
             </div>

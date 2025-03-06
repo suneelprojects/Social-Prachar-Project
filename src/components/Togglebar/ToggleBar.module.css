@@ -96,10 +96,12 @@
 }
 
 /* media queries */
+@media(min-width:1161px){
+.Header{
+  display: none;
+}
+}
 @media (min-width: 991px) {
-  .Header {
-    display: none;
-  }
   .TogglebtnContent {
     display: none;
   }

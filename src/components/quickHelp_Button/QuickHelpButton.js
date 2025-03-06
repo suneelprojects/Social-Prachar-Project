@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './QuickHelp_Button.module.css';
-import whatsappLogo from '../../assets/AssetsOfDetailsPage/masterclass/whatsapp-logo.png';
+import { FaPhone } from 'react-icons/fa';
 
 const QuickHelpButton = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -18,21 +18,21 @@ const QuickHelpButton = () => {
 
     return (
         <>
-            <div className={`position-fixed ${styles.suggestionButton}`} style={{ bottom: '200px', right: '20px' }}>
+            <div className={`position-fixed ${styles.suggestionButton}`} style={{ top: '250px', left: '20px' }}>
                 <div>
                     <p className={styles.quickHelpText}>Quick help!</p>
                     <a
-                        href="https://wa.me/9515235259"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`btn shadow ${styles.roundButton}`}
+                        href="tel:+918019479419"
+                        className={`btn shadow ${styles.roundButton} d-flex align-items-center justify-content-center`}
+                        style={{ width: "60px", height: "60px", borderRadius: "50%" }}
                     >
-                        <img src={whatsappLogo} alt="WhatsApp" className={styles.whatsappLogo} />
+                        <FaPhone className="text-primary" size={30} />
                     </a>
+
                 </div>
-                <button onClick={handleClose} className={`btn fw-bold ${styles.closeButton}`}>
+                {/* <button onClick={handleClose} className={`btn fw-bold ${styles.closeButton}`}>
                     x
-                </button>
+                </button> */}
             </div>
         </>
     );

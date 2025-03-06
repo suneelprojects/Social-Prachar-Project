@@ -11,7 +11,7 @@ import Footer from '../footer/footer';
 
 export const items = [
     'Data Science',
-    'MERN Stack Development',
+    'Advanced Full Stack',
     'Python Development',
     'Java Development',
     'Analytics',
@@ -111,6 +111,7 @@ const Course = () => {
         // Update the Cards component with the filtered cards
         <Cards filters={{ checkedCategories: updatedChecked, checkedTags }} cards={filteredCards} />;
     };
+
     useEffect(() => {
         if (category) {
             const categoryIndex = items.indexOf(category);
@@ -134,7 +135,7 @@ const Course = () => {
         const updatedShowUncheckedShadowTags = updatedCheckedTags.map((item, i) => i === index && !item);
         setShowUncheckedShadowTags(updatedShowUncheckedShadowTags);
     };
-    
+
     useEffect(() => {
         handleScroll();
         document.addEventListener('mousedown', handleClickOutside);
@@ -164,7 +165,6 @@ const Course = () => {
                     setCheckedTags={setCheckedTags}
                     showUncheckedShadowTags={showUncheckedShadowTags}
                     setShowUncheckedShadowTags={setShowUncheckedShadowTags}
-
                     clearFilters={clearFilters}
                 />
 
@@ -234,7 +234,6 @@ const Course = () => {
                         </button>
                     )}
                 </div>
-
             </div>
             <Footer />
 

@@ -534,7 +534,6 @@
     position: relative;
     top: -280px;
     gap: 25px;
-    
   }
 
   .headerText {
@@ -605,11 +604,11 @@
     max-width: 90%;
     text-align: center;
   }
-   .header1 {
+  .header1 {
     font-size: 24px;
   }
 
-  .header2{
+  .header2 {
     font-size: 24px;
   }
 }
@@ -1203,8 +1202,11 @@
     z-index: 9999;
   }
 }
-@media(min-width:1500px){
-  .headerText{
+@media (min-width: 1500px) {
+  .headerText {
     max-width: 80%;
+  }
+  .testimonials {
+    z-index: 1000;
   }
 }
