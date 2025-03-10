@@ -33,6 +33,13 @@ const SignInForm = ({ onClose, courseID, actionType }) => {
         e.preventDefault();
         const { fullName, email, phone, actionType, course, mode, pageUrl, slug } = formData;
 
+        const phoneRegex = /^\d{10}$/;
+        if (!phoneRegex.test(phone)) {
+            alert("Please enter a valid 10-digit phone number.");
+            return;
+        }
+
+
         if (!fullName || !email || !phone || !course || !mode) {
             alert('Please fill in all required fields.');
             return;

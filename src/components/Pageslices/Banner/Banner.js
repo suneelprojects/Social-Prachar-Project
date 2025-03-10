@@ -41,15 +41,15 @@ const Banner = () => {
                         <p>{card.bannerStudentsEnrolled}</p>
                     </div>
                 </div>
-                <div className={style.bannerPrice}>
+                <div className={`${style.bannerPrice}`}>
                     <span className={style.originalPrice}>Unlock Exclusive OFFERS<p>Almost Full <span className={style.offerText}>Only 5 Slots Left!</span></p></span>
                 </div>
                 <button
-                    className={`btn btn-primary d-flex align-items-center justify-content-center ${Buttonstyle.shinebtn}`}
+                    className={`px-3 btn btn-primary d-flex align-items-center justify-content-center ${Buttonstyle.shinebtn}`}
                     onClick={togglePopup}
                 >
                     Curriculum
-                    <FontAwesomeIcon icon={faDownload} className="ms-2" />
+                    <FontAwesomeIcon icon={faDownload} className="" />
                 </button>
 
 

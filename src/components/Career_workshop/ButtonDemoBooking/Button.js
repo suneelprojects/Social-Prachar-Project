@@ -4,12 +4,19 @@ import style from './Button.module.css';
 const Button = () => {
     const [weekDate, setWeekDate] = useState("");
     const [showForm, setShowForm] = useState(false);
+
+    // useEffect(() => {
+    //     setWeekDate(date);
+    // }, [date]);
+
+
     const [formData, setFormData] = useState({
         course: '',
         name: '',
         email: '',
         phone: ''
     });
+    
     const [formErrors, setFormErrors] = useState({
         course: '',
         name: '',
@@ -50,8 +57,8 @@ const Button = () => {
             const data = await response.json();
             console.log("Form submitted successfully:", data);
             alert('Thank you for registering! Your form has been submitted successfully.');
-
             setShowForm(false); // Hide the form after submission
+
         } catch (error) {
             console.error("Error submitting form:", error);
             alert('There was an error submitting your form. Please try again later.');
@@ -91,19 +98,7 @@ const Button = () => {
 
         return errors;
     };
-
-    // Calculate next Wednesday's date
-    useEffect(() => {
-        const today = new Date();
-        const daysUntilWednesday = (3 - today.getDay() + 7) % 7;
-        const nextWednesday = new Date(today);
-        nextWednesday.setDate(today.getDate() + daysUntilWednesday);
-
-        const options = { day: "numeric", month: "long", year: "numeric" };
-        const formattedDate = nextWednesday.toLocaleDateString("en-IN", options);
-
-        setWeekDate(formattedDate);
-    }, []);
+    
 
     // Handle form field changes
     const handleChange = (e) => {

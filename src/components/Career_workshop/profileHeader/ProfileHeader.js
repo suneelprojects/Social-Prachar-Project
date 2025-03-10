@@ -10,25 +10,42 @@ import Faq from '../../Career_workshop/Faq/Faq.js';
 import Bonuses from './../Bonuses/Bonuses';
 
 const ProfileHeader = () => {
-    
-        const [timeLeft, setTimeLeft] = useState(15 * 60);
-        const [showBanner, setShowBanner] = useState(false);
-         // Timer
-            useEffect(() => {
-                const timer = setInterval(() => {
-                    setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
-                }, 1000);
-        
-                return () => clearInterval(timer);
-            }, []);
-        
-            const formatTime = (seconds) => {
-                const mins = Math.floor(seconds / 60);
-                const secs = seconds % 60;
-                return `${mins}:${secs.toString().padStart(2, "0")}`;
-            };
-    
-    
+    const [eventDate, setEventDate] = useState("");
+    const [timeLeft, setTimeLeft] = useState(15 * 60);
+    const [showBanner, setShowBanner] = useState(false);
+
+    useEffect(() => {
+        const updateDate = () => {
+            const savedDates = localStorage.getItem("eventDates");
+            if (savedDates) {
+                const parsedDates = JSON.parse(savedDates);
+                setEventDate(parsedDates.careerWorkshop.eventDate);
+            }
+        };
+
+        window.addEventListener("storage", updateDate);
+
+        return () => {
+            window.removeEventListener("storage", updateDate);
+        };
+    }, []);
+
+    // Timer
+    // useEffect(() => {
+    //     const timer = setInterval(() => {
+    //         setTimeLeft((prevTime) => (prevTime > 0 ? prevTime - 1 : 0));
+    //     }, 1000);
+
+    //     return () => clearInterval(timer);
+    // }, []);
+
+    // const formatTime = (seconds) => {
+    //     const mins = Math.floor(seconds / 60);
+    //     const secs = seconds % 60;
+    //     return `${mins}:${secs.toString().padStart(2, "0")}`;
+    // };
+
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollHeight = document.documentElement.scrollHeight;
@@ -44,14 +61,14 @@ const ProfileHeader = () => {
                 setShowBanner(false);
             }
         };
-       window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll);
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
-    
+
 
     return (
         <>
@@ -81,7 +98,7 @@ const ProfileHeader = () => {
                             <div className={`${style.profileDetails} text-white rounded-3 px-4 py-3`} style={{ background: '#090820', width: '90%' }}>
                                 <p className='fs-4 fw-bold text-warning'>Mahesh Babu Channa</p>
                                 <p style={{ fontSize: '1.2rem', fontWeight: '600', marginBottom: '10px' }}>IIM Alumni | 8+ Years Experienced Career Consultant</p>
-                                <p style={{ fontSize: '1.2rem' }}>Trained Over <span className='text-warning' style={{fontWeight: '700' }}>8,500+ Professionals</span> since 2014</p>
+                                <p style={{ fontSize: '1.2rem' }}>Trained Over <span className='text-warning' style={{ fontWeight: '700' }}>8,500+ Professionals</span> since 2014</p>
                             </div>
                         </div>
                     </div>
@@ -96,7 +113,7 @@ const ProfileHeader = () => {
                                         style={{
                                             backgroundColor: "#ffc107",
                                             borderRadius: "50%",
-                                            padding:'12px',
+                                            padding: '12px',
                                             display: "inline-flex",
                                             alignItems: "center",
                                             justifyContent: "center",
@@ -133,16 +150,16 @@ const ProfileHeader = () => {
                                 </div>
                             </div>
                             <div>
-                                <Button />
+                                <Button/>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <WhatWillYouGet/>
-            <Bonuses/>
-            <profileDetails/>
-            <Faq/>
+            <WhatWillYouGet />
+            <Bonuses />
+            <profileDetails />
+            <Faq />
             {/* <Banner/> */}
         </>
     );

@@ -102,7 +102,7 @@ const EventsOpenPage = () => {
                 {/* Masterclass Details */}
                 <div className="mt-5 p-4 bg-light rounded-3 shadow-sm">
                     <h3 className="fw-bold text-dark mb-3">📚 About this Masterclass</h3>
-                    <p className="fs-5 text-muted">{trainer.aboutMasterclass}</p>
+                    <p>{trainer.aboutMasterclass}</p>
                 </div>
 
                 {/* What You Will Gain */}

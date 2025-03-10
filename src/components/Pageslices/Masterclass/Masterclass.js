@@ -87,7 +87,7 @@ const Masterclass = () => {
                     <h2>
                         Skill Up Now, Pay in Easy Installments! –
                         <span style={{ color: '#ff5003' }}>
-                            {courseID === 1 ? "₹3,500/month EMIs" : "₹2,999/month EMIs"}
+                            {courseID === 8 ? "" : courseID === 1 ? "₹3,500/month EMIs" : "₹2,999/month EMIs"}
                         </span>
                         <button className={`${Buttonstyle.shinebtn} btn`} onClick={togglePopup}>
                             Get Details
@@ -95,7 +95,6 @@ const Masterclass = () => {
                     </h2>
                     {isPopupVisible && <SignInForm onClose={togglePopup} actionType="Button:pricing Details" />}
                 </div>
-
             </div>
         </div>
     );

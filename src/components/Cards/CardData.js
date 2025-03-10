@@ -55,6 +55,21 @@ import student49 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (6).pn
 import student50 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (7).png';
 import student51 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE.png';
 
+// Impoerting DM Profiles
+import dmimg1 from '../../assets/digital_marketing_profiles/60.png'; 
+import dmimg2 from '../../assets/digital_marketing_profiles/61.png';
+import dmimg3 from '../../assets/digital_marketing_profiles/62.png';
+import dmimg4 from '../../assets/digital_marketing_profiles/63.png';
+import dmimg5 from '../../assets/digital_marketing_profiles/64.png';
+import dmimg6 from '../../assets/digital_marketing_profiles/65.png';
+import dmimg7 from '../../assets/digital_marketing_profiles/66.png';
+import dmimg8 from '../../assets/digital_marketing_profiles/67.png';
+import dmimg9 from '../../assets/digital_marketing_profiles/68.png';
+import dmimg10 from '../../assets/digital_marketing_profiles/69.png';
+import dmimg11 from '../../assets/digital_marketing_profiles/70.png';
+import dmimg12 from '../../assets/digital_marketing_profiles/71.png';
+import dmimg13 from '../../assets/digital_marketing_profiles/72.png';
+import dmimg14 from '../../assets/digital_marketing_profiles/73.png';
 
 // testmonials Comment Images
 import testmonialsCommentImageDS from '../../assets/AssetsOfDetailsPage/masterclass/commentsDS.png';
@@ -2166,13 +2181,13 @@ export const data = [
         courseFor: [
             {
                 title: 'Fresh Graduates',
-                content: 'Discover the best career opportunities in Data Science and AI to kickstart your journey into the tech industry.',
+                content: 'Discover the best career opportunities in Digital Marketing to kickstart your journey into the tech industry.',
                 image: student,
                 alt: 'Student'
             },
             {
                 title: 'Experienced IT Professionals',
-                content: 'Upskill with the latest Data Science and AI trends to stay ahead in your career.',
+                content: 'Upskill with the latest Digital Marketing and trends to stay ahead in your career.',
                 image: professional,
                 alt: 'Working Professional'
             },
@@ -2355,16 +2370,6 @@ export const data = [
                 description: "Build effective email campaigns, grow subscriber lists, and track performance for improved user engagement."
             },
             {
-                icon: faDatabase,
-                title: "Master Data Analytics",
-                description: "Learn data analysis and visualization using tools like Excel, SQL, and Power BI. Apply data-driven decision-making in marketing strategies."
-            },
-            {
-                icon: faCloud,
-                title: "Cloud Deployment & AI",
-                description: "Understand AI concepts, deep learning, and NLP techniques, and deploy marketing automation models on platforms like AWS and Azure."
-            },
-            {
                 icon: faTasks,
                 title: "Project Work",
                 description: "Implement real-world projects to apply your learning, improve problem-solving skills, and gain practical experience."
@@ -2418,24 +2423,20 @@ export const data = [
             }
         ],
         studentPlacedImages: [
-            { id: 1, image: student25 },
-            { id: 2, image: student26 },
-            { id: 3, image: student27 },
-            { id: 4, image: student28 },
-            { id: 5, image: student29 },
-            { id: 6, image: student30 },
-            { id: 7, image: student31 },
-            { id: 8, image: student32 },
-            { id: 9, image: student33 },
-            { id: 11, image: student15 },
-            { id: 12, image: student16 },
-            { id: 13, image: student17 },
-            { id: 14, image: student18 },
-            { id: 15, image: student19 },
-            { id: 17, image: student21 },
-            { id: 18, image: student22 },
-            { id: 19, image: student23 },
-            { id: 20, image: student24 }
+            { id: 1, image: dmimg1 },
+            { id: 2, image: dmimg2 },
+            { id: 3, image: dmimg3 },
+            { id: 4, image: dmimg4 },
+            { id: 5, image: dmimg5 },
+            { id: 6, image: dmimg6 },
+            { id: 7, image: dmimg7 },
+            { id: 8, image: dmimg8 },
+            { id: 9, image: dmimg9 },
+            { id: 11, image: dmimg10},
+            { id: 12, image: dmimg11},
+            { id: 13, image: dmimg12},
+            { id: 14, image: dmimg13},
+            { id: 15, image: dmimg14},
         ],
         bannerHeader: 'Learn Digital Marketing Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',

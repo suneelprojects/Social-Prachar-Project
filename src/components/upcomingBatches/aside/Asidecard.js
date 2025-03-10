@@ -1,31 +1,31 @@
 import React from 'react';
 import style from './AsideStyle.module.css';
-import certificate from '../../../assets/careerworkshop/certificate11.jpeg';
-import video from '../../../assets/careerworkshop/video(1).jpeg';
-import star from '../../../assets/careerworkshop/star11.jpeg';
-import book from '../../../assets/careerworkshop/book11.jpeg';
-import quiz from '../../../assets/careerworkshop/chat (1).png';
+import certificate from '../../../assets/careerworkshop/certificate1.png';
+import video from '../../../assets/careerworkshop/video1.png';
+import star from '../../../assets/careerworkshop/stars-svgrepo-com.png';
+import book from '../../../assets/careerworkshop/book1.png';
 import globe from '../../../assets/careerworkshop/globe.png';
+import bag from '../../../assets/careerworkshop/briefcase.png';
 
 const Asidecard = () => {
     const cardItems = [
         { img: certificate, labelHead: "Social Prachar", labelDown: "Certificate" },
-        { img: video, labelHead: "Live", labelDown: "Learning" },
+        { img: video, labelHead: "IIM & IIT Alumni", labelDown: "Learning" },
         { img: star, labelHead: "Top", labelDown: "Instructors" },
         { img: book, labelHead: "Bonus", labelDown: "Resources" },
-        { img: quiz, labelHead: "Live", labelDown: "Quizzes" },
-        { img: globe, labelHead: "Real", labelDown: "World Projects" },
+        { img: bag, labelHead: "Intern/Fulltime", labelDown: "Jobs" },
+        { img: globe, labelHead: "Learn till you", labelDown: "Get Placed" },
     ];
 
     return (
         <div className={`${style.asideCard} card shadow-lg shadow`} style={{ width: "auto"}}>
             <div className={`${style.cardBody} card-body`}>
                 {/* Header */}
-                <h5 className="card-title fw-bold">Why Join</h5>
-                <h6 className="card-subtitle mb-4 text-muted">Social Prachar</h6>
+                <h5 className="card-title fw-bold">Social Prachar</h5>
+                <h6 className="card-subtitle mb-4 text-muted">Advantage</h6>
 
                 {/* Features Grid */}
-                <div className="row row-cols-2 g-3">
+                <div className="row row-cols-2 g-2">
                     {cardItems.map((item, idx) => (
                         <div className="col d-flex align-items-center" key={idx}>
                             {/* Icon */}
@@ -33,7 +33,7 @@ const Asidecard = () => {
                                 <img src={item.img} alt={item.labelHead} style={{ width: '40px', height: '40px',borderRadius:'8px'}} />
                             </div>
                             {/* Labels */}
-                            <div className="ms-3">
+                            <div className="ms-2">
                                 <p className="mb-0 fw-bold">{item.labelHead}</p>
                                 <span>{item.labelDown}</span>
                             </div>
