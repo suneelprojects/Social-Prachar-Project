@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
-
 import navBarStyle from "./navbar.module.css";
-
 import course2 from "../../assets/02.svg";
 import course3 from "../../assets/04.svg";
-import course5 from "../../assets/06.svg";
 import course6 from "../../assets/01.svg";
-import course7 from "../../assets/course7.png";
-import course8 from "../../assets/course8.jpg";
 import spLogo from "../../assets/SP_Logo.png";
-import spLogoIcon from "../../assets/SP_Logo-icon.png";
+
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
@@ -93,7 +88,7 @@ const NavBar = () => {
           className={`${navBarStyle.containerfluidForNav} container-fluid`}
         >
           {/* brand name and category code start */}
-          <div className="d-flex ">
+          <div className="d-flex">
             <a className="navbar-brand" href="http://socialprachar.com">
               <img src={spLogo} className={`${navBarStyle.spLogo}`} />
             </a>
@@ -258,7 +253,7 @@ const NavBar = () => {
                     Subscription
                   </NavLink>
                 </li>
-                
+
                 <li className="nav-item" onMouseLeave={closeDropdown}>
                   <NavLink
                     className={`nav-link navbar-toggle dropdown-toggle ${navBarStyle.NavLinkForHover}`}
@@ -267,26 +262,45 @@ const NavBar = () => {
                     More
                   </NavLink>
                   <div className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
-                    <NavLink to="/aboutUs" className="dropdown-item" onClick={closeDropdown}>
+                    <NavLink to="/aboutUs" className="dropdown-item"
+                      onClick={() => {
+                        closeDropdown();
+                        closeToggle();
+                      }}>
                       About us
                     </NavLink>
-                    <NavLink to="/events" className="dropdown-item" onClick={closeDropdown}>
+                    <NavLink to="/events" className="dropdown-item" onClick={() => {
+                      closeDropdown();
+                      closeToggle();
+                    }}>
                       Events
                     </NavLink>
-                    <a href="https://finversity.in" className="dropdown-item" target="_blank" rel="noopener noreferrer" onClick={closeDropdown}>
+                    <a href="https://finversity.in" className="dropdown-item" target="_blank" rel="noopener noreferrer" onClick={() => {
+                      closeDropdown();
+                      closeToggle();
+                    }}>
                       Finversity
                     </a>
-                    <NavLink to="/scholarship-test" className="dropdown-item" onClick={closeDropdown}>
+                    <NavLink to="/scholarship-test" className="dropdown-item" onClick={() => {
+                      closeDropdown();
+                      closeToggle();
+                    }}>
                       Scholarship Test
                     </NavLink>
                     <NavLink
                       to="/socialhire"
                       className="dropdown-item"
-                      onClick={closeDropdown}
+                      onClick={() => {
+                        closeDropdown();
+                        closeToggle();
+                      }}
                     >
                       SocialHire
                     </NavLink>
-                    <NavLink to="projects" className="dropdown-item" onClick={closeDropdown}>
+                    <NavLink to="projects" className="dropdown-item" onClick={() => {
+                      closeDropdown();
+                      closeToggle();
+                    }}>
                       Students-Projects
                     </NavLink>
                   </div>
@@ -310,9 +324,9 @@ const NavBar = () => {
                     rel="noopener noreferrer"
                     className={`${navBarStyle.buttonStyle} d-flex align-items-center justify-content-center`}
                     role="button"
-                    style={{color:'green'}}
+                    style={{ color: 'green' }}
                   >
-                    <FontAwesomeIcon icon={faWhatsapp} className="me-2" style={{color:'green'}}/>
+                    <FontAwesomeIcon icon={faWhatsapp} className="me-2" style={{ color: 'green' }} />
                     WhatsApp
                   </a>
                 </li>

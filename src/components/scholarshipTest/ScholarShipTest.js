@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import style from './ScholarShipTest.module.css';
 import testImage from '../../assets/careerworkshop/SocialPrachar.png';
 import Footer from '../footer/footer.js';
@@ -50,6 +50,8 @@ const faqData = [
 const ScholarShipTest = () => {
     const [openIndex, setOpenIndex] = useState(null);
     const [isPopupVisible, setIsPopupVisible] = useState(false);
+    const [wednesdayDate, setWednesdayDate] = useState("");
+
     const togglePopup = () => {
         setIsPopupVisible(!isPopupVisible);
     };
@@ -57,22 +59,49 @@ const ScholarShipTest = () => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
+    useEffect(() => {
+        const getNextWednesday = () => {
+            const today = new Date();
+            const dayOfWeek = today.getDay(); // 0 (Sun) to 6 (Sat)
+            const daysUntilWednesday = (3 - dayOfWeek + 7) % 7 || 7; // Calculate next Wednesday
+            const nextWednesday = new Date();
+            nextWednesday.setDate(today.getDate() + daysUntilWednesday);
+
+            // Format the date as: "July 31, 2024"
+            return nextWednesday.toLocaleDateString("en-US", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+            });
+        };
+
+        setWednesdayDate(getNextWednesday());
+    }, []);
+
     return (
         <>
             <div className={`${style.container} d-flex flex-column align-items-center text-center`} style={{ margin: '0 auto', maxWidth: '1200px', padding: '20px' }}>
+                <h1 className="mb-4 text-center fw-bold rounded col-md-12">
+                Every week one <span style={{color:'#ff5003'}}>Top Winner</span>, whoever cracks
+                    <span className="text-success"> 30/30 </span> in less time will get a
+                    <span className="text-uppercase font-weight-bold" style={{color:'#ff5003'}}> complete FREE Course </span>
+                    <span style={{color:'#553cdf'}}>(No Hidden Charges) </span>
+                </h1>
+
                 <img src={testImage} alt="Scholarship Test" className="img-fluid mb-4" />
-                <h1 className="mb-2 fw-bold text-secondary">Upcoming Online Test within 10 Days</h1>
-                <h3 className="mb-4">Student Discounts Totaling 4,65,000 INR Awarded in the Past Month</h3>
-                <button className="btn btn-primary mb-4 fw-bold" onClick={togglePopup}>Register Now</button>
+                <h1 className="mb-2 fw-bold text-black py-2">
+                    Upcoming Online Test on <span style={{color:'#ff3002'}}>{wednesdayDate}</span>
+                </h1>
+                <p className="mb-4 fs-2">Student Discounts Totaling 4,65,000 INR Awarded in the Past Month</p>
+                <button className="btn mb-5 fw-bold" onClick={togglePopup} style={{background:'#553cdf', color:'white'}}>Register Now</button>
                 {isPopupVisible && <ScholarshipFormTest onClose={togglePopup} />}
 
-                <p className="mb-5 text-danger fw-bold">We are excited to announce the Scholarship Test 2025, an exclusive opportunity for recent graduates to secure incredible benefits while enrolling in our courses. This is your chance to prove your aptitude and gain access to high-quality education at a fraction of the cost—or even for free!</p>
-
-                <h6 className="mb-4 text-center">Every week one Top Winner, whoever cracks 30/30 in less time will get a complete FREE Course (No Hidden Charges)</h6>
+                <p className="fs-4 mb-5 text-danger fw-bold">We are excited to announce the Scholarship Test 2025, an exclusive opportunity for recent graduates to secure incredible benefits while enrolling in our courses. This is your chance to prove your aptitude and gain access to high-quality education at a fraction of the cost—or even for free!</p>
 
                 <div className="mb-4">
-                    <h4 className='mb-4 text-primary '>Invest in Your Education, Empower Your Future</h4>
-                    <h5 className='mb-4 text-center text-secondary'> At Social Prachar, we believe that education is the key to a brighter future. We are proud to announce our exclusive Scholarship Test, designed to recognize and support talented students like you. This is your chance to shine, gain financial assistance, and embark on a rewarding educational journey.</h5>
+                    <h2 className='mb-4 fw-bold' style={{color:'#553cdf'}}>Invest in Your Education, Empower Your Future</h2>
+                    <h4 className='mb-4 text-center text-secondary'> At Social Prachar, we believe that education is the key to a brighter future. We are proud to announce our exclusive Scholarship Test, designed to recognize and support talented students like you. This is your chance to shine, gain financial assistance, and embark on a rewarding educational journey.</h4>
 
                     <div className='mb-5'>
                         <p className={style.boxBars}>
@@ -91,8 +120,8 @@ const ScholarShipTest = () => {
                 </div>
 
                 <div className="mb-4">
-                    <h4 className='fw-bold text-secondary'>Benefits</h4>
-                    <h3 className='fw-bold text-primary'>Unlock Amazing Benefits</h3>
+                    <h3 className='fw-bold text-secondary'>Benefits</h3>
+                    <h2 className='fw-bold pb-2' style={{color:'#553cdf'}}>Unlock Amazing Benefits</h2>
 
 
                     <div class="container">
@@ -101,8 +130,8 @@ const ScholarShipTest = () => {
                                 <div class="card">
                                     <div class="card-body">
                                         <h3 class="card-title mb-3">Benefit 1</h3>
-                                        <h5 class="card-subtitle text-primary mb-4">Win a Generous Scholarship</h5>
-                                        <h6 class="card-subtitle text-muted mb-4">Get up to <strong>33% Discount</strong> on course fees. It’s a live online test, get the test results & assured Discount coupon code to your email within 12 hours after completion of the test.</h6>
+                                        <h4 class="card-subtitle mb-4" style={{color:'#ff3002'}}>Win a Generous Scholarship</h4>
+                                        <h6 class="card-subtitle text-muted mb-4">Get up to <span className='text-black'>33% Discount</span> on course fees. It’s a live online test, get the test results & assured Discount coupon code to your email within 12 hours after completion of the test.</h6>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +139,7 @@ const ScholarShipTest = () => {
                                 <div class="card">
                                     <div class="card-body">
                                         <h3 class="card-title mb-3">Benefit 2</h3>
-                                        <h5 class="card-subtitle text-primary mb-4">Recognition and Prestige</h5>
+                                        <h4 class="card-subtitle mb-4" style={{ color: '#ff3002' }}>Recognition and Prestige</h4>
                                         <h6 class="card-subtitle text-muted mg-4">Our scholarship winners receive recognition for their achievements, boosting their confidence and setting them apart from their peers.</h6>
                                     </div>
                                 </div>
@@ -119,7 +148,7 @@ const ScholarShipTest = () => {
                                 <div class="card">
                                     <div class="card-body">
                                         <h3 class="card-title mb-3">Benefit 3</h3>
-                                        <h5 class="card-subtitle text-primary mb-4">Access to Exceptional Resources</h5>
+                                        <h5 class="card-subtitle mb-4" style={{ color: '#ff3002' }}>Access to Exceptional Resources</h5>
                                         <h6 class="card-subtitle text-muted mb-4">Scholarship recipients gain access to our exclusive learning materials, experienced faculty, and a supportive educational community.</h6>
                                     </div>
                                 </div>
@@ -127,18 +156,18 @@ const ScholarShipTest = () => {
                         </div>
                     </div>
 
-                    <div className="d-flex justify-content-around align-items-center mt-5">
-                        <h3 className="text-primary fw-bold">
+                    <div className="d-flex justify-content-center align-items-center my-5 gap-5">
+                        <h3 className="fw-bold" style={{color:'#553cdf'}}>
                             Secure Your Future Today! <br /> Limited Seats Available.
                         </h3>
-                        <button className="fw-bold btn btn-primary">Claim Your Discount</button>
+                        <button className="fw-bold btn" style={{background:"#553cdf", color:'white'}}>Claim Your Discount</button>
                     </div>
                 </div>
 
 
                 <div className="mb-4">
-                    <h4 className='text-muted fw-bold'>Social Prachar's Scholarship Test 2025</h4>
-                    <h3 className='text-primary'>Everyone is a Winner: 30 Questions - 40 Minutes - 30 Marks</h3>
+                    <h2 className='text-muted fw-bold'>Social Prachar's Scholarship Test 2025</h2>
+                    <p className="fs-1 fw-bold" style={{color:'#ff3002'}}>Everyone is a Winner: 30 Questions - 40 Minutes - 30 Marks</p>
                 </div>
 
                 <div class="container">
@@ -148,7 +177,7 @@ const ScholarShipTest = () => {
                                 <div class={style.discount_icon}><FontAwesomeIcon icon={faTrophy} style={{ color: "#FFD43B", fontSize: '50px' }} /></div>
                                 <div className={style.marks}>
                                     <h3 className='fw-bold text-start'>30 Marks</h3>
-                                    <h3>Eligible for Fee Discount of 15,000 INR</h3>
+                                    <h3>Eligible for Fee Discount (Or) 100% Free</h3>
                                 </div>
                             </div>
                             <div class={`${style.downBoxBars} bg-primary`}>

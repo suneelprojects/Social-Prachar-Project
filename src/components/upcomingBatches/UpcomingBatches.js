@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from './UpcomingBatches.module.css';
 import Asidecard from './aside/Asidecard.js';
@@ -12,11 +12,12 @@ import masterFS from '../../assets/careerworkshop/Master FS.png';
 import masterFSJ from '../../assets/careerworkshop/Master FSJ.png';
 import masterFSP from '../../assets/careerworkshop/Master FSP.png';
 import Footer from './../footer/footer.js';
+import { useDateContext } from '../Forms/DateContext.js';
+
 
 const UpcomingBatches = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
-    const [holidays, setHolidays] = useState([]);
-    const [startDates, setStartDates] = useState({});
+    const { datesById } = useDateContext(); // Access the stored dates
 
     const categories = [
         'All',
@@ -27,99 +28,42 @@ const UpcomingBatches = () => {
     ];
 
     const cardData = [
-        { id: 1, students: '5120+', no_of_Slots: 4, image: masterDS, category: 'Data Science/AI', title: 'Artificial Intelligence', route: '/artificial-intelligence-course-training-institute-in-hyderabad' },
+        { id: 1, students: '5120+', no_of_Slots: 4, image: masterDS, category: 'Data Science/AI', title: 'Artificial Intelligence', route: '/artificial-intelligence-course-training-in-hyderabad' },
         { id: 2, students: '3200+', no_of_Slots: 6, image: masterAd_DS, category: 'Data Science/AI', title: 'Advanced Data Science/AI', route: '/data-science-course' },
         { id: 3, students: '4600+', no_of_Slots: 5, image: masterDA, category: 'Data Science/AI', title: 'Data Analytics (Mastery)', route: '/data-analytics-course-training-hyderabad' },
         { id: 4, students: '3800+', no_of_Slots: 7, image: masterFSJ, category: 'Full Stack Development', title: 'Full Stack Java', route: '/java-full-stack-development' },
         { id: 5, students: '4300+', no_of_Slots: 4, image: masterFSP, category: 'Full Stack Development', title: 'Full Stack Python', route: '/python-full-stack-development' },
-        { id: 6, students: '4400+', no_of_Slots: 6, image: masterFS, category: 'Full Stack Development', title: 'Mern Stack (Full Stack)', route: '/mern-stack' },
-        { id: 7, students: '3120+', no_of_Slots: 5, image: masterAd_Devops, category: 'DevOps', title: 'Multi Cloud With Devops', route: '/awsdevopscourse' },
+        { id: 6, students: '4400+', no_of_Slots: 6, image: masterFS, category: 'Full Stack Development', title: 'MERN Stack (Full Stack)', route: '/mern-stack' },
+        { id: 7, students: '3120+', no_of_Slots: 5, image: masterAd_Devops, category: 'DevOps', title: 'Multi Cloud With DevOps', route: '/awsdevopscourse' },
         { id: 8, students: '4500+', no_of_Slots: 5, image: masterAd_DM, category: 'Digital Marketing', title: 'Advanced Digital Marketing', route: '/digital-marketing-course-training-institute-hyderabad' },
     ];
+
+    // Update startDate dynamically
+    const updatedCardData = cardData.map(card => ({
+        ...card,
+        startDate: datesById[card.id] || "Not Mentioned", 
+    }));
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
     };
 
-    const filteredCards = selectedCategory === 'All'
-        ? cardData
-        : cardData.filter(card => card.category === selectedCategory);
-
-    const fetchHolidays = async () => {
-        const apiKey = 'VQcZbnVRoTZgJnRtNXQ1z8VDZFsF5IWo';
-        const baseUrl = 'https://calendarific.com/api/v2';
-        const url = `${baseUrl}/holidays?api_key=${apiKey}&country=IN&year=${new Date().getFullYear()}&state=AP`;
-
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
-            if (data?.response?.holidays) {
-                setHolidays(data.response.holidays.map(holiday => holiday.date.iso));
-            }
-        } catch (error) {
-            console.error('Error fetching holidays:', error);
-        }
-    };
-
-
-    const calculateStartDates = () => {
-        const today = new Date();
-        const startDatesMap = {};
-
-        cardData.forEach(card => {
-            let nextDate = new Date(today);
-            let daysAdded = 0;
-
-            while (daysAdded < 6) {
-                nextDate.setDate(nextDate.getDate() + 1);
-                const dateString = nextDate.toISOString().split('T')[0];
-                const dayOfWeek = nextDate.getDay();
-
-                if (!holidays.includes(dateString) && dayOfWeek !== 0) {
-                    daysAdded++;
-                }
-            }
-
-            // Store the start date in the map
-            startDatesMap[card.id] = nextDate.toLocaleDateString('en-US', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric',
-            });
-        });
-        setStartDates(startDatesMap);
-    };
-
-
-    useEffect(() => {
-        fetchHolidays();
-    }, []);
-
-    useEffect(() => {
-        if (holidays.length > 0) {
-            calculateStartDates();
-        }
-    }, [holidays]);
+    const filteredCards = selectedCategory === 'All' ? updatedCardData : updatedCardData.filter(card => card.category === selectedCategory);
 
     return (
         <>
             <div className={style.container}>
                 <div className={`${style.bg} container pt-5`}>
-                    {/* Header Section */}
                     <div className="text-start d-flex flex-wrap align-items-center justify-content-between text-white">
                         <div>
                             <h1>Upcoming Batches</h1>
-                            <p className="fw-bold">Learn Tech Concepts From Industry Leaders Who Have Been there and done that!</p>
+                            <p className="fw-bold">Learn Tech Concepts From Industry Leaders Who Have Been There and Done That!</p>
                         </div>
                         <div>
                             <img src={navbarImage} alt="Masterclass" className={style.custom_image} />
                         </div>
                     </div>
 
-                    {/* Button Section */}
                     <div className="d-flex flex-wrap justify-content-start mb-4 bg-light p-1 rounded">
                         {categories.map(category => (
                             <button
@@ -132,9 +76,7 @@ const UpcomingBatches = () => {
                         ))}
                     </div>
 
-                    {/* Main Content Section */}
                     <div className="row">
-                        {/* Main Cards Section */}
                         <div className="col-md-8">
                             <div className="row">
                                 {filteredCards.map(card => (
@@ -148,10 +90,10 @@ const UpcomingBatches = () => {
                                             />
                                             <div className="card-body">
                                                 <h5 className="card-title">{card.title}</h5>
-                                                <p className="card-text mb-1">Batch Starting Date: <span className="fw-bold">{startDates[card.id]}</span></p>
-                                                <h6 className="text-danger">
-                                                    Hurry, only {card.no_of_Slots} slots remaining!
-                                                </h6>
+                                                <p className="card-text mb-1">
+                                                    Batch Starting Date: <span className="fw-bold">{card.startDate}</span>
+                                                </p>
+                                                <h6 className="text-danger">Hurry, only {card.no_of_Slots} slots remaining!</h6>
                                                 <hr />
                                                 <div className="d-flex justify-content-between">
                                                     <h6 className={style.studentsEnrolledText}>Students Registered: {card.students}</h6>
@@ -165,8 +107,6 @@ const UpcomingBatches = () => {
                                 ))}
                             </div>
                         </div>
-
-                        {/* Aside Card Section */}
                         <div className="col-md-4">
                             <div className={style.sticky_asidecard}>
                                 <Asidecard />

@@ -85,7 +85,7 @@ const Steps = () => {
                                     </ul>
 
                                     {/* Button at the bottom */}
-                                    <div className="mt-auto d-flex justify-content-end">
+                                    <div className="mt-auto d-flex justify-content-center">
                                         <button className="btn btn-outline-dark px-4 rounded-pill" onClick={scrollToHeading}>Free Trial</button>
                                         {/* <RegisterForm label={"free Trail"} /> */}
                                     </div>

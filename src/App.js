@@ -14,6 +14,7 @@ import PageNotFound from './components/pageNotFound/PageNotFound.js';
 import QuickHelpButton from './components/quickHelp_Button/QuickHelpButton.js';
 import appreciateImage from './assets/subscriptionpage/Copy of Insta Job Post (3).png';
 import Confetti from 'react-confetti';
+import { DateProvider } from './components/Forms/DateContext.js';
 
 
 const useWindowSize = () => {
@@ -39,7 +40,7 @@ const useWindowSize = () => {
 
 const Popup = ({ setShowPopup }) => {
   const windowSize = useWindowSize();
-  
+
   return (
     <div className="popup-overlay">
       <Confetti width={windowSize.width} height={windowSize.height} numberOfPieces={300} />
@@ -54,38 +55,42 @@ const Popup = ({ setShowPopup }) => {
 const AppContent = () => {
   const [showPopup, setShowPopup] = useState(false);
   const location = useLocation();
+  const excludedPaths = ["/career-quiz"];
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 15000); 
+    if (!excludedPaths.includes(location.pathname)) {
+      const timer = setTimeout(() => {
+        setShowPopup(true);
+      }, 15000);
+      return () => clearTimeout(timer);
+    } else {
+      setShowPopup(false);
+    }
+  }, [location.pathname]);
 
-    return () => clearTimeout(timer);
-  }, [location.pathname]); 
-
-  // useEffect(() => {
-  //   setShowPopup(true);
-  // }, [location.pathname]);
 
   return (
     <>
       <WishListProvider>
-        <ScrollToTop />
-        <NavBar />
-        <Suspense fallback={<Loading />}>
-          <Routes>
-            {routes.map((route) => route)}
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </Suspense>
-        <QuickHelpButton />
+        <DateProvider>
+          <ScrollToTop />
+          <NavBar />
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              {routes.map((route) => route)}
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+          </Suspense>
+          {/* <QuickHelpButton /> */}
+          {!excludedPaths.includes(location.pathname) && <QuickHelpButton />}
 
-        {/* Popup Modal */}
-        {showPopup && <Popup setShowPopup={setShowPopup} />}
+          {/* Popup Modal */}
+          {showPopup && <Popup setShowPopup={setShowPopup} />}
+        </DateProvider>
       </WishListProvider>
 
       {/* Popup Styling */}

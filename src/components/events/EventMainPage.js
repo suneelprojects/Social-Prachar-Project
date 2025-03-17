@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../footer/footer';
 import { useNavigate } from 'react-router-dom';
-import Asidecard from './../upcomingBatches/aside/Asidecard';
-import { trainersData } from './eventsData';
 import style from "../upcomingBatches/UpcomingBatches.module.css";
+import scrollStyle from './events.module.css';
 import certificate from "../../assets/careerworkshop/certificate1.png";
 import video from "../../assets/careerworkshop/video1.png";
 import star from "../../assets/careerworkshop/stars-svgrepo-com.png";
 import book from "../../assets/careerworkshop/book1.png";
 import globe from "../../assets/careerworkshop/globe.png";
 import bag from '../../assets/careerworkshop/briefcase.png';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase';
 
 
 const cardItems = [
@@ -22,16 +23,36 @@ const cardItems = [
 ];
 
 const EventMainPage = () => {
-    const [cards, setCards] = useState([]);
+    const [card, setCard] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
-        setCards(trainersData);
+        const fetchData = async () => {
+            try {
+                const querySnapshot = await getDocs(collection(db, "events"));
+                const eventsData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                setCard(eventsData);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
+        fetchData();
     }, []);
 
-    const handleOpen = (skill) => {
-        navigate(`/events/${skill}`);
+    // const handleOpen = (eventName) => {
+    //     const words = eventName.split(/\s+/);
+    //     if (words.length > 1) {
+    //         const formattedName = words.slice(0, -1).join('-') + ' ' + words[words.length - 1];
+    //         navigate(`/events/${formattedName}`);
+    //     } else {
+    //         navigate(`/events/${eventName}`);
+    //     }
+    // };
+
+    const handleOpen = (id) => {
+        navigate(`/events/${id}`);
     };
+
 
     return (
         <div className="container">
@@ -44,8 +65,7 @@ const EventMainPage = () => {
                     </div>
 
                     {/* Aside Card Section */}
-
-                    <div className={`d-flex flex-row align-items-center overflow-auto p-3`}>
+                    <div className={`d-flex flex-nowrap align-items-center overflow-auto p-3 ${scrollStyle.scrollContainer}`}>
                         {cardItems.map((item, idx) => (
                             <div key={idx} className="d-flex align-items-center me-4">
                                 {/* Icon */}
@@ -73,23 +93,26 @@ const EventMainPage = () => {
                     {/* Main Cards Section */}
                     <div className="col-md-12">
                         <div className="row">
-                            {cards.map((card, index) => (
+                            {card.map((card, index) => (
                                 <div
                                     key={index}
                                     className="col-md-4 mb-4 shadow"
-                                    onClick={() => handleOpen(card.skill)}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleOpen(card.id);
+                                    }}
                                     style={{ cursor: 'pointer' }}
                                 >
                                     <div className="card" style={{ width: '100%' }}>
-                                        <img src={card.image || 'placeholder.jpg'} className="card-img-top img-fluid" alt={card.skill} />
+                                        <img src={card.trainerImage || 'placeholder.jpg'} className="card-img-top img-fluid" alt={card.skill} style={{ width: "100%", height: "220px", objectFit: "cover" }} />
                                         <div className="card-body">
-                                            <h5 className="card-title">{card.skill}</h5>
-                                            <p className="card-text mb-1">Batch Starting Date: <span>{card.startDate || "TBD"}</span></p>
+                                            <h4 className="card-title">{card.eventName}</h4>
+                                            <p className="card-text mb-1">Batch Starting Date: <span>{card.startDate || "Not Mentioned"}</span></p>
                                             <h6 className="text-danger">Hurry, only {card.slots || "X"} slots remaining!</h6>
                                             <hr />
                                             <div className="d-flex justify-content-between">
                                                 <h6>Students Registered: {card.studentsRegistered || "X"}</h6>
-                                                <button className="fw-bold btn btn-primary">Open</button>
+                                                <button className={`fw-bold btn btn-primary`} onClick={() => handleOpen(card.eventName)}>Enroll Now</button>
                                             </div>
                                         </div>
                                     </div>

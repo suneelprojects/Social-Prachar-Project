@@ -33,6 +33,18 @@ const HeaderSignInForm = ({ onClose, courseID, actionType }) => {
         e.preventDefault();
         const { fullName, email, phone, actionType, course, mode, pageUrl, slug } = formData;
 
+        const phoneRegex = /^[6-9]\d{9}$/;
+        if (!fullName || !email || !phone || !course || !mode) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+        if (!phoneRegex.test(phone)) {
+            alert('Please enter a valid phone number.');
+            return;
+        }
+
+        setIsLoading(true);
+
         if (!fullName || !email || !phone || !course || !mode) {
             alert('Please fill in all required fields.');
             return;
