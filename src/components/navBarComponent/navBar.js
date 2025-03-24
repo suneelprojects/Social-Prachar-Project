@@ -11,7 +11,8 @@ import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-
+import Marquee from 'react-fast-marquee';
+import { faGraduationCap, faUsers, faHandshake, faMedal } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
   const location = useLocation();
@@ -80,9 +81,28 @@ const NavBar = () => {
     setIsDropdownOpen(false);
   };
 
+  const marqueeItems = [
+    { text: "Learn Till Get Placed", icon: <FontAwesomeIcon icon={faGraduationCap} className="me-3" style={{ color: 'white' }} /> },
+    { text: "Micro Batches - Just 15 students!", icon: <FontAwesomeIcon icon={faUsers} className="me-3" style={{ color: 'white' }} /> },
+    { text: "Get Guaranteed Internships & Full-Time Jobs", icon: <FontAwesomeIcon icon={faHandshake} className="me-3" style={{ color: 'white' }} /> },
+    { text: "16,000+ Success stories since 2014", icon: <FontAwesomeIcon icon={faMedal} className="me-3" style={{ color: 'white' }} /> },
+  ];
+
+
   return (
     <div className={`${navBarStyle.navBarSticky}`}>
       {/* second nav bar starts */}
+      <div className="py-1" style={{ background:'#553cdf'}}>
+        <Marquee speed={80} gradient={false} className="fs-5 fw-semibold">
+          {marqueeItems.map((item, index) => (
+            <span key={index} className="mx-5 d-flex align-items-center">
+              <span style={{fontSize:'30px'}}>{item.icon} </span><span style={{color:'white'}}>{item.text}</span>
+            </span>
+          ))}
+        </Marquee>
+      </div>
+
+
       <nav className={`navbar navbar-expand-lg ${navBarStyle.secondNav}`}>
         <div
           className={`${navBarStyle.containerfluidForNav} container-fluid`}

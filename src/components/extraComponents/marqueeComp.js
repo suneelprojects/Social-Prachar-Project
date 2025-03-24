@@ -20,4 +20,4 @@ const MarqueeComp = ({ MarqueeArray }) => {
   )
 }
 
-export default MarqueeComp
+export default MarqueeComp;
