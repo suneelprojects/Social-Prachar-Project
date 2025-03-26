@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import styles from '../Pageslices/Enrollbutton/PopUpForm.module.css';
 import Loading from '../extraComponents/loading';
 
-
 const SubscriptionForm = ({ onClose }) => {
+    const { userType } = useParams();
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -13,9 +14,10 @@ const SubscriptionForm = ({ onClose }) => {
         yearOfPassing: '',
         course: '',
         trainingMode: '',
+        userType: userType || 'General',
     });
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbyxgrTsN2fn8C3XAXvmBIjGniaxzF4jHnA9LMuC2CAIwGTNEyp4uPmLOmtjT3SunGqI9g/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbw_pJnD4lwimO_4fHYimzLEPkRLtiYmq8JPifCKtcjjt9edd9_cnmgog1X1VDTiqSTpZQ/exec";
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -36,7 +38,9 @@ const SubscriptionForm = ({ onClose }) => {
         Object.entries(formData).forEach(([key, value]) => {
             formDataEncoded.append(key, value);
         });
+        formDataEncoded.append('pageUrl', window.location.href);
         formDataEncoded.append('sheetName', 'subscription');
+
 
         try {
             const response = await fetch(scriptURL, {
@@ -49,7 +53,7 @@ const SubscriptionForm = ({ onClose }) => {
 
             if (!response.ok) throw new Error('Failed to submit form');
 
-            alert('Form submitted successfully!');
+            alert(`Form submitted successfully for ${formData.userType}!`);
             setFormData({
                 name: '',
                 email: '',
@@ -58,6 +62,7 @@ const SubscriptionForm = ({ onClose }) => {
                 yearOfPassing: '',
                 course: '',
                 trainingMode: '',
+                userType: userType || 'General',
             });
             onClose();
         } catch (error) {
@@ -74,7 +79,7 @@ const SubscriptionForm = ({ onClose }) => {
             <div className={styles.formContainer}>
                 <button className={styles.closeButton} onClick={onClose}>&times;</button>
                 <form onSubmit={handleSubmit}>
-                    <h2 style={{ color: 'black' }}>Register Now</h2>
+                    <h2 style={{ color: 'black' }}>Register Now ({formData.userType})</h2>
                     {['name', 'email', 'phone', 'yearOfPassing'].map(field => (
                         <div className={styles.formGroup} key={field}>
                             <input

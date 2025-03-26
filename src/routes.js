@@ -22,16 +22,17 @@ const ProjectDashBoard = React.lazy(() => import("./components/Projects/BlogDash
 const Subscription = React.lazy(() => (import('./components/subscriptionPage/SubscriptionHeader.js')))
 const EventsPage = React.lazy(() => (import('./components/events/EventMainPage.js')));
 const EventOpenPage = React.lazy(() => import("./components/events/EventsOpenpage.js"));
-const DateForms = React.lazy(() => import ("./components/Forms/DateInput.js"));
+const DateForms = React.lazy(() => import("./components/Forms/DateInput.js"));
 
 
 
 const routes = [
     <Route path="/" element={<AllHomeComp />} />,
-    <Route path='/datesform' element={<DateForms/>} />,
+    <Route path='/datesform' element={<DateForms />} />,
     <Route path='/events/:id' element={<EventOpenPage />} />,
     <Route path='events' element={<EventsPage />} />,
-    <Route path='subscription' element={<Subscription />} />,
+    <Route path="/subscription/:userType" element={<Subscription />} />,
+    <Route path="/subscription" element={<Subscription />} />,
     <Route path='project-dashboard' element={<ProjectDashBoard />} />,
     <Route path='projects/:id' element={<OpenBlogPage />} />,
     <Route path='projects' element={<Projects />} />,

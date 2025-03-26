@@ -71,14 +71,23 @@ const NavBar = () => {
     location.pathname === "/Career-Success-workshop";
 
   // for drop Down
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [dropdowns, setDropdowns] = useState({
+    dropdown1: false,
+    dropdown2: false,
+  });
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const toggleDropdown = (dropdown) => {
+    setDropdowns((prevState) => ({
+      ...prevState,
+      [dropdown]: !prevState[dropdown], // Toggle only the clicked dropdown
+    }));
   };
 
-  const closeDropdown = () => {
-    setIsDropdownOpen(false);
+  const closeDropdown = (dropdown) => {
+    setDropdowns((prevState) => ({
+      ...prevState,
+      [dropdown]: false, // Close only the specified dropdown
+    }));
   };
 
   const marqueeItems = [
@@ -92,11 +101,11 @@ const NavBar = () => {
   return (
     <div className={`${navBarStyle.navBarSticky}`}>
       {/* second nav bar starts */}
-      <div className="py-1" style={{ background:'#553cdf'}}>
+      <div className="py-1" style={{ background: '#553cdf' }}>
         <Marquee speed={80} gradient={false} className="fs-5 fw-semibold">
           {marqueeItems.map((item, index) => (
             <span key={index} className="mx-5 d-flex align-items-center">
-              <span style={{fontSize:'30px'}}>{item.icon} </span><span style={{color:'white'}}>{item.text}</span>
+              <span style={{ fontSize: '30px' }}>{item.icon} </span><span style={{ color: 'white' }}>{item.text}</span>
             </span>
           ))}
         </Marquee>
@@ -255,7 +264,7 @@ const NavBar = () => {
                     Career Workshop
                   </NavLink>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <NavLink
                     to={"/upcoming-batches"}
                     className={`nav-link ${navBarStyle.NavLinkForHover}`}
@@ -263,68 +272,113 @@ const NavBar = () => {
                   >
                     Upcoming Batches
                   </NavLink>
-                </li>
-                <li className="nav-item">
+                </li> */}
+                <li className="nav-item" onMouseLeave={() => closeDropdown("dropdown2")}>
                   <NavLink
-                    to={"/subscription"}
-                    className={`nav-link ${navBarStyle.NavLinkForHover}`}
-                    onClick={closeToggle}
+                    className={`nav-link navbar-toggle dropdown-toggle ${navBarStyle.NavLinkForHover}`}
+                    onClick={() => toggleDropdown("dropdown2")}
                   >
                     Subscription
                   </NavLink>
+                  <div className={`dropdown-menu ${dropdowns.dropdown2 ? "show" : ""}`}>
+                    <NavLink
+                      to="/subscription/working-professionals" // ✅ Absolute Path
+                      className="dropdown-item"
+                      onClick={() => {
+                        closeDropdown("dropdown2");
+                        closeToggle();
+                      }}
+                    >
+                      Working Professionals
+                    </NavLink>
+                    <NavLink
+                      to="/subscription/students" // ✅ Lowercase "students"
+                      className="dropdown-item"
+                      onClick={() => {
+                        closeDropdown("dropdown2");
+                        closeToggle();
+                      }}
+                    >
+                      Students
+                    </NavLink>
+                  </div>
                 </li>
 
-                <li className="nav-item" onMouseLeave={closeDropdown}>
+
+
+                <li className="nav-item" onMouseLeave={() => closeDropdown("dropdown1")}>
                   <NavLink
                     className={`nav-link navbar-toggle dropdown-toggle ${navBarStyle.NavLinkForHover}`}
-                    onClick={toggleDropdown}
+                    onClick={() => toggleDropdown("dropdown1")}
                   >
                     More
                   </NavLink>
-                  <div className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
-                    <NavLink to="/aboutUs" className="dropdown-item"
+                  <div className={`dropdown-menu ${dropdowns.dropdown1 ? "show" : ""}`}>
+                    <NavLink
+                      to="/aboutUs"
+                      className="dropdown-item"
                       onClick={() => {
-                        closeDropdown();
+                        closeDropdown("dropdown1");
                         closeToggle();
-                      }}>
+                      }}
+                    >
                       About us
                     </NavLink>
-                    <NavLink to="/events" className="dropdown-item" onClick={() => {
-                      closeDropdown();
-                      closeToggle();
-                    }}>
+                    <NavLink
+                      to="/events"
+                      className="dropdown-item"
+                      onClick={() => {
+                        closeDropdown("dropdown1");
+                        closeToggle();
+                      }}
+                    >
                       Events
                     </NavLink>
-                    <a href="https://finversity.in" className="dropdown-item" target="_blank" rel="noopener noreferrer" onClick={() => {
-                      closeDropdown();
-                      closeToggle();
-                    }}>
+                    <a
+                      href="https://finversity.in"
+                      className="dropdown-item"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        closeDropdown("dropdown1");
+                        closeToggle();
+                      }}
+                    >
                       Finversity
                     </a>
-                    <NavLink to="/scholarship-test" className="dropdown-item" onClick={() => {
-                      closeDropdown();
-                      closeToggle();
-                    }}>
+                    <NavLink
+                      to="/scholarship-test"
+                      className="dropdown-item"
+                      onClick={() => {
+                        closeDropdown("dropdown1");
+                        closeToggle();
+                      }}
+                    >
                       Scholarship Test
                     </NavLink>
                     <NavLink
                       to="/socialhire"
                       className="dropdown-item"
                       onClick={() => {
-                        closeDropdown();
+                        closeDropdown("dropdown1");
                         closeToggle();
                       }}
                     >
                       SocialHire
                     </NavLink>
-                    <NavLink to="projects" className="dropdown-item" onClick={() => {
-                      closeDropdown();
-                      closeToggle();
-                    }}>
+                    <NavLink
+                      to="projects"
+                      className="dropdown-item"
+                      onClick={() => {
+                        closeDropdown("dropdown1");
+                        closeToggle();
+                      }}
+                    >
                       Students-Projects
                     </NavLink>
                   </div>
                 </li>
+
                 <li>
                   <div>
                     <a

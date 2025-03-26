@@ -13,12 +13,11 @@ import { FaRobot, FaRupeeSign } from 'react-icons/fa';
 import style from '../Career_workshop/ButtonDemoBooking/Button.module.css';
 import RegisterForm from './FormButton';
 import JD_course from '../../assets/AssetsOfDetailsPage/JD_course.png';
-
+import { useParams } from 'react-router-dom';
 
 
 const SubscriptionHeader = () => {
     const [weekDate, setWeekDate] = useState("");
-
     useEffect(() => {
         const today = new Date();
         const daysUntilWednesday = (3 - today.getDay() + 7) % 7;
@@ -27,6 +26,10 @@ const SubscriptionHeader = () => {
 
         setWeekDate(nextWednesday.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" }));
     }, []);
+
+    const { userType } = useParams();
+    console.log("User Type:", userType); 
+    const displayText = userType === "students" ? "Students can" : "Working Professionals";
 
     return (
         <>
@@ -40,9 +43,9 @@ const SubscriptionHeader = () => {
 
                     <div className="col-md-6 p-5">
                         <h2 className='fw-bold' style={{ color: '#2c2c2c' }}>
-                            Working Professionals <span style={{ color: '#ff5003' }}>Save 95%</span> with SocialPrachar's Subscription Plan!
+                            {displayText} <span style={{ color: '#ff5003' }}>Save 95%</span> with SocialPrachar's Subscription Plan!
                         </h2>
-                        <h4 className='py-3' style={{color:'#443cdf'}}>
+                        <h4 className='py-3' style={{ color: '#443cdf' }}>
                             <FontAwesomeIcon icon={faTags} className='px-2' />One Subscription – Learn Multiple Courses!
                         </h4>
                         <p>
@@ -53,14 +56,14 @@ const SubscriptionHeader = () => {
                         <p className='fw-bold'><FaRupeeSign className="me-2" size={30} /> EMI starts at just ₹50/day</p>
                         <p>Invest in your future—One Subscription, <span className='fw-bold'>Unlimited Learning!</span></p>
                         <div className="text-center">
-                            <RegisterForm label={"Book Free Demo Now"} className={`${style.button} my-3 fw-bold`}/>
+                            <RegisterForm label={"Book Free Demo Now"} className={`${style.button} my-3 fw-bold`} />
                             <p className="fw-bold" style={{ fontSize: '18px' }}>
                                 Register by <span style={{ color: '#4941e1', fontSize: '22px' }}>{weekDate}</span> to unlock exclusive bonuses
                             </p>
                         </div>
                     </div>
                     <div className="col-md-6">
-                        <img src={JD_course} alt="" style={{ background: 'black', color: 'white',borderRadius:'15px' }} />
+                        <img src={JD_course} alt="" style={{ background: 'black', color: 'white', borderRadius: '15px' }} />
                     </div>
                 </div>
             </div>
