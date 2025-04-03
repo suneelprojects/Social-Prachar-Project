@@ -16,13 +16,23 @@ const cardData = [
 ];
 
 const DateInput = () => {
-    const { date, setDate, datesById, setDatesById } = useDateContext();
+    const { date, setDate, datesById, setDatesById, onlineTestDate, setOnlineTestDate, offlineTestDate, setOfflineTestDate } = useDateContext();
     const [generalDate, setGeneralDate] = useState(date);
     const [id, setId] = useState("");
     const [idSpecificDate, setIdSpecificDate] = useState("");
+    const [submittedOnlineDate, setSubmittedOnlineDate] = useState(onlineTestDate);
+    const [submittedOfflineDate, setSubmittedOfflineDate] = useState(offlineTestDate);
 
     const handleGeneralSubmit = () => {
         setDate(generalDate);
+    };
+
+    const handleOnlineDateSubmit = () => {
+        setSubmittedOnlineDate(onlineTestDate);
+    };
+
+    const handleOfflineDateSubmit = () => {
+        setSubmittedOfflineDate(offlineTestDate);
     };
 
     const handleIdSubmit = () => {
@@ -68,7 +78,7 @@ const DateInput = () => {
             ...prevData,
             [name]: updatedValue,
         }));
-        
+
     };
 
     // Submit form data to Firebase
@@ -76,9 +86,9 @@ const DateInput = () => {
         e.preventDefault();
         try {
             await addDoc(collection(db, 'events'), eventData);
-    //           ...eventData,
-    // benefits: eventData.benefits.filter(Boolean), // Remove empty lines
-    //     });
+            //           ...eventData,
+            // benefits: eventData.benefits.filter(Boolean), // Remove empty lines
+            //     });
             alert('Event added successfully!');
             setEventData({ eventName: '', startDate: '', startTime: '', slots: '', trainerName: '', skills: '', about: '', benefits: '' });
             fetchEvents();
@@ -103,6 +113,47 @@ const DateInput = () => {
         <>
             <div className="container mt-4">
                 <div className="row">
+
+                    {/* Scholarship Exam Dates Form */}
+                    <div className="my-5 p-4 border rounded shadow">
+                        <h3 className="card-title text-center">📅 Scholarship Test Dates</h3>
+                        <form>
+                            <div className="mb-3">
+                                <label className="fw-bold">Online Test Date:</label>
+                                <input
+                                    type="date"
+                                    className="form-control"
+                                    id="onlineTestDate"
+                                    value={onlineTestDate}
+                                    onChange={(e) => setOnlineTestDate(e.target.value)}
+                                />
+                            </div>
+                            <button type="button" className="btn btn-success me-2" onClick={handleOnlineDateSubmit}>
+                                Submit Online Test Date
+                            </button>
+                            {submittedOnlineDate && (
+                                <p className="mt-2 text-success">✅ Online Test Date: {submittedOnlineDate}</p>
+                            )}
+
+                            <div className="mb-3 mt-3">
+                                <label className="fw-bold">Offline Test Date:</label>
+                                <input
+                                    type="date"
+                                    className="form-control"
+                                    id="offlineTestDate"
+                                    value={offlineTestDate}
+                                    onChange={(e) => setOfflineTestDate(e.target.value)}
+                                />
+                            </div>
+                            <button type="button" className="btn btn-info" onClick={handleOfflineDateSubmit}>
+                                Submit Offline Test Date
+                            </button>
+                            {submittedOfflineDate && (
+                                <p className="mt-2 text-info">✅ Offline Test Date: {submittedOfflineDate}</p>
+                            )}
+                        </form>
+                    </div>
+
                     {/* General Date Selection */}
                     <div className="col-md-12">
                         <div className="card shadow-sm">

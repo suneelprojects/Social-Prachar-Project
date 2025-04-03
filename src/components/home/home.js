@@ -81,7 +81,7 @@ const Home = () => {
                       Strong Alumni
                     </p>
                   </div>
-                </div>  
+                </div>
               </div>
             </div>
           </div>
@@ -117,9 +117,6 @@ const Home = () => {
             </div>
 
             <img src={homepic01} className={`${homeStyle.homePic}`} />
-
-
-
           </div>
 
         </div>

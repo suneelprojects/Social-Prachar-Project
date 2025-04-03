@@ -33,7 +33,7 @@ const studentPlan = [
     {
         title: <>Standard Pack - <span style={{ color: '#ff5003' }}>₹5,999/- month</span></>,
         subTitle: [
-            "100% Online Learning with 1-Year App Access",
+            "100% Job Ready programs, Start interviews from 2nd Month onwards",
             "Learn at your own pace with expert-designed courses",
             "Access to in-demand courses:",
             "Digital Marketing",
@@ -50,7 +50,7 @@ const studentPlan = [
     {
         title: <>premium Plan - <span style={{ color: '#ff5003' }}>₹7,999/- month</span></>,
         subTitle: [
-            "100% Online Learning with 1-Year App Access",
+            "100% Job Ready programs, Start interviews from 2nd Month onwards",
             "All Standard Plan Courses Included",
             "Advanced MERN Full Stack Development",
             "In-Depth AI & ML with Real-World Applications",
@@ -96,7 +96,7 @@ const cardContent = [
     },
     {
         title: <>Starter Pack – <span style={{ color: '#ff5003' }}>₹12,000/-</span> (For Beginners & Self-Paced Learners)</>,
-        subTitle: ["100% Online Learning with 1-Year App Access",
+        subTitle: ["100% Job Ready programs, Start interviews from 2nd Month onwards",
             "Learn at your own pace with expert - designed courses",
             "Access to Digital Marketing, Data Analytics, AWS, DevOps",
             "Perfect for working professionals & freshers looking to upskill"],

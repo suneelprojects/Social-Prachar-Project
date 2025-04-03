@@ -89,7 +89,7 @@ const AppContent = () => {
           {!excludedPaths.includes(location.pathname) && <QuickHelpButton />}
 
           {/* Popup Modal */}
-          {showPopup && <Popup setShowPopup={setShowPopup} />}
+          {/* {showPopup && <Popup setShowPopup={setShowPopup} />} */}
         </DateProvider>
       </WishListProvider>
 

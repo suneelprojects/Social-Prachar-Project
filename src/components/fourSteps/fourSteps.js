@@ -6,7 +6,6 @@ import fourImageFour from '../../assets/fourStep (4).png';
 import circleSvg from '../../assets/circleSvg.png';
 import wavesPic from '../../assets/waves.png';
 import ParallaxEffect from "../extraComponents/ParallaxEffect";
-
 import fourStepsStyle from '../fourSteps/fourStep.module.css'
 
 

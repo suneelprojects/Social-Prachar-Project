@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import style from './ScholarShipTest.module.css';
 import testImage from '../../assets/careerworkshop/SocialPrachar.png';
 import Footer from '../footer/footer.js';
@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faMedal, faPen, faTrophy } from '@fortawesome/free-solid-svg-icons';
 import { faCheckSquare } from '@fortawesome/free-regular-svg-icons';
 import ScholarshipFormTest from './ScholarshipFormTest.js';
+import { useDateContext } from '../Forms/DateContext.js';
+
 
 const faqData = [
     {
@@ -50,7 +52,7 @@ const faqData = [
 const ScholarShipTest = () => {
     const [openIndex, setOpenIndex] = useState(null);
     const [isPopupVisible, setIsPopupVisible] = useState(false);
-    const [wednesdayDate, setWednesdayDate] = useState("");
+    const { onlineTestDate, offlineTestDate } = useDateContext();
 
     const togglePopup = () => {
         setIsPopupVisible(!isPopupVisible);
@@ -59,25 +61,22 @@ const ScholarShipTest = () => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
-    useEffect(() => {
-        const getNextWednesday = () => {
-            const today = new Date();
-            const dayOfWeek = today.getDay(); // 0 (Sun) to 6 (Sat)
-            const daysUntilWednesday = (3 - dayOfWeek + 7) % 7 || 7; // Calculate next Wednesday
-            const nextWednesday = new Date();
-            nextWednesday.setDate(today.getDate() + daysUntilWednesday);
+    const formatDate = (dateString) => {
+        if (!dateString) return { month: "Month", day: "00", year: "0000" };
 
-            // Format the date as: "July 31, 2024"
-            return nextWednesday.toLocaleDateString("en-US", {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-            });
+        const date = new Date(dateString);
+        const options = { month: "long" }; // Full month name (e.g., January)
+
+        return {
+            month: new Intl.DateTimeFormat("en-US", options).format(date),
+            day: date.getDate(),
+            year: date.getFullYear(),
         };
+    };
 
-        setWednesdayDate(getNextWednesday());
-    }, []);
+    // Get formatted date objects
+    const onlineDate = formatDate(onlineTestDate);
+    const offlineDate = formatDate(offlineTestDate);
 
     return (
         <>
@@ -86,13 +85,59 @@ const ScholarShipTest = () => {
                 Every week one <span style={{color:'#ff5003'}}>Top Winner</span>, whoever cracks
                     <span className="text-success"> 30/30 </span> in less time will get a
                     <span className="text-uppercase font-weight-bold" style={{color:'#ff5003'}}> complete FREE Course </span>
-                    <span style={{color:'#553cdf'}}>(No Hidden Charges) </span>
+                    <span style={{ color: '#553cdf' }}>(No Hidden Charges) </span>& Guaranteed Placement
                 </h1>
 
                 <img src={testImage} alt="Scholarship Test" className="img-fluid mb-4" />
-                <h1 className="mb-2 fw-bold text-black py-2">
-                    Upcoming Online Test on <span style={{color:'#ff3002'}}>{wednesdayDate}</span>
+                <h1 className="mb-2 fw-bold text-black py-2 text-center">
+                    Upcoming Tests:
                 </h1>
+                {/* <h1 className="fw-bold text-black text-center">
+                    Online Test on <span  input="date" style={{ color: '#ff3002' }}>{onlineTestDate}</span>
+                </h1>
+                <h1 className="fw-bold text-black text-center">
+                    Offline Test on <span  input="date" style={{ color: '#ff3002' }}>{offlineTestDate}</span>
+                </h1> */}
+
+
+                <div class={style.eventsContainer}>
+                    <div class={style.eventCard}>
+                        <div class={style.dateBox}>
+                            <div className={style.month}>{onlineDate.month}</div>
+                            <div className={style.day}>{onlineDate.day}</div>
+                            <div className={style.year}>{onlineDate.year}</div>
+                        </div>
+
+                        <div class={style.eventDetails}>
+                            <div className={`${style.eventTitle} online`}>
+                                <div class={`${style.eventIcon} online`}>💻</div>
+                                Online Test
+                            </div>
+                            <div class={style.eventTime}>
+                                <span input="date" style={{color: "#3a36e0", fontWeight: "bold"}}>{onlineTestDate}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class={`${style.eventCard} offline`}>
+                        <div class={style.dateBox}>
+                            <div className={style.month}>{offlineDate.month}</div>
+                            <div className={style.day}>{offlineDate.day}</div>
+                            <div className={style.year}>{offlineDate.year}</div>
+                        </div>
+
+                        <div class={style.eventDetails}>
+                            <div class={`${style.eventTitle } offline`}>
+                                <div class={`${style.eventIcon} offline`}>📝</div>
+                                Offline Test
+                            </div>
+                            <div class={style.eventTime}>
+                                <span input="date" style={{color: "#ff3002", fontWeight: "bold"}}>{offlineTestDate}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <p className="mb-4 fs-2">Student Discounts Totaling 4,65,000 INR Awarded in the Past Month</p>
                 <button className="btn mb-5 fw-bold" onClick={togglePopup} style={{background:'#553cdf', color:'white'}}>Register Now</button>
                 {isPopupVisible && <ScholarshipFormTest onClose={togglePopup} />}

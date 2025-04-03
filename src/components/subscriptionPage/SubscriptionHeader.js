@@ -30,6 +30,7 @@ const SubscriptionHeader = () => {
     const { userType } = useParams();
     console.log("User Type:", userType); 
     const displayText = userType === "students" ? "Students can" : "Working Professionals";
+    const changePlan = userType === "students" ? "6999 INR/Month (6 Months EMI)" :"EMI starts at just ₹50/day";
 
     return (
         <>
@@ -53,7 +54,7 @@ const SubscriptionHeader = () => {
                             Gain hands-on experience, expert mentorship, and AI-powered career tools—all at an unbeatable price!
                         </p>
                         <p className='fw-bold'><FaRobot className="me-2" size={30} /> Exclusive AI-driven tools & career support included!</p>
-                        <p className='fw-bold'><FaRupeeSign className="me-2" size={30} /> EMI starts at just ₹50/day</p>
+                        <p className='fw-bold'><FaRupeeSign className="me-2" size={30} />{changePlan}</p>
                         <p>Invest in your future—One Subscription, <span className='fw-bold'>Unlimited Learning!</span></p>
                         <div className="text-center">
                             <RegisterForm label={"Book Free Demo Now"} className={`${style.button} my-3 fw-bold`} />

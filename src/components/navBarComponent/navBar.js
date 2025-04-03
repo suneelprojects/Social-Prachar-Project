@@ -9,7 +9,7 @@ import spLogo from "../../assets/SP_Logo.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faTrophy } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import Marquee from 'react-fast-marquee';
 import { faGraduationCap, faUsers, faHandshake, faMedal } from "@fortawesome/free-solid-svg-icons";
@@ -91,6 +91,7 @@ const NavBar = () => {
   };
 
   const marqueeItems = [
+    { text: "Recent Best Package 16 LPA", icon: <FontAwesomeIcon icon={faTrophy} className="me-3" style={{ color: 'white' }} /> },
     { text: "Learn Till Get Placed", icon: <FontAwesomeIcon icon={faGraduationCap} className="me-3" style={{ color: 'white' }} /> },
     { text: "Micro Batches - Just 15 students!", icon: <FontAwesomeIcon icon={faUsers} className="me-3" style={{ color: 'white' }} /> },
     { text: "Get Guaranteed Internships & Full-Time Jobs", icon: <FontAwesomeIcon icon={faHandshake} className="me-3" style={{ color: 'white' }} /> },
@@ -264,7 +265,7 @@ const NavBar = () => {
                     Career Workshop
                   </NavLink>
                 </li>
-                {/* <li className="nav-item">
+                <li className="nav-item">
                   <NavLink
                     to={"/upcoming-batches"}
                     className={`nav-link ${navBarStyle.NavLinkForHover}`}
@@ -272,7 +273,7 @@ const NavBar = () => {
                   >
                     Upcoming Batches
                   </NavLink>
-                </li> */}
+                </li>
                 <li className="nav-item" onMouseLeave={() => closeDropdown("dropdown2")}>
                   <NavLink
                     className={`nav-link navbar-toggle dropdown-toggle ${navBarStyle.NavLinkForHover}`}

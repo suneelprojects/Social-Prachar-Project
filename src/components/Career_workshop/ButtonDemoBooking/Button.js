@@ -3,7 +3,6 @@ import style from './Button.module.css';
 import { useDateContext } from '../../Forms/DateContext';
 
 const Button = () => {
-    const [weekDate, setWeekDate] = useState("");
     const [showForm, setShowForm] = useState(false);
     const {date} = useDateContext();
 
