@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { useDateContext } from "./DateContext";
 import { db } from "../../firebase";
 import { useNavigate } from "react-router-dom";
-import { addDoc, collection, getDocs } from "firebase/firestore";
+import { addDoc, collection, getDocs, getDoc, updateDoc } from "firebase/firestore";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+
 
 const cardData = [
     { id: 1, title: "Artificial Intelligence" },
@@ -16,34 +18,155 @@ const cardData = [
 ];
 
 const DateInput = () => {
-    const { date, setDate, datesById, setDatesById, onlineTestDate, setOnlineTestDate, offlineTestDate, setOfflineTestDate } = useDateContext();
-    const [generalDate, setGeneralDate] = useState(date);
-    const [id, setId] = useState("");
-    const [idSpecificDate, setIdSpecificDate] = useState("");
-    const [submittedOnlineDate, setSubmittedOnlineDate] = useState(onlineTestDate);
-    const [submittedOfflineDate, setSubmittedOfflineDate] = useState(offlineTestDate);
+    const {
+        careerWorkshopDate,
+        upcomingBatchesDate
+    } = useDateContext();
+    const {
+        scholarshipTestDate,
+        setScholarshipTestDate,
+    } = useDateContext();
 
-    const handleGeneralSubmit = () => {
-        setDate(generalDate);
-    };
+    // Career Workshop
+    const [generalDate, setGeneralDate] = useState("");
+    const [date, setDate] = useState("");
+    useEffect(() => {
+        if (careerWorkshopDate) {
+            setGeneralDate(careerWorkshopDate);
+            setDate(careerWorkshopDate);
+        }
+    }, [careerWorkshopDate]);
 
-    const handleOnlineDateSubmit = () => {
-        setSubmittedOnlineDate(onlineTestDate);
-    };
-
-    const handleOfflineDateSubmit = () => {
-        setSubmittedOfflineDate(offlineTestDate);
-    };
-
-    const handleIdSubmit = () => {
-        if (id && idSpecificDate) {
-            setDatesById(prev => ({ ...prev, [id]: idSpecificDate }));
-            setId("");
-            setIdSpecificDate("");
+    const handleGeneralSubmit = async (newDate) => {
+        try {
+            const docRef = doc(db, "DatesForm", "careerWorkshop");
+            await setDoc(docRef, {
+                selectedDate: newDate,
+                updatedAt: serverTimestamp(),
+            });
+            setDate(newDate);
+            alert("Date updated successfully!");
+        } catch (error) {
+            console.error("Error updating date:", error);
         }
     };
 
 
+    // Scholarship Test
+    const [onlineTestDate, setOnlineTestDate] = useState("");
+    const [offlineTestDate, setOfflineTestDate] = useState("");
+    const [submittedOnlineDate, setSubmittedOnlineDate] = useState("");
+    const [submittedOfflineDate, setSubmittedOfflineDate] = useState("");
+
+    // Load context dates into local state
+    useEffect(() => {
+        if (scholarshipTestDate) {
+            setOnlineTestDate(scholarshipTestDate.onlineDate || "");
+            setOfflineTestDate(scholarshipTestDate.offlineDate || "");
+            setSubmittedOnlineDate(scholarshipTestDate.onlineDate || "");
+            setSubmittedOfflineDate(scholarshipTestDate.offlineDate || "");
+        }
+    }, [scholarshipTestDate]);
+
+    const handleOnlineDateSubmit = async () => {
+        try {
+            const docRef = doc(db, "DatesForm", "scholarshipTest");
+            await setDoc(
+                docRef,
+                {
+                    onlineDate: onlineTestDate,
+                    updatedAt: serverTimestamp(),
+                },
+                { merge: true }
+            );
+
+            setSubmittedOnlineDate(onlineTestDate);
+            setScholarshipTestDate((prev) => ({
+                ...prev,
+                onlineDate: onlineTestDate,
+            }));
+            alert("Online Test Date updated!");
+        } catch (error) {
+            console.error("Error updating online test date:", error);
+        }
+    };
+
+    const handleOfflineDateSubmit = async () => {
+        try {
+            const docRef = doc(db, "DatesForm", "scholarshipTest");
+            await setDoc(
+                docRef,
+                {
+                    offlineDate: offlineTestDate,
+                    updatedAt: serverTimestamp(),
+                },
+                { merge: true }
+            );
+
+            setSubmittedOfflineDate(offlineTestDate);
+            setScholarshipTestDate((prev) => ({
+                ...prev,
+                offlineDate: offlineTestDate,
+            }));
+            alert("Offline Test Date updated!");
+        } catch (error) {
+            console.error("Error updating offline test date:", error);
+        }
+    };
+
+
+    // upcoming Batches
+    const [id, setId] = useState("");
+    const [idSpecificDate, setIdSpecificDate] = useState("");
+    const [datesById, setDatesById] = useState({});
+    useEffect(() => {
+        const fetchBatchDates = async () => {
+            try {
+                const snap = await getDoc(doc(db, "DatesForm", "upcomingBatches"));
+                if (snap.exists()) {
+                    const data = snap.data();
+                    setDatesById(data);
+                }
+            } catch (error) {
+                console.error("Error fetching batch dates:", error);
+            }
+        };
+        fetchBatchDates();
+    }, []);
+
+
+    const handleIdSubmit = async () => {
+        if (!id || !idSpecificDate) {
+            alert("Please enter both ID and Date.");
+            return;
+        }
+
+        try {
+            const docRef = doc(db, "DatesForm", "upcomingBatches");
+            const key = String(id);
+
+            await updateDoc(docRef, {
+                [key]: idSpecificDate,
+            });
+
+            // Update local state
+            setDatesById((prev) => ({
+                ...prev,
+                [key]: idSpecificDate,
+            }));
+
+            alert(`Date for ID ${key} saved!`);
+            setId(""); // Clear input
+            setIdSpecificDate("");
+        } catch (error) {
+            console.error("Error updating date for ID:", error);
+            alert("Failed to update date.");
+        }
+    };
+
+
+
+    // Events
     const [cards, setCards] = useState([]);
     const [eventData, setEventData] = useState({
         eventName: '',
@@ -57,7 +180,6 @@ const DateInput = () => {
     });
 
     const navigate = useNavigate();
-
     useEffect(() => {
         fetchEvents();
     }, []);
@@ -68,7 +190,6 @@ const DateInput = () => {
         const eventsList = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         setCards(eventsList);
     };
-
     // Handle input changes
     const handleChange = (e) => {
         setEventData({ ...eventData, [e.target.name]: e.target.value });
@@ -80,7 +201,6 @@ const DateInput = () => {
         }));
 
     };
-
     // Submit form data to Firebase
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -96,7 +216,7 @@ const DateInput = () => {
             console.error('Error adding event:', error);
         }
     };
-
+    // handle image upload
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
         if (file) {
@@ -113,47 +233,6 @@ const DateInput = () => {
         <>
             <div className="container mt-4">
                 <div className="row">
-
-                    {/* Scholarship Exam Dates Form */}
-                    <div className="my-5 p-4 border rounded shadow">
-                        <h3 className="card-title text-center">📅 Scholarship Test Dates</h3>
-                        <form>
-                            <div className="mb-3">
-                                <label className="fw-bold">Online Test Date:</label>
-                                <input
-                                    type="date"
-                                    className="form-control"
-                                    id="onlineTestDate"
-                                    value={onlineTestDate}
-                                    onChange={(e) => setOnlineTestDate(e.target.value)}
-                                />
-                            </div>
-                            <button type="button" className="btn btn-success me-2" onClick={handleOnlineDateSubmit}>
-                                Submit Online Test Date
-                            </button>
-                            {submittedOnlineDate && (
-                                <p className="mt-2 text-success">✅ Online Test Date: {submittedOnlineDate}</p>
-                            )}
-
-                            <div className="mb-3 mt-3">
-                                <label className="fw-bold">Offline Test Date:</label>
-                                <input
-                                    type="date"
-                                    className="form-control"
-                                    id="offlineTestDate"
-                                    value={offlineTestDate}
-                                    onChange={(e) => setOfflineTestDate(e.target.value)}
-                                />
-                            </div>
-                            <button type="button" className="btn btn-info" onClick={handleOfflineDateSubmit}>
-                                Submit Offline Test Date
-                            </button>
-                            {submittedOfflineDate && (
-                                <p className="mt-2 text-info">✅ Offline Test Date: {submittedOfflineDate}</p>
-                            )}
-                        </form>
-                    </div>
-
                     {/* General Date Selection */}
                     <div className="col-md-12">
                         <div className="card shadow-sm">
@@ -167,18 +246,62 @@ const DateInput = () => {
                                     className="form-control"
                                 />
                                 <button
-                                    onClick={handleGeneralSubmit}
+                                    onClick={() => handleGeneralSubmit(generalDate)}
                                     className="btn btn-primary mt-3"
                                 >
                                     Submit
                                 </button>
-                                {date && (
-                                    <p className="mt-3 text-muted">
-                                        📅 Stored General Date: <strong>{date}</strong>
-                                    </p>
-                                )}
+                                <p className="mt-3 text-muted">
+                                    📅 Stored Career Workshop Date: <strong>{date}</strong>
+                                </p>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Scholarship Exam Dates Form */}
+                    <div className="my-5 p-4 border rounded shadow">
+                        <h3 className="card-title text-center">📅 Scholarship Test Dates</h3>
+                        <form>
+                            <div className="mb-3">
+                                <label className="fw-bold">Online Test Date:</label>
+                                <input
+                                    type="date"
+                                    className="form-control"
+                                    value={onlineTestDate}
+                                    onChange={(e) => setOnlineTestDate(e.target.value)}
+                                />
+                            </div>
+                            <button
+                                type="button"
+                                className="btn btn-success me-2"
+                                onClick={handleOnlineDateSubmit}
+                            >
+                                Submit Online Test Date
+                            </button>
+                            {submittedOnlineDate && (
+                                <p className="mt-2 text-success">✅ Online Test Date: {submittedOnlineDate}</p>
+                            )}
+
+                            <div className="mb-3 mt-3">
+                                <label className="fw-bold">Offline Test Date:</label>
+                                <input
+                                    type="date"
+                                    className="form-control"
+                                    value={offlineTestDate}
+                                    onChange={(e) => setOfflineTestDate(e.target.value)}
+                                />
+                            </div>
+                            <button
+                                type="button"
+                                className="btn btn-info"
+                                onClick={handleOfflineDateSubmit}
+                            >
+                                Submit Offline Test Date
+                            </button>
+                            {submittedOfflineDate && (
+                                <p className="mt-2 text-info">✅ Offline Test Date: {submittedOfflineDate}</p>
+                            )}
+                        </form>
                     </div>
 
                     {/* Course Date Selection */}
@@ -186,8 +309,6 @@ const DateInput = () => {
                         <div className="card shadow-sm">
                             <div className="card-body">
                                 <h3 className="card-title text-center">📅 Upcoming Batches</h3>
-
-                                {/* Available Courses */}
                                 <h4 className="fw-semibold">Available Courses:</h4>
                                 <ul className="list-group mb-3">
                                     {cardData.map((course) => (
@@ -219,7 +340,7 @@ const DateInput = () => {
                                     Save Date for ID
                                 </button>
 
-                                {/* Display Stored Dates */}
+                                {/* Display Stored Dates  */}
                                 {Object.keys(datesById).length > 0 && (
                                     <div className="mt-4">
                                         <h4 className="fw-semibold">Stored Dates:</h4>
@@ -253,8 +374,6 @@ const DateInput = () => {
                     <div className="bg container pt-5">
                         <h1 className='fw-bold'>Social Prachar <span style={{ color: '#ff5003' }}>MasterClasses</span></h1>
                         <h4 className='text-muted'>Learn Tech Concepts From Industry Leaders!</h4>
-
-                        {/* Event Form */}
                         <div className="mt-5 p-4 border rounded shadow">
                             <h3>Add New Event</h3>
                             <form onSubmit={handleSubmit}>

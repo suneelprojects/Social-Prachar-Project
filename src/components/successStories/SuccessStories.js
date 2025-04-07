@@ -16,8 +16,10 @@ import { ourAluminiReviews } from './ourAluminiReviews.js';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import redline from '../../assets/RedLine.webp';
-import Loading from '../extraComponents/loading.js';
 import SuccessStoriesForm from './SuccessStoriesForm.js';
+import { Award } from 'lucide-react';
+import award_image from '../../assets/successStories/award_image.jpg';
+import higherPackage from '../../assets/subscriptionpage/higherpackage.png';
 
 
 const SuccessStories = () => {
@@ -82,9 +84,90 @@ const SuccessStories = () => {
         return achievement.category === filter;
     });
 
-    return (
 
+    const [activeJobIndex, setActiveJobIndex] = useState(0);
+    const [activeAwardIndex, setActiveAwardIndex] = useState(0);
+
+    const recentJobs = [
+        { id: 1, name: "Sarah Johnson", image: higherPackage },
+    ];
+
+    const recentAwards = [
+        { id: 1, name: "David Rodriguez", image: award_image },
+    ];
+
+
+
+
+    
+    return (
         <>
+
+
+            <div className="container-fluid bg-light">
+                <div className="text-center pt-4">
+                    <h1 className="display-5 fw-bold">Our Success Stories</h1>
+                    <p className="lead">Celebrating excellence and achievement in our community</p>
+                </div>
+
+                <div className="row g-4 justify-content-center">
+                    {/* Job Placements */}
+                    <div className="col-md-4 d-flex flex-column align-items-center">
+                        <h4
+                            className="text-center mb-3 fw-bold text-uppercase position-relative d-inline-block px-3"
+                            style={{
+                                color: "#553cdf",
+                                letterSpacing: "1px",
+                                paddingBottom: "5px",
+                                marginTop: "10px",
+                                textShadow: "1px 1px 2px rgba(0, 0, 0, 0.35)",
+                            }}
+                        >
+                            Recent Best Salary Package March 2025
+                        </h4>
+                        <div
+                            className="card shadow bg-dark text-white w-100 position-relative rounded-4 overflow-hidden d-flex flex-column"
+                            style={{ height: "360px" }}
+                        >
+                            <img
+                                src={recentJobs[activeJobIndex].image}
+                                className="img-fluid w-100 h-100"
+                                alt={recentJobs[activeJobIndex].name}
+                                style={{ objectFit: "cover" }}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Awards Section */}
+                    <div className="col-md-4 d-flex flex-column align-items-center">
+                        <h4
+                            className="text-center mb-3 fw-bold text-uppercase position-relative d-inline-block px-3"
+                            style={{
+                                color: "#553cdf",
+                                letterSpacing: "1px",
+                                paddingBottom: "5px",
+                                marginTop: "10px",
+                                textShadow: "1px 1px 2px rgba(0, 0, 0, 0.35)",
+                            }}
+                        >
+                            Training & Development Company of the Year 2025
+                        </h4>
+                        <div
+                            className="card shadow bg-dark text-white w-100 position-relative rounded-4 overflow-hidden d-flex flex-column"
+                            style={{ height: "360px" }}
+                        >
+                            <img
+                                src={recentAwards[activeAwardIndex].image}
+                                className="img-fluid w-100 h-100"
+                                alt={recentAwards[activeAwardIndex].name}
+                                style={{ objectFit: "cover" }}
+                            />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
 
             <div className={style.topContent}>
                 <div className={style.insights}>
@@ -162,16 +245,17 @@ const SuccessStories = () => {
                                 <div data-aos="fade-right">
                                     <img
                                         src={redline}
+                                        // height= {50}
+                                        // width={100}
                                         alt=""
                                         style={{
                                             display: 'block',
                                             margin: '0 auto',
                                             position: 'absolute',
-                                            top: -15,
+                                            top: -35,
                                             left: '50%',
                                             transform: 'translateX(-50%)',
                                             width: '100%',
-                                            height: '50px'
                                         }}
                                     />
                                 </div>

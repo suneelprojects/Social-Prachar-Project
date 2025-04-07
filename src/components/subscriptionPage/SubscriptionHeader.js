@@ -42,30 +42,53 @@ const SubscriptionHeader = () => {
                         </h1>
                     </div>
 
-                    <div className="col-md-6 p-5">
-                        <h2 className='fw-bold' style={{ color: '#2c2c2c' }}>
-                            {displayText} <span style={{ color: '#ff5003' }}>Save 95%</span> with SocialPrachar's Subscription Plan!
-                        </h2>
-                        <h4 className='py-3' style={{ color: '#443cdf' }}>
-                            <FontAwesomeIcon icon={faTags} className='px-2' />One Subscription – Learn Multiple Courses!
-                        </h4>
-                        <p>
-                            Get unlimited access to <span className='fw-bold'>Full Stack Development, Data Science, AI, Cloud, and more</span> with SocialPrachar's <span className='fw-bold'>all-in-one subscription.</span>
-                            Gain hands-on experience, expert mentorship, and AI-powered career tools—all at an unbeatable price!
-                        </p>
-                        <p className='fw-bold'><FaRobot className="me-2" size={30} /> Exclusive AI-driven tools & career support included!</p>
-                        <p className='fw-bold'><FaRupeeSign className="me-2" size={30} />{changePlan}</p>
-                        <p>Invest in your future—One Subscription, <span className='fw-bold'>Unlimited Learning!</span></p>
-                        <div className="text-center">
-                            <RegisterForm label={"Book Free Demo Now"} className={`${style.button} my-3 fw-bold`} />
-                            <p className="fw-bold" style={{ fontSize: '18px' }}>
-                                Register by <span style={{ color: '#4941e1', fontSize: '22px' }}>{weekDate}</span> to unlock exclusive bonuses
+                    <div className="row align-items-center px-3 px-md-5 py-4">
+                        {/* Left Content Section */}
+                        <div className="col-12 col-md-6 mb-4 mb-md-0">
+                            <h2 className="fw-bold" style={{ color: '#2c2c2c' }}>
+                                {displayText} <span style={{ color: '#ff5003' }}>Save 95%</span> with SocialPrachar's Subscription Plan!
+                            </h2>
+                            <h4 className="py-3" style={{ color: '#443cdf' }}>
+                                <FontAwesomeIcon icon={faTags} className="px-2" />
+                                One Subscription – Learn Multiple Courses!
+                            </h4>
+                            <p>
+                                Get unlimited access to <span className="fw-bold">Full Stack Development, Data Science, AI, Cloud, and more</span> with SocialPrachar's <span className="fw-bold">all-in-one subscription.</span>
+                                Gain hands-on experience, expert mentorship, and AI-powered career tools—all at an unbeatable price!
                             </p>
+                            <p className="fw-bold">
+                                <FaRobot className="me-2" size={24} /> Exclusive AI-driven tools & career support included!
+                            </p>
+                            <p className="fw-bold">
+                                <FaRupeeSign className="me-2" size={24} />{changePlan}
+                            </p>
+                            <p>
+                                Invest in your future—One Subscription, <span className="fw-bold">Unlimited Learning!</span>
+                            </p>
+                            <div className="text-center">
+                                <RegisterForm label={"Book Free Demo Now"} className={`${style.button} my-3 fw-bold`} />
+                                <p className="fw-bold" style={{ fontSize: '18px' }}>
+                                    Register by <span style={{ color: '#4941e1', fontSize: '22px' }}>{weekDate}</span> to unlock exclusive bonuses
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Right Image Section */}
+                        <div className="col-12 col-md-6 text-center">
+                            <img
+                                src={JD_course}
+                                alt="Subscription Course"
+                                className="img-fluid rounded"
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto",
+                                    borderRadius: "15px",
+                                    background: "black"
+                                }}
+                            />
                         </div>
                     </div>
-                    <div className="col-md-6">
-                        <img src={JD_course} alt="" style={{ background: 'black', color: 'white', borderRadius: '15px' }} />
-                    </div>
+
                 </div>
             </div>
 

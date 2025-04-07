@@ -12,7 +12,7 @@ import 'aos/dist/aos.css';
 import routes from './routes.js';
 import PageNotFound from './components/pageNotFound/PageNotFound.js';
 import QuickHelpButton from './components/quickHelp_Button/QuickHelpButton.js';
-import appreciateImage from './assets/subscriptionpage/Copy of Insta Job Post (3).png';
+import appreciateImage from './assets/subscriptionpage/higherpackage.png';
 import Confetti from 'react-confetti';
 import { DateProvider } from './components/Forms/DateContext.js';
 

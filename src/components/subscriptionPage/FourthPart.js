@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import aws from '../../assets/subscriptionpage/aws.png';
 import DM from '../../assets/subscriptionpage/social-media-marketing.png';
 import DA from '../../assets/subscriptionpage/monitor.png';
@@ -26,11 +26,17 @@ import style from './SecondPart.module.css';
 import { useParams } from "react-router-dom";
 
 const FourthPart = () => {
-    const [activeButton, setActiveButton] = useState("Standard_Plan");
+    const { userType } = useParams();
+
+    const [activeButton, setActiveButton] = useState(() =>
+        userType === "students" ? "Standard_Plan" : "Starter_Pack"
+    );
+    useEffect(() => {
+        setActiveButton(userType === "students" ? "Standard_Plan" : "Starter_Pack");
+    }, [userType]);
+
     const [clickedButton, setClickedButton] = useState(null);
 
-    const { userType } = useParams();
-    console.log("User  Type:", userType);
 
     // Define plans based on user type
     const studentPlans = ["Standard_Plan", "Premium_Plan", "Custom_Learning_Plan"];
@@ -112,6 +118,10 @@ const FourthPart = () => {
         setTimeout(() => setClickedButton(null), 200);
         setActiveButton(item);
     };
+    const currentContent =
+        userType === "students"
+            ? studentPlan[activeButton] ?? []
+            : categoryContent[activeButton] ?? [];
 
     return (
         <div>
@@ -134,7 +144,7 @@ const FourthPart = () => {
 
             <div className="container bg-light border">
                 <div className="row p-5">
-                    {(userType === "students" ? studentPlan[activeButton] : categoryContent[activeButton] || []).map((content, index) => (
+                    {currentContent.map((content, index) => (
                         <div key={index} className="col-md-4 mb-3 d-flex">
                             <img
                                 src={content.img || ""}
@@ -150,7 +160,7 @@ const FourthPart = () => {
                     ))}
                 </div>
                 <div className="d-flex justify-content-center">
-                    <RegisterForm label={"See What's Included"} className="btn btn-primary rounded-5 m-3" />
+                    <RegisterForm label="See What's Included" className="btn btn-primary rounded-5 m-3" />
                 </div>
             </div>
         </div>

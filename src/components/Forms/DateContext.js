@@ -1,56 +1,64 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase";
 
-// Create Context
 const DateContext = createContext();
 
 export const DateProvider = ({ children }) => {
-    // Get date from localStorage or use today's date
-    const [date, setDate] = useState(() => {
-        return localStorage.getItem("selectedDate") || new Date().toISOString().split("T")[0];
+    const [careerWorkshopDate, setCareerWorkshopDate] = useState("");
+    const [scholarshipTestDate, setScholarshipTestDate] = useState({
+        onlineDate: "",
+        offlineDate: ""
     });
+    const [upcomingBatchesDate, setUpcomingBatchesDate] = useState({});
 
-    const [datesById, setDatesById] = useState(() => {
-        const storedDates = localStorage.getItem("datesById");
-        return storedDates ? JSON.parse(storedDates) : {};
-    });
-
-    // Online Test Date
-    const [onlineTestDate, setOnlineTestDate] = useState(() => {
-        return localStorage.getItem("onlineTestDate") || new Date().toISOString().split("T")[0];
-    });
-
-    // Offline Test Date
-    const [offlineTestDate, setOfflineTestDate] = useState(() => {
-        return localStorage.getItem("offlineTestDate") || new Date().toISOString().split("T")[0];
-    });
-
-    // Update localStorage whenever the date changes
+    // Fetch dates from Firestore
     useEffect(() => {
-        localStorage.setItem("selectedDate", date);
-    }, [date]);
+        const fetchDates = async () => {
+            try {
+                const [careerSnap, scholarshipSnap, batchesSnap] = await Promise.all([
+                    getDoc(doc(db, "DatesForm", "careerWorkshop")),
+                    getDoc(doc(db, "DatesForm", "scholarshipTest")),
+                    getDoc(doc(db, "DatesForm", "upcomingBatches"))
+                ]);
 
-    // Update localStorage whenever datesById changes
-    useEffect(() => {
-        localStorage.setItem("datesById", JSON.stringify(datesById));
-    }, [datesById]);
+                if (careerSnap.exists()) {
+                    setCareerWorkshopDate(careerSnap.data().selectedDate || "");
+                }
+                if (scholarshipSnap.exists()) {
+                    const data = scholarshipSnap.data();
+                    setScholarshipTestDate({
+                        onlineDate: data.onlineDate || "",
+                        offlineDate: data.offlineDate || ""
+                    });
+                }
+                if (batchesSnap.exists()) {
+                    const data = batchesSnap.data();
+                    setUpcomingBatchesDate(data);
+                }
 
-    useEffect(() => {
-        localStorage.setItem("onlineTestDate", onlineTestDate);
-    }, [onlineTestDate]);
+            } catch (error) {
+                console.error("Error fetching dates from Firestore:", error);
+            }
+        };
 
-    useEffect(() => {
-        localStorage.setItem("offlineTestDate", offlineTestDate);
-    }, [offlineTestDate]);
+        fetchDates();
+    }, []);
 
     return (
-        <DateContext.Provider value={{
-            date, setDate, datesById, setDatesById, onlineTestDate, setOnlineTestDate,
-            offlineTestDate, setOfflineTestDate
-        }}>
+        <DateContext.Provider
+            value={{
+                careerWorkshopDate,
+                setCareerWorkshopDate,
+                scholarshipTestDate,
+                setScholarshipTestDate,
+                upcomingBatchesDate,
+                setUpcomingBatchesDate,
+            }}
+        >
             {children}
         </DateContext.Provider>
     );
 };
 
-// Custom Hook to use DateContext
 export const useDateContext = () => useContext(DateContext);

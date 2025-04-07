@@ -17,7 +17,8 @@ import { useDateContext } from '../Forms/DateContext.js';
 
 const UpcomingBatches = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
-    const { datesById } = useDateContext(); // Access the stored dates
+    const { upcomingBatchesDate } = useDateContext();
+    console.log("Upcoming Batches Date from context:", upcomingBatchesDate);
 
     const categories = [
         'All',
@@ -41,7 +42,7 @@ const UpcomingBatches = () => {
     // Update startDate dynamically
     const updatedCardData = cardData.map(card => ({
         ...card,
-        startDate: datesById[card.id] || "Not Mentioned", 
+        startDate: upcomingBatchesDate[card.id] || "Not Mentioned", 
     }));
 
     const handleCategoryClick = (category) => {

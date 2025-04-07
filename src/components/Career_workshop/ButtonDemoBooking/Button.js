@@ -4,7 +4,7 @@ import { useDateContext } from '../../Forms/DateContext';
 
 const Button = () => {
     const [showForm, setShowForm] = useState(false);
-    const {date} = useDateContext();
+    const {careerWorkshopDate} = useDateContext();
 
 
     const [formData, setFormData] = useState({
@@ -117,7 +117,7 @@ const Button = () => {
                 </div>
                 <div className="text-center">
                     <p className="fw-bold fs-4 fs-6" style={{ fontSize: '18px' }}>
-                        Register by <span input="date" style={{ color: '#4941e1', fontSize: '22px' }}>{date}</span> to unlock exclusive bonuses worth ₹5,393 – offer ends today!
+                        Register by <span input="date" style={{ color: '#4941e1', fontSize: '22px' }}>{careerWorkshopDate}</span> to unlock exclusive bonuses worth ₹5,393 – offer ends today!
                     </p>
                 </div>
             </div>

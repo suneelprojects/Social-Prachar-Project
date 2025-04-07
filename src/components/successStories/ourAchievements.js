@@ -591,4 +591,4 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
         },
        
 
-    ]
+    ]   
