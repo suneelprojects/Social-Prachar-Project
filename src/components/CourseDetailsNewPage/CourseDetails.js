@@ -40,7 +40,7 @@ const CourseDetails = () => {
                 <Whatwillyoulearn />
                 <Mentorpage />
                 <Certificate />
-                <CourseAccordion />
+                <CourseAccordion /> 
                 <Banner />
             </Suspense>
         </>

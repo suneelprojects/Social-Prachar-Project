@@ -37,6 +37,11 @@ import company19Logo from '../../../assets/AssetsOfDetailsPage/masterclass/amber
 import company20Logo from '../../../assets/AssetsOfDetailsPage/masterclass/dell_technologies_logo.png';
 import Testmonials from './../Testmonials/Testmonials';
 import HeaderSignInForm from './HeaderSignInForm';
+import google from '../../../assets/successStories/google.png';
+import jd_logo from '../../../assets/successStories/Just-Dial_logo.png';
+import glassdoor_logo from '../../../assets/successStories/glassdoor_logo.png';
+
+
 
 const logos = [
     { src: company1Logo, alt: "Company 1" },
@@ -61,13 +66,41 @@ const logos = [
     { src: company20Logo, alt: "Company 20" }
 ];
 
+const ratings = [
+    {
+        logo: google,
+        title: 'Google',
+        rating: 'Rated 4.7/5',
+    },
+    {
+        logo: glassdoor_logo,
+        title: 'Glassdoor',
+        rating: 'Rated 4.8/5',
+    },
+    {
+        logo: jd_logo,
+        title: 'Justdial',
+        rating: 'Rated 4.7/5',
+    },
+];
+
+const stats = [
+    {
+        value: '16000+', label: 'Success Stories since 2014', color: '#007bff'
+    },
+    { value: '1400+', label: 'Drives conducted', color: '#28a745' },
+    { value: '16 LPA', label: 'Highest Salary Package', color: '#ffc107' },
+    { value: '3 - 8 LPA', label: 'LPA Average Package', color: '#762acd' },
+    { value: '10+', label: 'Edtech Awards Received', color: '#52de12' },
+];
+
 const Headerpart = (courseID) => {
     const { slug } = useParams();
     const [card, setCard] = useState(null);
     const redLineRef = useRef(null);
     const doughtsPartRef = useRef(null);
     const [isPopupVisible, setIsPopupVisible] = useState(false);
-    
+
     useEffect(() => {
         const cardDetails = data.find(item => item.slug === slug);
         setCard(cardDetails);
@@ -221,8 +254,58 @@ const Headerpart = (courseID) => {
                     <button className={`btn btn-primary fw-bold ${Buttonstyle.shinebtn}`} onClick={togglePopup}>
                         Download Roadmap
                     </button>
-                    {isPopupVisible && <HeaderSignInForm onClose={togglePopup} courseID={courseID} actionType="Download Roadmap"/>}
+                    {isPopupVisible && <HeaderSignInForm onClose={togglePopup} courseID={courseID} actionType="Download Roadmap" />}
                 </div>
+                <div className="container">
+                    {/* Ratings Section */}
+                    <div className="row text-center mb-4">
+                        {ratings.map((item, index) => (
+                            <div className="col-md-4 mb-3" key={index}>
+                                <div className="border p-3 rounded d-flex align-items-center justify-content-center">
+                                    <div
+                                        className="logo-wrapper d-flex align-items-center justify-content-center me-2"
+                                        style={{ width: 40, height: 40 }}
+                                    >
+                                        {item.logo ? (
+                                            <img
+                                                src={item.logo}
+                                                alt={item.title}
+                                                style={{ maxHeight: '50px', objectFit: 'contain', paddingRight: '15px' }}
+                                            />
+                                        ) : null} {/* Remove the span if no logo */}
+                                    </div>
+
+                                    <div>
+                                        <div className="fw-bold">{item.title}</div>
+                                        <div>{item.rating}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+
+                    {/* Stats Section */}
+                    <div className="row text-center justify-content-center gap-3">
+                        {stats.map((stat, index) => (
+                            <div class={`${style.statcard} shadow-sm`} key={index}>
+                                <div class={style.iconcontainer}>
+                                    <div class={`${style.hexagon}`}
+                                        style={{ backgroundColor: stat.color, boxShadow: '0 12px 12px rgba(80, 0, 185, 0.85)' }}
+                                    >{stat.value}</div>
+                                </div>
+                                <div class={style.content}>
+                                    <div class={style.label}>{stat.label}</div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+
+
+
+                </div>
+
                 <Testmonials />
             </div>
         </div>

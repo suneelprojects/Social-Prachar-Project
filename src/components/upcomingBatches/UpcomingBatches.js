@@ -14,10 +14,30 @@ import masterFSP from '../../assets/careerworkshop/Master FSP.png';
 import Footer from './../footer/footer.js';
 import { useDateContext } from '../Forms/DateContext.js';
 
+function formatDateWithSuffix(dateString) {
+    const date = new Date(dateString);
+
+    const day = date.getDate();
+    const month = date.toLocaleString("en-IN", { month: "long" });
+    const year = date.getFullYear();
+
+    const getOrdinalSuffix = (n) => {
+        if (n > 3 && n < 21) return "th";
+        switch (n % 10) {
+            case 1: return "st";
+            case 2: return "nd";
+            case 3: return "rd";
+            default: return "th";
+        }
+    };
+
+    return `${day}${getOrdinalSuffix(day)} ${month} ${year}`;
+}
 
 const UpcomingBatches = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const { upcomingBatchesDate } = useDateContext();
+
     console.log("Upcoming Batches Date from context:", upcomingBatchesDate);
 
     const categories = [
@@ -40,9 +60,16 @@ const UpcomingBatches = () => {
     ];
 
     // Update startDate dynamically
+    // const updatedCardData = cardData.map(card => ({
+    //     ...card,
+    //     startDate: upcomingBatchesDate[card.id] || "Not Mentioned", 
+    // }));
+
     const updatedCardData = cardData.map(card => ({
         ...card,
-        startDate: upcomingBatchesDate[card.id] || "Not Mentioned", 
+        startDate: upcomingBatchesDate[card.id]
+            ? formatDateWithSuffix(upcomingBatchesDate[card.id])
+            : "Not Mentioned",
     }));
 
     const handleCategoryClick = (category) => {

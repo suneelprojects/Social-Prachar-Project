@@ -9,7 +9,7 @@ import Footer from '../footer/footer';
 const SocialHire = () => {
 
     const handleRedirect = () => {
-        window.location.href = 'socialhire.in';
+        window.location.href = 'https://socialhire.in';
     };
 
     return (

@@ -2,10 +2,31 @@ import React, { useEffect, useState } from 'react';
 import style from './Button.module.css';
 import { useDateContext } from '../../Forms/DateContext';
 
+
+function formatDateWithSuffix(dateString) {
+    const date = new Date(dateString);
+
+    const day = date.getDate();
+    const month = date.toLocaleString("en-IN", { month: "long" });
+    const year = date.getFullYear();
+
+    const getOrdinalSuffix = (n) => {
+        if (n > 3 && n < 21) return "th";
+        switch (n % 10) {
+            case 1: return "st";
+            case 2: return "nd";
+            case 3: return "rd";
+            default: return "th";
+        }
+    };
+
+    return `${day}${getOrdinalSuffix(day)} ${month} ${year}`;
+}
+
 const Button = () => {
     const [showForm, setShowForm] = useState(false);
     const {careerWorkshopDate} = useDateContext();
-
+    const formattedWorkshopDate = formatDateWithSuffix(careerWorkshopDate);
 
     const [formData, setFormData] = useState({
         course: '',
@@ -39,10 +60,12 @@ const Button = () => {
         Object.entries(formData).forEach(([key, value]) => {
             formDataEncoded.append(key, value);
         });
+
+        formDataEncoded.append('pageUrl', window.location.href);
         formDataEncoded.append('sheetName', 'CareerWorkshop');
 
         try {
-            const response = await fetch("https://script.google.com/macros/s/AKfycbwq2ZtrNBCozKx_A23Ab4k02yCsxt5v1Wx7OQsY2RRzECvEnieV98bYm5rmWch0ZjcIag/exec", {
+            const response = await fetch("https://script.google.com/macros/s/AKfycbywSWoyQHv-P66PU6FvDNyC2AVipYuadZuVV9UM824TbTjImg9TZXpGQ5uc8YZ6j4wQuw/exec", {
                 method: "POST",
                 body: formDataEncoded,
             });
@@ -117,7 +140,7 @@ const Button = () => {
                 </div>
                 <div className="text-center">
                     <p className="fw-bold fs-4 fs-6" style={{ fontSize: '18px' }}>
-                        Register by <span input="date" style={{ color: '#4941e1', fontSize: '22px' }}>{careerWorkshopDate}</span> to unlock exclusive bonuses worth ₹5,393 – offer ends today!
+                        Register by <span input="date" style={{ color: '#4941e1', fontSize: '22px' }}>{formattedWorkshopDate}</span> to unlock exclusive bonuses worth ₹5,393 – offer ends today!
                     </p>
                 </div>
             </div>

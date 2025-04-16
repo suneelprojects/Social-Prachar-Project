@@ -90,8 +90,6 @@ import { faDocker, faNodeJs, faPiedPiper, faReact } from '@fortawesome/free-bran
 import professional from '../../assets/AssetsOfDetailsPage/professional.svg';
 import student from '../../assets/AssetsOfDetailsPage/educationsymbol.svg';
 import business from '../../assets/AssetsOfDetailsPage/businesssymbol.svg';
-import { Tag } from '../Courses_category/Course';
-import { time } from 'framer-motion';
 
 
 export const data = [

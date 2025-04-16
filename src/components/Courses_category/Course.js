@@ -51,6 +51,7 @@ let tagIndex = 0;
 
 
 const Course = () => {
+    const [searchQuery, setSearchQuery] = useState("");
     const location = useLocation();
     const { category } = location.state || {};
 
@@ -166,6 +167,8 @@ const Course = () => {
                     showUncheckedShadowTags={showUncheckedShadowTags}
                     setShowUncheckedShadowTags={setShowUncheckedShadowTags}
                     clearFilters={clearFilters}
+                    searchQuery={searchQuery}
+                    setSearchQuery={setSearchQuery}
                 />
 
                 <div className={courseCSS.EntirePage}>

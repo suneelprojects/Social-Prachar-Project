@@ -15,11 +15,12 @@ const ToggleBar = ({
     setCheckedTags,
     showUncheckedShadowTags,
     setShowUncheckedShadowTags,
-    clearFilters
+    clearFilters,
 }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
     const containerRef = useRef(null);
+    const [searchQuery, setSearchQuery] = useState("");
 
     const handleCheckboxClick = (index, type) => {
         const updateChecked = (currentChecked, setChecked) => {
@@ -44,6 +45,13 @@ const ToggleBar = ({
         setIsOpen(prev => !prev);
         setIsClicked(prev => !prev);
     };
+
+    const filteredItems = items.filter(item =>
+        item.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    const filteredTags = Tag.filter(tag =>
+        tag.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
     return (
         <div className={ToggleBarCSS.toggleBar} ref={containerRef}>

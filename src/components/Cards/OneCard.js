@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase';
 import { faStarHalfAlt } from '@fortawesome/free-regular-svg-icons';
 
-const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCancelEnrollment, courseIDToEliminate }) => {
+const OneCard = ({ card, handleCardTitleClick, selectedButton, isEnrolledCoursesPage, handleCancelEnrollment, courseIDToEliminate }) => {
     const { wishlist, toggleWishlist } = useWishlist();
     const navigate = useNavigate();
     const currentUser = auth.currentUser;
@@ -24,17 +24,6 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
         setIsSaved(isCardSaved);
     }, [wishlist, card.courseID]);
 
-
-    const handleSaveIconClick = () => {
-        if (currentUser) {
-            toggleWishlist(card);
-            setIsSaved(!isSaved);
-            // navigate('/profile/wishlist');
-        } else {
-            navigate('/login');
-        }
-    };
-
     const shouldEliminateCard = card.courseID === courseIDToEliminate;
     if (shouldEliminateCard) {
         return null;
@@ -43,9 +32,11 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
     const enrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses')) || [];
     const isEnrolled = enrolledCourses.some((course) => course.courseID === card.courseID);
 
+
+
     return (
-        <div className={`col-md-4 mt-4 ${cardsCSS.cardItem}`}>
-            <div className={`card ${cardsCSS.card}`} onClick={() => handleCardTitleClick(card.courseID)}>
+        <div className={` mt-4 ${cardsCSS.cardItem} ${selectedButton === 'list' ? 'col-12' : 'col-md-4'}`}>
+            <div className={`card ${cardsCSS.card} ${selectedButton === 'list' ? cardsCSS.listViewCard : ''}`} onClick={() => handleCardTitleClick(card.courseID)}>
                 <div className={cardsCSS.cardImgContainer}>
                     <img src={card.imageSrc} className={cardsCSS.cardImgTop} alt={card.courseTitle} />
                     <FontAwesomeIcon
@@ -109,7 +100,7 @@ const OneCard = ({ card, handleCardTitleClick, isEnrolledCoursesPage, handleCanc
                         <button
                             className="btn fw-bold shadow"
                             style={{ background: '#553cdf', color: 'white', position: 'relative', bottom: '10px', left: '-8px', border: '1px solid #212529' }}
-                            onClick={handleButtonClick}
+                        // onClick={handleButtonClick}
                         >
                             Know More
                         </button>

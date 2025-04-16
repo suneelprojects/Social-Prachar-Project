@@ -4,7 +4,6 @@ import styles from './Mentorpage.module.css';
 import image1 from '../../../assets/AssetsOfDetailsPage/masterclass/5.png';
 import image2 from '../../../assets/AssetsOfDetailsPage/masterclass/6.png';
 import image3 from '../../../assets/AssetsOfDetailsPage/masterclass/7.png';
-import crownImage from '../../../assets/AssetsOfDetailsPage/crownImage.svg';
 import instagramImage from '../../../assets/AssetsOfDetailsPage/masterclass/Instagram_logo_2016.svg.png';
 import linkedIn from '../../../assets/AssetsOfDetailsPage/masterclass/official-linkedin-logo.png';
 import featuredIn from '../../../assets/AssetsOfDetailsPage/masterclass/Featured.webp';

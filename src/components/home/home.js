@@ -1,7 +1,7 @@
 import React from "react";
 import homeStyle from "./home.module.css";
 import bulb from "../../assets/bulb.png";
-import homepic01 from "../../assets/01.png";
+import homepic01 from "../../assets/replaceHomw.png";
 import iconPicOne from "../../assets/smallPicOne.png";
 import iconPicTwo from "../../assets/smallPicTwo.png";
 import iconPicThree from "../../assets/smallPicThree.png";
@@ -76,7 +76,7 @@ const Home = () => {
                     <div className={`${homeStyle.plusIcon}`}>+</div>
                   </div>
                   <div>
-                    <p className={`${homeStyle.studentNoText}`}>16k students</p>
+                    <p className={`${homeStyle.studentNoText}`}>16000+ students</p>
                     <p className="greyText">
                       Strong Alumni
                     </p>

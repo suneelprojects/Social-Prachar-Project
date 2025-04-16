@@ -18,15 +18,15 @@ const QuickHelpButton = () => {
 
     return (
         <>
-            <div className={`position-fixed ${styles.suggestionButton}`} style={{ top: '250px', left: '20px' }}>
+            <div className={`position-fixed ${styles.suggestionButton}`} style={{ top: '120px', left: '20px' }}>
                 <div>
-                    <p className={styles.quickHelpText}>Quick help!</p>
+                    {/* <p className={styles.quickHelpText}>Quick help!</p> */}
                     <a
                         href="tel:+918019479419"
                         className={`btn shadow ${styles.roundButton} d-flex align-items-center justify-content-center`}
-                        style={{ width: "60px", height: "60px", borderRadius: "50%" }}
+                        style={{ width: "45px", height: "45px", borderRadius: "50%", }}
                     >
-                        <FaPhone className="text-primary" size={30} />
+                        <FaPhone className="text-primary" size={60} />
                     </a>
 
                 </div>

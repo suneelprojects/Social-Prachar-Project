@@ -8,16 +8,6 @@
   gap: 5px;
 }
 
-.roundButton {
-  width: 60px;
-  height: 60px;
-  border-radius: 50% !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-}
-
 .roundButton:hover {
   background-color: black;
 }

@@ -1,4 +1,11 @@
 /** @format */
+.listViewCard {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
 .cardfilter {
   display: flex;
   justify-content: space-between;

@@ -14,18 +14,33 @@ import style from '../Career_workshop/ButtonDemoBooking/Button.module.css';
 import RegisterForm from './FormButton';
 import JD_course from '../../assets/AssetsOfDetailsPage/JD_course.png';
 import { useParams } from 'react-router-dom';
+import { useDateContext } from '../Forms/DateContext';
 
+
+
+function formatDateWithSuffix(dateString) {
+    const date = new Date(dateString);
+
+    const day = date.getDate();
+    const month = date.toLocaleString("en-IN", { month: "long" });
+    const year = date.getFullYear();
+
+    const getOrdinalSuffix = (n) => {
+        if (n > 3 && n < 21) return "th";
+        switch (n % 10) {
+            case 1: return "st";
+            case 2: return "nd";
+            case 3: return "rd";
+            default: return "th";
+        }
+    };
+
+    return `${day}${getOrdinalSuffix(day)} ${month} ${year}`;
+}
 
 const SubscriptionHeader = () => {
-    const [weekDate, setWeekDate] = useState("");
-    useEffect(() => {
-        const today = new Date();
-        const daysUntilWednesday = (3 - today.getDay() + 7) % 7;
-        const nextWednesday = new Date(today);
-        nextWednesday.setDate(today.getDate() + daysUntilWednesday);
-
-        setWeekDate(nextWednesday.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" }));
-    }, []);
+    const {careerWorkshopDate} = useDateContext();
+    const formattedWorkshopDate = formatDateWithSuffix(careerWorkshopDate);
 
     const { userType } = useParams();
     console.log("User Type:", userType); 
@@ -68,7 +83,7 @@ const SubscriptionHeader = () => {
                             <div className="text-center">
                                 <RegisterForm label={"Book Free Demo Now"} className={`${style.button} my-3 fw-bold`} />
                                 <p className="fw-bold" style={{ fontSize: '18px' }}>
-                                    Register by <span style={{ color: '#4941e1', fontSize: '22px' }}>{weekDate}</span> to unlock exclusive bonuses
+                                    Register by <span style={{ color: '#4941e1', fontSize: '22px' }}>{formattedWorkshopDate}</span> to unlock exclusive bonuses
                                 </p>
                             </div>
                         </div>

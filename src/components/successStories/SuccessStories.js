@@ -17,7 +17,6 @@ import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import redline from '../../assets/RedLine.webp';
 import SuccessStoriesForm from './SuccessStoriesForm.js';
-import { Award } from 'lucide-react';
 import award_image from '../../assets/successStories/award_image.jpg';
 import higherPackage from '../../assets/subscriptionpage/higherpackage.png';
 
@@ -29,6 +28,8 @@ const SuccessStories = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [hasAnimated, setHasAnimated] = useState(false);
     const statsRef = useRef(null);
+    const isMobile = window.innerWidth < 768;
+
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -102,8 +103,6 @@ const SuccessStories = () => {
     
     return (
         <>
-
-
             <div className="container-fluid bg-light">
                 <div className="text-center pt-4">
                     <h1 className="display-5 fw-bold">Our Success Stories</h1>
@@ -113,7 +112,7 @@ const SuccessStories = () => {
                 <div className="row g-4 justify-content-center">
                     {/* Job Placements */}
                     <div className="col-md-4 d-flex flex-column align-items-center">
-                        <h4
+                        <h5
                             className="text-center mb-3 fw-bold text-uppercase position-relative d-inline-block px-3"
                             style={{
                                 color: "#553cdf",
@@ -123,8 +122,8 @@ const SuccessStories = () => {
                                 textShadow: "1px 1px 2px rgba(0, 0, 0, 0.35)",
                             }}
                         >
-                            Recent Best Salary Package March 2025
-                        </h4>
+                            Recent Best Salary Package of the March 2025
+                        </h5>
                         <div
                             className="card shadow bg-dark text-white w-100 position-relative rounded-4 overflow-hidden d-flex flex-column"
                             style={{ height: "360px" }}
@@ -140,7 +139,7 @@ const SuccessStories = () => {
 
                     {/* Awards Section */}
                     <div className="col-md-4 d-flex flex-column align-items-center">
-                        <h4
+                        <h5
                             className="text-center mb-3 fw-bold text-uppercase position-relative d-inline-block px-3"
                             style={{
                                 color: "#553cdf",
@@ -151,16 +150,16 @@ const SuccessStories = () => {
                             }}
                         >
                             Training & Development Company of the Year 2025
-                        </h4>
+                        </h5>
                         <div
                             className="card shadow bg-dark text-white w-100 position-relative rounded-4 overflow-hidden d-flex flex-column"
-                            style={{ height: "360px" }}
+                            style={{ height: isMobile ? "auto" : "360px" }}
                         >
                             <img
                                 src={recentAwards[activeAwardIndex].image}
                                 className="img-fluid w-100 h-100"
                                 alt={recentAwards[activeAwardIndex].name}
-                                style={{ objectFit: "cover" }}
+                                style={{ objectFit:isMobile ? "cover":"contain" }}
                             />
                         </div>
                     </div>

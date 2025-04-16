@@ -84,105 +84,107 @@ const Cards = ({ filters }) => {
 
 
     return (
-        <div className={cardsCSS.cardsSection}>
-            <div className={cardsCSS.cardfilter}>
-                <div className={cardsCSS.dropdownSection}>
-                    <h4>Sort By</h4>
-                    <div className={cardsCSS.dropdown} ref={dropdownRef}>
-                        <div className={cardsCSS.selectedOption} onClick={() => setIsOpen(!isOpen)}>
-                            {selectedOption}<FontAwesomeIcon icon={faChevronDown} />
-                        </div>
-                        <div className={`${cardsCSS.dropdownMenu} ${isOpen ? cardsCSS.show : ''}`}>
-                            <FontAwesomeIcon icon={faSearch}
-                                className={cardsCSS.searchIcon}
-                            />
+        <>
+            <div className={cardsCSS.cardsSection}>
+                <div className={cardsCSS.cardfilter}>
+                    {/* <div className={cardsCSS.dropdownSection}>
+                        <h4>Sort By</h4>
+                        <div className={cardsCSS.dropdown} ref={dropdownRef}>
+                            <div className={cardsCSS.selectedOption} onClick={() => setIsOpen(!isOpen)}>
+                                {selectedOption}<FontAwesomeIcon icon={faChevronDown} />
+                            </div>
+                            <div className={`${cardsCSS.dropdownMenu} ${isOpen ? cardsCSS.show : ''}`}>
+                                <FontAwesomeIcon icon={faSearch}
+                                    className={cardsCSS.searchIcon}
+                                />
 
-                            <input
-                                type="text"
-                                placeholder="Search..."
-                                value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)}
-                                className={cardsCSS.searchInput}
-                            />
-                            {filteredOptions.map((option, index) => (
-                                <div
-                                    key={index}
-                                    className={cardsCSS.dropdownItem}
-                                    onClick={() => handleOptionClick(option)}
-                                >
-                                    {option}
-                                </div>
-                            ))}
+                                <input
+                                    type="text"
+                                    placeholder="Search..."
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    className={cardsCSS.searchInput}
+                                />
+                                {filteredOptions.map((option, index) => (
+                                    <div
+                                        key={index}
+                                        className={cardsCSS.dropdownItem}
+                                        onClick={() => handleOptionClick(option)}
+                                    >
+                                        {option}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
+                    </div> */}
+
+                    <div className={cardsCSS.Form_buttons}>
+                        <button
+                            className={`${selectedButton === 'grid' ? cardsCSS.selected : ''}`}
+                            onClick={() => handleButtonClick('grid')}
+                        >
+                            <img
+                                src={GridSymbol}
+                                alt="Grid"
+                                className={`${cardsCSS.icon} ${selectedButton === 'grid' ? cardsCSS.selectedIcon : ''}`}
+                            />
+                            Grid
+                        </button>
+                        <button
+                            className={`${selectedButton === 'list' ? cardsCSS.selected : ''}`}
+                            onClick={() => handleButtonClick('list')}
+                        >
+                            <FontAwesomeIcon icon={faList} />
+                            List
+                        </button>
                     </div>
                 </div>
 
-                <div className={cardsCSS.Form_buttons}>
-                    <button
-                        className={`${selectedButton === 'grid' ? cardsCSS.selected : ''}`}
-                        onClick={() => handleButtonClick('grid')}
-                    >
-                        <img
-                            src={GridSymbol}
-                            alt="Grid"
-                            className={`${cardsCSS.icon} ${selectedButton === 'grid' ? cardsCSS.selectedIcon : ''}`}
-                        />
-                        Grid
-                    </button>
-                    <button
-                        className={`${selectedButton === 'list' ? cardsCSS.selected : ''}`}
-                        onClick={() => handleButtonClick('list')}
-                    >
-                        <FontAwesomeIcon icon={faList} />
-                        List
-                    </button>
+
+                <div className={cardsCSS.cards}>
+                    <div className={`row ${selectedButton === 'list' ? cardsCSS.listview : cardsCSS.gridView}`}>
+                        {currentCards.map((card, index) => (
+                            <OneCard
+                                key={index}
+                                card={card}
+                                selectedButton={selectedButton}
+                                handleCardTitleClick={handleCardTitleClick}
+                            />
+                        ))}
+                    </div>
                 </div>
+
+                {showPagination && (
+                    <div className={cardsCSS.pagination}>
+                        {!isFirstPage && (
+                            <button
+                                onClick={() => handlePageChange(currentPage - 1)}
+                                className={`${cardsCSS.pageButton} ${cardsCSS.arrowButton}`}
+                            >
+                                &#10094;
+                            </button>
+                        )}
+                        {Array.from({ length: totalPages }, (_, pageIndex) => (
+                            <button
+                                key={pageIndex}
+                                onClick={() => handlePageChange(pageIndex + 1)}
+                                className={`${cardsCSS.pageButton} ${currentPage === pageIndex + 1 ? cardsCSS.activePageButton : ''}`}
+                            >
+                                {pageIndex + 1}
+                            </button>
+                        ))}
+                        {!isLastPage && (
+                            <button
+                                onClick={() => handlePageChange(currentPage + 1)}
+                                className={`${cardsCSS.pageButton} ${cardsCSS.arrowButton}`}
+                            >
+                                &#10095;
+                            </button>
+                        )}
+                    </div>
+                )}
             </div>
-
-
-            <div className={cardsCSS.cards}>
-                <div className={`row ${selectedButton === 'list' ? cardsCSS.listview : cardsCSS.gridView}`}>
-                    {currentCards.map((card, index) => (
-                        <OneCard
-                            key={index}
-                            card={card}
-                            selectedButton={selectedButton}
-                            handleCardTitleClick={handleCardTitleClick}
-                        />
-                    ))}
-                </div>
-            </div>
-
-            {showPagination && (
-                <div className={cardsCSS.pagination}>
-                    {!isFirstPage && (
-                        <button
-                            onClick={() => handlePageChange(currentPage - 1)}
-                            className={`${cardsCSS.pageButton} ${cardsCSS.arrowButton}`}
-                        >
-                            &#10094;
-                        </button>
-                    )}
-                    {Array.from({ length: totalPages }, (_, pageIndex) => (
-                        <button
-                            key={pageIndex}
-                            onClick={() => handlePageChange(pageIndex + 1)}
-                            className={`${cardsCSS.pageButton} ${currentPage === pageIndex + 1 ? cardsCSS.activePageButton : ''}`}
-                        >
-                            {pageIndex + 1}
-                        </button>
-                    ))}
-                    {!isLastPage && (
-                        <button
-                            onClick={() => handlePageChange(currentPage + 1)}
-                            className={`${cardsCSS.pageButton} ${cardsCSS.arrowButton}`}
-                        >
-                            &#10095;
-                        </button>
-                    )}
-                </div>
-            )}
-        </div>
+        </>
     );
 };
 export default Cards; 
