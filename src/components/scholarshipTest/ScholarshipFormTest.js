@@ -14,7 +14,7 @@ const ScholarshipFormTest = ({ onClose }) => {
         trainingMode: '',
     });
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwq2ZtrNBCozKx_A23Ab4k02yCsxt5v1Wx7OQsY2RRzECvEnieV98bYm5rmWch0ZjcIag/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwguJEfSmxMatK9cyuXIOjJ2KKWv33KNWU3kSA4nGRHTePl6vYir2RavjKR00_d2abMpQ/exec";
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -35,6 +35,7 @@ const ScholarshipFormTest = ({ onClose }) => {
         Object.entries(formData).forEach(([key, value]) => {
             formDataEncoded.append(key, value);
         });
+        formDataEncoded.append("pageUrl", window.location.href);
         formDataEncoded.append('sheetName', 'scholarshipTest');
 
         try {
@@ -73,17 +74,34 @@ const ScholarshipFormTest = ({ onClose }) => {
             <div className={styles.formContainer}>
                 <button className={styles.closeButton} onClick={onClose}>&times;</button>
                 <form onSubmit={handleSubmit}>
-                    <h2 style={{color:'black'}}>Register Now</h2>
+                    <h2 style={{ color: 'black' }}>Register Now</h2>
                     {['name', 'email', 'phone', 'yearOfPassing'].map(field => (
                         <div className={styles.formGroup} key={field}>
-                            <input
-                                type={field === 'email' ? 'email' : field === 'phone' ? 'tel' : 'text'}
-                                name={field}
-                                placeholder={field.replace(/([A-Z])/g, ' $1').trim()}
-                                value={formData[field]}
-                                onChange={handleChange}
-                                required
-                            />
+                            {field === 'yearOfPassing' ? (
+                                <input
+                                    type="text"
+                                    name="yearOfPassing"
+                                    placeholder="Year of Passing"
+                                    value={formData.yearOfPassing}
+                                    onChange={(e) => {
+                                        const value = e.target.value;
+                                        // Allow only digits and max 4 characters
+                                        if (/^\d{0,4}$/.test(value)) {
+                                            setFormData(prev => ({ ...prev, yearOfPassing: value }));
+                                        }
+                                    }}
+                                    required
+                                />
+                            ) : (
+                                <input
+                                    type={field === 'email' ? 'email' : field === 'phone' ? 'tel' : 'text'}
+                                    name={field}
+                                    placeholder={field.replace(/([A-Z])/g, ' $1').trim()}
+                                    value={formData[field]}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            )}
                         </div>
                     ))}
                     {[['education', ['B.Tech', 'Degree', 'MBA', 'MCA', 'Other']],

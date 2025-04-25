@@ -49,12 +49,12 @@ const UpcomingBatches = () => {
     ];
 
     const cardData = [
-        { id: 1, students: '5120+', no_of_Slots: 4, image: masterDS, category: 'Data Science/AI', title: 'Artificial Intelligence', route: '/artificial-intelligence-course-training-in-hyderabad' },
-        { id: 2, students: '3200+', no_of_Slots: 6, image: masterAd_DS, category: 'Data Science/AI', title: 'Advanced Data Science/AI', route: '/data-science-course' },
+        { id: 1, students: '5120+', no_of_Slots: 4, image: masterDS, category: 'Data Science/AI', title: 'Artificial Intelligence', route: '/artificial-intelligence-course-training-institute-in-hyderabad' },
+        { id: 2, students: '3200+', no_of_Slots: 6, image: masterAd_DS, category: 'Data Science/AI', title: 'Advanced Data Science/AI', route: '/data-science' },
         { id: 3, students: '4600+', no_of_Slots: 5, image: masterDA, category: 'Data Science/AI', title: 'Data Analytics (Mastery)', route: '/data-analytics-course-training-hyderabad' },
-        { id: 4, students: '3800+', no_of_Slots: 7, image: masterFSJ, category: 'Full Stack Development', title: 'Full Stack Java', route: '/java-full-stack-development' },
-        { id: 5, students: '4300+', no_of_Slots: 4, image: masterFSP, category: 'Full Stack Development', title: 'Full Stack Python', route: '/python-full-stack-development' },
-        { id: 6, students: '4400+', no_of_Slots: 6, image: masterFS, category: 'Full Stack Development', title: 'MERN Stack (Full Stack)', route: '/mern-stack' },
+        { id: 4, students: '3800+', no_of_Slots: 7, image: masterFSJ, category: 'Full Stack Development', title: 'Full Stack Java', route: '/java-full-stack-development-course' },
+        { id: 5, students: '4300+', no_of_Slots: 4, image: masterFSP, category: 'Full Stack Development', title: 'Full Stack Python', route: '/python-full-stack-development-course' },
+        { id: 6, students: '4400+', no_of_Slots: 6, image: masterFS, category: 'Full Stack Development', title: 'MERN Stack (Full Stack)', route: '/full-stack-developer-course' },
         { id: 7, students: '3120+', no_of_Slots: 5, image: masterAd_Devops, category: 'DevOps', title: 'Multi Cloud With DevOps', route: '/awsdevopscourse' },
         { id: 8, students: '4500+', no_of_Slots: 5, image: masterAd_DM, category: 'Digital Marketing', title: 'Advanced Digital Marketing', route: '/digital-marketing-course-training-institute-hyderabad' },
     ];

@@ -26,7 +26,7 @@ const QuickHelpButton = () => {
                         className={`btn shadow ${styles.roundButton} d-flex align-items-center justify-content-center`}
                         style={{ width: "45px", height: "45px", borderRadius: "50%", }}
                     >
-                        <FaPhone className="text-primary" size={60} />
+                        <FaPhone className="text-success" size={60} />
                     </a>
 
                 </div>

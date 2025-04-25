@@ -5,7 +5,6 @@ import { useDateContext } from '../../Forms/DateContext';
 
 function formatDateWithSuffix(dateString) {
     const date = new Date(dateString);
-
     const day = date.getDate();
     const month = date.toLocaleString("en-IN", { month: "long" });
     const year = date.getFullYear();
@@ -25,9 +24,9 @@ function formatDateWithSuffix(dateString) {
 
 const Button = () => {
     const [showForm, setShowForm] = useState(false);
-    const {careerWorkshopDate} = useDateContext();
+    const { careerWorkshopDate } = useDateContext();
     const formattedWorkshopDate = formatDateWithSuffix(careerWorkshopDate);
-
+    
     const [formData, setFormData] = useState({
         course: '',
         name: '',

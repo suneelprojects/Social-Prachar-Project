@@ -1,4 +1,7 @@
 /** @format */
+.EnrollButton{
+  z-index:10000 !important;
+}
 .statcard {
   display: flex;
   align-items: center;
@@ -1256,7 +1259,7 @@
   .headerText {
     max-width: 80%;
   }
-  .testimonials {
-    z-index: 1000;
-  }
+  /* .testimonials {
+    z-index: 10;
+  } */
 }
