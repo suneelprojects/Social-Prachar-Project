@@ -23,8 +23,8 @@ const Subscription = React.lazy(() => (import('./components/subscriptionPage/Sub
 const EventsPage = React.lazy(() => (import('./components/events/EventMainPage.js')));
 const EventOpenPage = React.lazy(() => import("./components/events/EventsOpenpage.js"));
 const DateForms = React.lazy(() => import("./components/Forms/DateInput.js"));
-
-
+const DigitalMarketingPage = React.lazy(() => import("./components/digital-marketing-course-training-institute-hyderabad/page.js"));
+const Hosting = React.lazy(()=> import ('./components/hosting/Hosting.js'));
 
 const routes = [
     <Route path="/" element={<AllHomeComp />} />,
@@ -43,12 +43,14 @@ const routes = [
     <Route path="courses" element={<Course />} />,
     <Route path="aboutUs" element={<Aboutus />} />,
     <Route path=":slug" element={<NewDetailsPage />} />,
+     <Route path="/digital-marketing-course-training-institute-hyderabad" element={<DigitalMarketingPage />} />,
     <Route path="success-stories" element={<SuccessStories />} />,
     <Route path="career-counselling" element={<CareerWorkShop />} />,
     <Route path="upcoming-batches" element={<UpcomingBatches />} />,
     <Route path="career-quiz" element={<CareerSelection />} />,
     <Route path="course/:courseID" element={<CourseAccordion />} />,
     <Route path="thank-you" element={<ThankyouPage />} />,
+    <Route path="hosting" element={<Hosting/>} />,
 ];
 
 
