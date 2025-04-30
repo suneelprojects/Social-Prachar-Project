@@ -17,7 +17,7 @@ const services = [
   { icon:MentorshipIcon, title: "Mentorship Sessions" },
   { icon:MockInterviewIcon, title: "Mock Interviews" },
   { icon:SoftSkillIcon, title: "Soft Skill Training" },
-  { icon:PartnersIcon, title: "1000+ Placement Partners" },
+  { icon:PartnersIcon, title: "300+ Placement Partners" },
 ];
 
 const PlacementSupport = () => {

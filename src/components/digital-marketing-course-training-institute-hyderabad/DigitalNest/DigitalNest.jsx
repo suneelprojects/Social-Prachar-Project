@@ -64,12 +64,12 @@ const DigitalNest = () => {
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-1/3 pr-8">
           <h1 className="text-4xl font-bold text-gray-800 mb-2">
-            Digital Nest
+            Social Prachar
           </h1>
           <h2 className="text-4xl font-bold text-gray-700 mb-6">Advantage</h2>
           <div className="w-16 h-1 bg-blue-600 mb-8"></div>
           <h3 className="text-xl font-semibold text-gray-700 mb-6">
-            Have a Great Journey of Learning at Digital Nest
+            Have a Great Journey of Learning at Social Prachar
           </h3>
           <p className="text-gray-600 mb-8">
             Our Courses are taught by Real time Industry Experts with latest

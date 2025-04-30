@@ -22,7 +22,7 @@ const stats = [
   { value: "3 Months", label: "Duration" },
   { value: "16000+", label: "Course Enrolments" },
   { value: "100%", label: "Job Guarantee" },
-  { value: "1000+", label: "Hiring Partners" },
+  { value: "300+", label: "Hiring Partners" },
   { value: "10+", label: "Assured Interviews" },
 ];
 

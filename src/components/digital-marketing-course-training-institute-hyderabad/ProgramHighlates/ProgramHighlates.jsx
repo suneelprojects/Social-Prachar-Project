@@ -1,10 +1,8 @@
 /** @format */
 
 import { Star } from "lucide-react";
-// import Image from "next/image";
 import React from "react";
-// import profile from "@/assets/careerworkshop/profile.jpg";
-import profile from '../../../assets/careerworkshop/profile.jpg';
+import profile from '../../../assets/careerworkshop/girlImage.png';
 import ApplyButton from "../DMForm/DMFormButton";
 
 const highlights = [
@@ -47,7 +45,7 @@ const ProgramHighlates = () => {
                     className="flex-shrink-0"
                   />
                 </div>
-                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                <p className="text-gray-800 text-sm leading-relaxed font-bold">
                   {highlight}
                 </p>
               </li>
@@ -55,7 +53,7 @@ const ProgramHighlates = () => {
           </div>
 
           <div className="w-full lg:w-2/5 flex justify-center items-center">
-            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-[4/3] overflow-hidden rounded-full shadow-md">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-[4/3] overflow-hidden rounded-xl shadow-md">
               <img
                 src={profile}
                 alt="Professional with headset"

@@ -13,7 +13,7 @@ const WhatSupport = () => {
     career: {
       title: "Career Support Team",
       image: careerImg,
-      description: "Our career support team at Digital Nest conducts",
+      description: "Our career support team at Social Prachar conducts",
       points: [
         "A comprehensive SWOT analysis for learners",
         "Assists in crafting resumes and optimizing LinkedIn profiles",
@@ -58,7 +58,7 @@ const WhatSupport = () => {
     <div className="bg-gradient-to-b from-white to-gray-50 py-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-start md:text-left relative">
-          What support you'll get from Digital Nest?
+          What support you'll get from Social Prachar?
           <span className="absolute -bottom-3 left-0 w-20 h-1 bg-blue-600 hidden md:block"></span>
         </h1>
 

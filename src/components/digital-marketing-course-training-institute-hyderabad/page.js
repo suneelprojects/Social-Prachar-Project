@@ -8,6 +8,7 @@ import DigitalMarketing from './DigitalMarketingTools/DigitalMarketing';
 import NextGenAiTools from './NextGenAITools/NextGenAiTools';
 import PlacementsSupport from './PlacementSupport/PlacementSupport';
 import WhatSupport from './WhatSupport/WhatSupport';
+import Footer from '../footer/footer';
 
 const page = () => {
     return (
@@ -21,6 +22,7 @@ const page = () => {
             <NextGenAiTools />
             <PlacementsSupport />
             <WhatSupport />
+            <Footer/>
         </div>
     );
 };

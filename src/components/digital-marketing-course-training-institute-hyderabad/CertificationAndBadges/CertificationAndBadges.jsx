@@ -9,10 +9,8 @@ import meta from "../../../assets/digitalMarketing/certifications/meta.png";
 import hubspot from "../../../assets/digitalMarketing/certifications/hubspot.png";
 import hootsuit from "../../../assets/digitalMarketing/certifications/hootsuit.png";
 import semrush from "../../../assets/digitalMarketing/certifications/semrush.png";
-import digitalNest from '../../../assets/AssetsOfDetailsPage/1-1.png';
+import SP from '../../../assets/AssetsOfDetailsPage/masterclass/defaultcertificate.png';
 import DMFormButton from "../DMForm/DMFormButton";
-
-// import Image from "next/image";
 
 
 // Replace these with your actual certificate image URLs
@@ -51,21 +49,15 @@ const certifications = {
       completedOn: "June 1, 2023",
     },
   ],
-  Hootsuite: [
+  Social_Prachar: [
     {
-      image: hootsuit,
+      image:SP,
       completedOn: "June 1, 2023",
     },
   ],
-  SEMRUSH: [
+  Semrush: [
     {
       image: semrush,
-      completedOn: "June 1, 2023",
-    },
-  ],
-  DigitalNest: [
-    {
-      image: digitalNest,
       completedOn: "June 1, 2023",
     },
   ],
