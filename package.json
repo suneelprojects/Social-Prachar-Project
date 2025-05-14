@@ -2,7 +2,7 @@
   "name": "Top Choice for Training in Hyderabad - Social Prachar",
   "version": "0.1.0",
   "node_version": "20.13.0",
-  "homepage": "http://socialprachar.com",
+  "homepage": "http://socialprachar.com/socialprachar",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
