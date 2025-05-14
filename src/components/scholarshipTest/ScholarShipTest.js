@@ -205,7 +205,7 @@ const ScholarShipTest = () => {
                         <h3 className="fw-bold" style={{ color: '#553cdf' }}>
                             Secure Your Future Today! <br /> Limited Seats Available.
                         </h3>
-                        <button className="fw-bold btn" style={{ background: "#553cdf", color: 'white' }}>Claim Your Discount</button>
+                        <button className="fw-bold btn" onClick={togglePopup} style={{ background: "#553cdf", color: 'white' }}>Claim Your Discount</button>
                     </div>
                 </div>
 

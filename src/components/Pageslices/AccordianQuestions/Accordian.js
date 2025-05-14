@@ -172,23 +172,24 @@ const CourseAccordion = () => {
                 >
                     Do you Feel Confused About
                 </p>
-                <p
+                <h1
                     ref={header2Ref}
                     className={`${style.header2} text-center fw-bold`}
                 >
                     {card?.selfQuestioning}
-                </p>
+                </h1>
 
                 <img
+                    loading="lazy" 
                     ref={redLineRef}
                     src={RedLine}
-                    alt=""
+                    alt="red_line"
                     className={`${style.redLine}`}
                 />
                 <div className={style.SelfQuestioning} data-aos="zoom-in" data-aos-duration="1000">
                     {card && card.questions && card.questions.map((question, index) => (
                         <div className={style.questionItem} key={index}>
-                            <img src={questionMark} alt="Question mark" className={style.questionIcon} />
+                            <img loading="lazy" src={questionMark} alt="Question mark" className={style.questionIcon} />
                             <p>{question}</p>
                         </div>
                     ))}
@@ -205,6 +206,7 @@ const CourseAccordion = () => {
 
                 <div className={masterclassStyles.classVideo}>
                     <img
+                        loading="lazy" 
                         src={masterClassImage}
                         alt="Masterclass"
                         className={masterclassStyles.ClassImage}

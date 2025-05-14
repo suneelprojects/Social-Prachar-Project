@@ -58,7 +58,7 @@ const Header = () => {
 
               {/* Tags */}
               <div className="flex flex-wrap items-center mb-4">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 px-2">
                   <Crown
                     className={`${style.tagLogo} text-yellow-300`}
                     size={24}

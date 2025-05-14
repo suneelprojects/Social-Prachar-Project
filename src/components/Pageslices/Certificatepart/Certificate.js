@@ -131,6 +131,7 @@ const TimelineComponent = () => {
                     </div>
                     <div className={certificateStyling.imageContainer}>
                         <img
+                            loading="lazy" 
                             src={card && card.certificate ? card.certificate : certificate} 
                             alt="Certificate Preview"
                             className={certificateStyling.certificateImage}

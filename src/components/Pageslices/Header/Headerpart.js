@@ -94,6 +94,14 @@ const stats = [
     { value: '10+', label: 'Edtech Awards Received', color: '#52de12' },
 ];
 
+const symbols = [
+    { img: unlockLogo, text: "Unlock 12+ LPA with In-Demand Skills", className: style.symbol1 },
+    { img: booksymbol, text: "Flexible Learning: Classroom & Online Options", className: style.symbol },
+    { img: successLogo, text: "17,000+ Successful Career Transitions Since 2014", className: style.symbol },
+    { img: partnershipLogo, text: "550+ Batches Completed, 350+ Hiring Partners", className: style.symbol },
+    { img: MobileIconLogo, text: "Lifetime LMS Access & Dedicated Mobile App", className: style.symbol },
+];
+
 const Headerpart = (courseID) => {
     const { slug } = useParams();
     const [card, setCard] = useState(null);
@@ -152,57 +160,38 @@ const Headerpart = (courseID) => {
 
     return (
         <div className={style.headerContainer}>
-            <img src={BackgroundImg} alt="Background" className={style.backgroundImage} />
+            {/* <img loading="lazy" src={BackgroundImg} alt="Background" className={style.backgroundImage} /> */}
+            <img
+                src={BackgroundImg}
+                srcSet={`
+    ${BackgroundImg} 400w,
+    ${BackgroundImg} 800w,
+    ${BackgroundImg} 1200w
+  `}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 1200px"
+                alt="Descriptive background image"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="800"
+                className={style.backgroundImage}
+            />
             <div className={style.contentContainer}>
                 <div className={style.symbolsContainer}>
                     <h3 className={style.headerText}>
                         {card && (
                             <>
-                                {card.Header} <span className={style.highlightedWord}>{card.Duration}</span>
+                                {card.Header} <span className={`${style.highlightedWord}`}>{card.Duration}</span>
                             </>
                         )}
                     </h3>
                     <div className={style.symbolItemContent}>
-                        <div className={style.symbolItem}>
-                            <img
-                                src={unlockLogo}
-                                alt="Book symbol"
-                                className={style.symbol1}
-                            />
-                            <span className={style.symbolText}>Unlock 12+ LPA with In-Demand Skills</span>
-                        </div>
-                        <div className={style.symbolItem}>
-                            <img
-                                src={booksymbol}
-                                alt="Book symbol"
-                                className={style.symbol}
-                            />
-                            <span className={style.symbolText}> Flexible Learning: Classroom & Online Options </span>
-                        </div>
-                        <div className={style.symbolItem}>
-                            <img
-                                src={successLogo}
-                                alt="Book symbol"
-                                className={style.symbol}
-                            />
-                            <span className={style.symbolText}>17,000+ Successful Career Transitions Since 2014</span>
-                        </div>
-                        <div className={style.symbolItem}>
-                            <img
-                                src={partnershipLogo}
-                                alt="Book symbol"
-                                className={style.symbol}
-                            />
-                            <span className={style.symbolText}> 550+ Batches Completed, 350+ Hiring Partners</span>
-                        </div>
-                        <div className={style.symbolItem}>
-                            <img
-                                src={MobileIconLogo}
-                                alt="Book symbol"
-                                className={style.symbol}
-                            />
-                            <span className={style.symbolText}>Lifetime LMS Access & Dedicated Mobile App</span>
-                        </div>
+                        {symbols.map((item, index) => (
+                            <div key={index} className={style.symbolItem}>
+                                <img loading="lazy" src={item.img} alt="Book symbol" className={item.className} />
+                                <span className={style.symbolText}>{item.text}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div className={style.HeaderPicture}>
@@ -211,15 +200,16 @@ const Headerpart = (courseID) => {
                             src={JD_course}
                             alt="Course"
                             className={`img-fluid ${style.headerImage} shadow`}
+                            loading="lazy"
                         />
                     )}
                     <div className={style.EnrollButtonContent}>
                         {card && !isMobile && <Enrollbutton label="Enroll Now" courseID={card.id} className={style.EnrollButton} actionType="Button:Enroll Now" />}
-                        <span><img src={FollowerImg} alt="Follower group" className={style.FollowerImage} /></span>
+                        <span><img loading="lazy" src={FollowerImg} alt="Follower group" className={style.FollowerImage} /></span>
                         <div className={style.reviewContainer}>
                             <div className={style.FollowerStars}>
                                 {[...Array(5)].map((_, index) => (
-                                    <img key={index} src={starSymbol} alt="Star" className={style.star} />
+                                    <img loading="lazy" key={index} src={starSymbol} alt="Star" className={style.star} />
                                 ))}
                             </div>
                             <span className={style.FollowerCount}> 426 reviews (4.7 of 5)</span>
@@ -234,12 +224,12 @@ const Headerpart = (courseID) => {
                 <div className={style.logoContainer}>
                     <div className={style.logoScroll1}>
                         {logos.slice(0, 10).map((logo, index) => (
-                            <img key={index} src={logo.src} alt={logo.alt} className={style.logo} />
+                            <img loading="lazy" key={index} src={logo.src} alt={logo.alt} className={style.logo} />
                         ))}
                     </div>
                     <div className={style.logoScroll2}>
                         {logos.slice(10).map((logo, index) => (
-                            <img key={index} src={logo.src} alt={logo.alt} className={style.logo} />
+                            <img loading="lazy" key={index} src={logo.src} alt={logo.alt} className={style.logo} />
                         ))}
                     </div>
                 </div>
@@ -268,6 +258,7 @@ const Headerpart = (courseID) => {
                                     >
                                         {item.logo ? (
                                             <img
+                                                loading="lazy"
                                                 src={item.logo}
                                                 alt={item.title}
                                                 style={{ maxHeight: '50px', objectFit: 'contain', paddingRight: '15px' }}

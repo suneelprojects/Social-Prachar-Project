@@ -326,6 +326,16 @@ const NavBar = () => {
                       About us
                     </NavLink>
                     <NavLink
+                      to="/courseBlog"
+                      className="dropdown-item"
+                      onClick={() => {
+                        closeDropdown("dropdown1");
+                        closeToggle();
+                      }}
+                    >
+                      courseBlog
+                    </NavLink>
+                    <NavLink
                       to="/events"
                       className="dropdown-item"
                       onClick={() => {

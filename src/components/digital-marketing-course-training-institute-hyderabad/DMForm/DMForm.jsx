@@ -9,7 +9,7 @@ const DMForm = () => {
     fullName: "",
     email: "",
     phone: "",
-    course: "PGP ( 11 Months )", // Default program
+    course: "",
     mode: "",
     pageUrl: typeof window !== "undefined" ? window.location.href : "",
     actionType: "Digital Marketing",
@@ -68,7 +68,7 @@ const DMForm = () => {
           fullName: "",
           email: "",
           phone: "",
-          course: "PGP ( 11 Months )",
+          course: "",
           mode: "",
           pageUrl: typeof window !== "undefined" ? window.location.href : "",
           actionType: "Form Submission",
@@ -165,9 +165,9 @@ const DMForm = () => {
             onChange={handleChange}
             className="w-full border border-gray-300 rounded p-2"
           >
-            <option value="PGP ( 11 Months )">PGP ( 11 Months )</option>
-            <option value="Executive Program">Executive Program</option>
-            <option value="Certificate Course">Certificate Course</option>
+            <option value="CourseType" disabled>CourseType</option>
+            <option value="Executive Program">3 Months Course</option>
+            <option value="Certificate Course">3 Months Course + Internship</option>
           </select>
         </div>
 

@@ -59,6 +59,7 @@ const ScholarshipFormTest = ({ onClose }) => {
                 course: '',
                 trainingMode: '',
             });
+            window.open('https://chat.whatsapp.com/CP3X4YJNeT14406Q6euAtd', '_blank');
             onClose();
         } catch (error) {
             console.error('Error:', error);

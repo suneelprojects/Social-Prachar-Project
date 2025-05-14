@@ -109,6 +109,7 @@ const Testmonials = () => {
                     <span className={styles.highlatedWord}>17,000+ students</span> have already transformed their lives
                 </h3>
                 <img
+                    loading="lazy" 
                     data-aos="fade-right"
                     data-aos-duration="1500"
                     src={blackLine}
@@ -117,6 +118,7 @@ const Testmonials = () => {
                 />
                 {testimonialImage ? (
                     <img
+                        loading="lazy" 
                         src={testimonialImage}
                         alt="Student Testimonials"
                         className={styles.image}
@@ -154,7 +156,7 @@ const Testmonials = () => {
                         {studentPlacedImages.length > 0 ? (
                             studentPlacedImages.concat(studentPlacedImages).map((student, index) => (
                                 <div key={index} className={styles.carouselImage}>
-                                    <img src={student.image} alt={`Student ${index + 1}`} />
+                                    <img loading="lazy" src={student.image} alt={`Student ${index + 1}`} />
                                 </div>
                             ))
                         ) : (

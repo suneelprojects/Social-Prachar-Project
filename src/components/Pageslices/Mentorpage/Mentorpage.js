@@ -49,7 +49,7 @@ const Mentorpage = () => {
                                     <strong style={{ fontSize: '16px', color: 'white' }}>Bonus {index + 1}</strong>
                                 </div>
                                 <div className="card" style={bonusCardStyle}>
-                                    <img src={image} className="card-img-top" alt={`Bonus ${index + 1}`} />
+                                    <img loading="lazy" src={image} className="card-img-top" alt={`Bonus ${index + 1}`} />
                                     <div className="card-body text-center" style={{ backgroundColor: '#e5e0ff' }}>
                                         <p className="card-text">
                                             <span style={{ textDecoration: 'line-through', fontSize: '24px', color: 'black' }}>
@@ -123,6 +123,7 @@ const Mentorpage = () => {
 
                     {/* Carousel for mentor images */}
                     <img
+                        loading="lazy" 
                         src={images[currentImageIndex]}
                         alt={`Mentor ${currentImageIndex + 1}`}
                         className={styles.profileImage}
@@ -160,7 +161,7 @@ const Mentorpage = () => {
                             { image: whatsApp, followers: '5K+', label: 'Subscribers' },
                         ].map((stat, index) => (
                             <div key={index} className={styles.statItem}>
-                                <img src={stat.image} alt="" className={styles.statIcon} />
+                                <img loading="lazy" src={stat.image} alt="" className={styles.statIcon} />
                                 <p>{stat.followers}</p>
                                 <p>{stat.label}</p>
                             </div>
@@ -171,7 +172,7 @@ const Mentorpage = () => {
                     <p className={styles.featuredHeading}><span style={{ color:'#ff5003'}}>Social Prachar</span> Got Featured in</p>
                     <div className={styles.featured}>
                         <div className={styles.logos}>
-                            <img src={featuredIn} alt="Featured Logo" className={styles.featuredImage} />
+                            <img loading="lazy" src={featuredIn} alt="Featured Logo" className={styles.featuredImage} />
                         </div>
                     </div>
                 </div>

@@ -33,7 +33,9 @@ const Banner = () => {
             <div className={style.bannerContent}>
                 <div className={style.bannerInfo}>
                     <img
+                        loading="lazy" 
                         src={fullStackImage}
+                        alt='banner_image'
                         className={style.bannerImage}
                     />
                     <div className={style.bannerText}>

@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState, Suspense } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-
 import style from './SuccessStories.module.css';
 import GoogleStyle from './googleStyles.module.css';
 import trustPilotStyle from './trustPilot.module.css';
@@ -19,7 +17,18 @@ import redline from '../../assets/RedLine.webp';
 import SuccessStoriesForm from './SuccessStoriesForm.js';
 import award_image from '../../assets/successStories/award_image.jpg';
 import higherPackage from '../../assets/subscriptionpage/higherpackage.png';
+import hiring1 from '../../assets/successStories/hiringImage1.jpg';
+import hiring2 from '../../assets/successStories/hiringImage2.jpg';
+import hiring3 from '../../assets/successStories/hiringImage3.jpeg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+
+const hiringImages = [
+    { src: hiring1, alt: 'Hiring 1' },
+    { src: hiring3, alt: 'Hiring 3' },
+    { src: hiring2, alt: 'Hiring 2' },
+];
 
 const SuccessStories = () => {
     const [studentsEnrolled, setStudentsEnrolled] = useState(0);
@@ -29,6 +38,10 @@ const SuccessStories = () => {
     const [hasAnimated, setHasAnimated] = useState(false);
     const statsRef = useRef(null);
     const isMobile = window.innerWidth < 768;
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
 
 
     useEffect(() => {
@@ -100,7 +113,7 @@ const SuccessStories = () => {
 
 
 
-    
+
     return (
         <>
             <div className="container-fluid bg-light">
@@ -159,13 +172,37 @@ const SuccessStories = () => {
                                 src={recentAwards[activeAwardIndex].image}
                                 className="img-fluid w-100 h-100"
                                 alt={recentAwards[activeAwardIndex].name}
-                                style={{ objectFit:isMobile ? "cover":"contain" }}
+                                style={{ objectFit: isMobile ? "cover" : "contain" }}
                             />
                         </div>
                     </div>
                 </div>
-
             </div>
+
+            <div className="text-center p-6">
+                <h1 className="display-5 fw-bold mb-4">Recent Hiring Drive April 2025
+                    {/* Pulsing Gradient Line Below Heading */}
+                    <div data-aos="fade-left" className="relative w-full flex justify-center h-2">
+                        <div className="w-72 sm:w-96 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full animate-pulse-line"></div>
+                    </div>
+
+                </h1>
+
+                <div
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4"
+                >
+                    {hiringImages.map((image, index) => (
+                        <img
+                            data-aos="fade-up"
+                            key={index}
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-full h-[200px] object-cover rounded-lg shadow-md"
+                        />
+                    ))}
+                </div>
+            </div>
+
 
 
             <div className={style.topContent}>
@@ -535,7 +572,7 @@ const SuccessStories = () => {
                     <p className='fw-bold'>
                         SocialPrachar alumni are working in 1,100+ companies across India. Contact us to know more about placements!
                     </p>
-                    <SuccessStoriesForm/>
+                    <SuccessStoriesForm />
                 </div>
             </div>
 

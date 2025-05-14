@@ -75,12 +75,12 @@ const Whatwillyoulearn = () => {
             </div>
 
             <div className={styles.masterclassInfo}>
-                <img src={backgroundImage} alt="Background" className={styles.backgroundImage} />
+                <img loading="lazy" src={backgroundImage} alt="Background" className={styles.backgroundImage} />
                 <p className={styles.masterclassQuestion}>Who is this <span>Course</span> for...?</p>
                 <section className={styles.roleContainer}>
                     {card && card.courseFor.map((course, index) => (
                         <article key={index} className={styles.role}>
-                            <img src={course.image} alt={course.alt} className={styles.roleImage} />
+                            <img loading="lazy" src={course.image} alt={course.alt} className={styles.roleImage} />
                             <div className={styles.roleContent}>
                                 <h3 className={styles.roleTitle}>{course.title}</h3>
                                 <p className={styles.roleDescription}>{course.content}</p>

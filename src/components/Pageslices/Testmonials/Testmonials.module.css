@@ -12,9 +12,11 @@
   animation: scroll-left 0s linear infinite;
 }
 
-.carouselImage img {
+.carouselImage{
   width: 250px;
-  height: auto;
+  height: 220px;
+}
+.carouselImage img{
   border-radius: 15px;
 }
 

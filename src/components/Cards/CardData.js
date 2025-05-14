@@ -48,12 +48,24 @@ import student41 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (6).pn
 import student42 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/ML (7).png';
 import student44 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SD.png';
 import student45 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (3).png';
-import student46 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (2).png';
+// import student46 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (2).png';
 import student47 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (5).png';
 import student48 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (4).png';
 import student49 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (6).png';
 import student50 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE (7).png';
 import student51 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/SE.png';
+
+import student52 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/bhavani_01.jpg';
+import student54 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/Rameeja SE.jpg';
+import student56 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/Jahnavi AI.jpg';
+import student57 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/Mahendra K SE.jpg';
+import student58 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/teja SE.jpg';
+import student59 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/akhil g SE.jpg';
+import student60 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/Mani vardhan AI.jpg';
+import student61 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/sai react js.jpg';
+import student62 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/Nandhini react js.jpg';
+import student63 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/venkat sai react js.jpg';
+import student64 from '../../assets/AssetsOfDetailsPage/StudentsPlaced/Sowmya DM.jpg';
 
 // Impoerting DM Profiles
 import dmimg1 from '../../assets/digital_marketing_profiles/60.png'; 
@@ -710,7 +722,7 @@ export const data = [
         ],
         studentPlacedImages: [
             { id: 1, image: student45 },
-            { id: 2, image: student46 },
+            { id: 2, image: student6 },
             { id: 3, image: student47 },
             { id: 4, image: student48 },
             { id: 5, image: student49 },
@@ -725,7 +737,10 @@ export const data = [
             { id: 14, image: student7 },
             { id: 15, image: student8 },
             { id: 16, image: student9 },
-            { id: 17, image: student10 }
+            { id: 17, image: student10 },
+            { id: 18, image: student61 },
+            { id: 19, image: student62 },
+            { id: 20, image: student63 },
         ],
         bannerHeader: 'Learn Mern Stack Today',
         bannerStudentsEnrolled: '2.8k+ Students Enrolled',
@@ -1006,7 +1021,7 @@ export const data = [
         ],
         studentPlacedImages: [
             { id: 1, image: student45 },
-            { id: 2, image: student46 },
+            { id: 2, image: student6 },
             { id: 3, image: student47 },
             { id: 4, image: student48 },
             { id: 5, image: student49 },
@@ -1154,7 +1169,7 @@ export const data = [
         ],
         studentPlacedImages: [
             { id: 1, image: student45 },
-            { id: 2, image: student46 },
+            { id: 2, image: student6 },
             { id: 3, image: student47 },
             { id: 4, image: student48 },
             { id: 5, image: student49 },
@@ -1169,7 +1184,10 @@ export const data = [
             { id: 14, image: student7 },
             { id: 15, image: student8 },
             { id: 16, image: student9 },
-            { id: 17, image: student10 }
+            { id: 17, image: student54 },
+            { id: 18, image: student57 },
+            { id: 19, image: student58 },
+            { id: 20, image: student59 },
         ],
         moduleContent: [
             {
@@ -1802,6 +1820,9 @@ export const data = [
             { id: 25, image: student41 },
             { id: 26, image: student42 },
             { id: 27, image: student44 },
+            { id: 28, image: student56 },
+            { id: 29, image: student60 },
+            
         ],
         bannerHeader: 'Learn AWS DevOps Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
@@ -2145,6 +2166,7 @@ export const data = [
             { id: 25, image: student41 },
             { id: 26, image: student42 },
             { id: 27, image: student44 },
+            { id: 28, image: student52 },
         ],
         bannerHeader: 'Learn Artificial Intelligence Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',
@@ -2435,6 +2457,7 @@ export const data = [
             { id: 13, image: dmimg12},
             { id: 14, image: dmimg13},
             { id: 15, image: dmimg14},
+            {id:16,image:student64}
         ],
         bannerHeader: 'Learn Digital Marketing Today',
         bannerStudentsEnrolled: '6k+ Students Enrolled',

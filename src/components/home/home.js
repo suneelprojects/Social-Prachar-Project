@@ -64,8 +64,8 @@ const Home = () => {
                 Discover a world of knowledge and opportunities with our Mentor job-ready courses.
               </p>
 
-              <div className="row mt-4 ">
-                <div className="col-12 col-sm-12 col-xl-5">
+              <div className="row mt-4">
+                <div className="col-12 col-sm-12 col-xl-5 align-center">
                   <ArrowButton ArrowText='View All Courses' handleClick={handleClick} />
                 </div>
                 <div className="col-12 col-sm-12 col-xl-6 d-flex justify-content-around">

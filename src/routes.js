@@ -23,12 +23,18 @@ const Subscription = React.lazy(() => (import('./components/subscriptionPage/Sub
 const EventsPage = React.lazy(() => (import('./components/events/EventMainPage.js')));
 const EventOpenPage = React.lazy(() => import("./components/events/EventsOpenpage.js"));
 const DateForms = React.lazy(() => import("./components/Forms/DateInput.js"));
-const DigitalMarketingPage = React.lazy(() => import("./components/digital-marketing-course-training-institute-hyderabad/page.js"));
+const DigitalMarketingPageAdd = React.lazy(() => import("./components/digital-marketing-course-training-institute-hyderabad/page.js"));
 const Hosting = React.lazy(()=> import ('./components/hosting/Hosting.js'));
+const CourseBlog = React.lazy(() => import('./components/CourseBlog/Blog.js'));
+const CourseBlogDashBoard = React.lazy(() => import ('./components/CourseBlog/CourseBlogDashboard.js'));
+const OpenCourseBlog = React.lazy(()=> import ("./components/CourseBlog/CourseBlog.js"));
 
 const routes = [
     <Route path="/" element={<AllHomeComp />} />,
     <Route path='/datesform' element={<DateForms />} />,
+    <Route path='/courseBlog/:id' element={<OpenCourseBlog/>}/>,
+    <Route path='/courseBlogDashboard' element={<CourseBlogDashBoard />}/>,
+    <Route path='/courseBlog' element={<CourseBlog />}/>,
     <Route path='/events/:id' element={<EventOpenPage />} />,
     <Route path='events' element={<EventsPage />} />,
     <Route path="/subscription/:userType" element={<Subscription />} />,
@@ -43,7 +49,7 @@ const routes = [
     <Route path="courses" element={<Course />} />,
     <Route path="aboutUs" element={<Aboutus />} />,
     <Route path=":slug" element={<NewDetailsPage />} />,
-     <Route path="/digital-marketing-course-training-institute-hyderabad" element={<DigitalMarketingPage />} />,
+     <Route path="/digital-marketing-course-hyderabad" element={<DigitalMarketingPageAdd />} />,
     <Route path="success-stories" element={<SuccessStories />} />,
     <Route path="career-counselling" element={<CareerWorkShop />} />,
     <Route path="upcoming-batches" element={<UpcomingBatches />} />,

@@ -3,7 +3,7 @@ import React from "react";
 const ArrowButton = (props) => {
   return (
     <>
-      <button className="btn btn-light " onClick={props.handleClick}>
+      <button className="d-flex justify-content-center align-items-center6n btn-light " onClick={props.handleClick}>
         {props.ArrowText} {" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
