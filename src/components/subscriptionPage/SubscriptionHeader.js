@@ -71,10 +71,10 @@ const SubscriptionHeader = () => {
                                 Get unlimited access to <span className="fw-bold">Full Stack Development, Data Science, AI, Cloud, and more</span> with SocialPrachar's <span className="fw-bold">all-in-one subscription.</span>
                                 Gain hands-on experience, expert mentorship, and AI-powered career tools—all at an unbeatable price!
                             </p>
-                            <p className="fw-bold">
+                            <p className="fw-bold d-flex">
                                 <FaRobot className="me-2" size={24} /> Exclusive AI-driven tools & career support included!
                             </p>
-                            <p className="fw-bold">
+                            <p className="fw-bold d-flex">
                                 <FaRupeeSign className="me-2" size={24} />{changePlan}
                             </p>
                             <p>

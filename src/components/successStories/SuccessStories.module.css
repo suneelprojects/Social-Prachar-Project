@@ -54,13 +54,14 @@ strong {
   font-size: 25px;
   color: #0a66c2;
   font-weight: 600;
+  display: inline-flex;
 }
 
 .linkedinLogo {
   width: 26px;
   height: 26px;
   position: relative;
-  top: -4px;
+  top:4px;
   left: 2px;
 }
 

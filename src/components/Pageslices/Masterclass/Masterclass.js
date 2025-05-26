@@ -32,7 +32,7 @@ const Masterclass = () => {
         if (savedEventDate) {
             eventDate = new Date(savedEventDate);
         } else {
-            eventDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000); // One week from now
+            eventDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
             localStorage.setItem('eventDate', eventDate);
         }
 
@@ -42,9 +42,9 @@ const Masterclass = () => {
 
             // Countdown finished
             if (distance < 0) {
-                clearInterval(interval);
-                localStorage.removeItem('eventDate');
-                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+                const newEventDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+                localStorage.setItem('eventDate', newEventDate);
+                eventDate = newEventDate;
                 return;
             }
 

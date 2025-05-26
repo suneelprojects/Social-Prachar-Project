@@ -17,8 +17,9 @@ ul li{
 
 /* the below is also applied applied for home.js code STARTS  */
 
-.bulbSpan img{
+.bulbSpan > img{
   width: 22px;
+  display: inline-flex;
   margin-right: 10px;
 }
 .blueText{

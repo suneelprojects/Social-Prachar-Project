@@ -1,7 +1,7 @@
 // routes.js
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-
+import PageNotFound from './components/pageNotFound/PageNotFound.js';
 const ThankyouPage = React.lazy(() => import('./components/Pageslices/Enrollbutton/ThankyouPage.js'));
 const AllHomeComp = React.lazy(() => import('./components/allHomeComp.js'));
 const Course = React.lazy(() => import('./components/Courses_category/Course.js'));
@@ -57,6 +57,7 @@ const routes = [
     <Route path="course/:courseID" element={<CourseAccordion />} />,
     <Route path="thank-you" element={<ThankyouPage />} />,
     <Route path="hosting" element={<Hosting/>} />,
+    <Route path='*' element={<PageNotFound/>}/>
 ];
 
 

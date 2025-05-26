@@ -120,7 +120,6 @@ const cardContent = [
     },
 
 ];
-
 const steps = [
     'Choose Plan & Enroll',
     'Start Learning',
@@ -130,7 +129,7 @@ const steps = [
     'Get Placed + Earn'
 ];
 const SecondPart = () => {
-     const { userType } = useParams();
+    const { userType } = useParams();
     const displayContent = userType === "students" ? studentPlan : cardContent;
     // const displayText = userType === "students" ? "Students can" : "Working Professionals";
 
@@ -138,13 +137,13 @@ const SecondPart = () => {
         <>
 
             <div className="container py-5">
-                <div className="row g-4 justify-content-center">
+                <div className="row g-4 d-flex justify-content-center">
                     {/* Header */}
                     <h3 className="text-center">
                         Start Your Learning Journey Today –
                         <span className="fw-bold" style={{ color: '#553cdf' }}> Affordable EMI Plans</span> Available!
                     </h3>
-                    <h2 className="fw-bold text-center">
+                    <h2 className="fw-bold d-flex justify-content-center">
                         <FaBookOpen className="me-2" fontSize={50} /> Choose Your Perfect Learning Plan
                     </h2>
 
@@ -162,7 +161,7 @@ const SecondPart = () => {
                                                 </li>
                                             ))}
                                         </ul>
-                                        <RegisterForm label={"Know more"} className="btn btn-light rounded-5 mt-auto" />
+                                        <RegisterForm label={"Know more"} className="btn btn-light~ rounded-5 mt-auto" />
                                     </div>
                                 </div>
                             </div>
