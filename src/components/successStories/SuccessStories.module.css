@@ -1,5 +1,11 @@
 /** @format */
 /* insights */
+/* Hide scrollbar for IE, Edge */
+.hide_scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
 .hide_scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -61,7 +67,7 @@ strong {
   width: 26px;
   height: 26px;
   position: relative;
-  top:4px;
+  top: 4px;
   left: 2px;
 }
 
@@ -129,16 +135,21 @@ strong {
     font-size: 8px;
   }
   .alumniProfileImage {
-    width: 95px;
-    height: 95px;
-    position: absolute;
-    top: -55px;
-    left: -5px;
+    width: 110px !important;
+    height: 100px !important;
+    position: relative;
+    top: 20px !important;
+    left: 10px !important;
   }
+
+  .table {
+    width: 140px !important;
+  }
+
   .personalInfo {
     position: relative;
-    top: 18px;
-    left: 10px;
+    top: 10px !important;
+    left: 10px !important;
   }
   .offers {
     height: 20px;
@@ -152,7 +163,7 @@ strong {
 }
 
 @media (min-width: 377px) and (max-width: 767px) {
-   .Headercontent {
+  .Headercontent {
     font-size: 14px !important ;
   }
   .linkedinInnerCardtitle {
@@ -228,7 +239,7 @@ strong {
   background: white;
   z-index: 1;
   position: relative;
-  top: 70px;
+  top: 20px;
   left: 20px;
   border-radius: 10px;
   font-size: 9px;
@@ -244,12 +255,11 @@ strong {
 .alumniProfileImage {
   width: 130px;
   height: 130px;
-  object-fit: cover;
-  position: absolute;
-  top: -30px;
-  left: -35px;
-  z-index: 0;
+  position: relative;
+  top: 30px;
+  left: -20px;
 }
+
 .aluminiStudentName {
   background-color: #d2d1d4;
   color: black;

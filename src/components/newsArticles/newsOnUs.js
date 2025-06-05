@@ -56,7 +56,7 @@ const NewsOnUs = () => {
         <div className={`${newsStyle.marquee} marquee`}>
           <div className={`${newsStyle.marquee_content} marquee-content d-flex pt-4`}>
             <Marquee direction="left" speed={120}>
-              {ourAchievements.map((achievement, index) => (
+              {ourAchievements?.map((achievement, index) => (
                 <div
                   key={index}
                   className="card text-center p-3 shadow-sm mx-3"

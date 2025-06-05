@@ -2,18 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const destinations = [
-    // {
-    //     to: "/",
-    //     title: "Home",
-    //     description: "Return to the homepage",
-    //     label: "Visit",
-    //     colSpan: "col-span-1",
-    //     icon: (
-    //         <svg className="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    //             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-    //         </svg>
-    //     ),
-    // },
     {
         to: "/data-science",
         title: "Data Science",
@@ -55,12 +43,12 @@ const destinations = [
 const PageNotFound = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex flex-col">
-            <main className="flex-grow flex items-center justify-center px-4 py-12">
+            <main className="flex-grow flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
                 <div className="max-w-6xl w-full">
                     {/* Illustration and heading */}
-                    <div className="text-center mb-12 relative">
+                    <div className="text-center mb-8 md:mb-12 relative">
                         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 opacity-5 pointer-events-none">
-                            <svg className="w-96 h-96" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="w-64 h-64 sm:w-96 sm:h-96" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M30,1h40l29,29v40l-29,29h-40l-29-29v-40z" stroke="currentColor" fill="none" strokeWidth="3" />
                                 <path d="M31,3h38l28,28v38l-28,28h-38l-28-28v-38z" stroke="currentColor" fill="none" strokeWidth="3" />
                                 <path d="M32,5h36l27,27v36l-27,27h-36l-27-27v-36z" stroke="currentColor" fill="none" strokeWidth="3" />
@@ -69,44 +57,44 @@ const PageNotFound = () => {
 
                         <div className="relative">
                             <h1 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                                <span className="text-9xl block font-black tracking-tighter">404</span>
+                                <span className="text-7xl sm:text-8xl md:text-9xl block font-black tracking-tighter">404</span>
                             </h1>
                             <div className="absolute inset-0 flex items-center justify-center opacity-5">
-                                <svg className="w-64 h-64" fill="currentColor" viewBox="0 0 20 20">
+                                <svg className="w-48 h-48 sm:w-64 sm:h-64" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                                 </svg>
                             </div>
                         </div>
 
-                        <span className="text-2xl font-semibold block mt-4 text-gray-800">Page Not Found</span>
+                        <span className="text-xl sm:text-2xl font-semibold block mt-4 text-gray-800">Page Not Found</span>
 
-                        <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto my-6 rounded-full"></div>
+                        <div className="h-1 w-16 sm:w-24 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto my-4 sm:my-6 rounded-full"></div>
 
-                        <p className="text-gray-600 max-w-lg mx-auto text-lg">
+                        <p className="text-gray-600 max-w-lg mx-auto text-base sm:text-lg px-4 sm:px-0">
                             We couldn't find the page you were looking for. It might have been moved or doesn't exist.
                             Let's get you back on track.
                         </p>
                     </div>
 
                     {/* Popular destinations */}
-                    <div className="flex gap-6 justify-center">
+                    <div className="flex flex-wrap gap-4 sm:gap-6 justify-center px-2 sm:px-0">
                         {destinations.map(({ to, title, description, label, icon }, idx) => (
                             <Link
                                 key={idx}
                                 to={to}
-                                className="min-w-[280px] max-w-sm bg-white p-6 rounded-lg border border-gray-200 hover:border-blue-500 hover:shadow-md transition-all duration-300 flex flex-col no-underline"
+                                className="w-full sm:min-w-[280px] sm:max-w-xs md:max-w-sm bg-white p-4 sm:p-6 rounded-lg border border-gray-200 hover:border-blue-500 hover:shadow-md transition-all duration-300 flex flex-col no-underline"
                             >
-                                <div className="mb-4">{icon}</div>
-                                <div className="text-xl font-medium text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200">
+                                <div className="mb-3 sm:mb-4">{icon}</div>
+                                <div className="text-lg sm:text-xl font-medium text-gray-900 mb-1 sm:mb-2 group-hover:text-blue-600 transition-colors duration-200">
                                     {title}
                                 </div>
-                                <div className="text-sm text-gray-500 mb-4 no-underline border-none">
+                                <div className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4 no-underline border-none">
                                     {description}
                                 </div>
-                                <div className="mt-auto pt-2 text-blue-600 font-medium text-sm flex items-center group-hover:translate-x-1 transition-transform duration-200 no-underline border-none">
+                                <div className="mt-auto pt-1 sm:pt-2 text-blue-600 font-medium text-xs sm:text-sm flex items-center group-hover:translate-x-1 transition-transform duration-200 no-underline border-none">
                                     {label}
                                     <svg
-                                        className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-200"
+                                        className="w-3 h-3 sm:w-4 sm:h-4 ml-1 group-hover:ml-2 transition-all duration-200"
                                         fill="currentColor"
                                         viewBox="0 0 20 20"
                                     >
@@ -121,14 +109,13 @@ const PageNotFound = () => {
                         ))}
                     </div>
 
-
                     {/* Back to home button */}
-                    <div className="mt-8 text-center">
+                    <div className="mt-6 sm:mt-8 text-center px-2 sm:px-0">
                         <Link
                             to="/"
-                            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 shadow-md transition-all duration-200"
+                            className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 border border-transparent text-sm sm:text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 shadow-md transition-all duration-200"
                         >
-                            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                             </svg>
                             Return to Homepage

@@ -22,7 +22,9 @@ import hiring2 from '../../assets/successStories/hiringImage2.jpg';
 import hiring3 from '../../assets/successStories/hiringImage3.jpeg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { collection, db } from '../../firebase.js';
+import { getDocs } from 'firebase/firestore';
+import Achievementcard from './Achievementcard.js';
 
 const hiringImages = [
     { src: hiring1, alt: 'Hiring 1' },
@@ -38,6 +40,9 @@ const SuccessStories = () => {
     const [hasAnimated, setHasAnimated] = useState(false);
     const statsRef = useRef(null);
     const isMobile = window.innerWidth < 768;
+    const [achievements, setAchievements] = useState([]);
+    const [selectedRole, setSelectedRole] = useState('all');
+    const [selectedSection, setSelectedSection] = useState('all');
 
     useEffect(() => {
         AOS.init({ duration: 1000 });
@@ -88,17 +93,6 @@ const SuccessStories = () => {
             container.scrollLeft += e.movementX;
         }
     };
-    const [filter, setFilter] = useState('All');
-    // Function to handle filter change
-    const handleFilterChange = (category) => {
-        setFilter(category);
-    };
-    const filteredAchievements = ourAchievements.filter((achievement) => {
-        if (filter === 'All') return true;
-        return achievement.category === filter;
-    });
-
-
     const [activeJobIndex, setActiveJobIndex] = useState(0);
     const [activeAwardIndex, setActiveAwardIndex] = useState(0);
 
@@ -110,7 +104,35 @@ const SuccessStories = () => {
         { id: 1, name: "David Rodriguez", image: award_image },
     ];
 
+    // fetching Achievements
+    const filteredAchievements = achievements.filter(achievement => {
+        const roleMatch = selectedRole === 'all' || achievement.role === selectedRole;
+        const sectionMatch = selectedSection === 'all' || achievement.applicableSection === selectedSection;
+        return roleMatch && sectionMatch;
+    });
 
+    useEffect(() => {
+        const fetchAchievements = async () => {
+            const snapshot = await getDocs(collection(db, "successStories-studentAchievements"));
+            const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            setAchievements(data);
+        };
+        fetchAchievements();
+    }, []);
+
+
+    const groupAchievementsByCategory = (achievements) => {
+        return achievements.reduce((acc, achievement) => {
+            const category = achievement.category || 'Other'; // Default to 'Other' if no category
+            if (!acc[category]) {
+                acc[category] = [];
+            }
+            acc[category].push(achievement);
+            return acc;
+        }, {});
+    }
+
+    const groupedAchievements = groupAchievementsByCategory(filteredAchievements);
 
 
 
@@ -311,261 +333,78 @@ const SuccessStories = () => {
                     {/* Filter Buttons */}
                     <div className={`${style.filterButtons} d-flex justify-content-center my-3`}>
                         <div className={style.btn_group}>
-                            <button
-                                type="button"
-                                className={style.btn}
-                                onClick={() => handleFilterChange('Full Stack Java')}
-                            >
+                            <button type="button" className={style.btn}
+                                onClick={() => setSelectedSection('Full Stack Development - Java')}>
                                 Full Stack Java
                             </button>
-                            <button
-                                type="button"
-                                className={style.btn}
-                                onClick={() => handleFilterChange('Full Stack Python')}
-                            >
+                            <button type="button" className={style.btn}
+                                onClick={() => setSelectedSection('Full Stack Development - Python')}>
                                 Full Stack Python
                             </button>
-                            <button
-                                type="button"
-                                className={style.btn}
-                                onClick={() => handleFilterChange('Data Science')}
-                            >
-                                Data Science
+                            <button type="button" className={style.btn}
+                                onClick={() => setSelectedSection('Data Science & AI')}>
+                                Data Science & AI
                             </button>
-                            <button
-                                type="button"
-                                className={style.btn}
-                                onClick={() => handleFilterChange('Digital Marketing')}
-                            >
+                            <button type="button" className={style.btn}
+                                onClick={() => setSelectedSection('Digital Marketing')}>
                                 Digital Marketing
                             </button>
-                            <button
-                                type="button"
-                                className={style.btn}
-                                onClick={() => handleFilterChange('All')}
-                            >
+                            <button type="button" className={style.btn}
+                                onClick={() => setSelectedSection('all')}>
                                 Show All
                             </button>
                         </div>
                     </div>
 
                     {/* OurAchievements */}
+                
                     <div className="container py-4">
-                        <div
-                            className={`d-flex flex-column ${style.hide_scrollbar}`}
-                            style={{
-                                maxHeight: '90vh',
-                                overflowY: 'auto',
-                            }}
-                        >
-                            <div
-                                className="d-flex flex-column"
-                                style={{
-                                    gap: '25px',
-                                }}
-                            >
-                                {/* First Row */}
-                                <div
-                                    className="d-flex flex-nowrap"
-                                    style={{
-                                        scrollbarWidth: 'thin',
-                                        gap: '25px',
-                                    }}
-                                >
-                                    {filteredAchievements
-                                        .filter((_, index) => index % 2 !== 0)
-                                        .map((achievement, index) => (
-                                            <div
-                                                key={index}
-                                                className="card text-center p-3 shadow-sm"
-                                                style={{
-                                                    minWidth: '320px',
-                                                    height: '250px',
-                                                    borderRadius: '12px',
-                                                }}
-                                            >
-                                                <div className="d-flex text-start">
-                                                    <div>
-                                                        <img
-                                                            src={achievement.profileImage}
-                                                            alt={achievement.name}
-                                                            className="rounded-circle mb-2"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                border: '4px solid #553cdf',
-                                                                marginRight: '16px',
-                                                            }}
-                                                        />
-                                                    </div>
-                                                    <div>
-                                                        <h5 className="card-title">{achievement.name}</h5>
-                                                        <p
-                                                            className="text-muted mb-2"
-                                                            style={{ fontSize: '14px' }}
-                                                        >
-                                                            {achievement.role}
-                                                        </p>
-                                                        <span
-                                                            className="badge py-1 px-3"
-                                                            style={{
-                                                                color: '#553cdf',
-                                                                borderRadius: '12px',
-                                                                fontSize: '12px',
-                                                                background: '#543cdf31',
-                                                            }}
-                                                        >
-                                                            {achievement.hike}
-                                                        </span>
-                                                    </div>
+                        <div className={`d-flex flex-column ${style.hide_scrollbar}`} style={{ maxHeight: '90vh', overflowY: 'auto' }}>
+                            {Object.keys(groupedAchievements).map((category) => {
+                                const achievements = groupedAchievements[category];
+                                const mid = Math.ceil(achievements.length / 2);
+                                const firstRow = achievements.slice(0, mid);
+                                const secondRow = achievements.slice(mid);
+
+                                return (
+                                    <div key={category} className="mb-5">
+                                        <div
+                                            className={`d-flex flex-nowrap mb-3 ${style.hide_scrollbar}`}
+                                            style={{
+                                                overflowX: 'auto',
+                                                overflowY: 'hidden',   // Hide vertical scrollbar
+                                                gap: '20px',
+                                                paddingBottom: '10px',
+                                            }}
+                                        >
+                                            {firstRow.map((achievement, index) => (
+                                                <div key={index} style={{ minWidth: '320px' }}>
+                                                    <Achievementcard achievement={achievement} />
                                                 </div>
-                                                <div className="d-flex justify-content-around align-items-center mt-3">
-                                                    <div>
-                                                        <p
-                                                            className="text-muted mb-0"
-                                                            style={{ fontSize: '14px' }}
-                                                        >
-                                                            Pre Social Prachar
-                                                        </p>
-                                                        <img
-                                                            src={achievement.preCompany}
-                                                            alt="Previous Company Logo"
-                                                            style={{ width: 'auto', height: '30px' }}
-                                                        />
-                                                    </div>
-                                                    <div>
-                                                        <i className="bi bi-arrow-right"></i>
-                                                    </div>
-                                                    <div>
-                                                        <p
-                                                            className="text-muted mb-0"
-                                                            style={{ fontSize: '14px' }}
-                                                        >
-                                                            Post Social Prachar
-                                                        </p>
-                                                        <img
-                                                            src={achievement.postCompany}
-                                                            alt="Previous Company Logo"
-                                                            style={{ width: 'auto', height: '30px' }}
-                                                        />
-                                                    </div>
+                                            ))}
+                                        </div>
+
+                                        <div
+                                            className={`d-flex flex-nowrap ${style.hide_scrollbar}`}
+                                            style={{
+                                                overflowX: 'auto',
+                                                overflowY: 'hidden',  
+                                                gap: '20px',
+                                                paddingBottom: '10px',
+                                            }}
+                                        >
+                                            {secondRow.map((achievement, index) => (
+                                                <div key={index} style={{ minWidth: '320px' }}>
+                                                    <Achievementcard achievement={achievement} />
                                                 </div>
-                                                <hr className="my-0" />
-                                                <p
-                                                    className="text-muted mb-0"
-                                                    style={{ fontSize: '14px' }}
-                                                >
-                                                    started from <br />
-                                                    <strong className="text-dark">
-                                                        {achievement.startCompanyType}
-                                                    </strong>
-                                                </p>
-                                            </div>
-                                        ))}
-                                </div>
-                                {/* Second Row */}
-                                <div
-                                    className="d-flex flex-nowrap"
-                                    style={{
-                                        scrollbarWidth: 'thin',
-                                        gap: '25px',
-                                    }}
-                                >
-                                    {filteredAchievements
-                                        .filter((_, index) => index % 2 === 0)
-                                        .map((achievement, index) => (
-                                            <div
-                                                key={index}
-                                                className="card text-center p-3 shadow-sm"
-                                                style={{
-                                                    minWidth: '320px',
-                                                    height: '250px',
-                                                    borderRadius: '12px',
-                                                }}
-                                            >
-                                                <div className="d-flex text-start">
-                                                    <div>
-                                                        <img
-                                                            src={achievement.profileImage}
-                                                            alt={achievement.name}
-                                                            className="rounded-circle mb-2"
-                                                            style={{
-                                                                width: '80px',
-                                                                height: '80px',
-                                                                border: '4px solid #553cdf',
-                                                                marginRight: '16px',
-                                                            }}
-                                                        />
-                                                    </div>
-                                                    <div>
-                                                        <h5 className="card-title">{achievement.name}</h5>
-                                                        <p
-                                                            className="text-muted mb-2"
-                                                            style={{ fontSize: '14px' }}
-                                                        >
-                                                            {achievement.role}
-                                                        </p>
-                                                        <span
-                                                            className="badge py-1 px-3"
-                                                            style={{
-                                                                color: '#553cdf',
-                                                                borderRadius: '12px',
-                                                                fontSize: '12px',
-                                                                background: '#543cdf31',
-                                                            }}
-                                                        >
-                                                            {achievement.hike}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className="d-flex justify-content-around align-items-center mt-4" style={{ position: 'relative', top: '-8px' }}>
-                                                    <div>
-                                                        <p
-                                                            className="text-muted mb-0"
-                                                            style={{ fontSize: '14px' }}
-                                                        >
-                                                            Pre Social Prachar
-                                                        </p>
-                                                        <img
-                                                            src={achievement.preCompany}
-                                                            alt="Previous Company Logo"
-                                                            style={{ width: 'auto', height: '30px' }}
-                                                        />
-                                                    </div>
-                                                    <div>
-                                                        <i className="bi bi-arrow-right"></i>
-                                                    </div>
-                                                    <div>
-                                                        <p
-                                                            className="text-muted mb-0"
-                                                            style={{ fontSize: '14px' }}
-                                                        >
-                                                            Post Social Prachar
-                                                        </p>
-                                                        <img
-                                                            src={achievement.postCompany}
-                                                            alt="Previous Company Logo"
-                                                            style={{ width: 'auto', height: '30px' }}
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <hr className="my-0" />
-                                                <p
-                                                    className="text-muted mb-0"
-                                                    style={{ fontSize: '14px' }}
-                                                >
-                                                    started from <br />
-                                                    <strong className="text-dark">
-                                                        {achievement.startCompanyType}
-                                                    </strong>
-                                                </p>
-                                            </div>
-                                        ))}
-                                </div>
-                            </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
-                </div>
+                </div >
 
                 <hr className="mx-auto w-75" />
                 <div className="text-center" style={{ fontSize: '18px' }}>
@@ -574,10 +413,10 @@ const SuccessStories = () => {
                     </p>
                     <SuccessStoriesForm />
                 </div>
-            </div>
+            </div >
 
-            {/*Linkedin cards  */}
-            <div className={style.linkedin}>
+    {/*Linkedin cards  */ }
+    <div div className = { style.linkedin } >
                 <div className="text-center pt-5">
                     <h1 className={`${style.linkedinHeader} mb-4`}>Linked
                         <span>
@@ -629,10 +468,10 @@ const SuccessStories = () => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div >
 
-            {/* google comments */}
-            <div className={GoogleStyle.google}>
+    {/* google comments */ }
+    <div div className = { GoogleStyle.google } >
                 <p className={`${GoogleStyle.header} text-center`}>Google
                     <span>
                         <img
@@ -695,11 +534,11 @@ const SuccessStories = () => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div >
 
 
-            {/* success Pilot */}
-            <div className={trustPilotStyle.trustPilotContainer}>
+    {/* success Pilot */ }
+    <div div className = { trustPilotStyle.trustPilotContainer } >
                 <div className="text-center pt-5">
                     <h1 className={`${trustPilotStyle.trustPilotHeader} mb-4`}>
                         <span>
@@ -767,11 +606,11 @@ const SuccessStories = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+    </div >
 
 
-            {/*our Alumini Review */}
-            <div className={style.ourAlumini_Reviews}>
+    {/*our Alumini Review */ }
+    <div div className = { style.ourAlumini_Reviews } >
                 <h2 className="text-center">Our Alumni Reviews</h2>
                 <div className="container my-5">
                     <div
@@ -793,7 +632,7 @@ const SuccessStories = () => {
                             >
                                 <div
                                     className={`${style.wholeAlumniCard} card shadow`}
-                                    style={{ borderRadius: "15px" }}
+                                    style={{ borderRadius: "15px", height: "300px" }}
                                 >
                                     <div className="card-body">
                                         {/* Success Story Heading */}
@@ -814,7 +653,7 @@ const SuccessStories = () => {
                                                             Journey
                                                         </p>
                                                         <hr className="my-2" />
-                                                        <p className="mb-0">
+                                                        <p className={`mb-0`}>
                                                             From{" "}
                                                             <span className="fw-bold">
                                                                 {student.homeTown}
@@ -827,7 +666,7 @@ const SuccessStories = () => {
                                                             </span>
                                                         </p>
                                                     </div>
-                                                    <div className="table" style={{ width: "160px" }}>
+                                                    <div className={`table ${style.table}`} style={{ width: "160px" }}>
                                                         <table
                                                             className={`${style.offersTable} table table-bordered text-center`}
                                                             style={{ fontSize: "8px" }}
@@ -858,7 +697,6 @@ const SuccessStories = () => {
                                                                                     width: "35px",
                                                                                     height: "25px",
                                                                                     objectFit: "contain",
-
                                                                                 }}
                                                                                 alt={`${offer.company}`}
                                                                             />
@@ -934,11 +772,11 @@ const SuccessStories = () => {
                         ))}
                     </div>
                 </div>
-            </div>
+    </div >
 
-            <div>
-                <Footer />
-            </div>
+    <div>
+        <Footer />
+    </div>
         </>
     );
 };

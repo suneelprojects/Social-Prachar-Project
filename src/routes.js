@@ -28,11 +28,15 @@ const Hosting = React.lazy(()=> import ('./components/hosting/Hosting.js'));
 const CourseBlog = React.lazy(() => import('./components/CourseBlog/Blog.js'));
 const CourseBlogDashBoard = React.lazy(() => import ('./components/CourseBlog/CourseBlogDashboard.js'));
 const OpenCourseBlog = React.lazy(()=> import ("./components/CourseBlog/CourseBlog.js"));
+const OurAchievementsDashboard = React.lazy(() => import ('./components/successStories/OurAchievementsDashboard'));
+
+
 
 const routes = [
     <Route path="/" element={<AllHomeComp />} />,
     <Route path='/datesform' element={<DateForms />} />,
     <Route path='/courseBlog/:id' element={<OpenCourseBlog/>}/>,
+    <Route path='/OurAchievementsDashboard' element={<OurAchievementsDashboard/>}/>,
     <Route path='/courseBlogDashboard' element={<CourseBlogDashBoard />}/>,
     <Route path='/courseBlog' element={<CourseBlog />}/>,
     <Route path='/events/:id' element={<EventOpenPage />} />,

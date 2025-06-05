@@ -24,31 +24,6 @@ export const items = [
 ];
 
 export const Tag = ['Web Development', 'Job Guarantee Programs', 'Cloud',];
-let categoryIndex = 0;
-let tagIndex = 0;
-// const filterItems = (items, categoryIndex, tagIndex) => {
-//     // Define categories mapping for each tag
-//     const categories = [
-//         ['Python Development', 'Java Development', 'MERN Stack Development'],
-//         ['Digital Marketing'],
-//         ['AWS DevOps', 'SalesForce','SnowFlake Course'],
-//         ['Analytics', 'Data Science', 'Artificial Intelligence','Generative AI'],
-//     ];
-//     const selectedTag = Tag[tagIndex] || '';
-//     if (selectedTag === 'Web Development' || selectedTag === 'Regular Programs') {
-//         categoryIndex = 0;
-//     }
-//     const selectedCategoryItems = categories[categoryIndex] || [];
-//     console.log(`Filtering for category: ${selectedTag} (${selectedCategoryItems.join(', ')})`);
-//     const filteredItems = items.filter(item =>
-//         selectedCategoryItems.includes(item)
-//     );
-
-//     return filteredItems;
-// };
-// const filteredResults = filterItems(items, categoryIndex, tagIndex);
-// console.log(filteredResults);
-
 
 const Course = () => {
     const [searchQuery, setSearchQuery] = useState("");

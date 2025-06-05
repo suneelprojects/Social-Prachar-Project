@@ -36,6 +36,8 @@ const useWindowSize = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+
+
   return windowSize;
 };
 
@@ -148,7 +150,64 @@ const AppContent = () => {
   }, []);
 
   useEffect(() => {
-    if (!excludedPaths.includes(location.pathname)) {
+    const path = location.pathname;
+
+    const routeMeta = {
+      "/": {
+        title: "Best Data Science Course Training institute in Hyderabad | SocialPrachar",
+        description: "Join the top-rated Data Science course in Hyderabad with real-time projects and expert mentors at SocialPrachar.",
+      },
+      "/data-science": {
+        title: "Best Data Science Course Training institute in Hyderabad | SocialPrachar",
+        description: "Learn Data Science, AI, and ML in Hyderabad with hands-on training and placement support.",
+      },
+      "/full-stack-developer-course": {
+        title: "MERN Full Stack Developer Course training institute in Hyderabad | SocialPrachar",
+        description: "Become a MERN Stack Developer with our expert-led Full Stack Development course in Hyderabad.",
+      },
+      "/artificial-intelligence-course-training-institute-in-hyderabad": {
+        title: "Artificial Intelligence Course Training Institute in Hyderabad | SocialPrachar",
+        description: "Kickstart your AI career with our industry-aligned Artificial Intelligence course in Hyderabad.",
+      },
+      "/digital-marketing-course-training-institute-hyderabad": {
+        title: "Digital Marketing Course Training Institute in Hyderabad | SocialPrachar",
+        description: "Master SEO, SEM, SMM and more with our Digital Marketing training in Hyderabad.",
+      },
+      "/python-full-stack-development-course": {
+        title: "Python Full Stack Development Course in Hyderabad | SocialPrachar",
+        description: "Learn backend and frontend development with Python Full Stack course at SocialPrachar.",
+      },
+      "/awsdevopscourse": {
+        title: "AWS DevOps Course Training Institute in Hyderabad | SocialPrachar",
+        description: "Get certified with our AWS DevOps course designed for real-world cloud deployment practices.",
+      },
+      "/java-full-stack-development-course": {
+        title: "Java Full Stack Development Course in Hyderabad | SocialPrachar",
+        description: "Build a career in software development with our Java Full Stack Developer course.",
+      },
+    };
+
+    const meta = routeMeta[path];
+
+    // Fallback logic if route not found in the map
+    const title = meta?.title ||
+      path
+        .replace(/-/g, " ")
+        .replace(/\//g, "")
+        .replace(/\b\w/g, (c) => c.toUpperCase()) + " | SocialPrachar";
+
+    const description = meta?.description ||
+      `Learn more about ${title.replace(" | SocialPrachar", "")} at SocialPrachar.`;
+
+    // Set the document title
+    document.title = title;
+
+    // Set or update meta description
+    updateMetaDescription(description);
+
+    // Show popup logic
+    const excludedPaths = ["/thank-you", "/privacy-policy", "/contact"];
+    if (!excludedPaths.includes(path)) {
       const timer = setTimeout(() => {
         setShowPopup(true);
       }, 15000);
@@ -158,6 +217,18 @@ const AppContent = () => {
     }
   }, [location.pathname]);
 
+  const updateMetaDescription = (content) => {
+    let metaTag = document.querySelector("meta[name='description']");
+    if (metaTag) {
+      metaTag.setAttribute("content", content);
+    } else {
+      metaTag = document.createElement("meta");
+      metaTag.name = "description";
+      metaTag.content = content;
+      document.head.appendChild(metaTag);
+    }
+  };
+  
 
   return (
     <>

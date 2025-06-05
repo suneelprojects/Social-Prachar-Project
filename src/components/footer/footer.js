@@ -29,7 +29,7 @@ const Footer = () => {
     ];
 
     const OfficeDetails = [
-        <b>Head Office:</b>, '#216, 2nd Floor,', 'Manjeera Majestic Commercial,', 'JNTU - HiTech City Road,', 'KPHB, Hyderabad - 500072', 'Contact: +91-8019 479 419',
+        <b>Head Office:</b>,' #301, 3rd Floor, ', 'Sathyabhama Commercial Complex, ', 'BhagyaNagar Colony, ', 'KPHB, Hyderabad.', 'KPHB, Hyderabad - 500072', 'Contact: +91-8019 479 419',
         <div>
 
             <div className="container mt-3">
@@ -48,8 +48,7 @@ const Footer = () => {
     ];
 
     const TrainingCenter = [
-        <b>Training Centers:</b>, '#301, 4th Floor,', 'Sathyabhama Commercial Complex,', 'BhagyaNagar Colony,', 'KPHB, Hyderabad .',
-        '#224, 2nd Floor,', 'Manjeera Majestic Commercial,', 'JNTU - HiTech City Road,', 'KPHB, Hyderabad - 500072', 'Contact: +91-8019 479 419'
+        <b>Training Centers:</b>, '#301, 3rd Floor,', 'Sathyabhama Commercial Complex,', 'BhagyaNagar Colony,', 'KPHB, Hyderabad .', '#502, 5th Floor,', 'Sathyabhama Commercial Complex,', 'BhagyaNagar Colony,', 'KPHB, Hyderabad - 500072.', 'Contact: +91-8019 479 419'
     ];
 
     const QuickLinks = [

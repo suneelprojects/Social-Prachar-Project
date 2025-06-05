@@ -85,6 +85,7 @@
 .EntirePage {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .categories {
   margin-bottom: 40px;

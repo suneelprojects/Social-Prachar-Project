@@ -38,7 +38,6 @@ import simfoni from '../../assets/successStories/simfoni_logo.jpg';
 import blank_image from '../../assets/black_profile.webp';
 
 
-
 import img_3 from '../../assets/successStories/SP Reviews/3.png';
 import img_2 from '../../assets/successStories/SP Reviews/2.png';
 import img_4 from '../../assets/successStories/SP Reviews/4.png';
@@ -108,7 +107,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             postCompany: sutherland,
             startCompanyType: "Sutherlands company",
             profileImage: img_11,
-            category: "Full Stack Python"
+            category: "Data science"
         },
         {
             name: "Narmada_Marpadaga",
@@ -120,6 +119,7 @@ import img_49 from '../../assets/successStories/SP Reviews/49.jpg';
             profileImage: img_12,
             category: "Data Science"
         },
+        
         {
             name: "Chandra Sekhar K",
             role: "Machine Learning Engineer",
