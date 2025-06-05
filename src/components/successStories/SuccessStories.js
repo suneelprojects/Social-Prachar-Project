@@ -9,7 +9,6 @@ import googleLogo from '../../../src/assets/successStories/google.png';
 import { linkedinData } from './linkedinData.js';
 import { googleData } from './googleData.js';
 import { trustPilotData } from './trustpilot.js';
-import { ourAchievements } from './ourAchievements.js';
 import { ourAluminiReviews } from './ourAluminiReviews.js';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
